@@ -1,9 +1,14 @@
 @font-face {
-  font-family: 'Guminert';
-  src: url('../public/Fonts/Guminert-6Y5gD.ttf') format('truetype');
+  font-family: "Guminert";
+  src: url("/Fonts/Guminert Bold.ttf") format("truetype");
+  font-weight: bold;
   font-style: normal;
-  font-weight: normal; 
-  font-display: swap;
+}
+@font-face {
+  font-family: "Guminert";
+  src: url("/Fonts/Guminert Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .navbar-custom {
@@ -88,5 +93,241 @@
   }
   100% {
     transform: translateY(-4px);
+  }
+}
+
+
+/* footer css  */
+
+.footer-divider {
+  border-color: #222;
+  margin: 2rem 0 1rem;
+}
+
+.footer-connect {
+  font-size: 14px;
+  margin-top: 60px; /* Increased for better spacing */
+}
+
+@media (max-width: 768px) {
+  .footer-connect {
+    margin-top: 40px;
+    text-align: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.footer-cta-text {
+  font-size: 20px;
+  margin-right: 90px;
+  color: #aaa;
+}
+
+.footer-cta {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .footer-connect {
+    text-align: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-cta-text {
+    margin-right: 0;
+  }
+}
+
+
+
+
+.footer-section {
+  background-color: #0c0c0c;
+  color: white;
+  font-family: 'Guminert', sans-serif;
+}
+
+.footer-logo {
+  max-width: 130px;
+}
+
+.footer-description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 1.45rem;
+  color: #ccc;
+  max-width: 330px;
+  font-family: 'Guminert', sans-serif;
+}
+
+.deck-button {
+  font-family: 'Guminert', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 29.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 0;
+  text-decoration: none;
+  background-color: #00bfff;
+  color: #fff;
+  border: none;
+}
+
+/* Hover background gradient */
+.deck-button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: -1;
+  border-radius: 29.5px;
+  background-color: #fff;
+}
+
+.deck-button:hover::before {
+  transform: translateY(0%);
+}
+
+.deck-button:hover {
+  color: #000;
+}
+
+/* Circle Icon styling */
+.deck-button .circle-icon {
+  background: #000;
+  border-radius: 50%;
+  padding: 6px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Icon animation */
+.deck-button:hover .circle-icon {
+  animation: floatUp 0.6s infinite alternate;
+}
+
+/* Bounce animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
+
+.footer-heading {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-family: 'Guminert', sans-serif;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+    font-family: 'Guminert', sans-serif;
+}
+
+.footer-links li {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-links li:hover {
+  color: white;
+}
+
+.view-all {
+  font-weight: bold;
+  font-family: 'Guminert', sans-serif;
+}
+
+.footer-bottom {
+  border-color: #222;
+  padding-top: 2rem;
+  font-size: 14px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #aaa;
+  transition: color 0.3s ease;
+  font-size: 18px;
+}
+
+.social-links a:hover {
+  color: white;
+}
+
+
+.call-button {
+  color: #00bfff;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 30px;
+}
+
+.call-button .circle-icon {
+  background: #00bfff;
+  border-radius: 50%;
+  padding: 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin-top: -30px;
+}
+
+.trust-badges {
+  height: 15px;
+}
+
+@media (max-width: 768px) {
+  .footer-description {
+    max-width: 100%;
+  }
+
+  .trust-and-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .call-button {
+    margin-top: 0.5rem;
   }
 }

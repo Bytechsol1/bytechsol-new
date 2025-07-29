@@ -1,51 +1,122 @@
 @font-face {
   font-family: "Guminert";
-  src: url("../components-css/Fonts/Guminert\ Bold.ttf") format("truetype");
-  font-weight: normal;
+  src: url("/Fonts/Guminert Bold.ttf") format("truetype");
+  font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Guminert";
-  src: url("../components-css/Fonts/Guminert\ Medium.ttf") format("truetype");
+  src: url("/Fonts/Guminert Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Guminert";
-  src: url("../components-css/Fonts/Guminert\ Semi\ Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+
 .hero-section {
   padding-top: 6rem;
   padding-bottom: 4rem;
 }
 
 .hero-section h1 {
-  font-size: 71px;
+  font-size: 61px;
   color: #000;
-  font-family: 'Guminert\ Bold',sans-serif;
-  font-weight: 700;
+  font-family: "Guminert", sans-serif;
+  font-weight: 600;
 }
 
 .animated-word {
   background: linear-gradient(90deg, #5a2fe7, #ea549f);
   transition: opacity 0.3s ease-in-out;
-    -webkit-background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-family: 'Guminert',sans-serif;
-    display: inline-block;
-  font-weight: 700; 
+  font-family: "Guminert", sans-serif;
+  display: inline-block;
+  font-weight: 700;
+}
+.custom-cta {
+  margin-top: 20px;
+  font-family: "Guminert", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 29.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 0;
+  text-decoration: none;
+}
+
+.btn-black.custom-cta {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.btn-outline.custom-cta {
+  background-color: transparent;
+  border: 1.5px solid #000;
+  color: #000;
+}
+
+.custom-cta::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: -1;
+  border-radius: 29.5px;
+}
+
+.btn-black.custom-cta::before {
+  background-color: #289ed8;
+}
+
+.btn-outline.custom-cta::before {
+  background-color: #ebfe5b;
+}
+
+.custom-cta:hover::before {
+  transform: translateY(0%);
+}
+
+.btn-outline.custom-cta:hover {
+  color: #000;
+  border: none;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.custom-cta:hover .arrow-icon {
+  animation: floatUp 0.6s infinite alternate;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
 }
 
 .hero-section p {
-font-size: 24px;
-line-height: 31px;
-font-weight: 700;
-font-family: 'Guminert',sans-serif;
-max-width: 500px;
-color: #000;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 300;
+  font-family: "Guminert", sans-serif;
+  max-width: 500px;
+  color: #000;
 }
 
 .founders-rating {
@@ -106,11 +177,11 @@ color: #000;
 }
 
 .clutch-logo {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    cursor: pointer;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
 }
 
 .review-meta .stars {
@@ -123,7 +194,6 @@ color: #000;
   font-weight: 600;
   font-size: 13px;
 }
-
 
 .animate-bounce-in {
   animation: bounceInUp 0.6s ease-in-out;
@@ -145,7 +215,6 @@ color: #000;
     transform: translateY(0%);
   }
 }
-
 
 /* 2nd section css  */
 .scrolling-images-section {
@@ -170,8 +239,8 @@ color: #000;
 }
 
 .scroll-image {
-  width: 432px;
-  height: 364px;
+  width: 332px;
+  height: 264px;
   object-fit: cover;
   margin: 0 0.5rem;
   border-radius: 25px;
@@ -201,35 +270,48 @@ color: #000;
 /* WHO WE ARE (Section 3)                 */
 /*----------------------------------------*/
 .who-we-are-section {
-  padding-left: 380px; /* aligns with service titles */
+  padding-left: 350px; /* aligns with service titles */
 }
 
 .who-we-are-section .subheading {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 29px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-  font-family: 'Guminert', sans-serif;
+  font-family: "Guminert", sans-serif;
   color: #000;
 }
 
 .who-we-are-section .description {
-  font-size: 51px;
+  font-size: 41px;
   font-weight: 700;
   max-width: 1089px;
   line-height: 1.2;
   color: #000;
-  font-family: 'Guminert', sans-serif;
+  font-family: "Guminert", sans-serif;
 }
-
 
 /*----------------------------------------*/
 /* SERVICES SECTION (Section 4)           */
 /*----------------------------------------*/
 .services-section {
   position: relative;
+}
+.ser-subheading {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-family: "Guminert", sans-serif;
+  color: #000;
+
+  /* center it above titles */
+  text-align: left;
+  padding-left: 250px; /* matches the left offset of the titles */
 }
 
 .service-row {
@@ -253,16 +335,16 @@ color: #000;
 .service-index {
   font-size: 18px;
   font-weight: 600;
-  font-family: 'Guminert', sans-serif;
+  font-family: "Guminert", sans-serif;
   color: #000;
   width: 40px;
   flex-shrink: 0;
 }
 
 .service-title {
-  font-size: 89px;
-  font-weight: 700;
-  font-family: 'Guminert', sans-serif;
+  font-size: 69px;
+  font-weight: 600;
+  font-family: "Guminert", sans-serif;
   color: #000;
   margin: 0;
   flex-grow: 1;
@@ -276,7 +358,6 @@ color: #000;
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
-
 
 .service-row.active .service-title {
   color: #fff;
@@ -308,5 +389,315 @@ color: #000;
   100% {
     transform: translateY(-50%) scale(1) translateX(0);
     opacity: 1;
+  }
+}
+
+/* 5th section css  */
+
+.awards-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  position: relative;
+  font-family: "Guminert", sans-serif;
+}
+
+.overlay {
+  width: 100%;
+  max-width: 1280px;
+  text-align: center;
+}
+
+.awards-heading-container {
+  margin-bottom: 5rem;
+}
+
+.awards-heading {
+  font-size: 84px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 0.5;
+  text-align: left;
+  padding-left: 100px;
+}
+.awards-heading2 {
+  font-size: 84px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+  margin-left: 400px;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: #fff;
+  /* border-radius: 14px; */
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.award-card {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.award-card:last-child {
+  border-right: none;
+}
+
+.award-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.award-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* ✅ Responsive */
+@media (max-width: 992px) {
+  .awards-heading {
+    font-size: 42px;
+  }
+
+  .awards-grid {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .award-card {
+    padding: 1.5rem;
+  }
+
+  .award-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .awards-heading {
+    font-size: 36px;
+  }
+
+  .award-text {
+    font-size: 16px;
+  }
+}
+
+/* 6th section css  */
+/* Container for the whole section */
+.scroll-section {
+  padding: 50px 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  font-family: 'Guminert', sans-serif;
+}
+
+/* Cards wrapper */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+}
+
+/* Individual card */
+.choose-card {
+  background-color: #289DD8;
+  border-radius: 16px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.choose-card.design {
+  background-color: #289dd8; 
+}
+
+.choose-card.build {
+  background-color: #2a55a4; 
+}
+
+.choose-card.grow {
+  background-color: #2b3990; 
+}
+
+.card-title-text {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Guminert", sans-serif;
+  line-height: 1.6;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  padding-right: 10px;
+}
+
+
+/* Badge at the top left */
+.badge {
+  position: absolute;
+  top: -18px;
+  left: 30px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #000;
+  font-size: 14px;
+  font-family: 'Guminert', sans-serif;
+  transform: rotate(-5deg); 
+  width: 100px;
+}
+
+/* Color variations for badges */
+.badge.design {
+  background-color: #70e6ed;
+}
+
+.badge.build {
+  background-color: #70e6ed;
+}
+
+.badge.grow {
+  background-color: #70e6ed;
+}
+
+/* List items */
+.choose-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.choose-card ul li {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .choose-card {
+    padding: 30px 20px;
+  }
+
+  .choose-card ul li {
+    font-size: 16px;
+  }
+
+  .badge {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+}
+
+
+.group7-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Guminert', sans-serif;
+  color: #fff;
+}
+
+.group7-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.group7-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.group7-main-title {
+  font-size: 50px;
+  margin-bottom: 60px;
+}
+
+.group7-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.group7-column {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 16px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.group7-icon {
+  width: 40px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.group7-heading {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.group7-description {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* ✅ Responsive tweaks */
+@media (max-width: 768px) {
+  .group7-main-title {
+    font-size: 36px;
+  }
+
+  .group7-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .group7-column {
+    max-width: 100%;
   }
 }
