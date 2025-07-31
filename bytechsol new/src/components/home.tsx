@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-// import React from "react";
 import AnimatedText from "../shareable/AnimatedText";
 import "../assets/components-css/home.css";
 import Clutch from "../assets/images/clutch.png";
 import Yasir from "../assets/images/yasir.jpg";
 import Salik from "../assets/images/salik.png";
-import Top1 from "../assets/images/salik.png";
-import Top2 from "../assets/images/salik.png";
-import Top3 from "../assets/images/salik.png";
-import Top4 from "../assets/images/salik.png";
-import Bottom1 from "../assets/images/yasir.jpg";
-import Bottom2 from "../assets/images/yasir.jpg";
-import Bottom3 from "../assets/images/yasir.jpg";
-import Bottom4 from "../assets/images/yasir.jpg";
+import Top1 from "../assets/images/top1.png";
+import Top2 from "../assets/images/top2.png";
+import Top3 from "../assets/images/top3.png";
+import Top4 from "../assets/images/top4.png";
+import Bottom1 from "../assets/images/bottom1.png";
+import Bottom2 from "../assets/images/bottom2.png";
+import Bottom3 from "../assets/images/bottom3.png";
+import Bottom4 from "../assets/images/bottom4.png";
 import Img1 from "../assets/images/salik.png";
 import Img2 from "../assets/images/yasir.jpg";
 import Img3 from "../assets/images/salik.png";
@@ -25,8 +24,8 @@ import Award3 from "../assets/images/salik.png";
 import Award4 from "../assets/images/yasir.jpg";
 import bgImage from "../assets/images/bgimg.jpg";
 import icon from "../assets/images/tick.svg";
-
-
+import bg from "../assets/images/frm-img.png";
+import tick from "../assets/images/contact tick.png";
 
 const cards = [
   {
@@ -34,8 +33,7 @@ const cards = [
     color: "design",
     title: ["We create stunning, user-friendly websites that engage visitors, build trust, and turn interest into action."],
     items: ["Strategy", "Web Design", "User Experience Design", "Accessible Interfaces"],
-     
-},
+  },
   {
     label: "BUILD",
     color: "build",
@@ -49,7 +47,6 @@ const cards = [
     items: ["Paid Campaign Strategy", "Content Optimization", "Conversion Marketing", "Email Campaigns"],
   },
 ];
-
 
 const awards = [
   { text: "500+ Happy clients", img: Award1 },
@@ -68,93 +65,69 @@ const services = [
 const topImages = [Top1, Top2, Top3, Top4];
 const bottomImages = [Bottom1, Bottom2, Bottom3, Bottom4];
 
+const serviceTags = [
+  "UI/UX Design",
+  "SaaS Design",
+  "Branding",
+  "CRO",
+  "Mobile App",
+  "Development",
+  "MVP Development",
+  "Web Design",
+];
+
 const HeroSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
     <>
-      {/* 1st section  */}
+      {/* 1st Section */}
       <main>
-        <section className="hero-section ">
+        <section className="hero-section">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-8">
                 <h1>
-                  Global UI UX design agency digital partner for{" "}
-                  <AnimatedText />
+                  Global UI UX design agency digital partner for <AnimatedText />
                 </h1>
                 <div className="cta-buttons mt-4 d-flex gap-3 flex-wrap">
                   <a href="#strategy-call" className="btn btn-black custom-cta">
-                    Book a strategy call{" "}
-                    <i className="bi bi-arrow-up-right arrow-icon"></i>
+                    Book a strategy call <i className="bi bi-arrow-up-right arrow-icon"></i>
                   </a>
-                  <a
-                    href="#custom-quote"
-                    className="btn btn-outline custom-cta"
-                  >
+                  <a href="#custom-quote" className="btn btn-outline custom-cta">
                     Get a custom quote
                   </a>
                 </div>
               </div>
-
               <div className="col-md-4">
                 <p>
-                  We deliver globally UI, UX & web design smoothly, without
-                  delay, saving your time and money with an efficient process.
+                  We deliver globally UI, UX & web design smoothly, without delay, saving your time and money with an efficient process.
                 </p>
                 <div className="founders-rating">
                   <div className="d-flex align-items-center">
                     <div className="founders-stack">
-                      <div
-                        className="tooltip-wrapper"
-                        style={{ left: 0, zIndex: 2 }}
-                      >
-                        <img
-                          src={Yasir}
-                          alt="Yasir Irfan"
-                          className="founder-img"
-                        />
+                      <div className="tooltip-wrapper" style={{ left: 0, zIndex: 2 }}>
+                        <img src={Yasir} alt="Yasir Irfan" className="founder-img" />
                         <div className="custom-tooltip">
                           <strong>Yasir Irfan</strong>
                           <br />
                           Founder & CEO @BTS
                           <br />
-                          <a
-                            href="https://www.linkedin.com/in/yasir-irfan-b988721b7/"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            LinkedIn
-                          </a>
+                          <a href="https://www.linkedin.com/in/yasir-irfan-b988721b7/" target="_blank" rel="noreferrer">LinkedIn</a>
                         </div>
                       </div>
-                      <div
-                        className="tooltip-wrapper"
-                        style={{ left: "22px", zIndex: 1 }}
-                      >
-                        <img
-                          src={Salik}
-                          alt="Salik Husnaq"
-                          className="founder-img"
-                        />
+                      <div className="tooltip-wrapper" style={{ left: "22px", zIndex: 1 }}>
+                        <img src={Salik} alt="Salik Husnaq" className="founder-img" />
                         <div className="custom-tooltip">
                           <strong>Salik Husnaq</strong>
                           <br />
                           Co-Founder @Somewhere
                           <br />
-                          <a
-                            href="https://www.linkedin.com/in/salik-husnaq/?originalSubdomain=pk"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            LinkedIn
-                          </a>
+                          <a href="https://www.linkedin.com/in/salik-husnaq/?originalSubdomain=pk" target="_blank" rel="noreferrer">LinkedIn</a>
                         </div>
                       </div>
                     </div>
-                    <span className="ms-3" style={{ lineHeight: "15px" }}>
-                      Loved by 500+ Founders
-                    </span>
+                    <span className="ms-3" style={{ lineHeight: "15px" }}>Loved by 500+ Founders</span>
                   </div>
                   <img src={Clutch} alt="Clutch" className="clutch-logo" />
                   <div className="review-meta">
@@ -168,54 +141,42 @@ const HeroSection: React.FC = () => {
         </section>
       </main>
 
-      {/* 2nd section  */}
+      {/* 2nd Section */}
       <section className="scrolling-images-section py-5">
         <div className="scroll-row scroll-row-1">
           <div className="scroll-track">
             {[...topImages, ...topImages].map((img, index) => (
-              <img
-                key={`top-${index}`}
-                src={img}
-                alt={`Top image ${index}`}
-                className="scroll-image"
-              />
+              <img key={`top-${index}`} src={img} alt={`Top image ${index}`} className="scroll-image" />
             ))}
           </div>
         </div>
         <div className="scroll-row scroll-row-2 mt-5">
           <div className="scroll-track reverse">
             {[...bottomImages, ...bottomImages].map((img, index) => (
-              <img
-                key={`bottom-${index}`}
-                src={img}
-                alt={`Bottom image ${index}`}
-                className="scroll-image"
-              />
+              <img key={`bottom-${index}`} src={img} alt={`Bottom image ${index}`} className="scroll-image" />
             ))}
           </div>
         </div>
       </section>
 
-      {/* 3rd section  */}
+      {/* 3rd Section */}
       <section className="who-we-are-section py-5">
         <div className="container">
           <p className="subheading">(WHO WE ARE)</p>
           <p className="description">
-            lumix® is a sleek, minimalistic Webflow template designed
-            specifically for agencies and creators. At lumix, we prioritize
-            clean typography and bold design.
+            lumix® is a sleek, minimalistic Webflow template designed specifically for agencies and creators. At lumix, we prioritize clean typography and bold design.
           </p>
         </div>
       </section>
 
-      {/* 4th section  */}
+      {/* 4th Section */}
       <section className="services-section py-5">
         <div className="container">
           <p className="ser-subheading">(SERVICES)</p>
           {services.map((service, index) => (
             <div
-              className={`service-row ${activeIndex === index ? "active" : ""}`}
               key={service.id}
+              className={`service-row ${activeIndex === index ? "active" : ""}`}
               onMouseEnter={() => setActiveIndex(index)}
               onMouseLeave={() => setActiveIndex(null)}
             >
@@ -223,18 +184,14 @@ const HeroSection: React.FC = () => {
               <h2 className="service-title">{service.title}</h2>
               <img src={Arrow} alt="Arrow" className="service-arrow-img" />
               {activeIndex === index && (
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="service-image"
-                />
+                <img src={service.image} alt={service.title} className="service-image" />
               )}
             </div>
           ))}
         </div>
       </section>
 
-      {/* 5th section  */}
+      {/* 5th Section */}
       <section
         className="awards-section"
         style={{ backgroundImage: `url(${AwardBg})` }}
@@ -245,15 +202,10 @@ const HeroSection: React.FC = () => {
             <br />
             <h2 className="awards-heading2">achievements</h2>
           </div>
-
           <div className="awards-grid">
             {awards.map((item, idx) => (
               <div className="award-card" key={idx}>
-                <img
-                  src={item.img}
-                  alt={`award-${idx}`}
-                  className="award-img"
-                />
+                <img src={item.img} alt={`award-${idx}`} className="award-img" />
                 <p className="award-text">{item.text}</p>
               </div>
             ))}
@@ -261,70 +213,101 @@ const HeroSection: React.FC = () => {
         </div>
       </section>
 
-    {/* 6th section  */}
-          <section className="who-we-are-section py-5">
+      {/* 6th Section */}
+      <section className="who-we-are-section py-5">
         <div className="container">
           <p className="subheading">(WHY CHOOSE BYTECHSOL)</p>
-          <h1 className="description" style={{fontSize: "45px"}}>Helping you transform your business</h1>
-          <p className="description" style={{fontSize: "25px", fontWeight: "200" }}>
-                Bold ideas. Smarter strategies. Game-changing results. Let’s elevate your brand and
-                unlock its full potential.
+          <h1 className="description" style={{ fontSize: "45px" }}>Helping you transform your business</h1>
+          <p className="description" style={{ fontSize: "25px", fontWeight: "200" }}>
+            Bold ideas. Smarter strategies. Game-changing results. Let’s elevate your brand and unlock its full potential.
           </p>
         </div>
       </section>
 
-<section className="scroll-section">
-  <div className="card-container">
-    {cards.map((card, index) => (
-      <div key={index} className={`choose-card ${card.color}`}>
-        <div className={`badge ${card.color}`}>{card.label}</div>
-
-        <p className="card-title-text">{card.title[0]}</p>
-
-        <ul>
-          {card.items.map((item, idx) => (
-            <li key={idx}>{item}</li>
+      <section className="scroll-section">
+        <div className="card-container">
+          {cards.map((card, index) => (
+            <div key={index} className={`choose-card ${card.color}`}>
+              <div className={`badge ${card.color}`}>{card.label}</div>
+              <p className="card-title-text">{card.title[0]}</p>
+              <ul>
+                {card.items.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
-      </div>
-    ))}
-  </div>
-</section>
+        </div>
+      </section>
 
-    {/* 7th section  */}
-    <section className="group7-container">
-      <img className="group7-bg" src={bgImage} alt="Background" />
-      <div className="group7-content">
-        <h2 className="group7-main-title">A dedicated team of professionals</h2>
-
-        <div className="group7-columns">
-          <div className="group7-column">
-            <img src={icon} alt="Icon" className="group7-icon" />
-            <h3 className="group7-heading">We're about results</h3>
-            <p className="group7-description">
-              We deliver results-driven websites that align with your organisation's specific needs and strategic objectives.
-            </p>
-          </div>
-
-          <div className="group7-column">
-            <img src={icon} alt="Icon" className="group7-icon" />
-            <h3 className="group7-heading">Experienced Team</h3>
-            <p className="group7-description">
-              In-house team of 19+ talented UX/UI Designers, Strategists, Developers, and Digital Marketers. (No outsourcing!)
-            </p>
-          </div>
-
-          <div className="group7-column">
-            <img src={icon} alt="Icon" className="group7-icon" />
-            <h3 className="group7-heading">Quality Assurance</h3>
-            <p className="group7-description">
-              We take immense pride in our work, ensuring the highest quality product and best practices in everything we do.
-            </p>
+      {/* 7th Section */}
+      <section className="group7-container">
+        <img className="group7-bg" src={bgImage} alt="Background" />
+        <div className="group7-content">
+          <h2 className="group7-main-title">A dedicated team of professionals</h2>
+          <div className="group7-columns">
+            {[...Array(3)].map((_, idx) => (
+              <div className="group7-column" key={idx}>
+                <img src={icon} alt="Icon" className="group7-icon" />
+                <h3 className="group7-heading">
+                  {["We're about results", "Experienced Team", "Quality Assurance"][idx]}
+                </h3>
+                <p className="group7-description">
+                  {[
+                    "We deliver results-driven websites that align with your organisation's specific needs and strategic objectives.",
+                    "In-house team of 19+ talented UX/UI Designers, Strategists, Developers, and Digital Marketers. (No outsourcing!)",
+                    "We take immense pride in our work, ensuring the highest quality product and best practices in everything we do."
+                  ][idx]}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+      <section className="contact8-wrapper">
+        <div className="contact8-bg">
+          <img src={bg} alt="Decorative background" className="contact8-bg-img" />
+        </div>
+        <div className="container contact8-content">
+          <div className="contact8-left">
+            <h2 className="contact8-title">Have a Project? <br /> Let’s talk!</h2>
+            <ul className="contact8-list">
+              <li><img src={tick} alt="✓" /> <span>NDA? Absolutely just ask.</span></li>
+              <li><img src={tick} alt="✓" /> <span>We’ll respond in 24 hours — fast & focused.</span></li>
+              <li><img src={tick} alt="✓" /> <span>Work with senior UX experts, not juniors.</span></li>
+            </ul>
+          </div>
+
+          <form className="contact8-form">
+            <div className="contact8-row">
+              <input type="text" name="fullname" placeholder="Full name" required />
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+
+            <div className="contact8-row">
+              <input type="text" name="budget" placeholder="Project budget" />
+              <input type="text" name="referral" placeholder="How did you hear about us?" />
+            </div>
+
+            <textarea name="message" rows={4} placeholder="Tell us about your product and goals." />
+
+            <div className="contact8-subtitle">How can we help you?</div>
+            <div className="contact8-tags">
+              {serviceTags.map((tag) => (
+                <span className="contact8-tag" key={tag}>{tag}</span>
+              ))}
+            </div>
+
+            <button type="submit" className="contact8-submit">Send message</button>
+
+            <div className="contact8-alt">
+              <span>Prefer email?</span>
+              <a href="mailto:hello@wavespace.agency">hello@wavespace.agency</a>
+            </div>
+          </form>
+        </div>
+      </section>
     </>
   );
 };
