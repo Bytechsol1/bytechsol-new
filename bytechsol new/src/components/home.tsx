@@ -26,6 +26,8 @@ import bgImage from "../assets/images/bgimg.jpg";
 import icon from "../assets/images/tick.svg";
 import bg from "../assets/images/frm-img.png";
 import tick from "../assets/images/contact tick.png";
+import com from "../assets/images/comma.png"
+import cut from "../assets/images/cut.png"
 
 const cards = [
   {
@@ -264,6 +266,118 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </section>
+      {/* 8th testimonial section */}
+      <div className="group5-wrapper">
+      <div className="group5-content">
+        <div className="group5-text-block">
+          <span className="group5-tag">(Testimonials)</span>
+          <h2 className="group5-heading">See why our clients love us</h2>
+          <p className="group5-quote">
+            "We've worked with several design agencies in the past, but none
+            have matched the level of professionalism and expertise that we
+            found at Bloomr. Highly recommended!"
+          </p>
+          <div className="group5-author-block">
+            <img src={cut} alt="Samantha" className="group5-avatar" />
+            <div>
+              <div className="group5-author-name">Samantha</div>
+              <div className="group5-author-role">Co-Founder at KYU House</div>
+            </div>
+          </div>
+        </div>
+        <img src={com} alt="" className="group5-vector" />
+      </div>
+    </div>
+
+       {/* 9th faq section  */}
+    <section className="heading">
+      <div className="container">
+          <p className="subheading" style={{fontSize:"20px", marginTop:"50px", marginLeft:"200px"}}>(FAQs)</p>
+          <h1 className="description" style={{fontSize: "45px", marginLeft:"200px"}}>Frequently asked questions</h1>
+          </div>
+    </section>
+    
+<section className="accordion-section">
+  <div className="accordion2-container">
+    <div className="accordion" id="accordionExample">
+      {[
+        {
+          id: 1,
+          question: "What are your focus areas as a UI/UX design agency?",
+          answer:
+            "We specialize in user research, wireframing, prototyping, and visual design. Our goal is to create intuitive and engaging digital products tailored to your audience.",
+        },
+        {
+          id: 2,
+          question: "What are your focus areas as a UI/UX design agency?",
+          answer:
+            "Yes, we collaborate closely with developers or can handle the handoff with detailed specs and assets. We can also build front-end components upon request.",
+        },
+        {
+          id: 3,
+          question: "What are your focus areas as a UI/UX design agency?",
+          answer:
+            "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
+        },
+        {
+          id: 4,
+          question: "What are your focus areas as a UI/UX design agency?",
+          answer:
+            "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
+        },
+        {
+          id: 5,
+          question: "What are your focus areas as a UI/UX design agency?",
+          answer:
+            "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
+        },
+        {
+          id: 6,
+          question: "What are your focus areas as a UI/UX design agency?",
+          answer:
+            "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
+        },
+        {
+          id: 7,
+          question: "What are your focus areas as a UI/UX design agency?",
+          answer:
+            "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
+        },
+        {
+          id: 8,
+          question: "What are your focus areas as a UI/UX design agency?",
+          answer:
+            "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
+        },
+      ].map((item, idx) => (
+        <div className="accordion-item" key={item.id}>
+          <h2 className="accordion-header" id={`heading${item.id}`}>
+            <button
+              className={`accordion-button ${idx !== 0 ? "collapsed" : ""}`}
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target={`#collapse${item.id}`}
+              aria-expanded={idx === 0 ? "true" : "false"}
+              aria-controls={`collapse${item.id}`}
+            >
+              {item.question}
+            </button>
+          </h2>
+          <div
+            id={`collapse${item.id}`}
+            className={`accordion-collapse collapse ${
+              idx === 0 ? "show" : ""
+            }`}
+            aria-labelledby={`heading${item.id}`}
+            data-bs-parent="#accordionExample"
+          >
+            <div className="accordion-body">{item.answer}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="contact8-wrapper">
         <div className="contact8-bg">
