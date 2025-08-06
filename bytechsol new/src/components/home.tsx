@@ -140,17 +140,6 @@ const services = [
 const topImages = [Top1, Top2, Top3, Top4];
 const bottomImages = [Bottom1, Bottom2, Bottom3, Bottom4];
 
-const serviceTags = [
-  "UI/UX Design",
-  "SaaS Design",
-  "Branding",
-  "CRO",
-  "Mobile App",
-  "Development",
-  "MVP Development",
-  "Web Design",
-];
-
 const HeroSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -169,11 +158,25 @@ const HeroSection: React.FC = () => {
 
   const [success, setSuccess] = useState(false);
 
+  const serviceTags = [
+    "UI/UX Design",
+    "SaaS Design",
+    "Branding",
+    "CRO",
+    "Mobile App",
+    "Development",
+    "MVP Development",
+    "Web Design",
+  ];
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+
+    // Restrict numbers in full name
     if (name === "fullname" && /\d/.test(value)) return;
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -185,31 +188,35 @@ const HeroSection: React.FC = () => {
       const tags = prev.selectedTags.includes(tag)
         ? prev.selectedTags.filter((t) => t !== tag)
         : [...prev.selectedTags, tag];
+
       return { ...prev, selectedTags: tags };
     });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const { fullname, email, budget, referral, message } = formData;
+
+    const { fullname, email, budget, referral, message, selectedTags } =
+      formData;
 
     if (!fullname || !email || !budget || !referral || !message) {
       alert("Please fill in all required fields.");
       return;
     }
 
-    const output = [
-      { field: "Full name", value: fullname },
-      { field: "Email", value: email },
-      { field: "Project budget", value: budget },
-      { field: "Referral source", value: referral },
-      { field: "Message", value: message },
-      { field: "Services", value: formData.selectedTags.join(", ") || "None" },
-    ];
+    const output = {
+      contactInfo: {
+        fullName: fullname,
+        emailAddress: email,
+        projectBudget: budget,
+        referralSource: referral,
+        message: message,
+      },
+      services: selectedTags.length ? selectedTags : ["None"],
+    };
 
-    console.log("Form Data:", output);
+    console.log("Submitted Form:", output);
 
-    // Show success message and clear form
     setSuccess(true);
     setFormData({
       fullname: "",
@@ -220,9 +227,9 @@ const HeroSection: React.FC = () => {
       selectedTags: [],
     });
 
-    // Hide success message after 3 seconds
     setTimeout(() => setSuccess(false), 3000);
   };
+
   return (
     <>
       {/* 1st Section */}
