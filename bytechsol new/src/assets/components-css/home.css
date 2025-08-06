@@ -398,7 +398,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -513,7 +512,7 @@
   background-color: #fff;
   display: flex;
   justify-content: center;
-  font-family: 'Guminert', sans-serif;
+  font-family: "Guminert", sans-serif;
 }
 
 /* Cards wrapper */
@@ -528,7 +527,7 @@
 
 /* Individual card */
 .choose-card {
-  background-color: #289DD8;
+  background-color: #289dd8;
   border-radius: 16px;
   padding: 40px 30px;
   width: 100%;
@@ -540,15 +539,15 @@
 }
 
 .choose-card.design {
-  background-color: #289dd8; 
+  background-color: #289dd8;
 }
 
 .choose-card.build {
-  background-color: #2a55a4; 
+  background-color: #2a55a4;
 }
 
 .choose-card.grow {
-  background-color: #2b3990; 
+  background-color: #2b3990;
 }
 
 .card-title-text {
@@ -562,7 +561,6 @@
   padding-right: 10px;
 }
 
-
 /* Badge at the top left */
 .badge {
   position: absolute;
@@ -573,8 +571,8 @@
   font-weight: 600;
   color: #000;
   font-size: 14px;
-  font-family: 'Guminert', sans-serif;
-  transform: rotate(-5deg); 
+  font-family: "Guminert", sans-serif;
+  transform: rotate(-5deg);
   width: 100px;
 }
 
@@ -622,12 +620,11 @@
   }
 }
 
-
 .group7-container {
   position: relative;
   width: 100%;
   overflow: hidden;
-  font-family: 'Guminert', sans-serif;
+  font-family: "Guminert", sans-serif;
   color: #fff;
 }
 
@@ -834,7 +831,7 @@
   font-family: "Guminert", sans-serif;
   padding: 0.75rem 1.5rem;
   border-radius: 29.5px;
-  background-color: #289ED8;
+  background-color: #289ed8;
   color: #fff;
   border: none;
   display: inline-flex;
@@ -846,7 +843,7 @@
 }
 
 .contact8-submit::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -892,104 +889,81 @@
   }
 }
 
-.accordion-section {
-  padding: 50px 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.faq-wrapper {
+  background-color: #e9f8ff;
+  padding: 60px 20px;
+  font-family: "Gilroy-Medium", sans-serif;
 }
 
-.accordion2-container {
-  width: 100%;
-  max-width: 900px;
-  padding: 0 15px;
-}
-
-.accordion-item {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-.accordion-button {
-  font-size: 18px;
-  font-weight: 600;
-  background-color: #fff;
-  color: #333;
-  padding: 18px 24px;
-  border: none;
-  border-radius: 12px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: #fff;
-  color: #000;
-  box-shadow: none;
-}
-
-.accordion-button:focus {
-  box-shadow: none;
-}
-
-.accordion-body {
-  padding: 20px 24px;
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-  background-color: #fff;
-}
-
-.testi {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.container1 {
+.faq-container {
   max-width: 900px;
   margin: 0 auto;
 }
 
-.subheading1 {
-  font-size: 20px;
-  margin-bottom: 16px;
+.faq-label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.description2 {
+.faq-heading {
   font-size: 36px;
-  margin-bottom: 20px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #000;
 }
 
-.head {
+.faq-list {
+  border-top: 1px solid #ccc;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.faq-question-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question {
   font-size: 18px;
-  line-height: 1.6;
+  font-weight: 500;
+  color: #000;
+}
+
+.faq-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.faq-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  margin-top: 12px;
   color: #444;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-
-
-/* Responsive typography and spacing */
+/* Responsive */
 @media (max-width: 768px) {
-  .description {
-    font-size: 28px !important;
+  .faq-heading {
+    font-size: 28px;
   }
-  .subheading {
-    font-size: 18px !important;
-  }
-  .accordion-button {
+  .faq-question {
     font-size: 16px;
-    padding: 14px 20px;
   }
-  .accordion-body {
+  .faq-answer {
     font-size: 15px;
-    padding: 16px 20px;
   }
 }
-
-
 
 .group5-wrapper {
   width: 100%;
@@ -1029,7 +1003,6 @@
   margin-top: 10px;
   font-weight: 700;
   margin-left: 200px;
-
 }
 
 .group5-quote {

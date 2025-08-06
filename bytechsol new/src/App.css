@@ -43,7 +43,7 @@
   font-family: "Guminert", sans-serif;
   padding: 0.5rem 1rem;
   border-radius: 29.5px;
-  background-color: #289ED8;
+  background-color: #289ed8;
   color: #fff;
   border: none;
   display: inline-flex;
@@ -56,7 +56,7 @@
 }
 
 .contact-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -95,7 +95,6 @@
     transform: translateY(-4px);
   }
 }
-
 
 /* footer css  */
 
@@ -145,13 +144,10 @@
   }
 }
 
-
-
-
 .footer-section {
   background-color: #0c0c0c;
   color: white;
-  font-family: 'Guminert', sans-serif;
+  font-family: "Guminert", sans-serif;
 }
 
 .footer-logo {
@@ -164,11 +160,11 @@
   margin-bottom: 1.45rem;
   color: #ccc;
   max-width: 330px;
-  font-family: 'Guminert', sans-serif;
+  font-family: "Guminert", sans-serif;
 }
 
 .deck-button {
-  font-family: 'Guminert', sans-serif;
+  font-family: "Guminert", sans-serif;
   font-size: 14px;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
@@ -241,14 +237,14 @@
   font-weight: 600;
   font-size: 22px;
   margin-bottom: 15px;
-  font-family: 'Guminert', sans-serif;
+  font-family: "Guminert", sans-serif;
 }
 
 .footer-links {
   list-style: none;
   padding: 0;
   margin: 0;
-    font-family: 'Guminert', sans-serif;
+  font-family: "Guminert", sans-serif;
 }
 
 .footer-links li {
@@ -265,7 +261,7 @@
 
 .view-all {
   font-weight: bold;
-  font-family: 'Guminert', sans-serif;
+  font-family: "Guminert", sans-serif;
 }
 
 .footer-bottom {
@@ -284,7 +280,6 @@
 .social-links a:hover {
   color: white;
 }
-
 
 .call-button {
   color: #00bfff;
@@ -332,5 +327,32 @@
   }
 }
 
+.contact8-success {
+  margin-top: 1rem;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #e6f9e8;
+  color: #2e7d32;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in-out;
+  text-align: center;
+  border: 1px solid #b3e6b8;
+  font-family: 'Gunimert',sans-serif;
+}
 
-/* ------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact8-tag.selected {
+  background-color: #3366ff;
+  color: #fff;
+  border-color: #3366ff;
+}
