@@ -205,13 +205,11 @@ const HeroSection: React.FC = () => {
     }
 
     const output = {
-      contactInfo: {
-        fullName: fullname,
-        emailAddress: email,
-        projectBudget: budget,
-        referralSource: referral,
-        message: message,
-      },
+      fullName: fullname,
+      emailAddress: email,
+      projectBudget: budget,
+      referralSource: referral,
+      message: message,
       services: selectedTags.length ? selectedTags : ["None"],
     };
 
