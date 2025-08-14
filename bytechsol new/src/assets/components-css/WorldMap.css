@@ -1,0 +1,47 @@
+.loc {
+  padding: 20px 30px;
+  background: #1b3276;
+  margin-bottom: -5px;
+  text-align: center;
+}
+.loc-header {
+  font-size: 59px;
+  color: #fff;
+  font-family: "Gilroy-SemiBold", sans-serif;
+  line-height: 1.3;
+}
+.loc-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+  background: #1b3276;
+}
+
+.map {
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .loc-header {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .map {
+    padding: 20px 5px;
+  }
+}
+
+.fa-solid {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.fa-solid:hover {
+  color: red;
+  transform: scale(1.2);
+}

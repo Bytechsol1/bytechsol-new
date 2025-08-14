@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const words = ['future unicorns.', 'startups.', 'AI/ML Solutions.'];
+const words = [' Bold Innovators', 'startups.', 'AI/ML Solutions.'];
 
 const AnimatedText: React.FC = () => {
   const [index, setIndex] = useState(0);

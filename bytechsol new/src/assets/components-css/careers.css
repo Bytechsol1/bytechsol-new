@@ -1,0 +1,234 @@
+.careers-section {
+  font-family: "Gilroy", sans-serif;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.careers-header h2 {
+  color: #000;
+  font-family: Guminert;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -1.6px;
+  text-transform: capitalize;
+}
+
+.careers-subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.careers-header p {
+  color: #000;
+  font-family: Guminert;
+  font-size: 33px;
+  text-align: justify;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 46px;
+  letter-spacing: -0.66px;
+}
+
+/* Grid Layout */
+.career-parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.career-div1 {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.career-div2 {
+  grid-column: span 2;
+  grid-row: span 6;
+  grid-column-start: 3;
+}
+
+.career-div3 {
+  grid-column: span 2;
+  grid-row: span 3;
+  grid-column-start: 5;
+}
+
+.career-div4 {
+  grid-column: span 2;
+  grid-row: span 3;
+  grid-row-start: 4;
+}
+
+.career-div5 {
+  grid-column: span 2;
+  grid-row: span 3;
+  grid-column-start: 5;
+  grid-row-start: 4;
+}
+
+/* Careers Intro */
+.careers-intro {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.careers-intro-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #070707;
+  text-align: center;
+}
+
+.careers-intro-text {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+}
+
+.careers-intro-cta {
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+}
+
+/* Application Form */
+.application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-left: 60px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.application-input,
+.application-textarea {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.application-submit-btn {
+  background: #1da1f2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 60px;
+  margin-top: 50px;
+}
+
+.application-submit-btn:hover {
+  background: #0d8ae8;
+}
+
+.form-email a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 50px;
+}
+
+.form-email a:hover {
+  text-decoration: underline;
+}
+
+/* =============================
+   RESPONSIVE STYLES
+   ============================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .careers-header h2 {
+    font-size: 60px;
+  }
+  .careers-header p {
+    font-size: 26px;
+    line-height: 38px;
+  }
+  .career-parent {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+  .form-row {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .careers-header h2 {
+    font-size: 40px;
+  }
+  .careers-header p {
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+  }
+  .career-parent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .form-row {
+    flex-direction: column;
+    margin: 0;
+    gap: 0.75rem;
+  }
+  .application-submit-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+  .form-footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .form-email a {
+    margin-right: 0;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .careers-header h2 {
+    font-size: 28px;
+  }
+  .careers-header p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .careers-intro-title {
+    font-size: 32px;
+  }
+  .career-parent {
+    grid-template-columns: 1fr;
+  }
+  .application-submit-btn {
+    font-size: 14px;
+    padding: 0.6rem 1rem;
+  }
+}

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Logo from '../assets/images/logo.svg';
 import LogoText from '../assets/images/Logotext.svg'
 import "../App.css";
@@ -21,18 +23,18 @@ const Navbar: React.FC = () => {
                 <a className="nav-link" href="#case-studies">Case studies</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#pricing">Pricing</a>
+                <Link className="nav-link" to="/price">Pricing</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#about">About us</a>
+                <Link className="nav-link" to="/about">About</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#blog">Blog</a>
+                <Link className="nav-link" to="/blog">Blog</Link>
               </li>
             </ul>
-            <a className="btn btn-primary contact-btn" href="#contact">
+            <Link className="btn btn-primary contact-btn" to="/contact">
               Contact us <i className="bi bi-arrow-up-right"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

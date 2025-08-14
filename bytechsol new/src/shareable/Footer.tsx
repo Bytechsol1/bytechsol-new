@@ -3,6 +3,7 @@ import logo from "../assets/images/lg.svg";
 import arrowIcon from "../assets/images/arrow down.png";
 import trustBadges from "../assets/images/btn arrow icon.png";
 import LogoText from "../assets/images/lg-text.svg";
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -32,20 +33,20 @@ const Footer: React.FC = () => {
             <h6 className="footer-heading">Services</h6>
             <ul className="footer-links">
               <li>UI UX Design</li>
-              <li>Web Design</li>
-              <li>Product Design</li>
-              <li>SaaS Design</li>
+               <Link to="/Webecom"><li>web design</li></Link>
+               <Link to="/ProductDesign"><li>Product design</li></Link>
+              <Link to="/SaasDesign"><li>SaasDesign</li></Link> 
               <li>Branding</li>
-              <li>UX Audit</li>
+              <Link to="/careers"><li>UX Audit</li></Link> 
             </ul>
           </div>
 
           {/* 3️⃣ Additional Services */}
           <div className="col-md-2">
             <ul className="footer-links mt-md-4 pt-md-2">
-              <li>Mobile App</li>
-              <li>Design System</li>
-              <li>Webflow</li>
+              <Link to="/mobile"><li>Mobile Page</li></Link>
+              <Link to="/FullStackExpertise"><li>Design system</li></Link> 
+              <Link to="/CustomSoftwareDev"><li>Web flow</li></Link>
               <li>Build Product (MVP)</li>
               <li>Conversion Rate.. (CRO)</li>
             </ul>

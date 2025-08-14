@@ -1,0 +1,276 @@
+.webecom-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.webecom-content{
+  margin-left: -650px;
+}
+
+
+.webecom-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.webecom-description {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #FFF;
+}
+
+.webecom-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.webecom-btn {
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.webecom-btn-primary {
+  border: 2px solid #fff;
+  background-color: #2084b2;
+  color: #fff;
+}
+
+.webecom-btn-primary:hover {
+  background-color: #000;
+}
+
+.webecom-btn-outline {
+  border: 2px solid #fff;
+  color: #FFF;
+  background: transparent;
+}
+
+.webecom-btn-outline:hover {
+  background-color: #2084b2;
+  color: #fff;
+}
+
+/* =============================
+   Responsive Adjustments
+   ============================= */
+@media (max-width: 1024px) {
+  .webecom-content {
+    margin-left: 0;
+  }
+  .webecom-heading {
+    font-size: 2rem;
+  }
+  .webecom-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .webecom-section {
+    padding: 60px 15px;
+  }
+  .webecom-heading {
+    font-size: 1.8rem;
+  }
+  .webecom-description {
+    font-size: 0.95rem;
+  }
+  .webecom-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .webecom-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .webecom-section {
+    padding: 40px 10px;
+  }
+  .webecom-heading {
+    font-size: 1.5rem;
+  }
+  .webecom-description {
+    font-size: 0.9rem;
+  }
+  .webecom-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+.performance-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.card-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.purple-bg {
+  background-color: #4a3aff;
+  color: white;
+}
+
+.white-bg {
+  background-color: white;
+  color: black;
+}
+
+.card-text {
+  flex: 1 1 50%;
+  font-family: 'Guminert';
+  font-weight: 700;
+}
+
+.card-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.card-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card-img {
+  flex: 1 1 40%;
+  text-align: right;
+}
+
+.card-img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.ecomsolutions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color:#FFD500;;
+  color: black;
+}
+
+.ecomsolutions-text {
+  flex: 1 1 50%;
+  font-family: 'Gilroy', sans-serif;
+}
+
+.ecomsolutions-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.ecomsolutions-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.ecomsolutions-img {
+  flex: 1 1 40%;
+  text-align: right;
+}
+
+.ecomsolutions-img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.clouddevops-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+  gap: 2rem;
+  background-color: #FF531A;
+}
+
+.clouddevops-content {
+  flex: 1 1 50%;
+  max-width: 600px;
+}
+
+.clouddevops-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 20px;
+}
+
+.clouddevops-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #FFF;
+}
+
+.clouddevops-image-wrapper {
+  flex: 1 1 40%;
+  text-align: right;
+}
+
+.clouddevops-image {
+  max-width: 55%;
+  margin-right: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .clouddevops-image-wrapper {
+    flex: 1 1 50%;
+  }
+  .clouddevops-image {
+    max-width: 70%;
+    margin-right: 50px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .clouddevops-image-wrapper {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .clouddevops-image {
+    max-width: 80%;
+    margin-right: 0;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .clouddevops-image {
+    max-width: 100%;
+  }
+}
+
+
+
+
+

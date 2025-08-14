@@ -1,0 +1,495 @@
+/* 1st section */
+.Designed-section {
+  background-color: #fff;
+  padding: 60px 10px;
+  /* text-align: center; */
+  font-family: 'Guminert', sans-serif;
+  color: #000;
+}
+
+.container1 {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.head {
+  font-size: 80px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000;
+}
+.head span{
+    background: linear-gradient(90deg, #5a2fe7, #ea549f);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;    
+}
+
+.container1 p {
+width: 1200px;
+position: relative;
+font-size: 30px;
+line-height: 46px;
+font-weight: 600;
+font-family: Guminert;
+color: #000;
+text-align: left;
+display: inline-block;
+height: 95px;
+}
+
+.big{
+  width: 1260px;
+  height:auto;
+  margin-left: 20px;
+}
+/* --------------- */
+.trust-500 p{
+  color: #000;
+font-family: Guminert;
+font-size: 33px;
+font-style: normal;
+font-weight: 600;
+line-height: 46px; 
+text-align: center;
+}
+
+.scrolling-images-section1 {
+  overflow: hidden;
+}
+
+.scroll-row {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-track3 {
+  display: inline-flex;
+  animation: scroll-left 25s linear infinite;
+}
+
+.scroll-track.reverse {
+  animation: scroll-right 25s linear infinite;
+}
+
+.scroll-image4 {
+  width: 382px;
+  height: 84px;
+  object-fit: cover;
+  margin: 0 0.5rem;
+  border-radius: 25px;
+  background-color: #ddd;
+}
+
+/* Animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.bold-design p{
+    color: #000;
+font-family: Guminert;
+font-size: 50px;
+font-style: normal;
+font-weight: 700;
+line-height: 70px;
+text-align: center;
+}
+
+.metrics-section {
+  padding: 60px 20px;
+  font-family: 'Gilroy', sans-serif;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.metrics-heading {
+color: #000;
+font-family: Guminert;
+font-size: 50px;
+font-style: normal;
+font-weight: 550;
+line-height: 70px; 
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 40px 20px;
+  justify-items: center;
+  background-color: #f9f9f9;
+  font-family: 'Gilroy', sans-serif;
+}
+
+.card1{
+ background-color: #fff;
+  border-radius: 16px;
+  padding: 90px 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+} 
+.car2{
+ background-color: #fff;
+  border-radius: 16px;
+  padding: 90px 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+} 
+.cam3{
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 90px 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+ .css4{
+      background-color: #fff;
+  border-radius: 16px;
+  padding: 90px 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+ }
+ .csm5{
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 90px 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+ }
+.card1:hover{
+      transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.car2:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.cam3:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.css4:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.csm5:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.metric-number1{
+    font-size: 14px;
+  font-weight: 500;
+  color: #999;
+  margin-bottom: 12px;
+}
+.metric-number2{
+    font-size: 14px;
+  font-weight: 500;
+  color: #999;
+  margin-bottom: 12px;
+}
+.metric-number3{
+    font-size: 14px;
+  font-weight: 500;
+  color: #999;
+  margin-bottom: 12px;
+}
+.metric-number4{
+    font-size: 14px;
+  font-weight: 500;
+  color: #999;
+  margin-bottom: 12px;
+}
+.metric-number5 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+
+.metric-value1{
+      font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+.metric-value2{
+      font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+.metric-value3{
+      font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+.metric-value4{
+      font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+.metric-value5 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.metric-description1{
+      font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+.metric-description2{
+      font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+.metric-description3{
+      font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+.metric-description4{
+      font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+.metric-description5 {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.vision-section {
+  background-color: #fff;
+  padding: 80px 20px;
+  font-family: "Guminert", sans-serif;
+}
+
+.vision-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vision-heading {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 60px;
+  color: #000;
+  text-align: center;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.vision-image img{
+  width: 602px;
+height: 700px;
+  margin-left: -30px;
+
+}
+
+.vision-text p {
+color: #353535;
+font-family: Guminert;
+font-size: 27px;
+font-style: normal;
+font-weight: 600;
+line-height: 33px;
+}
+
+.vision-btn {
+  display: inline-block;
+  background-color: #0000ff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.vision-btn span {
+  margin-left: 8px;
+}
+
+.vision-btn:hover {
+  background-color: #0000cc;
+}
+.why-bytechsol-section {
+  background-color: #f8f9fa; 
+  font-family: Guminert;
+}
+
+.custom-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.accordion-button {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.accordion-body {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.belief-behind {
+  background-color: #fff;
+  padding: 80px 20px;
+  font-family: "Guminert", sans-serif;
+}
+
+.belief-container h1 {
+  font-size: 50px;
+  margin-left: 50px;
+  font-weight: 700;
+  color: #000;
+}
+
+
+/* ========== Mobile Responsive Adjustments ========== */
+@media screen and (max-width: 768px) {
+
+  .container1 p {
+    width: 100%;
+    font-size: 20px;
+    line-height: 36px;
+    height: auto;
+    text-align: center;
+  }
+
+  .head {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .big {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .bold-design p,
+  .trust-500 p,
+  .metrics-heading,
+  .vision-heading {
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    padding: 20px 10px;
+  }
+
+  .card1,
+  .car2,
+  .cam3,
+  .css4,
+  .csm5 {
+    padding: 40px 20px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .metric-value1,
+  .metric-value2,
+  .metric-value3,
+  .metric-value4,
+  .metric-value5 {
+    font-size: 24px;
+  }
+
+  .metric-description1,
+  .metric-description2,
+  .metric-description3,
+  .metric-description4,
+  .metric-description5 {
+    font-size: 14px;
+  }
+
+  .vision-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .vision-image img {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .vision-text p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .vision-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .belief-container h1 {
+    font-size: 32px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .accordion-button {
+    font-size: 15px;
+  }
+
+  .accordion-body {
+    font-size: 14px;
+  }
+
+}
