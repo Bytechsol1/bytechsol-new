@@ -24,18 +24,67 @@ import Award3 from "../assets/images/salik.png";
 import Award4 from "../assets/images/yasir.jpg";
 import bgImage from "../assets/images/bgimg.jpg";
 import icon from "../assets/images/tick.svg";
-import Testimonial from "../shareable/testimonial";
-import FaqSection from "../shareable/faq";
-import ContactSection from "../shareable/contact";
-import cr1 from "../assets/images/1card.svg";
-import cr2 from "../assets/images/2card.svg";
-import cr3 from "../assets/images/3card.svg";
+import bg from "../assets/images/frm-img.png";
+import tick from "../assets/images/contact tick.png";
+import com from "../assets/images/comma.png";
+import cut from "../assets/images/cut.png";
+import { FiChevronDown } from "react-icons/fi";
+
+const faqs = [
+  {
+    id: 1,
+    question: "What are your focus areas as a UI/UX design agency?",
+    answer:
+      "We specialize in user research, wireframing, prototyping, and visual design...",
+  },
+  {
+    id: 2,
+    question: "How do you hand off designs to developers?",
+    answer:
+      "We provide detailed specs, assets, and collaborate closely with developers.",
+  },
+  {
+    id: 3,
+    question: "What are your focus areas as a UI/UX design agency?",
+    answer:
+      "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
+  },
+  {
+    id: 4,
+    question: "What are your focus areas as a UI/UX design agency?",
+    answer:
+      "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
+  },
+  {
+    id: 5,
+    question: "What are your focus areas as a UI/UX design agency?",
+    answer:
+      "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
+  },
+  {
+    id: 6,
+    question: "What are your focus areas as a UI/UX design agency?",
+    answer:
+      "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
+  },
+  {
+    id: 7,
+    question: "What are your focus areas as a UI/UX design agency?",
+    answer:
+      "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
+  },
+  {
+    id: 8,
+    question: "What are your focus areas as a UI/UX design agency?",
+    answer:
+      "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
+  },
+];
 
 const cards = [
   {
     label: "DESIGN",
     color: "design",
-    image: cr1,
     title: [
       "We create stunning, user-friendly websites that engage visitors, build trust, and turn interest into action.",
     ],
@@ -49,7 +98,6 @@ const cards = [
   {
     label: "BUILD",
     color: "build",
-    image: cr2,
     title: [
       "We develop high-performing, scalable solutions that work seamlessly for your goals and your customers.",
     ],
@@ -63,7 +111,6 @@ const cards = [
   {
     label: "GROW",
     color: "grow",
-    image: cr3,
     title: [
       "We help you attract, engage, and convert customers with data-driven marketing that delivers results.",
     ],
@@ -94,19 +141,93 @@ const services = [
 const topImages = [Top1, Top2, Top3, Top4];
 const bottomImages = [Bottom1, Bottom2, Bottom3, Bottom4];
 
-const serviceTags = [
-  "UI/UX Design",
-  "SaaS Design",
-  "Branding",
-  "CRO",
-  "Mobile App",
-  "Development",
-  "MVP Development",
-  "Web Design",
-];
-
 const HeroSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const toggle = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const [formData, setFormData] = useState({
+    fullname: "",
+    email: "",
+    budget: "",
+    referral: "",
+    message: "",
+    selectedTags: [] as string[],
+  });
+
+  const [success, setSuccess] = useState(false);
+
+  const serviceTags = [
+    "UI/UX Design",
+    "SaaS Design",
+    "Branding",
+    "CRO",
+    "Mobile App",
+    "Development",
+    "MVP Development",
+    "Web Design",
+  ];
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+
+    // Restrict numbers in full name
+    if (name === "fullname" && /\d/.test(value)) return;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const toggleTag = (tag: string) => {
+    setFormData((prev) => {
+      const tags = prev.selectedTags.includes(tag)
+        ? prev.selectedTags.filter((t) => t !== tag)
+        : [...prev.selectedTags, tag];
+
+      return { ...prev, selectedTags: tags };
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const { fullname, email, budget, referral, message, selectedTags } =
+      formData;
+
+    if (!fullname || !email || !budget || !referral || !message) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    const output = {
+      fullName: fullname,
+      emailAddress: email,
+      projectBudget: budget,
+      referralSource: referral,
+      message: message,
+      services: selectedTags.length ? selectedTags : ["None"],
+    };
+
+    console.log("Submitted Form:", output);
+
+    setSuccess(true);
+    setFormData({
+      fullname: "",
+      email: "",
+      budget: "",
+      referral: "",
+      message: "",
+      selectedTags: [],
+    });
+
+    setTimeout(() => setSuccess(false), 3000);
+  };
 
   return (
     <>
@@ -117,7 +238,7 @@ const HeroSection: React.FC = () => {
             <div className="row align-items-center">
               <div className="col-md-8">
                 <h1>
-                 Global Software Agency & Digital Partner for{" "}
+                  Global UI UX design agency digital partner for{" "}
                   <AnimatedText />
                 </h1>
                 <div className="cta-buttons mt-4 d-flex gap-3 flex-wrap">
@@ -135,7 +256,8 @@ const HeroSection: React.FC = () => {
               </div>
               <div className="col-md-4">
                 <p>
-                  We craft scalable, user-focused digital solutions for startups and enterprises. From concept to code — we deliver results that fuel growth.
+                  We deliver globally UI, UX & web design smoothly, without
+                  delay, saving your time and money with an efficient process.
                 </p>
                 <div className="founders-rating">
                   <div className="d-flex align-items-center">
@@ -188,7 +310,7 @@ const HeroSection: React.FC = () => {
                       </div>
                     </div>
                     <span className="ms-3" style={{ lineHeight: "15px" }}>
-                      Trusted by forward-thinking founders and businesses worldwide.
+                      Loved by 500+ Founders
                     </span>
                   </div>
                   <img src={Clutch} alt="Clutch" className="clutch-logo" />
@@ -236,7 +358,9 @@ const HeroSection: React.FC = () => {
         <div className="container">
           <p className="subheading">(WHO WE ARE)</p>
           <p className="description">
-            Bytechsol is a software agency built for modern businesses. We specialize in web development, mobile apps, and custom software, designed to help companies thrive in a fast-paced digital world. At Bytechsol, we blend innovation with simplicity to deliver reliable, performance-driven products.
+            lumix® is a sleek, minimalistic Webflow template designed
+            specifically for agencies and creators. At lumix, we prioritize
+            clean typography and bold design.
           </p>
         </div>
       </section>
@@ -294,27 +418,37 @@ const HeroSection: React.FC = () => {
       </section>
 
       {/* 6th Section */}
-     <section className="scroll-section">
-  <div className="card-container">
-    {cards.map((card, index) => (
-      <div key={index} className={`choose-card ${card.color}`}>
-        <div className={`badge ${card.color}`}>{card.label}</div>
-        
-        {/* Image block */}
-        <p className="card-title-text">{card.title[0]}</p>
-        <ul>
-          {card.items.map((item, idx) => (
-            <li key={idx}>{item}</li>
-          ))}
-        </ul>
-        <div className="card-image-wrapper">
-          <img src={card.image} alt={card.label} className="card-image" />
+      <section className="who-we-are-section py-5">
+        <div className="container">
+          <p className="subheading">(WHY CHOOSE BYTECHSOL)</p>
+          <h1 className="description" style={{ fontSize: "45px" }}>
+            Helping you transform your business
+          </h1>
+          <p
+            className="description"
+            style={{ fontSize: "25px", fontWeight: "200" }}
+          >
+            Bold ideas. Smarter strategies. Game-changing results. Let’s elevate
+            your brand and unlock its full potential.
+          </p>
         </div>
-      </div>
-    ))}
-  </div>
-</section>
+      </section>
 
+      <section className="scroll-section">
+        <div className="card-container">
+          {cards.map((card, index) => (
+            <div key={index} className={`choose-card ${card.color}`}>
+              <div className={`badge ${card.color}`}>{card.label}</div>
+              <p className="card-title-text">{card.title[0]}</p>
+              <ul>
+                {card.items.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* 7th Section */}
       <section className="group7-container">
@@ -350,10 +484,170 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </section>
-      <Testimonial/>
-      <FaqSection/>
-      <ContactSection/>
-          </>
+      {/* 8th testimonial section */}
+      <div className="group5-wrapper">
+        <div className="group5-content">
+          <div className="group5-text-block">
+            <span className="group5-tag">(Testimonials)</span>
+            <h2 className="group5-heading">See why our clients love us</h2>
+            <p className="group5-quote">
+              "We've worked with several design agencies in the past, but none
+              have matched the level of professionalism and expertise that we
+              found at Bloomr. Highly recommended!"
+            </p>
+            <div className="group5-author-block">
+              <img src={cut} alt="Samantha" className="group5-avatar" />
+              <div>
+                <div className="group5-author-name">Samantha</div>
+                <div className="group5-author-role">
+                  Co-Founder at KYU House
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src={com} alt="" className="group5-vector" />
+        </div>
+      </div>
+
+      {/* 9th faq section  */}
+      <section className="faq-wrapper">
+        <div className="faq-container">
+          <p className="faq-label">(FAQs)</p>
+          <h2 className="faq-heading">Frequently asked questions</h2>
+
+          <div className="faq-list">
+            {faqs.map((item, index) => (
+              <div
+                key={item.id}
+                className={`faq-item ${activeIndex === index ? "active" : ""}`}
+                onClick={() => toggle(index)}
+              >
+                <div className="faq-question-row">
+                  <span className="faq-question">{item.question}</span>
+                  <FiChevronDown
+                    className={`faq-icon ${
+                      activeIndex === index ? "rotated" : ""
+                    }`}
+                  />
+                </div>
+                {activeIndex === index && (
+                  <div className="faq-answer">{item.answer}</div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="contact8-wrapper">
+        <div className="contact8-bg">
+          <img
+            src={bg}
+            alt="Decorative background"
+            className="contact8-bg-img"
+          />
+        </div>
+        <div className="container contact8-content">
+          <div className="contact8-left">
+            <h2 className="contact8-title">
+              Have a Project? <br /> Let’s talk!
+            </h2>
+            <ul className="contact8-list">
+              <li>
+                <img src={tick} alt="✓" />{" "}
+                <span>NDA? Absolutely just ask.</span>
+              </li>
+              <li>
+                <img src={tick} alt="✓" />{" "}
+                <span>We’ll respond in 24 hours — fast & focused.</span>
+              </li>
+              <li>
+                <img src={tick} alt="✓" />{" "}
+                <span>Work with senior UX experts, not juniors.</span>
+              </li>
+            </ul>
+          </div>
+
+          <form className="contact8-form" onSubmit={handleSubmit}>
+            <div className="contact8-row">
+              <input
+                type="text"
+                name="fullname"
+                placeholder="Full name"
+                value={formData.fullname}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="contact8-row">
+              <input
+                type="text"
+                name="budget"
+                placeholder="Project budget"
+                value={formData.budget}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="text"
+                name="referral"
+                placeholder="How did you hear about us?"
+                value={formData.referral}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <textarea
+              name="message"
+              rows={4}
+              placeholder="Tell us about your product and goals."
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+
+            <div className="contact8-subtitle">How can we help you?</div>
+            <div className="contact8-tags">
+              {serviceTags.map((tag) => (
+                <span
+                  key={tag}
+                  className={`contact8-tag ${
+                    formData.selectedTags.includes(tag) ? "selected" : ""
+                  }`}
+                  onClick={() => toggleTag(tag)}
+                  style={{ cursor: "pointer" }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <button type="submit" className="contact8-submit">
+              Send message
+            </button>
+
+            {success && (
+              <div className="contact8-success">✅ Submitted successfully!</div>
+            )}
+
+            <div className="contact8-alt">
+              <span>Prefer email?</span>
+              <a href="mailto:bytechsol@gmail.com">bytechsol@gmail.com</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </>
   );
 };
 
