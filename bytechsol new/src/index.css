@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'Guminert';
-  src: url('../public/Fonts/Guminert-6Y5gD.ttf') format('truetype');
+  font-family: "Guminert";
+  src: url("/Fonts/Guminert-6Y5gD.ttf") format("truetype");
   font-style: normal;
-  font-weight: normal; 
+  font-weight: normal;
   font-display: swap;
 }

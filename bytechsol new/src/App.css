@@ -38,21 +38,29 @@
 }
 
 .contact-btn {
+  --btn-bg: #289ed8;
+  --btn-hover: #000;
+  --btn-text: #fff;
+
   font-size: 18px;
   font-weight: bold;
   font-family: "Guminert", sans-serif;
   padding: 0.5rem 1rem;
   border-radius: 29.5px;
-  background-color: #289ed8;
-  color: #fff;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
   border: none;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   position: relative;
   overflow: hidden;
-  transition: background-color 0.3s ease;
-  z-index: 0;
+  transition: background-color 0.3s ease, color 0.2s ease;
+}
+
+.contact-btn .btn-label {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-btn::before {
@@ -62,11 +70,11 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: var(--btn-hover);
   transform: translateY(100%);
   transition: transform 0.4s ease-in-out;
-  z-index: -1;
   border-radius: 29.5px;
+  z-index: 0;
 }
 
 .contact-btn:hover::before {
@@ -74,10 +82,15 @@
 }
 
 .contact-btn:hover {
-  color: #fff;
+  color: var(--btn-text);
 }
 
-/* Arrow Animation */
+.btn-scheme--saas {
+  --btn-bg: #fff;
+  --btn-hover: #2b3990;
+  --btn-text: #ffffff;
+}
+
 .contact-btn i {
   transition: transform 0.3s ease-in-out;
   display: inline-block;
@@ -96,8 +109,6 @@
   }
 }
 
-/* footer css  */
-
 .footer-divider {
   border-color: #222;
   margin: 2rem 0 1rem;
@@ -105,7 +116,7 @@
 
 .footer-connect {
   font-size: 14px;
-  margin-top: 60px; /* Increased for better spacing */
+  margin-top: 60px;
 }
 
 @media (max-width: 768px) {
@@ -182,7 +193,6 @@
   border: none;
 }
 
-/* Hover background gradient */
 .deck-button::before {
   content: "";
   position: absolute;
@@ -205,7 +215,6 @@
   color: #000;
 }
 
-/* Circle Icon styling */
 .deck-button .circle-icon {
   background: #000;
   border-radius: 50%;
@@ -218,12 +227,10 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Icon animation */
 .deck-button:hover .circle-icon {
   animation: floatUp 0.6s infinite alternate;
 }
 
-/* Bounce animation */
 @keyframes floatUp {
   0% {
     transform: translateY(0);
@@ -337,7 +344,7 @@
   animation: fadeIn 0.3s ease-in-out;
   text-align: center;
   border: 1px solid #b3e6b8;
-  font-family: 'Gunimert',sans-serif;
+  font-family: "Gunimert", sans-serif;
 }
 
 @keyframes fadeIn {

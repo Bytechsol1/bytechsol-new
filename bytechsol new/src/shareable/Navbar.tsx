@@ -1,39 +1,96 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-import Logo from '../assets/images/logo.svg';
-import LogoText from '../assets/images/Logotext.svg'
+import React from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 
-const Navbar: React.FC = () => {
+export type NavbarProps = {
+  logoIconSrc: string;
+  logoTextSrc?: string;
+  backgroundColor?: string;
+  variant?: "light" | "dark";
+  navClassName?: string;
+  linkClassName?: string;
+  buttonClassName?: string;
+  buttonSchemeClass?: string;
+  sticky?: boolean;
+};
+
+const Navbar: React.FC<NavbarProps> = ({
+  logoIconSrc,
+  logoTextSrc,
+  backgroundColor,
+  variant = "light",
+  navClassName = "",
+  linkClassName = "text-dark",
+  buttonClassName = "",
+  buttonSchemeClass = "",
+  sticky = true,
+}) => {
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light bg-white navbar-custom sticky-top">
+      <nav
+        className={[
+          "navbar",
+          "navbar-expand-lg",
+          variant === "light" ? "navbar-light" : "navbar-dark",
+          "navbar-custom",
+          sticky ? "sticky-top" : "",
+          navClassName,
+        ].join(" ")}
+        style={backgroundColor ? { backgroundColor } : undefined}
+      >
         <div className="container">
-          <a className="navbar-brand d-flex align-items-center" href="#">
-            <img src={Logo} alt="logo-icon" className="logo-icon" />
-            <img src={LogoText} alt="logo-text" className="logo-text ms-2" />
-          </a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <Link className="navbar-brand d-flex align-items-center" to="/">
+            <img src={logoIconSrc} alt="logo-icon" className="logo-icon" />
+            {logoTextSrc ? (
+              <img
+                src={logoTextSrc}
+                alt="logo-text"
+                className="logo-text ms-2"
+              />
+            ) : null}
+          </Link>
+
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-label="Toggle navigation"
+          >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="#case-studies">Case studies</a>
+                <a className={`nav-link ${linkClassName}`} href="#case-studies">
+                  Case studies
+                </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/price">Pricing</Link>
+                <Link className={`nav-link ${linkClassName}`} to="/price">
+                  Pricing
+                </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">About</Link>
+                <Link className={`nav-link ${linkClassName}`} to="/about">
+                  About
+                </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/blog">Blog</Link>
+                <Link className={`nav-link ${linkClassName}`} to="/blog">
+                  Blog
+                </Link>
               </li>
             </ul>
-            <Link className="btn btn-primary contact-btn" to="/contact">
-              Contact us <i className="bi bi-arrow-up-right"></i>
+
+            <Link
+              className={`btn contact-btn ${buttonClassName} ${buttonSchemeClass}`}
+              to="/contact"
+            >
+              <span className="btn-label">
+                Contact us <i className="bi bi-arrow-up-right"></i>
+              </span>
             </Link>
           </div>
         </div>
