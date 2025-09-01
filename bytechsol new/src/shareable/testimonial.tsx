@@ -14,17 +14,15 @@ const Testimonial = () => {
             <img src={com} alt="Quotation mark" className="group5-vector mb-3" />
 
             <p className="group5-quote">
-              "We've worked with several design agencies in the past, but none
-              have matched the level of professionalism and expertise that we
-              found at Bloomr. Highly recommended!"
+             The custom software your team developed has streamlined our internal operations like never before. It was built exactly to our specs, with performance and scalability in mind. Truly a game-changer for our workflow.
             </p>
 
             <div className="group5-author-block d-flex align-items-center gap-3 mt-4">
               <img src={cut} alt="Samantha" className="group5-avatar rounded-circle" />
               <div>
-                <div className="group5-author-name fw-bold">Samantha</div>
+                <div className="group5-author-name fw-bold">Olivia Morgan</div>
                 <div className="group5-author-role text-muted">
-                  Co-Founder at KYU House
+                  Operations Head, TechNexus (UK)
                 </div>
               </div>
             </div>

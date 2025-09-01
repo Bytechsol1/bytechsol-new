@@ -12,130 +12,74 @@ import Bottom1 from "../assets/images/bottom1.png";
 import Bottom2 from "../assets/images/bottom2.png";
 import Bottom3 from "../assets/images/bottom3.png";
 import Bottom4 from "../assets/images/bottom4.png";
-import Img1 from "../assets/images/salik.png";
-import Img2 from "../assets/images/yasir.jpg";
-import Img3 from "../assets/images/salik.png";
-import Img4 from "../assets/images/yasir.jpg";
 import Arrow from "../assets/images/arrow.svg";
 import AwardBg from "../assets/images/award-bg.jpg";
-import Award1 from "../assets/images/salik.png";
-import Award2 from "../assets/images/yasir.jpg";
-import Award3 from "../assets/images/salik.png";
-import Award4 from "../assets/images/yasir.jpg";
 import bgImage from "../assets/images/bgimg.jpg";
 import icon from "../assets/images/tick.svg";
-import bg from "../assets/images/frm-img.png";
-import tick from "../assets/images/contact tick.png";
-import com from "../assets/images/comma.png";
-import cut from "../assets/images/cut.png";
-import { FiChevronDown } from "react-icons/fi";
+import Testimonial from "../shareable/testimonial";
+import FaqSection from "../shareable/faq";
+import ContactSection from "../shareable/contact";
+import cr1 from "../assets/images/1card.svg";
+import cr2 from "../assets/images/2card.svg";
+import cr3 from "../assets/images/3card.svg";
+import wb2 from "../assets/images/webim.jpg"
+import mk2 from "../assets/images/markim.jpg"
+import bd2 from "../assets/images/brandim.jpg"
+import ux2 from "../assets/images/uxim.jpg"
+import p3 from "../assets/images/ppg3.png"
+import a2 from "../assets/images/awar2.png"
+import f1 from "../assets/images/fund1.png"
+import g4 from "../assets/images/grow4.png"
 
-const faqs = [
-  {
-    id: 1,
-    question: "What are your focus areas as a UI/UX design agency?",
-    answer:
-      "We specialize in user research, wireframing, prototyping, and visual design...",
-  },
-  {
-    id: 2,
-    question: "How do you hand off designs to developers?",
-    answer:
-      "We provide detailed specs, assets, and collaborate closely with developers.",
-  },
-  {
-    id: 3,
-    question: "What are your focus areas as a UI/UX design agency?",
-    answer:
-      "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
-  },
-  {
-    id: 4,
-    question: "What are your focus areas as a UI/UX design agency?",
-    answer:
-      "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
-  },
-  {
-    id: 5,
-    question: "What are your focus areas as a UI/UX design agency?",
-    answer:
-      "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
-  },
-  {
-    id: 6,
-    question: "What are your focus areas as a UI/UX design agency?",
-    answer:
-      "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
-  },
-  {
-    id: 7,
-    question: "What are your focus areas as a UI/UX design agency?",
-    answer:
-      "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
-  },
-  {
-    id: 8,
-    question: "What are your focus areas as a UI/UX design agency?",
-    answer:
-      "Project timelines vary based on scope. A typical UI/UX design project can take anywhere from 2–6 weeks.",
-  },
-];
 
 const cards = [
   {
-    label: "DESIGN",
+    label: "We Deliver What We Promise",
     color: "design",
+    image: cr1,
     title: [
-      "We create stunning, user-friendly websites that engage visitors, build trust, and turn interest into action.",
+      "You won’t need to chase us for updates.",
     ],
     items: [
-      "Strategy",
-      "Web Design",
-      "User Experience Design",
-      "Accessible Interfaces",
+      "At Bytechsol, clear timelines and open communication are our foundation. We treat your project like it’s our own — staying flexible. when you need to pivot and focused when it’s time to ship. Fast, reliable, and stress-free delivery — just how it should be.",
     ],
   },
   {
-    label: "BUILD",
+    label: "We Think Beyond Just Code",
     color: "build",
+    image: cr2,
     title: [
-      "We develop high-performing, scalable solutions that work seamlessly for your goals and your customers.",
+      "Tech is easy — understanding your business is where the magic happens.",
     ],
     items: [
-      "Custom Web Development",
-      "CRM/CMS Integration",
-      "Shopify Development",
-      "Scalable Infrastructure",
+      "We dive deep into your goals to craft solutions that make sense for you, not just the market. From strategy to design to launch, we’re with you at every step — like a tech partner who listens (and delivers).",
     ],
   },
   {
-    label: "GROW",
+    label: "We Build for the Long Run",
     color: "grow",
+    image: cr3,
     title: [
-      "We help you attract, engage, and convert customers with data-driven marketing that delivers results.",
+      "No shortcuts. No quick fixes. Just solid, scalable solutions.",
     ],
     items: [
-      "Paid Campaign Strategy",
-      "Content Optimization",
-      "Conversion Marketing",
-      "Email Campaigns",
+      "We don’t believe in one-size-fits-all. Whatever your needs: AI, web applications, or custom software- we develop tools that can scale with you. Smart, scalable, and built to last — so you don’t have to rebuild six months later.",
     ],
   },
 ];
 
-
 const awards = [
-  { text: "500+ Happy clients", img: Award1 },
-  { text: "10+ Design awards", img: Award2 },
-  { text: "$600 M+ funding", img: Award3 },
-  { text: "×5 Growth of brand", img: Award4 },
+  { text: "500+ Happy clients", img: p3 },
+  { text: "10+ Design awards", img: a2 },
+  { text: "$600 M+ funding", img: f1 },
+  { text: "×5 Growth of brand", img: g4 },
 ];
 
 const services = [
-  { id: 1, title: "Web Development", image: Img1 },
-  { id: 2, title: "UI UX Design", image: Img2 },
-  { id: 3, title: "Odoo & Custom ERPs", image: Img3 },
-  { id: 4, title: "AI ML  ", image: Img4 },
+  { id: 1, title: "Web development", image: ux2 },
+  { id: 2, title: "UI UX Design", image: bd2 },
+  { id: 3, title: "Odoo & Custom ERPs", image: mk2 },
+  { id: 4, title: "AI/ML", image: wb2 },
 ];
 
 const topImages = [Top1, Top2, Top3, Top4];
@@ -143,91 +87,6 @@ const bottomImages = [Bottom1, Bottom2, Bottom3, Bottom4];
 
 const HeroSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const toggle = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
-  const [formData, setFormData] = useState({
-    fullname: "",
-    email: "",
-    budget: "",
-    referral: "",
-    message: "",
-    selectedTags: [] as string[],
-  });
-
-  const [success, setSuccess] = useState(false);
-
-  const serviceTags = [
-    "UI/UX Design",
-    "SaaS Design",
-    "Branding",
-    "CRO",
-    "Mobile App",
-    "Development",
-    "MVP Development",
-    "Web Design",
-  ];
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-
-    // Restrict numbers in full name
-    if (name === "fullname" && /\d/.test(value)) return;
-
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const toggleTag = (tag: string) => {
-    setFormData((prev) => {
-      const tags = prev.selectedTags.includes(tag)
-        ? prev.selectedTags.filter((t) => t !== tag)
-        : [...prev.selectedTags, tag];
-
-      return { ...prev, selectedTags: tags };
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const { fullname, email, budget, referral, message, selectedTags } =
-      formData;
-
-    if (!fullname || !email || !budget || !referral || !message) {
-      alert("Please fill in all required fields.");
-      return;
-    }
-
-    const output = {
-      fullName: fullname,
-      emailAddress: email,
-      projectBudget: budget,
-      referralSource: referral,
-      message: message,
-      services: selectedTags.length ? selectedTags : ["None"],
-    };
-
-    console.log("Submitted Form:", output);
-
-    setSuccess(true);
-    setFormData({
-      fullname: "",
-      email: "",
-      budget: "",
-      referral: "",
-      message: "",
-      selectedTags: [],
-    });
-
-    setTimeout(() => setSuccess(false), 3000);
-  };
 
   return (
     <>
@@ -256,8 +115,7 @@ const HeroSection: React.FC = () => {
               </div>
               <div className="col-md-4">
                 <p>
-                  We deliver globally UI, UX & web design smoothly, without
-                  delay, saving your time and money with an efficient process.
+                  We craft scalable, user-focused digital solutions for startups and enterprises. From concept to code, We deliver results that fuel growth.
                 </p>
                 <div className="founders-rating">
                   <div className="d-flex align-items-center">
@@ -310,7 +168,7 @@ const HeroSection: React.FC = () => {
                       </div>
                     </div>
                     <span className="ms-3" style={{ lineHeight: "15px" }}>
-                      Loved by 500+ Founders
+                      Trusted by forward-thinking founders and businesses worldwide. 
                     </span>
                   </div>
                   <img src={Clutch} alt="Clutch" className="clutch-logo" />
@@ -358,15 +216,13 @@ const HeroSection: React.FC = () => {
         <div className="container">
           <p className="subheading">(WHO WE ARE)</p>
           <p className="description">
-            lumix® is a sleek, minimalistic Webflow template designed
-            specifically for agencies and creators. At lumix, we prioritize
-            clean typography and bold design.
+           Bytechsol is a <span className="gradient-text">software agency</span> built for modern businesses. We specialize in web development, mobile apps, and custom software, designed to help companies thrive in a fast-paced digital world. At Bytechsol, we blend innovation with simplicity to deliver reliable, performance-driven products.
           </p>
         </div>
       </section>
 
       {/* 4th Section */}
-      <section className="services-section py-5">
+      <section className="services-section py-5 mb-5">
         <div className="container">
           <p className="ser-subheading">(SERVICES)</p>
           {services.map((service, index) => (
@@ -391,12 +247,12 @@ const HeroSection: React.FC = () => {
         </div>
       </section>
 
-      {/* 5th Section */}
+        {/* 5th Section */}
       <section
         className="awards-section"
         style={{ backgroundImage: `url(${AwardBg})` }}
       >
-        <div className="overlay">
+        <div className="overlay1">
           <div className="awards-heading-container">
             <h2 className="awards-heading">our awards &</h2>
             <br />
@@ -418,44 +274,45 @@ const HeroSection: React.FC = () => {
       </section>
 
       {/* 6th Section */}
-      <section className="who-we-are-section py-5">
-        <div className="container">
-          <p className="subheading">(WHY CHOOSE BYTECHSOL)</p>
-          <h1 className="description" style={{ fontSize: "45px" }}>
-            Helping you transform your business
-          </h1>
-          <p
-            className="description"
-            style={{ fontSize: "25px", fontWeight: "200" }}
-          >
-            Bold ideas. Smarter strategies. Game-changing results. Let’s elevate
-            your brand and unlock its full potential.
-          </p>
-        </div>
-      </section>
+     <section className="scroll-section">
+  <div className="container">
+    <div className="group5-content">
+      {/* Heading block */}
+      <div className="group5-text-block text-center text-md-start">
+        <span className="group5-tag d-block mb-2">(Why Choose bytechsol)</span>
+        <h2 className="group5-heading mb-3 fs-3 fw-bold">Built by Humans. Backed by Tech. Driven by Purpose.</h2>
+        <p className="group5-para">We’re not just here to code — we’re here to understand your vision, solve real problems, and grow <br /> with you. At Bytechsol, your goals become our mission.</p>
+      </div>
 
-      <section className="scroll-section">
-        <div className="card-container">
-          {cards.map((card, index) => (
-            <div key={index} className={`choose-card ${card.color}`}>
-              <div className={`badge ${card.color}`}>{card.label}</div>
-              <p className="card-title-text">{card.title[0]}</p>
-              <ul>
-                {card.items.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
+      {/* Cards block */}
+      <div className="card-container">
+        {cards.map((card, index) => (
+          <div key={index} className={`choose-card ${card.color}`}>
+            <div className={`badge ${card.color}`}>{card.label}</div>
+
+            <p className="card-title-text">{card.title[0]}</p>
+
+            <ul>
+              {card.items.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
+
+            <div className="card-image-wrapper">
+              <img src={card.image} alt={card.label} className="card-image" />
             </div>
-          ))}
-        </div>
-      </section>
-
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
       {/* 7th Section */}
       <section className="group7-container">
         <img className="group7-bg" src={bgImage} alt="Background" />
         <div className="group7-content">
           <h2 className="group7-main-title">
-            A dedicated team of professionals
+           Your Growth, Our Priority
           </h2>
           <div className="group7-columns">
             {[...Array(3)].map((_, idx) => (
@@ -464,18 +321,18 @@ const HeroSection: React.FC = () => {
                 <h3 className="group7-heading">
                   {
                     [
-                      "We're about results",
-                      "Experienced Team",
-                      "Quality Assurance",
+                      "Focused on What Matters",
+                      "A Team by Your Side",
+                      "Quality You Can Rely On",
                     ][idx]
                   }
                 </h3>
                 <p className="group7-description">
                   {
                     [
-                      "We deliver results-driven websites that align with your organisation's specific needs and strategic objectives.",
-                      "In-house team of 19+ talented UX/UI Designers, Strategists, Developers, and Digital Marketers. (No outsourcing!)",
-                      "We take immense pride in our work, ensuring the highest quality product and best practices in everything we do.",
+                      "We are not a company that just creates websites, but creates solutions to help your business flourish and attract customers to achieve real results.",
+                      "Our engineers, designers, and strategists collaborate closely with you. We take care and commitment to everything and do it in-house (we never outsource anything).",
+                      "We put our heart into every project, making sure your website is secure, fast, and built to support your success long-term.",
                     ][idx]
                   }
                 </p>
@@ -484,169 +341,9 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* 8th testimonial section */}
-      <div className="group5-wrapper">
-        <div className="group5-content">
-          <div className="group5-text-block">
-            <span className="group5-tag">(Testimonials)</span>
-            <h2 className="group5-heading">See why our clients love us</h2>
-            <p className="group5-quote">
-              "We've worked with several design agencies in the past, but none
-              have matched the level of professionalism and expertise that we
-              found at Bloomr. Highly recommended!"
-            </p>
-            <div className="group5-author-block">
-              <img src={cut} alt="Samantha" className="group5-avatar" />
-              <div>
-                <div className="group5-author-name">Samantha</div>
-                <div className="group5-author-role">
-                  Co-Founder at KYU House
-                </div>
-              </div>
-            </div>
-          </div>
-          <img src={com} alt="" className="group5-vector" />
-        </div>
-      </div>
-
-      {/* 9th faq section  */}
-      <section className="faq-wrapper">
-        <div className="faq-container">
-          <p className="faq-label">(FAQs)</p>
-          <h2 className="faq-heading">Frequently asked questions</h2>
-
-          <div className="faq-list">
-            {faqs.map((item, index) => (
-              <div
-                key={item.id}
-                className={`faq-item ${activeIndex === index ? "active" : ""}`}
-                onClick={() => toggle(index)}
-              >
-                <div className="faq-question-row">
-                  <span className="faq-question">{item.question}</span>
-                  <FiChevronDown
-                    className={`faq-icon ${
-                      activeIndex === index ? "rotated" : ""
-                    }`}
-                  />
-                </div>
-                {activeIndex === index && (
-                  <div className="faq-answer">{item.answer}</div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="contact8-wrapper">
-        <div className="contact8-bg">
-          <img
-            src={bg}
-            alt="Decorative background"
-            className="contact8-bg-img"
-          />
-        </div>
-        <div className="container contact8-content">
-          <div className="contact8-left">
-            <h2 className="contact8-title">
-              Have a Project? <br /> Let’s talk!
-            </h2>
-            <ul className="contact8-list">
-              <li>
-                <img src={tick} alt="✓" />{" "}
-                <span>NDA? Absolutely just ask.</span>
-              </li>
-              <li>
-                <img src={tick} alt="✓" />{" "}
-                <span>We’ll respond in 24 hours — fast & focused.</span>
-              </li>
-              <li>
-                <img src={tick} alt="✓" />{" "}
-                <span>Work with senior UX experts, not juniors.</span>
-              </li>
-            </ul>
-          </div>
-
-          <form className="contact8-form" onSubmit={handleSubmit}>
-            <div className="contact8-row">
-              <input
-                type="text"
-                name="fullname"
-                placeholder="Full name"
-                value={formData.fullname}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="contact8-row">
-              <input
-                type="text"
-                name="budget"
-                placeholder="Project budget"
-                value={formData.budget}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                name="referral"
-                placeholder="How did you hear about us?"
-                value={formData.referral}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <textarea
-              name="message"
-              rows={4}
-              placeholder="Tell us about your product and goals."
-              value={formData.message}
-              onChange={handleChange}
-              required
-            />
-
-            <div className="contact8-subtitle">How can we help you?</div>
-            <div className="contact8-tags">
-              {serviceTags.map((tag) => (
-                <span
-                  key={tag}
-                  className={`contact8-tag ${
-                    formData.selectedTags.includes(tag) ? "selected" : ""
-                  }`}
-                  onClick={() => toggleTag(tag)}
-                  style={{ cursor: "pointer" }}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <button type="submit" className="contact8-submit">
-              Send message
-            </button>
-
-            {success && (
-              <div className="contact8-success">✅ Submitted successfully!</div>
-            )}
-
-            <div className="contact8-alt">
-              <span>Prefer email?</span>
-              <a href="mailto:bytechsol@gmail.com">bytechsol@gmail.com</a>
-            </div>
-          </form>
-        </div>
-      </section>
+      <Testimonial />
+      <FaqSection />
+      <ContactSection />
     </>
   );
 };

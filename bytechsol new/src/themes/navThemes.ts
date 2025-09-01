@@ -3,6 +3,7 @@ import Logo from "../assets/images/logo.svg";
 import LogoText from "../assets/images/Logotext.svg";
 import LogoWhite from "../assets/images/lg-white.png";
 import LogoTextWhite from "../assets/images/lg-white-text.png";
+import w1 from "../assets/images/wecom.jpg"
 
 export type NavTheme = NavbarProps & {
   buttonSchemeClass?: string;
@@ -14,7 +15,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     logoTextSrc: LogoText,
     navClassName: "bg-transparent",
     variant: "dark",
-    linkClassName: "text-white",
+    linkClassName: "text-black",
     buttonClassName: "",
     buttonSchemeClass: "btn-scheme--brand",
     sticky: true,
@@ -39,7 +40,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     variant: "dark",
     linkClassName: "text-white",
     buttonClassName: "",
-    buttonSchemeClass: "btn-scheme--navy",
+    buttonSchemeClass: "btn-scheme--price",
     sticky: true,
   },
 
@@ -51,7 +52,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     variant: "dark",
     linkClassName: "text-white",
     buttonClassName: "",
-    buttonSchemeClass: "btn-scheme--dark",
+    buttonSchemeClass: "btn-scheme--mobile",
     sticky: true,
   },
 
@@ -63,7 +64,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     variant: "dark",
     linkClassName: "text-white",
     buttonClassName: "",
-    buttonSchemeClass: "btn-scheme--dark",
+    buttonSchemeClass: "btn-scheme--blog",
     sticky: true,
   },
 
@@ -95,7 +96,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
-    backgroundColor: "#2B3990",
+    backgroundColor: "#002F7A",
     variant: "dark",
     linkClassName: "text-white",
     buttonClassName: "",
@@ -103,8 +104,8 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/SaasDesign": {
-    logoIconSrc: Logo,
+  "/saasdesign": {
+    logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
     backgroundColor: "#000",
@@ -123,9 +124,19 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     variant: "dark",
     linkClassName: "text-white",
     buttonClassName: "",
-    buttonSchemeClass: "btn-scheme--dark",
+    buttonSchemeClass: "btn-scheme--custom",
     sticky: true,
   },
+ "/webecom": {
+  logoIconSrc: Logo,
+  logoTextSrc: LogoTextWhite,
+  navClassName: "",
+  backgroundImage: w1, // ✅ imported image
+  linkClassName: "text-black",
+  buttonClassName: "",
+  buttonSchemeClass: "btn-scheme--custom",
+  sticky: true,
+},
 
   default: {
     logoIconSrc: Logo,

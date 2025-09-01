@@ -4,11 +4,16 @@ import tick from "../assets/images/contact tick.png";
 
 const serviceTags = [
   "UI/UX Design",
-  "Website Design",
-  "Mobile App",
-  "Branding",
+   "Branding",
   "SaaS Design",
-]; // replace or modify as needed
+  "CRO",
+  "Mobile App",
+  "Development",
+  "Mobile App",
+  "MVP Development",
+  "Web Design",
+
+]; 
 
 const ContactSection = () => {
   return (
@@ -23,20 +28,22 @@ const ContactSection = () => {
         {/* Left Text Block */}
         <div className="contact8-left">
           <h2 className="contact8-title">
-            Have a Project? <br /> Let’s talk!
+           Let’s Build Your Digital Future
           </h2>
+          <h3 className="techsol-heading mb-3 fs-5 fw-3">With ByTechsol – Where Ideas Become Impact</h3>
+          <p className="techsol-text lh-lg">Ready to accelerate your business with intelligent digital solutions that drive results? At ByTechsol, we turn complex ideas into user-focused platforms built to scale and succeed.</p>
           <ul className="contact8-list">
             <li>
               <img src={tick} alt="Check icon" />
-              <span>NDA? Absolutely just ask.</span>
+              <span>Tailored Software – Fits like a glove to your objectives.</span>
             </li>
             <li>
               <img src={tick} alt="Check icon" />
-              <span>We’ll respond in 24 hours — fast & focused.</span>
+              <span>Speed Optimized – Built for performance.</span>
             </li>
             <li>
               <img src={tick} alt="Check icon" />
-              <span>Work with senior UX experts, not juniors.</span>
+              <span>Tech-Driven – Latest frameworks & tools.</span>
             </li>
           </ul>
         </div>
@@ -44,8 +51,8 @@ const ContactSection = () => {
         {/* Contact Form */}
         <form className="contact8-form">
           <div className="contact8-row">
-            <input type="text" name="fullname" placeholder="Full name" required />
-            <input type="email" name="email" placeholder="Email" required />
+            <input type="text" name="Email" placeholder="Email" required />
+            <input type="email" name="Full name" placeholder="Full name" required />
           </div>
 
           <div className="contact8-row">

@@ -1,46 +1,64 @@
-/* 1st section */
 .Designed-section {
-  background-color: #fff;
-  padding: 60px 10px;
-  /* text-align: center; */
-  font-family: 'Guminert', sans-serif;
-  color: #000;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 8%;
+  color: white;
+  overflow: hidden;
 }
 
-.container1 {
-  max-width: 1150px;
-  margin: 0 auto;
+/* Background image */
+.big {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Semi-transparent overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55); 
+  z-index: 1; /* ensure it sits above image */
+}
+
+/* Text content */
+.content {
+  position: relative;
+  z-index: 2; /* above overlay */
+  max-width: 700px;
 }
 
 .head {
-  font-size: 80px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #000;
-}
-.head span{
-    background: linear-gradient(90deg, #5a2fe7, #ea549f);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;    
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
 }
 
-.container1 p {
-width: 1200px;
-position: relative;
-font-size: 30px;
-line-height: 46px;
-font-weight: 600;
-font-family: Guminert;
-color: #000;
-text-align: left;
-display: inline-block;
-height: 95px;
+.gradient {
+  background: linear-gradient(90deg, #3b82f6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.big{
-  width: 1260px;
-  height:auto;
-  margin-left: 20px;
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  max-width: 900px;  /* instead of fixed width */
+  width: 100%;
+
 }
 /* --------------- */
 .trust-500 p{
@@ -125,6 +143,23 @@ font-size: 50px;
 font-style: normal;
 font-weight: 550;
 line-height: 70px; 
+}
+.metrics-para1{
+  width: 1020px;
+position: relative;
+font-size: 25px;
+line-height: 46px;
+font-weight: 600;
+font-family: Guminert;
+color: #000;
+text-align: left;
+display: inline-block;
+height: 138px;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #5a2fe7, #9c40c6 46.15%, #ea549f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .metrics-grid {
@@ -317,6 +352,13 @@ line-height: 70px;
   text-align: center;
 }
 
+.gradient-text {
+  background: linear-gradient(90deg,#5a2fe7, #9c40c6 46.15%, #ea549f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 .vision-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -360,6 +402,12 @@ line-height: 33px;
 .vision-btn:hover {
   background-color: #0000cc;
 }
+.gradient-text {
+  background: linear-gradient(90deg, #5a2fe7, #9c40c6 46.15%, #ea549f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .why-bytechsol-section {
   background-color: #f8f9fa; 
   font-family: Guminert;

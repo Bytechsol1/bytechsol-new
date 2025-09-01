@@ -7,18 +7,21 @@ import ContactSection from "../../../shareable/contact";
 import TrustedBySection from "../../../shareable/trust500";
 import mb from "../../../assets/images/mb1.png"
 import { FiChevronDown } from "react-icons/fi";
-import fin from "../../../assets/images/fintech.png"
-import ec from "../../../assets/images/ecom.png"
-import pl from "../../../assets/images/plat.png"
-import we from "../../../assets/images/web3.png"
-import ed from "../../../assets/images/edtech.png"
-import sv from "../../../assets/images/services.png"
-import ui from "../../../assets/images/mbui.jpg"
+import wf from "../../../assets/images/wfir1.png"
+import wj from "../../../assets/images/wjourn2.png"
+import wfu from "../../../assets/images/wfut3.png"
+import wt from "../../../assets/images/wtrans4.png"
+import ww from "../../../assets/images/wswy5.png"
+import wh from "../../../assets/images/whear6.png"
+import wb from "../../../assets/images/web.png"
+import ld from "../../../assets/images/landesg.jpg"
+import cr from "../../../assets/images/creatim.jpg"
+import br from "../../../assets/images/braim.png"
 
 
 
 
-const accordionItemsdev = [
+const accordionItemsdev=[
   { title: "Build Product (MVP)", description: "We create user-centric websites..." },
   { title: "Webflow", description: "SaaS platforms built to scale..." },
   { title: "Conversion Rate Optimization Services", description: "End-to-end product UI/UX design..." },
@@ -31,51 +34,77 @@ const accordionItemsdev = [
 ];
 
 const accordionItemsUI = [
-  { title: "UI UX Design", description: "We create user-centric websites..." },
-  { title: "UX Audit", description: "SaaS platforms built to scale..." },
-  { title: "Design System", description: "End-to-end product UI/UX design..." },
-  { title: "UI UX Consulting", description: "From landing pages to full sites..." },
-  { title: "UX Research", description: "Professional B2B interfaces..." },
-  { title: "Usability Testing", description: "High-converting landing pages..." },
-  { title: "Wireframe & Prototyping", description: "Beautiful stores with seamless UX..." },
+  { title: "No more design guesswork", description: "Your customers must get your product at a glance. You can count on our unique User Interface / User experience development process that will lead to your page telling more about your value, the result of the natural navigation, and a captivating layout that will make people spend more time on your page and convert more quickly." },
+  { title: " Launch without delays", description: "SaaS platforms built to scale..." },
+  { title: "Interfaces that speak your brand", description: "End-to-end product UI/UX design..." },
+  { title: "Mobile-first, responsive designs", description: "From landing pages to full sites..." },
+  { title: "Tested for usability & performance", description: "Professional B2B interfaces..." },
+];
+const accordionItemscms = [
+  { title: "No more complex content updates", description: "Say goodbye to complicated backends. Our custom-made CMS development will make sure that your pages, blogs, and media are easy to handle via a user-friendly dashboard with a few clicks." },
+  { title: "Launch without technical roadblocks", description: "SaaS platforms built to scale..." },
+  { title: "Tailored to your business needs", description: "End-to-end product UI/UX design..." },
+  { title: "SEO-friendly architecture", description: "End-to-end product UI/UX design..." },
+  { title: "Secure, scalable, and future-ready", description: "End-to-end product UI/UX design..." },
+];
+const accordionItemsland = [
+  { title: "Designs that convert visitors into customers", description: "We design conversion-optimized landing pages that contain strong CTAs, compelling designs, and well-optimized design features that would prompt the user to take an action- such as making a purchase, signing up, or filling out a form." },
+  { title: " Mobile-first and responsive layouts", description: "SaaS platforms built to scale..." },
+  { title: "SEO and speed optimized", description: "End-to-end product UI/UX design..." },
+  { title: "Custom branding and storytelling", description: "From landing pages to full sites..." },
+  { title: "A/B testing for maximum results", description: "Professional B2B interfaces..." },
+];
+const accordionItemsmain = [
+  { title: "Regular updates and performance checks", description: "We design conversion-optimized landing pages that contain strong CTAs, compelling designs, and well-optimized design features that would prompt the user to take an action- such as making a purchase, signing up, or filling out a form." },
+  { title: "Security monitoring and backups", description: "SaaS platforms built to scale..." },
+  { title: "Bug fixes and troubleshooting", description: "End-to-end product UI/UX design..." },
+  { title: "Content updates and enhancements", description: "End-to-end product UI/UX design..." },
+  { title: "24/7 technical support", description: "End-to-end product UI/UX design..." },
+];
+const accordionItemsresp = [
+  { title: " Mobile-friendly redesign", description: "We make your site easy to look at and navigate on both phones and tablets, as well as desktops, and everyone will watch it without any problem." },
+  { title: " Modern UI/UX upgradesMobile-first and responsive layouts", description: "SaaS platforms built to scale..." },
+  { title: " Performance and speed optimizatio04. SEO-friendly structure", description: "End-to-end product UI/UX design..." },
+  { title: "SEO-friendly structure", description: "From landing pages to full sites..." },
+  { title: "Conversion-focused enhancements", description: "Professional B2B interfaces..." },
 ];
 
 const industryData = [
   {
-    title: "Finance & Fintech",
+    title: "We Listen First",
     description:
-      "We create digital products that are both secure and easy to trust, with tidy dashboards and simple steps.",
-    image: fin
+      "Before we talk tech, we talk to you. Your goals, your audience, your challenges — we want to hear it all.",
+    image: wf
   },
   {
-    title: "E-Commerce & DTC",
+    title: "We Map The Journey",
     description:
-      "Our approach of making things simpler and more effective helps users go from browsing to checkout in a few simple steps.",
-    image: ec
+      "We are not talking tech, we are talking to you. What you want to achieve, who you want to address, and what your issues are, we want to know it all.",
+    image: wj
   },
   {
-    title: "SaaS & B2B Platforms",
+    title: "We build For The Future",
     description:
-      "We build smooth interfaces that make it easy for teams to work, so they can manage tasks quickly and effectively.",
-    image: pl
+      "Fast. Secure. Scalable. Our tools are the right tools to ensure the solution grows according to your growth.",
+    image: wfu
   },
   {
-    title: "Web3, AI & Emerging Tech",
+    title: "We Create Digital Transformation",
     description:
-      "Complex tech doesn’t have to feel complex. We simplify the experience so users understand, explore, and adopt with confidence.",
-    image: we
+      "Taking your ideas and turning them into effective digital solutions is what we do best; bring together creativity and technology to achieve designs that are easy to understand, grow to scale, and are resilient enough to last.",
+    image: wt
   },
   {
-    title: "Edtech & Healthtech",
+    title: "We Stay With You",
     description:
-      "Our platforms allow patients, students, and administrators to use them at any time, from any device.",
-    image: ed
+      "There is no goodbye on launch day. We stay because we want to keep things flowing, to keep it moving, and to keep you winning online.",
+    image: ww
   },
   {
-    title: "Hospitality & Legal Services",
+    title: "We Design With Heart",
     description:
-      "Our approach to design lets users focus on their activities, so services are easy and dependable to use.",
-    image: sv
+      "Not only does it have to look good, but it has to be something that leaves people stopping, smiling, and staying.",
+    image: wh
   },
 ];
 
@@ -96,24 +125,18 @@ const Mobile: React.FC = () => {
       >
         <div className="dg-products-content">
           <h1 className="dg-products-heading">
-            Mobile App UI UX <br /> design services
+           Website Design & <br /> Development
           </h1>
           <p className="dg-products-description">
-            You’re not just building an app, you’re shaping how people live, <br />
-            work, and connect. At Wavespace, we design mobile app that <br />
-            feel intuitive from the first tap, convert faster, and keep users <br />
-            coming back for more.
+            Bytechsol is an organization that provides professional web development and web design services optimized for search engines, mobile-friendliness, and responsiveness. We design e-commerce stores, business websites, and landing pages to generate traffic, interest, and convert the viewers into loyal customers.
           </p>
           <div className="dg-products-buttons">
             <a href="#contact" className="dg-button dg-button-primary">
-              Consult an expert
-            </a>
-            <a href="#portfolio" className="dg-button dg-button-outline">
-              See our works
+              Start Your Website Project Today
             </a>
           </div>
         </div>
-        <div className="dg-products-image">
+        <div className="dg-products01-image">
           <img src={lig} alt="UI/UX Illustration" />
         </div>
       </section>
@@ -134,9 +157,9 @@ const Mobile: React.FC = () => {
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Mobile app design that moves metrics</h2>
+            <h2 className="webdesign-heading1">UI/UX Design</h2>
             <p className="webdesign-desc1">
-             How your app works is an equally important part of the design as how it looks. Every time someone uses the app, every interaction with the screen can shape their actions. For this reason, our team pays close attention to simplicity, ease of use and attracting conversions. We contribute to boosting product growth by enhancing the key metrics.
+            Our UI/UX design services enable brands to develop user-centered, aesthetically diverse, and results-driven digital experiences. We create custom interfaces, including design and functionality, together with your brand value, to make every experience feel seamless, interesting, and performance-driven.
             </p>
 
             <div className="webdesign-accordion1 mt-4">
@@ -170,79 +193,223 @@ const Mobile: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* 3rd section ------------- */}
-      
-    <section className="industry-section">
-  <div className="industry-header">
-    <h2 className="industry-title">Industry expertise across globally</h2>
-    <a href="#contact" className="industry-button">
-      Consult an expert <span>&rarr;</span>
-    </a>
-  </div>
-
-  <div className="industry-flex-grid">
-    {industryData.map((item, index) => (
-      <div
-        key={index}
-        className={`industry-flex-card card-${index}`}
-        style={{ backgroundImage: `url(${item.image})` }}
-      >
-        <div className="industry-masonry-overlay">
-          <h3 className="industry-card-title">{item.title}</h3>
-          <p className="industry-card-desc">{item.description}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
-
-         {/* 4th section---------- */}
-         <section className="webdesign-section1 container-fluid py-5">
+       {/* 3rd section----- */}
+    <section className="webdesign-section container-fluid py-5">
       <div className="row align-items-center">
-        {/* Left Image */}
-        <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
-          <img
-            src={ui}
-            alt="Web design preview"
-            className="webdesign-img1 img-fluid"
-          />
-        </div>
-
-        {/* Right Content */}
+        {/* Left Content */}
         <div className="col-lg-6 px-5">
-          <h2 className="webdesign-heading1">Design & Development</h2>
-          <p className="webdesign-desc1">
-            Skip the handoff headaches. We ensure that our digital products are visually appealing and are built to meet growing demand. One expert team, one process, zero delays.
+          <h2 className="webdesign-heading">CMS Design & Development</h2>
+          <p className="webdesign-desc">
+           We aim to support businesses and individuals with their websites so they can handle business easily and provide custom, scalable, and SEO-friendly content management. We design simple-to-use CMS structures that suit your requirements, allowing easy editing, publishing, and management of your material without the help of developers.
           </p>
 
-          <div className="webdesign-accordion1 mt-4">
-            {accordionItemsdev.map((item, index) => (
+          <div className="webdesign-accordion mt-4">
+            {accordionItemscms.map((item, index) => (
               <div
-                className="webdesign-accordion-item1"
+                className="webdesign-accordion-item"
                 key={index}
                 onClick={() => toggleAccordion(index)}
               >
-                <div className="webdesign-accordion-header1">
-                  <span className="webdesign-accordion-index1">
+                <div className="webdesign-accordion-header">
+                  <span className="webdesign-accordion-index">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="webdesign-accordion-title1">{item.title}</span>
+                  <span className="webdesign-accordion-title">{item.title}</span>
                   <FiChevronDown
-                    className={`webdesign-icon1 ${
+                    className={`webdesign-icon ${
                       activeIndex === index ? "rotated" : ""
                     }`}
                   />
                 </div>
                 {activeIndex === index && (
-                  <p className="webdesign-accordion-desc1">{item.description}</p>
+                  <p className="webdesign-accordion-desc">{item.description}</p>
                 )}
               </div>
             ))}
           </div>
         </div>
+
+        {/* Right Image */}
+        <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0">
+          <img
+            src={wb}
+            alt="Web design preview"
+            className="webdesign-img img-fluid"
+          />
+        </div>
       </div>
     </section>
+
+  {/* 4th section --------------*/}
+      <section className="webdesign-section1 container-fluid py-5">
+        <div className="row align-items-center">
+          {/* Left Image */}
+          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
+            <img
+              src={ld}
+              alt="Web design preview"
+              className="webdesign-img1 img-fluid"
+            />
+          </div>
+
+          {/* Right Content */}
+          <div className="col-lg-6 px-5">
+            <h2 className="webdesign-heading1">Landing Page Design</h2>
+            <p className="webdesign-desc1">
+           We offer landing page design services, where we work on highly converting pages that are visually appealing and mobile-friendly to make them attractive and compel action. We incorporate both UI/ UX best practices and strong copy to get your landing page providing measurable outcomes.
+            </p>
+
+            <div className="webdesign-accordion1 mt-4">
+              {accordionItemsmain.map((item, index) => (
+                <div
+                  className="webdesign-accordion-item1"
+                  key={index}
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <div className="webdesign-accordion-header1">
+                    <span className="webdesign-accordion-index1">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="webdesign-accordion-title1">
+                      {item.title}
+                    </span>
+                    <FiChevronDown
+                      className={`webdesign-icon1 ${
+                        activeIndex === index ? "rotated" : ""
+                      }`}
+                    />
+                  </div>
+                  {activeIndex === index && (
+                    <p className="webdesign-accordion-desc1">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+        {/* 4th section----- */}
+    <section className="webdesign-section container-fluid py-5">
+      <div className="row align-items-center">
+        {/* Left Content */}
+        <div className="col-lg-6 px-5">
+          <h2 className="webdesign-heading">Website Maintenance & Support</h2>
+          <p className="webdesign-desc">
+           Our maintenance and support services for our websites keep your site safe and well updated, and on a continual performance level. Whether it be about simple updates or emergency patches, we ensure that your online presence is well tended to, leaving you to attend to the development of your business.
+          </p>
+
+          <div className="webdesign-accordion mt-4">
+            {accordionItemscms.map((item, index) => (
+              <div
+                className="webdesign-accordion-item"
+                key={index}
+                onClick={() => toggleAccordion(index)}
+              >
+                <div className="webdesign-accordion-header">
+                  <span className="webdesign-accordion-index">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="webdesign-accordion-title">{item.title}</span>
+                  <FiChevronDown
+                    className={`webdesign-icon ${
+                      activeIndex === index ? "rotated" : ""
+                    }`}
+                  />
+                </div>
+                {activeIndex === index && (
+                  <p className="webdesign-accordion-desc">{item.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Image */}
+        <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0">
+          <img
+            src={cr}
+            alt="Web design preview"
+            className="webdesign-img img-fluid"
+          />
+        </div>
+      </div>
+    </section>
+    {/* 5th section --------------*/}
+      <section className="webdesign-section1 container-fluid py-5">
+        <div className="row align-items-center">
+          {/* Left Image */}
+          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
+            <img
+              src={br}
+              alt="Web design preview"
+              className="webdesign-img1 img-fluid"
+            />
+          </div>
+
+          {/* Right Content */}
+          <div className="col-lg-6 px-5">
+            <h2 className="webdesign-heading1">Responsive Website Redesign</h2>
+            <p className="webdesign-desc1">
+          Our mobile-friendly and responsive website redesign solutions update long-out-of-date websites to sleek, mobile-friendly websites with a visual appeal. Our mission is to make your site perform at its best, with an extra focus on the user experience alongside their devices, increasing performance, functions, and web visibility.
+            </p>
+
+            <div className="webdesign-accordion1 mt-4">
+              {accordionItemsresp.map((item, index) => (
+                <div
+                  className="webdesign-accordion-item1"
+                  key={index}
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <div className="webdesign-accordion-header1">
+                    <span className="webdesign-accordion-index1">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="webdesign-accordion-title1">
+                      {item.title}
+                    </span>
+                    <FiChevronDown
+                      className={`webdesign-icon1 ${
+                        activeIndex === index ? "rotated" : ""
+                      }`}
+                    />
+                  </div>
+                  {activeIndex === index && (
+                    <p className="webdesign-accordion-desc1">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+   {/* 10th section */}
+        <section className="industry-section">
+     <div className="industry-header">
+       <h2 className="industry-title">Turning Your Ideas Into Something Real</h2>
+       <p className="par12">All great digital initiatives begin with a spark, a concept, a challenge, or perhaps a spark of a what-if thought. We are <br /> not the traditional web designers that build websites or applications… we help you create your vision in a way that <br />feels natural to you and memorable to your users.</p>
+     </div>
+   
+     <div className="industry-flex-grid">
+       {industryData.map((item, index) => (
+         <div
+           key={index}
+           className={`industry-flex-card card-${index}`}
+           style={{ backgroundImage: `url(${item.image})` }}
+         >
+           <div className="industry-masonry-overlay">
+             <h3 className="industry-card-title">{item.title}</h3>
+             <p className="industry-card-desc">{item.description}</p>
+           </div>
+         </div>
+       ))}
+     </div>
+   </section>
+   
+
 
       <Testimonial />
       <FaqSection />

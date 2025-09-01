@@ -11,27 +11,33 @@ import TrustedBySection from "../../shareable/trust500";
 const accordionData = [
   {
     id: "1",
-    title: "UI UX Design",
+    title: " Built for Speed & Scale",
     content:
-      "We create intuitive and beautiful user experiences tailored for your product goals.",
+      "Whether it is a quick MVP release or an enterprise-level system, we design solutions at a startup pace that can scale along with your business.",
   },
   {
     id: "2",
-    title: "Branding",
+    title: "Deep Tech Expertise, Zero Fluff",
     content:
-      "We help you build a strong brand identity that resonates with your audience.",
+      "Whether it is a quick MVP release or an enterprise-level system, we design solutions at a startup pace that can scale along with your business.",
   },
   {
     id: "3",
-    title: "Marketing",
+    title: "Direct Access to Specialists",
     content:
-      "We craft conversion-driven marketing strategies to grow your product reach.",
+      "Whether it is a quick MVP release or an enterprise-level system, we design solutions at a startup pace that can scale along with your business.",
   },
   {
     id: "4",
-    title: "Website",
+    title: "Smart Design, Real Results",
     content:
-      "From landing pages to full platforms, we design and develop high-converting websites.",
+      "Whether it is a quick MVP release or an enterprise-level system, we design solutions at a startup pace that can scale along with your business.",
+  },
+   {
+    id: "5",
+    title: "Flexible Partnership Models",
+    content:
+      "Whether it is a quick MVP release or an enterprise-level system, we design solutions at a startup pace that can scale along with your business.",
   },
 ];
 
@@ -40,66 +46,78 @@ const About: React.FC = () => {
   return (
     <>
       {/* 1st Section */}
-      <section className="Designed-section">
-        <div className="container1">
-          <h1 className="head">
-            Designed for billions & we are the team{" "}
-            <span>future unicorns.</span>
-          </h1>
-          <p>
-            We’re not just a design agency. We’re the product-thinking team
-            behind 100M+ <br /> users, $2B+ funding, & 250+ VC-backed success
-            stories.
-          </p>
-        </div>
-        <img className="big" src={big} alt="Big Visual" />
-      </section>
+<section className="Designed-section">
+  {/* Background image */}
+  <img className="big" src={big} alt="Big Visual" />
+
+  {/* Dark overlay */}
+  <div className="overlay"></div>
+  <div className="content">
+    <h1 className="head">
+      We Don’t Just Build <span className="gradient">Software</span> <br />
+      We Build What <span className="gradient">Matters</span>.
+    </h1>
+    <p>
+      We make digital, heartfelt, and purposeful solutions at Bytechsol.
+      Whether in small companies or large enterprises, we make businesses
+      successful through intelligent, expandable, and well-designed
+      technology. Driven by creativity, backed by strategy. We’re here to make
+      your next big idea happen.
+    </p>
+  </div>
+</section>
+
+
 <TrustedBySection/>
       {/* 2rd Section */}
    <section className="metrics-section">
-  <p className="metrics-heading">
-    Bold design, billion-dollar proof. We measure <br />
-    impact, not just ship pixels.
+<p className="metrics-heading">
+  Our Mission: Building <span className="gradient-text">Digital Solutions</span> <br />
+  That Drive <span className="gradient-text">Growth</span>
+</p>
+
+  <p className="metrics-para1">
+    We are on a mission at Bytechsol to enable businesses by creating enhanced digital experiences on demand. All our pixels, all our lines of code, and all our strategies are designed to solve business problems in the real world and to drive growth.
   </p>
 
   <div className="metrics-grid ">
     <div className="card1 ">
       <p className="metric-number1">01/</p>
-      <h2 className="metric-value1">$2B+</h2>
+      <h2 className="metric-value1">Designing Impactful Digital Experiences</h2>
       <p className="metric-description1">
-        raised through <br /> UX-led launches
+        We craft user-focused websites, UI/UX designs, and CMS platforms that are not just beautiful — they’re built to convert and engage.
       </p>
     </div>
 
     <div className="car2">
       <p className="metric-number2">02/</p>
-      <h2 className="metric-value2">400%</h2>
+      <h2 className="metric-value2">Engineering Scalable Custom Solutions</h2>
       <p className="metric-description2">
-        uplift in conversions <br /> (avg. 300%)
+        Whether it is a powerful piece of software or a complex web application, we create custom web products that grow with your business, effectively and safely.
       </p>
     </div>
 
     <div className="cam3">
       <p className="metric-number3">03/</p>
-      <h2 className="metric-value3">100+M</h2>
+      <h2 className="metric-value3">Driving Brands with Strategy + Tech</h2>
       <p className="metric-description3">
-        users reached through <br /> our SaaS and AI platforms
+        Our team blends brand strategy with digital tools — SEO, SMM, and eCommerce platforms like Shopify — to make your brand stand out and sell more.
       </p>
     </div>
 
     <div className="css4">
       <p className="metric-number4">04/</p>
-      <h2 className="metric-value4">140+</h2>
+      <h2 className="metric-value4">Leveraging AI, ERP, and Odoo to Automate Success</h2>
       <p className="metric-description4">
-        Awards recognised by <br /> Awwwards, CSSDA, Behance
+        We incorporate customization of AI/ML, ERP implementation, and Odoo systems to ensure entry-point smooth procedures, approved decision-making and productivity.
       </p>
     </div>
 
     <div className="csm5">
       <p className="metric-number5">05/</p>
-      <h2 className="metric-value5">250+ Testimonials</h2>
+      <h2 className="metric-value5">Your Long-Term Tech Partner</h2>
       <p className="metric-description5">
-        trusted by YC-backed, VC-funded, a16z, Sequoia, <br /> 500+ global
+        We’re not just vendors. We’re strategic partners committed to delivering full-cycle digital transformation — from idea to execution and beyond.
       </p>
     </div>
   </div>
@@ -110,8 +128,7 @@ const About: React.FC = () => {
         <div className="vision-container">
           <div className="vision-content">
             <h1 className="vision-heading">
-              From one laptop to 22+ countries, we help <br />
-              bold visions become intuitive brands.
+              From <span className="gradient">one vision </span>to becoming a global tech partner, we help businesses <span className="gradient">scale smarter</span>.
             </h1>
 
             <div className="vision-grid">
@@ -120,21 +137,13 @@ const About: React.FC = () => {
               </div>
               <div className="vision-text">
                 <p>
-                  Wavespace didn’t start in a co-working space or some glossy
-                  VC-funded setup. It started in a small bedroom, just one
-                  laptop, a noisy fan, and a founder who couldn’t stop thinking
-                  about why so many good ideas fail.
+                  Bytechsol did not turn out to be the best software agency in one day. Where it all began is a small team with huge ambitions and a dedication to creating smarter digital solutions and not simply prettier websites.
                 </p>
                 <p>
-                  So we helped early teams fix broken onboarding, redesign
-                  confusing UX, and turn messy ideas into real products. One
-                  founder at a time.
+                  That side hustle eventually led to a complete digital powerhouse. Whether it was working with startups to create their initial MVPs or building enterprise systems at scale, we have created custom web solutions, AI products, ERP solutions, and even executed SEO to move the needle.
                 </p>
                 <p>
-                  But now? Wavespace works with 500+ startups, helps teams
-                  launch faster MVPs, improve conversion, and build systems that
-                  scale. Our design now powers 100M+ users across 22 countries,
-                  from early-stage AI tools to Series B SaaS giants.
+                 Bytechsol has served clients in 15+ countries today. Our products touch thousands of users and drive productive business in a hurry. Regardless of the project (web design, software development, or machine learning integrations), we develop as we did on day one: strategic, scalable, and user-first.
                 </p>
                 <p>
                   But honestly? We still build like it’s day one, fast, honest,
@@ -148,6 +157,7 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
+        <h1 className="fw-bold mt-5">We're not just another agency. We're your <span className="gradient-text">digital growth partner</span>.</h1>
       </section>
       {/* 4th Section */}
       <section className="why-bytechsol-section py-5">
@@ -161,9 +171,10 @@ const About: React.FC = () => {
               />
             </div>
             <div className="col-lg-6">
-              <h2 className="mb-4 fs-1 fw-bold">Why Bytechsol? We <br />care like co-founders.</h2>
+              <h2 className="mb-4 fs-1 fw-bold">Website Maintenance <br /> & Support</h2>
+              <h3 className="fw-bold">  Your Tech Dream Team in Disguise</h3>
               <p className="mb-4 fs-6">
-                Not another agency. We are your team that gives a damn. <br />Because we treat your product like it's ours.
+                Not your average agency. We embed into your mission, move at your speed, and solve problems like it’s our product on the line.
               </p>
 
               <div
@@ -210,37 +221,39 @@ const About: React.FC = () => {
   <div className="container">
     <div className="row align-items-start">
       <div className="col-lg-6 mb-4">
-        <h1 className="belief-heading">
-          The beliefs behind <br /> the builds
+        <h1 className="belief-heading fw-bold">
+          The Principles Powering Our Projects
         </h1>
+        <p>From first brainstorm to final build, these values guide every decision.</p>
+        <h1 className="fw-bold"><span className="gradient-text">Core Beliefs</span></h1>
       </div>
       <div className="col-lg-6">
         <div className="belief-item">
-          <h2>01 Empathy</h2>
+          <h2>01 Empathy at the Core</h2>
           <p>
-            Before we create a design, put pen to paper, or <br /> build, we listen.Because the goods always come <br /> from understanding. We put ourselves in your users’ <br /> shoes so your product enters their lives smoothly.
+          We listen first before creating plans or prototyping; we listen to your story and your goals, and to users. All of our custom software solutions start with empathetic knowledge of what an actual human needs; they are not based on assumptions.
           </p>
         </div>
 
         <div className="belief-item">
-          <h2>02 Clarity</h2>
+          <h2>02 Simplicity that Speaks</h2>
           <p>
-            We don’t design to sound smart. We design so your <br /> users feel smart.Every word, flow, and screen is crafted <br />to remove friction, not add flash.
+            Complicated does not imply superior. We are user-centered design thinkers who believe in design that is intuitive, accessible, and elegant because the best of digital experiences have an effortless feel to them.
           </p>
         </div>
 
         <div className="belief-item">
-          <h2>03 Momentum</h2>
+          <h2>03 Speed with Purpose</h2>
           <p>
-            Start small. Learn fast. Move with focus. We don’t believe in <br /> perfection. We believe in progress. That is why we ship, test, <br /> and are constantly North Star aligned.
-          </p>
+            We act swiftly-not rashly. Be it lean MVPs, web development at scale, we will work with purpose, pivot when necessary, and stay focused on driving your business success.
+            </p>
         </div>
 
         <div className="belief-item">
-          <h2>04 Outcomes</h2>
+          <h2>04 Designed to Deliver Results</h2>
           <p>
-            A good-looking app that doesn’t convert is just <br /> decoration. We obsess over real results, <br /> conversions, activations, and retention.
-          </p>
+            We do not make design awards, we make you win customers. Our focus is to work in terms of impact: conversions, retention, performance, and ROI.
+            </p>
         </div>
       </div>
     </div>

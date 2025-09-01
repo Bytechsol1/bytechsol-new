@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import w1 from "../assets/images/wecom.jpg"
 
 export type NavbarProps = {
   logoIconSrc: string;
   logoTextSrc?: string;
   backgroundColor?: string;
+   backgroundImage?: string; 
   variant?: "light" | "dark";
   navClassName?: string;
   linkClassName?: string;
@@ -18,6 +20,7 @@ const Navbar: React.FC<NavbarProps> = ({
   logoIconSrc,
   logoTextSrc,
   backgroundColor,
+   backgroundImage, 
   variant = "light",
   navClassName = "",
   linkClassName = "text-dark",
@@ -25,19 +28,30 @@ const Navbar: React.FC<NavbarProps> = ({
   buttonSchemeClass = "",
   sticky = true,
 }) => {
+const backgroundStyle = backgroundImage
+    ? {
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }
+    : backgroundColor
+    ? { backgroundColor }
+    : {};
+
   return (
     <header>
-      <nav
-        className={[
-          "navbar",
-          "navbar-expand-lg",
-          variant === "light" ? "navbar-light" : "navbar-dark",
-          "navbar-custom",
-          sticky ? "sticky-top" : "",
-          navClassName,
-        ].join(" ")}
-        style={backgroundColor ? { backgroundColor } : undefined}
-      >
+        <nav
+          className={[
+            "navbar",
+            "navbar-expand-lg",
+            variant === "light" ? "navbar-light" : "navbar-dark",
+            "navbar-custom",
+            sticky ? "sticky-top" : "",
+            navClassName,
+          ].join(" ")}
+          style={backgroundStyle} 
+        >
         <div className="container">
           <Link className="navbar-brand d-flex align-items-center" to="/">
             <img src={logoIconSrc} alt="logo-icon" className="logo-icon" />

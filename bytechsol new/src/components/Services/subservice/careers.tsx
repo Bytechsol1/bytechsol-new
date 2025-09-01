@@ -16,13 +16,11 @@ const Careers = () => {
           <h2>Careers</h2>
           <p className="careers-subtitle">
             <strong>
-              SELF-DEVELOPMENT, PROGRESSION, A COHESIVE WORK ENVIRONMENT AND AN
-              ESTEEMED ORGANIZATIONAL CULTURE!
+             Growth, Innovation, Collaboration, and a Culture That Inspires!
             </strong>
           </p>
-          <p className="jn1 fs-3 fw-light m-6">
-            Join the global salsoft team and help redefine innovation and
-            digitization.
+          <p className="jn1 fs-2 fw-light m-6">
+            Join the Bytechsol team and help shape the future of technology with creativity, passion, and purpose.
           </p>
         </div>
       </section>
@@ -51,18 +49,14 @@ const Careers = () => {
 
       {/* 2nd section */}
      <section className="work-job careers-intro">
-  <h1 className="careers-intro-title">Working with us isn’t a job</h1>
+  <h1 className="careers-intro-title">Grow With Us, Not Just Work With Us</h1>
 
   <p className="careers-intro-text">
-    It's the transition towards a rewarding career with unlimited possibilities for growth.
-    Surround yourself with dedicated and motivated people like yourself who work together
-    not just as colleagues and a team, but as a family - as the Bytechsol family.
+    At Bytechsol, we believe a career should be more than a paycheck — it should inspire you, challenge you, and help you become the best version of yourself. Here, you’ll be surrounded by people who celebrate your wins, support your ideas, and work together like a true family.
   </p>
 
   <p className="careers-intro-text careers-intro-cta">
-    Browse through our current openings and get in touch now. If you don't find any listed
-    opening relevant to your profile, feel free to reach out anyway, and tell us why you
-    might be a good fit.
+    Explore our current opportunities and discover where you can fit in. Even if you don’t find the perfect role listed, we’d still love to hear from you, because great people make great teams, and we’re always excited to welcome new talent.
   </p>
 
   {/* Form Section */}
@@ -71,21 +65,21 @@ const Careers = () => {
     <div className="form-row">
       <input
         className="application-input"
-        placeholder="Full name"
+        placeholder="First Name"
         required
         type="text"
         name="fullname"
       />
       <input
         className="application-input"
-        placeholder="Father name"
+        placeholder="Last Name"
         required
         type="text"
         name="fathername"
       />
       <input
         className="application-input"
-        placeholder="Last name"
+        placeholder="Father Name"
         required
         type="text"
         name="lastname"

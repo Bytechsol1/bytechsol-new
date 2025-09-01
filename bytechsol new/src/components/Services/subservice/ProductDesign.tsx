@@ -5,7 +5,7 @@ import TrustedBySection from "../../../shareable/trust500";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import ContactSection from "../../../shareable/contact";
-import lig from "../../../assets/images/light.png";
+import y1 from "../../../assets/images/yel1.png"
 import u1 from "../../../assets/images/uxphn.jpg";
 import et from "../../../assets/images/ideat.png";
 import lw from "../../../assets/images/lwork.png";
@@ -20,7 +20,9 @@ import we from "../../../assets/images/web3.png"
 import ed from "../../../assets/images/edtech.png"
 import sv from "../../../assets/images/services.png"
 import bk from "../../../assets/images/blacky.png"
-
+import l2 from "../../../assets/images/lapt2 (1).png"
+import v1 from "../../../assets/images/visual1.jpg"
+import sc from "../../../assets/images/social.png"
 
 
 const accordionItemsdev = [
@@ -73,11 +75,25 @@ const industryData = [
 
 
 const accordionItemsUX = [
-  { title: "Jumping Into UI Too Fast", description: "We create user-centric websites..." },
-  { title: "Designing around features, not users", description: "SaaS platforms built to scale..." },
-  { title: "Adding too much, too early", description: "End-to-end product UI/UX design..." },
-  { title: "Overlooking onboarding design", description: "From landing pages to full sites..." },
-  { title: "Handoff chaos to developers", description: "Professional B2B interfaces..." },
+  { title: "Market Research & Analysis", description: "We do extensive competitor research, industry, and market research to identify opportunities that will form a successful strategy. This makes your brand get into the market clearly and confidently." },
+  { title: "Audience Targeting & Personas", description: "SaaS platforms built to scale..." },
+  { title: "Value Proposition Development", description: "End-to-end product UI/UX design..." },
+  { title: "Brand Positioning Statement", description: "From landing pages to full sites..." },
+  { title: "Competitive Differentiation", description: "Professional B2B interfaces..." },
+];
+const accordionItemsldesig = [
+  { title: "Market Research & Analysis", description: "We do extensive competitor research, industry, and market research to identify opportunities that will form a successful strategy. This makes your brand get into the market clearly and confidently." },
+  { title: "Audience Targeting & Personas", description: "SaaS platforms built to scale..." },
+  { title: "Value Proposition Development", description: "End-to-end product UI/UX design..." },
+  { title: "Brand Positioning Statement", description: "From landing pages to full sites..." },
+  { title: "Competitive Differentiation", description: "Professional B2B interfaces..." },
+];
+const accordionItemssmb = [
+  { title: "Profile Optimization & Consistency", description: "We develop and streamline social media accounts that are a consistent representation of your brand within each platform. Logos to bios and graphics, our branding would be all about professionalism, recognition, and trust- to help you shine and get the right audience." },
+  { title: "Content Strategy & Visual Identity", description: "SaaS platforms built to scale..." },
+  { title: "Brand Messaging & Tone of Voice", description: "End-to-end product UI/UX design..." },
+  { title: "Engagement & Community Building", description: "From landing pages to full sites..." },
+  { title: "Analytics & Performance Insights", description: "Professional B2B interfaces..." },
 ];
 
 const ProductDesign = () => {
@@ -89,28 +105,28 @@ const ProductDesign = () => {
 
   return (
     <>
-      {/* 1st Section */}
-      <section className="dg-products-section">
-        <div className="dg-products-content">
-          <h1 className="dg-products-heading">
-            Digital product & <br /> UI UX design <br />
-            services
-          </h1>
-          <p className="dg-products-description">
-            Are you struggling to turn your ideas into something users love? <br />
-            Wavespace designs digital products for the US, UK, Europe, and <br />
-            Central Asia that are clean, fast, and ready to develop, built with <br />
-            smart UX and clean UI.
-          </p>
-          <div className="dg-products-buttons">
-            <a href="#contact" className="dg-button dg-button-primary">Get in Touch</a>
-            <a href="#portfolio" className="dg-button dg-button-outline">View Portfolio</a>
+        {/* 1st section */}
+        <section className="hero-section" style={{backgroundColor: "#002F7A"}}>
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-md-8 ">
+                <h1 className="text-white">
+                   Crafting Brands <br /> That Inspire
+                </h1>
+                <p className="text-white fs-5">We help businesses create powerful brand identities that build trust, recognition, and lasting customer connections. From strategy and visuals to messaging and digital presence, our brand building services ensure your business stands out and resonates with the right audience.</p>
+                
+              </div>
+              <div className="col-md-4">
+            <img src={y1} alt="" width={"500px"}/>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="dg-products-image">
-          <img src={lig} alt="UI/UX Illustration" />
-        </div>
-      </section>
+        </section>
+
+
+
+
+
 
       <TrustedBySection />
 
@@ -120,7 +136,7 @@ const ProductDesign = () => {
           {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
             <img
-              src={u1}
+              src={l2}
               alt="Web design preview"
               className="webdesign-img1 img-fluid"
             />
@@ -128,11 +144,10 @@ const ProductDesign = () => {
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Common product design mistakes (how we fix)</h2>
+            <h2 className="webdesign-heading1">Brand Strategy & Consulting</h2>
             <p className="webdesign-desc1">
-              No one sets out to design a product that feels confusing or cluttered. But without the right process, even the best ideas can fall short. Here’s what usually goes wrong, and how your product avoids it when the design is done right.
-            </p>
-
+             We help companies to develop a powerful strategy that will define what and who they are and how they should be viewed in the market.
+              </p>
             <div className="webdesign-accordion1 mt-4">
               {accordionItemsUX.map((item, index) => (
                 <div
@@ -158,6 +173,95 @@ const ProductDesign = () => {
           </div>
         </div>
       </section>
+      {/* 2nd accordion */}
+      <section className="webdesign-section1 container-fluid py-5">
+        <div className="row align-items-center">
+          {/* Left Image */}
+          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
+            <img
+              src={v1}
+              alt="Web design preview"
+              className="webdesign-img1 img-fluid"
+            />
+          </div>
+
+          {/* Right Content */}
+          <div className="col-lg-6 px-5">
+            <h2 className="webdesign-heading1">Social Media Branding</h2>
+            <p className="webdesign-desc1">
+            Customers tend to interact with your business first through your social media. Your brand will be developed by us to be strong, consistent, and interesting on all platforms. Our tactics enhance awareness, credibility, and viewers' interest, be it through images or text.
+              </p>
+            <div className="webdesign-accordion1 mt-4">
+              {accordionItemssmb.map((item, index) => (
+                <div
+                  className="webdesign-accordion-item1"
+                  key={index}
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <div className="webdesign-accordion-header1">
+                    <span className="webdesign-accordion-index1">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="webdesign-accordion-title1">{item.title}</span>
+                    <FiChevronDown
+                      className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+                    />
+                  </div>
+                  {activeIndex === index && (
+                    <p className="webdesign-accordion-desc1">{item.description}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 3rd accordion */}
+       <section className="webdesign-section container-fluid py-5">
+      <div className="row align-items-center">
+        {/* Left Content */}
+        <div className="col-lg-6 px-5">
+          <h2 className="webdesign-heading">Logo Design & Visual Identity </h2>
+          <p className="webdesign-desc">
+           We create special logos and visual systems that will represent your personality and create a strong impression at all customer touchpoints.
+          </p>
+
+          <div className="webdesign-accordion mt-4">
+            {accordionItemsldesig.map((item, index) => (
+              <div
+                className="webdesign-accordion-item"
+                key={index}
+                onClick={() => toggleAccordion(index)}
+              >
+                <div className="webdesign-accordion-header">
+                  <span className="webdesign-accordion-index">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="webdesign-accordion-title">{item.title}</span>
+                  <FiChevronDown
+                    className={`webdesign-icon ${
+                      activeIndex === index ? "rotated" : ""
+                    }`}
+                  />
+                </div>
+                {activeIndex === index && (
+                  <p className="webdesign-accordion-desc">{item.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Image */}
+        <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0">
+          <img
+            src={sc}
+            alt="Web design preview"
+            className="webdesign-img img-fluid"
+          />
+        </div>
+      </div>
+    </section>
 
       {/* 3rd section */}
       <div className="productdesign-service-header">
@@ -174,11 +278,9 @@ const ProductDesign = () => {
         {/* First Card */}
         <div className="card-row purple-bg">
           <div className="card-text">
-            <h2>70% Faster Loading</h2>
+            <h2>Brands Built to Last</h2>
             <p>
-              Speed isn’t a luxury—it’s the expectation. We optimize your website performance
-              to load lightning-fast across all devices. From code to server to content, we
-              fine-tune every layer so you never lose a customer to slow loading again.
+              We develop brand names that gain social credibility, ignite awareness, and develop over time. We mix strategy, design, and messaging to make sure your brand connects and stands out.
             </p>
           </div>
           <div className="card-img">
@@ -189,11 +291,9 @@ const ProductDesign = () => {
         {/* Second Card */}
         <div className="card-row white-bg">
           <div className="card-text">
-            <h2>CMS Platforms</h2>
+            <h2>Strategy That Speaks</h2>
             <p>
-              The right content system empowers your team and scales with your needs. Whether
-              you prefer the flexibility of WordPress or the speed and control of headless CMS,
-              we architect solutions that are secure, scalable, and built for growth.
+              More than research - we find out what is special in your business and create a clear market image. The result? A brand with purpose, direction, and competitive strength.
             </p>
           </div>
           <div className="card-img">
@@ -204,11 +304,9 @@ const ProductDesign = () => {
         {/* Third Card */}
         <div className="ecomsolutions-row white-bg">
           <div className="ecomsolutions-text">
-            <h2>E-Commerce Solutions</h2>
+            <h2>Design With Meaning</h2>
             <p>
-              From idea to checkout, we craft eCommerce experiences that convert. Whether you're launching
-              a niche store or scaling a product empire, we build secure, user-friendly platforms that drive
-              sales, simplify management, and wow your customers.
+              Logos, colors, and pictures that are created to do more than just look good; they are created to tell your story, they are consistent throughout, and they leave a lasting impression.
             </p>
           </div>
           <div className="ecomsolutions-img">
@@ -219,112 +317,17 @@ const ProductDesign = () => {
         {/* Fourth Card */}
         <div className="clouddevops-section white-bg">
           <div className="clouddevops-content">
-            <h2 className="clouddevops-heading">Cloud & DevOps Integration</h2>
+            <h2 className="clouddevops-heading">Social Presence With Power</h2>
             <p className="clouddevops-description">
-              Your backend should never slow you down. We integrate DevOps and cloud technologies to streamline deployments, boost uptime, and enable rapid scaling. From CI/CD pipelines to cloud-native architecture, we build resilient systems that move at your pace.
+             We make your social channels brand ambassadors consistent, engaging, and real, building better relationships with each post or interaction.
             </p>
           </div>
           <div className="clouddevops-image-wrapper">
             <img src={ma} alt="Cloud and DevOps Integration Screenshot" className="clouddevops-image" />
           </div>
         </div>
-
-        {/* Fifth Card */}
-        <div className="ecomsolutions-row white-bg" style={{backgroundColor:"#6E14CF", color:"#fff"}}>
-          <div className="ecomsolutions-text">
-            <h2>Design System</h2>
-            <p>
-              Consistency wins trust. We build scalable UI kits, component libraries, and design tokens that help you move faster and make every screen feel connected.
-            </p>
-          </div>
-          <div className="ecomsolutions-img">
-            <img src={lb} alt="E-Commerce Solutions Screenshot" />
-          </div>
-        </div>
-
-        {/* Sixth Card */}
-        <div className="ecomsolutions-row white-bg " style={{backgroundColor:"#000", color:"#fff"}}>
-          <div className="ecomsolutions-text">
-            <h2>UI/ UX Design</h2>
-            <p>
-              We design apps and platforms people love to use. Whether it’s onboarding, settings, or checkout, every click is planned, tested, and built to work.   
-            </p>
-          </div>
-          <div className="ecomsolutions-img">
-            <img src={kl} alt="E-Commerce Solutions Screenshot" />
-          </div>
-        </div>
       </section>
-      {/* 5th section------------- */}
-     <section className="industry-section">
-  <div className="industry-header">
-    <h2 className="industry-title">Our product design for every industry </h2>
-    <a href="#contact" className="industry-button">
-      Let’s Design A product <span>&rarr;</span>
-    </a>
-  </div>
-
-  <div className="industry-flex-grid">
-    {industryData.map((item, index) => (
-      <div
-        key={index}
-        className={`industry-flex-card card-${index}`}
-        style={{ backgroundImage: `url(${item.image})` }}
-      >
-        <div className="industry-masonry-overlay">
-          <h3 className="industry-card-title">{item.title}</h3>
-          <p className="industry-card-desc">{item.description}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
-    {/* 6th section------------- */}
-    <section className="webdesign-section1 container-fluid py-5">
-      <div className="row align-items-center">
-        {/* Left Image */}
-        <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
-          <img
-            src={bk}
-            alt="Web design preview"
-            className="webdesign-img1 img-fluid"
-          />
-        </div>
-
-        {/* Right Content */}
-        <div className="col-lg-6 px-5">
-          <h2 className="webdesign-heading1">The impact of great SaaS design on your growth</h2>
-          <p className="webdesign-desc1">
-            The success of your product is powered by good design which is usually hidden. A website is valuable when it’s attractive, works effectively, feels good and lets users find their next steps quickly. Great design in SaaS products keeps customers around, helps them get started and makes every action more comfortable to do.
-          </p>
-
-          <div className="webdesign-accordion1 mt-4">
-            {accordionItemsdev.map((item, index) => (
-              <div
-                className="webdesign-accordion-item1"
-                key={index}
-                onClick={() => toggleAccordion(index)}
-              >
-                <div className="webdesign-accordion-header1">
-                  <span className="webdesign-accordion-index1">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <span className="webdesign-accordion-title1">{item.title}</span>
-                  <FiChevronDown
-                    className={`webdesign-icon1 ${
-                      activeIndex === index ? "rotated" : ""
-                    }`}
-                  />
-                </div>
-                {activeIndex === index && (
-                  <p className="webdesign-accordion-desc1">{item.description}</p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+      
 
       <Testimonial />
       <FaqSection />

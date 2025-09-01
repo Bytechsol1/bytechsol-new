@@ -112,8 +112,8 @@
 }
 
 .hero-section p {
-  font-size: 24px;
-  line-height: 31px;
+  font-size: 22px;
+  line-height: 28xpx;
   font-weight: 300;
   font-family: "Guminert", sans-serif;
   max-width: 500px;
@@ -155,7 +155,7 @@
 .custom-tooltip {
   display: none;
   position: absolute;
-  bottom: 120%;
+  bottom: 85%;
   left: 50%;
   transform: translateX(-50%);
   background: white;
@@ -167,9 +167,7 @@
   font-size: 0.875rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
-.ms-3 {
-    margin-left: 2.5rem !important;
-}
+
 .tooltip-wrapper:hover .custom-tooltip {
   display: block;
 }
@@ -341,7 +339,7 @@
 @media (min-width: 1024px) {
   .who-we-are-section .description {
     font-size: 2.3rem;
-    max-width: 1089px;
+    max-width: 1097px;
   }
 }
 
@@ -720,6 +718,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -728,7 +727,7 @@
   font-family: "Guminert", sans-serif;
 }
 
-.overlay {
+.overlay1 {
   width: 100%;
   max-width: 1280px;
   text-align: center;
@@ -832,7 +831,6 @@
   }
 }
 
-/* 6th section css  */
 /* Container for the whole section */
 .scroll-section {
   padding: 50px 20px;
@@ -851,6 +849,10 @@
   max-width: 1200px;
   align-items: center;
 }
+.group5-para{
+  margin-left: 195px;
+}
+
 
 /* Individual card */
 .choose-card {
@@ -906,14 +908,17 @@
 /* Color variations for badges */
 .badge.design {
   background-color: #70e6ed;
+  width: 236px;
 }
 
 .badge.build {
   background-color: #70e6ed;
+   width: 236px;
 }
 
 .badge.grow {
   background-color: #70e6ed;
+   width: 236px;
 }
 
 /* List items */
@@ -927,6 +932,7 @@
   font-size: 18px;
   color: #fff;
   line-height: 1.6;
+  width: 55%;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -1359,14 +1365,12 @@
 .group5-author-name {
   font-size: 20px;
   font-weight: 600;
-  margin-right: 110px;
 }
 
 .group5-author-role {
   font-size: 16px;
   font-weight: 500;
   color: #555;
-  margin-right: 20px;
 }
 
 .group5-vector {
@@ -1403,21 +1407,11 @@
     width: 100%;
     font-size: 16px;
     margin: 20px 0;
-    margin-top: -55px;
+    margin-top: 0;
   }
-  .group5-author-name {
-  font-size: 20px;
-  font-weight: 600;
-}
-.group5-author-role {
-  font-size: 16px;
-  font-weight: 500;
-  color: #555;
-}
 
   .group5-avatar {
     margin: 0 auto;
-    margin-left: 34px;
   }
 
   .group5-author-block {
@@ -1426,9 +1420,8 @@
   }
 
   .group5-vector {
-    margin: -62px auto 0 auto;
+    margin: 30px auto 0 auto;
     margin-left: 0;
-    padding: 60px;
   }
 }
 .card-image-wrapper {
@@ -1437,9 +1430,56 @@
 }
 
 .card-image {
-  max-width: 38%;
-      width: 58%;
+ max-width: 100%;
+    width: 50%;
     margin-top: -218px;
-    margin-left: 208px;
-    margin-bottom: -70px;
+    margin-left: 340px;
+    margin-bottom: -111px;
+}
+.ms-3{
+  margin-left: 2.5rem !important;
+}
+
+@media (max-width: 768px) {
+  /* Make buttons full-width */
+  .custom-cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Service titles */
+  .service-title {
+    font-size: 1.5rem;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  /* Who we are */
+  .who-we-are-section {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  /* Awards */
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact form */
+  .contact8-form {
+    padding: 20px;
+  }
+}
+/* 📱 Tablet breakpoint */
+@media (min-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+/* 💻 Desktop breakpoint */
+@media (min-width: 1200px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  }
 }

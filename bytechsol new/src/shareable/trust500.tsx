@@ -1,14 +1,12 @@
 import React from "react";
-import opa from "../assets/images/oppa.jpg";
-import lad from "../assets/images/lade.png";
-import mm from "../assets/images/mmo.png";
-import ne from "../assets/images/neo.png"
+import t1 from "../assets/images/tss1.png"
+import t2 from "../assets/images/tss2.png"
 
-const topImages = [opa, lad, mm, ne];
+const topImages = [t1, t2];
 
 const TrustedBySection = () => {
   return (
-    <section className="trust-500">
+    <section className="trust-500 py-5">
       <p className="trust-title">Trusted by 500+ global companies</p>
 
       <section className="scrolling-images-section1 py-5">

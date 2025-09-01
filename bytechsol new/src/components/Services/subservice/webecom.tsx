@@ -34,36 +34,37 @@ const Webecom: React.FC = () => {
     <>
       {/* 1st section */}
       <section
-        className="webecom-section"
-        style={{
-          backgroundImage: `url(${w1})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          padding: "100px 20px",
-          color: "#fff",
-        }}
-      >
-        <div className="webecom-content">
-          <h1 className="webecom-heading">
-            Web & E-Commerce <br /> Development
-          </h1>
-          <p className="webecom-description">
-            Launch high-performing websites and stores designed for speed,<br />
-            security, and growth. From CMS platforms to custom E-Commerce <br />
-            builds, we handle everything end-to-end.
-          </p>
+  className="webecom-section"
+  style={{
+    backgroundImage: `url(${w1})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    padding: "100px 20px",
+    color: "#fff",
+  }}
+>
+  <div className="webecom-content">
+    <h1 className="webecom-heading">
+      Web & E-Commerce <br /> Development
+    </h1>
+    <p className="webecom-description">
+      Launch high-performing websites and stores designed for speed,<br />
+      security, and growth. From CMS platforms to custom E-Commerce <br />
+      builds, we handle everything end-to-end.
+    </p>
 
-          <div className="webecom-buttons">
-            <a href="#contact" className="webecom-btn webecom-btn-primary">
-              Consult an Expert
-            </a>
-            <a href="#portfolio" className="webecom-btn webecom-btn-outline">
-              View Our Work
-            </a>
-          </div>
-        </div>
-      </section>
+    <div className="webecom-buttons">
+      <a href="#contact" className="webecom-btn webecom-btn-primary">
+        Consult an Expert
+      </a>
+      <a href="#portfolio" className="webecom-btn webecom-btn-outline">
+        View Our Work
+      </a>
+    </div>
+  </div>
+</section>
+
 
       <TrustedBySection />
 
