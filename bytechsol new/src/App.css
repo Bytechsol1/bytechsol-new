@@ -11,6 +11,7 @@
   font-style: normal;
 }
 
+
 .navbar-custom {
   font-size: 18px;
   font-weight: 700;
@@ -79,18 +80,37 @@
 
 .contact-btn:hover::before {
   transform: translateY(0%);
+  /* background-color: #2B3990; */
 }
 
 .contact-btn:hover {
   color: var(--btn-text);
 }
-
+.btn-scheme--price{
+    --btn-bg: #289ED8;
+  --btn-hover: #000;
+  --btn-text: #ffffff;
+}
 .btn-scheme--saas {
-  --btn-bg: #fff;
+  --btn-bg: #289ED8;
   --btn-hover: #2b3990;
   --btn-text: #ffffff;
 }
-
+.btn-scheme--mobile {
+  --btn-bg: #289ED8;
+  --btn-hover: #2b3990;
+  --btn-text: #ffffff;
+}
+.btn-scheme--blog {
+  --btn-bg: #289ED8;
+  --btn-hover: #2b3990;
+  --btn-text: #ffffff;
+}
+.btn-scheme--custom{
+  --btn-bg: #289ED8;
+  --btn-hover: #2b3990;
+  --btn-text: #ffffff;
+}
 .contact-btn i {
   transition: transform 0.3s ease-in-out;
   display: inline-block;
@@ -252,9 +272,14 @@
   padding: 0;
   margin: 0;
   font-family: "Guminert", sans-serif;
+    text-decoration: none;
 }
+/* .footer-links a{
+      text-decoration: none;
+} */
 
 .footer-links li {
+      text-decoration: none;
   font-size: 18px;
   margin-bottom: 14px;
   color: #aaa;
