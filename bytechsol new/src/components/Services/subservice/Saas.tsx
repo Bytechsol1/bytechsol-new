@@ -89,6 +89,7 @@ const SaasDesign = () => {
     <>
       {/* 1st Section */}
       <section className="dg-products-section" style={{backgroundColor:"#000"}}>
+        <div className="container">
         <div className="dg-products-content">
           <h1 className="dg-products-heading">
            Saas UI UX design <br /> services agency
@@ -100,6 +101,7 @@ const SaasDesign = () => {
             <a href="#contact" className="dg-button dg-button-primary">Consult an expert</a>
             <a href="#portfolio" className="dg-button dg-button-outline">See our works</a>
           </div>
+        </div>
         </div>
       </section>
 

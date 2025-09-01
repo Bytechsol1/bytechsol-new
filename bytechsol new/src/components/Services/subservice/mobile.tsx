@@ -123,6 +123,7 @@ const Mobile: React.FC = () => {
         className="dg-products-section"
         style={{ backgroundColor: "#000", color: "#fff" }}
       >
+        <div className="container">
         <div className="dg-products-content">
           <h1 className="dg-products-heading">
            Website Design & <br /> Development
@@ -138,6 +139,7 @@ const Mobile: React.FC = () => {
         </div>
         <div className="dg-products01-image">
           <img src={lig} alt="UI/UX Illustration" />
+        </div>
         </div>
       </section>
 
