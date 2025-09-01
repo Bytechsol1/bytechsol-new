@@ -1,11 +1,11 @@
 import React from "react";
 import "../../../assets/components-css/careers.css";
 import TrustedBySection from "../../../shareable/trust500";
-import wh from "../../../assets/images/whit.png";
-import pi from "../../../assets/images/pink.png";
-import pp from "../../../assets/images/pps.png";
-import lg from "../../../assets/images/light1.png";
-import wk from "../../../assets/images/work.png";
+import wh from "../../../assets/images/career-left1.png";
+import pi from "../../../assets/images/career-right1.png";
+import pp from "../../../assets/images/career-left2.png";
+import lg from "../../../assets/images/career-right2.png";
+import wk from "../../../assets/images/career-center.png";
 
 const Careers = () => {
   return (
@@ -26,24 +26,25 @@ const Careers = () => {
       </section>
 
       {/* Image Row */}
+      <div className="container">
       <div className="career-parent">
         <div className="career-div1">
-          <img src={wk} alt="Work" height={200} />
+          <img src={wh} alt="Work"  width={"100%"} height={"100%"}/>
         </div>
         <div className="career-div2">
-          <img src={lg} alt="Light" height={200} />
+          <img src={pi} alt="Light"  width={"100%"} height={"100%"}/>
         </div>
         <div className="career-div3">
-          <img src={wh} alt="White" height={200} />
+          <img src={pp} alt="White"  width={"100%"} height={"100%"}/>
         </div>
         <div className="career-div4">
-          <img src={pi} alt="Pink" height={200} />
+          <img src={lg} alt="Pink" width={"100%"} height={"100%"}/>
         </div>
         <div className="career-div5">
-          <img src={pp} alt="PPS" height={200} />
+          <img src={wk} alt="PPS"  width={"100%"} height={"100%"}/>
         </div>
       </div>
-
+</div>
       {/* Trusted By Section */}
       <TrustedBySection />
 

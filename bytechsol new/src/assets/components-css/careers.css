@@ -38,39 +38,42 @@
 /* Grid Layout */
 .career-parent {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: 8px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 8px;
 }
 
 .career-div1 {
-  grid-column: span 2;
-  grid-row: span 3;
+ grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
 }
 
 .career-div2 {
-  grid-column: span 2;
-  grid-row: span 6;
-  grid-column-start: 3;
+ grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 5;
+    grid-row-start: 1;
 }
 
 .career-div3 {
-  grid-column: span 2;
-  grid-row: span 3;
-  grid-column-start: 5;
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 4;
 }
 
 .career-div4 {
-  grid-column: span 2;
-  grid-row: span 3;
-  grid-row-start: 4;
+  grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 5;
+    grid-row-start: 4;
 }
 
 .career-div5 {
-  grid-column: span 2;
-  grid-row: span 3;
-  grid-column-start: 5;
-  grid-row-start: 4;
+   grid-column: span 2 / span 2;
+    grid-row: span 6 / span 6;
+    grid-column-start: 3;
+    grid-row-start: 1;
 }
 
 /* Careers Intro */
