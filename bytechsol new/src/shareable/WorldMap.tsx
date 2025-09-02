@@ -29,6 +29,7 @@ const WorldMap: React.FC = () => {
 
   return (
     <>
+    <div className="container">
       <div className="loc-content">
         <div className="loc-header" data-aos="fade-left">
           <span>Our </span>
@@ -54,7 +55,7 @@ const WorldMap: React.FC = () => {
           height={400}
           style={{
             width: "100%",
-            maxWidth: "900px",
+            // maxWidth: "900px",
             height: "auto",
           }}
         >
@@ -140,6 +141,7 @@ const WorldMap: React.FC = () => {
           ))}
         </ComposableMap>
       </div>
+          </div>
     </>
   );
 };

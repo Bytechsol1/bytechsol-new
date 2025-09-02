@@ -55,23 +55,6 @@ const ContactUs = () => {
     </div>
   </div>
 </section>
-    {/* 4th section-------- */}
- <section className="map-section">
-  <h1 className="headquarters-title">
-    Our Headquarters centrally based <br /> in Pakistan &amp; USA
-  </h1>
-
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352.389350522085!2d67.1344988282132!3d24.921880055147568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3390010ec8ea1%3A0x2df63119890b987!2sAlfajar%20Automobiles!5e0!3m2!1sen!2s!4v1755890247488!5m2!1sen!2s"
-    width="100%"
-    height="550"
-    style={{ border: 0 }}
-    allowFullScreen
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
-</section>
-
           <WorldMap/>
     <FaqSection/>
     <ContactSection/>
