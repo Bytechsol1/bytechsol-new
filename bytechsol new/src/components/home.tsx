@@ -32,6 +32,7 @@ import f1 from "../assets/images/fund1.png"
 import g4 from "../assets/images/grow4.png"
 
 
+
 const cards = [
   {
     label: "We Deliver What We Promise",
@@ -344,6 +345,7 @@ const HeroSection: React.FC = () => {
       <Testimonial />
       <FaqSection />
       <ContactSection />
+
     </>
   );
 };

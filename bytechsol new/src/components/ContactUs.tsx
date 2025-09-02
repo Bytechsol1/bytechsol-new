@@ -3,6 +3,7 @@ import "../assets/components-css/ContactUs.css"
 import ContactSection from "../shareable/contact";
 import TrustedBySection from "../shareable/trust500";
 import FaqSection from "../shareable/faq";
+import WorldMap from "../shareable/WorldMap";
 
 const ContactUs = () => {
   return (
@@ -71,7 +72,7 @@ const ContactUs = () => {
   ></iframe>
 </section>
 
-
+          <WorldMap/>
     <FaqSection/>
     <ContactSection/>
     </>
