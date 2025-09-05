@@ -1126,13 +1126,13 @@
   font-size: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-bottom: 25px;
   resize: vertical;
 }
 
 .contact8-subtitle {
   font-weight: 600;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .contact8-tags {
