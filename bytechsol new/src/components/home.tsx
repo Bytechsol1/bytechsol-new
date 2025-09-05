@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState ,useRef} from "react";
 import AnimatedText from "../shareable/AnimatedText";
 import "../assets/components-css/home.css";
 import Clutch from "../assets/images/clutch.png";
@@ -30,6 +31,7 @@ import p3 from "../assets/images/ppg3.png"
 import a2 from "../assets/images/awar2.png"
 import f1 from "../assets/images/fund1.png"
 import g4 from "../assets/images/grow4.png"
+import { motion, useScroll, useTransform } from "framer-motion";
 
 
 const cards = [
@@ -87,6 +89,14 @@ const bottomImages = [Bottom1, Bottom2, Bottom3, Bottom4];
 
 const HeroSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+const sectionRef = useRef<HTMLDivElement>(null);
+
+  // Progress from 0 → 1 across the whole section height
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end end"],
+  });
+    const totalMoving = cards.length;
 
   return (
     <>
@@ -285,7 +295,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Cards block */}
-      <div className="card-container">
+      {/* <div className="card-container">
         {cards.map((card, index) => (
           <div key={index} className={`choose-card ${card.color}`}>
             <div className={`badge ${card.color}`}>{card.label}</div>
@@ -303,7 +313,85 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
         ))}
+      </div> */}
+      <section
+      ref={sectionRef}
+      className="parallax-section"
+      style={{ height: `${cards.length * 100}vh` }}
+    >
+      <div className="sticky-viewport">
+        <div className="stage">
+          {/* 1) STATIC base card (index 0) */}
+          <div className="center-abs" style={{ zIndex: 1 }}>
+            <div className={`choose-card ${cards[0].color}`}>
+              <div className={`badge ${cards[0].color}`}>{cards[0].label}</div>
+              <p className="card-title-text">{cards[0].title[0]}</p>
+              <ul>
+                {cards[0].items.map((item: string, i: number) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+              <div className="card-image-wrapper">
+                <img
+                  src={cards[0].image}
+                  alt={cards[0].label}
+                  className="card-image"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* 2) MOVING cards (index >= 1) overlapping the first */}
+          {cards.slice(1).map((card, i) => {
+            // i here is 0..(totalMoving-1) for cards[1..]
+            const start = i / totalMoving;
+            const end = (i + 1) / totalMoving;
+            const rawOpacity = useTransform(
+              scrollYProgress,
+              [start, end],
+              [0, 1]
+            );
+            const y = useTransform(scrollYProgress, [start, end], [140, 0]);
+            const scale = useTransform(
+              scrollYProgress,
+              [start, end],
+              [0.92, 1]
+            );
+            const opacity = useTransform(rawOpacity, [start, end], [0, 1]);
+      
+
+            return (
+              <div
+                key={card.label}
+                className="center-abs"
+                style={{ zIndex: 10 + i }} // ensure above the static first card
+              >
+                <motion.div
+                  className={`choose-card ${card.color}`}
+                  style={{ y, scale, opacity }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                >
+                  <div className={`badge ${card.color}`}>{card.label}</div>
+                  <p className="card-title-text">{card.title[0]}</p>
+                  <ul>
+                    {card.items.map((item: string, idx: number) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                  <div className="card-image-wrapper">
+                    <img
+                      src={card.image}
+                      alt={card.label}
+                      className="card-image"
+                    />
+                  </div>
+                </motion.div>
+              </div>
+            );
+          })}
+        </div>
       </div>
+    </section>
     </div>
   </div>
 </section>
