@@ -841,21 +841,21 @@
 }
 
 /* Cards wrapper */
-/* .card-container {
+.card-container {
   display: flex;
   flex-direction: column;
   gap: 40px;
   width: 100%;
   max-width: 1200px;
   align-items: center;
-} */
+}
 .group5-para{
   margin-left: 195px;
 }
 
 
 /* Individual card */
-/* .choose-card {
+.choose-card {
   background-color: #289dd8;
   border-radius: 16px;
   padding: 40px 30px;
@@ -865,48 +865,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   color: #fff;
   transition: transform 0.3s ease;
-} */
-.parallax-section {
-  position: relative;
-  width: 100%;
 }
-
-.sticky-viewport {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.stage {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
-/* Absolute, perfectly centered layer; no motion transforms here */
-.center-abs {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-/* Your card styles */
-.choose-card {
-  background-color: #289dd8;
-  border-radius: 16px;
-  padding: 40px 30px;
-  width: 100%;
-  max-width: 700px;
-  color: #fff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
 
 .choose-card.design {
   background-color: #289dd8;
@@ -935,6 +894,7 @@
 .badge {
   position: absolute;
   top: -18px;
+  left: 30px;
   padding: 15px 20px;
   border-radius: 10px;
   font-weight: 600;
