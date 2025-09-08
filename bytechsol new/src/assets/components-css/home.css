@@ -422,13 +422,15 @@
   position: absolute;
   right: 110px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(30px) scale(0.98);
   width: 250px;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
   opacity: 0;
-  animation: fadeSlideIn 0.4s ease forwards;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1;
 }
 
 @keyframes fadeSlideIn {
@@ -832,7 +834,7 @@
 }
 
 /* Container for the whole section */
-.scroll-section {
+/* .scroll-section {
   padding: 50px 20px;
   background-color: #fff;
   display: flex;
@@ -840,7 +842,6 @@
   font-family: "Guminert", sans-serif;
 }
 
-/* Cards wrapper */
 .card-container {
   display: flex;
   flex-direction: column;
@@ -854,7 +855,6 @@
 }
 
 
-/* Individual card */
 .choose-card {
   background-color: #289dd8;
   border-radius: 16px;
@@ -890,7 +890,6 @@
   padding-right: 10px;
 }
 
-/* Badge at the top left */
 .badge {
   position: absolute;
   top: -18px;
@@ -905,7 +904,6 @@
   width: 100px;
 }
 
-/* Color variations for badges */
 .badge.design {
   background-color: #70e6ed;
   width: 236px;
@@ -921,7 +919,6 @@
    width: 236px;
 }
 
-/* List items */
 .choose-card ul {
   list-style-type: disc;
   padding-left: 20px;
@@ -937,7 +934,6 @@
   margin-bottom: 10px;
 }
 
-/* Responsive layout */
 @media (max-width: 768px) {
   .choose-card {
     padding: 30px 20px;
@@ -951,7 +947,103 @@
     font-size: 12px;
     padding: 6px 16px;
   }
+} */
+
+.scroll-section {
+    padding: 50px 20px;
+  background-color: #fff;
+  height: 120vh; /* enough scroll space */
+  font-family: "Guminert", sans-serif;
 }
+
+.card-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+    margin: 0 auto;
+  height: 100vh;
+}
+.group5-para{
+  margin-left: 195px;
+}
+.card-title-text {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Guminert", sans-serif;
+  line-height: 1.6;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  padding-right: 10px;
+}
+.badge {
+  position: absolute;
+  top: -18px;
+  left: 30px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #000;
+  font-size: 14px;
+  font-family: "Guminert", sans-serif;
+  transform: rotate(-5deg);
+  width: 100px;
+}
+
+.badge.design {
+  background-color: #70e6ed;
+  width: 236px;
+}
+
+.badge.build {
+  background-color: #70e6ed;
+   width: 236px;
+}
+
+.badge.grow {
+  background-color: #70e6ed;
+   width: 236px;
+}
+.choose-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.choose-card ul li {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.6;
+  width: 55%;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.choose-card {
+  position: absolute; /* overlap cards */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 700px;
+  background-color: #289dd8;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  color: #fff;
+}
+
+/* keep your color variations */
+.choose-card.design {
+  background-color: #289dd8;
+}
+.choose-card.build {
+  background-color: #2a55a4;
+}
+.choose-card.grow {
+  background-color: #2b3990;
+}
+
 
 .group7-container {
   position: relative;
