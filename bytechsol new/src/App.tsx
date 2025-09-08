@@ -17,9 +17,12 @@ import ContactUs from "./components/ContactUs";
 import FullStackExpertise from "./components/Services/subservice/FullStackExpertise";
 import ProductDesign from "./components/Services/subservice/ProductDesign";
 import SaasDesign from "./components/Services/subservice/Saas";
-import CustomSoftwareDev from "./components/Services/subservice/CustomSoftwareDev";
+import OdooServices from "./components/Services/subservice/OdooServices";
 import Blog from "./components/About/Blog";
+import CustomWeb from "./components/Services/subservice/Customweb";
 import { getNavThemeForPath } from "./themes/navThemes";
+import WebApp from "./components/Services/subservice/WebApp";
+import Aiml from "./components/Services/subservice/Aiml";
 
 function AppShell() {
   const location = useLocation();
@@ -50,8 +53,12 @@ function AppShell() {
         <Route path="/FullStackExpertise" element={<FullStackExpertise />} />
         <Route path="/ProductDesign" element={<ProductDesign />} />
         <Route path="/SaasDesign" element={<SaasDesign />} />
-        <Route path="/CustomSoftwareDev" element={<CustomSoftwareDev />} />
+        <Route path="/OdooServices" element={<OdooServices />} />
         <Route path="/Blog" element={<Blog />} />
+        <Route path="/CustomWeb" element={<CustomWeb />} />
+        <Route path="/WebApp" element={<WebApp />} />
+        <Route path="/Aiml" element={<Aiml />} />
+
       </Routes>
 
       <Footer />

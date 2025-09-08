@@ -68,19 +68,23 @@ const Blog = () => {
     <>
       {/* 1st Section */}
     <section className="csd-blog-section">
+  <div className="container">
   <p className="csd-blog-subtitle">All Blogs</p>
-  <div className="csd-blog-header" ><i className="fa-solid fa-magnifying-glass"></i>
-  <input
-      type="text"
-      className="csd-blog-search"
-      placeholder="Search..."
-    />
+
+  <div className="csd-blog-header d-flex align-items-center">
+    <i className="fa-solid fa-magnifying-glass me-2"></i>
+    <input type="text" 
+    className="csd-blog-search"
+    placeholder="Search..." />
   </div>
-    <h1 className="csd-blog-title">bytechsol Blog</h1>
-  <p className="csd-blog-description">
+
+  <h1 className="csd-blog-title">bytechsol Blog</h1>
+
+  <p className="csd-blog-description fs-1">
     Top 15 Banking Apps with <br /> Exceptional UX Design <br /> (2025)
   </p>
-  <div className="dg-products-image" style={{height:"100px", width:"50%",marginTop:"250px", marginLeft:"100px"}}>
+</div>
+  <div className="dg-products-image" style={{height:"500px", width:"50%",marginTop:"-280px", marginLeft:"650px"}}>
           <img src={dl} alt="blog" />
         </div>
 </section>

@@ -4,6 +4,7 @@ import ContactSection from "../shareable/contact";
 import TrustedBySection from "../shareable/trust500";
 import FaqSection from "../shareable/faq";
 import WorldMap from "../shareable/WorldMap";
+import Testimonial from "../shareable/testimonial";
 
 const ContactUs = () => {
   return (
@@ -56,6 +57,7 @@ const ContactUs = () => {
   </div>
 </section>
           <WorldMap/>
+          <Testimonial/>
     <FaqSection/>
     <ContactSection/>
     </>

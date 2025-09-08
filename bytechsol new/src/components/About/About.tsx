@@ -47,6 +47,7 @@ const About: React.FC = () => {
     <>
       {/* 1st Section */}
 <section className="Designed-section">
+  <div className="container">
   {/* Background image */}
   <img className="big" src={big} alt="Big Visual" />
 
@@ -54,7 +55,7 @@ const About: React.FC = () => {
   <div className="overlay"></div>
   <div className="content">
     <h1 className="head">
-      We Don’t Just Build <span className="gradient">Software</span> <br />
+      We Don’t Just Build <span className="gradient">Software </span> <br />
       We Build What <span className="gradient">Matters</span>.
     </h1>
     <p>
@@ -65,6 +66,7 @@ const About: React.FC = () => {
       your next big idea happen.
     </p>
   </div>
+</div>
 </section>
 
 

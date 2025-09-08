@@ -40,10 +40,10 @@ const Footer: React.FC = () => {
           <div className="col-md-2">
             <h6 className="footer-heading">Services</h6>
             <ul className="footer-links">
-              <li>UI UX Design</li>
-              <Link to="/Webecom"><li>Web design</li></Link>
-              <Link to="/ProductDesign"><li>Product design</li></Link>
-              <Link to="/SaasDesign"><li>Saas Design</li></Link>
+             <Link to="/WebApp"><li>WebApp</li></Link>
+               <Link to="/Webecom"><li>web design</li></Link>
+               <Link to="/ProductDesign"><li>Product design</li></Link>
+              <Link to="/SaasDesign"><li>SaasDesign</li></Link> 
               <li>Branding</li>
               <Link to="/careers"><li>UX Audit</li></Link>
             </ul>
@@ -53,10 +53,10 @@ const Footer: React.FC = () => {
           <div className="col-md-2">
             <ul className="footer-links mt-md-4 pt-md-2">
               <Link to="/mobile"><li>Mobile Page</li></Link>
-              <Link to="/FullStackExpertise"><li>Design system</li></Link>
-              <Link to="/CustomSoftwareDev"><li>Web flow</li></Link>
-              <li>Build Product (MVP)</li>
-              <li>Conversion Rate.. (CRO)</li>
+              <Link to="/FullStackExpertise"><li>Design system</li></Link> 
+              <Link to="/OdooServices"OdooServices><li>OdooServices</li></Link>
+              <Link to="/Aiml"><li>Aiml</li></Link>
+              <Link to="/CustomWeb"><li>CustomWeb</li></Link>
             </ul>
           </div>
 

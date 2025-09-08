@@ -9,17 +9,54 @@
 }
 
 
-.webecom-heading {
-  font-size: 2.5rem;
-  font-weight: bold;
+.ecommerce-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ecommerce-overlay {
+  width: 100%;
+   min-height: 100vh;
+  background: rgba(0, 0, 0, 0.4); 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 5%;
+}
+
+.ecommerce-content {
+  max-width: 650px;
+  color: #fff;
+}
+
+.ecommerce-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
   margin-bottom: 20px;
 }
 
-.webecom-description {
+.ecommerce-desc {
   font-size: 1.1rem;
-  margin-bottom: 30px;
-  color: #FFF;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
 }
+
+@media (max-width: 992px) {
+  .ecommerce-title {
+    font-size: 2.2rem;
+  }
+  .ecommerce-desc {
+    font-size: 1rem;
+  }
+}
+
 
 .webecom-buttons {
   display: flex;

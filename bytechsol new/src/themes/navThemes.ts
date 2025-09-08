@@ -116,12 +116,12 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/customsoftwaredev": {
+  "/odooservices": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
-    backgroundColor: "#000",
-    variant: "dark",
+    backgroundColor: "#203A43",
+    // variant: "dark",
     linkClassName: "text-white",
     buttonClassName: "",
     buttonSchemeClass: "btn-scheme--custom",
@@ -129,7 +129,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
   },
  "/webecom": {
   logoIconSrc: Logo,
-  logoTextSrc: LogoTextWhite,
+  logoTextSrc: LogoText,
   navClassName: "",
   backgroundImage: w1, // ✅ imported image
   linkClassName: "text-black",

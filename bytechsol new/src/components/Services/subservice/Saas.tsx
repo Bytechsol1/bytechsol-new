@@ -1,34 +1,24 @@
 import React, { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import "../../../assets/components-css/ProductDesign.css";
+import er from "../../../assets/images/erp01.svg"
 import TrustedBySection from "../../../shareable/trust500";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import ContactSection from "../../../shareable/contact";
-import et from "../../../assets/images/ideat.png";
-import lw from "../../../assets/images/lwork.png";
-import sp from "../../../assets/images/simplicity.png";
-import ma from "../../../assets/images/mobapps.png";
-import lb from "../../../assets/images/label.png";
-import kl from "../../../assets/images/kalu.png";
-import kd from "../../../assets/images/kode.png"
 import fin from "../../../assets/images/fintech.png"
 import ec from "../../../assets/images/ecom.png"
 import pl from "../../../assets/images/plat.png"
 import we from "../../../assets/images/web3.png"
 import ed from "../../../assets/images/edtech.png"
 import sv from "../../../assets/images/services.png"
-import al from "../../../assets/images/applap.png"
-import ls from "../../../assets/images/ppls2.png"
+import lp from "../../../assets/images/laptop-image.png"
+import am from "../../../assets/images/aml.jpg"
+import cs from "../../../assets/images/cuseomiza.png"
+import ip from "../../../assets/images/imple.png"
+import sp from "../../../assets/images/support.png"
 
 
-const accordionItemsdev = [
-  { title: "Build Product (MVP)", description: "We create user-centric websites..." },
-  { title: "Webflow", description: "SaaS platforms built to scale..." },
-  { title: "Conversion Rate Optimization Services", description: "End-to-end product UI/UX design..." },
-  { title: "Shopify Development", description: "From landing pages to full sites..." },
-  { title: "A/B Testing Development and QA", description: "Professional B2B interfaces..." },
-];
 
 const industryData = [
   {
@@ -70,13 +60,44 @@ const industryData = [
 ];
 
 
-const accordionItemsUX = [
-  { title: "Fast design that grows with your product", description: "We create user-centric websites..." },
-  { title: "Easy-to-use experiences for real users", description: "SaaS platforms built to scale..." },
-  { title: "More signups, upgrades, and use", description: "End-to-end product UI/UX design..." },
-  { title: "We think beyond UI, we solve problems", description: "From landing pages to full sites..." },
-  { title: "Everything is handed off, ready to build", description: "Professional B2B interfaces..." },
-  { title: "We’re a partner, not a vendor", description: "Professional B2B interfaces..." },
+const accordionItemswebdev = [
+  { title: "Requirement Analysis & Planning", description: "We review business processes, issues, and business goals and create an ERP system that meets your specific requirements. This means fewer adoption hassles, less risk, and optimal ROI on your investment." },
+  { title: "  Custom ERP Development", description: " Our team builds scalable, feature-rich ERP systems based on your processes. Your ERP can be tailored to your operations with bespoke modules and features rather than requiring you to change your operations to suit the system." },
+  { title: "Seamless Integration", description: "We combine ERP solutions with the already implemented software, e.g., CRM, HR, or other accounting software. This provides an integrated digital environment that breaks the silos and enhances cross-departmental collaboration." },
+  { title: " Data Migration & Security", description: "Our experts complete an orderly migration of business information to the new ERP without disturbances. To facilitate a smooth transition, we value the importance of data integrity, compliance, and security." },
+  { title: "Testing & Deployment", description: "Before ERP systems are deployed, we test them rigorously based on performance, security, and usability. This provides a stable, bug-free solution that your teams can be sure to adopt and use right away." },
+];
+
+const accordionItemssoft = [
+  { title: "  End-to-End System Connectivity", description: " We combine the ERP solutions in the fields of finance, human resources, sales, and supply chain, and guarantee the consistency of the data and the smooth running of the processes. This interdependence gets rid of duplication and allows the integration of a single workflow." },
+  { title: "API Development & Integration", description: "  Our experts develop and develop APIs that enable your ERP to interact easily with other applications. This is to provide flexibility, scalability, and reliable system interactions." },
+  { title: "  Real-Time Data Synchronization", description: "  We facilitate real-time data transfer among ERP and related systems. Up-to-date information that is accurate enables the teams to make decisions smartly and act faster." },
+  { title: "Cloud & Hybrid Integration", description: "Our team eases the integration of ERP into cloud and hybrid environments, providing secure, scalable, and future-proof operations that grow with business expansion and changes in technologies." },
+  { title: "Legacy System Integration", description: "  We bridge the gap between ERP systems and legacy applications, allowing older systems to operate in your current digital environment. This reduces the disturbances and maximizes the investments that are already in place." },
+];
+
+const accordionItemspwa = [
+  { title: " CRM & Sales Integration", description: "We combine the ERP with CRM applications to simplify the process of customer data, sales pipelines, and performance monitoring. This enhances customer experiences, leads management, and visibility of sales teams can be up to date on the operations of the business." },
+  { title: "Accounting & Finance Systems", description: "Our financial reporting is automated with the integration of our ERP solutions with accounting software to manage transactions and compliance. Integration saves on manual labor and gives you the right real-time information on your financial status." },
+  { title: "HR & Payroll Systems", description: "We link ERP to HR and payroll applications to promote the ease of managing employees and processing payroll. This will guarantee proper management of the workforce and employee satisfaction due to smooth operations." },
+  { title: " Supply Chain & Inventory Management", description: " Combining ERP with supply chain and inventory applications helps us improve demand forecasting, inventory management, and logistics. Companies are able to achieve end-to-end visibility, which minimizes the cost and enhances the efficiency of operations." },
+  { title: "Third-Party Application Integration", description: " We integrate the ERP with third-party,, ms including e-commerce, analytics, or project management systems. This brings about a cohesive environment in which the flow of data is free to enhance cooperation, productivity, and decision-making." },
+];
+
+const accordionItemsaas = [
+  { title: "  Custom Workflow Design", description: " We create ERP workflows specific to your processes that streamline operations. Customization removes redundant procedures, lessens manual labor, and enhances total productivity." },
+  { title: "   Industry-Specific Modules", description: " Our modules are industry-specific, designed to meet your industry requirements, that is, manufacturing, retail, healthcare, or finance. These bespoke modules provide a solution to niche problems." },
+  { title: " Feature Enhancements", description: "We upgrade the current ERP features or introduce new features in order to make the most of it. This keeps your system updated with business needs and competitive." },
+  { title: " User Interface Customization", description: "We design user-friendly dashboards and interfaces that are user-friendly to your teams. This enhances usability, accessibility, and general ERP adoption within departments." },
+  { title: "Reporting & Analytics Modules", description: "We develop high-level reporting and analytics applications according to your KPI. Real-time insights can provide decision-makers with insights to monitor performance, streamline operations, and promote growth." },
+];
+
+const accordionItemsenter = [
+  { title: "  System Monitoring & Performance", description: " The ongoing performance monitoring of the ERP helps to identify and eliminate the problem at an early stage. This guarantees a high uptime, dependability of the operations, and a smooth experience for your teams." },
+  { title: " Bug Fixes & Troubleshooting", description: "Technical glitches, errors, and performance issues are resolved by our support team very quickly. Quick solutions reduce downtime and ensure business continuity." },
+  { title: " Regular Updates & Upgrades", description: "We maintain your ERP at the most recent features, patches, and security upgrades. This improves the stability and functionality of systems and conformance to changing industry standards." },
+  { title: " User Training & Support", description: "Our experts provide training and ongoing support for ERP users. This gives employees the power to take full advantage of system features and enhances adoption throughout the organization." },
+  { title: "Scalability & Enhancements", description: "We tailor and upgrade ERP modules as your business grows to fit new needs. This makes sure your ERP goes with your operations and continues to deliver value." },
 ];
 
 const SaasDesign = () => {
@@ -88,46 +109,54 @@ const SaasDesign = () => {
   return (
     <>
       {/* 1st Section */}
-      <section className="dg-products-section" style={{backgroundColor:"#000"}}>
+
+ <section
+        className="dg-products-section"
+        style={{
+          background: "linear-gradient(180deg, #0F0C29 10.43%, #302B63 52.97%, #0F0C29 100%)",
+          color: "#fff",
+        }}
+      >
         <div className="container">
-        <div className="dg-products-content">
-          <h1 className="dg-products-heading">
-           Saas UI UX design <br /> services agency
-          </h1>
-          <p className="dg-products-description">
-            Build a product that’s not just usable, but unforgettable. We <br />help SaaS companies turn ideas into intuitive, scalable design <br /> systems that make adoption easier, faster, and far more <br /> valuable.
-          </p>
-          <div className="dg-products-buttons">
-            <a href="#contact" className="dg-button dg-button-primary">Consult an expert</a>
-            <a href="#portfolio" className="dg-button dg-button-outline">See our works</a>
+          <div className="dg-products-container">
+            {/* Left: Text */}
+            <div className="dg-products-content">
+              <h1 className="dg-products-heading">
+                ERP Solutions That <br /> Power Smarter <br /> Businesses
+              </h1>
+              <p className="dg-products-description">
+                Our ERP services can simplify the business processes by consolidating
+        finance, human resources, supply chain, sales, etc., into one system.
+        Our personalized ERP systems enable greater productivity, more effective
+        collaboration, and smarter decision-making and growth-sustainable
+        insights.
+              </p>
+            </div>
+
+            {/* Right: Image */}
+            <div className="dg-products-image">
+              <img src={er} alt="ERP " />
+            </div>
           </div>
-        </div>
         </div>
       </section>
 
-      <TrustedBySection />
 
-      {/* Accordion Section */}
+      <TrustedBySection />
+       {/* 1st card */}
       <section className="webdesign-section1 container-fluid py-5">
         <div className="row align-items-center">
-          {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
-            <img
-              src={al}
-              alt="Web design preview"
-              className="webdesign-img1 img-fluid"
-            />
+            <img src={ip} alt="CMS Development" className="webdesign-img1 img-fluid" />
+
           </div>
-
-          {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Why choose Wavespace for your SaaS design</h2>
+            <h2 className="webdesign-heading1">Custom ERP Implementation & Development</h2>
             <p className="webdesign-desc1">
-              Because simple, thoughtful design can make your product work better, faster, and feel easier, right from the start. We ensure that your product design makes it better and smoother for the entire user. Enhancing the usability of your product is a hallmark of our expertise. 
+              We offer customized ERP implementation and development services that are aligned with your needs. Planning for deployment, our professionals are capable of delivering an integrated system, flawless operation, and scalable ERP systems that are able to propel efficiency, teamwork, and success in the long term.
             </p>
-
             <div className="webdesign-accordion1 mt-4">
-              {accordionItemsUX.map((item, index) => (
+              {accordionItemswebdev.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
                   key={index}
@@ -137,9 +166,13 @@ const SaasDesign = () => {
                     <span className="webdesign-accordion-index1">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <span className="webdesign-accordion-title1">{item.title}</span>
+                    <span className="webdesign-accordion-title1">
+                      {item.title}
+                    </span>
                     <FiChevronDown
-                      className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+                      className={`webdesign-icon1 ${
+                        activeIndex === index ? "rotated" : ""
+                      }`}
                     />
                   </div>
                   {activeIndex === index && (
@@ -151,119 +184,212 @@ const SaasDesign = () => {
           </div>
         </div>
       </section>
+               {/* 2nd card------- */}
+    <section className="webdesign-section container-fluid py-5">
+      <div className="row align-items-center">
+        {/* Left Content */}
+        <div className="col-lg-6 px-5">
+          <h2 className="webdesign-heading">ERP Integration Services</h2>
+          <p className="webdesign-desc">
+         ERP integration services bridge your enterprise system to your key business applications to facilitate seamless operations, a steady flow of data, and enhance teamwork. We eradicate silos, increase visibility, and build a single ecosystem that fosters smarter decisions and workflows.
+          </p>
 
-      {/* 3rd section */}
-      <div className="productdesign-service-header">
-        <h1 className="productdesign-service-title">
-          What’s included in our SaaS <br />design services
-        </h1>
-        <a href="#contact" className="productdesign-service-btn">
-          Build Your Product
-        </a>
+          <div className="webdesign-accordion mt-4">
+            {accordionItemssoft.map((item, index) => (
+              <div
+                className="webdesign-accordion-item"
+                key={index}
+                onClick={() => toggleAccordion(index)}
+              >
+                <div className="webdesign-accordion-header">
+                  <span className="webdesign-accordion-index">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="webdesign-accordion-title">{item.title}</span>
+                  <FiChevronDown
+                    className={`webdesign-icon ${
+                      activeIndex === index ? "rotated" : ""
+                    }`}
+                  />
+                </div>
+                {activeIndex === index && (
+                  <p className="webdesign-accordion-desc">{item.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Image */}
+        <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0">
+          <img
+            src={lp}
+            alt="Web design preview"
+            className="webdesign-img img-fluid"
+          />
+        </div>
       </div>
+    </section>
 
-      {/* 4th section */}
-      <section className="performance-section">
-        {/* First Card */}
-        <div className="card-row purple-bg">
-          <div className="card-text">
-            <h2>SaaS UX/UI Design</h2>
-            <p>
-              Develop user interfaces that look sensible, operate quickly, and are a breeze to navigate. People won’t have to wade through any manual to use your dashboards or settings. You get clarity, speed, and usability that keep users coming back.
-            </p>
+  {/* 3rd card --------------*/}
+      <section className="webdesign-section1 container-fluid py-5">
+        <div className="row align-items-center">
+          {/* Left Image */}
+          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
+            <img
+              src={am}
+              alt="Web design preview"
+              className="webdesign-img1 img-fluid"
+            />
           </div>
-          <div className="card-img">
-            <img src={et} alt="70% Faster Loading Illustration" />
+
+          {/* Right Content */}
+          <div className="col-lg-6 px-5">
+            <h2 className="webdesign-heading1">ERP Customization & Module Development</h2>
+            <p className="webdesign-desc1">
+          We customize ERP to meet your business requirements. Our solutions provide increased functionality, efficiencies, and fitment of your ERP to your industry and business objectives, whether it be custom workflows or specialized modules.
+            </p>
+
+            <div className="webdesign-accordion1 mt-4">
+              {accordionItemspwa.map((item, index) => (
+                <div
+                  className="webdesign-accordion-item1"
+                  key={index}
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <div className="webdesign-accordion-header1">
+                    <span className="webdesign-accordion-index1">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="webdesign-accordion-title1">
+                      {item.title}
+                    </span>
+                    <FiChevronDown
+                      className={`webdesign-icon1 ${
+                        activeIndex === index ? "rotated" : ""
+                      }`}
+                    />
+                  </div>
+                  {activeIndex === index && (
+                    <p className="webdesign-accordion-desc1">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-
-        {/* Second Card */}
-        <div className="card-row white-bg">
-          <div className="card-text">
-            <h2>SaaS Landing Page Design</h2>
-            <p>
-              Create webpages that are ready for search engines and explain what your team is all about so visitors want to use your services. Designed to support your growth goals and drive real signups, not just traffic.
-            </p>
-          </div>
-          <div className="card-img">
-            <img src={lw} alt="CMS Platforms Screenshot" />
-          </div>
-        </div>
-
-        {/* Third Card */}
-        <div className="ecomsolutions-row white-bg">
-          <div className="ecomsolutions-text">
-            <h2>SaaS Responsive Web Development</h2>
-            <p>
-              We turn rough ideas into functional UX concepts. From onboarding to dashboards, we design smart, user-centered flows that support real-world use.
-            </p>
-          </div>
-          <div className="ecomsolutions-img">
-            <img src={sp} alt="E-Commerce Solutions Screenshot" />
-          </div>
-        </div>
-
-        {/* Fourth Card */}
-        <div className="clouddevops-section white-bg">
-          <div className="clouddevops-content">
-            <h2 className="clouddevops-heading">#FF531A</h2>
-            <p className="clouddevops-description">
-              Design a unique style that explains what your product is about and how your team should work together. You’ll get more done, quicker and in a properly scaled way, using design rules that can be reused.
-            </p>
-          </div>
-          <div className="clouddevops-image-wrapper">
-            <img src={ma} alt="Cloud and DevOps Integration Screenshot" className="clouddevops-image" />
-          </div>
-        </div>
-
-        {/* Fifth Card */}
-        <div className="ecomsolutions-row white-bg" style={{backgroundColor:"#6E14CF", color:"#fff"}}>
-          <div className="ecomsolutions-text">
-            <h2>Custom SaaS development System</h2>
-            <p>
-              Customize your product’s flows with unique designs, without relying on templates or unnecessary extras. Our experts build the screens to suit what you need and not what others think you should have.
-            </p>
-          </div>
-          <div className="ecomsolutions-img">
-            <img src={lb} alt="E-Commerce Solutions Screenshot" />
-          </div>
-        </div>
-
-        {/* Sixth Card */}
-        <div className="ecomsolutions-row white-bg " style={{backgroundColor:"#000", color:"#fff"}}>
-          <div className="ecomsolutions-text">
-            <h2>UI/ UX Design</h2>
-            <p>
-              We design apps and platforms people love to use. Whether it’s onboarding, settings, or checkout, every click is planned, tested, and built to work.   
-            </p>
-          </div>
-          <div className="ecomsolutions-img">
-            <img src={kl} alt="E-Commerce Solutions Screenshot" />
-          </div>
-        </div>
-        {/* 7th card----------- */}
-
-     <div className="ecomsolutions-row white-bg " style={{backgroundColor:"green", color:"#fff"}}>
-          <div className="ecomsolutions-text">
-            <h2>Conversion rate optimization</h2>
-            <p>
-              We design apps and platforms people love to use. Whether it’s onboarding, settings, or checkout, every click is planned, tested, and built to work.   
-            </p>
-          </div>
-          <div className="ecomsolutions-img">
-            <img src={kd} alt="E-Commerce Solutions Screenshot" />
-          </div>
-        </div>
-
-
       </section>
+        {/* 4th card----- */}
+    <section className="webdesign-section container-fluid py-5">
+      <div className="row align-items-center">
+        {/* Left Content */}
+        <div className="col-lg-6 px-5">
+          <h2 className="webdesign-heading">ERP Maintenance & Support</h2>
+          <p className="webdesign-desc">
+          Our ERP services and support services will keep your system safe, efficient, and relevant. Troubleshooting and upgrades are just the tip of the iceberg as we maintain your ERP on track to allow your business to grow.
+          </p>
+
+          <div className="webdesign-accordion mt-4">
+            {accordionItemsaas.map((item, index) => (
+              <div
+                className="webdesign-accordion-item"
+                key={index}
+                onClick={() => toggleAccordion(index)}
+              >
+                <div className="webdesign-accordion-header">
+                  <span className="webdesign-accordion-index">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="webdesign-accordion-title">{item.title}</span>
+                  <FiChevronDown
+                    className={`webdesign-icon ${
+                      activeIndex === index ? "rotated" : ""
+                    }`}
+                  />
+                </div>
+                {activeIndex === index && (
+                  <p className="webdesign-accordion-desc">{item.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Image */}
+        <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0">
+          <img
+            src={cs}
+            alt="Web design preview"
+            className="webdesign-img img-fluid"
+          />
+        </div>
+      </div>
+    </section>
+    {/* 5th card --------------*/}
+      <section className="webdesign-section1 container-fluid py-5">
+        <div className="row align-items-center">
+          {/* Left Image */}
+          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
+            <img
+              src={sp}
+              alt="Web design preview"
+              className="webdesign-img1 img-fluid"
+            />
+          </div>
+
+          {/* Right Content */}
+          <div className="col-lg-6 px-5">
+            <h2 className="webdesign-heading1">Odoo Maintenance & Support</h2>
+            <p className="webdesign-desc1">
+          All of our Odoo support and maintenance services assure that your ERP system is operating properly, safely, and without failure. We will offer continuous support, be it in terms of bug fixes, performance monitoring, to ensure that your business activity remains efficient, scalable, and future-ready.
+            </p>
+
+            <div className="webdesign-accordion1 mt-4">
+              {accordionItemsenter.map((item, index) => (
+                <div
+                  className="webdesign-accordion-item1"
+                  key={index}
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <div className="webdesign-accordion-header1">
+                    <span className="webdesign-accordion-index1">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="webdesign-accordion-title1">
+                      {item.title}
+                    </span>
+                    <FiChevronDown
+                      className={`webdesign-icon1 ${
+                        activeIndex === index ? "rotated" : ""
+                      }`}
+                    />
+                  </div>
+                  {activeIndex === index && (
+                    <p className="webdesign-accordion-desc1">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      
       {/* 5th section------------- */}
      <section className="industry-section">
   <div className="industry-header">
-    <h2 className="industry-title">What’s included in our SaaS design services </h2>
-    <a href="#contact" className="industry-button">
-      Build Your Saas <span>&rarr;</span>
-    </a>
+    <h2 className="industry-title">Turning Your Ideas Into Something Real</h2>
+   <p className="ms-2 fs-6">
+  All great digital initiatives begin with a spark, a concept, a challenge, or perhaps a spark of a what-if thought. 
+  We are <br /> not the traditional web designers that build websites or applications… 
+  we help you create your vision in a way that <br /> feels natural to you and memorable to your users.
+</p>
+
   </div>
 
   <div className="industry-flex-grid">
@@ -281,57 +407,6 @@ const SaasDesign = () => {
     ))}
   </div>
 </section>
-{/* 6th section----------------------- */}
-<section className="webdesign-section1 container-fluid py-5">
-      <div className="row align-items-center">
-        {/* Left Image */}
-        <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
-          <img
-            src={ls}
-            alt="Web design preview"
-            className="webdesign-img1 img-fluid"
-          />
-        </div>
-
-        {/* Right Content */}
-        <div className="col-lg-6 px-5">
-          <h2 className="webdesign-heading1">The impact of great SaaS design on your growth</h2>
-          <p className="webdesign-desc1">
-            The success of your product is powered by good design which is usually hidden. A website is valuable when it’s attractive, works effectively, feels good and lets users find their next steps quickly. Great design in SaaS products keeps customers around, helps them get started and makes every action more comfortable to do.
-          </p>
-
-          <div className="webdesign-accordion1 mt-4">
-  {accordionItemsdev.map((item, index) => (
-    <div
-      className="webdesign-accordion-item1"
-      key={index}
-      onClick={() => toggleAccordion(index)}
-    >
-      <div className="webdesign-accordion-header1">
-        <span className="webdesign-accordion-index1">
-          {String(index + 1).padStart(2, "0")}
-        </span>
-        <span className="webdesign-accordion-title1">{item.title}</span>
-        <FiChevronDown
-          className={`webdesign-icon1 ${
-            activeIndex === index ? "rotated" : ""
-          }`}
-        />
-      </div>
-      {activeIndex === index && (
-        <p className="webdesign-accordion-desc1">{item.description}</p>
-      )}
-    </div>
-  ))}
-
-  <a href="#" className="vision-btn"style={{backgroundColor:"#289ED8"}}>
-    Create a Saas Product <span>↗</span>
-  </a>
-</div>
-</div>
-</div>
-
-    </section>
 
       <Testimonial />
       <FaqSection />

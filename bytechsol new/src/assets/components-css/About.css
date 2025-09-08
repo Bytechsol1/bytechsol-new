@@ -36,14 +36,16 @@
 .content {
   position: relative;
   z-index: 2; /* above overlay */
-  max-width: 700px;
+  /* max-width: 700px; */
+  width: 1200px;
 }
 
 .head {
-  font-size: 3rem;
+  font-size: 4.5rem;
   font-weight: 700;
   line-height: 1.3;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .gradient {
@@ -53,10 +55,10 @@
 }
 
 .content p {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   margin-top: 1rem;
-  max-width: 900px;  /* instead of fixed width */
+  /* max-width: 900px;  instead of fixed width */
   width: 100%;
 
 }
@@ -130,7 +132,7 @@ text-align: center;
 }
 
 .metrics-section {
-  padding: 60px 20px;
+  padding: 10px 20px;
   font-family: 'Gilroy', sans-serif;
   background-color: #f9f9f9;
   text-align: center;
@@ -165,12 +167,9 @@ height: 138px;
 .metrics-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     gap: 8px;
-  display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
-  gap: 24px;
-  padding: 40px 20px;
+  /* padding: 40px 20px; */
   justify-items: center;
   background-color: #f9f9f9;
   font-family: 'Gilroy', sans-serif;
@@ -216,26 +215,28 @@ height: 138px;
 }
  .css4{
   grid-column: span 3 / span 3;
-    grid-row: span 4 / span 4;
+    grid-row: span 3 / span 3;
     grid-row-start: 4;
       background-color: #fff;
   border-radius: 16px;
   padding: 90px 40px;
   /* max-width: 400px; */
   width: 100%;
+  height: 420px;
   text-align: left;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
  }
  .csm5{
     grid-column: span 3 / span 3;
-    grid-row: span 4 / span 4;
+    grid-row: span 3 / span 3;
     grid-column-start: 4;
     grid-row-start: 4;
   background-color: #fff;
   border-radius: 16px;
   padding: 90px 40px;
   /* max-width: 400px; */
+  height: 420px;
   width: 100%;
   text-align: left;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
@@ -263,34 +264,39 @@ height: 138px;
 }
 
 .metric-number1{
-    font-size: 14px;
-  font-weight: 500;
+    font-size: 20px;
+  font-weight: 600;
   color: #999;
-  margin-bottom: 12px;
+  margin-bottom: 150px;
+  margin-top: -50px;
 }
 .metric-number2{
-    font-size: 14px;
-  font-weight: 500;
+    font-size: 20px;
+  font-weight: 600;
   color: #999;
-  margin-bottom: 12px;
+ margin-bottom: 150px;
+  margin-top: -50px;
 }
 .metric-number3{
-    font-size: 14px;
-  font-weight: 500;
+    font-size: 20px;
+  font-weight: 600;
   color: #999;
-  margin-bottom: 12px;
+   margin-bottom: 150px;
+  margin-top: -50px;
 }
 .metric-number4{
-    font-size: 14px;
-  font-weight: 500;
+    font-size: 20px;
+  font-weight: 600;
   color: #999;
-  margin-bottom: 12px;
+   margin-bottom: 150px;
+  margin-top: -50px;
 }
 .metric-number5 {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
   color: #999;
-  margin-bottom: 12px;
+ margin-bottom: 150px;
+  margin-top: -50px;
 }
 
 

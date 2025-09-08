@@ -32,8 +32,13 @@ const WorldMap: React.FC = () => {
     <div className="container">
       <div className="loc-content">
         <div className="loc-header" data-aos="fade-left">
-          <span>Our </span>
-          <span className="trs-highlight">Locations</span>
+          <span
+  className="trs-highlight fw-bold d-inline-block position-relative text-start"
+  style={{ width: "1091px", fontSize: "55px", fontFamily: "Guminert", color: "#000" }}
+>
+  Our Headquarters centrally based in Pakistan & USA
+</span>
+
         </div>
       </div>
 

@@ -130,6 +130,22 @@
     width: 100%;
   }
 }
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .csd-blog-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .csd-blog-content {
+    text-align: left; /* or center if you prefer */
+  }
+
+  .dg-products-image {
+    margin-top: 20px;
+  }
+}
+
 /* ----------------------------------------- */
 .blog-grid {
   display: grid;
