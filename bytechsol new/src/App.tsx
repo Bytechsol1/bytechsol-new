@@ -4,6 +4,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import React, { Suspense } from "react";
 import "./App.css";
 import Navbar from "./shareable/Navbar";
 import Footer from "./shareable/Footer";
@@ -19,7 +20,7 @@ import ProductDesign from "./components/Services/subservice/ProductDesign";
 import SaasDesign from "./components/Services/subservice/Saas";
 import OdooServices from "./components/Services/subservice/OdooServices";
 import Blog from "./components/About/Blog";
-import CustomWeb from "./components/Services/subservice/Customweb";
+import CustomWeb from "./components/Services/subservice/CustomWeb";
 import { getNavThemeForPath } from "./themes/navThemes";
 import WebApp from "./components/Services/subservice/WebApp";
 import Aiml from "./components/Services/subservice/Aiml";
@@ -41,7 +42,7 @@ function AppShell() {
         buttonSchemeClass={theme.buttonSchemeClass}
         sticky={theme.sticky}
       />
-
+        <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -60,7 +61,7 @@ function AppShell() {
         <Route path="/Aiml" element={<Aiml />} />
 
       </Routes>
-
+    </Suspense>
       <Footer />
     </>
   );
