@@ -49,7 +49,7 @@ const services = [
 const topImages = [Top1, Top2, Top3, Top4];
 const bottomImages = [Bottom1, Bottom2, Bottom3, Bottom4];
 
-const HeroSection: React.FC = () => {
+const Home: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
@@ -278,4 +278,4 @@ const HeroSection: React.FC = () => {
   );
 };
 
-export default HeroSection;
+export default Home;

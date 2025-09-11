@@ -41,20 +41,20 @@ const Footer: React.FC = () => {
           <div className="col-md-2">
             <h6 className="footer-heading">Services</h6>
             <ul className="footer-links">
-              <Link to="/WebApp">
+              <Link to="/services/web-app">
                 <li>Web App</li>
               </Link>
-              <Link to="/seoservice">
+              <Link to="/services/seo-service">
                 <li>SEO Service</li>
               </Link>
 
-              <Link to="/BrandBuilding">
+              <Link to="/services/brand-building">
                 <li>Brand Building</li>
               </Link>
-              <Link to="/ERPservice">
+              <Link to="/services/ERP-service">
                 <li>ERP Service</li>
               </Link>
-              <Link to="/website-design-and-development">
+              <Link to="/services/website-design-and-development">
                 <li>Website Design & Development</li>
               </Link>
             </ul>
@@ -63,17 +63,17 @@ const Footer: React.FC = () => {
           {/* Additional Services */}
           <div className="col-md-2">
             <ul className="footer-links mt-md-4 pt-md-2">
-              <Link to="/ECommerceSolutions">
+              <Link to="/services/E-Commerce-solutions">
                 <li>E-Commerce Solutions</li>
               </Link>
-              <Link to="/Odoo-Services">
+              <Link to="/services/odoo-services">
                 <li>Odoo Services</li>
               </Link>
-              <Link to="/Aiml">
+              <Link to="/services/Ai-Ml">
                 <li>AI / ML</li>
               </Link>
-              <Link to="/CustomWeb">
-                <li>CustomWeb</li>
+              <Link to="/services/custom-web">
+                <li>Custom Web</li>
               </Link>
             </ul>
           </div>
