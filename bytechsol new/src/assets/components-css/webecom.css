@@ -152,6 +152,13 @@
 }
 
 .card-row {
+  
+  position: absolute; /* overlap cards */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -164,7 +171,9 @@
   background-color: #4a3aff;
   color: white;
 }
-
+.olive-bg{
+  background-color: #FFD500;
+}
 .white-bg {
   background-color: white;
   color: black;
@@ -307,7 +316,21 @@
   }
 }
 
+.f-bg{
+background-color: #4A3AFF;
+color: white;
+}
+.s-bg{
+background-color: #FFD500;
+color: #000;
+}
+.t-bg{
+background-color: #000;
+color: white;
 
 
-
-
+}
+.forth-bg{
+background-color: #FF531A;
+color: #000;
+}

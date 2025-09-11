@@ -420,7 +420,7 @@ const CustomSoftwareDev = () => {
 
         {/* Third Card */}
         <div className="ecomsolutions-row white-bg">
-          <div className="ecomsolutions-text">
+          <div className="card-text">
             <h2>Brains + Code = Magic</h2>
             <p>
               Our technology-functional consultants transform complicated issues into scaled-down systems. We architect and map your processes, build resilient ararchitectu sd train your teams to unlock the full potential of Odoo - so each click has a tangible effect on the business.
@@ -432,15 +432,16 @@ const CustomSoftwareDev = () => {
         </div>
 
         {/* Fourth Card */}
-        <div className="clouddevops-section white-bg">
-          <div className="clouddevops-content">
-            <h2 className="clouddevops-heading">Plug In. Power Up.</h2>
-            <p className="clouddevops-description">
+    
+                <div className="ecomsolutions-row white-bg" style={{backgroundColor:"#FF531A"}}>
+          <div className="card-text">
+            <h2>Plug In. Power Up.</h2>
+            <p>
               Integrate Odoo with everything — apps, payment gateways, e-commerce, IoT, or cloud. We communicate your systems with each other, share the data in real time, and become a powerhouse. The result? Fewer silos, smarter decisions, and serious speed.
             </p>
           </div>
-          <div className="clouddevops-image-wrapper">
-            <img src={ma} alt="Cloud and DevOps Integration Screenshot" className="clouddevops-image" />
+          <div className="ecomsolutions-img">
+            <img src={ma} alt="E-Commerce Solutions Screenshot" />
           </div>
         </div>
       </section>

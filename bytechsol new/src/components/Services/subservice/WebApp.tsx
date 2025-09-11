@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import "../../../assets/components-css/webapp.css";
 import { FiChevronDown } from "react-icons/fi";
 import Testimonial from "../../../shareable/testimonial";
@@ -15,6 +15,56 @@ import id from "../../../assets/images/ideation.png"
 import bl from "../../../assets/images/blacklp.png"
 import pl from "../../../assets/images/planlp.png"
 import fw from "../../../assets/images/findwk.png"
+import Practice from "../../PracticeCard";
+import React, { useRef, useEffect, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const cards = [
+  {
+    color: "f-bg",
+    image: id,
+    title: ["Smarter Web & Software."],
+    items: [
+      "Create apps that are secure and scaling. We provide performance, reliability, and smooth user experiences, whether it is custom web solutions or enterprise systems.",
+    ],
+  },
+  {
+    color: "s-bg",
+    image: bl,
+    title: [
+      "Web Apps Built for Growth",
+    ],
+    items: [
+      "            Our lightning-fast, high-performing applications simplify workflows and increase productivity securely, scalably, and future-ready.",
+    ],
+  },
+    {
+    color: "t-bg",
+    image: pl,
+    title: [
+      "Custom Software, Real Results",
+    ],
+    items: [
+      "                  Turn ideas into powerful web and software solutions. We make our applications scale and change so that you stay ahead of the curve.",
+    ],
+  },
+      {
+    color: "forth-bg",
+    image: fw,
+    title: [
+      "Web Solutions That Work for You",
+    ],
+    items: [
+      "      We build applications that are user-friendly, secure, and capable of providing the desired performance at any scale.",
+    ],
+  },
+  
+];
+
+
 
 
 // ✅ Accordion Data (outside component)
@@ -65,6 +115,46 @@ const Webapp: React.FC = () => {
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+    useEffect(() => {
+      const ctx = gsap.context(() => {
+        const cardsEls = gsap.utils.toArray<HTMLElement>(".card-row");
+        const container = containerRef.current;
+        if (!container) return;
+  
+        // set z-index so new card is always above
+        cardsEls.forEach((card, i) => {
+          card.style.zIndex = `${i + 1}`;
+        });
+  
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: container,
+            start: "top top",
+            end: () => `+=${cardsEls.length * window.innerHeight}`,
+            scrub: true,
+            pin: container,
+            pinSpacing: true,
+          },
+        });
+  
+        cardsEls.forEach((card, i) => {
+          tl.fromTo(
+            card,
+            { y: window.innerHeight, opacity: 1 },
+            { y: 0, opacity: 1, duration: 0.8 },
+            i
+          );
+        });
+      }, containerRef);
+  
+      return () => ctx.revert();
+    }, []);
+  
+
+
 
   return (
     <>
@@ -327,8 +417,7 @@ const Webapp: React.FC = () => {
         </div>
       </section>
          {/* 3rd section--- */}
-      <section className="performance-section">
-      {/* First Card - 70% Faster Loading */}
+      {/* <section className="performance-section">
       <div className="card-row purple-bg">
         <div className="card-text">
           <h2>Smarter Web & Software</h2>
@@ -341,7 +430,6 @@ const Webapp: React.FC = () => {
         </div>
       </div>
 
-      {/* Second Card - CMS Platforms */}
       <div className="card-row white-bg">
         <div className="card-text">
           <h2>Web Apps Built for Growth</h2>
@@ -353,9 +441,8 @@ const Webapp: React.FC = () => {
           <img src={bl} alt="CMS Platforms Screenshot" />
         </div>
       </div>
-      {/* 3rd  card--- */}
      <div className="ecomsolutions-row white-bg">
-  <div className="ecomsolutions-text">
+  <div className="card-text">
     <h2>Custom Software, Real Results</h2>
     <p>
       Turn ideas into powerful web and software solutions. We make our applications scale and change so that you stay ahead of the curve.
@@ -365,21 +452,36 @@ const Webapp: React.FC = () => {
     <img src={pl} alt="E-Commerce Solutions Screenshot" />
   </div>
 </div>
-   {/* 4th card---- */}
-   <div className="clouddevops-section white-bg">
-  <div className="clouddevops-content">
-    <h2 className="clouddevops-heading">Web Solutions That Work for You</h2>
-    <p className="clouddevops-description">
+     <div className="ecomsolutions-row white-bg" style={{backgroundColor: "#FF531A"}}>
+  <div className="card-text">
+    <h2>Web Solutions That Work for You</h2>
+    <p>
       We build applications that are user-friendly, secure, and capable of providing the desired performance at any scale.
     </p>
   </div>
-  <div className="clouddevops-image-wrapper">
-    <img src={fw} alt="Cloud and DevOps Integration Screenshot" className="clouddevops-image" />
+  <div className="ecomsolutions-img">
+    <img src={fw} alt="E-Commerce Solutions Screenshot" />
   </div>
 </div>
-    </section>
-      
-
+    </section> */}
+            {/* <Practice/> */}
+         
+        <section className="performance-section" style={{  height: "100vh"}} ref={containerRef}>
+            <div className="card-container">
+            {cards.map((card, index) => (
+              <div key={index} className={`card-row ${card.color}`}>
+                <div className="card-text">
+                <h2 >{card.title[0]}</h2>
+                <p >{card.items[0]}</p>
+            </div>
+                <div className="card-img">
+                  <img src={card.image}  />
+                </div>
+              </div>
+            ))}
+            </div>
+            </section>
+              
       <Testimonial />
       <FaqSection />
       <ContactSection />

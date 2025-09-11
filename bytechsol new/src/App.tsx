@@ -4,7 +4,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import "./App.css";
 import Navbar from "./shareable/Navbar";
 import Footer from "./shareable/Footer";
