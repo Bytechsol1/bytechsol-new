@@ -27,9 +27,8 @@ import p3 from "../assets/images/ppg3.png";
 import a2 from "../assets/images/awar2.png";
 import f1 from "../assets/images/fund1.png";
 import g4 from "../assets/images/grow4.png";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ScrollCards from "./ScrollCards";
-import { useLocation } from "react-router-dom"; // Import useLocation and useNavigate
 
 
 
@@ -52,16 +51,6 @@ const bottomImages = [Bottom1, Bottom2, Bottom3, Bottom4];
 
 const HeroSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const location = useLocation(); // Get the current location/path
-  const isHomePage = location.pathname === "/"; // Only show ScrollCards on the homepage
-
-  useEffect(() => {
-    // Prevent ScrollCards from being rendered on route change
-    if (!isHomePage) {
-      document.body.style.overflow = "auto"; // Remove any potential overflow hidden or locked styles
-    }
-  }, [isHomePage]); // Re-run the effect when location changes
- 
 
   return (
     <>
@@ -248,7 +237,7 @@ const HeroSection: React.FC = () => {
       </section>
 
       {/* 6th Section */}
-      {isHomePage && <ScrollCards />}
+      <ScrollCards />
 
       {/* 7th Section */}
       <section className="group7-container">

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import "../../../assets/components-css/ProductDesign.css";
 import TrustedBySection from "../../../shareable/trust500";
@@ -10,64 +9,50 @@ import et from "../../../assets/images/ideat.png";
 import lw from "../../../assets/images/lwork.png";
 import sp from "../../../assets/images/simplicity.png";
 import ma from "../../../assets/images/mobapps.png";
-import fin from "../../../assets/images/fintech.png"
-import ec from "../../../assets/images/ecom.png"
-import pl from "../../../assets/images/plat.png"
-import we from "../../../assets/images/web3.png"
-import ed from "../../../assets/images/edtech.png"
-import sv from "../../../assets/images/services.png"
 import lp2 from "../../../assets/images/lapto2.jpg"
 import v1 from "../../../assets/images/visual1.jpg"
 import sc from "../../../assets/images/social.png"
+import  { useRef, useEffect, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 
-const accordionItemsdev = [
-  { title: "Build Product (MVP)", description: "We create user-centric websites..." },
-  { title: "Webflow", description: "SaaS platforms built to scale..." },
-  { title: "Conversion Rate Optimization Services", description: "End-to-end product UI/UX design..." },
-  { title: "Shopify Development", description: "From landing pages to full sites..." },
-  { title: "A/B Testing Development and QA", description: "Professional B2B interfaces..." },
+const cards = [
+  {
+    color: "f-bg",
+    image: et,
+    title: ["Brands Built to Last"],
+    items: [
+      "We develop brand names that gain social credibility, ignite awareness, and develop over time. We mix strategy, design, and messaging to make sure your brand connects and stands out.",
+    ],
+  },
+  {
+    color: "s-bg",
+    image: lw,
+    title: ["Strategy That Speaks"],
+    items: [
+      "More than research - we find out what is special in your business and create a clear market image. The result? A brand with purpose, direction, and competitive strength.",
+    ],
+  },
+  {
+    color: "t-bg",
+    image: sp,
+    title: ["Design With Meaning"],
+    items: [
+      "Logos, colors, and pictures that are created to do more than just look good; they are created to tell your story, they are consistent throughout, and they leave a lasting impression.",
+    ],
+  },
+  {
+    color: "forth-bg",
+    image: ma,
+    title: ["Social Presence With Power"],
+    items: [
+      "We make your social channels brand ambassadors consistent, engaging, and real, building better relationships with each post or interaction.",
+    ],
+  },
 ];
 
-
-const industryData = [
-  {
-    title: "Finance & Fintech",
-    description:
-      "We create digital products that are both secure and easy to trust, with tidy dashboards and simple steps.",
-    image: fin
-  },
-  {
-    title: "E-Commerce & DTC",
-    description:
-      "Our approach of making things simpler and more effective helps users go from browsing to checkout in a few simple steps.",
-    image: ec
-  },
-  {
-    title: "SaaS & B2B Platforms",
-    description:
-      "We build smooth interfaces that make it easy for teams to work, so they can manage tasks quickly and effectively.",
-    image: pl
-  },
-  {
-    title: "Web3, AI & Emerging Tech",
-    description:
-      "Complex tech doesn’t have to feel complex. We simplify the experience so users understand, explore, and adopt with confidence.",
-    image: we
-  },
-  {
-    title: "Edtech & Healthtech",
-    description:
-      "Our platforms allow patients, students, and administrators to use them at any time, from any device.",
-    image: ed
-  },
-  {
-    title: "Hospitality & Legal Services",
-    description:
-      "Our approach to design lets users focus on their activities, so services are easy and dependable to use.",
-    image: sv
-  },
-];
 
 
 const accordionItemsUX = [
@@ -99,6 +84,43 @@ const ProductDesign = () => {
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+    const containerRef = useRef<HTMLDivElement>(null);
+  
+    useEffect(() => {
+      const ctx = gsap.context(() => {
+        const cardsEls = gsap.utils.toArray<HTMLElement>(".card-row");
+        const container = containerRef.current;
+        if (!container) return;
+  
+        cardsEls.forEach((card, i) => {
+          card.style.zIndex = `${i + 1}`;
+        });
+  
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: container,
+            start: "top top",
+            end: () => `+=${cardsEls.length * window.innerHeight}`,
+            scrub: true,
+            pin: container,
+            pinSpacing: true,
+          },
+        });
+  
+        cardsEls.forEach((card, i) => {
+          tl.fromTo(
+            card,
+            { y: window.innerHeight, opacity: 1 },
+            { y: 0, opacity: 1, duration: 0.8 },
+            i
+          );
+        });
+      }, containerRef);
+  
+      return () => ctx.revert();
+    }, []);
+  
+
 
   return (
     <>
@@ -114,15 +136,11 @@ const ProductDesign = () => {
                 
               </div>
               <div className="col-md-4">
-            <img src={y1} alt="" width={"500px"}/>
+            <img src={y1} alt="Brand Branding" className="img-fluid"/>
               </div>
             </div>
           </div>
         </section>
-
-
-
-
 
 
       <TrustedBySection />
@@ -273,8 +291,7 @@ const ProductDesign = () => {
       </div>
 
       {/* 4th section */}
-      <section className="performance-section">
-        {/* First Card */}
+      {/* <section className="performance-section">
         <div className="card-row purple-bg">
           <div className="card-text">
             <h2>Brands Built to Last</h2>
@@ -287,7 +304,6 @@ const ProductDesign = () => {
           </div>
         </div>
 
-        {/* Second Card */}
         <div className="card-row white-bg">
           <div className="card-text">
             <h2>Strategy That Speaks</h2>
@@ -300,7 +316,6 @@ const ProductDesign = () => {
           </div>
         </div>
 
-        {/* Third Card */}
         <div className="ecomsolutions-row white-bg">
           <div className="ecomsolutions-text">
             <h2>Design With Meaning</h2>
@@ -313,7 +328,7 @@ const ProductDesign = () => {
           </div>
         </div>
 
-        {/* Fourth Card */}
+
         <div className="clouddevops-section white-bg">
           <div className="clouddevops-content">
             <h2 className="clouddevops-heading">Social Presence With Power</h2>
@@ -326,7 +341,28 @@ const ProductDesign = () => {
           </div>
         </div>
       </section>
+       */}
       
+      <section
+        className="performance-section"
+        style={{ height: "100vh" }}
+        ref={containerRef}
+      >
+        <div className="card-container">
+          {cards.map((card, index) => (
+            <div key={index} className={`card-row ${card.color}`}>
+              <div className="card-text">
+                <h2>{card.title[0]}</h2>
+                <p>{card.items[0]}</p>
+              </div>
+              <div className="card-img">
+                <img src={card.image} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
 
       <Testimonial />
       <FaqSection />

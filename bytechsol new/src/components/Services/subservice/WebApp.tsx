@@ -15,7 +15,6 @@ import id from "../../../assets/images/ideation.png"
 import bl from "../../../assets/images/blacklp.png"
 import pl from "../../../assets/images/planlp.png"
 import fw from "../../../assets/images/findwk.png"
-import Practice from "../../PracticeCard";
 import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -38,7 +37,7 @@ const cards = [
       "Web Apps Built for Growth",
     ],
     items: [
-      "            Our lightning-fast, high-performing applications simplify workflows and increase productivity securely, scalably, and future-ready.",
+      "  Our lightning-fast, high-performing applications simplify workflows and increase productivity securely, scalably, and future-ready.",
     ],
   },
     {
@@ -417,54 +416,7 @@ const Webapp: React.FC = () => {
         </div>
       </section>
          {/* 3rd section--- */}
-      {/* <section className="performance-section">
-      <div className="card-row purple-bg">
-        <div className="card-text">
-          <h2>Smarter Web & Software</h2>
-          <p>
-            Create apps that are secure and scaling. We provide performance, reliability, and smooth user experiences, whether it is custom web solutions or enterprise systems.
-          </p>
-        </div>
-        <div className="card-img">
-          <img src={id} alt="70% Faster Loading Illustration" />
-        </div>
-      </div>
 
-      <div className="card-row white-bg">
-        <div className="card-text">
-          <h2>Web Apps Built for Growth</h2>
-          <p>
-            Our lightning-fast, high-performing applications simplify workflows and increase productivity securely, scalably, and future-ready.
-          </p>
-        </div>
-        <div className="card-img">
-          <img src={bl} alt="CMS Platforms Screenshot" />
-        </div>
-      </div>
-     <div className="ecomsolutions-row white-bg">
-  <div className="card-text">
-    <h2>Custom Software, Real Results</h2>
-    <p>
-      Turn ideas into powerful web and software solutions. We make our applications scale and change so that you stay ahead of the curve.
-    </p>
-  </div>
-  <div className="ecomsolutions-img">
-    <img src={pl} alt="E-Commerce Solutions Screenshot" />
-  </div>
-</div>
-     <div className="ecomsolutions-row white-bg" style={{backgroundColor: "#FF531A"}}>
-  <div className="card-text">
-    <h2>Web Solutions That Work for You</h2>
-    <p>
-      We build applications that are user-friendly, secure, and capable of providing the desired performance at any scale.
-    </p>
-  </div>
-  <div className="ecomsolutions-img">
-    <img src={fw} alt="E-Commerce Solutions Screenshot" />
-  </div>
-</div>
-    </section> */}
-            {/* <Practice/> */}
          
         <section className="performance-section" style={{  height: "100vh"}} ref={containerRef}>
             <div className="card-container">

@@ -205,6 +205,9 @@
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  border-radius: 75px 5px 75px 5px;
+-webkit-border-radius: 75px 5px 75px 5px;
+-moz-border-radius: 75px 5px 75px 5px;
 }
 .ecomsolutions-row {
   display: flex;

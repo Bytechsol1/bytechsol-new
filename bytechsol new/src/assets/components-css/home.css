@@ -953,7 +953,7 @@
 .scroll-section {
     padding: 50px 20px;
   background-color: #fff;
-  height: 120vh; 
+  height: 100vh; 
   font-family: "Guminert", sans-serif;
 }
 
@@ -1033,7 +1033,6 @@
   padding: 40px 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   color: #fff;
-  margin-bottom: 20px;
 }
 
 /* keep your color variations */

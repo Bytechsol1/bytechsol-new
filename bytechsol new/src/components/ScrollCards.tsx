@@ -89,15 +89,15 @@ const ScrollCards: React.FC = () => {
 
       return () => {
         ctx.revert();
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // 🔥 Kill triggers
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill()); 
       };
     }
   }, [isDesktop, location.pathname]);
 
   return (
-    <section className="scroll-section" ref={containerRef}>
-      <div className="container">
-        <div className="group5-content">
+    <>
+        <div className="container">
+          <div className="group5-content py-5">
           <div className="group5-text-block text-center text-md-start">
             <span className="group5-tag d-block mb-2">(Why Choose bytechsol)</span>
             <h2 className="group5-heading mb-3 fs-3 fw-bold">
@@ -109,7 +109,11 @@ const ScrollCards: React.FC = () => {
               become our mission.
             </p>
           </div>
-
+          </div>
+</div>
+<section className="scroll-section" ref={containerRef}>
+      <div className="container">
+        <div className="group5-content">
           <div className="card-container">
             {cards.map((card, index) => (
               <div key={index} className={`choose-card ${card.color}`}>
@@ -129,6 +133,7 @@ const ScrollCards: React.FC = () => {
         </div>
       </div>
     </section>
+            </>
   );
 };
 

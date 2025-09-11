@@ -274,9 +274,9 @@
   font-family: "Guminert", sans-serif;
     text-decoration: none;
 }
-/* .footer-links a{
+.footer-links a{
       text-decoration: none;
-} */
+}
 
 .footer-links li {
       text-decoration: none;
@@ -387,4 +387,7 @@
   background-color: #3366ff;
   color: #fff;
   border-color: #3366ff;
+}
+.flag-wave{
+clip-path: circle(44.3% at 50% 50%);
 }
