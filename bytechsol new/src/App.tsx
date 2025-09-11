@@ -44,21 +44,21 @@ function AppShell() {
       />
         <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home /> } />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/website-design-and-development" element={<Development />} />
-        <Route path="/ECommerceSolutions" element={<Webecom />} />
+        <Route path="/services/website-design-and-development" element={<Development />} />
+        <Route path="/services/E-Commerce-solutions" element={<Webecom />} />
         <Route path="/Careers" element={<Careers />} />
         <Route path="/Contact" element={<ContactUs />} />
-        <Route path="/seoservice" element={<FullStackExpertise />} />
-        <Route path="/BrandBuilding" element={<ProductDesign />} />
-        <Route path="/ERPservice" element={<SaasDesign />} />
-        <Route path="/Odoo-Services" element={<OdooServices />} />
+        <Route path="/services/seo-service" element={<FullStackExpertise />} />
+        <Route path="/services/brand-building" element={<ProductDesign />} />
+        <Route path="/services/ERP-service" element={<SaasDesign />} />
+        <Route path="/services/odoo-services" element={<OdooServices />} />
         <Route path="/Blog" element={<Blog />} />
-        <Route path="/CustomWeb" element={<CustomWeb />} />
-        <Route path="/WebApp" element={<WebApp />} />
-        <Route path="/Aiml" element={<Aiml />} />
+        <Route path="/services/custom-web" element={<CustomWeb />} />
+        <Route path="/services/web-app" element={<WebApp />} />
+        <Route path="/services/Ai-Ml" element={<Aiml />} />
 
       </Routes>
     </Suspense>
