@@ -174,7 +174,7 @@ const Webapp: React.FC = () => {
               Transform your business with our web app and software development services. We develop scalable, secure, and usable applications, such as bespoke web applications and enterprise software, and deliver new solutions that enhance performance, expansion, and easy user experiences.
             </p>
           </div>
-          <div className="dg02-products02-image w-25">
+          <div className="dg02-products02-image w-25 d-none d-lg-block">
             <img src={wa} alt="UI/UX Illustration" className="img-fluid" />
           </div>
         </div>

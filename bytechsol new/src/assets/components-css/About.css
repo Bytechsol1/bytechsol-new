@@ -467,50 +467,69 @@ line-height: 33px;
   color: #000;
 }
 
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
 
-/* ========== Mobile Responsive Adjustments ========== */
-@media screen and (max-width: 768px) {
-
-  .container1 p {
-    width: 100%;
-    font-size: 20px;
-    line-height: 36px;
+  /* Designed Section */
+  .Designed-section {
     height: auto;
+    flex-direction: column;
+    padding: 40px 20px;
     text-align: center;
+  }
+
+  
+
+  .content {
+    width: 100%;
+    max-width: 100%;
   }
 
   .head {
-    font-size: 40px;
-    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    text-align: justify;
+    color: #000;
+  }
+
+  .content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    color: #000;
   }
 
   .big {
-    width: 100%;
-    margin-left: 0;
+    position: relative;
+    height: auto;
+    margin-top: 20px;
   }
 
-  .bold-design p,
-  .trust-500 p,
-  .metrics-heading,
-  .vision-heading {
-    font-size: 28px;
-    line-height: 40px;
-    text-align: center;
+  /* Metrics Section */
+  .metrics-heading {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  .metrics-para1 {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    height: auto;
+    text-align: justify;
   }
 
   .metrics-grid {
     grid-template-columns: 1fr;
-    padding: 20px 10px;
+    grid-template-rows: auto;
+    gap: 20px;
   }
 
-  .card1,
-  .car2,
-  .cam3,
-  .css4,
-  .csm5 {
-    padding: 40px 20px;
-    max-width: 100%;
-    text-align: center;
+  .card1, .car2, .cam3, .css4, .csm5 {
+    grid-column: span 1;
+    grid-row: auto;
+    padding: 20px;
+    height: auto;
   }
 
   .metric-value1,
@@ -518,7 +537,7 @@ line-height: 33px;
   .metric-value3,
   .metric-value4,
   .metric-value5 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .metric-description1,
@@ -526,43 +545,89 @@ line-height: 33px;
   .metric-description3,
   .metric-description4,
   .metric-description5 {
-    font-size: 14px;
+    font-size: 0.9rem;
+  }
+
+  /* Vision Section */
+  .vision-section {
+    padding: 40px 20px;
+  }
+
+  .vision-heading {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
   }
 
   .vision-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
-    text-align: center;
+    gap: 20px;
   }
 
   .vision-image img {
     width: 100%;
     height: auto;
-    margin-left: 0;
+    margin: 0 auto;
   }
 
   .vision-text p {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
   }
 
   .vision-btn {
-    font-size: 13px;
-    padding: 8px 16px;
+    display: block;
+    margin: 20px auto 0;
   }
 
+  /* Belief Section */
   .belief-container h1 {
-    font-size: 32px;
+    font-size: 2rem;
     margin-left: 0;
     text-align: center;
   }
+.metric-number1{
+    font-size: 20px;
+  font-weight: 600;
+  color: #999;
+  margin-bottom: 150px;
+  margin-top: 5px;
+}
+.metric-number2{
+    font-size: 20px;
+  font-weight: 600;
+  color: #999;
+ margin-bottom: 150px;
+  margin-top: 5px;
+}
+.metric-number3{
+    font-size: 20px;
+  font-weight: 600;
+  color: #999;
+   margin-bottom: 150px;
+  margin-top: 5px;
+}
+.metric-number4{
+    font-size: 20px;
+  font-weight: 600;
+  color: #999;
+   margin-bottom: 150px;
+  margin-top: 5px;
+}
+.metric-number5 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #999;
+ margin-bottom: 150px;
+  margin-top: 5px;
+}
+}
 
-  .accordion-button {
-    font-size: 15px;
+@media (max-width: 576px) {
+.big {
+    position: relative;
+    height: 300px;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
-
-  .accordion-body {
-    font-size: 14px;
-  }
-
 }

@@ -249,11 +249,11 @@ const CustomSoftwareDev = () => {
           <div className="dg-products-container">
             {/* Left: Text */}
             <div className="dg-products-content">
-              <h1 className="dg-products-heading">
+              <h1 className="dg-products-heading text-start">
                 Unlock Business <br /> Potential with Tailored <br /> Odoo
                 Solutions
               </h1>
-              <p className="dg-products-description">
+              <p className="dg-products-description text-start">
                 Our Odoo services support businesses in streamlining workflows,
                 enhancing efficiency, and experiencing scalable growth with a
                 completely customized ERP platform. Since implementation and
@@ -263,7 +263,7 @@ const CustomSoftwareDev = () => {
             </div>
 
             {/* Right: Image */}
-            <div className="dg-odoo-image">
+            <div className="dg-odoo-image d-none d-md-block">
               <img src={cp} alt="UI/UX Illustration" />
             </div>
           </div>

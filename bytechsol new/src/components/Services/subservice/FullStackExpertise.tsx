@@ -103,17 +103,42 @@ const ContactUs = () => {
   <div className="dg-products-container">
     {/* Left: Text */}
     <div className="dg-products-content">
-      <h1 className="dg-products-heading">
-        Drive Traffic, Boost <br /> Rankings, Grow <br /> Smarter with SEO
-      </h1>
-      <p className="dg-products-description">
-        Increase your online presence through our customised SEO plans. Raising businesses to the top of the search engines, bringing the right leads on board, and expanding businesses in an environmentally friendly fashion are some of the ways we achieve this by using the techniques of keyword optimization, technical optimization, and content-driven optimization
-      </p>
-      <div className="dg-products-buttons">
-            <a href="#contact" className="dg-button dg-button-primary">
-              Start your website project today <span className="arrow">→</span>
-            </a>
-          </div>
+      <h1 className="dg-products-heading text-start">
+  Drive Traffic, Boost <br /> Rankings, Grow <br /> Smarter with SEO
+</h1>
+
+<p className="dg-products-description text-start">
+  Increase your online presence through our customised SEO plans. Raising businesses to the top of the search engines, bringing the right leads on board, and expanding businesses in an environmentally friendly fashion are some of the ways we achieve this by using the techniques of keyword optimization, technical optimization, and content-driven optimization
+</p>
+
+<div className="dg-products-buttons">
+  {/* Desktop button (default) */}
+  <a 
+    href="#contact" 
+    className="dg-button dg-button-primary d-none d-md-inline-block"
+  >
+    Start your website project today <span className="arrow">→</span>
+  </a>
+
+  {/* Mobile button (unique inline style) */}
+  <a 
+    href="#contact" 
+    className="d-inline-block d-md-none"
+    style={{
+      width: "93%",
+      padding: "12px 20px",
+      borderRadius: "50px",
+      backgroundColor: "#289ED8",
+      color: "#fff",
+      textDecoration: "none",
+    }}
+  >
+Start your website project today <span className="arrow">→</span>
+  </a>
+</div>
+
+    
+
     </div>
 
     {/* Right: Image */}

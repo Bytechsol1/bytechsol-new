@@ -91,10 +91,13 @@ const AimlSection = () => {
           <div className="dg-products-container">
             {/* Left: Text */}
             <div className="dg-products-content">
-              <h1 className="dg-products-heading">
-                AI & ML Solutions That <br /> Redefine Possibilities
-              </h1>
-              <p className="dg-products-description">
+              <h1 className="dg-products-heading text-start">
+  AI & ML Solutions That 
+  <br className="d-none d-md-block" /> {/* Show only on desktop */}
+  Redefine Possibilities
+</h1>
+
+              <p className="dg-products-description text-start">
                 Our AI and ML solutions will enable businesses to realize the
                 strength of data and intelligent automation. Predictive
                 analytics, natural language processing, or any other solution,

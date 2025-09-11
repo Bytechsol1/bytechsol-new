@@ -101,14 +101,24 @@
   --btn-hover: #2b3990;
   --btn-text: #ffffff;
 }
+.btn-scheme--contact {
+  --btn-bg: #000;
+  --btn-hover: #2b3990;
+  --btn-text: #ffffff;
+}
 .btn-scheme--blog {
   --btn-bg: #289ED8;
   --btn-hover: #2b3990;
   --btn-text: #ffffff;
 }
-.btn-scheme--custom{
-  --btn-bg: #289ED8;
+.btn-scheme--custom {
+  --btn-bg: #000;
   --btn-hover: #2b3990;
+  --btn-text: #ffffff;
+}
+.btn-scheme--web {
+  --btn-bg: #000;
+  --btn-hover: #289ED8;
   --btn-text: #ffffff;
 }
 .contact-btn i {

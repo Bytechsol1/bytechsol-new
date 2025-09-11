@@ -121,17 +121,44 @@ const SaasDesign = () => {
           <div className="dg-products-container">
             {/* Left: Text */}
             <div className="dg-products-content">
-              <h1 className="dg-products-heading">
+              <h1 className="dg-products-heading text-start">
                 ERP Solutions That <br /> Power Smarter <br /> Businesses
               </h1>
-              <p className="dg-products-description">
+              <p className="dg-products-description text-start">
                 Our ERP services can simplify the business processes by consolidating
         finance, human resources, supply chain, sales, etc., into one system.
         Our personalized ERP systems enable greater productivity, more effective
         collaboration, and smarter decision-making and growth-sustainable
         insights.
               </p>
+              <div className="dg-products-buttons">
+  {/* Desktop button (default) */}
+  <a 
+    href="#contact" 
+    className="dg-button dg-button-primary d-none d-md-inline-block"
+  >
+    Start your website project today <span className="arrow">→</span>
+  </a>
+
+  {/* Mobile button (unique inline style) */}
+  <a 
+    href="#contact" 
+    className="d-inline-block d-md-none"
+    style={{
+      width: "93%",
+      padding: "12px 20px",
+      borderRadius: "50px",
+      backgroundColor: "#289ED8",
+      color: "#fff",
+      textDecoration: "none",
+    }}
+  >
+Start your website project today <span className="arrow">→</span>
+  </a>
+</div>
             </div>
+
+            
 
             {/* Right: Image */}
             <div className="dg-products-image">

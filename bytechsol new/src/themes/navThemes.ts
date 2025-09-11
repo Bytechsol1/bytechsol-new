@@ -33,7 +33,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/price": {
+    "/services": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
@@ -44,6 +44,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     buttonSchemeClass: "btn-scheme--price",
     sticky: true,
   },
+
 
   "/website-design-and-development": {
     logoIconSrc: LogoWhite,
@@ -77,7 +78,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     variant: "dark",
     linkClassName: "text-white",
     buttonClassName: "",
-    buttonSchemeClass: "btn-scheme--brand",
+    buttonSchemeClass: "btn-scheme--contact",
     sticky: true,
   },
 
@@ -167,7 +168,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
   backgroundColor: "#2B3990",
   linkClassName: "text-white",
   buttonClassName: "",
-  buttonSchemeClass: "btn-scheme--custom",
+  buttonSchemeClass: "btn-scheme--web",
   sticky: true,
 },
 

@@ -52,7 +52,7 @@ const About: React.FC = () => {
   <img className="big" src={big} alt="Big Visual" />
 
   {/* Dark overlay */}
-  <div className="overlay"></div>
+  <div className="overlay d-none d-md-block"></div>
   <div className="content">
     <h1 className="head">
       We Don’t Just Build <span className="gradient">Software </span> <br />
@@ -173,8 +173,14 @@ const About: React.FC = () => {
               />
             </div>
             <div className="col-lg-6">
-              <h2 className="mb-4 fs-1 fw-bold">Website Maintenance <br /> & Support</h2>
-              <h3 className="fw-bold">  Your Tech Dream Team in Disguise</h3>
+              <h2 class="mb-4 fw-bold fs-3 fs-md-2 fs-lg-1 text-truncate w-100">
+  Website Maintenance & Support
+</h2>
+
+<h3 class="fw-bold fs-5 fs-md-4 text-truncate w-100">
+  Your Tech Dream Team in Disguise
+</h3>
+
               <p className="mb-4 fs-6">
                 Not your average agency. We embed into your mission, move at your speed, and solve problems like it’s our product on the line.
               </p>

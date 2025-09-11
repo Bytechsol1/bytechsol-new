@@ -135,9 +135,10 @@ const ProductDesign = () => {
                 <p className="text-white fs-5">We help businesses create powerful brand identities that build trust, recognition, and lasting customer connections. From strategy and visuals to messaging and digital presence, our brand building services ensure your business stands out and resonates with the right audience.</p>
                 
               </div>
-              <div className="col-md-4">
-            <img src={y1} alt="Brand Branding" className="img-fluid"/>
-              </div>
+              <div className="col-md-4 d-none d-md-block">
+  <img src={y1} alt="Brand Branding" className="img-fluid" />
+</div>
+
             </div>
           </div>
         </section>
@@ -290,59 +291,7 @@ const ProductDesign = () => {
         </a>
       </div>
 
-      {/* 4th section */}
-      {/* <section className="performance-section">
-        <div className="card-row purple-bg">
-          <div className="card-text">
-            <h2>Brands Built to Last</h2>
-            <p>
-              We develop brand names that gain social credibility, ignite awareness, and develop over time. We mix strategy, design, and messaging to make sure your brand connects and stands out.
-            </p>
-          </div>
-          <div className="card-img">
-            <img src={et} alt="70% Faster Loading Illustration" />
-          </div>
-        </div>
-
-        <div className="card-row white-bg">
-          <div className="card-text">
-            <h2>Strategy That Speaks</h2>
-            <p>
-              More than research - we find out what is special in your business and create a clear market image. The result? A brand with purpose, direction, and competitive strength.
-            </p>
-          </div>
-          <div className="card-img">
-            <img src={lw} alt="CMS Platforms Screenshot" />
-          </div>
-        </div>
-
-        <div className="ecomsolutions-row white-bg">
-          <div className="ecomsolutions-text">
-            <h2>Design With Meaning</h2>
-            <p>
-              Logos, colors, and pictures that are created to do more than just look good; they are created to tell your story, they are consistent throughout, and they leave a lasting impression.
-            </p>
-          </div>
-          <div className="ecomsolutions-img">
-            <img src={sp} alt="E-Commerce Solutions Screenshot" />
-          </div>
-        </div>
-
-
-        <div className="clouddevops-section white-bg">
-          <div className="clouddevops-content">
-            <h2 className="clouddevops-heading">Social Presence With Power</h2>
-            <p className="clouddevops-description">
-             We make your social channels brand ambassadors consistent, engaging, and real, building better relationships with each post or interaction.
-            </p>
-          </div>
-          <div className="clouddevops-image-wrapper">
-            <img src={ma} alt="Cloud and DevOps Integration Screenshot" className="clouddevops-image" />
-          </div>
-        </div>
-      </section>
-       */}
-      
+  
       <section
         className="performance-section"
         style={{ height: "100vh" }}
