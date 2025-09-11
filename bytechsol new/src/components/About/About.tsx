@@ -19,25 +19,25 @@ const accordionData = [
     id: "2",
     title: "Deep Tech Expertise, Zero Fluff",
     content:
-      "Whether it is a quick MVP release or an enterprise-level system, we design solutions at a startup pace that can scale along with your business.",
+      "Whether it's the development of AI/ML, SaaS platforms, or powerful ERP infrastructure, our skilled team comes up with solutions that address real-world business challenges.",
   },
   {
     id: "3",
     title: "Direct Access to Specialists",
     content:
-      "Whether it is a quick MVP release or an enterprise-level system, we design solutions at a startup pace that can scale along with your business.",
+      "No account managers or layers. You will be working alongside the lead developers, designers, and strategy partners who are in-depth with your product.",
   },
   {
     id: "4",
     title: "Smart Design, Real Results",
     content:
-      "Whether it is a quick MVP release or an enterprise-level system, we design solutions at a startup pace that can scale along with your business.",
+      "We combine beautiful interfaces and a smooth UX, so that every screen is user-friendly, conversion-friendly, and brand-supporting.",
   },
    {
     id: "5",
     title: "Flexible Partnership Models",
     content:
-      "Whether it is a quick MVP release or an enterprise-level system, we design solutions at a startup pace that can scale along with your business.",
+      "Need a full team, a tech extension, or one-off support? We provide a variety of engagement opportunities that fit your objectives and budget.",
   },
 ];
 

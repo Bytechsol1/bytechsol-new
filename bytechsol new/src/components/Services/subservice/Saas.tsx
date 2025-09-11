@@ -113,7 +113,7 @@ const SaasDesign = () => {
  <section
         className="dg-products-section"
         style={{
-          background: "linear-gradient(180deg, #0F0C29 10.43%, #302B63 52.97%, #0F0C29 100%)",
+          background: "#0F0C29",
           color: "#fff",
         }}
       >

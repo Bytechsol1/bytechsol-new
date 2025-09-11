@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Testimonial from "../../../shareable/testimonial";
-import "../../../assets/components-css/mobile.css";
+import "../../../assets/components-css/development.css";
 import cl from "../../../assets/images/cwimg.png"
 import FaqSection from "../../../shareable/faq";
 import TrustedBySection from "../../../shareable/trust500";
@@ -68,23 +68,31 @@ const CustomWeb: React.FC = () => {
       <section
         className="dg-products-section"
         style={{
-          background: "linear-gradient(180deg, #2B3990 0%, #0D112A 49.33%)",
+          background: "#2B3990 ",
           color: "#fff",
         }}
       >
         <div className="container d-flex align-items-center justify-content-between">
           <div className="dg-products-content">
-            <h1 className="dg-products-heading">
+            <h1 className="dg-products-heading fs-3">
               Custom Web Solutions <br /> Tailored to Your Business
             </h1>
-            <p className="dg-products-description">
-              Increase your brand with our custom web development solutions. We
-              create dynamic, SEO optimized websites — corporate sites, e-commerce,
-              and apps — blending design, usability, and performance to draw
-              traffic and convert.
-            </p>
+          <p className="dg-products-description mb-4">
+  Increase your brand with our custom web development solutions. We
+  create dynamic, SEO optimized websites — corporate sites, e-commerce,
+  and apps — blending design, usability, and performance to draw
+  traffic and convert.
+</p>
+
+{/* Button directly after text, visible only on mobile */}
+<div className="d-lg-none mt-3">
+  <a href="#contact" className="btn btn-primary px-4 py-2 rounded-pill">
+    Start your website project today
+  </a>
+</div>
+
           </div>
-          <div className="dg02-products02-image w-25">
+          <div className="dg02-products02-image w-25 d-none d-lg-block">
             <img src={cl} alt="UI/UX Illustration" className="img-fluid" />
           </div>
         </div>

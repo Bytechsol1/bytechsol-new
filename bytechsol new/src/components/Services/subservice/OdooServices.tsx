@@ -125,7 +125,7 @@ const CustomSoftwareDev = () => {
 <section
   className="dg-products-section"
   style={{
-    background: "linear-gradient(180deg, #0F2027 0%, #203A43 50%, #0F2027 100%)",
+    backgroundColor: "#203A43",
   }}
 >
   <div className="container">
@@ -145,7 +145,7 @@ const CustomSoftwareDev = () => {
     </div>
 
     {/* Right: Image */}
-    <div className="dg-products-image">
+    <div className="dg-odoo-image" >
       <img src={cp} alt="UI/UX Illustration" />
     </div>
   </div>

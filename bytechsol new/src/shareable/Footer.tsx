@@ -40,22 +40,21 @@ const Footer: React.FC = () => {
           <div className="col-md-2">
             <h6 className="footer-heading">Services</h6>
             <ul className="footer-links">
-             <Link to="/WebApp"><li>WebApp</li></Link>
-               <Link to="/Webecom"><li>web design</li></Link>
-               <Link to="/ProductDesign"><li>Product design</li></Link>
-              <Link to="/SaasDesign"><li>SaasDesign</li></Link> 
-              <li>Branding</li>
-              <Link to="/careers"><li>UX Audit</li></Link>
+             <Link to="/WebApp"><li>Web App</li></Link>
+               <Link to="/ECommerceSolutions"><li>E-Commerce Solutions</li></Link>
+               <Link to="/BrandBuilding"><li>Brand Building</li></Link>
+              <Link to="/ERPservice"><li>ERP Service</li></Link>
+              
             </ul>
           </div>
 
           {/* Additional Services */}
           <div className="col-md-2">
             <ul className="footer-links mt-md-4 pt-md-2">
-              <Link to="/mobile"><li>Mobile Page</li></Link>
-              <Link to="/FullStackExpertise"><li>Design system</li></Link> 
-              <Link to="/OdooServices"OdooServices><li>OdooServices</li></Link>
-              <Link to="/Aiml"><li>Aiml</li></Link>
+              <Link to="/website-design-and-development"><li>Website Design & Development</li></Link>
+              <Link to="/seoservice"><li>SEO Service</li></Link> 
+              <Link to="/Odoo-Services"><li>Odoo Services</li></Link>
+              <Link to="/Aiml"><li>AI / ML</li></Link>
               <Link to="/CustomWeb"><li>CustomWeb</li></Link>
             </ul>
           </div>

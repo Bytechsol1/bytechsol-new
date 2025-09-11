@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Testimonial from "../../../shareable/testimonial";
 import lig from "../../../assets/images/light.png";
-import "../../../assets/components-css/mobile.css";
+import "../../../assets/components-css/development.css";
 import FaqSection from "../../../shareable/faq";
 import ContactSection from "../../../shareable/contact";
 import TrustedBySection from "../../../shareable/trust500";
@@ -109,7 +109,7 @@ const industryData = [
 ];
 
 
-const Mobile: React.FC = () => {
+const Development: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
@@ -420,4 +420,4 @@ const Mobile: React.FC = () => {
   );
 };
 
-export default Mobile;
+export default Development;

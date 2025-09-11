@@ -1,7 +1,4 @@
 
-
-
-
 .dg-products-heading {
   font-size: 2.8rem;
   font-weight: 700;
@@ -21,10 +18,10 @@
   justify-content: center;
 }
 
-.dg-products-image img {
-  max-width: 480px;
-  width: 150%;
+.dg-odoo-image img {
+  width: 100%;
   height: auto;
+  margin-left: 60px;
 }
 
 /* Responsive for mobile */
@@ -54,6 +51,13 @@
   .webdesign-img1 {
     height: 450px;
   }
+  .dg-products-description {
+  font-size: 1rem;
+  width: 300px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  te
+}
 }
 
 /* Mobile */

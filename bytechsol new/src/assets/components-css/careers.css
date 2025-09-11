@@ -122,7 +122,7 @@
 .application-input,
 .application-textarea {
   flex: 1;
-  padding: 0.75rem;
+  padding: 1rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -181,6 +181,13 @@
     margin-left: 20px;
     margin-right: 20px;
   }
+  .careers-intro-text {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #000;
+  text-align: justify;
+}
 }
 
 /* Mobile */
@@ -193,10 +200,10 @@
     line-height: 32px;
     text-align: center;
   }
-  .career-parent {
+  /* .career-parent {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-  }
+  } */
   .form-row {
     flex-direction: column;
     margin: 0;
@@ -213,6 +220,52 @@
   .form-email a {
     margin-right: 0;
   }
+.career-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 8px;
+}
+    
+.career-div1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+}
+
+.career-div2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+}
+
+.career-div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 7;
+}
+
+.career-div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 7;
+}
+
+.career-div5 {
+    grid-column: span 4 / span 4;
+    grid-row: span 4 / span 4;
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+.application-form {
+    margin: 10px 20px;
+    gap: 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr; /* stack inputs */
+  }
 }
 
 /* Small Mobile */
@@ -221,17 +274,95 @@
     font-size: 28px;
   }
   .careers-header p {
-    font-size: 16px;
+    font-size: 22px;
     line-height: 26px;
   }
+@media (max-width: 576px) {
+  .join01 {
+    font-size: 0.9rem;   /* smaller font on mobile */
+    margin: 0.5rem;      /* tighter margin on mobile */
+    line-height: 1.4;    /* better readability */
+    text-align: center;  /* optional: center on mobile */
+  }
+}
+
+
   .careers-intro-title {
     font-size: 32px;
   }
-  .career-parent {
-    grid-template-columns: 1fr;
-  }
+  .career-parent img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+}
+
   .application-submit-btn {
     font-size: 14px;
     padding: 0.6rem 1rem;
   }
+  .career-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 8px;
+}
+    
+.career-div1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+}
+
+.career-div2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+}
+
+.career-div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 7;
+}
+
+.career-div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 7;
+}
+
+.career-div5 {
+    grid-column: span 4 / span 4;
+    grid-row: span 4 / span 4;
+    grid-column-start: 1;
+    grid-row-start: 3;  
+}
+}
+
+
+.upload-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  background: #fff;
+}
+
+.upload-box .application-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  height: 18px;
+}
+
+.upload-label {
+  cursor: pointer;
+  color: #000;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
 }

@@ -80,12 +80,13 @@ const HeroSection: React.FC = () => {
                     Book a strategy call{" "}
                     <i className="bi bi-arrow-up-right arrow-icon"></i>
                   </a>
-                  <a
-                    href="#custom-quote"
-                    className="btn btn-outline custom-cta"
-                  >
-                    Get a custom quote
-                  </a>
+                                  <a 
+                  href="#custom-quote" 
+                  className="btn btn-outline custom-cta d-none d-lg-inline-block"
+                >
+                  Get a custom quote
+                </a>
+
                 </div>
               </div>
               <div className="col-md-4">
@@ -94,67 +95,53 @@ const HeroSection: React.FC = () => {
                   and enterprises. From concept to code, We deliver results that
                   fuel growth.
                 </p>
-                <div className="founders-rating">
-                  <div className="d-flex align-items-center">
-                    <div className="founders-stack">
-                      <div
-                        className="tooltip-wrapper"
-                        style={{ left: 0, zIndex: 2 }}
-                      >
-                        <img
-                          src={Yasir}
-                          alt="Yasir Irfan"
-                          className="founder-img"
-                        />
-                        <div className="custom-tooltip">
-                          <strong>Yasir Irfan</strong>
-                          <br />
-                          Founder & CEO @BTS
-                          <br />
-                          <a
-                            href="https://www.linkedin.com/in/yasir-irfan-b988721b7/"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            LinkedIn
-                          </a>
-                        </div>
-                      </div>
-                      <div
-                        className="tooltip-wrapper"
-                        style={{ left: "22px", zIndex: 1 }}
-                      >
-                        <img
-                          src={Salik}
-                          alt="Salik Husnaq"
-                          className="founder-img"
-                        />
-                        <div className="custom-tooltip">
-                          <strong>Salik Husnaq</strong>
-                          <br />
-                          Co-Founder @Somewhere
-                          <br />
-                          <a
-                            href="https://www.linkedin.com/in/salik-husnaq/?originalSubdomain=pk"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            LinkedIn
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <span className="ms-3" style={{ lineHeight: "15px" }}>
-                      Trusted by forward-thinking founders and businesses
-                      worldwide.
-                    </span>
-                  </div>
-                  <img src={Clutch} alt="Clutch" className="clutch-logo" />
-                  <div className="review-meta">
-                    <span className="stars">★★★★★</span>
-                    <span className="reviews">11 REVIEWS</span>
-                  </div>
-                </div>
+                <div className="founders-rating d-none d-md-flex align-items-center">
+  <div className="d-flex align-items-center">
+    <div className="founders-stack">
+      <div className="tooltip-wrapper" style={{ left: 0, zIndex: 2 }}>
+        <img src={Yasir} alt="Yasir Irfan" className="founder-img" />
+        <div className="custom-tooltip">
+          <strong>Yasir Irfan</strong>
+          <br />
+          Founder & CEO @BTS
+          <br />
+          <a
+            href="https://www.linkedin.com/in/yasir-irfan-b988721b7/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <div className="tooltip-wrapper" style={{ left: "22px", zIndex: 1 }}>
+        <img src={Salik} alt="Salik Husnaq" className="founder-img" />
+        <div className="custom-tooltip">
+          <strong>Salik Husnaq</strong>
+          <br />
+          Co-Founder @Somewhere
+          <br />
+          <a
+            href="https://www.linkedin.com/in/salik-husnaq/?originalSubdomain=pk"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+    <span className="ms-3" style={{ lineHeight: "15px" }}>
+      Trusted by forward-thinking founders and businesses worldwide.
+    </span>
+  </div>
+  <img src={Clutch} alt="Clutch" className="clutch-logo" />
+  <div className="review-meta">
+    <span className="stars">★★★★★</span>
+    <span className="reviews">11 REVIEWS</span>
+  </div>
+</div>
+
               </div>
             </div>
           </div>
@@ -163,31 +150,35 @@ const HeroSection: React.FC = () => {
 
       {/* 2nd Section */}
       <section className="scrolling-images-section py-5">
-        <div className="scroll-row scroll-row-1">
-          <div className="scroll-track">
-            {[...topImages, ...topImages].map((img, index) => (
-              <img
-                key={`top-${index}`}
-                src={img}
-                alt={`Top image ${index}`}
-                className="scroll-image"
-              />
-            ))}
-          </div>
-        </div>
-        <div className="scroll-row scroll-row-2 mt-5">
-          <div className="scroll-track reverse">
-            {[...bottomImages, ...bottomImages].map((img, index) => (
-              <img
-                key={`bottom-${index}`}
-                src={img}
-                alt={`Bottom image ${index}`}
-                className="scroll-image"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+  {/* First row - always visible */}
+  <div className="scroll-row scroll-row-1">
+    <div className="scroll-track">
+      {[...topImages, ...topImages].map((img, index) => (
+        <img
+          key={`top-${index}`}
+          src={img}
+          alt={`Top image ${index}`}
+          className="scroll-image"
+        />
+      ))}
+    </div>
+  </div>
+
+  {/* Second row - hidden on mobile */}
+  <div className="scroll-row scroll-row-2 mt-5 d-none d-md-block">
+    <div className="scroll-track reverse">
+      {[...bottomImages, ...bottomImages].map((img, index) => (
+        <img
+          key={`bottom-${index}`}
+          src={img}
+          alt={`Bottom image ${index}`}
+          className="scroll-image"
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* 3rd Section */}
       <section className="who-we-are-section py-5">

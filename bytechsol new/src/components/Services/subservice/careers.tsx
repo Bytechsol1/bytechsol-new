@@ -6,6 +6,8 @@ import pi from "../../../assets/images/career-right1.png";
 import pp from "../../../assets/images/career-left2.png";
 import lg from "../../../assets/images/career-right2.png";
 import wk from "../../../assets/images/career-center.png";
+import { FiPaperclip } from "react-icons/fi";
+
 
 const Careers = () => {
   return (
@@ -19,7 +21,7 @@ const Careers = () => {
              Growth, Innovation, Collaboration, and a Culture That Inspires!
             </strong>
           </p>
-          <p className="jn1 fs-2 fw-light m-6">
+          <p className="join01 jn1 fs-2 fw-light  m-6">
             Join the Bytechsol team and help shape the future of technology with creativity, passion, and purpose.
           </p>
         </div>
@@ -88,29 +90,45 @@ const Careers = () => {
     </div>
 
     {/* Row 2 */}
-    <div className="form-row">
-      <input
-        className="application-input"
-        placeholder="Mobile no."
-        required
-        type="tel"
-        name="mobile"
-      />
-      <input
-        className="application-input"
-        placeholder="CV"
-        required
-        type="url"
-        name="cvLink"
-      />
-      <input
-        className="application-input"
-        placeholder="Profile picture"
-        required
-        type="url"
-        name="profilePictureLink"
-      />
-    </div>
+<div className="form-row">
+  {/* Mobile Number */}
+  <input
+    className="application-input"
+    placeholder="Mobile no."
+    required
+    type="tel"
+    name="mobile"
+  />
+
+  {/* CV Upload */}
+  <div className="upload-box">
+    <input
+      type="text"
+      className="application-input border-0"
+      placeholder="Upload CV"
+      readOnly
+    />
+    <label className="upload-label">
+      <input type="file" className="d-none" name="cvFile" />
+      <FiPaperclip size={18} />
+    </label>
+  </div>
+
+  {/* Profile Picture Upload */}
+  <div className="upload-box">
+    <input
+      type="text"
+      className="application-input border-0"
+      placeholder="Upload Profile Picture"
+      readOnly
+    />
+    <label className="upload-label">
+      <input type="file" className="d-none" name="profilePic" />
+      <FiPaperclip size={18} />
+    </label>
+  </div>
+</div>
+
 
     {/* Row 3 - Textareas */}
     <div className="form-row">
@@ -138,7 +156,7 @@ const Careers = () => {
       <div className="form-email">
         Prefer email?{" "}
         <br />
-        <a href="mailto:hello@wavespace.agency">hello@wavespace.agency</a>
+        <a href="mailto:hello@wavespace.agency">www.info@bytechsol.com</a>
       </div>
     </div>
   </form>

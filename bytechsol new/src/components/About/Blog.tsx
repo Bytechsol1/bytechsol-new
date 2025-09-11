@@ -69,16 +69,28 @@ const Blog = () => {
       {/* 1st Section */}
     <section className="csd-blog-section">
   <div className="container">
-  <p className="csd-blog-subtitle">All Blogs</p>
+ <p className="csd-blog-subtitle d-none d-md-block">All Blogs</p>
 
-  <div className="csd-blog-header d-flex align-items-center">
+
+  <div className="csd-blog-header d-none d-sm-flex align-items-center">
+  <i className="fa-solid fa-magnifying-glass me-2"></i>
+  <input 
+    type="text" 
+    className="csd-blog-search"
+    placeholder="Search..." 
+  />
+</div>
+
+
+  <h1 className="csd-blog-title">bytechsol Blog</h1>
+
+  <div className="csd-blog-header d-flex align-items-cente me-5 w-50 d-block d-md-none">
     <i className="fa-solid fa-magnifying-glass me-2"></i>
     <input type="text" 
     className="csd-blog-search"
     placeholder="Search..." />
   </div>
 
-  <h1 className="csd-blog-title">bytechsol Blog</h1>
 
   <p className="csd-blog-description fs-1">
     Top 15 Banking Apps with <br /> Exceptional UX Design <br /> (2025)

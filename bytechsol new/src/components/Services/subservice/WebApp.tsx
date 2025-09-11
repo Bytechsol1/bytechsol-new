@@ -162,7 +162,7 @@ const Webapp: React.FC = () => {
       <section
         className="dg-products-section"
         style={{
-          background: "linear-gradient(180deg, #289DD8 0%, #155372 100%)",
+          background: "#289DD8 ",
           color: "#fff",
         }}
       >

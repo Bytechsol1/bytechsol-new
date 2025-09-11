@@ -22,7 +22,7 @@
     padding: 0.5rem 1rem;
     font-size: 1rem;
     border-radius: 50px;
-    border: 1px solid rgba(110, 20, 207, 0.4);
+    border: 1px solid #fff;
     outline: none;
     width: 250px;
     color: #fff;
@@ -60,17 +60,18 @@
   .csd-blog-search {
     width: 200px;
     margin-right: 0;
+    
   }
 
   .csd-blog-title {
     font-size: 2.5rem;
-    text-align: center;
+    /* text-align: center; */
     margin: 0 0 4rem;
   }
 
   .csd-blog-description {
     font-size: 1.8rem;
-    text-align: center;
+    /* text-align: center; */
   }
 }
 
@@ -106,7 +107,7 @@
   }
 
   .csd-blog-title {
-    font-size: 1.6rem;
+    font-size: 2.6rem;
     margin-bottom: 2rem;
   }
 
@@ -197,4 +198,4 @@
   .blog-grid {
     grid-template-columns: 1fr; 
 }
-
+}

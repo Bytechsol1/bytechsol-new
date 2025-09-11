@@ -72,14 +72,9 @@ const Navbar: React.FC<NavbarProps> = ({
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className={`nav-link ${linkClassName}`} href="#case-studies">
-                  Case studies
+                <a className={`nav-link ${linkClassName}`} href="/services">
+                  Services
                 </a>
-              </li>
-              <li className="nav-item">
-                <Link className={`nav-link ${linkClassName}`} to="/price">
-                  Pricing
-                </Link>
               </li>
               <li className="nav-item">
                 <Link className={`nav-link ${linkClassName}`} to="/about">
@@ -89,6 +84,11 @@ const Navbar: React.FC<NavbarProps> = ({
               <li className="nav-item">
                 <Link className={`nav-link ${linkClassName}`} to="/blog">
                   Blog
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${linkClassName}`} to="/careers">
+                  Careers
                 </Link>
               </li>
             </ul>

@@ -59,7 +59,7 @@ const ContactUs = () => {
           <WorldMap/>
           <Testimonial/>
     <FaqSection/>
-    <ContactSection/>
+   
     </>
   );
 };

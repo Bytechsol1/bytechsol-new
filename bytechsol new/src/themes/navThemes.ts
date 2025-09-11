@@ -4,6 +4,7 @@ import LogoText from "../assets/images/Logotext.svg";
 import LogoWhite from "../assets/images/lg-white.png";
 import LogoTextWhite from "../assets/images/lg-white-text.png";
 import w1 from "../assets/images/wecom.jpg"
+import wa from "../assets/images/webapp.svg"
 
 export type NavTheme = NavbarProps & {
   buttonSchemeClass?: string;
@@ -44,7 +45,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/mobile": {
+  "/website-design-and-development": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
@@ -80,11 +81,11 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/fullstackexpertise": {
+  "/seoservice": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
-    backgroundColor: "#00053F",
+    backgroundColor: "#004E92",
     variant: "dark",
     linkClassName: "text-white",
     buttonClassName: "",
@@ -92,7 +93,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/productdesign": {
+  "/brandbuilding": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
@@ -104,11 +105,11 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/saasdesign": {
+  "/erpservice": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
-    backgroundColor: "#000",
+    backgroundColor: "#0F0C29",
     variant: "dark",
     linkClassName: "text-white",
     buttonClassName: "",
@@ -116,7 +117,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/odooservices": {
+  "/odoo-services": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
@@ -133,6 +134,38 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
   navClassName: "",
   backgroundImage: w1, // ✅ imported image
   linkClassName: "text-black",
+  buttonClassName: "",
+  buttonSchemeClass: "btn-scheme--custom",
+  sticky: true,
+},
+ "/webapp": {
+  logoIconSrc: LogoWhite,
+  logoTextSrc: LogoTextWhite,
+  navClassName: "",
+  backgroundColor: "#289DD8",
+  backgroundImage: wa, // ✅ imported image
+  linkClassName: "text-white",
+  buttonClassName: "",
+  buttonSchemeClass: "btn-scheme--custom",
+  sticky: true,
+},
+ "/aiml": {
+  logoIconSrc: LogoWhite,
+  logoTextSrc: LogoTextWhite,
+  navClassName: "",
+  backgroundColor: "#575E7C",
+  linkClassName: "text-white",
+  buttonClassName: "",
+  buttonSchemeClass: "btn-scheme--custom",
+  sticky: true,
+},
+
+ "/customweb": {
+  logoIconSrc: LogoWhite,
+  logoTextSrc: LogoTextWhite,
+  navClassName: "",
+  backgroundColor: "#2B3990",
+  linkClassName: "text-white",
   buttonClassName: "",
   buttonSchemeClass: "btn-scheme--custom",
   sticky: true,

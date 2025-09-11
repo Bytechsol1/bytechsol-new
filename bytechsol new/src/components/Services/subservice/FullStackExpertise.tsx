@@ -96,7 +96,7 @@ const ContactUs = () => {
 <section
   className="dg-products-section"
   style={{
-    background: "linear-gradient(180deg, #000428 0%, #004E92 50%, #000428 100%  )",
+    background: "#004E92",
   }}
 >
   <div className="container">
