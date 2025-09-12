@@ -148,6 +148,7 @@ const ProductDesign = () => {
 
       {/* Accordion Section */}
       <section className="webdesign-section1 container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -188,11 +189,13 @@ const ProductDesign = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
 
       {/* 2nd accordion */}
        <section className="webdesign-section container-fluid py-5">
+        <div className="container">
       <div className="row align-items-center">
         {/* Left Content */}
         <div className="col-lg-6 px-5">
@@ -236,9 +239,11 @@ const ProductDesign = () => {
           />
         </div>
       </div>
+      </div>
     </section>
      {/* 2nd accordion */}
       <section className="webdesign-section1 container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -278,6 +283,7 @@ const ProductDesign = () => {
               ))}
             </div>
           </div>
+        </div>
         </div>
       </section>
 

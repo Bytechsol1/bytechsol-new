@@ -118,6 +118,7 @@ const AimlSection = () => {
 
       {/* 1st Card */}
       <section className="webdesign-section container-fluid py-5">
+       <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
@@ -165,10 +166,12 @@ const AimlSection = () => {
             />
           </div>
         </div>
+        </div>
       </section>
 
       {/* 2nd Card */}
       <section className="webdesign-section container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
@@ -215,6 +218,7 @@ const AimlSection = () => {
               className="webdesign-img img-fluid"
             />
           </div>
+        </div>
         </div>
       </section>
 

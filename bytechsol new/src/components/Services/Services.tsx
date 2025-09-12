@@ -319,6 +319,7 @@ const Services: React.FC = () => {
 
       {/* 1st section */}
       <section className="webdesign-section1 container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -370,10 +371,12 @@ const Services: React.FC = () => {
               ))}
             </div>
           </div>
+          </div>
         </div>
       </section>
       {/* // ......................................2nd */}
       <section className="webdesign-section container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
@@ -424,10 +427,12 @@ const Services: React.FC = () => {
             />
           </div>
         </div>
+        </div>
       </section>
 
       {/* 3rd section------------------- */}
       <section className="webdesign-section1 container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -480,10 +485,12 @@ const Services: React.FC = () => {
               ))}
             </div>
           </div>
+          </div>
         </div>
       </section>
       {/* 4th section----- */}
       <section className="webdesign-section container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
@@ -534,11 +541,13 @@ const Services: React.FC = () => {
               className="webdesign-img img-fluid"
             />
           </div>
+          </div>
         </div>
       </section>
 
       {/* 5th section */}
       <section className="webdesign-section1 container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -589,10 +598,12 @@ const Services: React.FC = () => {
               ))}
             </div>
           </div>
+          </div>
         </div>
       </section>
       {/* 6th section----- */}
       <section className="webdesign-section container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
@@ -643,10 +654,12 @@ const Services: React.FC = () => {
               className="webdesign-img img-fluid"
             />
           </div>
+          </div>
         </div>
       </section>
       {/* 7th section */}
       <section className="webdesign-section1 container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -697,10 +710,12 @@ const Services: React.FC = () => {
               ))}
             </div>
           </div>
+          </div>
         </div>
       </section>
       {/* 8th section----- */}
       <section className="webdesign-section container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
@@ -750,10 +765,12 @@ const Services: React.FC = () => {
               className="webdesign-img img-fluid"
             />
           </div>
+          </div>
         </div>
       </section>
       {/* 9th section */}
       <section className="webdesign-section1 container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -804,10 +821,12 @@ const Services: React.FC = () => {
               ))}
             </div>
           </div>
+          </div>
         </div>
       </section>
       {/* 10th section */}
       <section className="industry-section">
+        <div className="container">
         <div className="industry-header">
           <h2 className="industry-title">
             Turning Your Ideas Into Something Real
@@ -819,6 +838,7 @@ const Services: React.FC = () => {
             applications… we help you create your vision in a way that <br />
             feels natural to you and memorable to your users.
           </p>
+        </div>
         </div>
 
         <div className="industry-flex-grid">

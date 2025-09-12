@@ -104,6 +104,7 @@ const Webecom: React.FC = () => {
 
       {/* 1st card */}
       <section className="webdesign-section1 container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
             <img src={es} alt="CMS Development" className="webdesign-img1 img-fluid" />
@@ -141,9 +142,11 @@ const Webecom: React.FC = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
                {/* 2nd card------- */}
     <section className="webdesign-section container-fluid py-5">
+      <div className="container">
       <div className="row align-items-center">
         {/* Left Content */}
         <div className="col-lg-6 px-5">
@@ -187,10 +190,12 @@ const Webecom: React.FC = () => {
           />
         </div>
       </div>
+      </div>
     </section>
 
   {/* 3rd card --------------*/}
       <section className="webdesign-section1 container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -238,9 +243,11 @@ const Webecom: React.FC = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
         {/* 4th card----- */}
     <section className="webdesign-section container-fluid py-5">
+      <div className="container">
       <div className="row align-items-center">
         {/* Left Content */}
         <div className="col-lg-6 px-5">
@@ -284,9 +291,11 @@ const Webecom: React.FC = () => {
           />
         </div>
       </div>
+      </div>
     </section>
     {/* 5th card --------------*/}
       <section className="webdesign-section1 container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -333,6 +342,7 @@ const Webecom: React.FC = () => {
               ))}
             </div>
           </div>
+        </div>
         </div>
       </section>
 

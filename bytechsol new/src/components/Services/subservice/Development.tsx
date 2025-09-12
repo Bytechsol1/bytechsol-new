@@ -204,6 +204,7 @@ const Development: React.FC = () => {
 
       {/* 2nd section --------------*/}
       <section className="webdesign-section1 container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -255,9 +256,11 @@ const Development: React.FC = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
       {/* 3rd section----- */}
       <section className="webdesign-section container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
@@ -310,10 +313,12 @@ const Development: React.FC = () => {
             />
           </div>
         </div>
+        </div>
       </section>
 
       {/* 4th section --------------*/}
       <section className="webdesign-section1 container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -365,9 +370,11 @@ const Development: React.FC = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
       {/* 4th section----- */}
       <section className="webdesign-section container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
@@ -419,9 +426,11 @@ const Development: React.FC = () => {
             />
           </div>
         </div>
+        </div>
       </section>
       {/* 5th section --------------*/}
       <section className="webdesign-section1 container-fluid py-5">
+        <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -473,6 +482,7 @@ const Development: React.FC = () => {
               ))}
             </div>
           </div>
+        </div>
         </div>
       </section>
       {/* 10th section */}
