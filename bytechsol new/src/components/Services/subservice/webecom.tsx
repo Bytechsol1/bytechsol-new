@@ -103,6 +103,7 @@ const Webecom: React.FC = () => {
       <TrustedBySection />
 
       {/* 1st card */}
+      <div className="container">
       <section className="webdesign-section1 container-fluid py-5">
         <div className="container">
         <div className="row align-items-center">
@@ -345,7 +346,7 @@ const Webecom: React.FC = () => {
         </div>
         </div>
       </section>
-
+</div>
 
       <section className="group7-container">
         <img className="group7-bg" src={bgImage} alt="Background" />

@@ -1,5 +1,8 @@
+import React, { useState } from "react";
 import AnimatedText from "../shareable/AnimatedText";
 import "../assets/components-css/home.css";
+
+// Images
 import Clutch from "../assets/images/clutch.png";
 import Yasir from "../assets/images/yasir.jpg";
 import Salik from "../assets/images/salik.png";
@@ -26,7 +29,7 @@ import p3 from "../assets/images/ppg3.png";
 import a2 from "../assets/images/awar2.png";
 import f1 from "../assets/images/fund1.png";
 import g4 from "../assets/images/grow4.png";
-import React, { useState } from "react";
+
 import ScrollCards from "./ScrollCards";
 
 const awards = [
@@ -51,7 +54,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      {/* 1st Section */}
+      {/* Hero Section */}
       <main>
         <section className="hero-section">
           <div className="container">
@@ -77,7 +80,7 @@ const Home: React.FC = () => {
               <div className="col-md-4">
                 <p>
                   We craft scalable, user-focused digital solutions for startups
-                  and enterprises. From concept to code, We deliver results that
+                  and enterprises. From concept to code, we deliver results that
                   fuel growth.
                 </p>
                 <div className="founders-rating d-none d-md-flex align-items-center">
@@ -147,7 +150,7 @@ const Home: React.FC = () => {
         </section>
       </main>
 
-      {/* 2nd Section */}
+      {/* Scrolling Images */}
       <section className="scrolling-images-section py-5">
         {/* First row - always visible */}
         <div className="scroll-row scroll-row-1">
@@ -193,7 +196,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 4th Section */}
+      {/* Services */}
       <section className="services-section py-5 mb-5">
         <div className="container">
           <p className="ser-subheading text-center text-md-start">(SERVICES)</p>
@@ -219,7 +222,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 5th Section */}
+      {/* Awards */}
       <section
         className="awards-section"
         style={{ backgroundImage: `url(${AwardBg})` }}
@@ -233,11 +236,7 @@ const Home: React.FC = () => {
           <div className="awards-grid">
             {awards.map((item, idx) => (
               <div className="award-card" key={idx}>
-                <img
-                  src={item.img}
-                  alt={`award-${idx}`}
-                  className="award-img"
-                />
+                <img src={item.img} alt={`award-${idx}`} className="award-img" />
                 <p className="award-text">{item.text}</p>
               </div>
             ))}
@@ -245,41 +244,40 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 6th Section */}
+      {/* Scroll Cards */}
       <ScrollCards />
 
-      {/* 7th Section */}
+      {/* Growth Section */}
       <section className="group7-container">
         <img className="group7-bg" src={bgImage} alt="Background" />
         <div className="group7-content">
           <h2 className="group7-main-title">Your Growth, Our Priority</h2>
           <div className="group7-columns">
-            {[...Array(3)].map((_, idx) => (
+            {[
+              {
+                title: "Focused on What Matters",
+                desc: "We are not a company that just creates websites, but creates solutions to help your business flourish and attract customers to achieve real results.",
+              },
+              {
+                title: "A Team by Your Side",
+                desc: "Our engineers, designers, and strategists collaborate closely with you. We take care and commitment to everything and do it in-house (we never outsource anything).",
+              },
+              {
+                title: "Quality You Can Rely On",
+                desc: "We put our heart into every project, making sure your website is secure, fast, and built to support your success long-term.",
+              },
+            ].map((col, idx) => (
               <div className="group7-column" key={idx}>
                 <img src={icon} alt="Icon" className="group7-icon" />
-                <h3 className="group7-heading">
-                  {
-                    [
-                      "Focused on What Matters",
-                      "A Team by Your Side",
-                      "Quality You Can Rely On",
-                    ][idx]
-                  }
-                </h3>
-                <p className="group7-description">
-                  {
-                    [
-                      "We are not a company that just creates websites, but creates solutions to help your business flourish and attract customers to achieve real results.",
-                      "Our engineers, designers, and strategists collaborate closely with you. We take care and commitment to everything and do it in-house (we never outsource anything).",
-                      "We put our heart into every project, making sure your website is secure, fast, and built to support your success long-term.",
-                    ][idx]
-                  }
-                </p>
+                <h3 className="group7-heading">{col.title}</h3>
+                <p className="group7-description">{col.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Shared Sections */}
       <Testimonial />
       <FaqSection />
       <ContactSection />
