@@ -121,7 +121,6 @@
   }
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .csd-blog-header {
     justify-content: flex-start;
@@ -131,7 +130,6 @@
     width: 100%;
   }
 }
-/* ✅ Mobile Responsive */
 @media (max-width: 768px) {
   .csd-blog-container {
     flex-direction: column;
@@ -139,7 +137,7 @@
   }
 
   .csd-blog-content {
-    text-align: left; /* or center if you prefer */
+    text-align: left; 
   }
 
   .dg-products-image {
@@ -147,7 +145,6 @@
   }
 }
 
-/* ----------------------------------------- */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 

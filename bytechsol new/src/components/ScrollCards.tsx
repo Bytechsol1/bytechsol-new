@@ -103,11 +103,7 @@ const ScrollCards: React.FC = () => {
             <h2 className="group5-heading mb-3 fs-3 fw-bold">
               Built by Humans. Backed by Tech. Driven by Purpose.
             </h2>
-            <p className="group5-para">
-              We’re not just here to code — we’re here to understand your vision, 
-              solve real problems, and grow with you. At Bytechsol, your goals 
-              become our mission.
-            </p>
+           <p className="group5-para "> We’re not just here to code — we’re here to understand your vision, solve real problems, and grow with you. At Bytechsol, your goals become our mission. </p>
           </div>
           </div>
 </div>

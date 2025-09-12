@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../../assets/components-css/webecom.css";
 import { FiChevronDown } from "react-icons/fi";
-import w1 from "../../../assets/images/wecom.jpg";
+// import w1 from "../../../assets/images/wecom.jpg";
 import TrustedBySection from "../../../shareable/trust500";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
@@ -64,24 +64,38 @@ const Webecom: React.FC = () => {
 
   return (
     <>
-      {/* 1st section */}
-     <section
-      className="ecommerce-section"
-      style={{
-        backgroundImage: `url(${w1})`,
-      }}
-    >
-      <div className="ecommerce-overlay">
-        <div className="ecommerce-content">
-          <h1 className="ecommerce-title">
-            Next-Level E-Commerce <br /> Solutions for Your Digital Store
-          </h1>
-          <p className="ecommerce-desc">
-            Our e-commerce solutions assist companies in creating scalable,
+    {/* 1st Section */}
+        <section className="dg-products-section py-5" style={{ backgroundColor: "#1C3134" }}>
+      <div className="container">
+        <div className="row align-items-center">
+          
+          {/* Left content */}
+          <div className="col-lg-7">
+            <div className="dg-products-content text-start">
+              <h1 className="dg-products-heading">
+                Next-Level E-Commerce Solutions for Your Digital Store
+              </h1>
+              <p className="dg-products-description">
+                Our e-commerce solutions assist companies in creating scalable,
             secure, and easy-to-use online stores that drive sales. We design
             custom websites, integrate payment gateways, and develop advanced
             shopping carts to expand your online store and boost revenue.
-          </p>
+              </p>
+              <div className="dg-products-buttons">
+                <a href="#contact" className="dg-button dg-button-primary">
+                  Start your website project today <span className="arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+    
+          {/* Right image */}
+          {/* <div className="col-lg-5 text-center">
+            <div className="dg-products-image">
+              <img src={lig} alt="UI/UX Illustration" className="img-fluid" />
+            </div>
+          </div> */}
+    
         </div>
       </div>
     </section>

@@ -11,9 +11,8 @@
   font-style: normal;
 }
 
-/* ---------------------------------- */
 .dg-products-section {
-  background-color: #2B3990; 
+  background-color: #2b3990;
   color: #fff;
   padding: 100px 40px;
   font-family: "Guminert", sans-serif;
@@ -41,7 +40,7 @@
 }
 
 .dg-products-heading .highlight {
-  color: #00d4ff; /* Optional: different highlight color for "Vision" */
+  color: #00d4ff;
 }
 
 .dg-products-description {
@@ -49,7 +48,6 @@
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 40px;
-  /* max-width: 750px; */
   width: 700px;
 }
 
@@ -101,10 +99,9 @@
   height: auto;
 }
 
-/* ----------------------------------- */
 .dg-products-section {
   padding: 80px 20px;
-  background-color: #2B3990;
+  background-color: #2b3990;
   color: #fff;
 }
 
@@ -128,19 +125,14 @@
 }
 
 .dg-products-image img {
-    max-width: 100%;
-    height: 450px;
-    object-fit: contain;
-    /* margin-left: 150px; */
-    margin-top: -50px;
+  max-width: 100%;
+  height: 450px;
+  object-fit: contain;
+  margin-top: -50px;
 }
 
-
-
-
 .brand-vision-image {
-  /* width: 100px; */
-  max-width: 600px; 
+  max-width: 600px;
   margin: 0 auto;
   text-align: center;
   padding: 20px;
@@ -150,11 +142,11 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .why-bts-section {
-  background-color: #fdfdfd; 
+  background-color: #fdfdfd;
 }
 
 .why-bts-heading {
@@ -180,7 +172,7 @@
   color: #444;
 }
 .why-bts-section {
-  background-color: #fdfdfd; /* or custom background */
+  background-color: #fdfdfd;
 }
 
 .why-bts-image {
@@ -212,7 +204,7 @@
   color: #444;
 }
 .why-bts-section {
-  background-color: #fdfdfd; 
+  background-color: #fdfdfd;
 }
 
 .why-bts-image {
@@ -244,15 +236,12 @@
   color: #444;
 }
 
-
-/* ------------------new--------- */
 .webdesign-section {
   background-color: #ffffff;
   font-family: "Guminert", sans-serif;
   padding: 60px 20px;
 }
 
-/* Main heading */
 .webdesign-heading {
   font-size: 44px;
   font-weight: bold;
@@ -260,7 +249,6 @@
   margin-bottom: 20px;
 }
 
-/* Paragraph below heading */
 .webdesign-desc {
   font-size: 16px;
   color: #444;
@@ -268,12 +256,10 @@
   max-width: 550px;
 }
 
-/* Accordion container */
 .webdesign-accordion {
   margin-top: 30px;
 }
 
-/* Accordion item */
 .webdesign-accordion-item {
   border-bottom: 1px solid #ddd;
   padding: 16px 0;
@@ -281,7 +267,6 @@
   transition: background-color 0.3s ease;
 }
 
-/* Header row */
 .webdesign-accordion-header {
   display: flex;
   align-items: center;
@@ -289,7 +274,6 @@
   gap: 12px;
 }
 
-/* Left number */
 .webdesign-accordion-index {
   font-weight: 500;
   font-size: 14px;
@@ -298,7 +282,6 @@
   flex-shrink: 0;
 }
 
-/* Title */
 .webdesign-accordion-title {
   flex-grow: 1;
   font-size: 16px;
@@ -306,7 +289,6 @@
   font-weight: 500;
 }
 
-/* Icon */
 .webdesign-icon {
   font-size: 20px;
   color: #111;
@@ -317,7 +299,6 @@
   transform: rotate(180deg);
 }
 
-/* Answer */
 .webdesign-accordion-desc {
   margin-top: 10px;
   font-size: 15px;
@@ -326,14 +307,12 @@
   padding-left: 40px;
 }
 
-/* Image column */
 .webdesign-img {
   width: 660px;
   max-height: 660px;
   object-fit: cover;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .webdesign-heading {
     font-size: 30px;
@@ -352,15 +331,13 @@
     padding-left: 24px;
   }
 }
-/* ---------------2nd section */
-/* Section Wrapper */
+
 .webdesign-section1 {
   background-color: #ffffff;
   font-family: "Guminert", sans-serif;
   padding: 60px 20px;
 }
 
-/* Heading */
 .webdesign-heading1 {
   font-size: 44px;
   font-weight: bold;
@@ -368,15 +345,12 @@
   margin-bottom: 20px;
 }
 
-/* Description */
 .webdesign-desc1 {
   font-size: 16px;
   color: #444;
   line-height: 1.7;
   max-width: 550px;
 }
-
-/* Accordion */
 .webdesign-accordion1 {
   margin-top: 30px;
 }
@@ -428,15 +402,12 @@
   padding-left: 40px;
 }
 
-/* Image styling (left side now) */
 .webdesign-img1 {
   width: 660px;
   height: 660px;
   object-fit: cover;
-
 }
 
-/* Responsive layout */
 @media (max-width: 992px) {
   .webdesign-section1 .row {
     flex-direction: column;
@@ -466,7 +437,6 @@
   }
 }
 
-/* 6th Section------------ */
 .industry-section {
   padding: 60px 20px;
   font-family: "Guminert", sans-serif;
@@ -489,7 +459,6 @@
   line-height: 1.2;
   font-weight: 700;
   margin: 0;
-  /* max-width: 600px; */
 }
 
 .industry-button {
@@ -505,7 +474,6 @@
   transition: background 0.3s;
 }
 
-/* Tablet View (max-width: 1024px) */
 @media (max-width: 1024px) {
   .industry-title {
     font-size: 38px;
@@ -518,7 +486,6 @@
   }
 }
 
-/* Mobile View (max-width: 768px) */
 @media (max-width: 768px) {
   .industry-title {
     font-size: 28px;
@@ -535,7 +502,6 @@
   }
 }
 
-
 .industry-button span {
   margin-left: 8px;
   font-size: 18px;
@@ -544,15 +510,6 @@
 .industry-button:hover {
   background-color: #2084b2;
 }
-
-/* MASONRY GRID */
--------------------------
-
-
-
-
-
-
 
 .industry-flex-grid {
   display: flex;
@@ -564,7 +521,7 @@
 }
 
 .industry-flex-card {
-  flex: 1 1 calc(33.33% - 24px); /* 3 cards per row with gap */
+  flex: 1 1 calc(33.33% - 24px);
   max-width: calc(33.33% - 24px);
   background-size: cover;
   background-position: center;
@@ -574,10 +531,9 @@
   transition: transform 0.3s;
 }
 
-/* Adjust for medium screens */
 @media (max-width: 1200px) {
   .industry-flex-card {
-    flex: 1 1 calc(50% - 24px); /* 2 cards per row */
+    flex: 1 1 calc(50% - 24px);
     max-width: calc(50% - 24px);
   }
 
@@ -586,7 +542,6 @@
   }
 }
 
-/* Stack on small/mobile screens */
 @media (max-width: 768px) {
   .industry-flex-card {
     flex: 1 1 100%;
@@ -599,7 +554,6 @@
   }
 }
 
-/* Flex Grid Instead of CSS Grid */
 .industry-flex-grid {
   display: flex;
   flex-wrap: wrap;
@@ -607,7 +561,6 @@
   justify-content: center;
 }
 
-/* Shared card styling */
 .industry-flex-card {
   position: relative;
   background-size: cover;
@@ -620,7 +573,6 @@
   transition: transform 0.3s;
 }
 
-/* Overlay */
 .industry-masonry-overlay {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
   padding: 20px;
@@ -639,7 +591,6 @@
   line-height: 1.5;
 }
 
-/* Specific sizes per card */
 .card-0 {
   width: 436px;
   height: 453px;
@@ -669,27 +620,24 @@
 .card-5 {
   width: 436px;
   height: 651px;
-  margin-top: -80px;  
+  margin-top: -80px;
 }
 
-/* Hover */
 .industry-flex-card:hover {
   transform: scale(1.02);
 }
 
-/* Responsive – Tablet */
 @media (max-width: 1024px) {
   .industry-flex-card {
-    width: 48%; /* Two cards per row */
+    width: 48%;
     height: auto;
     margin-top: 0 !important;
   }
 }
 
-/* Responsive – Mobile */
 @media (max-width: 768px) {
   .industry-flex-card {
-    width: 100%; /* One card per row */
+    width: 100%;
     height: auto;
     margin-top: 0 !important;
   }
@@ -700,7 +648,6 @@
     width: 100%;
   }
 }
-/* Responsive */
 @media (max-width: 1300px) {
   .industry-flex-grid {
     justify-content: space-between;
@@ -729,16 +676,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px; /* optional spacing */
+  padding: 20px;
 }
 
 .ind-exp h1 {
-  margin: 0; /* remove default margin */
+  margin: 0;
 }
 
 .vision01-btn {
   display: inline-block;
-  background-color: #289ED8;
+  background-color: #289ed8;
   color: #fff;
   padding: 10px 20px;
   border-radius: 99px;
@@ -763,9 +710,8 @@
   transform: translateX(4px);
 }
 
-/* 7th section css */
 .design-support-wrapper {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   padding: 80px 20px;
   font-family: "Guminert", sans-serif;
   color: #000;
@@ -820,7 +766,6 @@
   list-style-type: disc;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .design-support-heading {
     font-size: 28px;
@@ -846,4 +791,3 @@
     margin-right: auto;
   }
 }
-

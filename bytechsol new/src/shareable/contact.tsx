@@ -395,7 +395,16 @@ const ContactSection = () => {
 
           <div className="contact8-alt mt-3">
             <span>Prefer email?</span>
-            <a href="mailto:bytechsol@gmail.com">bytechsol@gmail.com</a>
+            <div className="form-email">
+  <a
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@bytechsol.com"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    info@bytechsol.com
+  </a>
+</div>
+
           </div>
         </form>
       </div>

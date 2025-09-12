@@ -5,7 +5,6 @@
   margin: auto;
   text-align: center;
 }
-
 .careers-header h2 {
   color: #000;
   font-family: Guminert;
@@ -16,14 +15,12 @@
   letter-spacing: -1.6px;
   text-transform: capitalize;
 }
-
 .careers-subtitle {
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
   text-align: center;
 }
-
 .careers-header p {
   color: #000;
   font-family: Guminert;
@@ -34,62 +31,51 @@
   line-height: 46px;
   letter-spacing: -0.66px;
 }
-
-/* Grid Layout */
 .career-parent {
   display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 8px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 8px;
 }
-
 .career-div1 {
- grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
 }
-
 .career-div2 {
- grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
-    grid-column-start: 5;
-    grid-row-start: 1;
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 5;
+  grid-row-start: 1;
 }
-
 .career-div3 {
-    grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
-    grid-column-start: 1;
-    grid-row-start: 4;
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 1;
+  grid-row-start: 4;
 }
-
 .career-div4 {
   grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
-    grid-column-start: 5;
-    grid-row-start: 4;
+  grid-row: span 3 / span 3;
+  grid-column-start: 5;
+  grid-row-start: 4;
 }
-
 .career-div5 {
-   grid-column: span 2 / span 2;
-    grid-row: span 6 / span 6;
-    grid-column-start: 3;
-    grid-row-start: 1;
+  grid-column: span 2 / span 2;
+  grid-row: span 6 / span 6;
+  grid-column-start: 3;
+  grid-row-start: 1;
 }
-
-/* Careers Intro */
 .careers-intro {
   background-color: #f9f9f9;
   padding: 40px;
   border-radius: 12px;
 }
-
 .careers-intro-title {
   font-size: 50px;
   font-weight: bold;
   color: #070707;
   text-align: center;
 }
-
 .careers-intro-text {
   font-size: 16px;
   line-height: 1.6;
@@ -97,20 +83,16 @@
   color: #000;
   text-align: center;
 }
-
 .careers-intro-cta {
   font-weight: 500;
   color: #000;
   text-align: center;
 }
-
-/* Application Form */
 .application-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-
 .form-row {
   display: flex;
   gap: 1rem;
@@ -118,7 +100,6 @@
   margin-right: 50px;
   margin-top: 20px;
 }
-
 .application-input,
 .application-textarea {
   flex: 1;
@@ -127,13 +108,11 @@
   border: 1px solid #ccc;
   border-radius: 6px;
 }
-
 .form-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .application-submit-btn {
   background: #1da1f2;
   color: white;
@@ -144,27 +123,18 @@
   margin-left: 60px;
   margin-top: 50px;
 }
-
 .application-submit-btn:hover {
   background: #0d8ae8;
 }
-
 .form-email a {
   color: #000;
   font-weight: bold;
   text-decoration: none;
   margin-right: 50px;
 }
-
 .form-email a:hover {
   text-decoration: underline;
 }
-
-/* =============================
-   RESPONSIVE STYLES
-   ============================= */
-
-/* Tablet */
 @media (max-width: 1024px) {
   .careers-header h2 {
     font-size: 60px;
@@ -182,15 +152,13 @@
     margin-right: 20px;
   }
   .careers-intro-text {
-  font-size: 16px;
-  line-height: 1.6;
-  font-weight: 500;
-  color: #000;
-  text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 500;
+    color: #000;
+    text-align: justify;
+  }
 }
-}
-
-/* Mobile */
 @media (max-width: 768px) {
   .careers-header h2 {
     font-size: 40px;
@@ -200,10 +168,6 @@
     line-height: 32px;
     text-align: center;
   }
-  /* .career-parent {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  } */
   .form-row {
     flex-direction: column;
     margin: 0;
@@ -220,55 +184,47 @@
   .form-email a {
     margin-right: 0;
   }
-.career-parent {
+  .career-parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(8, 1fr);
     gap: 8px;
-}
-    
-.career-div1 {
+  }
+  .career-div1 {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
-}
-
-.career-div2 {
+  }
+  .career-div2 {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-column-start: 3;
-}
-
-.career-div3 {
+  }
+  .career-div3 {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-column-start: 1;
     grid-row-start: 7;
-}
-
-.career-div4 {
+  }
+  .career-div4 {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-column-start: 3;
     grid-row-start: 7;
-}
-
-.career-div5 {
+  }
+  .career-div5 {
     grid-column: span 4 / span 4;
     grid-row: span 4 / span 4;
     grid-column-start: 1;
     grid-row-start: 3;
-}
-.application-form {
+  }
+  .application-form {
     margin: 10px 20px;
     gap: 1rem;
   }
-
   .form-row {
-    grid-template-columns: 1fr; /* stack inputs */
+    grid-template-columns: 1fr;
   }
 }
-
-/* Small Mobile */
 @media (max-width: 480px) {
   .careers-header h2 {
     font-size: 28px;
@@ -277,25 +233,22 @@
     font-size: 22px;
     line-height: 26px;
   }
-@media (max-width: 576px) {
-  .join01 {
-    font-size: 0.9rem;   /* smaller font on mobile */
-    margin: 0.5rem;      /* tighter margin on mobile */
-    line-height: 1.4;    /* better readability */
-    text-align: center;  /* optional: center on mobile */
+  @media (max-width: 576px) {
+    .join01 {
+      font-size: 0.9rem;
+      margin: 0.5rem;
+      line-height: 1.4;
+      text-align: center;
+    }
   }
-}
-
-
   .careers-intro-title {
     font-size: 32px;
   }
   .career-parent img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  
-}
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .application-submit-btn {
     font-size: 14px;
     padding: 0.6rem 1rem;
@@ -305,42 +258,35 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(8, 1fr);
     gap: 8px;
-}
-    
-.career-div1 {
+  }
+  .career-div1 {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
-}
-
-.career-div2 {
+  }
+  .career-div2 {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-column-start: 3;
-}
-
-.career-div3 {
+  }
+  .career-div3 {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-column-start: 1;
     grid-row-start: 7;
-}
-
-.career-div4 {
+  }
+  .career-div4 {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-column-start: 3;
     grid-row-start: 7;
-}
-
-.career-div5 {
+  }
+  .career-div5 {
     grid-column: span 4 / span 4;
     grid-row: span 4 / span 4;
     grid-column-start: 1;
-    grid-row-start: 3;  
+    grid-row-start: 3;
+  }
 }
-}
-
-
 .upload-box {
   flex: 1;
   display: flex;
@@ -350,7 +296,6 @@
   padding: 0.5rem 1rem;
   background: #fff;
 }
-
 .upload-box .application-input {
   flex: 1;
   border: none;
@@ -358,7 +303,6 @@
   background: transparent;
   height: 18px;
 }
-
 .upload-label {
   cursor: pointer;
   color: #000;

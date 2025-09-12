@@ -1,4 +1,3 @@
-// import React, { useState } from "react";
 import AnimatedText from "../shareable/AnimatedText";
 import "../assets/components-css/home.css";
 import Clutch from "../assets/images/clutch.png";
@@ -30,8 +29,6 @@ import g4 from "../assets/images/grow4.png";
 import React, { useState } from "react";
 import ScrollCards from "./ScrollCards";
 
-
-
 const awards = [
   { text: "500+ Happy clients", img: p3 },
   { text: "10+ Design awards", img: a2 },
@@ -40,10 +37,10 @@ const awards = [
 ];
 
 const services = [
-  { id: 1, title: "Web development", image: ux2 },
-  { id: 2, title: "UI UX Design", image: bd2 },
+  { id: 1, title: "Web development", image: wb2 },
+  { id: 2, title: "Marketing", image: bd2 },
   { id: 3, title: "Odoo & Custom ERPs", image: mk2 },
-  { id: 4, title: "AI/ML", image: wb2 },
+  { id: 4, title: "AI/ML", image: ux2 },
 ];
 
 const topImages = [Top1, Top2, Top3, Top4];
@@ -69,13 +66,12 @@ const Home: React.FC = () => {
                     Book a strategy call{" "}
                     <i className="bi bi-arrow-up-right arrow-icon"></i>
                   </a>
-                                  <a 
-                  href="#custom-quote" 
-                  className="btn btn-outline custom-cta d-none d-lg-inline-block"
-                >
-                  Get a custom quote
-                </a>
-
+                  <a
+                    href="#custom-quote"
+                    className="btn btn-outline custom-cta d-none d-lg-inline-block"
+                  >
+                    Get a custom quote
+                  </a>
                 </div>
               </div>
               <div className="col-md-4">
@@ -85,52 +81,66 @@ const Home: React.FC = () => {
                   fuel growth.
                 </p>
                 <div className="founders-rating d-none d-md-flex align-items-center">
-  <div className="d-flex align-items-center">
-    <div className="founders-stack">
-      <div className="tooltip-wrapper" style={{ left: 0, zIndex: 2 }}>
-        <img src={Yasir} alt="Yasir Irfan" className="founder-img" />
-        <div className="custom-tooltip">
-          <strong>Yasir Irfan</strong>
-          <br />
-          Founder & CEO @BTS
-          <br />
-          <a
-            href="https://www.linkedin.com/in/yasir-irfan-b988721b7/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
-        </div>
-      </div>
-      <div className="tooltip-wrapper" style={{ left: "22px", zIndex: 1 }}>
-        <img src={Salik} alt="Salik Husnaq" className="founder-img" />
-        <div className="custom-tooltip">
-          <strong>Salik Husnaq</strong>
-          <br />
-          Co-Founder @Somewhere
-          <br />
-          <a
-            href="https://www.linkedin.com/in/salik-husnaq/?originalSubdomain=pk"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
-        </div>
-      </div>
-    </div>
-    <span className="ms-3" style={{ lineHeight: "15px" }}>
-      Trusted by forward-thinking founders and businesses worldwide.
-    </span>
-  </div>
-  <img src={Clutch} alt="Clutch" className="clutch-logo" />
-  <div className="review-meta">
-    <span className="stars">★★★★★</span>
-    <span className="reviews">11 REVIEWS</span>
-  </div>
-</div>
-
+                  <div className="d-flex align-items-center">
+                    <div className="founders-stack">
+                      <div
+                        className="tooltip-wrapper"
+                        style={{ left: 0, zIndex: 2 }}
+                      >
+                        <img
+                          src={Yasir}
+                          alt="Yasir Irfan"
+                          className="founder-img"
+                        />
+                        <div className="custom-tooltip">
+                          <strong>Yasir Irfan</strong>
+                          <br />
+                          Founder & CEO @BTS
+                          <br />
+                          <a
+                            // href="https://www.linkedin.com/in/yasir-irfan-b988721b7/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            LinkedIn
+                          </a>
+                        </div>
+                      </div>
+                      <div
+                        className="tooltip-wrapper"
+                        style={{ left: "22px", zIndex: 1 }}
+                      >
+                        <img
+                          src={Salik}
+                          alt="Salik Husnaq"
+                          className="founder-img"
+                        />
+                        <div className="custom-tooltip">
+                          <strong>Salik Husnaq</strong>
+                          <br />
+                          Co-Founder @Somewhere
+                          <br />
+                          <a
+                            // href="https://www.linkedin.com/in/salik-husnaq/?originalSubdomain=pk"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            LinkedIn
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <span className="ms-3" style={{ lineHeight: "15px" }}>
+                      Trusted by forward-thinking founders and businesses
+                      worldwide.
+                    </span>
+                  </div>
+                  <img src={Clutch} alt="Clutch" className="clutch-logo" />
+                  <div className="review-meta">
+                    <span className="stars">★★★★★</span>
+                    <span className="reviews">11 REVIEWS</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -139,35 +149,34 @@ const Home: React.FC = () => {
 
       {/* 2nd Section */}
       <section className="scrolling-images-section py-5">
-  {/* First row - always visible */}
-  <div className="scroll-row scroll-row-1">
-    <div className="scroll-track">
-      {[...topImages, ...topImages].map((img, index) => (
-        <img
-          key={`top-${index}`}
-          src={img}
-          alt={`Top image ${index}`}
-          className="scroll-image"
-        />
-      ))}
-    </div>
-  </div>
+        {/* First row - always visible */}
+        <div className="scroll-row scroll-row-1">
+          <div className="scroll-track">
+            {[...topImages, ...topImages].map((img, index) => (
+              <img
+                key={`top-${index}`}
+                src={img}
+                alt={`Top image ${index}`}
+                className="scroll-image"
+              />
+            ))}
+          </div>
+        </div>
 
-  {/* Second row - hidden on mobile */}
-  <div className="scroll-row scroll-row-2 mt-5 d-none d-md-block">
-    <div className="scroll-track reverse">
-      {[...bottomImages, ...bottomImages].map((img, index) => (
-        <img
-          key={`bottom-${index}`}
-          src={img}
-          alt={`Bottom image ${index}`}
-          className="scroll-image"
-        />
-      ))}
-    </div>
-  </div>
-</section>
-
+        {/* Second row - hidden on mobile */}
+        <div className="scroll-row scroll-row-2 mt-5 d-none d-md-block">
+          <div className="scroll-track reverse">
+            {[...bottomImages, ...bottomImages].map((img, index) => (
+              <img
+                key={`bottom-${index}`}
+                src={img}
+                alt={`Bottom image ${index}`}
+                className="scroll-image"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* 3rd Section */}
       <section className="who-we-are-section py-5">
@@ -187,7 +196,7 @@ const Home: React.FC = () => {
       {/* 4th Section */}
       <section className="services-section py-5 mb-5">
         <div className="container">
-          <p className="ser-subheading">(SERVICES)</p>
+          <p className="ser-subheading text-center text-md-start">(SERVICES)</p>
           {services.map((service, index) => (
             <div
               key={service.id}
