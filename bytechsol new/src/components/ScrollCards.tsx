@@ -1,11 +1,10 @@
 import "../assets/components-css/home.css";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import cr1 from "../assets/images/1card.svg";
 import cr2 from "../assets/images/2card.svg";
 import cr3 from "../assets/images/3card.svg";
-import { useLocation } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,93 +42,82 @@ const cards = [
 
 const ScrollCards: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isDesktop, setIsDesktop] = useState<boolean>(window.innerWidth >= 768);
-  const location = useLocation();
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 768);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const ctx = gsap.context(() => {
+      const cardsEls = gsap.utils.toArray<HTMLElement>(".card-row");
+      const container = containerRef.current;
+      if (!container) return;
+
+      // set z-index so new card is always above
+      cardsEls.forEach((card, i) => {
+        card.style.zIndex = `${i + 1}`;
+      });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          start: "top top",
+          end: () => `+=${cardsEls.length * window.innerHeight}`,
+          scrub: true,
+          pin: container,
+          pinSpacing: true,
+        },
+      });
+
+      cardsEls.forEach((card, i) => {
+        tl.fromTo(
+          card,
+          { y: window.innerHeight, opacity: 1 },
+          { y: 0, opacity: 1, duration: 0.8 },
+          i
+        );
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
   }, []);
-
-  useEffect(() => {
-    if (isDesktop && location.pathname === "/") {
-      const ctx = gsap.context(() => {
-        const cardsEls = gsap.utils.toArray<HTMLElement>(".choose-card");
-        const container = containerRef.current;
-        if (!container) return;
-
-        cardsEls.forEach((card, i) => {
-          card.style.zIndex = `${i + 1}`;
-        });
-
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: container,
-            start: "top top",
-            end: () => `+=${cardsEls.length * window.innerHeight}`,
-            scrub: true,
-            pin: container,
-            pinSpacing: true,
-            markers: false,
-          },
-        });
-
-        cardsEls.forEach((card, i) => {
-          tl.fromTo(
-            card,
-            { y: window.innerHeight },
-            { y: 0, duration: 1 },
-            i
-          );
-        });
-      }, containerRef);
-
-      return () => {
-        ctx.revert();
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill()); 
-      };
-    }
-  }, [isDesktop, location.pathname]);
 
   return (
     <>
-        <div className="container">
-          <div className="group5-content py-5">
+      <div className="container">
+        <div className="group5-content py-5">
           <div className="group5-text-block text-center text-md-start">
-            <span className="group5-tag d-block mb-2">(Why Choose bytechsol)</span>
+            <span className="group5-tag d-block mb-2">
+              (Why Choose bytechsol)
+            </span>
             <h2 className="group5-heading mb-3 fs-3 fw-bold">
               Built by Humans. Backed by Tech. Driven by Purpose.
             </h2>
-           <p className="group5-para fs-3"> We’re not just here to code — we’re here to understand your vision, solve real problems, and grow with you. At Bytechsol, your goals become our mission. </p>
-          </div>
-          </div>
-</div>
-<section className="scroll-section" ref={containerRef}>
-      <div className="container">
-        <div className="group5-content">
-          <div className="card-container">
-            {cards.map((card, index) => (
-              <div key={index} className={`choose-card ${card.color}`}>
-                <div className={`badge ${card.color}`}>{card.label}</div>
-                <p className="card-title-text">{card.title[0]}</p>
-                <ul>
-                  {card.items.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-                <div className="card-image-wrapper">
-                  <img src={card.image} alt={card.label} className="card-image" />
-                </div>
-              </div>
-            ))}
+            <p className="group5-para fs-3">
+              {" "}
+              We’re not just here to code — we’re here to understand your
+              vision, solve real problems, and grow with you. At Bytechsol, your
+              goals become our mission.{" "}
+            </p>
           </div>
         </div>
       </div>
-    </section>
-            </>
+      <section
+        className="performance-section"
+        style={{ height: "110vh" }}
+        ref={containerRef}
+      >
+        <div className="card-container">
+          {cards.map((card, index) => (
+            <div key={index} className={`card-row ${card.color}`}>
+              <div className="card-text">
+                <h2>{card.title[0]}</h2>
+                <p>{card.items[0]}</p>
+              </div>
+              <div className="card-img">
+                <img src={card.image} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 

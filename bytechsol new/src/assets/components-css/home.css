@@ -900,14 +900,17 @@
   color: #fff;
 }
 
-.choose-card.design {
+.design {
   background-color: #289dd8;
+  color: white;
 }
-.choose-card.build {
+.build {
   background-color: #2a55a4;
+    color: white;
 }
-.choose-card.grow {
+.grow {
   background-color: #2b3990;
+    color: white;
 }
 
 .group7-container {
