@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import AnimatedText from "../shareable/AnimatedText";
+import am from "../assets/images/aimlimg.jpg"
+import ci from "../assets/images/chatai.jpg"
 import "../assets/components-css/home.css";
-
-// Images
 import Clutch from "../assets/images/clutch.png";
 import Yasir from "../assets/images/yasir.jpg";
 import Salik from "../assets/images/salik.png";
 import Top1 from "../assets/images/top1.png";
 import Top2 from "../assets/images/top2.png";
 import Top3 from "../assets/images/top3.png";
-import Top4 from "../assets/images/top4.png";
+import hm1 from "../assets/images/home1img.png"
 import Bottom1 from "../assets/images/bottom1.png";
 import Bottom2 from "../assets/images/bottom2.png";
 import Bottom3 from "../assets/images/bottom3.png";
-import Bottom4 from "../assets/images/bottom4.png";
+import hm2 from "../assets/images/home2img.png"
 import Arrow from "../assets/images/arrow.svg";
 import AwardBg from "../assets/images/award-bg.jpg";
 import bgImage from "../assets/images/bgimg.jpg";
@@ -21,10 +21,8 @@ import icon from "../assets/images/tick.svg";
 import Testimonial from "../shareable/testimonial";
 import FaqSection from "../shareable/faq";
 import ContactSection from "../shareable/contact";
-import wb2 from "../assets/images/webim.jpg";
-import mk2 from "../assets/images/markim.jpg";
+import wb2 from "../assets/images/web1img.png"
 import bd2 from "../assets/images/brandim.jpg";
-import ux2 from "../assets/images/uxim.jpg";
 import p3 from "../assets/images/ppg3.png";
 import a2 from "../assets/images/awar2.png";
 import f1 from "../assets/images/fund1.png";
@@ -42,12 +40,12 @@ const awards = [
 const services = [
   { id: 1, title: "Web development", image: wb2 },
   { id: 2, title: "Marketing", image: bd2 },
-  { id: 3, title: "Odoo & Custom ERPs", image: mk2 },
-  { id: 4, title: "AI / ML", image: ux2 },
+  { id: 3, title: "Odoo & Custom ERPs", image: ci },
+  { id: 4, title: "AI/ML", image: am },
 ];
 
-const topImages = [Top1, Top2, Top3, Top4];
-const bottomImages = [Bottom1, Bottom2, Bottom3, Bottom4];
+const topImages = [Top1, Top2, Top3,hm1];
+const bottomImages = [Bottom1, Bottom2, Bottom3, hm2];
 
 const Home: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);

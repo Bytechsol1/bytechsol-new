@@ -93,7 +93,7 @@ const AimlSection = () => {
             <div className="dg-products-content">
               <h1 className="dg-products-heading text-start">
   AI & ML Solutions That 
-  <br className="d-none d-md-block" /> {/* Show only on desktop */}
+  <br className="d-none d-md-block" /> 
   Redefine Possibilities
 </h1>
 

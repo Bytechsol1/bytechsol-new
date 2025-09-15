@@ -419,6 +419,7 @@ Start your website project today <span className="arrow">→</span>
       
       {/* 5th section------------- */}
      <section className="industry-section">
+      <div className="container">
   <div className="industry-header">
     <h2 className="industry-title">Turning Your Ideas Into Something Real</h2>
    <p className="ms-2 fs-6">
@@ -426,7 +427,7 @@ Start your website project today <span className="arrow">→</span>
   We are <br /> not the traditional web designers that build websites or applications… 
   we help you create your vision in a way that <br /> feels natural to you and memorable to your users.
 </p>
-
+  </div>
   </div>
 
   <div className="industry-flex-grid">

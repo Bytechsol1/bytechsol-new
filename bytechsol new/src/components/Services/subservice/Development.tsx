@@ -487,6 +487,7 @@ const Development: React.FC = () => {
       </section>
       {/* 10th section */}
       <section className="industry-section">
+        <div className="container">
         <div className="industry-header">
           <h2 className="industry-title">
             Turning Your Ideas Into Something Real
@@ -499,7 +500,7 @@ const Development: React.FC = () => {
             feels natural to you and memorable to your users.
           </p>
         </div>
-
+        </div>
         <div className="industry-flex-grid">
           {industryData.map((item, index) => (
             <div

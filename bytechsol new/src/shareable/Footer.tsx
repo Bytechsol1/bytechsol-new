@@ -12,136 +12,92 @@ const Footer: React.FC = () => {
   }, [pathname]);
 
   return (
-    <footer className="footer-section pt-5 pb-4">
-      <div className="container">
-        <div className="row gy-4">
-          {/* Left Column: Logo + Description */}
-          <div className="col-md-3">
-            <img src={logo} alt="Bytechsol Logo" className="footer-logo mb-3" />
-            <img
-              src={LogoText}
-              alt="Bytechsol Text"
-              className="footer-logo mb-3"
-            />
-            <p className="footer-description">
-              Wavespace is a global UI/UX design agency that boosts brand value
-              with user-friendly, effective designs for web, mobile, and SaaS
-              platforms.
-            </p>
+ <footer className="footer-section pt-5 pb-4">
+  <div className="container">
+    <div className="row gy-4">
+      {/* Left Column: Logo + Description */}
+      <div className="col-12 col-md-3">
+        <img src={logo} alt="Bytechsol Logo" className="footer-logo mb-3" />
+        <img
+          src={LogoText}
+          alt="Bytechsol Text"
+          className="footer-logo mb-3"
+        />
+        <p className="footer-description">
+          Wavespace is a global UI/UX design agency that boosts brand value
+          with user-friendly, effective designs for web, mobile, and SaaS
+          platforms.
+        </p>
 
-            <Link className="deck-button" to="/contact">
-              Contact Us <i className="bi bi-arrow-up-right"></i>
-            </Link>
-          </div>
-
-          {/* Spacer Column */}
-          <div className="col-md-1 d-none d-md-block"></div>
-
-          {/* Services */}
-          <div className="col-md-2">
-            <h6 className="footer-heading">Services</h6>
-            <ul className="footer-links">
-              <Link to="/services/web-app">
-                <li>Web App</li>
-              </Link>
-              <Link to="/services/seo-service">
-                <li>SEO Service</li>
-              </Link>
-
-              <Link to="/services/brand-building">
-                <li>Brand Building</li>
-              </Link>
-              <Link to="/services/ERP-service">
-                <li>ERP Service</li>
-              </Link>
-              <Link to="/services/website-design-and-development">
-                <li>Website Design & Development</li>
-              </Link>
-            </ul>
-          </div>
-
-          {/* Additional Services */}
-          <div className="col-md-2">
-            <ul className="footer-links mt-md-4 pt-md-2">
-              <Link to="/services/E-Commerce-solutions">
-                <li>E-Commerce Solutions</li>
-              </Link>
-              <Link to="/services/odoo-services">
-                <li>Odoo Services</li>
-              </Link>
-              <Link to="/services/Ai-Ml">
-                <li>AI / ML</li>
-              </Link>
-              <Link to="/services/custom-web">
-                <li>Custom Web</li>
-              </Link>
-            </ul>
-          </div>
-
-          {/* Case Studies */}
-          <div className="col-md-2">
-            <h6 className="footer-heading">Quick Links</h6>
-            <ul className="footer-links">
-              <Link to="/about">
-                <li>About</li>
-              </Link>
-              <Link to="/Blog">
-                <li>Blog</li>
-              </Link>
-              <Link to="/Careers">
-                <li>Career</li>
-              </Link>
-              <Link to="/Contact">
-                <li>Contact Us</li>
-              </Link>
-              {/* <li className="view-all">View all work</li> */}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div className="col-md-2">
-            <h6 className="footer-heading">Social</h6>
-            <ul className="footer-links">
-              <Link
-                to="https://www.linkedin.com/company/bytechsol-llc"
-                target="_blank"
-              >
-                <li>LinkedIn</li>
-              </Link>
-              <Link to="https://www.instagram.com/bytechsol1/" target="_blank">
-                <li>Instagram</li>
-              </Link>
-              <Link
-                to="https://www.facebook.com/profile.php?id=100092258931848"
-                target="_blank"
-              >
-                <li>Facebook</li>
-              </Link>
-              <Link to="https://x.com/BytechSol" target="_blank">
-                <li>Twitter</li>
-              </Link>
-            </ul>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <hr className="footer-divider" />
-
-        {/* Bottom Footer */}
-        <div className="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center pt-9">
-          <small className="text" style={{ color: "#aaa" }}>
-            © 2025 Bytechsol LLC
-          </small>
-          <div className="text-center legal-text my-2 my-md-0">
-            <span className="text" style={{ color: "#aaa" }}>
-              Bytechsol is a limited liability company based in
-              <span className="flag-wave mx-1 fi fi-us"></span>
-              <span className="flag-wave fi fi-pk"></span>
-            </span>
-          </div>
-        </div>
+        <Link className="deck-button" to="/contact">
+          Contact Us <i className="bi bi-arrow-up-right"></i>
+        </Link>
       </div>
-    </footer>
+    <div className="col-md-1 d-none d-md-block"></div>
+      {/* Services */}
+      <div className="col-6 col-md-2">
+        <h6 className="footer-heading">Services</h6>
+        <ul className="footer-links">
+          <Link to="/services/web-app"><li>Web App</li></Link>
+          <Link to="/services/seo-service"><li>SEO Service</li></Link>
+          <Link to="/services/brand-building"><li>Brand Building</li></Link>
+          <Link to="/services/ERP-service"><li>ERP Service</li></Link>
+          <Link to="/services/website-design-and-development"><li>Website Design & Development</li></Link>
+        </ul>
+      </div>
+
+      {/* Additional Services */}
+      <div className="col-6 col-md-2">
+        <ul className="footer-links mt-md-4 pt-md-2">
+          <Link to="/services/E-Commerce-solutions"><li>E-Commerce Solutions</li></Link>
+          <Link to="/services/odoo-services"><li>Odoo Services</li></Link>
+          <Link to="/services/Ai-Ml"><li>AI / ML</li></Link>
+          <Link to="/services/custom-web"><li>Custom Web</li></Link>
+        </ul>
+      </div>
+
+      {/* Quick Links */}
+      <div className="col-6 col-md-2">
+        <h6 className="footer-heading">Quick Links</h6>
+        <ul className="footer-links">
+          <Link to="/about"><li>About</li></Link>
+          <Link to="/Blog"><li>Blog</li></Link>
+          <Link to="/Careers"><li>Career</li></Link>
+          <Link to="/Contact"><li>Contact Us</li></Link>
+        </ul>
+      </div>
+
+      {/* Contact */}
+      <div className="col-6 col-md-2">
+        <h6 className="footer-heading">Contact</h6>
+        <ul className="footer-links">
+          <Link to="https://www.linkedin.com/company/bytechsol-llc" target="_blank"><li>LinkedIn</li></Link>
+          <Link to="https://www.instagram.com/bytechsol1/" target="_blank"><li>Instagram</li></Link>
+          <Link to="https://www.facebook.com/profile.php?id=100092258931848" target="_blank"><li>Facebook</li></Link>
+          <Link to="https://x.com/BytechSol" target="_blank"><li>Twitter</li></Link>
+        </ul>
+      </div>
+    </div>
+
+    {/* Divider */}
+    <hr className="footer-divider" />
+
+    {/* Bottom Footer */}
+    <div className="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center pt-4">
+      <small className="text" style={{ color: "#aaa" }}>
+        © 2025 Bytechsol LLC
+      </small>
+      <div className="text-center legal-text my-2 my-md-0">
+        <span className="text" style={{ color: "#aaa" }}>
+          Bytechsol is a limited liability company based in
+          <span className="flag-wave mx-1 fi fi-us"></span>
+          <span className="flag-wave fi fi-pk"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
   );
 };
 

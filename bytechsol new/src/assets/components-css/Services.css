@@ -309,7 +309,8 @@
 
 .webdesign-img {
   width: 660px;
-  max-height: 660px;
+  /* max-height: 860px; */
+  height: 600px;
   object-fit: cover;
 }
 
@@ -416,6 +417,10 @@
   .webdesign-img1 {
     margin-bottom: 30px;
   }
+  .webdesign-img {
+  max-height: 250px;
+  object-fit: cover;
+}
 }
 
 @media (max-width: 768px) {

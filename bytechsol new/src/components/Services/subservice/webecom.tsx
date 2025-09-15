@@ -88,14 +88,6 @@ const Webecom: React.FC = () => {
               </div>
             </div>
           </div>
-    
-          {/* Right image */}
-          {/* <div className="col-lg-5 text-center">
-            <div className="dg-products-image">
-              <img src={lig} alt="UI/UX Illustration" className="img-fluid" />
-            </div>
-          </div> */}
-    
         </div>
       </div>
     </section>
