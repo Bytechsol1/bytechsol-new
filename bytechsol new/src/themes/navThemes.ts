@@ -23,12 +23,12 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
   },
 
   "/about": {
-    logoIconSrc: LogoWhite,
-    logoTextSrc: LogoTextWhite,
+    logoIconSrc: Logo,
+    logoTextSrc: LogoText,
     navClassName: "",
-    backgroundColor: "#2C2B41",
+    backgroundColor: "#fff",
     variant: "light",
-    linkClassName: "text-white",
+    linkClassName: "text-black",
     buttonClassName: "",
     buttonSchemeClass: "btn-scheme--brand",
     sticky: true,

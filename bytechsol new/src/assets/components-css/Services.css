@@ -125,9 +125,10 @@
 }
 
 .dg-products-image img {
-  max-width: 100%;
+  max-width: 80%;
   height: 450px;
   object-fit: contain;
+  margin-left: 100px;
   margin-top: -50px;
 }
 

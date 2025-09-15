@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import AnimatedText from "../shareable/AnimatedText";
 import am from "../assets/images/aimlimg.jpg"
-import ci from "../assets/images/chatai.jpg"
 import "../assets/components-css/home.css";
 import Clutch from "../assets/images/clutch.png";
 import Yasir from "../assets/images/yasir.jpg";
@@ -27,6 +26,7 @@ import p3 from "../assets/images/ppg3.png";
 import a2 from "../assets/images/awar2.png";
 import f1 from "../assets/images/fund1.png";
 import g4 from "../assets/images/grow4.png";
+import o1 from "../assets/images/odoo3.png" 
 
 import ScrollCards from "./ScrollCards";
 
@@ -40,7 +40,7 @@ const awards = [
 const services = [
   { id: 1, title: "Web development", image: wb2 },
   { id: 2, title: "Marketing", image: bd2 },
-  { id: 3, title: "Odoo & Custom ERPs", image: ci },
+  { id: 3, title: "Odoo & Custom ERPs", image: o1 },
   { id: 4, title: "AI/ML", image: am },
 ];
 

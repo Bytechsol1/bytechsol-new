@@ -6,6 +6,7 @@ import Testimonial from "../../shareable/testimonial";
 import FaqSection from "../../shareable/faq";
 import ContactSection from "../../shareable/contact";
 import TrustedBySection from "../../shareable/trust500";
+import hm1 from "../../assets/images/homeimg1.png"
 
 const accordionData = [
   {
@@ -46,7 +47,7 @@ const About: React.FC = () => {
       {/* 1st Section */}
       <section
         className="Designed-section"
-        style={{ backgroundColor: "#2C2B41" }}
+        style={{ backgroundColor: "#fff", backgroundImage: `url(${hm1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="container">
           <div className="overlay d-none d-md-block"></div>
@@ -56,7 +57,7 @@ const About: React.FC = () => {
               <br />
               We Build What <span className="gradient">Matters</span>.
             </h1>
-            <p>
+            <p className="text-black ">
               We make digital, heartfelt, and purposeful solutions at Bytechsol.
               Whether in small companies or large enterprises, we make
               businesses successful through intelligent, expandable, and
