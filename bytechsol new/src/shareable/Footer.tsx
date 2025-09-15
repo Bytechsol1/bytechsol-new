@@ -17,12 +17,14 @@ const Footer: React.FC = () => {
     <div className="row gy-4">
       {/* Left Column: Logo + Description */}
       <div className="col-12 col-md-3">
+        <Link to="/">
         <img src={logo} alt="Bytechsol Logo" className="footer-logo mb-3" />
         <img
           src={LogoText}
           alt="Bytechsol Text"
           className="footer-logo mb-3"
         />
+        </Link>
         <p className="footer-description">
           Wavespace is a global UI/UX design agency that boosts brand value
           with user-friendly, effective designs for web, mobile, and SaaS
@@ -69,7 +71,7 @@ const Footer: React.FC = () => {
 
       {/* Contact */}
       <div className="col-6 col-md-2">
-        <h6 className="footer-heading">Contact</h6>
+        <h6 className="footer-heading">Social</h6>
         <ul className="footer-links">
           <Link to="https://www.linkedin.com/company/bytechsol-llc" target="_blank"><li>LinkedIn</li></Link>
           <Link to="https://www.instagram.com/bytechsol1/" target="_blank"><li>Instagram</li></Link>
