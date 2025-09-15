@@ -1226,15 +1226,25 @@
 
 .faq-item {
   border-bottom: 1px solid #ccc;
-  padding: 20px 0;
-  cursor: pointer;
-  transition: background 0.3s ease;
 }
 
+/* Use a button for accessibility; keep existing look */
 .faq-question-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  text-align: left;
+}
+
+.faq-question-row:focus-visible {
+  outline: 2px solid #289ed8;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .faq-question {
@@ -1245,11 +1255,31 @@
 
 .faq-icon {
   font-size: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
 .faq-icon.rotated {
   transform: rotate(180deg);
+}
+
+/* Animated panel wrapper */
+.faq-panel {
+  overflow: hidden;
+  max-height: 0;                /* animated property */
+  transition:
+    max-height 320ms ease,
+    opacity 220ms ease,
+    transform 220ms ease;
+  opacity: 0;
+  transform: translateY(-4px);
+  will-change: max-height, opacity, transform;
+}
+
+/* When the item is active, allow the panel to fade/slide in.
+   Note: max-height is set inline from JS for perfect fit. */
+.faq-item.active .faq-panel {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .faq-answer {
@@ -1257,6 +1287,17 @@
   color: #444;
   font-size: 16px;
   line-height: 1.6;
+  padding-bottom: 16px;         /* keeps spacing when open */
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .faq-icon {
+    transition: none;
+  }
+  .faq-panel {
+    transition: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1270,6 +1311,7 @@
     font-size: 15px;
   }
 }
+
 
 .group5-wrapper {
   width: 100%;
