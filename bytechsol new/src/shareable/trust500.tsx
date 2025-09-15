@@ -6,7 +6,7 @@ const topImages = [t1, t2];
 
 const TrustedBySection = () => {
   return (
-    <section className="trust-500 py-5">
+    <section className="trust-500 py-5" style={{backgroundColor:"#f9f9f9"}}>
       <p className="trust-title">Trusted by 500+ global companies</p>
 
       <section className="scrolling-images-section1 py-5">
