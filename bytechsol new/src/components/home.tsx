@@ -43,7 +43,7 @@ const services = [
   { id: 1, title: "Web development", image: wb2 },
   { id: 2, title: "Marketing", image: bd2 },
   { id: 3, title: "Odoo & Custom ERPs", image: mk2 },
-  { id: 4, title: "AI/ML", image: ux2 },
+  { id: 4, title: "AI / ML", image: ux2 },
 ];
 
 const topImages = [Top1, Top2, Top3, Top4];

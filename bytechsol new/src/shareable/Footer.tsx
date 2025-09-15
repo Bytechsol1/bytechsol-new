@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
 
           {/* Contact */}
           <div className="col-md-2">
-            <h6 className="footer-heading">Contact</h6>
+            <h6 className="footer-heading">Social</h6>
             <ul className="footer-links">
               <Link
                 to="https://www.linkedin.com/company/bytechsol-llc"
