@@ -100,10 +100,10 @@ const ScrollCards: React.FC = () => {
       </div>
       <section
         className="performance-section"
-        style={{ height: "80vh" }}
+        style={{ height: "100vh" }}
         ref={containerRef}
       >
-        <div className="card-container1">
+        <div className="card-container">
           {cards.map((card, index) => (
             <div key={index} className={`card-row ${card.color}`}>
               <div className="card-text">

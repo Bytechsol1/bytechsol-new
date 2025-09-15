@@ -834,14 +834,6 @@
   margin: 0 auto;
   height: 90vh;
 }
-.card-container1 {
-  display: block;
-  padding: 0;
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  height: 70vh;
-}
 .card-title-text {
   font-size: 22px;
   color: #ffffff;
@@ -1452,17 +1444,10 @@
     display: flex;
     flex-direction: column;
   }
-    .card-container1 {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 @media (min-width: 1200px) {
   .card-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-   .card-container1 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
