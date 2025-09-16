@@ -12,7 +12,7 @@ import ma from "../../../assets/images/mobapps.png";
 import lp2 from "../../../assets/images/lapto2.jpg"
 import v1 from "../../../assets/images/visual1.jpg"
 import sc from "../../../assets/images/social.png"
-import  { useRef, useEffect, useState } from "react";
+import  { useRef,  useState, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -84,43 +84,48 @@ const ProductDesign = () => {
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-    const containerRef = useRef<HTMLDivElement>(null);
-  
-    useEffect(() => {
-      const ctx = gsap.context(() => {
-        const cardsEls = gsap.utils.toArray<HTMLElement>(".card-row");
-        const container = containerRef.current;
-        if (!container) return;
-  
-        cardsEls.forEach((card, i) => {
-          card.style.zIndex = `${i + 1}`;
-        });
-  
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: container,
-            start: "top top",
-            end: () => `+=${cardsEls.length * window.innerHeight}`,
-            scrub: true,
-            pin: container,
-            pinSpacing: true,
-          },
-        });
-  
-        cardsEls.forEach((card, i) => {
-          tl.fromTo(
-            card,
-            { y: window.innerHeight, opacity: 1 },
-            { y: 0, opacity: 1, duration: 0.8 },
-            i
-          );
-        });
-      }, containerRef);
-  
-      return () => ctx.revert();
-    }, []);
-  
+  const containerRef = useRef<HTMLDivElement>(null);
 
+  // useLayoutEffect is preferred for GSAP animations to run synchronously
+  // after the DOM is updated, preventing animation conflicts on route changes.
+  useLayoutEffect(() => {
+    // gsap.context collects all animations and ScrollTriggers so they can be
+    // reverted together during cleanup.
+    const ctx = gsap.context(() => {
+      const cardsEls = gsap.utils.toArray<HTMLElement>(".card-row");
+      const container = containerRef.current;
+      if (!container) return;
+
+      // set z-index so new card is always above
+      cardsEls.forEach((card, i) => {
+        card.style.zIndex = `${i + 1}`;
+      });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          start: "top top",
+          end: () => `+=${cardsEls.length * window.innerHeight}`,
+          scrub: true,
+          pin: container,
+          pinSpacing: true,
+        },
+      });
+
+      cardsEls.forEach((card, i) => {
+        tl.fromTo(
+          card,
+          { y: window.innerHeight, opacity: 1 },
+          { y: 0, opacity: 1, duration: 0.8 },
+          i
+        );
+      });
+    }, containerRef); // Scopes the animation to this component's DOM tree
+
+    // The cleanup function returned from useLayoutEffect reverts the context
+    // when the component unmounts, killing all associated animations and triggers.
+    return () => ctx.revert();
+  }, []);
 
   return (
     <>

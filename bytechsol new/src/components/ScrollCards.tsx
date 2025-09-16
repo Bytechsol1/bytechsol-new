@@ -1,5 +1,5 @@
 import "../assets/components-css/home.css";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useLayoutEffect } from "react"; // Changed useEffect to useLayoutEffect
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import cr1 from "../assets/images/1card.svg";
@@ -9,6 +9,7 @@ import cr3 from "../assets/images/3card.svg";
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
+  // ... (your existing cards array)
   {
     label: "We Deliver What We Promise",
     color: "design",
@@ -43,7 +44,11 @@ const cards = [
 const ScrollCards: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  // useLayoutEffect is preferred for GSAP animations to run synchronously
+  // after the DOM is updated, preventing animation conflicts on route changes.
+  useLayoutEffect(() => {
+    // gsap.context collects all animations and ScrollTriggers so they can be
+    // reverted together during cleanup.
     const ctx = gsap.context(() => {
       const cardsEls = gsap.utils.toArray<HTMLElement>(".card-row");
       const container = containerRef.current;
@@ -73,10 +78,12 @@ const ScrollCards: React.FC = () => {
           i
         );
       });
-    }, containerRef);
+    }, containerRef); // Scopes the animation to this component's DOM tree
 
+    // The cleanup function returned from useLayoutEffect reverts the context
+    // when the component unmounts, killing all associated animations and triggers.
     return () => ctx.revert();
-  }, []);
+  }, []); // Empty dependency array ensures this effect runs only once on mount
 
   return (
     <>

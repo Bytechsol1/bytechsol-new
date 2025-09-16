@@ -13,7 +13,7 @@ import mi from "../../../assets/images/migra.png";
 import tc from "../../../assets/images/tecno.png";
 import md from "../../../assets/images/module.png";
 import ig from "../../../assets/images/integra.png";
-import  { useRef, useEffect, useState } from "react";
+import  { useRef,  useState,useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -202,12 +202,17 @@ const CustomSoftwareDev = () => {
   };
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  // useLayoutEffect is preferred for GSAP animations to run synchronously
+  // after the DOM is updated, preventing animation conflicts on route changes.
+  useLayoutEffect(() => {
+    // gsap.context collects all animations and ScrollTriggers so they can be
+    // reverted together during cleanup.
     const ctx = gsap.context(() => {
       const cardsEls = gsap.utils.toArray<HTMLElement>(".card-row");
       const container = containerRef.current;
       if (!container) return;
 
+      // set z-index so new card is always above
       cardsEls.forEach((card, i) => {
         card.style.zIndex = `${i + 1}`;
       });
@@ -231,8 +236,10 @@ const CustomSoftwareDev = () => {
           i
         );
       });
-    }, containerRef);
+    }, containerRef); // Scopes the animation to this component's DOM tree
 
+    // The cleanup function returned from useLayoutEffect reverts the context
+    // when the component unmounts, killing all associated animations and triggers.
     return () => ctx.revert();
   }, []);
 
