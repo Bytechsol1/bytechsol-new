@@ -69,7 +69,7 @@ function AppShell() {
 
 export default function App() {
   return (
-    <Router>
+    <Router >
       <AppShell />
     </Router>
   );

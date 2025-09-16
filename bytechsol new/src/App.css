@@ -10,6 +10,42 @@
   font-weight: normal;
   font-style: normal;
 }
+/* toggle button  */
+.navbar-toggler {
+  background: transparent !important;
+  border: none; /* removes border */
+  outline: none;
+}
+
+/* Custom white lines */
+.navbar-toggler-icon {
+  background-image: none !important; /* remove default */
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: #aaa;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #aaa;
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: -7px;
+}
+
+.navbar-toggler-icon::after {
+  top: 7px;
+}
 
 
 .navbar-custom {

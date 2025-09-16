@@ -38,10 +38,10 @@ const awards = [
 ];
 
 const services = [
-  { id: 1, title: "Web development", image: wb2 },
-  { id: 2, title: "Marketing", image: bd2 },
-  { id: 3, title: "Odoo & Custom ERPs", image: o1 },
-  { id: 4, title: "AI/ML", image: am },
+  { id: 1, title: "Web development", image: wb2 , path: "/services/website-design-and-development" },
+  { id: 2, title: "Marketing", image: bd2, path:"/services/brand-building"},
+  { id: 3, title: "Odoo & Custom ERPs", image: o1 , path:"/services/odoo-services"},
+  { id: 4, title: "AI / ML", image: am ,path:"/services/Ai-Ml"}
 ];
 
 const topImages = [Top1, Top2, Top3,hm1];
@@ -103,7 +103,7 @@ const Home: React.FC = () => {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            LinkedIn
+                            
                           </a>
                         </div>
                       </div>
@@ -113,20 +113,20 @@ const Home: React.FC = () => {
                       >
                         <img
                           src={Salik}
-                          alt="Salik Husnaq"
+                          alt="Hazrat Bilal"
                           className="founder-img"
                         />
                         <div className="custom-tooltip">
-                          <strong>Salik Husnaq</strong>
+                          <strong>Hazrat Bilal</strong>
                           <br />
-                          Co-Founder @Somewhere
+                          Co-Founder of BTS
                           <br />
                           <a
                             // href="https://www.linkedin.com/in/salik-husnaq/?originalSubdomain=pk"
                             target="_blank"
                             rel="noreferrer"
                           >
-                            LinkedIn
+                            
                           </a>
                         </div>
                       </div>
@@ -195,30 +195,31 @@ const Home: React.FC = () => {
       </section>
 
       {/* Services */}
-      <section className="services-section py-5 mb-5">
-        <div className="container">
-          <p className="ser-subheading text-center text-md-start">(SERVICES)</p>
-          {services.map((service, index) => (
-            <div
-              key={service.id}
-              className={`service-row ${activeIndex === index ? "active" : ""}`}
-              onMouseEnter={() => setActiveIndex(index)}
-              onMouseLeave={() => setActiveIndex(null)}
-            >
-              <span className="service-index">0{service.id}</span>
-              <h2 className="service-title">{service.title}</h2>
-              <img src={Arrow} alt="Arrow" className="service-arrow-img" />
-              {activeIndex === index && (
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="service-image"
-                />
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
+<section className="services-section py-5 mb-5">
+      <div className="container">
+        <p className="ser-subheading text-center text-md-start">(SERVICES)</p>
+        {services.map((service, index) => (
+          <div
+            key={service.id}
+            className={`service-row ${activeIndex === index ? "active" : ""}`}
+            onMouseEnter={() => setActiveIndex(index)}
+            onMouseLeave={() => setActiveIndex(null)}
+          >
+            <span className="service-index">0{service.id}</span>
+            <h2 className="service-title">{service.title}</h2>
+            <img src={Arrow} alt="Arrow" className="service-arrow-img" />
+
+            {/* Smooth hover image */}
+            <img
+              src={service.image}
+              alt={service.title}
+              className={`service-image ${activeIndex === index ? "show" : ""}`}
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+    </section>
 
       {/* Awards */}
       <section
