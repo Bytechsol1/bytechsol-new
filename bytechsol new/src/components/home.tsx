@@ -20,7 +20,7 @@ import icon from "../assets/images/tick.svg";
 import Testimonial from "../shareable/testimonial";
 import FaqSection from "../shareable/faq";
 import ContactSection from "../shareable/contact";
-import wb2 from "../assets/images/web1img.png"
+import wb2 from "../assets/images/web1img.jpg"
 import bd2 from "../assets/images/brandim.jpg";
 import p3 from "../assets/images/ppg3.png";
 import a2 from "../assets/images/awar2.png";
@@ -98,13 +98,6 @@ const Home: React.FC = () => {
                           <br />
                           Founder & CEO @BTS
                           <br />
-                          <a
-                            // href="https://www.linkedin.com/in/yasir-irfan-b988721b7/"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            
-                          </a>
                         </div>
                       </div>
                       <div
@@ -121,13 +114,6 @@ const Home: React.FC = () => {
                           <br />
                           Co-Founder of BTS
                           <br />
-                          <a
-                            // href="https://www.linkedin.com/in/salik-husnaq/?originalSubdomain=pk"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            
-                          </a>
                         </div>
                       </div>
                     </div>

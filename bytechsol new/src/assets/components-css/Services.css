@@ -3,12 +3,14 @@
   src: url("/Fonts/Guminert Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Guminert";
   src: url("/Fonts/Guminert Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 .dg-products-section {

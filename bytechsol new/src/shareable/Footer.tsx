@@ -26,9 +26,7 @@ const Footer: React.FC = () => {
         />
         </Link>
         <p className="footer-description">
-          Wavespace is a global UI/UX design agency that boosts brand value
-          with user-friendly, effective designs for web, mobile, and SaaS
-          platforms.
+Bytechsol is a full-service software agency offering web development, AI/ML solutions, ERP implementation, and digital marketing.
         </p>
 
         <Link className="deck-button" to="/contact">
