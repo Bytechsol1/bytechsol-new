@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
         />
         </Link>
         <p className="footer-description">
-Bytechsol is a full-service software agency offering web development, AI/ML solutions, ERP implementation, and digital marketing.
+BytechSol is a full-service software agency offering web development, AI/ML solutions, ERP implementation, and digital marketing.
         </p>
 
         <Link className="deck-button" to="/contact">
@@ -85,11 +85,11 @@ Bytechsol is a full-service software agency offering web development, AI/ML solu
     {/* Bottom Footer */}
     <div className="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center pt-4">
       <small className="text" style={{ color: "#aaa" }}>
-        © 2025 Bytechsol LLC
+        © 2025 BytechSol LLC
       </small>
       <div className="text-center legal-text my-2 my-md-0">
         <span className="text" style={{ color: "#aaa" }}>
-          Bytechsol is a limited liability company based in
+          BytechSol is a limited liability company based in
           <span className="flag-wave mx-1 fi fi-us"></span>
           <span className="flag-wave fi fi-pk"></span>
         </span>
