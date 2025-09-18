@@ -334,7 +334,7 @@ const Services: React.FC = () => {
 
           {/* Right Content */}
           <div className=" col-lg-6 px-5"><Link to="/services/website-design-and-development">
-            <h2 className="webdesign-heading1">Website Design & Development <img src={arr} alt="link" className="mx-4"  width={"40px"}/></h2> </Link>
+            <h2 className="webdesign-heading1">Website Design & Development <img src={arr} alt="link" className="arr"/></h2> </Link>
             <p className="webdesign-desc1">
               We design eye-catching, easy-to-use, and mobile-friendly websites
               that combine your business objectives with your brand identity.
@@ -383,7 +383,7 @@ const Services: React.FC = () => {
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5"><Link to="/services/custom-web">
-            <h2 className="webdesign-heading">Custom Web Solutions <img src={arr} alt="link" className=""  width={"40px"}/></h2> </Link>
+            <h2 className="webdesign-heading">Custom Web Solutions <img src={arr} alt="link" className="arr"  /></h2> </Link>
             <p className="webdesign-desc">
               We use our custom web development services, which can fit your
               business requirements. We offer custom CMS systems as well as
@@ -449,7 +449,7 @@ const Services: React.FC = () => {
           {/* Right Content */}
           <div className="col-lg-6 px-5"><Link to="/services/web-app">
             <h2 className="webdesign-heading1">
-              Web App & Software Development <img src={arr} alt="link" className="mx-4"  width={"40px"}/>
+              Web App & Software Development <img src={arr} alt="link" className="arr"  />
             </h2></Link>
             <p className="webdesign-desc1">
               Our specialization lies in secure, scalable software solutions and
@@ -497,7 +497,7 @@ const Services: React.FC = () => {
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5"><Link to="/services/E-Commerce-solutions">
-            <h2 className="webdesign-heading">E-Commerce Solutions <img src={arr} alt="link" className=""  width={"40px"}/></h2 >
+            <h2 className="webdesign-heading">E-Commerce Solutions <img src={arr} alt="link" className="arr"  /></h2 >
             </Link>
             <p className="webdesign-desc">
               Our e-commerce development services enable an enterprise to sell
@@ -564,7 +564,7 @@ const Services: React.FC = () => {
 
           {/* Right Content */}
           <div className="col-lg-6 px-5"><Link to="/services/brand-building">
-            <h2 className="webdesign-heading1">Brand Building <img src={arr} alt="link" className="mx-4"  width={"30px"}/></h2> </Link>
+            <h2 className="webdesign-heading1">Brand Building <img src={arr} alt="link" className="arr"  /></h2> </Link>
             <p className="webdesign-desc1">
               We assist companies in enhancing their brand with brand-building
               services. Whether it is losing out in logo design or a
@@ -611,7 +611,7 @@ const Services: React.FC = () => {
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5"><Link to="/services/seo-service">
-            <h2 className="webdesign-heading">SEO Services<img src={arr} alt="link" className="mx-4"  width={"30px"}/></h2></Link>
+            <h2 className="webdesign-heading">SEO Services<img src={arr} alt="link" className="arr"  /></h2></Link>
             <p className="webdesign-desc">
               Our professional search engine optimization services enhance your
               search engine ranking with Google, targeted traffic, and more
@@ -676,7 +676,7 @@ const Services: React.FC = () => {
 
           {/* Right Content */}
           <div className="col-lg-6 px-5"><Link to="/services/Ai-Ml">
-            <h2 className="webdesign-heading1">AI & ML Solutions<img src={arr} alt="link" className="mx-4"  width={"30px"}/></h2> </Link>
+            <h2 className="webdesign-heading1">AI & ML Solutions<img src={arr} alt="link" className="arr"  /></h2> </Link>
             <p className="webdesign-desc1">
               We provide world-edge artificial intelligence and machine learning
               technologies such as chatbots, NLP models, and predictive
@@ -723,7 +723,7 @@ const Services: React.FC = () => {
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5"><Link to="/services/ERP-service">
-            <h2 className="webdesign-heading">ERP Services<img src={arr} alt="link" className="mx-4"  width={"30px"}/></h2> </Link>
+            <h2 className="webdesign-heading">ERP Services<img src={arr} alt="link" className="arr"  /></h2> </Link>
             <p className="webdesign-desc">
               Our tailor-made ERP development solutions make processes more
               efficient, help to manage data centrally, and optimize work. ERP
@@ -787,7 +787,7 @@ const Services: React.FC = () => {
 
           {/* Right Content */}
           <div className="col-lg-6 px-5"><Link to="/services/odoo-services">
-            <h2 className="webdesign-heading1">Odoo Services<img src={arr} alt="link" className="mx-4"  width={"30px"}/></h2>   </Link>
+            <h2 className="webdesign-heading1">Odoo Services<img src={arr} alt="link" className="arr"  /></h2>   </Link>
             <p className="webdesign-desc1">
               We offer Odoo migration, customization, and consultancy services
               to streamline your business operations. Our professional Odoo
