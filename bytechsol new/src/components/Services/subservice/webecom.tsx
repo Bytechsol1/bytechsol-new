@@ -13,6 +13,8 @@ import wo from "../../../assets/images/woocom.png"
 import py from "../../../assets/images/payment.png"
 import mk from "../../../assets/images/marketplace.png"
 import arrow from "../../../assets/images/arrow.svg"
+import im1 from "../../../assets/images/ecomerceim.png"
+
 
 const accordionItemswebdev = [
   { title: "Platform selection and customization", description: "We select the appropriate e-commerce platform, either Shopify, WooCommerce, or Magento, and customize it to your brand. The theme customization, versatile layouts, and key functionality integration will help your store to express your identity and, at the same time, enable further future expansion as your business expands." },
@@ -64,32 +66,41 @@ const Webecom: React.FC = () => {
   return (
     <>
     {/* 1st Section */}
-        <section className="dg-products-section py-5" style={{ backgroundColor: "#1C3134" }}>
-      <div className="container">
-        <div className="row align-items-center">
-          
-          {/* Left content */}
-          <div className="col-lg-7">
-            <div className="dg-products-content text-start">
-              <h1 className="dg-products-heading">
-                Next-Level E-Commerce Solutions for Your Digital Store
-              </h1>
-              <p className="dg-products-description">
-                Our e-commerce solutions assist companies in creating scalable,
+        <section
+  className="dg-products-section py-5"
+  style={{ backgroundColor: "#1C3134" }}
+>
+  <div className="container">
+    <div className="row align-items-center">
+      
+      {/* Left content */}
+      <div className="col-lg-7">
+        <div className="dg-products-content text-start">
+          <h1 className="dg-products-heading">
+            Next-Level E-Commerce Solutions for Your Digital Store
+          </h1>
+          <p className="dg-products-description">
+            Our e-commerce solutions assist companies in creating scalable,
             secure, and easy-to-use online stores that drive sales. We design
             custom websites, integrate payment gateways, and develop advanced
             shopping carts to expand your online store and boost revenue.
-              </p>
-              <div className="dg-products-buttons">
-                <a href="#contact" className="dg-button dg-button-primary">
-                  Start your website project today <span className="arrow">→</span>
-                </a>
-              </div>
-            </div>
+          </p>
+          <div className="dg-products-buttons">
+            <a href="#contact" className="dg-button dg-button-primary">
+              Start your website project today <span className="arrow">→</span>
+            </a>
           </div>
         </div>
       </div>
-    </section>
+
+      {/* Right image */}
+      <div className="col-lg-5 text-center"  style={{ width: "30%", marginLeft: "80px" }}>
+        <img src={im1} alt="Brand Branding" className="img-fluid" />
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <TrustedBySection />
 

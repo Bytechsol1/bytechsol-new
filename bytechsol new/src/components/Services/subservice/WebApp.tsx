@@ -9,7 +9,7 @@ import p03 from "../../../assets/images/pw03.png"
 import s04 from "../../../assets/images/ss04.png"
 import e05 from "../../../assets/images/ea05.png"
 import ContactSection from "../../../shareable/contact";
-import id from "../../../assets/images/ideation.png"
+import id from "../../../assets/images/ideat.png"
 import bl from "../../../assets/images/blacklp.png"
 import pl from "../../../assets/images/planlp.png"
 import fw from "../../../assets/images/findwk.png"

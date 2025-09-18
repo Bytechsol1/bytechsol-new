@@ -1,6 +1,6 @@
 import  { useState } from "react";
 import "../../../assets/components-css/ProductDesign.css";
-import er from "../../../assets/images/erp01.svg"
+import er from "../../../assets/images/erp.png"
 import TrustedBySection from "../../../shareable/trust500";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";

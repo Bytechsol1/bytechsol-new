@@ -68,7 +68,7 @@ const Blog = () => {
           <p className="csd-blog-subtitle d-none d-md-block">All Blogs</p>
 
           <div className="csd-blog-header d-none d-sm-flex align-items-center">
-            <i className="fa-solid fa-magnifying-glass me-2"></i>
+            {/* <i className="fa-solid fa-magnifying-glass me-2"></i> */}
             <input
               type="text"
               className="csd-blog-search"
@@ -79,7 +79,7 @@ const Blog = () => {
           <h1 className="csd-blog-title">bytechsol Blog</h1>
 
           <div className="csd-blog-header d-flex align-items-cente me-5 w-50 d-block d-md-none">
-            <i className="fa-solid fa-magnifying-glass me-2"></i>
+            {/* <i className="fa-solid fa-magnifying-glass me-2"></i> */}
             <input
               type="text"
               className="csd-blog-search"

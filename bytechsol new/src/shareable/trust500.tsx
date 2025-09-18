@@ -1,8 +1,9 @@
 import React from "react";
 import t1 from "../assets/images/tss1.png"
 import t2 from "../assets/images/tss2.png"
+import op from "../assets/images/oppa.jpg"
 
-const topImages = [t1, t2];
+const topImages = [t1, t2, op];
 
 const TrustedBySection = () => {
   return (
