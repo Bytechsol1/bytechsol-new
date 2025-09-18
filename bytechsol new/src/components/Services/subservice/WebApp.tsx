@@ -1,6 +1,4 @@
-// import React, { useState } from "react";
 import "../../../assets/components-css/webapp.css";
-import { FiChevronDown } from "react-icons/fi";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import TrustedBySection from "../../../shareable/trust500";
@@ -18,6 +16,8 @@ import fw from "../../../assets/images/findwk.png"
 import React, { useRef,  useState,useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import arrow from "../../../assets/images/arrow.svg"
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -214,11 +214,11 @@ const Webapp: React.FC = () => {
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">{item.description}</p>
@@ -253,11 +253,11 @@ const Webapp: React.FC = () => {
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="webdesign-accordion-title">{item.title}</span>
-                  <FiChevronDown
-                    className={`webdesign-icon ${
-                      activeIndex === index ? "rotated" : ""
-                    }`}
-                  />
+                  <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+/>
                 </div>
                 {activeIndex === index && (
                   <p className="webdesign-accordion-desc">{item.description}</p>
@@ -313,11 +313,11 @@ const Webapp: React.FC = () => {
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">
@@ -354,11 +354,11 @@ const Webapp: React.FC = () => {
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="webdesign-accordion-title">{item.title}</span>
-                  <FiChevronDown
-                    className={`webdesign-icon ${
-                      activeIndex === index ? "rotated" : ""
-                    }`}
-                  />
+                  <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+/>
                 </div>
                 {activeIndex === index && (
                   <p className="webdesign-accordion-desc">{item.description}</p>
@@ -413,11 +413,11 @@ const Webapp: React.FC = () => {
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">

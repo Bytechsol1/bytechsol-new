@@ -349,7 +349,7 @@
   font-size: 18px;
   margin-bottom: 14px;
   color: #aaa;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: color 0.2s ease;
 }
 

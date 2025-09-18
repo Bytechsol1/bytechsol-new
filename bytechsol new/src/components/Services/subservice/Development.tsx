@@ -6,7 +6,6 @@ import FaqSection from "../../../shareable/faq";
 import ContactSection from "../../../shareable/contact";
 import TrustedBySection from "../../../shareable/trust500";
 import mb from "../../../assets/images/mb1.png";
-import { FiChevronDown } from "react-icons/fi";
 import wf from "../../../assets/images/wfir1.png";
 import wj from "../../../assets/images/wjourn2.png";
 import wfu from "../../../assets/images/wfut3.png";
@@ -17,6 +16,8 @@ import wb from "../../../assets/images/web.png";
 import ld from "../../../assets/images/landesg.jpg";
 import cr from "../../../assets/images/creatim.jpg";
 import br from "../../../assets/images/braim.png";
+import arrow from "../../../assets/images/arrow.svg"
+
 
 const accordionItemsUI = [
   {
@@ -240,11 +241,11 @@ const Development: React.FC = () => {
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">
@@ -288,11 +289,11 @@ const Development: React.FC = () => {
                     <span className="webdesign-accordion-title">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc">
@@ -354,11 +355,11 @@ const Development: React.FC = () => {
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">
@@ -401,11 +402,11 @@ const Development: React.FC = () => {
                     <span className="webdesign-accordion-title">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc">
@@ -467,11 +468,11 @@ const Development: React.FC = () => {
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">

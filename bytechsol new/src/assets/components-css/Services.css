@@ -266,7 +266,7 @@
 .webdesign-accordion-item {
   border-bottom: 1px solid #ddd;
   padding: 16px 0;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: background-color 0.3s ease;
 }
 
@@ -293,13 +293,14 @@
 }
 
 .webdesign-icon {
-  font-size: 20px;
+  width: 20px;
   color: #111;
   transition: transform 0.3s ease;
+    transform: rotate(-45deg);
 }
 
 .webdesign-icon.rotated {
-  transform: rotate(180deg);
+  transform: rotate(145deg);
 }
 
 .webdesign-accordion-desc {
@@ -362,7 +363,7 @@
 .webdesign-accordion-item1 {
   border-bottom: 1px solid #ddd;
   padding: 16px 0;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: background-color 0.3s ease;
 }
 
@@ -389,13 +390,14 @@
 }
 
 .webdesign-icon1 {
-  font-size: 20px;
+  width: 20px;
   color: #111;
   transition: transform 0.3s ease;
+  transform: rotate(-45deg);
 }
 
 .webdesign-icon1.rotated {
-  transform: rotate(180deg);
+  transform: rotate(145deg);
 }
 
 .webdesign-accordion-desc1 {

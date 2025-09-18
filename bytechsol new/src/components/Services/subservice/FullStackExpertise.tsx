@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { FiChevronDown } from "react-icons/fi"; 
+import  { useState } from "react";
 import "../../../assets/components-css/FullStackExpertise.css";
 import TrustedBySection from "../../../shareable/trust500";
 import se from "../../../assets/images/seonew.png"
@@ -15,6 +14,7 @@ import sv from "../../../assets/images/services.png"
 import os from "../../../assets/images/onseo.png"
 import fs from "../../../assets/images/offseo.png"
 import ts from "../../../assets/images/techseo.png"
+import arrow from "../../../assets/images/arrow.svg"
 
 
 const industryData = [
@@ -84,12 +84,11 @@ const accordionItemspwa = [
 
 
 const ContactUs = () => {
-  const [activeIndex, setActiveIndex] = useState(null); // ✅ Manage open item
+const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
+const toggleAccordion = (index: number) => {
+  setActiveIndex(activeIndex === index ? null : index);
+};
   return (
     <>
        {/* 1st Section */}
@@ -178,11 +177,11 @@ Start your website project today <span className="arrow">→</span>
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">{item.description}</p>
@@ -217,11 +216,11 @@ Start your website project today <span className="arrow">→</span>
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="webdesign-accordion-title">{item.title}</span>
-                  <FiChevronDown
-                    className={`webdesign-icon ${
-                      activeIndex === index ? "rotated" : ""
-                    }`}
-                  />
+                  <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+/>
                 </div>
                 {activeIndex === index && (
                   <p className="webdesign-accordion-desc">{item.description}</p>
@@ -277,11 +276,11 @@ Start your website project today <span className="arrow">→</span>
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">

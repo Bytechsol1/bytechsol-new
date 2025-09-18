@@ -1,5 +1,5 @@
 import React, { useMemo, useRef, useState } from "react";
-import { FiChevronDown } from "react-icons/fi";
+import arrow from "../assets/images/arrow.svg"
 
 type Faq = {
   id: number;
@@ -63,10 +63,11 @@ const FaqSection: React.FC = () => {
                   type="button"
                 >
                   <span className="faq-question">{item.question}</span>
-                  <FiChevronDown
-                    aria-hidden="true"
-                    className={`faq-icon ${isOpen ? "rotated" : ""}`}
-                  />
+                  <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                 </button>
 
                 {/* Keep panel mounted, animate max-height & opacity */}

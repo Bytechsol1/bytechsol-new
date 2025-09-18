@@ -4,7 +4,6 @@ import "../../../assets/components-css/development.css";
 import cl from "../../../assets/images/cwimg.png";
 import FaqSection from "../../../shareable/faq";
 import TrustedBySection from "../../../shareable/trust500";
-import { FiChevronDown } from "react-icons/fi";
 import cm from "../../../assets/images/cms.png";
 import cw from "../../../assets/images/cwapp.png";
 import pl from "../../../assets/images/plugimg.png";
@@ -13,6 +12,8 @@ import sv from "../../../assets/images/servimg.png";
 import bgImage from "../../../assets/images/bgimg.jpg";
 import icon from "../../../assets/images/tick.svg";
 import ContactSection from "../../../shareable/contact";
+import arrow from "../../../assets/images/arrow.svg"
+
 
 // Accordion Data
 const accordionItemscms = [
@@ -246,11 +247,11 @@ const CustomWeb: React.FC = () => {
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">
@@ -297,11 +298,11 @@ const CustomWeb: React.FC = () => {
                     <span className="webdesign-accordion-title">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc">
@@ -366,11 +367,11 @@ const CustomWeb: React.FC = () => {
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">
@@ -416,11 +417,11 @@ const CustomWeb: React.FC = () => {
                     <span className="webdesign-accordion-title">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc">
@@ -484,11 +485,11 @@ const CustomWeb: React.FC = () => {
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">

@@ -1,4 +1,3 @@
-import { FiChevronDown } from "react-icons/fi";
 import "../../../assets/components-css/ProductDesign.css";
 import TrustedBySection from "../../../shareable/trust500";
 import Testimonial from "../../../shareable/testimonial";
@@ -15,6 +14,8 @@ import sc from "../../../assets/images/social.png"
 import  { useRef,  useState, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import arrow from "../../../assets/images/arrow.svg"
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,11 +80,11 @@ const accordionItemssmb = [
 ];
 
 const ProductDesign = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+const toggleAccordion = (index: number) => {
+  setActiveIndex(activeIndex === index ? null : index);
+};
   const containerRef = useRef<HTMLDivElement>(null);
 
   // useLayoutEffect is preferred for GSAP animations to run synchronously
@@ -182,9 +183,11 @@ const ProductDesign = () => {
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <span className="webdesign-accordion-title1">{item.title}</span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">{item.description}</p>
@@ -221,11 +224,11 @@ const ProductDesign = () => {
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="webdesign-accordion-title">{item.title}</span>
-                  <FiChevronDown
-                    className={`webdesign-icon ${
-                      activeIndex === index ? "rotated" : ""
-                    }`}
-                  />
+                  <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+/>
                 </div>
                 {activeIndex === index && (
                   <p className="webdesign-accordion-desc">{item.description}</p>
@@ -277,9 +280,11 @@ const ProductDesign = () => {
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <span className="webdesign-accordion-title1">{item.title}</span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">{item.description}</p>

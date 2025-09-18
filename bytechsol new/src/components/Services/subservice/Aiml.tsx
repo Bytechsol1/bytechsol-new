@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "../../../assets/components-css/Aiml.css"; 
 import ai from "../../../assets/images/aiml.svg";
 import bgImage from "../../../assets/images/bgimg.jpg";
@@ -6,10 +6,10 @@ import icon from "../../../assets/images/tick.svg";
 import TrustedBySection from "../../../shareable/trust500";
 import v1 from "../../../assets/images/visual1.jpg";
 import sv from "../../../assets/images/servimg.png";
-import { FiChevronDown } from "react-icons/fi"; 
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import ContactSection from "../../../shareable/contact";
+import arrow from "../../../assets/images/arrow.svg"
 
 
 const accordionItemssoft = [
@@ -70,13 +70,11 @@ const accordionItemshard = [
 
 const AimlSection = () => {
   
-  const [activeIndex, setActiveIndex] = useState(null);
+const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
+const toggleAccordion = (index: number) => {
+  setActiveIndex(activeIndex === index ? null : index);
+};
   return (
     <>
       {/* 1st Section */}
@@ -141,11 +139,11 @@ const AimlSection = () => {
                     <span className="webdesign-accordion-title">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc">
@@ -194,11 +192,11 @@ const AimlSection = () => {
                     <span className="webdesign-accordion-title">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc">

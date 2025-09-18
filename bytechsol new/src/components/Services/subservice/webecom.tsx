@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../../../assets/components-css/webecom.css";
-import { FiChevronDown } from "react-icons/fi";
 // import w1 from "../../../assets/images/wecom.jpg";
 import TrustedBySection from "../../../shareable/trust500";
 import Testimonial from "../../../shareable/testimonial";
@@ -13,7 +12,7 @@ import sp from "../../../assets/images/shopify.png"
 import wo from "../../../assets/images/woocom.png"
 import py from "../../../assets/images/payment.png"
 import mk from "../../../assets/images/marketplace.png"
-
+import arrow from "../../../assets/images/arrow.svg"
 
 const accordionItemswebdev = [
   { title: "Platform selection and customization", description: "We select the appropriate e-commerce platform, either Shopify, WooCommerce, or Magento, and customize it to your brand. The theme customization, versatile layouts, and key functionality integration will help your store to express your identity and, at the same time, enable further future expansion as your business expands." },
@@ -121,11 +120,11 @@ const Webecom: React.FC = () => {
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">{item.description}</p>
@@ -160,11 +159,11 @@ const Webecom: React.FC = () => {
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="webdesign-accordion-title">{item.title}</span>
-                  <FiChevronDown
-                    className={`webdesign-icon ${
-                      activeIndex === index ? "rotated" : ""
-                    }`}
-                  />
+                  <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+/>
                 </div>
                 {activeIndex === index && (
                   <p className="webdesign-accordion-desc">{item.description}</p>
@@ -220,11 +219,11 @@ const Webecom: React.FC = () => {
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">
@@ -261,11 +260,11 @@ const Webecom: React.FC = () => {
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="webdesign-accordion-title">{item.title}</span>
-                  <FiChevronDown
-                    className={`webdesign-icon ${
-                      activeIndex === index ? "rotated" : ""
-                    }`}
-                  />
+                  <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+/>
                 </div>
                 {activeIndex === index && (
                   <p className="webdesign-accordion-desc">{item.description}</p>
@@ -320,11 +319,11 @@ const Webecom: React.FC = () => {
                     <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
-                    <FiChevronDown
-                      className={`webdesign-icon1 ${
-                        activeIndex === index ? "rotated" : ""
-                      }`}
-                    />
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
                   {activeIndex === index && (
                     <p className="webdesign-accordion-desc1">
