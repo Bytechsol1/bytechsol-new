@@ -366,7 +366,24 @@
   position: relative;
   padding: 2rem 1rem;
 }
+ .service-link {
+  text-decoration: none;
+  color: inherit;
+}
 
+ .service-link:visited {
+  color: inherit;
+}
+
+ .service-link:hover {
+  color: inherit;
+}
+.services-section .service-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;   
+  width: 100%;    
+}
 .ser-subheading {
   font-size: 1rem;
   font-weight: 600;
@@ -417,6 +434,7 @@
   transition: color 0.3s ease;
   color: inherit;
 }
+
 
 .service-arrow-img {
   width: 24px;
@@ -624,11 +642,10 @@
 
 .card-container {
   display: block;
-  padding: 0;
   position: relative;
   width: 100%;
   margin: 0 auto;
-  height: 90vh;
+  height: 90vh; /* ensures full screen height */
 }
 .card-title-text {
   font-size: 22px;

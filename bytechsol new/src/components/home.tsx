@@ -29,6 +29,7 @@ import g4 from "../assets/images/grow4.png";
 import o1 from "../assets/images/odoo3.png" 
 
 import ScrollCards from "./ScrollCards";
+import { Link } from "react-router-dom";
 
 const awards = [
   { text: "500+ Happy clients", img: p3 },
@@ -192,7 +193,9 @@ const Home: React.FC = () => {
             onMouseLeave={() => setActiveIndex(null)}
           >
             <span className="service-index">0{service.id}</span>
-            <h2 className="service-title">{service.title}</h2>
+<Link to={service.path} className="service-link">
+  <h2 className="service-title">{service.title}</h2>
+</Link>
             <img src={Arrow} alt="Arrow" className="service-arrow-img" />
 
             {/* Smooth hover image */}

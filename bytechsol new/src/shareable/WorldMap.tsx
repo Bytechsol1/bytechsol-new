@@ -125,11 +125,11 @@ const WorldMap: React.FC = () => {
             </foreignObject>
 
             {/* Location icon */}
-            <foreignObject width={30} height={30} x={-8} y={-25}>
-              <div className="text-primary text-center" style={{ fontSize: "20px" }}>
+            {/* <foreignObject width={30} height={30} x={-8} y={-25}>
+              <div className=" text-center" style={{ fontSize: "20px", color:"#289dd8" }}>
                 <i className="fa-solid fa-location-dot"></i>
               </div>
-            </foreignObject>
+            </foreignObject> */}
           </g>
         </Marker>
       ))}

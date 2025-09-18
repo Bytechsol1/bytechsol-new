@@ -1,5 +1,3 @@
-import React from "react";
-import { FiChevronDown } from "react-icons/fi";
 import ContactSection from "../../shareable/contact";
 import "../../assets/components-css/Blog.css";
 import dl from "../../assets/images/dlrs.png";

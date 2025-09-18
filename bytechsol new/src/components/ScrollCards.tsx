@@ -1,5 +1,5 @@
 import "../assets/components-css/home.css";
-import React, { useRef, useLayoutEffect } from "react"; // Changed useEffect to useLayoutEffect
+import React, { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import cr1 from "../assets/images/1card.svg";
@@ -9,7 +9,6 @@ import cr3 from "../assets/images/3card.svg";
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
-  // ... (your existing cards array)
   {
     label: "We Deliver What We Promise",
     color: "design",
@@ -44,17 +43,13 @@ const cards = [
 const ScrollCards: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // useLayoutEffect is preferred for GSAP animations to run synchronously
-  // after the DOM is updated, preventing animation conflicts on route changes.
   useLayoutEffect(() => {
-    // gsap.context collects all animations and ScrollTriggers so they can be
-    // reverted together during cleanup.
     const ctx = gsap.context(() => {
       const cardsEls = gsap.utils.toArray<HTMLElement>(".card-row");
       const container = containerRef.current;
       if (!container) return;
 
-      // set z-index so new card is always above
+      // set z-index so later cards appear on top
       cardsEls.forEach((card, i) => {
         card.style.zIndex = `${i + 1}`;
       });
@@ -63,30 +58,30 @@ const ScrollCards: React.FC = () => {
         scrollTrigger: {
           trigger: container,
           start: "top top",
-          end: () => `+=${cardsEls.length * window.innerHeight}`,
+          end: () => `+=${(cardsEls.length - 1) * window.innerHeight}`, // exclude first card
           scrub: true,
           pin: container,
           pinSpacing: true,
         },
       });
 
-      cardsEls.forEach((card, i) => {
+      // skip animating the first card → keep it fixed
+      cardsEls.slice(1).forEach((card, i) => {
         tl.fromTo(
           card,
-          { y: window.innerHeight, opacity: 1 },
-          { y: 0, opacity: 1, duration: 0.8 },
-          i
+          { y: window.innerHeight },
+          { y: 0, duration: 0.8 },
+          i // stagger
         );
       });
-    }, containerRef); // Scopes the animation to this component's DOM tree
+    }, containerRef);
 
-    // The cleanup function returned from useLayoutEffect reverts the context
-    // when the component unmounts, killing all associated animations and triggers.
     return () => ctx.revert();
-  }, []); // Empty dependency array ensures this effect runs only once on mount
+  }, []);
 
   return (
     <>
+      {/* Heading outside the pinned animation */}
       <div className="container">
         <div className="group5-content py-5">
           <div className="group5-text-block text-center text-md-start">
@@ -97,14 +92,15 @@ const ScrollCards: React.FC = () => {
               Built by Humans. Backed by Tech. Driven by Purpose.
             </h2>
             <p className="group5-para fs-3">
-              {" "}
-              We’re not just here to code — we’re here to understand your
-              vision, solve real problems, and grow with you. At Bytechsol, your
-              goals become our mission.{" "}
+              We’re not just here to code — we’re here to understand your vision,
+              solve real problems, and grow with you. At Bytechsol, your goals
+              become our mission.
             </p>
           </div>
         </div>
       </div>
+
+      {/* Only cards are pinned & animated */}
       <section
         className="performance-section"
         style={{ height: "100vh" }}
@@ -118,7 +114,7 @@ const ScrollCards: React.FC = () => {
                 <p>{card.items[0]}</p>
               </div>
               <div className="card-img">
-                <img src={card.image} />
+                <img src={card.image} alt={card.label} />
               </div>
             </div>
           ))}

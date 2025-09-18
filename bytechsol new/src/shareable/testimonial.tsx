@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import com from "../assets/images/comma.png";
 import cut from "../assets/images/cut.png";
 
