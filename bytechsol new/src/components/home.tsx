@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AnimatedText from "../shareable/AnimatedText";
-import am from "../assets/images/aimlimg.jpg"
+import am from "../assets/images/aiml-home.svg"
 import "../assets/components-css/home.css";
 import Clutch from "../assets/images/clutch.png";
 import Yasir from "../assets/images/yasir.jpg";
