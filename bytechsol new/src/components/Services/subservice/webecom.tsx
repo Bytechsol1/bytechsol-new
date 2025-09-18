@@ -94,9 +94,10 @@ const Webecom: React.FC = () => {
       </div>
 
       {/* Right image */}
-      <div className="col-lg-5 text-center"  style={{ width: "30%", marginLeft: "80px" }}>
-        <img src={im1} alt="Brand Branding" className="img-fluid" />
-      </div>
+     <div className="col-lg-5 text-center d-none d-lg-block" style={{ width: "30%", marginLeft: "80px" }}>
+  <img src={im1} alt="Brand Branding" className="img-fluid" />
+</div>
+
     </div>
   </div>
 </section>

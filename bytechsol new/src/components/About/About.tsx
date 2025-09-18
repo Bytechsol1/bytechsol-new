@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import "../../assets/components-css/About.css";
 import co from "../../assets/images/comp.png";
 import bk from "../../assets/images/blacky.png";
@@ -7,41 +8,41 @@ import FaqSection from "../../shareable/faq";
 import ContactSection from "../../shareable/contact";
 import TrustedBySection from "../../shareable/trust500";
 import hm1 from "../../assets/images/homeimg1.png"
+import { Link } from "react-router-dom";
+import arrow from "../../assets/images/arrow.svg"
 
-const accordionData = [
+
+
+const accordionItems = [
   {
-    id: "1",
     title: " Built for Speed & Scale",
-    content:
-      "Whether it is a quick MVP release or an enterprise-level system, we design solutions at a startup pace that can scale along with your business.",
+    description: "Whether it is a quick MVP release or an enterprise-level system, we design solutions at a startup pace that can scale along with your business.",
   },
   {
-    id: "2",
     title: "Deep Tech Expertise, Zero Fluff",
-    content:
-      "Whether it's the development of AI/ML, SaaS platforms, or powerful ERP infrastructure, our skilled team comes up with solutions that address real-world business challenges.",
+    description: "Whether it's the development of AI/ML, SaaS platforms, or powerful ERP infrastructure, our skilled team comes up with solutions that address real-world business challenges.",
   },
   {
-    id: "3",
     title: "Direct Access to Specialists",
-    content:
-      "No account managers or layers. You will be working alongside the lead developers, designers, and strategy partners who are in-depth with your product.",
+    description: "No account managers or layers. You will be working alongside the lead developers, designers, and strategy partners who are in-depth with your product.",
   },
   {
-    id: "4",
     title: "Smart Design, Real Results",
-    content:
-      "We combine beautiful interfaces and a smooth UX, so that every screen is user-friendly, conversion-friendly, and brand-supporting.",
+    description: "We combine beautiful interfaces and a smooth UX, so that every screen is user-friendly, conversion-friendly, and brand-supporting.",
   },
   {
-    id: "5",
     title: "Flexible Partnership Models",
-    content:
-      "Need a full team, a tech extension, or one-off support? We provide a variety of engagement opportunities that fit your objectives and budget.",
+    description: "Need a full team, a tech extension, or one-off support? We provide a variety of engagement opportunities that fit your objectives and budget.",
   },
 ];
 
+
 const About: React.FC = () => {
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  
+    const toggleAccordion = (index: number) => {
+      setActiveIndex(index === activeIndex ? null : index);
+    };
   return (
     <>
       {/* 1st Section */}
@@ -197,18 +198,13 @@ const About: React.FC = () => {
           <span className="gradient-text">digital growth partner</span>.
         </h1>
       </section>
+      
       {/* 4th Section */}
-      <section className="why-bytechsol-section py-5">
+     <section className="webdesign-section container-fluid py-5">
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6 mb-4 mb-lg-0 text-center">
-              <img
-                src={bk}
-                alt="Bytechsol Team"
-                className="img-fluid custom-image"
-              />
-            </div>
-            <div className="col-lg-6">
+        <div className="row align-items-center">
+          {/* Left Content */}
+          <div className="col-lg-6">
               <h2 className="mb-4 fw-bold fs-3 fs-md-2 fs-lg-1 text-truncate w-100">
                 Website Maintenance & Support
               </h2>
@@ -223,42 +219,46 @@ const About: React.FC = () => {
                 line.
               </p>
 
-              <div
-                className="accordion accordion-flush"
-                id="accordionFlushExample"
-              >
-                {accordionData.map((item, index) => (
-                  <div className="accordion-item" key={index}>
-                    <h2
-                      className="accordion-header"
-                      id={`flush-heading-${index}`}
-                    >
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target={`#flush-collapse-${index}`}
-                        aria-expanded="false"
-                        aria-controls={`flush-collapse-${index}`}
-                      >
-                        <span className="service-index2">0{index + 1}</span>
-                        &nbsp;
-                        {item.title}
-                      </button>
-                    </h2>
-                    <div
-                      id={`flush-collapse-${index}`}
-                      className="accordion-collapse collapse"
-                      aria-labelledby={`flush-heading-${index}`}
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div className="accordion-body">{item.content}</div>
-                    </div>
+
+            <div className="webdesign-accordion mt-4">
+              {accordionItems.map((item, index) => (
+                <div
+                  className="webdesign-accordion-item"
+                  key={index}
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <div className="webdesign-accordion-header">
+                    <span className="webdesign-accordion-index">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="webdesign-accordion-title">
+                      {item.title}
+                    </span>
+                    <img
+  src={arrow}
+  alt="arrow"
+  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+/>
                   </div>
-                ))}
-              </div>
+                  {activeIndex === index && (
+                    <p className="webdesign-accordion-desc">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
+
+          {/* Right Image */}
+          <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0">
+            <img
+              src={bk}
+              alt="Web design preview"
+              className="webdesign-img img-fluid"
+            />
+          </div>
+        </div>
         </div>
       </section>
       <Testimonial />

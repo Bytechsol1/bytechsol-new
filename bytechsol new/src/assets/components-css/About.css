@@ -69,11 +69,11 @@
 }
 
 .scroll-image4 {
-  width: 382px;
-  height: 84px;
+  width: 150px;
+  height: 60px;
   object-fit: cover;
-  margin: 0 0.5rem;
-  border-radius: 25px;
+  margin: 0 0.3rem;
+  border-radius: 10px;
   background-color: #ddd;
 }
 

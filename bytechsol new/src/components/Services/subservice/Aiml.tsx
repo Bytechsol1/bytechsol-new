@@ -44,12 +44,12 @@ const accordionItemshard = [
     {
     title: "Intelligent Chatbots",
     description:
-      "We review your backlink profile and find the harmful or spammy links that can damage rankings. We clean up to get rid of the toxic links and save the authority of your site, and secure a healthier future growth.",
+      " Our chatbots can answer customer questions in real time and respond correctly day and night. They decrease waiting time and automate the support, which leads to increased satisfaction and reduced costs of operations.",
   },
   {
     title: "Multilingual Capabilities",
     description:
-      "We achieve backlinks with reputable websites, which are related to industries, by utilizing ethical outreach and content promotion. These good links increase domain authority, visibility, and position on search engines.",
+      "We create bots that will listen and speak in multiple languages, which will break the language barrier and allow companies to work with international audiences.",
   },
   {
     title: "Voice-Enabled Experiences",
@@ -168,53 +168,57 @@ const toggleAccordion = (index: number) => {
       </section>
 
       {/* 2nd Card */}
-      <section className="webdesign-section container-fluid py-5">
+     
+      <section className="webdesign-section1 container-fluid py-5">
         <div className="container">
         <div className="row align-items-center">
-          {/* Left Content */}
+          {/* Left Image */}
+          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
+            <img
+              src={v1}
+              alt="Web design preview"
+              className="webdesign-img1 img-fluid"
+            />
+          </div>
+
+          {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading">AI Chatbots & Voice Assistants</h2>
+            <h2 className="webdesign-heading1">
+              AI Chatbots & Voice Assistants
+            </h2>
             <p className="webdesign-desc">
               We develop AI-assisted chatbots and voice assistants that provide human-like, smooth interactions. They are made out of NLP and advanced AI models that enable these to automate customer support, enhance engagement, and offer personalized experiences on web, mobile, and voice-enabled platforms.
             </p>
 
-            <div className="webdesign-accordion mt-4">
+
+            <div className="webdesign-accordion1 mt-4">
               {accordionItemshard.map((item, index) => (
                 <div
-                  className="webdesign-accordion-item"
+                  className="webdesign-accordion-item1"
                   key={index}
                   onClick={() => toggleAccordion(index)}
                 >
-                  <div className="webdesign-accordion-header">
-                    <span className="webdesign-accordion-index">
+                  <div className="webdesign-accordion-header1">
+                    <span className="webdesign-accordion-index1">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <span className="webdesign-accordion-title">
+                    <span className="webdesign-accordion-title1">
                       {item.title}
                     </span>
                     <img
   src={arrow}
   alt="arrow"
-  className={`webdesign-icon ${activeIndex === index ? "rotated" : ""}`}
+  className={`webdesign-icon1 ${activeIndex === index ? "rotated" : ""}`}
 />
                   </div>
                   {activeIndex === index && (
-                    <p className="webdesign-accordion-desc">
+                    <p className="webdesign-accordion-desc1">
                       {item.description}
                     </p>
                   )}
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Right Image */}
-          <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0">
-            <img
-              src={v1}
-              alt="Web design preview"
-              className="webdesign-img img-fluid"
-            />
           </div>
         </div>
         </div>

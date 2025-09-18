@@ -1,9 +1,14 @@
 import React from "react";
 import t1 from "../assets/images/tss1.png"
 import t2 from "../assets/images/tss2.png"
-import op from "../assets/images/oppa.jpg"
+import gg from "../assets/images/google.webp"
+import mc from "../assets/images/micro.png"
+import op from "../assets/images/opexer.png"
+import eb from "../assets/images/ebay.png"
+import xo from "../assets/images/xero.png"
+import cn from "../assets/images/coin.png"
 
-const topImages = [t1, t2, op];
+const topImages = [t1, t2, gg, eb , mc, op, xo, cn ];
 
 const TrustedBySection = () => {
   return (

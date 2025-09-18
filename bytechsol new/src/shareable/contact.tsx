@@ -186,16 +186,17 @@ const ContactSection = () => {
       <div className="container contact8-content">
         <div className="contact8-left">
           <h2 className="contact8-title">Let’s Build Your Digital Future</h2>
-          <div className="container">
-            <h3 className="bytech02">
-              With ByTechsol – Where Ideas Become Impacts
-            </h3>
-            <p className="bypara01">
-              Ready to accelerate your business with intelligent digital
-              solutions that drive results? <br /> At ByTechsol, we turn complex
-              ideas into user-focused platforms built to scale and succeed.
-            </p>
-          </div>
+          <div className="container text-start ps-0">
+  <h3 className="bytech02">
+    With ByTechsol – Where Ideas Become Impacts
+  </h3>
+  <p className="bypara01">
+    Ready to accelerate your business with intelligent digital
+    solutions that drive results? <br /> At ByTechsol, we turn complex
+    ideas into user-focused platforms built to scale and succeed.
+  </p>
+</div>
+
           <ul className="contact8-list">
             <li>
               <img src={tick} alt="✓" />{" "}
