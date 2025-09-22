@@ -351,6 +351,7 @@
   color: #aaa;
   cursor: pointer !important;
   transition: color 0.2s ease;
+  letter-spacing: 1px;
 }
 
 .footer-links li:hover {
