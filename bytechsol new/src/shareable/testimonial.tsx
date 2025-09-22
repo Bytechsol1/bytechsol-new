@@ -37,22 +37,23 @@ const Testimonial = () => {
   const current = testimonials[index];
 
   return (
-    <section className="group5-wrapper py-5">
+    <section className="group5-wrapper py-5" >
       <div className="container">
         <div className="group5-content">
           <div className="group5-text-block text-center text-md-start">
-            <span className="group5-tag d-block mb-2">(Testimonials)</span>
-            <h2 className="group5-heading mb-3">See why our clients love us</h2>
+            <span className="group5-tag d-block mb-2" data-aos="fade-right">(Testimonials)</span>
+            <h2 className="group5-heading mb-3"data-aos="fade-right">See why our clients love us</h2>
 
             <img
               src={com}
               alt="Quotation mark"
               className="group5-vector mb-3"
+              data-aos="fade-right"
             />
 
-            <p className="group5-quote">{current.text}</p>
+            <p className="group5-quote"data-aos="fade-right">{current.text}</p>
 
-            <div className="group5-author-block d-flex align-items-center gap-3 mt-4">
+            <div data-aos="fade-right" className="group5-author-block d-flex align-items-center gap-3 mt-4">
               <img
                 src={current.avatar}
                 alt={current.author}

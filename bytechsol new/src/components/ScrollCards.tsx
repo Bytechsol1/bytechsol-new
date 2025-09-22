@@ -85,13 +85,13 @@ const ScrollCards: React.FC = () => {
       <div className="container">
         <div className="group5-content py-5">
           <div className="group5-text-block text-center text-md-start">
-            <span className="group5-tag d-block mb-2">
+            <span className="group5-tag d-block mb-2" data-aos="fade-down">
               (Why Choose bytechsol)
             </span>
-            <h2 className="group5-heading mb-3 fs-3 fw-bold">
+            <h2 className="group5-heading mb-3 fs-3 fw-bold"data-aos="fade-up">
               Built by Humans. Backed by Tech. Driven by Purpose.
             </h2>
-            <p className="group5-para fs-3">
+            <p className="group5-para fs-3"data-aos="fade-up">
               We’re not just here to code — we’re here to understand your vision,
               solve real problems, and grow with you. At Bytechsol, your goals
               become our mission.

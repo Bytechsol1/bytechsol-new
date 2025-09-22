@@ -13,6 +13,7 @@
     "@fortawesome/fontawesome-free": "^7.0.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
+    "aos": "^3.0.0-beta.6",
     "flag-icons": "^7.5.0",
     "framer-motion": "^12.23.11",
     "gsap": "^3.13.0",

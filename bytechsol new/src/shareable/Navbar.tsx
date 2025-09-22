@@ -53,9 +53,9 @@ const Navbar: React.FC<NavbarProps> = ({
       >
         <div className="container">
           <Link className="navbar-brand d-flex align-items-center" to="/">
-            <img src={logoIconSrc} alt="logo-icon" className="logo-icon" />
+            <img src={logoIconSrc} alt="logo-icon" className="logo-icon" data-aos="fade-right"/>
             {logoTextSrc ? (
-              <img src={logoTextSrc} alt="logo-text" className="logo-text ms-2" />
+              <img src={logoTextSrc} alt="logo-text" className="logo-text ms-2" data-aos="fade-right"/>
             ) : null}
           </Link>
 
@@ -71,7 +71,7 @@ const Navbar: React.FC<NavbarProps> = ({
   </button>
 </nav>
 
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="collapse navbar-collapse" id="navbarNav" data-aos="fade-down">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <a className={`nav-link ${linkClassName}`} href="/services">
@@ -97,9 +97,9 @@ const Navbar: React.FC<NavbarProps> = ({
 
             <Link
               className={`btn contact-btn ${buttonClassName} ${buttonSchemeClass}`}
-              to="/contact"
+              to="/contact" data-aos="fade-left"
             >
-              <span className="btn-label">
+              <span className="btn-label" >
                 Contact us <i className="bi bi-arrow-up-right"></i>
               </span>
             </Link>

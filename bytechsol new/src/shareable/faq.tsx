@@ -35,10 +35,10 @@ const FaqSection: React.FC = () => {
   return (
     <section className="faq-wrapper">
       <div className="faq-container">
-        <p className="faq-label">(FAQs)</p>
-        <h2 className="faq-heading">Frequently asked questions</h2>
+        <p className="faq-label" data-aos="fade-down">(FAQs)</p>
+        <h2 className="faq-heading" data-aos="fade-up">Frequently asked questions</h2>
 
-        <div className="faq-list" role="list">
+        <div className="faq-list" role="list" data-aos="fade-right">
           {items.map((item, index) => {
             const isOpen = activeIndex === index;
             const panelId = `faq-panel-${item.id}`;

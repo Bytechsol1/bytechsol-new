@@ -12,17 +12,17 @@ const Footer: React.FC = () => {
   }, [pathname]);
 
   return (
- <footer className="footer-section pt-5 pb-4">
-  <div className="container">
+ <footer className="footer-section pt-5 pb-4" >
+  <div className="container"data-aos="fade-up">
     <div className="row gy-4">
       {/* Left Column: Logo + Description */}
       <div className="col-12 col-md-3">
         <Link to="/">
-        <img src={logo} alt="Bytechsol Logo" className="footer-logo mb-3" />
+        <img src={logo} alt="Bytechsol Logo" className="footer-logo mb-3 mx-1" />
         <img
           src={LogoText}
           alt="Bytechsol Text"
-          className="footer-logo mb-3"
+          className="footer-logo"
         />
         </Link>
         <p className="footer-description">

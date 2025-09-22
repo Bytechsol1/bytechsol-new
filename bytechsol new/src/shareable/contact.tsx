@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from "react";
+import React, { useMemo,  useState } from "react";
 import bg from "../assets/images/frm-img.png";
 import tick from "../assets/images/contact tick.png";
 
@@ -185,19 +185,19 @@ const ContactSection = () => {
 
       <div className="container contact8-content">
         <div className="contact8-left">
-          <h2 className="contact8-title">Let’s Build Your Digital Future</h2>
-          <div className="container text-start ps-0">
+          <h2 className="contact8-title" data-aos="fade-down">Let’s Build Your Digital Future</h2>
+          <div className="container text-start ps-0" data-aos="fade-right">
   <h3 className="bytech02">
-    With ByTechsol – Where Ideas Become Impacts
+    With Bytechsol – Where Ideas Become Impacts
   </h3>
   <p className="bypara01">
     Ready to accelerate your business with intelligent digital
-    solutions that drive results? <br /> At ByTechsol, we turn complex
+    solutions that drive results? <br /> At Bytechsol, we turn complex
     ideas into user-focused platforms built to scale and succeed.
   </p>
 </div>
 
-          <ul className="contact8-list">
+          <ul className="contact8-list"data-aos="fade-up" data-aos-offset="30">
             <li>
               <img src={tick} alt="✓" />{" "}
               <span>Tailored Software – Fits like a glove to your objectives.</span>
@@ -211,15 +211,15 @@ const ContactSection = () => {
               <span>Tech-Driven – Latest frameworks & tools.</span>
             </li>
           </ul>
-          <a href="#contact" className="btn-white-blue">
+          <a href="#contact" className="btn-white-blue" data-aos="fade-up" data-aos-offset="30">
             Start Your Transformation
           </a>
         </div>
 
         {/* Contact Form */}
-        <form className="contact8-form" onSubmit={handleSubmit} noValidate>
+        <form data-aos="fade-left" className="contact8-form" onSubmit={handleSubmit} noValidate>
           {/* First row */}
-          <div className="row g-3">
+          <div className="row g-3" >
             <div className="col-12 col-md-6">
               <div className="contact8-field">
                 <input
@@ -346,7 +346,7 @@ const ContactSection = () => {
 
           {/* Tags */}
           <div className="contact8-subtitle mt-3">How can we help you?</div>
-          <div
+          <div  data-aos="fade-up"
             className="contact8-tags d-flex flex-wrap gap-2"
             role="group"
             aria-labelledby="services-label"
@@ -381,6 +381,8 @@ const ContactSection = () => {
 
           {/* Submit */}
           <button
+          data-aos="fade-up"
+          data-aos-offset="30"
             type="submit"
             className="btn btn-primary mt-3"
             disabled={!isValid}
@@ -394,7 +396,7 @@ const ContactSection = () => {
             </div>
           )}
 
-          <div className="contact8-alt mt-3">
+          <div className="contact8-alt mt-3" data-aos="fade-up" data-aos-offset="30">
             <span>Prefer email?</span>
             <div className="form-email">
   <a

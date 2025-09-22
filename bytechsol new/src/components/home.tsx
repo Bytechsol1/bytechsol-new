@@ -59,11 +59,11 @@ const Home: React.FC = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-8">
-                <h1>
+                <h1  data-aos="fade-right">
                   Global UI UX design agency digital partner for{" "}
                   <AnimatedText />
                 </h1>
-                <div className="cta-buttons mt-4 d-flex gap-3 flex-wrap">
+                <div className="cta-buttons mt-4 d-flex gap-3 flex-wrap"  data-aos="fade-up">
                   <a href="#strategy-call" className="btn btn-black custom-cta">
                     Book a strategy call{" "}
                     <i className="bi bi-arrow-up-right arrow-icon"></i>
@@ -76,7 +76,7 @@ const Home: React.FC = () => {
                   </a>
                 </div>
               </div>
-              <div className="col-md-4">
+              <div className="col-md-4" data-aos="fade-left">
                 <p>
                   We craft scalable, user-focused digital solutions for startups
                   and enterprises. From concept to code, we deliver results that
@@ -169,8 +169,8 @@ const Home: React.FC = () => {
       {/* 3rd Section */}
       <section className="who-we-are-section py-5">
         <div className="container">
-          <p className="subheading">(WHO WE ARE)</p>
-          <p className="description">
+          <p className="subheading" data-aos="fade-down">(WHO WE ARE)</p>
+          <p className="description" data-aos="fade-up">
             Bytechsol is a{" "}
             <span className="gradient-text">software agency</span> built for
             modern businesses. We specialize in web development, mobile apps,
@@ -184,7 +184,7 @@ const Home: React.FC = () => {
       {/* Services */}
 <section className="services-section py-5 mb-5">
       <div className="container">
-        <p className="ser-subheading text-center text-md-start">(SERVICES)</p>
+        <p className="ser-subheading text-center text-md-start" data-aos="fade-down">(SERVICES)</p>
         {services.map((service, index) => (
           <div
             key={service.id}
@@ -192,11 +192,11 @@ const Home: React.FC = () => {
             onMouseEnter={() => setActiveIndex(index)}
             onMouseLeave={() => setActiveIndex(null)}
           >
-            <span className="service-index">0{service.id}</span>
+            <span className="service-index" data-aos="fade-right">0{service.id}</span>
 <Link to={service.path} className="service-link">
-  <h2 className="service-title">{service.title}</h2>
+  <h2 className="service-title" data-aos="fade-up">{service.title}</h2>
 </Link>
-            <img src={Arrow} alt="Arrow" className="service-arrow-img" />
+            <img src={Arrow} alt="Arrow" className="service-arrow-img"data-aos="fade-left" />
 
             {/* Smooth hover image */}
             <img
@@ -217,15 +217,17 @@ const Home: React.FC = () => {
       >
         <div className="overlay1">
           <div className="awards-heading-container">
-            <h2 className="awards-heading">our awards &</h2>
+            <div className="container">
+            <h2 className="awards-heading" data-aos="fade-right">our awards &</h2>
             <br />
-            <h2 className="awards-heading2">achievements</h2>
+            <h2 className="awards-heading2" data-aos="fade-left">achievements</h2>
           </div>
-          <div className="awards-grid">
+          </div>
+          <div className="awards-grid"data-aos="fade-down">
             {awards.map((item, idx) => (
-              <div className="award-card" key={idx}>
-                <img src={item.img} alt={`award-${idx}`} className="award-img" />
-                <p className="award-text">{item.text}</p>
+              <div className="award-card" key={idx} >
+                <img src={item.img} alt={`award-${idx}`} className="award-img" data-aos="fade-up"/>
+                <p className="award-text"data-aos="fade-up">{item.text} </p>
               </div>
             ))}
           </div>
@@ -239,7 +241,7 @@ const Home: React.FC = () => {
       <section className="group7-container">
         <img className="group7-bg" src={bgImage} alt="Background" />
         <div className="group7-content">
-          <h2 className="group7-main-title">Your Growth, Our Priority</h2>
+          <h2 className="group7-main-title" data-aos="fade-down">Your Growth, Our Priority</h2>
           <div className="group7-columns">
             {[
               {
@@ -255,7 +257,7 @@ const Home: React.FC = () => {
                 desc: "We put our heart into every project, making sure your website is secure, fast, and built to support your success long-term.",
               },
             ].map((col, idx) => (
-              <div className="group7-column" key={idx}>
+              <div className="group7-column" key={idx} data-aos="fade-up">
                 <img src={icon} alt="Icon" className="group7-icon" />
                 <h3 className="group7-heading">{col.title}</h3>
                 <p className="group7-description">{col.desc}</p>
