@@ -26,6 +26,7 @@ import arrow from "../../assets/images/arrow.svg"
 import { Link } from "react-router-dom";
 import arr from "../../assets/images/arrow.svg";
 import ServicesSection from "./subservice/ServiceSections";
+import ic from "../../assets/images/icesimg.png"
 
 const industryData = [
   {
@@ -284,11 +285,11 @@ const Services: React.FC = () => {
 
   return (
     <>
-      {/* 1st Section */}
+      {/* 1st Section
       <section className="dg-products-section py-5">
         <div className="container">
           <div className="row align-items-center">
-            {/* Left content */}
+            Left content
             <div className="col-lg-7">
               <div className="dg-products-content text-start">
                 <h1 className="dg-products-heading" data-aos="fade-right">
@@ -314,7 +315,7 @@ const Services: React.FC = () => {
               </div>
             </div>
 
-            {/* Right image */}
+            Right image
             <div className="col-lg-5 text-center">
               <div className="dg-products-image" data-aos="fade-left">
                 <img src={lig} alt="UI/UX Illustration" className="img-fluid" />
@@ -322,7 +323,34 @@ const Services: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+         {/* 1st section */}
+<section className="our-services-section">
+  <div className="container">
+    <div className="services-heading-wrapper">
+      <h3 className="services-small">OUR </h3>
+      <h1 className="services-big">SERV</h1>
+      <p className="services-description">
+        At Bytechsol, we create beautiful websites, interactive eCommerce
+        applications, intelligent ERP platforms, AI-driven applications, and
+        tailored software to suit the needs of every company, startup, creative,
+        and individual user.
+      </p>
+            <div className="col-lg-5 text-center">
+        <div className="services-image">
+          <img
+            src={ic}
+            alt="UI/UX Illustration"
+            className="img-fluid unique-service-img"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
 
       <TrustedBySection />
       <ServicesSection/>

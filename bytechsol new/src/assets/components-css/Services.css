@@ -830,3 +830,53 @@ a {
     transition: transform 0.3s ease;
 
 }
+
+
+
+
+----------------------------
+.our-services-section {
+  background: #fff;
+  position: relative;
+}
+
+.services-small {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #289ED8;
+  margin-top: 50px;
+}
+
+.services-title-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.services-big {
+  font-size: 250px; 
+  font-weight: 500;
+  color: #289ED8;
+  line-height: 1;
+  margin: 0;
+}
+
+.services-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+
+.services-description {
+  font-size: 0.95rem;
+  color: #888888;
+  max-width: 450px;
+}
+
+.unique-service-img {
+  margin-top: -6rem;
+  max-width: 800px;
+  transition: transform 0.3s ease;
+  margin-left: 330px;
+}

@@ -162,10 +162,8 @@ const toggleAccordion = (index: number) => {
 Start your website project today <span className="arrow">→</span>
   </a>
 </div>
-            </div>
-
-            
-
+ </div>
+ 
             {/* Right: Image */}
             <div className="dg-products-image"data-aos="fade-left">
               <img src={er} alt="ERP " />
