@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AnimatedText from "../shareable/AnimatedText";
-import am from "../assets/images/aiml-home.svg"
+import am from "../assets/images/aimlimg.jpg"
 import "../assets/components-css/home.css";
 import Clutch from "../assets/images/clutch.png";
 import Yasir from "../assets/images/yasir.jpg";
@@ -22,20 +22,19 @@ import FaqSection from "../shareable/faq";
 import ContactSection from "../shareable/contact";
 import wb2 from "../assets/images/web1img.jpg"
 import bd2 from "../assets/images/brandim.jpg";
-import p3 from "../assets/images/ppg3.png";
-import a2 from "../assets/images/awar2.png";
-import f1 from "../assets/images/fund1.png";
-import g4 from "../assets/images/grow4.png";
 import o1 from "../assets/images/odoo3.png" 
+import bh from "../assets/images/behanceimg.png"
+import tr from "../assets/images/trustimg.png"
+import up from "../assets/images/upworkimg.png"
 
 import ScrollCards from "./ScrollCards";
 import { Link } from "react-router-dom";
 
 const awards = [
-  { text: "500+ Happy clients", img: p3 },
-  { text: "10+ Design awards", img: a2 },
-  { text: "$600 M+ funding", img: f1 },
-  { text: "×5 Growth of brand", img: g4 },
+  { text: "Behance", description: "2x Interaction Design awards", img: bh   },
+  { text: "Trust Pilot",description: "Top B2B Service Provider and UX Design Agency", img: tr },
+  { text: "Clutch",description: "One of the best Design Agency", img: Clutch },
+  { text: "Upwork",description: "Top Reted Design Agency", img: up  },
 ];
 
 const services = [
@@ -223,11 +222,14 @@ const Home: React.FC = () => {
             <h2 className="awards-heading2" data-aos="fade-left">achievements</h2>
           </div>
           </div>
-          <div className="awards-grid"data-aos="fade-down">
+          <div className="awards-grid"  style={{ backgroundImage: `url(${AwardBg})` }}>
             {awards.map((item, idx) => (
               <div className="award-card" key={idx} >
-                <img src={item.img} alt={`award-${idx}`} className="award-img" data-aos="fade-up"/>
-                <p className="award-text"data-aos="fade-up">{item.text} </p>
+                <img src={item.img} alt={`award-${idx}`} className="award-img"/>
+                <p className="award-text">{item.text} </p>
+                <p className="award-desc">
+      {item.description}
+    </p>
               </div>
             ))}
           </div>

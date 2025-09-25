@@ -22,37 +22,43 @@ const industryData = [
     title: "Finance & Fintech",
     description:
       "We create digital products that are both secure and easy to trust, with tidy dashboards and simple steps.",
-    image: fin
+    image: fin,
+    dataAos: "fade-right",
   },
   {
     title: "E-Commerce & DTC",
     description:
       "Our approach of making things simpler and more effective helps users go from browsing to checkout in a few simple steps.",
-    image: ec
+    image: ec,
+    dataAos: "fade-down",
   },
   {
     title: "SaaS & B2B Platforms",
     description:
       "We build smooth interfaces that make it easy for teams to work, so they can manage tasks quickly and effectively.",
-    image: pl
+    image: pl,
+    dataAos: "fade-left",
   },
   {
     title: "Web3, AI & Emerging Tech",
     description:
       "Complex tech doesn’t have to feel complex. We simplify the experience so users understand, explore, and adopt with confidence.",
-    image: we
+    image: we,
+    dataAos: "fade-right",
   },
   {
     title: "Edtech & Healthtech",
     description:
       "Our platforms allow patients, students, and administrators to use them at any time, from any device.",
-    image: ed
+    image: ed,
+    dataAos: "fade-up",
   },
   {
     title: "Hospitality & Legal Services",
     description:
       "Our approach to design lets users focus on their activities, so services are easy and dependable to use.",
-    image: sv
+    image: sv,
+    dataAos: "fade-left",
   },
 ];
 
@@ -102,19 +108,18 @@ const toggleAccordion = (index: number) => {
   <div className="dg-products-container">
     {/* Left: Text */}
     <div className="dg-products-content">
-      <h1 className="dg-products-heading text-start">
+      <h1 className="dg-products-heading text-start"data-aos="fade-down">
   Drive Traffic, Boost <br /> Rankings, Grow <br /> Smarter with SEO
 </h1>
 
-<p className="dg-products-description text-start">
+<p className="dg-products-description text-start"data-aos="fade-right">
   Increase your online presence through our customised SEO plans. Raising businesses to the top of the search engines, bringing the right leads on board, and expanding businesses in an environmentally friendly fashion are some of the ways we achieve this by using the techniques of keyword optimization, technical optimization, and content-driven optimization
 </p>
 
 <div className="dg-products-buttons">
-  {/* Desktop button (default) */}
   <a 
     href="#contact" 
-    className="dg-button dg-button-primary d-none d-md-inline-block"
+    className="dg-button dg-button-primary d-none d-md-inline-block"data-aos="fade-up"
   >
     Start your website project today <span className="arrow">→</span>
   </a>
@@ -141,7 +146,7 @@ Start your website project today <span className="arrow">→</span>
     </div>
 
     {/* Right: Image */}
-    <div className="dg-products-image">
+    <div className="dg-products-image"data-aos="fade-left">
       <img src={se} alt="UI/UX Illustration" />
     </div>
   </div>
@@ -155,15 +160,15 @@ Start your website project today <span className="arrow">→</span>
         <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
-            <img src={os} alt="CMS Development" className="webdesign-img1 img-fluid" />
+            <img src={os} alt="CMS Development" className="webdesign-img1 img-fluid"data-aos="fade-right" />
 
           </div>
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">On-Page SEO</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">On-Page SEO</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
               On-page SEO makes your webpage fully search engine and user-friendly. From content to technical, we will make every part of your site better to increase visibility, engagement, and ranking performance to achieve measurable results and sustainable growth.
             </p>
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemswebdev.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -199,12 +204,12 @@ Start your website project today <span className="arrow">→</span>
       <div className="row align-items-center">
         {/* Left Content */}
         <div className="col-lg-6 px-5">
-          <h2 className="webdesign-heading">Off-Page SEO</h2>
-          <p className="webdesign-desc">
+          <h2 className="webdesign-heading"data-aos="fade-down">Off-Page SEO</h2>
+          <p className="webdesign-desc"data-aos="fade-down">
          Off-page SEO empowers your website with authority and credibility via high-quality backlinks, brand mentions, and reputation building on the Internet. We adopt ethical link construction and outreach measures that enhance ranking, visibility, and earn trust in your industry.
           </p>
 
-          <div className="webdesign-accordion mt-4">
+          <div className="webdesign-accordion mt-4"data-aos="fade-right">
             {accordionItemssoft.map((item, index) => (
               <div
                 className="webdesign-accordion-item"
@@ -235,7 +240,7 @@ Start your website project today <span className="arrow">→</span>
           <img
             src={fs}
             alt="Web design preview"
-            className="webdesign-img img-fluid"
+            className="webdesign-img img-fluid"data-aos="fade-left"
           />
         </div>
       </div>
@@ -251,18 +256,18 @@ Start your website project today <span className="arrow">→</span>
             <img
               src={ts}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Technical SEO</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Technical SEO</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
          Technical SEO provides the base to achieve higher rankings that guarantee that your website is fast, secure, and crawlable. We deal with back-end problems that have a negative impact on your search performance, enhancing accessibility, indexing, and user experience in order to get your site competitive.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemspwa.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -299,8 +304,8 @@ Start your website project today <span className="arrow">→</span>
      <section className="industry-section">
       <div className="container">
   <div className="industry-header">
-    <h2 className="industry-title">Turning Your Ideas Into Something Real</h2>
-   <p className="ms-2 fs-6">
+    <h2 className="industry-title"data-aos="fade-down">Turning Your Ideas Into Something Real</h2>
+   <p className="ms-2 fs-6"data-aos="fade-up">
   All great digital initiatives begin with a spark, a concept, a challenge, or perhaps a spark of a what-if thought. 
   We are <br /> not the traditional web designers that build websites or applications… 
   we help you create your vision in a way that <br /> feels natural to you and memorable to your users.
@@ -312,6 +317,7 @@ Start your website project today <span className="arrow">→</span>
     {industryData.map((item, index) => (
       <div
         key={index}
+        data-aos={item.dataAos}
         className={`industry-flex-card card-${index}`}
         style={{ backgroundImage: `url(${item.image})` }}
       >

@@ -47,7 +47,7 @@ const WorldMap: React.FC = () => {
   </div>
 
   <div
-    className="map d-flex justify-content-center align-items-center py-4 px-2"
+    className="map d-flex justify-content-center align-items-center py-4 px-2"data-aos="fade-up"
     style={{
       background: "#fff",
       position: "relative",

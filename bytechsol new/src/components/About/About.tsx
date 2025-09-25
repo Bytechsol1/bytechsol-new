@@ -53,12 +53,12 @@ const About: React.FC = () => {
         <div className="container">
           <div className="overlay d-none d-md-block"></div>
           <div className="content">
-            <h1 className="head">
+            <h1 className="head"data-aos="fade-right">
               We Don’t Just Build <span className="gradient">Software </span>{" "}
               <br />
               We Build What <span className="gradient">Matters</span>.
             </h1>
-            <p className="text-black ">
+            <p className="text-black"data-aos="fade-up">
               We make digital, heartfelt, and purposeful solutions at Bytechsol.
               Whether in small companies or large enterprises, we make
               businesses successful through intelligent, expandable, and
@@ -72,21 +72,22 @@ const About: React.FC = () => {
       <TrustedBySection />
       {/* 2rd Section */}
       <section className="metrics-section">
-        <p className="metrics-heading">
+        <div className="container">
+        <p className="metrics-heading"data-aos="fade-down">
           Our Mission: Building{" "}
           <span className="gradient-text">Digital Solutions</span> <br />
           That Drive <span className="gradient-text">Growth</span>
         </p>
 
-        <p className="metrics-para1">
+        <p className="metrics-para1"data-aos="fade-up">
           We are on a mission at Bytechsol to enable businesses by creating
           enhanced digital experiences on demand. All our pixels, all our lines
           of code, and all our strategies are designed to solve business
           problems in the real world and to drive growth.
         </p>
 
-        <div className="metrics-grid ">
-          <div className="card1 ">
+        <div className="metrics-grid">
+          <div className="card1 "data-aos="fade-down">
             <p className="metric-number1">01/</p>
             <h2 className="metric-value1">
               Designing Impactful Digital Experiences
@@ -97,7 +98,7 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="car2">
+          <div className="car2"data-aos="fade-down">
             <p className="metric-number2">02/</p>
             <h2 className="metric-value2">
               Engineering Scalable Custom Solutions
@@ -109,7 +110,7 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="cam3">
+          <div className="cam3"data-aos="fade-down">
             <p className="metric-number3">03/</p>
             <h2 className="metric-value3">
               Driving Brands with Strategy + Tech
@@ -121,7 +122,7 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="css4">
+          <div className="css4"data-aos="fade-up">
             <p className="metric-number4">04/</p>
             <h2 className="metric-value4">
               Leveraging AI, ERP, and Odoo to Automate Success
@@ -133,7 +134,7 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="csm5">
+          <div className="csm5"data-aos="fade-up">
             <p className="metric-number5">05/</p>
             <h2 className="metric-value5">Your Long-Term Tech Partner</h2>
             <p className="metric-description5">
@@ -142,6 +143,7 @@ const About: React.FC = () => {
               execution and beyond.
             </p>
           </div>
+          </div>
         </div>
       </section>
 
@@ -149,17 +151,17 @@ const About: React.FC = () => {
       <section className="vision-section">
         <div className="vision-container">
           <div className="vision-content">
-            <h1 className="vision-heading">
+            <h1 className="vision-heading"data-aos="fade-down">
               From <span className="gradient">one vision </span>to becoming a
               global tech partner, we help businesses{" "}
               <span className="gradient">scale smarter</span>.
             </h1>
 
             <div className="vision-grid">
-              <div className="vision-image">
+              <div className="vision-image"data-aos="fade-right">
                 <img src={co} alt="Vision Preview" />
               </div>
-              <div className="vision-text">
+              <div className="vision-text"data-aos="fade-left">
                 <p>
                   Bytechsol did not turn out to be the best software agency in
                   one day. Where it all began is a small team with huge
@@ -193,18 +195,18 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-        <h1 className="fw-bold mt-5">
-          We're not just another agency. We're your{" "}
-          <span className="gradient-text">digital growth partner</span>.
-        </h1>
       </section>
       
       {/* 4th Section */}
      <section className="webdesign-section container-fluid py-5">
         <div className="container">
+           <h1 className="fw-bold mt-5"data-aos="fade-down">
+          We're not just another agency. We're your{" "}
+          <span className="gradient-text">digital growth partner</span>.
+        </h1>
         <div className="row align-items-center">
           {/* Left Content */}
-          <div className="col-lg-6">
+          <div className="col-lg-6"data-aos="fade-right">
               <h2 className="mb-4 fw-bold fs-3 fs-md-2 fs-lg-1 text-truncate w-100">
                 Website Maintenance & Support
               </h2>
@@ -255,7 +257,7 @@ const About: React.FC = () => {
             <img
               src={bk}
               alt="Web design preview"
-              className="webdesign-img img-fluid"
+              className="webdesign-img img-fluid"data-aos="fade-left"
             />
           </div>
         </div>
@@ -266,7 +268,7 @@ const About: React.FC = () => {
       <section className="belief-behind">
         <div className="container">
           <div className="row align-items-start">
-            <div className="col-lg-6 mb-4">
+            <div className="col-lg-6 mb-4"data-aos="fade-right">
               <h1 className="belief-heading fw-bold">
                 The Principles Powering Our Projects
               </h1>
@@ -278,7 +280,7 @@ const About: React.FC = () => {
                 <span className="gradient-text">Core Beliefs</span>
               </h1>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6"data-aos="fade-left">
               <div className="belief-item">
                 <h2>01 Empathy at the Core</h2>
                 <p>

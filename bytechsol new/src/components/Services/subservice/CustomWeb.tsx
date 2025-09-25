@@ -178,16 +178,16 @@ const CustomWeb: React.FC = () => {
             {/* Left content */}
             <div className="col-lg-7">
               <div className="dg-products-content text-start">
-                <h1 className="dg-products-heading">
+                <h1 className="dg-products-heading"data-aos="fade-down">
                   Custom Web Solutions <br /> Tailored to Your Business
                 </h1>
-                <p className="dg-products-description">
+                <p className="dg-products-description"data-aos="fade-up">
                   Increase your brand with our custom web development solutions.
                   We create dynamic, SEO optimized websites — corporate sites,
                   e-commerce, and apps — blending design, usability, and
                   performance to draw traffic and convert.
                 </p>
-                <div className="dg-products-buttons">
+                <div className="dg-products-buttons"data-aos="fade-left">
                   <a href="#contact" className="dg-button dg-button-primary">
                     Start your website project today{" "}
                     <span className="arrow">→</span>
@@ -199,7 +199,7 @@ const CustomWeb: React.FC = () => {
             {/* Right image */}
             <div className="col-lg-5 text-center">
               <div className="dg-products-image">
-                <img src={cl} alt="UI/UX Illustration" className="img-fluid" />
+                <img src={cl} alt="UI/UX Illustration" className="img-fluid"data-aos="fade-left" />
               </div>
             </div>
           </div>
@@ -217,14 +217,14 @@ const CustomWeb: React.FC = () => {
             <img
               src={cm}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Custom CMS Development</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Custom CMS Development</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
               Our custom CMS solutions offer your business the ability to manage
               all your content, along with additional scalability, performance,
               and usability. They are also dynamic, safe, and search
@@ -233,7 +233,7 @@ const CustomWeb: React.FC = () => {
               personnel frequently.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemscms.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -271,10 +271,10 @@ const CustomWeb: React.FC = () => {
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading">
+            <h2 className="webdesign-heading"data-aos="fade-down">
               Custom Web Application Development
             </h2>
-            <p className="webdesign-desc">
+            <p className="webdesign-desc"data-aos="fade-down">
               With our custom web application development solutions, companies
               and individuals can design unique applications that make
               operations smooth, bolster relationships with customers, and spur
@@ -284,7 +284,7 @@ const CustomWeb: React.FC = () => {
               to support functionality across all platforms and devices.
             </p>
 
-            <div className="webdesign-accordion mt-4">
+            <div className="webdesign-accordion mt-4"data-aos="fade-right">
               {accordionItemsdev.map((item, index) => (
                 <div
                   className="webdesign-accordion-item"
@@ -319,7 +319,7 @@ const CustomWeb: React.FC = () => {
             <img
               src={cw}
               alt="Web design preview"
-              className="webdesign-img img-fluid"
+              className="webdesign-img img-fluid"data-aos="fade-left"
             />
           </div>
         </div>
@@ -335,16 +335,16 @@ const CustomWeb: React.FC = () => {
             <img
               src={ap}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">
               Custom API Development & Integration
             </h2>
-            <p className="webdesign-desc1">
+            <p className="webdesign-desc1"data-aos="fade-down">
               We specialize in custom API development and integration services
               that can help businesses build bridges between the application,
               the platform, and software designed to communicate and share data
@@ -353,7 +353,7 @@ const CustomWeb: React.FC = () => {
               without any difficulties in the system.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemsapi.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -391,10 +391,10 @@ const CustomWeb: React.FC = () => {
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading">
+            <h2 className="webdesign-heading"data-aos="fade-down">
               Third-Party Service Integration
             </h2>
-            <p className="webdesign-desc">
+            <p className="webdesign-desc"data-aos="fade-down">
               Our third-party service integration solutions assist businesses in
               joining key tools, platforms, and applications into their digital
               ecology. Our software is able to work with CRMs, payment gateways,
@@ -403,7 +403,7 @@ const CustomWeb: React.FC = () => {
               pleasant user experience.
             </p>
 
-            <div className="webdesign-accordion mt-4">
+            <div className="webdesign-accordion mt-4"data-aos="fade-right">
               {accordionItemsinteg.map((item, index) => (
                 <div
                   className="webdesign-accordion-item"
@@ -438,7 +438,7 @@ const CustomWeb: React.FC = () => {
             <img
               src={sv}
               alt="Web design preview"
-              className="webdesign-img img-fluid"
+              className="webdesign-img img-fluid"data-aos="fade-left"
             />
           </div>
         </div>
@@ -453,16 +453,16 @@ const CustomWeb: React.FC = () => {
             <img
               src={pl}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">
               Custom Plugin & Module Development
             </h2>
-            <p className="webdesign-desc1">
+            <p className="webdesign-desc1"data-aos="fade-down">
               Our custom plugin and module development services add extended
               functionality to your site and applications with custom solutions
               that suit the specific needs of your business. Be it robust
@@ -471,7 +471,7 @@ const CustomWeb: React.FC = () => {
               plug-ins that work according to your digital strategies.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemsplug.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"

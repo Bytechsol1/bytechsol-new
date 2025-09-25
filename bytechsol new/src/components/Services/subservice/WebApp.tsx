@@ -172,14 +172,14 @@ const Webapp: React.FC = () => {
       >
         <div className="container d-flex align-items-center justify-content-between">
           <div className="dg-products-content">
-            <h1 className="dg-products-heading">
+            <h1 className="dg-products-heading"data-aos="fade-right">
               Building Powerful Web Apps & Software for the Digital Era
             </h1>
-            <p className="dg-products-description">
+            <p className="dg-products-description"data-aos="fade-up">
               Transform your business with our web app and software development services. We develop scalable, secure, and usable applications, such as bespoke web applications and enterprise software, and deliver new solutions that enhance performance, expansion, and easy user experiences.
             </p>
           </div>
-          <div className="dg02-products02-image w-25 d-none d-lg-block">
+          <div className="dg02-products02-image w-25 d-none d-lg-block"data-aos="fade-left">
             <img src={wa} alt="UI/UX Illustration" className="img-fluid" />
           </div>
         </div>
@@ -192,14 +192,14 @@ const Webapp: React.FC = () => {
         <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
-            <img src={w01} alt="CMS Development" className="webdesign-img1 img-fluid" />
+            <img src={w01} alt="CMS Development" className="webdesign-img1 img-fluid" data-aos="fade-right"/>
           </div>
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Web App Development</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Web App Development</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
               Our web app services provide high-performing, reliable, and scalable applications that meet your business objectives. We specialise in developing apps that streamline workflows, improve customer experiences, and enable business development in industries throughout the planning process to deployment.
             </p>
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemswebdev.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -235,12 +235,12 @@ const Webapp: React.FC = () => {
       <div className="row align-items-center">
         {/* Left Content */}
         <div className="col-lg-6 px-5">
-          <h2 className="webdesign-heading">Software Development</h2>
-          <p className="webdesign-desc">
+          <h2 className="webdesign-heading"data-aos="fade-down">Software Development</h2>
+          <p className="webdesign-desc"data-aos="fade-down">
           Using our software development solutions, business enterprises can experience reliable, scalable, and custom software, a software that is tailor-made to ease operations and enable businesses to go forth. Be it enterprise-level systems or custom applications, we blend innovation with industry best practices to help deliver software that improves performance and helps long-lasting business success.
           </p>
 
-          <div className="webdesign-accordion mt-4">
+          <div className="webdesign-accordion mt-4"data-aos="fade-right">
             {accordionItemssoft.map((item, index) => (
               <div
                 className="webdesign-accordion-item"
@@ -271,7 +271,7 @@ const Webapp: React.FC = () => {
           <img
             src={s02}
             alt="Web design preview"
-            className="webdesign-img img-fluid"
+            className="webdesign-img img-fluid"data-aos="fade-left"
           />
         </div>
       </div>
@@ -287,18 +287,18 @@ const Webapp: React.FC = () => {
             <img
               src={p03}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Progressive Web Apps (PWA)</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Progressive Web Apps (PWA)</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
           Our Progressive Web App development solution provides quick, dependable, and interactive experiences that are compatible with all devices. PWAs are superior in both web and mobile, and this makes them fast, can be accessed even when offline, and their interface resembles that of an application, making them easy to use and increasing business.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemspwa.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -336,12 +336,12 @@ const Webapp: React.FC = () => {
       <div className="row align-items-center">
         {/* Left Content */}
         <div className="col-lg-6 px-5">
-          <h2 className="webdesign-heading">SaaS Application Development</h2>
-          <p className="webdesign-desc">
+          <h2 className="webdesign-heading"data-aos="fade-down">SaaS Application Development</h2>
+          <p className="webdesign-desc"data-aos="fade-down">
           Our SaaS application development solutions enable businesses to have scalable, secure, and easy-to-use solutions that meet their individual needs. Our cloud applications simplify workflows, improve collaboration, and ensure accessibility anywhere, regardless of the Internet connection- all of which helps businesses remain competitive in the current fast-paced digital landscape.
           </p>
 
-          <div className="webdesign-accordion mt-4">
+          <div className="webdesign-accordion mt-4"data-aos="fade-right">
             {accordionItemsaas.map((item, index) => (
               <div
                 className="webdesign-accordion-item"
@@ -372,7 +372,7 @@ const Webapp: React.FC = () => {
           <img
             src={s04}
             alt="Web design preview"
-            className="webdesign-img img-fluid"
+            className="webdesign-img img-fluid"data-aos="fade-left"
           />
         </div>
       </div>
@@ -387,18 +387,18 @@ const Webapp: React.FC = () => {
             <img
               src={e05}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Enterprise Application Development</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Enterprise Application Development</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
           Our enterprise application development solutions are powerful, scalable, and secure solutions that can optimize operations, improve effectiveness, and enable businesses to expand. Since automation of workflows to system integration, we develop custom enterprise software that may suit the needs of your organization and drive digital transformation across departments.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemsenter.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"

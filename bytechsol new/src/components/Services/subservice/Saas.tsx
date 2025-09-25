@@ -25,37 +25,43 @@ const industryData = [
     title: "Finance & Fintech",
     description:
       "We create digital products that are both secure and easy to trust, with tidy dashboards and simple steps.",
-    image: fin
+    image: fin,
+    dataAos: "fade-right",
   },
   {
     title: "E-Commerce & DTC",
     description:
       "Our approach of making things simpler and more effective helps users go from browsing to checkout in a few simple steps.",
-    image: ec
+    image: ec,
+    dataAos: "fade-down",
   },
   {
     title: "SaaS & B2B Platforms",
     description:
       "We build smooth interfaces that make it easy for teams to work, so they can manage tasks quickly and effectively.",
-    image: pl
+    image: pl,
+    dataAos: "fade-left",
   },
   {
     title: "Web3, AI & Emerging Tech",
     description:
       "Complex tech doesn’t have to feel complex. We simplify the experience so users understand, explore, and adopt with confidence.",
-    image: we
+    image: we,
+    dataAos: "fade-right",
   },
   {
     title: "Edtech & Healthtech",
     description:
       "Our platforms allow patients, students, and administrators to use them at any time, from any device.",
-    image: ed
+    image: ed,
+    dataAos: "fade-up",
   },
   {
     title: "Hospitality & Legal Services",
     description:
       "Our approach to design lets users focus on their activities, so services are easy and dependable to use.",
-    image: sv
+    image: sv,
+    dataAos: "fade-left",
   },
 ];
 
@@ -122,10 +128,10 @@ const toggleAccordion = (index: number) => {
           <div className="dg-products-container">
             {/* Left: Text */}
             <div className="dg-products-content">
-              <h1 className="dg-products-heading text-start">
+              <h1 className="dg-products-heading text-start"data-aos="fade-right">
                 ERP Solutions That <br /> Power Smarter <br /> Businesses
               </h1>
-              <p className="dg-products-description text-start">
+              <p className="dg-products-description text-start"data-aos="fade-down">
                 Our ERP services can simplify the business processes by consolidating
         finance, human resources, supply chain, sales, etc., into one system.
         Our personalized ERP systems enable greater productivity, more effective
@@ -133,10 +139,9 @@ const toggleAccordion = (index: number) => {
         insights.
               </p>
               <div className="dg-products-buttons">
-  {/* Desktop button (default) */}
   <a 
     href="#contact" 
-    className="dg-button dg-button-primary d-none d-md-inline-block"
+    className="dg-button dg-button-primary d-none d-md-inline-block"data-aos="fade-up"
   >
     Start your website project today <span className="arrow">→</span>
   </a>
@@ -162,7 +167,7 @@ Start your website project today <span className="arrow">→</span>
             
 
             {/* Right: Image */}
-            <div className="dg-products-image">
+            <div className="dg-products-image"data-aos="fade-left">
               <img src={er} alt="ERP " />
             </div>
           </div>
@@ -176,15 +181,15 @@ Start your website project today <span className="arrow">→</span>
         <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
-            <img src={ip} alt="CMS Development" className="webdesign-img1 img-fluid" />
+            <img src={ip} alt="CMS Development" className="webdesign-img1 img-fluid"data-aos="fade-right" />
 
           </div>
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Custom ERP Implementation & Development</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Custom ERP Implementation & Development</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
               We offer customized ERP implementation and development services that are aligned with your needs. Planning for deployment, our professionals are capable of delivering an integrated system, flawless operation, and scalable ERP systems that are able to propel efficiency, teamwork, and success in the long term.
             </p>
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemswebdev.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -220,12 +225,12 @@ Start your website project today <span className="arrow">→</span>
       <div className="row align-items-center">
         {/* Left Content */}
         <div className="col-lg-6 px-5">
-          <h2 className="webdesign-heading">ERP Integration Services</h2>
-          <p className="webdesign-desc">
+          <h2 className="webdesign-heading"data-aos="fade-down">ERP Integration Services</h2>
+          <p className="webdesign-desc"data-aos="fade-down">
          ERP integration services bridge your enterprise system to your key business applications to facilitate seamless operations, a steady flow of data, and enhance teamwork. We eradicate silos, increase visibility, and build a single ecosystem that fosters smarter decisions and workflows.
           </p>
 
-          <div className="webdesign-accordion mt-4">
+          <div className="webdesign-accordion mt-4"data-aos="fade-right">
             {accordionItemssoft.map((item, index) => (
               <div
                 className="webdesign-accordion-item"
@@ -256,7 +261,7 @@ Start your website project today <span className="arrow">→</span>
           <img
             src={lp}
             alt="Web design preview"
-            className="webdesign-img img-fluid"
+            className="webdesign-img img-fluid"data-aos="fade-left"
           />
         </div>
       </div>
@@ -272,18 +277,18 @@ Start your website project today <span className="arrow">→</span>
             <img
               src={am}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">ERP Customization & Module Development</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">ERP Customization & Module Development</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
           We customize ERP to meet your business requirements. Our solutions provide increased functionality, efficiencies, and fitment of your ERP to your industry and business objectives, whether it be custom workflows or specialized modules.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemspwa.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -321,12 +326,12 @@ Start your website project today <span className="arrow">→</span>
       <div className="row align-items-center">
         {/* Left Content */}
         <div className="col-lg-6 px-5">
-          <h2 className="webdesign-heading">ERP Maintenance & Support</h2>
-          <p className="webdesign-desc">
+          <h2 className="webdesign-heading"data-aos="fade-down">ERP Maintenance & Support</h2>
+          <p className="webdesign-desc"data-aos="fade-down">
           Our ERP services and support services will keep your system safe, efficient, and relevant. Troubleshooting and upgrades are just the tip of the iceberg as we maintain your ERP on track to allow your business to grow.
           </p>
 
-          <div className="webdesign-accordion mt-4">
+          <div className="webdesign-accordion mt-4"data-aos="fade-right">
             {accordionItemsaas.map((item, index) => (
               <div
                 className="webdesign-accordion-item"
@@ -357,7 +362,7 @@ Start your website project today <span className="arrow">→</span>
           <img
             src={cs}
             alt="Web design preview"
-            className="webdesign-img img-fluid"
+            className="webdesign-img img-fluid"data-aos="fade-left"
           />
         </div>
       </div>
@@ -372,18 +377,18 @@ Start your website project today <span className="arrow">→</span>
             <img
               src={sp}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Odoo Maintenance & Support</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Odoo Maintenance & Support</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
           All of our Odoo support and maintenance services assure that your ERP system is operating properly, safely, and without failure. We will offer continuous support, be it in terms of bug fixes, performance monitoring, to ensure that your business activity remains efficient, scalable, and future-ready.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemsenter.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -422,8 +427,8 @@ Start your website project today <span className="arrow">→</span>
      <section className="industry-section">
       <div className="container">
   <div className="industry-header">
-    <h2 className="industry-title">Turning Your Ideas Into Something Real</h2>
-   <p className="ms-2 fs-6">
+    <h2 className="industry-title"data-aos="fade-down">Turning Your Ideas Into Something Real</h2>
+   <p className="ms-2 fs-6"data-aos="fade-up">
   All great digital initiatives begin with a spark, a concept, a challenge, or perhaps a spark of a what-if thought. 
   We are <br /> not the traditional web designers that build websites or applications… 
   we help you create your vision in a way that <br /> feels natural to you and memorable to your users.
@@ -435,6 +440,7 @@ Start your website project today <span className="arrow">→</span>
     {industryData.map((item, index) => (
       <div
         key={index}
+        data-aos={item.dataAos}
         className={`industry-flex-card card-${index}`}
         style={{ backgroundImage: `url(${item.image})` }}
       >

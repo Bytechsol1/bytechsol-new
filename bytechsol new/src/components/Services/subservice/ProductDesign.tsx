@@ -111,14 +111,13 @@ useLayoutEffect(() => {
       },
     });
 
-    // ✅ Skip first card (keep it fixed)
     cardsEls.forEach((card, i) => {
-      if (i === 0) return; // leave first card in place
+      if (i === 0) return;
       tl.fromTo(
         card,
         { y: window.innerHeight },
         { y: 0, duration: 0.8 },
-        i - 1 // position in timeline (shifted since we skip index 0)
+        i - 1 
       );
     });
   }, containerRef);
@@ -134,14 +133,14 @@ useLayoutEffect(() => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-8 ">
-                <h1 className="text-white">
+                <h1 className="text-white"data-aos="fade-right">
                    Crafting Brands <br /> That Inspire
                 </h1>
-                <p className="text-white fs-5">We help businesses create powerful brand identities that build trust, recognition, and lasting customer connections. From strategy and visuals to messaging and digital presence, our brand building services ensure your business stands out and resonates with the right audience.</p>
+                <p className="text-white fs-5"data-aos="fade-down">We help businesses create powerful brand identities that build trust, recognition, and lasting customer connections. From strategy and visuals to messaging and digital presence, our brand building services ensure your business stands out and resonates with the right audience.</p>
                 
               </div>
               <div className="col-md-4 d-none d-md-block">
-  <img src={y1} alt="Brand Branding" className="img-fluid" />
+  <img src={y1} alt="Brand Branding" className="img-fluid" data-aos="fade-left"/>
 </div>
 
             </div>
@@ -160,20 +159,20 @@ useLayoutEffect(() => {
             <img
               src={lp2}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Brand Strategy & Consulting</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Brand Strategy & Consulting</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
              We help companies to develop a powerful strategy that will define what and who they are and how they should be viewed in the market.
               </p>
             <div className="webdesign-accordion1 mt-4">
               {accordionItemsUX.map((item, index) => (
                 <div
-                  className="webdesign-accordion-item1"
+                  className="webdesign-accordion-item1"data-aos="fade-left"
                   key={index}
                   onClick={() => toggleAccordion(index)}
                 >
@@ -206,12 +205,12 @@ useLayoutEffect(() => {
       <div className="row align-items-center">
         {/* Left Content */}
         <div className="col-lg-6 px-5">
-          <h2 className="webdesign-heading">Logo Design & Visual Identity </h2>
-          <p className="webdesign-desc">
+          <h2 className="webdesign-heading"data-aos="fade-down">Logo Design & Visual Identity </h2>
+          <p className="webdesign-desc"data-aos="fade-down">
            We create special logos and visual systems that will represent your personality and create a strong impression at all customer touchpoints.
           </p>
 
-          <div className="webdesign-accordion mt-4">
+          <div className="webdesign-accordion mt-4"data-aos="fade-right">
             {accordionItemsldesig.map((item, index) => (
               <div
                 className="webdesign-accordion-item"
@@ -242,7 +241,7 @@ useLayoutEffect(() => {
           <img
             src={v1}
             alt="Web design preview"
-            className="webdesign-img img-fluid"
+            className="webdesign-img img-fluid"data-aos="fade-left"
           />
         </div>
       </div>
@@ -257,17 +256,17 @@ useLayoutEffect(() => {
             <img
               src={sc}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Social Media Branding</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Social Media Branding</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
             Customers tend to interact with your business first through your social media. Your brand will be developed by us to be strong, consistent, and interesting on all platforms. Our tactics enhance awareness, credibility, and viewers' interest, be it through images or text.
               </p>
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemssmb.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -298,10 +297,10 @@ useLayoutEffect(() => {
 
       {/* 3rd section */}
       <div className="productdesign-service-header">
-        <h1 className="productdesign-service-title">
+        <h1 className="productdesign-service-title"data-aos="fade-left">
           What’s included in our product <br /> design services
         </h1>
-        <a href="#contact" className="productdesign-service-btn">
+        <a href="#contact" className="productdesign-service-btn"data-aos="fade-right">
           Build Your Product
         </a>
       </div>

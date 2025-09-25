@@ -16,6 +16,7 @@ const blogPosts = [
     readTime: "14 MINUTES",
     title: "Top 20 UI/UX Design Agencies in the USA - July 2025 Rankings",
     date: "26 May, 2025",
+    dataAos: "fade-right",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const blogPosts = [
     readTime: "14 MINUTES",
     title: "8 Common Mistakes in UX User Flows to Avoid",
     date: "26 May, 2025",
+    dataAos: "fade-down",
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ const blogPosts = [
     readTime: "14 MINUTES",
     title: "Top 8 Usability Testing Consultancy Agencies You Can Trust (2025)",
     date: "26 May, 2025",
+    dataAos: "fade-left",
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ const blogPosts = [
     readTime: "14 MINUTES",
     title: "7 Benefits of Hiring a Usability Testing Consultancy",
     date: "26 May, 2025",
+    dataAos: "fade-right",
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ const blogPosts = [
     readTime: "14 MINUTES",
     title: "What is UX Prototyping? Why DO You Need Consultancy?",
     date: "26 May, 2025",
+    dataAos: "fade-up",
   },
   {
     id: 6,
@@ -56,6 +61,7 @@ const blogPosts = [
     readTime: "14 MINUTES",
     title: "15 Innovative UX Design Examples for Your Next Project",
     date: "26 May, 2025",
+    dataAos: "fade-left",
   },
 ];
 
@@ -65,18 +71,18 @@ const Blog = () => {
       {/* 1st Section */}
       <section className="csd-blog-section">
         <div className="container">
-          <p className="csd-blog-subtitle d-none d-md-block">All Blogs</p>
+          <p className="csd-blog-subtitle d-none d-md-block"data-aos="fade-right">All Blogs</p>
 
           <div className="csd-blog-header d-none d-sm-flex align-items-center">
             {/* <i className="fa-solid fa-magnifying-glass me-2"></i> */}
             <input
               type="text"
-              className="csd-blog-search"
+              className="csd-blog-search"data-aos="fade-down"
               placeholder="Search..."
             />
           </div>
 
-          <h1 className="csd-blog-title">bytechsol Blog</h1>
+          <h1 className="csd-blog-title"data-aos="fade-right">bytechsol Blog</h1>
 
           <div className="csd-blog-header d-flex align-items-cente me-5 w-50 d-block d-md-none">
             {/* <i className="fa-solid fa-magnifying-glass me-2"></i> */}
@@ -87,7 +93,7 @@ const Blog = () => {
             />
           </div>
 
-          <p className="csd-blog-description fs-1">
+          <p className="csd-blog-description fs-1"data-aos="fade-up">
             Top 15 Banking Apps with <br /> Exceptional UX Design <br /> (2025)
           </p>
         </div>
@@ -100,14 +106,17 @@ const Blog = () => {
             marginLeft: "650px",
           }}
         >
-          <img src={dl} alt="blog" />
+          <img 
+          data-aos="fade-left"
+          src={dl} 
+          alt="blog" />
         </div>
       </section>
       {/* 2nd section----------- */}
       <section className="cards-six">
         <div className="blog-grid">
           {blogPosts.map((post) => (
-            <div className="blog-card" key={post.id}>
+            <div className="blog-card" key={post.id} data-aos={post.dataAos}>
               <div className="blog-image">
                 <img src={post.image} alt={post.title} />
               </div>

@@ -32,36 +32,42 @@ const industryData = [
     description:
       "Before we talk tech, we talk to you. Your goals, your audience, your challenges — we want to hear it all.",
     image: wf,
+      dataAos: "fade-right",
   },
   {
     title: "We Map The Journey",
     description:
       "We are not talking tech, we are talking to you. What you want to achieve, who you want to address, and what your issues are, we want to know it all.",
     image: wj,
+      dataAos: "fade-down",
   },
   {
     title: "We build For The Future",
     description:
       "Fast. Secure. Scalable. Our tools are the right tools to ensure the solution grows according to your growth.",
     image: wfu,
+      dataAos: "fade-left",
   },
   {
     title: "We Create Digital Transformation",
     description:
       "Taking your ideas and turning them into effective digital solutions is what we do best; bring together creativity and technology to achieve designs that are easy to understand, grow to scale, and are resilient enough to last.",
     image: wt,
+      dataAos: "fade-right",
   },
   {
     title: "We Stay With You",
     description:
       "There is no goodbye on launch day. We stay because we want to keep things flowing, to keep it moving, and to keep you winning online.",
     image: ww,
+      dataAos: "fade-up",
   },
   {
     title: "We Design With Heart",
     description:
       "Not only does it have to look good, but it has to be something that leaves people stopping, smiling, and staying.",
     image: wh,
+      dataAos: "fade-left",
   },
 ];
 
@@ -284,11 +290,11 @@ const Services: React.FC = () => {
             {/* Left content */}
             <div className="col-lg-7">
               <div className="dg-products-content text-start">
-                <h1 className="dg-products-heading">
+                <h1 className="dg-products-heading" data-aos="fade-right">
                   Bringing Every <span className="highlight">Vision</span> to
                   Life, Digitally
                 </h1>
-                <p className="dg-products-description">
+                <p className="dg-products-description"  data-aos="fade-up">
                   At Bytechsol, we create beautiful websites, interactive
                   eCommerce applications, intelligent ERP platforms, AI-driven
                   applications, and tailored software to suit the needs of every
@@ -298,7 +304,7 @@ const Services: React.FC = () => {
                   technology, creativity, and strategy to help your ideas
                   translate into meaningful digital experiences.
                 </p>
-                <div className="dg-products-buttons">
+                <div className="dg-products-buttons"  data-aos="fade-right">
                   <a href="#contact" className="dg-button dg-button-primary">
                     Start your website project today{" "}
                     <span className="arrow">→</span>
@@ -309,7 +315,7 @@ const Services: React.FC = () => {
 
             {/* Right image */}
             <div className="col-lg-5 text-center">
-              <div className="dg-products-image">
+              <div className="dg-products-image" data-aos="fade-left">
                 <img src={lig} alt="UI/UX Illustration" className="img-fluid" />
               </div>
             </div>
@@ -324,7 +330,7 @@ const Services: React.FC = () => {
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
-          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
+          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0"data-aos="fade-left">
             <img
               src={ux}
               alt="Web design preview"
@@ -333,8 +339,8 @@ const Services: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className=" col-lg-6 px-5"><Link to="/services/website-design-and-development">
-            <h2 className="webdesign-heading1">Website Design & Development <img src={arr} alt="link" className="arr"/></h2> </Link>
+          <div className=" col-lg-6 px-5"data-aos="fade-left"><Link to="/services/website-design-and-development">
+            <h2 className="webdesign-heading1" >Website Design & Development <img src={arr} alt="link" className="arr"/></h2> </Link>
             <p className="webdesign-desc1">
               We design eye-catching, easy-to-use, and mobile-friendly websites
               that combine your business objectives with your brand identity.
@@ -382,7 +388,7 @@ const Services: React.FC = () => {
         <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
-          <div className="col-lg-6 px-5"><Link to="/services/custom-web">
+          <div className="col-lg-6 px-5"data-aos="fade-right"><Link to="/services/custom-web">
             <h2 className="webdesign-heading">Custom Web Solutions <img src={arr} alt="link" className="arr"  /></h2> </Link>
             <p className="webdesign-desc">
               We use our custom web development services, which can fit your
@@ -422,7 +428,7 @@ const Services: React.FC = () => {
           </div>
 
           {/* Right Image */}
-          <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0">
+          <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0"data-aos="fade-right">
             <img
               src={wb}
               alt="Web design preview"
@@ -438,7 +444,7 @@ const Services: React.FC = () => {
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
-          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
+          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0"data-aos="fade-left">
             <img
               src={wd}
               alt="Web design preview"
@@ -447,7 +453,7 @@ const Services: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="col-lg-6 px-5"><Link to="/services/web-app">
+          <div className="col-lg-6 px-5"data-aos="fade-left"><Link to="/services/web-app">
             <h2 className="webdesign-heading1">
               Web App & Software Development <img src={arr} alt="link" className="arr"  />
             </h2></Link>
@@ -496,7 +502,7 @@ const Services: React.FC = () => {
         <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
-          <div className="col-lg-6 px-5"><Link to="/services/E-Commerce-solutions">
+          <div className="col-lg-6 px-5"data-aos="fade-right"><Link to="/services/E-Commerce-solutions">
             <h2 className="webdesign-heading">E-Commerce Solutions <img src={arr} alt="link" className="arr"  /></h2 >
             </Link>
             <p className="webdesign-desc">
@@ -538,7 +544,7 @@ const Services: React.FC = () => {
           </div>
 
           {/* Right Image */}
-          <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0">
+          <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0"data-aos="fade-right">
             <img
               src={co}
               alt="Web design preview"
@@ -554,7 +560,7 @@ const Services: React.FC = () => {
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
-          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
+          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0"data-aos="fade-left">
             <img
               src={bi}
               alt="Web design preview"
@@ -563,7 +569,7 @@ const Services: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="col-lg-6 px-5"><Link to="/services/brand-building">
+          <div className="col-lg-6 px-5"data-aos="fade-left"><Link to="/services/brand-building">
             <h2 className="webdesign-heading1">Brand Building <img src={arr} alt="link" className="arr"  /></h2> </Link>
             <p className="webdesign-desc1">
               We assist companies in enhancing their brand with brand-building
@@ -610,7 +616,7 @@ const Services: React.FC = () => {
         <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
-          <div className="col-lg-6 px-5"><Link to="/services/seo-service">
+          <div className="col-lg-6 px-5"data-aos="fade-right"><Link to="/services/seo-service">
             <h2 className="webdesign-heading">SEO Services<img src={arr} alt="link" className="arr"  /></h2></Link>
             <p className="webdesign-desc">
               Our professional search engine optimization services enhance your
@@ -651,7 +657,7 @@ const Services: React.FC = () => {
           </div>
 
           {/* Right Image */}
-          <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0">
+          <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0"data-aos="fade-right">
             <img
               src={br}
               alt="Web design preview"
@@ -666,7 +672,7 @@ const Services: React.FC = () => {
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
-          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
+          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0"data-aos="fade-left">
             <img
               src={wd}
               alt="Web design preview"
@@ -675,7 +681,7 @@ const Services: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="col-lg-6 px-5"><Link to="/services/Ai-Ml">
+          <div className="col-lg-6 px-5"data-aos="fade-left"><Link to="/services/Ai-Ml">
             <h2 className="webdesign-heading1">AI & ML Solutions<img src={arr} alt="link" className="arr"  /></h2> </Link>
             <p className="webdesign-desc1">
               We provide world-edge artificial intelligence and machine learning
@@ -722,7 +728,7 @@ const Services: React.FC = () => {
         <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
-          <div className="col-lg-6 px-5"><Link to="/services/ERP-service">
+          <div className="col-lg-6 px-5"data-aos="fade-right"><Link to="/services/ERP-service">
             <h2 className="webdesign-heading">ERP Services<img src={arr} alt="link" className="arr"  /></h2> </Link>
             <p className="webdesign-desc">
               Our tailor-made ERP development solutions make processes more
@@ -762,7 +768,7 @@ const Services: React.FC = () => {
           </div>
 
           {/* Right Image */}
-          <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0">
+          <div className="col-lg-6 text-center px-4 mt-5 mt-lg-0"data-aos="fade-right">
             <img
               src={er}
               alt="Web design preview"
@@ -777,7 +783,7 @@ const Services: React.FC = () => {
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
-          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
+          <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0"data-aos="fade-left">
             <img
               src={oi}
               alt="Web design preview"
@@ -786,7 +792,7 @@ const Services: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="col-lg-6 px-5"><Link to="/services/odoo-services">
+          <div className="col-lg-6 px-5"data-aos="fade-left"><Link to="/services/odoo-services">
             <h2 className="webdesign-heading1">Odoo Services<img src={arr} alt="link" className="arr"  /></h2>   </Link>
             <p className="webdesign-desc1">
               We offer Odoo migration, customization, and consultancy services
@@ -832,10 +838,10 @@ const Services: React.FC = () => {
       <section className="industry-section">
         <div className="container">
         <div className="industry-header">
-          <h2 className="industry-title">
+          <h2 className="industry-title"data-aos="fade-down">
             Turning Your Ideas Into Something Real
           </h2>
-          <p className="par12">
+          <p className="par12"data-aos="fade-up">
             All great digital initiatives begin with a spark, a concept, a
             challenge, or perhaps a spark of a what-if thought. We are <br />{" "}
             not the traditional web designers that build websites or
@@ -849,6 +855,7 @@ const Services: React.FC = () => {
           {industryData.map((item, index) => (
             <div
               key={index}
+              data-aos={item.dataAos}
               className={`industry-flex-card card-${index}`}
               style={{ backgroundImage: `url(${item.image})` }}
             >

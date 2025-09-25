@@ -556,25 +556,53 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
+.awards-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem; 
+}
+
 .award-card {
+  flex: 1;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid #e0e0e0;
   text-align: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 0px; 
+  background: #fff;
 }
+.award-desc {
+  font-size: 0.9rem;
+  color: gray;
+  margin-top: 0.3rem;
+}
+
 
 .award-card:last-child {
   border-right: none;
+}
+
+.award-card {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: flex-start;
+  text-align: left;        
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
 }
 
 .award-img {
   width: 50px;
   height: 60px;
   object-fit: contain;
-  margin-bottom: 1rem;
+  margin-bottom: 8rem; 
 }
 
 .award-text {

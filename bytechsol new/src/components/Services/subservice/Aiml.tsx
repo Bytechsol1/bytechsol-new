@@ -89,13 +89,13 @@ const toggleAccordion = (index: number) => {
           <div className="dg-products-container">
             {/* Left: Text */}
             <div className="dg-products-content">
-              <h1 className="dg-products-heading text-start">
+              <h1 className="dg-products-heading text-start"data-aos="fade-down">
   AI & ML Solutions That 
   <br className="d-none d-md-block" /> 
   Redefine Possibilities
 </h1>
 
-              <p className="dg-products-description text-start">
+              <p className="dg-products-description text-start"data-aos="fade-right">
                 Our AI and ML solutions will enable businesses to realize the
                 strength of data and intelligent automation. Predictive
                 analytics, natural language processing, or any other solution,
@@ -106,7 +106,7 @@ const toggleAccordion = (index: number) => {
 
             {/* Right: Image */}
             <div className="dg-products-image">
-              <img src={ai} alt="AI/ML Illustration" />
+              <img src={ai} alt="AI/ML Illustration" data-aos="fade-left"/>
             </div>
           </div>
         </div>
@@ -120,12 +120,12 @@ const toggleAccordion = (index: number) => {
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading">AI / ML / LLM / NLP Solutions</h2>
-            <p className="webdesign-desc">
+            <h2 className="webdesign-heading"data-aos="fade-down">AI / ML / LLM / NLP Solutions</h2>
+            <p className="webdesign-desc"data-aos="fade-down">
               We also offer strong AI-powered solutions, which combine machine learning, large language model sand natural language processing. Our technologies empower companies to standardize processes, invest in individualized experiences, and discover actionable information that drives innovation, efficiency, and competitive edge.
             </p>
 
-            <div className="webdesign-accordion mt-4">
+            <div className="webdesign-accordion mt-4"data-aos="fade-right">
               {accordionItemssoft.map((item, index) => (
                 <div
                   className="webdesign-accordion-item"
@@ -160,7 +160,7 @@ const toggleAccordion = (index: number) => {
             <img
               src={sv}
               alt="Web design preview"
-              className="webdesign-img img-fluid"
+              className="webdesign-img img-fluid"data-aos="fade-left"
             />
           </div>
         </div>
@@ -177,21 +177,21 @@ const toggleAccordion = (index: number) => {
             <img
               src={v1}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">
               AI Chatbots & Voice Assistants
             </h2>
-            <p className="webdesign-desc">
+            <p className="webdesign-desc"data-aos="fade-down">
               We develop AI-assisted chatbots and voice assistants that provide human-like, smooth interactions. They are made out of NLP and advanced AI models that enable these to automate customer support, enhance engagement, and offer personalized experiences on web, mobile, and voice-enabled platforms.
             </p>
 
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemshard.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"

@@ -204,15 +204,12 @@ const toggleAccordion = (index: number) => {
 };
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // useLayoutEffect is preferred for GSAP animations to run synchronously
-  // after the DOM is updated, preventing animation conflicts on route changes.
   useLayoutEffect(() => {
   const ctx = gsap.context(() => {
     const cardsEls = gsap.utils.toArray<HTMLElement>(".card-row");
     const container = containerRef.current;
     if (!container) return;
 
-    // Ensure each new card comes above the last
     cardsEls.forEach((card, i) => {
       card.style.zIndex = `${i + 1}`;
     });
@@ -221,21 +218,21 @@ const toggleAccordion = (index: number) => {
       scrollTrigger: {
         trigger: container,
         start: "top top",
-        end: () => `+=${(cardsEls.length - 1) * window.innerHeight}`, // skip first
+        end: () => `+=${(cardsEls.length - 1) * window.innerHeight}`, 
         scrub: true,
         pin: container,
         pinSpacing: true,
       },
     });
 
-    // ✅ Skip first card (keep it fixed)
+    
     cardsEls.forEach((card, i) => {
-      if (i === 0) return; // leave first card in place
+      if (i === 0) return; 
       tl.fromTo(
         card,
         { y: window.innerHeight },
         { y: 0, duration: 0.8 },
-        i - 1 // position in timeline (shifted since we skip index 0)
+        i - 1 
       );
     });
   }, containerRef);
@@ -257,11 +254,11 @@ const toggleAccordion = (index: number) => {
           <div className="dg-products-container">
             {/* Left: Text */}
             <div className="dg-products-content">
-              <h1 className="dg-products-heading text-start">
+              <h1 className="dg-products-heading text-start"data-aos="fade-left">
                 Unlock Business <br /> Potential with Tailored <br /> Odoo
                 Solutions
               </h1>
-              <p className="dg-products-description text-start">
+              <p className="dg-products-description text-start"data-aos="fade-right">
                 Our Odoo services support businesses in streamlining workflows,
                 enhancing efficiency, and experiencing scalable growth with a
                 completely customized ERP platform. Since implementation and
@@ -271,7 +268,7 @@ const toggleAccordion = (index: number) => {
             </div>
 
             {/* Right: Image */}
-            <div className="dg-odoo-image d-none d-md-block">
+            <div className="dg-odoo-image d-none d-md-block"data-aos="fade-right">
               <img src={cp} alt="UI/UX Illustration" />
             </div>
           </div>
@@ -288,21 +285,21 @@ const toggleAccordion = (index: number) => {
             <img
               src={mi}
               alt="CMS Development"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">
               Odoo Migration & Customization
             </h2>
-            <p className="webdesign-desc1">
+            <p className="webdesign-desc1"data-aos="fade-down">
               We provide seamless Odoo migration services to ensure a smooth
               transition from legacy systems or older versions. Customization:
               Odoo can be modeled to support your specific workflows, which
               increases usability, improves performance, and makes the platform
               the best fit as per business objectives.
             </p>
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemswebdev.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -340,10 +337,10 @@ const toggleAccordion = (index: number) => {
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading">
+            <h2 className="webdesign-heading"data-aos="fade-down">
               Odoo Techno-Functional Consultancy
             </h2>
-            <p className="webdesign-desc">
+            <p className="webdesign-desc"data-aos="fade-down">
               We are a techno-functional consultancy that fills the gap between
               the requirements of the business and the technical application. We
               also offer complete solutions, integrating Odoo capabilities with
@@ -352,7 +349,7 @@ const toggleAccordion = (index: number) => {
               efficient as possible.
             </p>
 
-            <div className="webdesign-accordion mt-4">
+            <div className="webdesign-accordion mt-4"data-aos="fade-right">
               {accordionItemssoft.map((item, index) => (
                 <div
                   className="webdesign-accordion-item"
@@ -387,7 +384,7 @@ const toggleAccordion = (index: number) => {
             <img
               src={tc}
               alt="Web design preview"
-              className="webdesign-img img-fluid"
+              className="webdesign-img img-fluid"data-aos="fade-left"
             />
           </div>
         </div>
@@ -403,21 +400,21 @@ const toggleAccordion = (index: number) => {
             <img
               src={md}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Odoo Module Development</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Odoo Module Development</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
               We create custom Odoo modules depending on your specific business
               requirements. Our solutions are an addition to the functionality
               of Odoo, which has given you the power of scalability, efficiency,
               and the ability to perfectly meet your operational processes.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemspwa.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -455,8 +452,8 @@ const toggleAccordion = (index: number) => {
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading">Odoo Integration Services</h2>
-            <p className="webdesign-desc">
+            <h2 className="webdesign-heading"data-aos="fade-down">Odoo Integration Services</h2>
+            <p className="webdesign-desc"data-aos="fade-down">
               We also offer a smooth Odoo integration service that interconnects
               your ERP with third-party applications, tools, and platforms. Our
               solutions are designed to provide the efficient flow of data,
@@ -464,7 +461,7 @@ const toggleAccordion = (index: number) => {
               business to operate smarter, faster, and more efficiently.
             </p>
 
-            <div className="webdesign-accordion mt-4">
+            <div className="webdesign-accordion mt-4"data-aos="fade-right">
               {accordionItemsaas.map((item, index) => (
                 <div
                   className="webdesign-accordion-item"
@@ -499,7 +496,7 @@ const toggleAccordion = (index: number) => {
             <img
               src={ig}
               alt="Web design preview"
-              className="webdesign-img img-fluid"
+              className="webdesign-img img-fluid"data-aos="fade-left"
             />
           </div>
         </div>
@@ -514,14 +511,14 @@ const toggleAccordion = (index: number) => {
             <img
               src={md}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Odoo Maintenance & Support</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Odoo Maintenance & Support</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
               All of our Odoo support and maintenance services assure that your
               ERP system is operating properly, safely, and without failure. We
               will offer continuous support, be it in terms of bug fixes,
@@ -529,7 +526,7 @@ const toggleAccordion = (index: number) => {
               remains efficient, scalable, and future-ready.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemsenter.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"

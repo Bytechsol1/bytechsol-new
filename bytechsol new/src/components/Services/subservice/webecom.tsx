@@ -76,16 +76,16 @@ const Webecom: React.FC = () => {
       {/* Left content */}
       <div className="col-lg-7">
         <div className="dg-products-content text-start">
-          <h1 className="dg-products-heading">
+          <h1 className="dg-products-heading"data-aos="fade-down">
             Next-Level E-Commerce Solutions for Your Digital Store
           </h1>
-          <p className="dg-products-description">
+          <p className="dg-products-description"data-aos="fade-up">
             Our e-commerce solutions assist companies in creating scalable,
             secure, and easy-to-use online stores that drive sales. We design
             custom websites, integrate payment gateways, and develop advanced
             shopping carts to expand your online store and boost revenue.
           </p>
-          <div className="dg-products-buttons">
+          <div className="dg-products-buttons"data-aos="fade-left">
             <a href="#contact" className="dg-button dg-button-primary">
               Start your website project today <span className="arrow">→</span>
             </a>
@@ -95,7 +95,7 @@ const Webecom: React.FC = () => {
 
       {/* Right image */}
      <div className="col-lg-5 text-center d-none d-lg-block" style={{ width: "30%", marginLeft: "80px" }}>
-  <img src={im1} alt="Brand Branding" className="img-fluid" />
+  <img src={im1} alt="Brand Branding" className="img-fluid" data-aos="fade-left"/>
 </div>
 
     </div>
@@ -111,14 +111,14 @@ const Webecom: React.FC = () => {
         <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
-            <img src={es} alt="CMS Development" className="webdesign-img1 img-fluid" />
+            <img src={es} alt="CMS Development" className="webdesign-img1 img-fluid"data-aos="fade-right" />
           </div>
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">E-Commerce Store Setup</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">E-Commerce Store Setup</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
               Our e-commerce shop setup service can assist you in starting up a high-end, scalable, and easy-to-use online shop. We develop complete functional stores, including product catalog design to payment gateway integration, providing you with smooth navigation, blistering performance, and a secure shopping experience that meets your business requirements.
             </p>
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemswebdev.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -154,12 +154,12 @@ const Webecom: React.FC = () => {
       <div className="row align-items-center">
         {/* Left Content */}
         <div className="col-lg-6 px-5">
-          <h2 className="webdesign-heading">Shopify Store Setup</h2>
-          <p className="webdesign-desc">
+          <h2 className="webdesign-heading"data-aos="fade-down">Shopify Store Setup</h2>
+          <p className="webdesign-desc"data-aos="fade-down">
           Our Shopify store set-up service helps you in the creation of a professional and user-friendly online shop that is tailored to your business. Whether it is helping you design your custom theme or set up a product catalog, you want it integrated with a payment gateway, or mobile responsiveness, we make sure that your Shopify store is sales-optimised, performance-optimised, and growth-optimised.
           </p>
 
-          <div className="webdesign-accordion mt-4">
+          <div className="webdesign-accordion mt-4"data-aos="fade-right">
             {accordionItemssoft.map((item, index) => (
               <div
                 className="webdesign-accordion-item"
@@ -190,7 +190,7 @@ const Webecom: React.FC = () => {
           <img
             src={sp}
             alt="Web design preview"
-            className="webdesign-img img-fluid"
+            className="webdesign-img img-fluid"data-aos="fade-left"
           />
         </div>
       </div>
@@ -206,18 +206,18 @@ const Webecom: React.FC = () => {
             <img
               src={wo}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">WooCommerce Store Setup</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">WooCommerce Store Setup</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
           With our WooCommerce store setup service, you will be in a position to operate a flexible, scalable, and fully custom online store on WordPress. Whether it is developing our own themes, product catalog setup, payment gateway integration, and security optimization, we make sure that your WooCommerce store is machine-tuned, conversion-driven, and growth-oriented.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemspwa.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -255,12 +255,12 @@ const Webecom: React.FC = () => {
       <div className="row align-items-center">
         {/* Left Content */}
         <div className="col-lg-6 px-5">
-          <h2 className="webdesign-heading">Payment Gateway Integration</h2>
-          <p className="webdesign-desc">
+          <h2 className="webdesign-heading"data-aos="fade-down">Payment Gateway Integration</h2>
+          <p className="webdesign-desc"data-aos="fade-down">
           Our payment gateway integration service provides hassle-free, secure, and online transactions to your e-commerce store. We combine reliable payment solutions such as PayPal, Stripe, and domestic gateways, allowing the customer to choose a variety of options and ensuring compliance, fraud prevention, and unproblematic checkout processes that raise conversion and customer confidence.
           </p>
 
-          <div className="webdesign-accordion mt-4">
+          <div className="webdesign-accordion mt-4"data-aos="fade-right">
             {accordionItemsaas.map((item, index) => (
               <div
                 className="webdesign-accordion-item"
@@ -291,7 +291,7 @@ const Webecom: React.FC = () => {
           <img
             src={py}
             alt="Web design preview"
-            className="webdesign-img img-fluid"
+            className="webdesign-img img-fluid"data-aos="fade-left"
           />
         </div>
       </div>
@@ -306,18 +306,18 @@ const Webecom: React.FC = () => {
             <img
               src={mk}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Marketplace Development</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Marketplace Development</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
           Our marketplace development services assist you in the development of scalable, feature-rich multi-vendor marketplaces such as Amazon, eBay, or Etsy. Our marketplaces are secure and user-friendly, enabling vendors to control products whilst providing customers with efficient search, safe payment, and easy order management mechanisms.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemsenter.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"

@@ -119,36 +119,42 @@ const industryData = [
     description:
       "Before we talk tech, we talk to you. Your goals, your audience, your challenges — we want to hear it all.",
     image: wf,
+    dataAos: "fade-right",
   },
   {
     title: "We Map The Journey",
     description:
       "We are not talking tech, we are talking to you. What you want to achieve, who you want to address, and what your issues are, we want to know it all.",
     image: wj,
+    dataAos: "fade-down",
   },
   {
     title: "We build For The Future",
     description:
       "Fast. Secure. Scalable. Our tools are the right tools to ensure the solution grows according to your growth.",
     image: wfu,
+    dataAos: "fade-left",
   },
   {
     title: "We Create Digital Transformation",
     description:
       "Taking your ideas and turning them into effective digital solutions is what we do best; bring together creativity and technology to achieve designs that are easy to understand, grow to scale, and are resilient enough to last.",
     image: wt,
+    dataAos: "fade-right",
   },
   {
     title: "We Stay With You",
     description:
       "There is no goodbye on launch day. We stay because we want to keep things flowing, to keep it moving, and to keep you winning online.",
     image: ww,
+    dataAos: "fade-up",
   },
   {
     title: "We Design With Heart",
     description:
       "Not only does it have to look good, but it has to be something that leaves people stopping, smiling, and staying.",
     image: wh,
+    dataAos: "fade-left",
   },
 ];
 
@@ -171,10 +177,10 @@ const Development: React.FC = () => {
             {/* Left content */}
             <div className="col-lg-7">
               <div className="dg-products-content text-start">
-                <h1 className="dg-products-heading">
+                <h1 className="dg-products-heading"data-aos="fade-down">
                   Website Design & <br /> Development
                 </h1>
-                <p className="dg-products-description">
+                <p className="dg-products-description"data-aos="fade-right">
                   Bytechsol is an organization that provides professional web
                   development and web design services optimized for search
                   engines, mobile-friendliness, and responsiveness. We design
@@ -182,7 +188,7 @@ const Development: React.FC = () => {
                   generate traffic, interest, and convert the viewers into loyal
                   customers.
                 </p>
-                <div className="dg-products-buttons">
+                <div className="dg-products-buttons"data-aos="fade-up">
                   <a href="#contact" className="dg-button dg-button-primary">
                     Start your website project today{" "}
                     <span className="arrow">→</span>
@@ -193,7 +199,7 @@ const Development: React.FC = () => {
 
             {/* Right image */}
             <div className="col-lg-5 text-center">
-              <div className="dg-products-image">
+              <div className="dg-products-image"data-aos="fade-left">
                 <img src={lig} alt="UI/UX Illustration" className="img-fluid" />
               </div>
             </div>
@@ -212,14 +218,14 @@ const Development: React.FC = () => {
             <img
               src={mb}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">UI/UX Design</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">UI/UX Design</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
               Our UI/UX design services enable brands to develop user-centered,
               aesthetically diverse, and results-driven digital experiences. We
               create custom interfaces, including design and functionality,
@@ -227,7 +233,7 @@ const Development: React.FC = () => {
               seamless, interesting, and performance-driven.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemsUI.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -265,8 +271,8 @@ const Development: React.FC = () => {
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading">CMS Design & Development</h2>
-            <p className="webdesign-desc">
+            <h2 className="webdesign-heading"data-aos="fade-down">CMS Design & Development</h2>
+            <p className="webdesign-desc"data-aos="fade-down">
               We aim to support businesses and individuals with their websites
               so they can handle business easily and provide custom, scalable,
               and SEO-friendly content management. We design simple-to-use CMS
@@ -275,7 +281,7 @@ const Development: React.FC = () => {
               developers.
             </p>
 
-            <div className="webdesign-accordion mt-4">
+            <div className="webdesign-accordion mt-4"data-aos="fade-right">
               {accordionItemscms.map((item, index) => (
                 <div
                   className="webdesign-accordion-item"
@@ -310,7 +316,7 @@ const Development: React.FC = () => {
             <img
               src={wb}
               alt="Web design preview"
-              className="webdesign-img img-fluid"
+              className="webdesign-img img-fluid"data-aos="fade-left"
             />
           </div>
         </div>
@@ -326,14 +332,14 @@ const Development: React.FC = () => {
             <img
               src={ld}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Landing Page Design</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Landing Page Design</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
               We offer landing page design services, where we work on highly
               converting pages that are visually appealing and mobile-friendly
               to make them attractive and compel action. We incorporate both UI/
@@ -341,7 +347,7 @@ const Development: React.FC = () => {
               providing measurable outcomes.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemsmain.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -379,8 +385,8 @@ const Development: React.FC = () => {
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading">Website Maintenance & Support</h2>
-            <p className="webdesign-desc">
+            <h2 className="webdesign-heading"data-aos="fade-down">Website Maintenance & Support</h2>
+            <p className="webdesign-desc"data-aos="fade-down">
               Our maintenance and support services for our websites keep your
               site safe and well updated, and on a continual performance level.
               Whether it be about simple updates or emergency patches, we ensure
@@ -388,7 +394,7 @@ const Development: React.FC = () => {
               to the development of your business.
             </p>
 
-            <div className="webdesign-accordion mt-4">
+            <div className="webdesign-accordion mt-4"data-aos="fade-right">
               {accordionItemscms.map((item, index) => (
                 <div
                   className="webdesign-accordion-item"
@@ -423,7 +429,7 @@ const Development: React.FC = () => {
             <img
               src={cr}
               alt="Web design preview"
-              className="webdesign-img img-fluid"
+              className="webdesign-img img-fluid"data-aos="fade-left"
             />
           </div>
         </div>
@@ -438,14 +444,14 @@ const Development: React.FC = () => {
             <img
               src={br}
               alt="Web design preview"
-              className="webdesign-img1 img-fluid"
+              className="webdesign-img1 img-fluid"data-aos="fade-right"
             />
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6 px-5">
-            <h2 className="webdesign-heading1">Responsive Website Redesign</h2>
-            <p className="webdesign-desc1">
+            <h2 className="webdesign-heading1"data-aos="fade-down">Responsive Website Redesign</h2>
+            <p className="webdesign-desc1"data-aos="fade-down">
               Our mobile-friendly and responsive website redesign solutions
               update long-out-of-date websites to sleek, mobile-friendly
               websites with a visual appeal. Our mission is to make your site
@@ -454,7 +460,7 @@ const Development: React.FC = () => {
               web visibility.
             </p>
 
-            <div className="webdesign-accordion1 mt-4">
+            <div className="webdesign-accordion1 mt-4"data-aos="fade-left">
               {accordionItemsresp.map((item, index) => (
                 <div
                   className="webdesign-accordion-item1"
@@ -490,10 +496,10 @@ const Development: React.FC = () => {
       <section className="industry-section">
         <div className="container">
         <div className="industry-header">
-          <h2 className="industry-title">
+          <h2 className="industry-title"data-aos="fade-down">
             Turning Your Ideas Into Something Real
           </h2>
-          <p className="par12">
+          <p className="par12"data-aos="fade-up">
             All great digital initiatives begin with a spark, a concept, a
             challenge, or perhaps a spark of a what-if thought. We are <br />{" "}
             not the traditional web designers that build websites or
@@ -506,6 +512,7 @@ const Development: React.FC = () => {
           {industryData.map((item, index) => (
             <div
               key={index}
+              data-aos={item.dataAos}
               className={`industry-flex-card card-${index}`}
               style={{ backgroundImage: `url(${item.image})` }}
             >

@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "../../../assets/components-css/careers.css";
 import TrustedBySection from "../../../shareable/trust500";
 import wh from "../../../assets/images/career-left1.png";
@@ -14,13 +14,13 @@ const Careers = () => {
       {/* 1st Section */}
       <section className="careers-section">
         <div className="careers-header">
-          <h2>Careers</h2>
-          <p className="careers-subtitle">
+          <h2 className=""data-aos="fade-left">Careers</h2>
+          <p className="careers-subtitle"data-aos="fade-right">
             <strong>
               Growth, Innovation, Collaboration, and a Culture That Inspires!
             </strong>
           </p>
-          <p className="join01 jn1 fs-2 fw-light  m-6">
+          <p className="join01 jn1 fs-2 fw-light  m-6"data-aos="fade-up">
             Join the Bytechsol team and help shape the future of technology with
             creativity, passion, and purpose.
           </p>
@@ -28,19 +28,19 @@ const Careers = () => {
       </section>
       <div className="container">
         <div className="career-parent">
-          <div className="career-div1">
+          <div className="career-div1"data-aos="fade-right">
             <img src={wh} alt="Work" width={"100%"} height={"100%"} />
           </div>
-          <div className="career-div2">
+          <div className="career-div2"data-aos="fade-left">
             <img src={pi} alt="Light" width={"100%"} height={"100%"} />
           </div>
-          <div className="career-div3">
+          <div className="career-div3"data-aos="fade-right">
             <img src={pp} alt="White" width={"100%"} height={"100%"} />
           </div>
-          <div className="career-div4">
+          <div className="career-div4"data-aos="fade-left">
             <img src={lg} alt="Pink" width={"100%"} height={"100%"} />
           </div>
-          <div className="career-div5">
+          <div className="career-div5"data-aos="fade-down">
             <img src={wk} alt="PPS" width={"100%"} height={"100%"} />
           </div>
         </div>
@@ -48,11 +48,11 @@ const Careers = () => {
       <TrustedBySection />
       {/* 2nd section */}
       <section className="work-job careers-intro">
-        <h1 className="careers-intro-title">
+        <h1 className="careers-intro-title"data-aos="fade-down">
           Grow With Us, Not Just Work With Us
         </h1>
 
-        <p className="careers-intro-text">
+        <p className="careers-intro-text"data-aos="fade-left">
           At Bytechsol, we believe a career should be more than a paycheck — it
           should inspire you, challenge you, and help you become the best
           version of yourself. Here, you’ll be surrounded by people who
@@ -60,7 +60,7 @@ const Careers = () => {
           family.
         </p>
 
-        <p className="careers-intro-text careers-intro-cta">
+        <p className="careers-intro-text careers-intro-cta"data-aos="fade-right">
           Explore our current opportunities and discover where you can fit in.
           Even if you don’t find the perfect role listed, we’d still love to
           hear from you, because great people make great teams, and we’re always
@@ -140,14 +140,14 @@ const Careers = () => {
             ></textarea>
           </div>
           <div className="form-footer">
-            <button type="submit" className="application-submit-btn">
+            <button type="submit" className="application-submit-btn"data-aos="fade-right">
               Apply now
             </button>
-            <div className="form-email">
+            <div className="form-email"data-aos="fade-left">
               Prefer email? <br />
              <div className="contact8-alt mt-3">
         
-            <div className="form-email">
+            <div className="form-email"data-aos="fade-left">
   <a
     href="https://mail.google.com/mail/?view=cm&fs=1&to=info@bytechsol.com"
     target="_blank"
