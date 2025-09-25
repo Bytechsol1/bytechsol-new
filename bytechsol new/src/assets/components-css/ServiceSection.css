@@ -82,8 +82,9 @@
   height: 100%;
 }
 .content {
-  width: 400px;
+  width: 420px;
   padding: 20px 40px;
+  margin-top: 40px;
 }
 .services-overlay h2 {
   margin-left: 20px;

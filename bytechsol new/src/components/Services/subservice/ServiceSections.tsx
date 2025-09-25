@@ -26,8 +26,8 @@
       name: "Custom Web Solution",
       heading: "Custom Web Solution",
       description:
-        "Building scalable, innovative products tailored to your business goals...",
-      bullets: ["MVP Development", "Agile Iterations", "User-Centric Design"],
+        "We use our custom web development services, which can fit your business requirements. We offer custom CMS systems as well as advanced integrations and SEO optimized web solutions that optimize performance and increase your online exposure.",
+      bullets: ["Custom Web Solutions", "Custom CMS Development", "API Development & Integration","Third-Party Service Integration","Custom Plugin & Module Development"],
       image: web,
       bgImage: ecb,
     },
@@ -36,8 +36,8 @@
       name: "Web App & Software Development",
       heading: "Web App & Software Development",
       description:
-        "Building scalable, innovative products tailored to your business goals...",
-      bullets: ["MVP Development", "Agile Iterations", "User-Centric Design"],
+        "Our specialization lies in secure, scalable software solutions and the development of websites. Our development cycle guarantees performance speed, a friendly user interface, and leverages an SEO-friendly structure that generates business growth and customer satisfaction.",
+      bullets: ["Web App Development", "Software Development", "Progressive Web Apps (PWA)","SaaS Application Development","Enterprise Application Development"],
       image: ecb,
       bgImage: web,
     },
@@ -46,8 +46,8 @@
       name: "E Commerce Solutions",
       heading: "E Commerce Solutions",
       description:
-        "Building scalable, innovative products tailored to your business goals...",
-      bullets: ["MVP Development", "Agile Iterations", "User-Centric Design"],
+        "Our e-commerce development services enable an enterprise to sell online. Our online stores are SEO friendly, have a secure payment method, an airtight responsive design, and have a smooth user experience to guarantee more conversions and a delightful shopping experience.",
+      bullets: ["E-Commerce Store Setup", "Shopify Store Setup", "WooCommerce Development","Payment Gateway Integration","Marketplace Development"],
       image: web,
       bgImage: ecb,
     },
@@ -56,8 +56,8 @@
       name: "Brand Building",
       heading: "Brand Building",
       description:
-        "Building scalable, innovative products tailored to your business goals...",
-      bullets: ["MVP Development", "Agile Iterations", "User-Centric Design"],
+        "We assist companies in enhancing their brand with brand-building services. Whether it is losing out in logo design or a well-planned brand strategy, we bring with us effective brand identities that are SEO-optimized, resonate with your audience, and place you above the competition.",
+      bullets: ["Brand Strategy & Consulting", "Logo Design & Visual Identity", "Social Media Branding"],
       image: ecb,
       bgImage: web,
     },
@@ -66,8 +66,8 @@
       name: "AI ML Services",
       heading: "AI ML Services",
       description:
-        "Building scalable, innovative products tailored to your business goals...",
-      bullets: ["MVP Development", "Agile Iterations", "User-Centric Design"],
+        "Our professional search engine optimization services enhance your search engine ranking with Google, targeted traffic, and more conversions. Our expertise lies in on-page SEO, off-page optimization, and technical SEO that will position your business to own search results.",
+      bullets: ["On-Page SEO", "Off-Page SEO", "Technical SEO Audit","Local SEO Optimization","SEO Content Writing"],
       image: web,
       bgImage: ecb,
     },
@@ -76,8 +76,8 @@
       name: "SEO Services",
       heading: "SEO Services",
       description:
-        "Building scalable, innovative products tailored to your business goals...",
-      bullets: ["MVP Development", "Agile Iterations", "User-Centric Design"],
+        "We provide world-edge artificial intelligence and machine learning technologies such as chatbots, NLP models, and predictive analytics. Our artificial intelligence development services ensure automation of the processes, improved customer experience, as well as a way to promote data-driven business development.",
+      bullets: ["AI/ML / LLM / NLP Solutions", "AI Chatbots & Voice Assistants"],
       image: ecb,
       bgImage: web,
     },
@@ -86,8 +86,8 @@
       name: "ERP Services",
       heading: "ERP Services",
       description:
-        "Building scalable, innovative products tailored to your business goals...",
-      bullets: ["MVP Development", "Agile Iterations", "User-Centric Design"],
+        "Our tailor-made ERP development solutions make processes more efficient, help to manage data centrally, and optimize work. ERP systems that we design are specific to your processes to make improved decisions and achieve greater productivity.",
+      bullets: ["Custom ERP Implementation & Development", "ERP Integration with Existing Systems", "ERP Maintenance & Support"],
       image: web,
       bgImage: ecb,
     },
@@ -96,8 +96,8 @@
       name: "Odoo Services",
       heading: "Odoo Services",
       description:
-        "Building scalable, innovative products tailored to your business goals...",
-      bullets: ["MVP Development", "Agile Iterations", "User-Centric Design"],
+        "We offer Odoo migration, customization, and consultancy services to streamline your business operations. Our professional Odoo developers provide easy transitions, technical efforts, and integrations that are SEO friendly to provide large-scale efficiency.",
+      bullets: ["Odoo Migration & Customization", "Odoo Techno-Functional Consultancy", "Odoo Module Development","Odoo Integration Services"],
       image: ecb,
       bgImage: web,
     },
@@ -107,6 +107,8 @@
     const [activeService, setActiveService] = useState(services[0]);
 
     return (
+
+      
       <section className="services-layout">
         <div className="service-parent">
           {/* Left Tabs */}
