@@ -25,6 +25,7 @@ import er from "../../assets/images/erpi.jpg";
 import arrow from "../../assets/images/arrow.svg"
 import { Link } from "react-router-dom";
 import arr from "../../assets/images/arrow.svg";
+import ServicesSection from "./subservice/ServiceSections";
 
 const industryData = [
   {
@@ -324,6 +325,7 @@ const Services: React.FC = () => {
       </section>
 
       <TrustedBySection />
+      <ServicesSection/>
 
       {/* 1st section */}
       <section className="webdesign-section1 container-fluid py-5">
