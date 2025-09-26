@@ -24,6 +24,7 @@ import { getNavThemeForPath } from "./themes/navThemes";
 import WebApp from "./components/Services/subservice/WebApp";
 import Aiml from "./components/Services/subservice/Aiml";
 import Development from "./components/Services/subservice/Development";
+import New from "./components/Services/subservice/New";
 
 function AppShell() {
   const location = useLocation();
@@ -52,6 +53,7 @@ function AppShell() {
         <Route path="/Careers" element={<Careers />} />
         <Route path="/Contact" element={<ContactUs />} />
         <Route path="/services/seo-service" element={<FullStackExpertise />} />
+        <Route path="/services/new" element={<New />} />
         <Route path="/services/brand-building" element={<ProductDesign />} />
         <Route path="/services/ERP-service" element={<SaasDesign />} />
         <Route path="/services/odoo-services" element={<OdooServices />} />
