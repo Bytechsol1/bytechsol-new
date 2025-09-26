@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Testimonial from "../../../shareable/testimonial";
 import "../../../assets/components-css/development.css";
 import cl from "../../../assets/images/cwimg.png";
@@ -13,6 +13,7 @@ import bgImage from "../../../assets/images/bgimg.jpg";
 import icon from "../../../assets/images/tick.svg";
 import ContactSection from "../../../shareable/contact";
 import arrow from "../../../assets/images/arrow.svg"
+import { useLocation } from "react-router-dom";
 
 
 // Accordion Data
@@ -162,7 +163,16 @@ const CustomWeb: React.FC = () => {
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+  const location = useLocation();
 
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
   return (
     <>
       {/* 1st Section */}
@@ -209,7 +219,7 @@ const CustomWeb: React.FC = () => {
 
       {/* 1st card---------- */}
 
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="custom-cms-development">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
@@ -266,7 +276,7 @@ const CustomWeb: React.FC = () => {
         </div>
       </section>
       {/* 2nd card------- */}
-      <section className="webdesign-section container-fluid py-5">
+      <section className="webdesign-section container-fluid py-5" id="custom-web-solutions">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}

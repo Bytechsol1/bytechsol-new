@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Testimonial from "../../../shareable/testimonial";
 import lig from "../../../assets/images/light.png";
 import "../../../assets/components-css/development.css";
@@ -164,7 +166,16 @@ const Development: React.FC = () => {
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+  const location = useLocation();
 
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
   return (
     <>
       {/* 1st Section */}
@@ -210,7 +221,7 @@ const Development: React.FC = () => {
       <TrustedBySection />
 
       {/* 2nd section --------------*/}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="ui-ux-design">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
@@ -266,7 +277,7 @@ const Development: React.FC = () => {
         </div>
       </section>
       {/* 3rd section----- */}
-      <section className="webdesign-section container-fluid py-5">
+      <section className="webdesign-section container-fluid py-5" id="cms-design-development">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
@@ -324,7 +335,7 @@ const Development: React.FC = () => {
       </section>
 
       {/* 4th section --------------*/}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="landing-page-design">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
@@ -380,7 +391,7 @@ const Development: React.FC = () => {
         </div>
       </section>
       {/* 4th section----- */}
-      <section className="webdesign-section container-fluid py-5">
+      <section className="webdesign-section container-fluid py-5" id="website-maintenance-support">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
@@ -436,7 +447,7 @@ const Development: React.FC = () => {
         </div>
       </section>
       {/* 5th section --------------*/}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="responsive-website-redesign">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}

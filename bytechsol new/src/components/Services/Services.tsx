@@ -885,7 +885,7 @@ const Services: React.FC = () => {
           {industryData.map((item, index) => (
             <div
               key={index}
-              data-aos={item.dataAos}
+              // data-aos={item.dataAos}
               className={`industry-flex-card card-${index}`}
               style={{ backgroundImage: `url(${item.image})` }}
             >
