@@ -1,6 +1,5 @@
 import  { useEffect, useState } from "react";
 import "../../../assets/components-css/FullStackExpertise.css";
-import TrustedBySection from "../../../shareable/trust500";
 import se from "../../../assets/images/seonew.png"
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
@@ -166,7 +165,7 @@ Start your website project today <span className="arrow">→</span>
   </div>
 </section>
 
-      <TrustedBySection />
+     
 
     {/* 1st card */}
       <section className="webdesign-section1 container-fluid py-5" id="on-page-seo">

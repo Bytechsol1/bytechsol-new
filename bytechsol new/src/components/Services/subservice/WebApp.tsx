@@ -1,7 +1,6 @@
 import "../../../assets/components-css/webapp.css";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
-import TrustedBySection from "../../../shareable/trust500";
 import wa from "../../../assets/images/webapp.svg"
 import w01 from "../../../assets/images/wd01.png" 
 import s02 from "../../../assets/images/sd02.png" 
@@ -194,7 +193,7 @@ const Webapp: React.FC = () => {
         </div>
       </section>
 
-      <TrustedBySection />
+  
 
       {/* 1st card */}
       <section className="webdesign-section1 container-fluid py-5" id="web-app-development">

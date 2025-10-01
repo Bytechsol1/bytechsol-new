@@ -3,7 +3,6 @@ import Testimonial from "../../../shareable/testimonial";
 import "../../../assets/components-css/development.css";
 import cl from "../../../assets/images/cwimg.png";
 import FaqSection from "../../../shareable/faq";
-import TrustedBySection from "../../../shareable/trust500";
 import cm from "../../../assets/images/cms.png";
 import cw from "../../../assets/images/cwapp.png";
 import pl from "../../../assets/images/plugimg.png";
@@ -215,7 +214,7 @@ const CustomWeb: React.FC = () => {
           </div>
         </div>
       </section>
-      <TrustedBySection />
+   
 
       {/* 1st card---------- */}
 

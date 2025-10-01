@@ -1,7 +1,6 @@
 import  { useEffect, useState } from "react";
 import "../../../assets/components-css/ProductDesign.css";
 import er from "../../../assets/images/erp01.svg"
-import TrustedBySection from "../../../shareable/trust500";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import ContactSection from "../../../shareable/contact";
@@ -187,7 +186,7 @@ Start your website project today <span className="arrow">→</span>
       </section>
 
 
-      <TrustedBySection />
+   
        {/* 1st card */}
       <section className="webdesign-section1 container-fluid py-5" id="custom-erp-implementation-development">
         <div className="container">

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../../assets/components-css/webecom.css";
 // import w1 from "../../../assets/images/wecom.jpg";
-import TrustedBySection from "../../../shareable/trust500";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import ContactSection from "../../../shareable/contact";
@@ -114,7 +113,7 @@ const Webecom: React.FC = () => {
 </section>
 
 
-      <TrustedBySection />
+   
 
       {/* 1st card */}
       <div className="container">

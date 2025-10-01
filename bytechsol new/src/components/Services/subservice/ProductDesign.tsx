@@ -1,5 +1,4 @@
 import "../../../assets/components-css/ProductDesign.css";
-import TrustedBySection from "../../../shareable/trust500";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import ContactSection from "../../../shareable/contact";
@@ -148,7 +147,7 @@ useLayoutEffect(() => {
         </section>
 
 
-      <TrustedBySection />
+  
 
       {/* Accordion Section */}
       <section className="webdesign-section1 container-fluid py-5" id="brand-strategy-consulting">

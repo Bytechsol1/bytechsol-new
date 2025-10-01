@@ -1,23 +1,27 @@
 .circle {
   position: relative;
-  width: 300px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: radial-gradient(circle at center, #4a90e2, #7390ad);
+  top: 13%;
 }
 
 .circle span {
   position: absolute;
+  top: 5%;
   left: 50%;
-  /* top: 50%; */
-  font-size: 26px;
-  color: #aaa;
+  font-size: 18px;
+  color: #fff;
   font-weight: bold;
-  transform-origin: 0 90px; /* radius */
+  transform-origin: 0 70px; 
   animation: spin 10s linear infinite;
+  
 }
+
 
 @keyframes spin {
   from {
@@ -25,5 +29,30 @@
   }
   to {
     transform: rotate(calc(var(--i) + 360deg)) translateX(0);
+  }
+}
+.circle-center {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.circle-center img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+
+}
+
+
+@media (max-width: 768px) {
+  .circle {
+    display: none; 
   }
 }

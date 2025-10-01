@@ -384,7 +384,7 @@
   display: block;   
   width: 100%;    
 }
-.ser-subheading {
+/* .ser-subheading {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.6;
@@ -395,8 +395,10 @@
   color: #000;
   text-align: left;
   padding-left: 0;
+} */
+.ser-subheading {
+  display: none; /* hidden by default (desktop) */
 }
-
 /* Row */
 .service-row {
   display: flex;
@@ -466,13 +468,17 @@
   opacity: 1;
   transform: translateY(-50%) translateX(0) scale(1);
 }
+@media (max-width: 991px) {
+  .ser-subheading {
+    display: block; /* visible only on mobile/tablet */
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
 
 /* Larger screens */
 @media (min-width: 1280px) {
-  .ser-subheading {
-    padding-left: 250px;
-  }
-
+ 
   .service-title {
     font-size: 4.3rem;
     padding-left: 130px;
@@ -518,6 +524,11 @@
   font-family: "Guminert", sans-serif;
 }
 
+.awards-vertical-scroll {
+  display: inline-flex;
+  gap: 1rem;
+  animation: scroll-right 12s linear infinite; /* Adjust speed */
+}
 .overlay1 {
   width: 100%;
   max-width: 1280px;
@@ -565,7 +576,7 @@
 
 .award-card {
   flex: 1;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -587,7 +598,7 @@
 }
 
 .award-card {
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start; 
@@ -615,7 +626,7 @@
 @media (max-width: 992px) {
   .awards-heading {
     font-size: 42px;
-    padding-left: 10px;
+    padding-left: 5px;
   }
   .awards-heading2 {
     margin-left: 50px;
@@ -635,14 +646,18 @@
   .award-card {
     padding: 1.5rem;
   }
-
+.award-card {
+  flex: 0 0 auto;
+  min-width: 250px;
+  max-width: 280px;
+}
   .award-img {
     width: 50px;
     height: 50px;
   }
 
   .awards-heading {
-    font-size: 36px;
+    font-size: 42px;
   }
 
   .award-text {
@@ -1347,5 +1362,35 @@
 @media (min-width: 1200px) {
   .card-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* Vertical SERVICE text */
+.service-vertical {
+  position: absolute;
+  top: 0;                  /* start at the very top */
+  bottom: 0;               /* stretch full height */
+  left: 0;                 /* flush to left edge */
+  display: flex;
+  align-items: flex-end;   /* push text to the bottom */
+  justify-content: center;
+  padding: 20px 0;
+  font-size: 4rem;
+  font-weight: 600;
+  color: #000;          /* red like in your screenshot */
+  font-family: "Guminert", sans-serif;
+  letter-spacing: 10px;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  user-select: none;
+  opacity: 0.8;
+  z-index: 2;
+  transform: rotate(180deg);
+}
+/* Hide on mobile */
+@media (max-width: 991px) {
+  .service-vertical {
+    display: none;
   }
 }

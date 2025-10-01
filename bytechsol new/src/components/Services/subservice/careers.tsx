@@ -1,6 +1,5 @@
 // import React from "react";
 import "../../../assets/components-css/careers.css";
-import TrustedBySection from "../../../shareable/trust500";
 import wh from "../../../assets/images/career-left1.png";
 import pi from "../../../assets/images/career-right1.png";
 import pp from "../../../assets/images/career-left2.png";
@@ -45,7 +44,7 @@ const Careers = () => {
           </div>
         </div>
       </div>
-      <TrustedBySection />
+
       {/* 2nd section */}
       <section className="work-job careers-intro">
         <h1 className="careers-intro-title"data-aos="fade-down">

@@ -1,5 +1,4 @@
 import "../../../assets/components-css/OdooServices.css";
-import TrustedBySection from "../../../shareable/trust500";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import ContactSection from "../../../shareable/contact";
@@ -287,7 +286,7 @@ const toggleAccordion = (index: number) => {
         </div>
       </section>
 
-      <TrustedBySection />
+   
 
       {/* 1st card */}
       <section className="webdesign-section1 container-fluid py-5" id="odoo-migration-customization">

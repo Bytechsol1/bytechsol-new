@@ -1,7 +1,5 @@
-import React from "react";
 import "../assets/components-css/ContactUs.css";
 import ContactSection from "../shareable/contact";
-import TrustedBySection from "../shareable/trust500";
 import FaqSection from "../shareable/faq";
 import WorldMap from "../shareable/WorldMap";
 import Testimonial from "../shareable/testimonial";
@@ -10,7 +8,7 @@ const ContactUs = () => {
   return (
     <>
       <ContactSection />
-      <TrustedBySection />
+
       {/* 3rd section --------------- */}
       <section className="belief-behind">
         <div className="container">

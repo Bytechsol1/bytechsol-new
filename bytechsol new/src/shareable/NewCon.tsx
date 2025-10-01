@@ -3,6 +3,8 @@ import cl1 from "../assets/images/clutch1.png";
 import cl2 from "../assets/images/cluthch2.png";
 import up3 from "../assets/images/upsell3.png";
 import "../assets/components-css/NewCon.css"
+import demo from "../assets/images/odoo.png"
+import CircularText from "./CircularText";
 
 const NewCon = () => {
   const [formData, setFormData] = useState({
@@ -59,6 +61,12 @@ const NewCon = () => {
 
         {/* Right Form */}
         <div className="contact8-form">
+          <div className="contact8-deco">
+            <CircularText/>
+          </div>
+
+
+          {/* <CircularText/> */}
           <form onSubmit={handleSubmit}>
             <div className="contact8-row">
               <div className="contact8-field">

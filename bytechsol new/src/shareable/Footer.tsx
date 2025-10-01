@@ -87,13 +87,6 @@ BytechSol is a full-service software agency offering web development, AI/ML solu
       <small className="text" style={{ color: "#aaa" }}>
         © 2025 BytechSol LLC
       </small>
-      <div className="text-center legal-text my-2 my-md-0">
-        <span className="text" style={{ color: "#aaa" }}>
-          BytechSol is a limited liability company based in
-          <span className="flag-wave mx-1 fi fi-us"></span>
-          <span className="flag-wave fi fi-pk"></span>
-        </span>
-      </div>
     </div>
   </div>
 </footer>

@@ -9,7 +9,7 @@ import cmsbg from "../../../assets/images/ui ux 3.png"
 import ecm from "../../../assets/images/ecomser.png"
 import ecmbg from "../../../assets/images/ecombg.png"
 import br from "../../../assets/images/brbui.png"
-import brbg from "../../../assets/images/brbg.png"
+import brbg from "../../../assets/images/bb-bg.png"
 import erp from "../../../assets/images/erpimg.png"
 import erpbg from "../../../assets/images/erpbg.png"
 import aml from "../../../assets/images/aimlimg.png"
@@ -24,23 +24,23 @@ import cmsser from "../../..//assets/images/cms-ser.png"
 
 
 const services = [
-  {
-    id: 1,
-    name: "Website Design & Development",
-    heading: "Website Design & Development",
-    description:
-      "We design eye-catching, easy-to-use, and mobile-friendly websites that combine your business objectives with your brand identity.Whether you need a new website or improvements to your current one, we offer essential services to enhance the performance,responsiveness, and increase your company with maximum visibilityand customer response.",
-    bullets: [
-      "UI / UX Design",
-      "CMS Design & Development",
-      "Landing Page Design",
-      "Website Maintenance & Support",
-      "Responsive Website Redesign",
-    ],
-    image: web,
-    bgImage: ecb,
-    pagepath : "/services/website-design-and-development"
-  },
+    {
+  id: 1,
+  name: "Odoo Services",
+  heading: "Odoo Services",
+  description:
+    "We offer Odoo migration, customization, and consultancy services to streamline your business operations. Our professional Odoo developers provide easy transitions, technical efforts, and integrations that are SEO friendly to provide large-scale efficiency.",
+  bullets: [
+    "Odoo Migration & Customization",
+    "Odoo Techno-Functional Consultancy",
+    "Odoo Module Development",
+    "Odoo Integration Services",
+  ],
+  image: odo,
+  bgImage: odobg,
+  pagepath : "/services/odoo-services"
+},
+
   {
     id: 2,
     name: "Custom Web Solution",
@@ -149,22 +149,23 @@ const services = [
     image: erp,
     bgImage: erpbg,
     pagepath : "/services/ERP-service"
-  },
+},
   {
     id: 9,
-    name: "Odoo Services",
-    heading: "Odoo Services",
+    name: "Website Design & Development",
+    heading: "Website Design & Development",
     description:
-      "We offer Odoo migration, customization, and consultancy services to streamline your business operations. Our professional Odoo developers provide easy transitions, technical efforts, and integrations that are SEO friendly to provide large-scale efficiency.",
+      "We design eye-catching, easy-to-use, and mobile-friendly websites that combine your business objectives with your brand identity.Whether you need a new website or improvements to your current one, we offer essential services to enhance the performance,responsiveness, and increase your company with maximum visibilityand customer response.",
     bullets: [
-      "Odoo Migration & Customization",
-      "Odoo Techno-Functional Consultancy",
-      "Odoo Module Development",
-      "Odoo Integration Services",
+      "UI / UX Design",
+      "CMS Design & Development",
+      "Landing Page Design",
+      "Website Maintenance & Support",
+      "Responsive Website Redesign",
     ],
-    image: odo,
-    bgImage: odobg,
-    pagepath : "/services/odoo-services"
+    image: web,
+    bgImage: ecb,
+    pagepath : "/services/website-design-and-development"
   },
 ];
 

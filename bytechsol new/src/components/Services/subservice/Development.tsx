@@ -6,7 +6,6 @@ import lig from "../../../assets/images/light.png";
 import "../../../assets/components-css/development.css";
 import FaqSection from "../../../shareable/faq";
 import ContactSection from "../../../shareable/contact";
-import TrustedBySection from "../../../shareable/trust500";
 import mb from "../../../assets/images/mb1.png";
 import wf from "../../../assets/images/wfir1.png";
 import wj from "../../../assets/images/wjourn2.png";
@@ -218,7 +217,7 @@ const Development: React.FC = () => {
         </div>
       </section>
 
-      <TrustedBySection />
+   
 
       {/* 2nd section --------------*/}
       <section className="webdesign-section1 container-fluid py-5" id="ui-ux-design">

@@ -3,7 +3,6 @@ import "../../../assets/components-css/Aiml.css";
 import ai from "../../../assets/images/aiml.svg";
 import bgImage from "../../../assets/images/bgimg.jpg";
 import icon from "../../../assets/images/tick.svg";
-import TrustedBySection from "../../../shareable/trust500";
 import v1 from "../../../assets/images/visual1.jpg";
 import sv from "../../../assets/images/servimg.png";
 import Testimonial from "../../../shareable/testimonial";
@@ -126,7 +125,7 @@ const toggleAccordion = (index: number) => {
         </div>
       </section>
 
-      <TrustedBySection />
+
 
       {/* 1st Card */}
       <section className="webdesign-section container-fluid py-5" id="ai-ml-llm-nlp-solutions">
