@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import "../../../assets/components-css/ServiceSection.css";
 import arr from "../../../assets/images/arrow.svg";
 import { Link } from "react-router-dom";
+import CircularText from "../../../shareable/CircularText";
 
 const services = [
   {
@@ -215,7 +216,9 @@ const ServicesSection: React.FC = () => {
       </li>
     );
   })}
+  
 </ul>
+<CircularText/>
       </div>
     </div>
   </div>

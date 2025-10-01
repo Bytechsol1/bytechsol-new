@@ -1,0 +1,29 @@
+.circle {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle span {
+  position: absolute;
+  left: 50%;
+  /* top: 50%; */
+  font-size: 26px;
+  color: #aaa;
+  font-weight: bold;
+  transform-origin: 0 90px; /* radius */
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(var(--i)) translateX(0);
+  }
+  to {
+    transform: rotate(calc(var(--i) + 360deg)) translateX(0);
+  }
+}
