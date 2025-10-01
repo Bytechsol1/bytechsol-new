@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import  { useEffect, useState } from "react";
 import "../../../assets/components-css/ProductDesign.css";
 import er from "../../../assets/images/erp01.svg"
 import TrustedBySection from "../../../shareable/trust500";
@@ -17,6 +17,7 @@ import cs from "../../../assets/images/cuseomiza.png"
 import ip from "../../../assets/images/imple.png"
 import sp from "../../../assets/images/support.png"
 import arrow from "../../../assets/images/arrow.svg"
+import { useLocation } from "react-router-dom";
 
 
 
@@ -113,6 +114,19 @@ const toggleAccordion = (index: number) => {
   setActiveIndex(activeIndex === index ? null : index);
 };
 
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
+
+
+
   return (
     <>
       {/* 1st Section */}
@@ -175,7 +189,7 @@ Start your website project today <span className="arrow">→</span>
 
       <TrustedBySection />
        {/* 1st card */}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="custom-erp-implementation-development">
         <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -218,7 +232,7 @@ Start your website project today <span className="arrow">→</span>
         </div>
       </section>
                {/* 2nd card------- */}
-    <section className="webdesign-section container-fluid py-5">
+    <section className="webdesign-section container-fluid py-5" id="erp-integration-with-existing-systems">
       <div className="container">
       <div className="row align-items-center">
         {/* Left Content */}
@@ -267,7 +281,7 @@ Start your website project today <span className="arrow">→</span>
     </section>
 
   {/* 3rd card --------------*/}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="erp-maintenance-support">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}

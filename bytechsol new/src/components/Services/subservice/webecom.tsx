@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../../assets/components-css/webecom.css";
 // import w1 from "../../../assets/images/wecom.jpg";
 import TrustedBySection from "../../../shareable/trust500";
@@ -14,6 +14,7 @@ import py from "../../../assets/images/payment.png"
 import mk from "../../../assets/images/marketplace.png"
 import arrow from "../../../assets/images/arrow.svg"
 import im1 from "../../../assets/images/ecomerceim.png"
+import { useLocation } from "react-router-dom";
 
 
 const accordionItemswebdev = [
@@ -62,6 +63,16 @@ const Webecom: React.FC = () => {
   const toggleAccordion = (index: number) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+    const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
 
   return (
     <>
@@ -107,7 +118,7 @@ const Webecom: React.FC = () => {
 
       {/* 1st card */}
       <div className="container">
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="e-commerce-store-setup">
         <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -149,7 +160,7 @@ const Webecom: React.FC = () => {
         </div>
       </section>
                {/* 2nd card------- */}
-    <section className="webdesign-section container-fluid py-5">
+    <section className="webdesign-section container-fluid py-5" id="shopify-store-setup">
       <div className="container">
       <div className="row align-items-center">
         {/* Left Content */}
@@ -198,7 +209,7 @@ const Webecom: React.FC = () => {
     </section>
 
   {/* 3rd card --------------*/}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="woocommerce-development">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
@@ -250,7 +261,7 @@ const Webecom: React.FC = () => {
         </div>
       </section>
         {/* 4th card----- */}
-    <section className="webdesign-section container-fluid py-5">
+    <section className="webdesign-section container-fluid py-5" id="payment-gateway-integration">
       <div className="container">
       <div className="row align-items-center">
         {/* Left Content */}
@@ -298,7 +309,7 @@ const Webecom: React.FC = () => {
       </div>
     </section>
     {/* 5th card --------------*/}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="marketplace-development">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}

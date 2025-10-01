@@ -12,10 +12,11 @@ import mi from "../../../assets/images/migra.png";
 import tc from "../../../assets/images/tecno.png";
 import md from "../../../assets/images/module.png";
 import ig from "../../../assets/images/integra.png";
-import  { useRef,  useState,useLayoutEffect } from "react";
+import  { useRef,  useState,useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import arrow from "../../../assets/images/arrow.svg"
+import { useLocation } from "react-router-dom";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -240,6 +241,17 @@ const toggleAccordion = (index: number) => {
   return () => ctx.revert();
 }, []);
 
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
+
 
   return (
     <>
@@ -278,7 +290,7 @@ const toggleAccordion = (index: number) => {
       <TrustedBySection />
 
       {/* 1st card */}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="odoo-migration-customization">
         <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -332,7 +344,7 @@ const toggleAccordion = (index: number) => {
         </div>
       </section>
       {/* 2nd card------- */}
-      <section className="webdesign-section container-fluid py-5">
+      <section className="webdesign-section container-fluid py-5" id="odoo-techno-functional-consultancy">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
@@ -392,7 +404,7 @@ const toggleAccordion = (index: number) => {
       </section>
 
       {/* 3rd card --------------*/}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="odoo-module-development">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
@@ -447,7 +459,7 @@ const toggleAccordion = (index: number) => {
         </div>
       </section>
       {/* 4th card----- */}
-      <section className="webdesign-section container-fluid py-5">
+      <section className="webdesign-section container-fluid py-5" id="odoo-integration-services">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}

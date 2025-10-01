@@ -151,7 +151,7 @@ useLayoutEffect(() => {
       <TrustedBySection />
 
       {/* Accordion Section */}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="brand-strategy-consulting">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
@@ -200,7 +200,7 @@ useLayoutEffect(() => {
 
 
       {/* 2nd accordion */}
-       <section className="webdesign-section container-fluid py-5">
+       <section className="webdesign-section container-fluid py-5" id="logo-design-visual-identity">
         <div className="container">
       <div className="row align-items-center">
         {/* Left Content */}
@@ -248,7 +248,7 @@ useLayoutEffect(() => {
       </div>
     </section>
      {/* 2nd accordion */}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="social-media-branding">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}

@@ -29,11 +29,12 @@ import up from "../assets/images/upworkimg.png"
 
 import ScrollCards from "./ScrollCards";
 import { Link } from "react-router-dom";
+import NewCon from "../shareable/NewCon";
 
 const awards = [
   { text: "Behance", description: "2x Interaction Design awards", img: bh   },
-  { text: "Trust Pilot",description: "Top B2B Service Provider and UX Design Agency", img: tr },
-  { text: "Clutch",description: "One of the best Design Agency", img: Clutch },
+  { text: "Trust Pilot",description: "Trusted by global clients, BytechSol delivers award-winning digital solutions.", img: tr },
+  { text: "Clutch",description: "Top B2B Service Provider and UX Design Agency", img: Clutch },
   { text: "Upwork",description: "Top Reted Design Agency", img: up  },
 ];
 
@@ -59,7 +60,7 @@ const Home: React.FC = () => {
             <div className="row align-items-center">
               <div className="col-md-8">
                 <h1  data-aos="fade-right">
-                  Global UI UX design agency digital partner for{" "}
+                  Global Software Agency & Digital Partner for{" "}
                   <AnimatedText />
                 </h1>
                 <div className="cta-buttons mt-4 d-flex gap-3 flex-wrap"  data-aos="fade-up">
@@ -211,30 +212,61 @@ const Home: React.FC = () => {
 
       {/* Awards */}
       <section
-        className="awards-section"
-        style={{ backgroundImage: `url(${AwardBg})` }}
-      >
-        <div className="overlay1">
-          <div className="awards-heading-container">
-            <div className="container">
-            <h2 className="awards-heading" data-aos="fade-right">our awards &</h2>
-            <br />
-            <h2 className="awards-heading2" data-aos="fade-left">achievements</h2>
+  className="awards-section"
+  style={{ backgroundImage: `url(${AwardBg})` }}
+>
+  <div className="overlay1">
+    <div className="awards-heading-container">
+      <div className="container text-center">
+        <h2 className="awards-heading" data-aos="fade-right">
+          our awards &
+        </h2>
+        <br />
+        <h2 className="awards-heading2" data-aos="fade-left">
+          achievements
+        </h2>
+      </div>
+    </div>
+
+    {/* Desktop Grid */}
+    <div className="container d-none d-lg-block">
+      <div className="row justify-content-center">
+        {awards.map((item, idx) => (
+          <div className="col-lg-3 d-flex justify-content-center" key={idx}>
+            <div className="award-card text-start">
+              <img
+                src={item.img}
+                alt={`award-${idx}`}
+                className="award-img img-fluid"
+              />
+              <p className="award-text">{item.text}</p>
+              <p className="award-desc">{item.description}</p>
+            </div>
           </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Mobile Vertical Scroll */}
+    <div className="container-fluid d-lg-none">
+      <div className="awards-vertical-scroll">
+        {awards.map((item, idx) => (
+          <div className="award-card text-start mb-4" key={idx}>
+            <img
+              src={item.img}
+              alt={`award-${idx}`}
+              className="award-img img-fluid"
+            />
+            <p className="award-text">{item.text}</p>
+            <p className="award-desc">{item.description}</p>
           </div>
-          <div className="awards-grid"  style={{ backgroundImage: `url(${AwardBg})` }}>
-            {awards.map((item, idx) => (
-              <div className="award-card" key={idx} >
-                <img src={item.img} alt={`award-${idx}`} className="award-img"/>
-                <p className="award-text">{item.text} </p>
-                <p className="award-desc">
-      {item.description}
-    </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+        
+
 
       {/* Scroll Cards */}
       <ScrollCards />
@@ -273,6 +305,7 @@ const Home: React.FC = () => {
       <Testimonial />
       <FaqSection />
       <ContactSection />
+            <NewCon />
     </>
   );
 };

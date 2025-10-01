@@ -870,8 +870,9 @@ a {
 
 .services-description {
   font-size: 0.95rem;
-  color: #888888;
-  max-width: 450px;
+    color: #000;
+    margin-left: 20px;
+    max-width: 470px;
 }
 
 .unique-service-img {
@@ -879,4 +880,38 @@ a {
   max-width: 800px;
   transition: transform 0.3s ease;
   margin-left: 330px;
+}
+
+/* Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .services-big {
+    font-size: 6rem;
+  }
+
+  .services-small {
+    font-size: 2.5rem;
+  }
+
+  .unique-service-img {
+    max-width: 70%;
+    margin-top: 2rem;
+  }
+}
+
+/* Mobile (<= 576px) */
+@media (max-width: 576px) {
+  .services-big {
+    font-size: 6rem;
+  }
+
+  .services-small {
+    font-size: 1.5rem;
+  }
+
+  .unique-service-img {
+    max-width: 100%;
+        margin: -0.5rem auto 0;
+        margin-left: 80px;
+        height: 300px;
+  }
 }

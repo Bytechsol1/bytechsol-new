@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import  { useEffect, useState } from "react";
 import "../../../assets/components-css/Aiml.css"; 
 import ai from "../../../assets/images/aiml.svg";
 import bgImage from "../../../assets/images/bgimg.jpg";
@@ -10,6 +10,7 @@ import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import ContactSection from "../../../shareable/contact";
 import arrow from "../../../assets/images/arrow.svg"
+import { useLocation } from "react-router-dom";
 
 
 const accordionItemssoft = [
@@ -75,6 +76,19 @@ const [activeIndex, setActiveIndex] = useState<number | null>(null);
 const toggleAccordion = (index: number) => {
   setActiveIndex(activeIndex === index ? null : index);
 };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
+
+
   return (
     <>
       {/* 1st Section */}
@@ -115,7 +129,7 @@ const toggleAccordion = (index: number) => {
       <TrustedBySection />
 
       {/* 1st Card */}
-      <section className="webdesign-section container-fluid py-5">
+      <section className="webdesign-section container-fluid py-5" id="ai-ml-llm-nlp-solutions">
        <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
@@ -169,7 +183,7 @@ const toggleAccordion = (index: number) => {
 
       {/* 2nd Card */}
      
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="ai-chatbots-voice-assistants">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}

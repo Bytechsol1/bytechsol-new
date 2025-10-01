@@ -337,7 +337,7 @@ const CustomWeb: React.FC = () => {
       </section>
 
       {/* 3rd card --------------*/}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="api-development-integration">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
@@ -396,7 +396,7 @@ const CustomWeb: React.FC = () => {
         </div>
       </section>
       {/* 4th card----- */}
-      <section className="webdesign-section container-fluid py-5">
+      <section className="webdesign-section container-fluid py-5" id="third-party-service-integration">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Content */}
@@ -455,7 +455,7 @@ const CustomWeb: React.FC = () => {
         </div>
       </section>
       {/* 5th card --------------*/}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="custom-plugin-module-development">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}

@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import  { useEffect, useState } from "react";
 import "../../../assets/components-css/FullStackExpertise.css";
 import TrustedBySection from "../../../shareable/trust500";
 import se from "../../../assets/images/seonew.png"
@@ -15,6 +15,7 @@ import os from "../../../assets/images/onseo.png"
 import fs from "../../../assets/images/offseo.png"
 import ts from "../../../assets/images/techseo.png"
 import arrow from "../../../assets/images/arrow.svg"
+import { useLocation } from "react-router-dom";
 
 
 const industryData = [
@@ -88,13 +89,25 @@ const accordionItemspwa = [
 
 
 
-
 const ContactUs = () => {
 const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
 const toggleAccordion = (index: number) => {
   setActiveIndex(activeIndex === index ? null : index);
 };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
+
+
   return (
     <>
        {/* 1st Section */}
@@ -156,7 +169,7 @@ Start your website project today <span className="arrow">→</span>
       <TrustedBySection />
 
     {/* 1st card */}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="on-page-seo">
         <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -199,7 +212,7 @@ Start your website project today <span className="arrow">→</span>
         </div>
       </section>
                {/* 2nd card------- */}
-    <section className="webdesign-section container-fluid py-5">
+    <section className="webdesign-section container-fluid py-5" id="off-page-seo">
       <div className="container">
       <div className="row align-items-center">
         {/* Left Content */}
@@ -248,7 +261,7 @@ Start your website project today <span className="arrow">→</span>
     </section>
 
   {/* 3rd card --------------*/}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="technical-seo-audit">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
@@ -261,7 +274,7 @@ Start your website project today <span className="arrow">→</span>
           </div>
 
           {/* Right Content */}
-          <div className="col-lg-6 px-5">
+          <div className="col-lg-6 px-5" >
             <h2 className="webdesign-heading1"data-aos="fade-down">Technical SEO</h2>
             <p className="webdesign-desc1"data-aos="fade-down">
          Technical SEO provides the base to achieve higher rankings that guarantee that your website is fast, secure, and crawlable. We deal with back-end problems that have a negative impact on your search performance, enhancing accessibility, indexing, and user experience in order to get your site competitive.

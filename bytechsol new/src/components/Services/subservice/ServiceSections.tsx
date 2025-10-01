@@ -5,6 +5,23 @@ import "../../../assets/components-css/ServiceSection.css";
 import arr from "../../../assets/images/arrow.svg";
 import { Link } from "react-router-dom";
 import CircularText from "../../../shareable/CircularText";
+import cmsbg from "../../../assets/images/ui ux 3.png"
+import ecm from "../../../assets/images/ecomser.png"
+import ecmbg from "../../../assets/images/ecombg.png"
+import br from "../../../assets/images/brbui.png"
+import brbg from "../../../assets/images/brbg.png"
+import erp from "../../../assets/images/erpimg.png"
+import erpbg from "../../../assets/images/erpbg.png"
+import aml from "../../../assets/images/aimlimg.png"
+import amlbg from "../../../assets/images/aibg.png"
+import odo from "../../../assets/images/odoo.png"
+import odobg from "../../../assets/images/odoobg.png"
+import seo from "../../../assets/images/seoimg.png"
+import seobg from "../../../assets/images/seobg.png"
+import wb from "../../../assets/images/webapp.png"
+import webbg from "../../../assets/images/webbg.png"
+import cmsser from "../../..//assets/images/cms-ser.png"
+
 
 const services = [
   {
@@ -37,8 +54,8 @@ const services = [
       "Third-Party Service Integration",
       "Custom Plugin & Module Development",
     ],
-    image: web,
-    bgImage: ecb,
+    image: cmsser,
+    bgImage: cmsbg,
     pagepath : "/services/custom-web"
   },
   {
@@ -54,8 +71,8 @@ const services = [
       "SaaS Application Development",
       "Enterprise Application Development",
     ],
-    image: web,
-    bgImage: ecb,
+    image: wb,
+    bgImage: webbg,
     pagepath : "/services/web-app"
   },
   {
@@ -71,8 +88,8 @@ const services = [
       "Payment Gateway Integration",
       "Marketplace Development",
     ],
-    image: web,
-    bgImage: ecb,
+    image: ecm,
+    bgImage: ecmbg,
     pagepath : "/services/E-Commerce-solutions"
   },
   {
@@ -86,8 +103,8 @@ const services = [
       "Logo Design & Visual Identity",
       "Social Media Branding",
     ],
-    image: web,
-    bgImage: ecb,
+    image: br,
+    bgImage: brbg,
     pagepath : "/services/brand-building"
   },
   {
@@ -103,8 +120,8 @@ const services = [
       "Local SEO Optimization",
       "SEO Content Writing",
     ],
-    image: web,
-    bgImage: ecb,
+    image: seo,
+    bgImage: seobg,
     pagepath : "/services/seo-service"
   },
   {
@@ -114,8 +131,8 @@ const services = [
     description:
       "We provide world-edge artificial intelligence and machine learning technologies such as chatbots, NLP models, and predictive analytics. Our artificial intelligence development services ensure automation of the processes, improved customer experience, as well as a way to promote data-driven business development.",
     bullets: ["AI/ML / LLM / NLP Solutions", "AI Chatbots & Voice Assistants"],
-    image: web,
-    bgImage: ecb,
+    image: aml,
+    bgImage: amlbg,
     pagepath : "/services/Ai-Ml"
   },
   {
@@ -129,8 +146,8 @@ const services = [
       "ERP Integration with Existing Systems",
       "ERP Maintenance & Support",
     ],
-    image: web,
-    bgImage: ecb,
+    image: erp,
+    bgImage: erpbg,
     pagepath : "/services/ERP-service"
   },
   {
@@ -145,8 +162,8 @@ const services = [
       "Odoo Module Development",
       "Odoo Integration Services",
     ],
-    image: web,
-    bgImage: ecb,
+    image: odo,
+    bgImage: odobg,
     pagepath : "/services/odoo-services"
   },
 ];
@@ -181,7 +198,7 @@ const ServicesSection: React.FC = () => {
     key={activeService.id}
     src={activeService.image}
     alt={activeService.name}
-    className="services-image fade-in"
+    className="services-image fade-in img-fluid"
   />
 </div>
 

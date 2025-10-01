@@ -13,10 +13,11 @@ import id from "../../../assets/images/ideat.png"
 import bl from "../../../assets/images/blacklp.png"
 import pl from "../../../assets/images/planlp.png"
 import fw from "../../../assets/images/findwk.png"
-import React, { useRef,  useState,useLayoutEffect } from "react";
+import React, { useRef,  useState,useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import arrow from "../../../assets/images/arrow.svg"
+import { useLocation } from "react-router-dom";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -110,6 +111,17 @@ const accordionItemsenter = [
 // ✅ Final Component
 const Webapp: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
+
 
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -117,8 +129,7 @@ const Webapp: React.FC = () => {
 
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // useLayoutEffect is preferred for GSAP animations to run synchronously
-  // after the DOM is updated, preventing animation conflicts on route changes.
+  
   useLayoutEffect(() => {
   const ctx = gsap.context(() => {
     const cardsEls = gsap.utils.toArray<HTMLElement>(".card-row");
@@ -158,8 +169,6 @@ const Webapp: React.FC = () => {
 
   
 
-
-
   return (
     <>
       {/* Hero Section */}
@@ -188,7 +197,7 @@ const Webapp: React.FC = () => {
       <TrustedBySection />
 
       {/* 1st card */}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="web-app-development">
         <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 text-center px-4 mb-5 mb-lg-0">
@@ -230,7 +239,7 @@ const Webapp: React.FC = () => {
         </div>
       </section>
                {/* 2nd card------- */}
-    <section className="webdesign-section container-fluid py-5">
+    <section className="webdesign-section container-fluid py-5" id="software-development">
       <div className="container">
       <div className="row align-items-center">
         {/* Left Content */}
@@ -279,7 +288,7 @@ const Webapp: React.FC = () => {
     </section>
 
   {/* 3rd card --------------*/}
-      <section className="webdesign-section1 container-fluid py-5">
+      <section className="webdesign-section1 container-fluid py-5" id="progressive-web-apps-pwa">
         <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}

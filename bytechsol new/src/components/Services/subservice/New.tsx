@@ -5,74 +5,74 @@ import ec from "../../../assets/images/ecom.png"
 import pl from "../../../assets/images/plat.png"
 import we from "../../../assets/images/web3.png"
 import ed from "../../../assets/images/edtech.png"
-import sv from "../../../assets/images/services.png"
-import os from "../../../assets/images/onseo.png"
+// import sv from "../../../assets/images/services.png"
+// import os from "../../../assets/images/onseo.png"
 import { motion, AnimatePresence } from "framer-motion";
 
 const items = [
      {
     id: 0,
-    title: "Web App Development",
+    title: "UI/UX Design",
     description:
-      "Our web app services provide high-performing, reliable, and scalable applications that meet your business objectives. We specialise in developing apps that streamline workflows, improve customer experiences, and enable business development in industries throughout the planning process to deployment.",
-    image: fin, // replace with actual path
+      "Our UI/UX design services enable brands to develop user-centered, aesthetically diverse, and results-driven digital experiences. We create custom interfaces, including design and functionality, together with your brand value, to make every experience feel seamless, interesting, and performance-driven.",
+    image: fin, 
   },
   {
     id: 1,
-    title: "SLB",
+    title: "No more design guesswork",
     subtitle: "Process Automation & Digital Transformation within SLB’s Ecosyst",
     description:
-      "Schlumberger partnered with Folio3 to implement AI-driven time series forecasting, enhancing revenue predictions across categories. This MLOps solution helped optimize pricing strategies and improve market trend analysis.",
-    image: fin, // replace with actual path
+      "Your customers must get your product at a glance. You can count on our unique User Interface / User experience development process that will lead to your page telling more about your value, the result of the natural navigation, and a captivating layout that will make people spend more time on your page and convert more quickly.",
+    image: fin, 
   },
   {
     id: 2,
-    title: "HipLink",
+    title: "Launch without delays",
     subtitle: "Enterprise Messaging & Communication",
     description:
-      "HipLink leveraged Folio3’s expertise to streamline communication workflows and integrate with enterprise systems.",
+      "We offer timely user interface designs at the required quality. The organised workflow, like wireframes and prototypes, enables efficiency and helps you launch within the shortest time with a design that is ready to deliver.",
     image: ec
   },
   {
     id: 3,
-    title: "Barnes & Noble",
+    title: "Interfaces that speak your brand",
     subtitle: "Retail Digital Experience",
     description:
-      "Modernizing retail systems and customer engagement through scalable e-commerce integrations.",
+      "Each and every product is different; this is why we design custom UI by your brand voice. Whether it is a color palette or typography, we make sure that everything conveys your personality along with boosting usability.",
     image:  pl 
 },
   {
     id: 4,
-    title: "Colgate",
+    title: "Mobile-first, responsive designs",
     subtitle: "Consumer Goods Automation",
     description:
-      "Colgate optimized supply chain and manufacturing systems with AI and automation solutions.",
+      "Our approach to design utilises mobile-first concepts so that your web presence is flawless across mobile phones and tablets. Our responsive design practice raises accessibility, increases user interaction, and augments the results of SEO.",
     image: we
   },
   {
     id: 5,
-    title: "SquareTrade",
+    title: "Tested for usability & performance",
     subtitle: "Insurance Tech",
     description:
-      "Building resilient claim management systems and predictive analytics for warranty services.",
+      "We also conduct usability tests before handoff to make sure that your user experience design will be error-free when working in that actual situation. We encode everything with the specifics of speed, access, and conversion in mind.",
     image: ed
   },
-  {
-    id: 6,
-    title: "AnyRoad",
-    subtitle: "Experience Management",
-    description:
-      "Helping AnyRoad scale their platform and analytics dashboards for experiential marketing.",
-    image: sv
-  },
-  {
-    id: 7,
-    title: "Brighton Park",
-    subtitle: "Investment & Analytics",
-    description:
-      "Supporting data-driven investment strategies with predictive insights and automation.",
-    image: os,
-  },
+  // {
+  //   id: 6,
+  //   title: "AnyRoad",
+  //   subtitle: "Experience Management",
+  //   description:
+  //     "Helping AnyRoad scale their platform and analytics dashboards for experiential marketing.",
+  //   image: sv
+  // },
+  // {
+  //   id: 7,
+  //   title: "Brighton Park",
+  //   subtitle: "Investment & Analytics",
+  //   description:
+  //     "Supporting data-driven investment strategies with predictive insights and automation.",
+  //   image: os,
+  // },
 ];
 
 const New: React.FC = () => {
@@ -81,11 +81,11 @@ const [fade, setFade] = useState<boolean>(false);
 
 const handleClick = (id: number) => {
   if (id === activeId) return;
-  setFade(true); // start fade-out
+  setFade(true); 
   setTimeout(() => {
-    setActiveId(id); // change content
-    setFade(false);  // fade-in
-  }, 300); // duration matches CSS transition
+    setActiveId(id); 
+    setFade(false); 
+  }, 300); 
 };
 
   const activeItem = items.find((item) => item.id === activeId);
@@ -96,9 +96,9 @@ const handleClick = (id: number) => {
         {/* Left Timeline */}
         <div className="timeline-left">
           <ul>
-            <h3 className="heads">Web App Development</h3>
+            <h3 className="heads">UI/UX Design</h3>
             {items
-              .filter((item) => item.id !== 0) // don't show "Web App Development" in the list
+              .filter((item) => item.id !== 0) 
               .map((item) => (
                 <li
   key={item.id}
