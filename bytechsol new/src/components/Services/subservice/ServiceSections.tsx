@@ -21,6 +21,8 @@ import seobg from "../../../assets/images/seobg.png"
 import wb from "../../../assets/images/webapp.png"
 import webbg from "../../../assets/images/webbg.png"
 import cmsser from "../../..//assets/images/cms-ser.png"
+import { HashLink } from "react-router-hash-link";
+
 
 
 const services = [
@@ -224,14 +226,15 @@ const ServicesSection: React.FC = () => {
       .replace(/(^-|-$)/g, "");     // trim dashes
 
     return (
-      <li className="ul" key={i}>
-        <Link
-          to={`${activeService.pagepath}#${sectionId}`}
-          className="bullet-link custom-link2"
-        >
-          {b}
-        </Link>
-      </li>
+<li className="ul" key={i}>
+  <HashLink
+    smooth
+    to={`${activeService.pagepath}#${sectionId}`}
+    className="bullet-link custom-link2"
+  >
+    {b}
+  </HashLink>
+</li>
     );
   })}
   

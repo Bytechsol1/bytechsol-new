@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import "../../../App.css";
-import fin from "../../../assets/images/fintech.png"
-import ec from "../../../assets/images/ecom.png"
-import pl from "../../../assets/images/plat.png"
 import we from "../../../assets/images/web3.png"
-import ed from "../../../assets/images/edtech.png"
-// import sv from "../../../assets/images/services.png"
-// import os from "../../../assets/images/onseo.png"
 import { motion, AnimatePresence } from "framer-motion";
 
 const items = [
@@ -15,7 +9,7 @@ const items = [
     title: "UI/UX Design",
     description:
       "Our UI/UX design services enable brands to develop user-centered, aesthetically diverse, and results-driven digital experiences. We create custom interfaces, including design and functionality, together with your brand value, to make every experience feel seamless, interesting, and performance-driven.",
-    image: fin, 
+    image: we, 
   },
   {
     id: 1,
@@ -23,7 +17,7 @@ const items = [
     subtitle: "Process Automation & Digital Transformation within SLB’s Ecosyst",
     description:
       "Your customers must get your product at a glance. You can count on our unique User Interface / User experience development process that will lead to your page telling more about your value, the result of the natural navigation, and a captivating layout that will make people spend more time on your page and convert more quickly.",
-    image: fin, 
+    image: we, 
   },
   {
     id: 2,
@@ -31,7 +25,7 @@ const items = [
     subtitle: "Enterprise Messaging & Communication",
     description:
       "We offer timely user interface designs at the required quality. The organised workflow, like wireframes and prototypes, enables efficiency and helps you launch within the shortest time with a design that is ready to deliver.",
-    image: ec
+    image: we
   },
   {
     id: 3,
@@ -39,7 +33,7 @@ const items = [
     subtitle: "Retail Digital Experience",
     description:
       "Each and every product is different; this is why we design custom UI by your brand voice. Whether it is a color palette or typography, we make sure that everything conveys your personality along with boosting usability.",
-    image:  pl 
+    image:  we 
 },
   {
     id: 4,
@@ -55,7 +49,7 @@ const items = [
     subtitle: "Insurance Tech",
     description:
       "We also conduct usability tests before handoff to make sure that your user experience design will be error-free when working in that actual situation. We encode everything with the specifics of speed, access, and conversion in mind.",
-    image: ed
+    image: we
   },
   // {
   //   id: 6,
