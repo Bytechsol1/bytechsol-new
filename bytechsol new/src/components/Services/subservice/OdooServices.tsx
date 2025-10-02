@@ -1,7 +1,7 @@
 import "../../../assets/components-css/OdooServices.css";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
-import ContactSection from "../../../shareable/contact";
+import NewCon from "../../../shareable/NewCon";
 import et from "../../../assets/images/ideat.png";
 import lw from "../../../assets/images/lwork.png";
 import sp from "../../../assets/images/simplicity.png";
@@ -594,7 +594,7 @@ const toggleAccordion = (index: number) => {
 
       <Testimonial />
       <FaqSection />
-      <ContactSection />
+      <NewCon />
     </>
   );
 };

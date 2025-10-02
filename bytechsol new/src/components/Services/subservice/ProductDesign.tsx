@@ -1,7 +1,7 @@
 import "../../../assets/components-css/ProductDesign.css";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
-import ContactSection from "../../../shareable/contact";
+import NewCon from "../../../shareable/NewCon";
 import y1 from "../../../assets/images/yel1.png"
 import et from "../../../assets/images/ideat.png";
 import lw from "../../../assets/images/lwork.png";
@@ -329,7 +329,7 @@ useLayoutEffect(() => {
 
       <Testimonial />
       <FaqSection />
-      <ContactSection />
+      <NewCon />
     </>
   );
 };

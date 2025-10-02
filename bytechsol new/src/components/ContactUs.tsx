@@ -1,5 +1,5 @@
 import "../assets/components-css/ContactUs.css";
-import ContactSection from "../shareable/contact";
+import NewCon from "../shareable/NewCon";
 import FaqSection from "../shareable/faq";
 import WorldMap from "../shareable/WorldMap";
 import Testimonial from "../shareable/testimonial";
@@ -7,7 +7,7 @@ import Testimonial from "../shareable/testimonial";
 const ContactUs = () => {
   return (
     <>
-      <ContactSection />
+      <NewCon />
 
       {/* 3rd section --------------- */}
       <section className="belief-behind">

@@ -3,7 +3,7 @@ import "../../../assets/components-css/FullStackExpertise.css";
 import se from "../../../assets/images/seonew.png"
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
-import ContactSection from "../../../shareable/contact";
+import NewCon from "../../../shareable/NewCon";
 import fin from "../../../assets/images/fintech.png"
 import ec from "../../../assets/images/ecom.png"
 import pl from "../../../assets/images/plat.png"
@@ -343,7 +343,7 @@ Start your website project today <span className="arrow">→</span>
 </section>
       <Testimonial />
       <FaqSection />
-      <ContactSection />
+      <NewCon />
     </>
   );
 };

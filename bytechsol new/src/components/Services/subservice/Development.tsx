@@ -5,7 +5,7 @@ import Testimonial from "../../../shareable/testimonial";
 import lig from "../../../assets/images/light.png";
 import "../../../assets/components-css/development.css";
 import FaqSection from "../../../shareable/faq";
-import ContactSection from "../../../shareable/contact";
+import NewCon from "../../../shareable/NewCon";
 import mb from "../../../assets/images/mb1.png";
 import wf from "../../../assets/images/wfir1.png";
 import wj from "../../../assets/images/wjourn2.png";
@@ -537,7 +537,7 @@ const Development: React.FC = () => {
 
       <Testimonial />
       <FaqSection />
-      <ContactSection />
+      <NewCon />
     </>
   );
 };

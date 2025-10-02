@@ -1,4 +1,4 @@
-import ContactSection from "../../shareable/contact";
+import NewCon from "../../shareable/NewCon";
 import "../../assets/components-css/Blog.css";
 import dl from "../../assets/images/dlrs.png";
 import er from "../../assets/images/erp.png";
@@ -130,7 +130,7 @@ const Blog = () => {
         </div>
       </section>
 
-      <ContactSection />
+      <NewCon />
     </>
   );
 };

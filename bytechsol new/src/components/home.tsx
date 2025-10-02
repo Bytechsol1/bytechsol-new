@@ -285,7 +285,8 @@ const Home: React.FC = () => {
     </div>
 
     {/* Mobile Vertical Scroll */}
-<div className="container-fluid d-lg-none">
+{/* <div className="container-fluid d-lg-none">
+  <div className="container">
   <div className="awards-vertical-scroll">
     {[...awards, ...awards].map((item, idx) => ( // duplicate array
       <div className="award-card text-start mb-4" key={idx}>
@@ -297,9 +298,28 @@ const Home: React.FC = () => {
         <p className="award-text">{item.text}</p>
         <p className="award-desc">{item.description}</p>
       </div>
+      
     ))}
   </div>
-</div>
+  </div>
+</div> */}
+        <div className="scrolling-images-section d-lg-none">
+          <div className="slide-awd">
+          <div className="awards-vertical-scroll">
+            {[...awards, ...awards].map((item, idx) => (
+              <div className="award-card text-start mb-4" key={idx}>
+              <img
+                 src={item.img}
+          alt={`award-${idx}`}
+          className="award-img img-fluid"
+              />
+                      <p className="award-text">{item.text}</p>
+        <p className="award-desc">{item.description}</p>
+      </div>
+            ))}
+          </div>
+          </div>
+        </div>
   </div>
 </section>
         

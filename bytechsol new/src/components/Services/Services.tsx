@@ -3,7 +3,7 @@ import "../../assets/components-css/Services.css";
 import TrustedBySection from "../../shareable/trust500";
 import Testimonial from "../../shareable/testimonial";
 import FaqSection from "../../shareable/faq";
-import ContactSection from "../../shareable/contact";
+import NewCon from "../../shareable/NewCon";
 import ServicesSection from "./subservice/ServiceSections";
 import ic from "../../assets/images/icesimg.png";
 
@@ -40,7 +40,7 @@ const Services: React.FC = () => {
 
       <Testimonial />
       <FaqSection />
-      <ContactSection />
+      <NewCon />
     </>
   );
 };

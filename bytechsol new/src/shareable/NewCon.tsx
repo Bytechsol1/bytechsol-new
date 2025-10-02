@@ -3,7 +3,7 @@ import cl1 from "../assets/images/clutch1.png";
 import cl2 from "../assets/images/cluthch2.png";
 import up3 from "../assets/images/upsell3.png";
 import "../assets/components-css/NewCon.css"
-import demo from "../assets/images/odoo.png"
+
 import CircularText from "./CircularText";
 
 const NewCon = () => {
@@ -29,10 +29,10 @@ const NewCon = () => {
   };
 
   return (
-    <section className="contact8-wrapper">
+    <section className="contact8-wrapper" >
       <div className="contact8-content">
         {/* Left Content */}
-        <div className="contact8-left">
+        <div className="contact8-left" data-aos="fade-right">
           <h2 className="contact8-title">
             Let&apos;s Build Your <br /> Digital Future
           </h2>
@@ -60,7 +60,7 @@ const NewCon = () => {
         </div>
 
         {/* Right Form */}
-        <div className="contact8-form">
+        <div className="contact8-form" data-aos="fade-left">
           <div className="contact8-deco">
             <CircularText/>
           </div>

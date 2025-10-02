@@ -10,7 +10,7 @@ import ap from "../../../assets/images/apimg.png";
 import sv from "../../../assets/images/servimg.png";
 import bgImage from "../../../assets/images/bgimg.jpg";
 import icon from "../../../assets/images/tick.svg";
-import ContactSection from "../../../shareable/contact";
+import NewCon from "../../../shareable/NewCon";
 import arrow from "../../../assets/images/arrow.svg"
 import { useLocation } from "react-router-dom";
 
@@ -547,7 +547,7 @@ const CustomWeb: React.FC = () => {
 
       <Testimonial />
       <FaqSection />
-      <ContactSection />
+      <NewCon />
     </>
   );
 };

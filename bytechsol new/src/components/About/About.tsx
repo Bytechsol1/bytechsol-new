@@ -5,7 +5,7 @@ import co from "../../assets/images/comp.png";
 import bk from "../../assets/images/blacky.png";
 import Testimonial from "../../shareable/testimonial";
 import FaqSection from "../../shareable/faq";
-import ContactSection from "../../shareable/contact";
+import NewCon from "../../shareable/NewCon";
 import TrustedBySection from "../../shareable/trust500";
 import hm1 from "../../assets/images/homeimg1.png"
 import { Link } from "react-router-dom";
@@ -323,7 +323,7 @@ const About: React.FC = () => {
         </div>
       </section>
       <FaqSection />
-      <ContactSection />
+      <NewCon />
     </>
   );
 };

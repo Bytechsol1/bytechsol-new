@@ -3,7 +3,7 @@ import "../../../assets/components-css/webecom.css";
 // import w1 from "../../../assets/images/wecom.jpg";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
-import ContactSection from "../../../shareable/contact";
+import NewCon from "../../../shareable/NewCon";
 import bgImage from "../../../assets/images/bgimg.jpg";
 import icon from "../../../assets/images/tick.svg";
 import es from "../../../assets/images/estore.png"
@@ -396,7 +396,7 @@ const Webecom: React.FC = () => {
       </section>
               <Testimonial/>
               <FaqSection/>
-              <ContactSection/>
+              <NewCon />
     </>
   );
 };

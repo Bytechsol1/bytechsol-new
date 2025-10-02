@@ -7,7 +7,7 @@ import v1 from "../../../assets/images/visual1.jpg";
 import sv from "../../../assets/images/servimg.png";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
-import ContactSection from "../../../shareable/contact";
+import NewCon from "../../../shareable/NewCon";
 import arrow from "../../../assets/images/arrow.svg"
 import { useLocation } from "react-router-dom";
 
@@ -267,7 +267,7 @@ const toggleAccordion = (index: number) => {
       </section>
         <Testimonial />
         <FaqSection />
-        <ContactSection />
+        <NewCon />
     </>
   );
 };

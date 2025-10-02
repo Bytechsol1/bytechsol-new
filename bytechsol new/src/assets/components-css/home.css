@@ -524,11 +524,11 @@
   font-family: "Guminert", sans-serif;
 }
 
-.awards-vertical-scroll {
-  display: inline-flex;
-  gap: 1rem;
-  animation: scroll-right 12s linear infinite; /* Adjust speed */
-}
+  .awards-vertical-scroll {
+    display: inline-flex;
+    gap: 1rem;  
+    animation: scroll-right 18s linear infinite; 
+  }
 .overlay1 {
   width: 100%;
   max-width: 1280px;
@@ -1369,16 +1369,16 @@
 /* Vertical SERVICE text */
 .service-vertical {
   position: absolute;
-  top: 0;                  /* start at the very top */
-  bottom: 0;               /* stretch full height */
-  left: 0;                 /* flush to left edge */
+  top: 0;                
+  bottom: 0;               
+  left: 0;                 
   display: flex;
-  align-items: flex-end;   /* push text to the bottom */
+  align-items: flex-end;   
   justify-content: center;
   padding: 20px 0;
   font-size: 4rem;
   font-weight: 600;
-  color: #000;          /* red like in your screenshot */
+  color: #000;        
   font-family: "Guminert", sans-serif;
   letter-spacing: 10px;
   writing-mode: vertical-lr;
@@ -1393,4 +1393,13 @@
   .service-vertical {
     display: none;
   }
+}
+
+
+/* ---------- */
+.slide-awd{
+    width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
 }
