@@ -16,7 +16,7 @@ const Services: React.FC = () => {
           <div className="services-heading-wrapper">
             <h3 className="services-small">OUR </h3>
             <h1 className="services-big">SERV</h1>
-            <p className="services-description">
+            <p className="services-description d-none d-md-block">
               At Bytechsol, we create beautiful websites, interactive eCommerce
               applications, intelligent ERP platforms, AI-driven applications,
               and tailored software to suit the needs of every company, startup,

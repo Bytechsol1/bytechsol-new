@@ -60,12 +60,12 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
   },
 
   "/blog": {
-    logoIconSrc: LogoWhite,
-    logoTextSrc: LogoTextWhite,
+    logoIconSrc: Logo,
+    logoTextSrc: LogoText,
     navClassName: "",
-    backgroundColor: "#000",
+    backgroundColor: "",
     variant: "dark",
-    linkClassName: "text-white",
+    linkClassName: "text-black",
     buttonClassName: "",
     buttonSchemeClass: "btn-scheme--blog",
     sticky: true,
