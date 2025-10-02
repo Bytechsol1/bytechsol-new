@@ -911,7 +911,7 @@ a {
   .unique-service-img {
     max-width: 100%;
         margin: -0.5rem auto 0;
-        margin-left: 80px;
+        margin-left: 12px;
         height: 300px;
   }
 }

@@ -25,7 +25,7 @@
 
 .services-layout {
   display: flex;
-  min-height: 100vh;
+  min-height: 40vh;
   font-family: "Guminert", sans-serif;
   background-color: #111;
 }
@@ -82,6 +82,13 @@ width: 100%;
   display: flex;
   /* align-items: center; */
 }
+@media (max-width: 768px) {
+  .services-overlay  {
+      width: 100%;
+  height: 100%; 
+  }
+}
+
 .services-content {
   width: 550px;
   padding: 20px 40px;
@@ -95,14 +102,14 @@ width: 100%;
 .services-overlay p {
  margin-left: 20px;
   font-weight: 500;
-  font-size: clamp(14px, 1.6vw, 16px);
+  font-size: clamp(17px, 1.6vw, 16px);
   margin-bottom: 20px;
   line-height: 1.6;
   letter-spacing: 0.5px;
 }
 .services-overlay ul {
   margin-left: 20px;
-  padding-left: 25px;
+  padding-left: 11px;
   font-weight: 500;
   font-size: clamp(13px, 1.5vw, 16px);
   letter-spacing: 0.5px;
@@ -115,25 +122,25 @@ width: 100%;
   break-inside: avoid;
 }
 .custom-link {
-  color: inherit;   /* inherit parent color */
-  text-decoration: none; /* remove underline */
+  color: inherit;
+  text-decoration: none;
 }
 .custom-link:hover {
-  color: #fff;      /* or any hover color */
+  color: #fff;      
 }
 .custom-link2 {
-  color: inherit;   /* inherit parent color */
-  text-decoration: none; /* remove underline */
+  color: inherit;   
+  text-decoration: none;
 }
 .custom-link2:hover {
-  color: #00d4ff;      /* or any hover color */
+  color: #00d4ff;     
 }
 .arr2{
   width: 30px;
   transform: rotateX(180deg);
   margin-left: 20px;
     transition: transform 0.3s ease;
-      filter: brightness(0) invert(1); /* turns black arrow white */
+      filter: brightness(0) invert(1);
 
 }
 .ul{
@@ -168,10 +175,14 @@ width: 100%;
 
 
 
+
 /* Mobile: hide middle image */
 @media (max-width: 991px) {
   .service-div2 {
     display: none;
+  }
+.arr2{
+    width: 20px;
   }
 
   /* Left menu as horizontal scroll */
@@ -199,12 +210,13 @@ width: 100%;
   .services-right {
     width: 100%;
     height: auto;
-    min-height: 60vh;
-    padding: 20px;
+    min-height: 45vh;
+    /* padding: 20px; */
   }
 
   .services-content {
     width: 100%;
+    height: 500px;
     padding: 15px;
     margin: 0;
   }
