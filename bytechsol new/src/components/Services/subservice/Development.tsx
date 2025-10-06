@@ -18,6 +18,7 @@ import ld from "../../../assets/images/landesg.jpg";
 import cr from "../../../assets/images/creatim.jpg";
 import br from "../../../assets/images/braim.png";
 import arrow from "../../../assets/images/arrow.svg"
+import New from "./New";
 
 
 const accordionItemsUI = [
@@ -51,19 +52,19 @@ const accordionItemscms = [
   },
   {
     title: "Launch without technical roadblocks",
-    description: "SaaS platforms built to scale...",
+    description: "We develop CMS websites that are launched on time with minimum revisions. We have an efficient approach that guarantees an easy change of design to complete the transformation of the CMS.",
   },
   {
     title: "Tailored to your business needs",
-    description: "End-to-end product UI/UX design...",
+    description: "Be it a custom CMS or a WordPress, WordPress, Shopify, or a custom CMS, we build the functionality that fits your brand, work processes, and your growth objectives, and leave out the things you do not need.",
   },
   {
     title: "SEO-friendly architecture",
-    description: "End-to-end product UI/UX design...",
+    description: "Clean URLs, optimized site architecture, and more, our CMS web development strategy considers users by ranking higher on search engines and offering them a favourable user experience.",
   },
   {
     title: "Secure, scalable, and future-ready",
-    description: "End-to-end product UI/UX design...",
+    description: "We design secure and scalable CMS systems that can grow larger as your business grows, keeping your business secure but ensuring that performance does not slow down as your content increases.",
   },
 ];
 
@@ -220,6 +221,7 @@ const Development: React.FC = () => {
    
 
       {/* 2nd section --------------*/}
+      <New/>
       <section className="webdesign-section1 container-fluid py-5" id="ui-ux-design">
         <div className="container">
         <div className="row align-items-center">
