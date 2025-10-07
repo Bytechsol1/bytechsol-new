@@ -10,7 +10,6 @@ import { useLocation } from "react-router-dom";
 import { Llm } from "./New";
 
 
-
 const AimlSection = () => {
   
 
@@ -65,7 +64,7 @@ const AimlSection = () => {
 
         <Llm/>
 
-      
+
       {/* 2nd Section */}
       <section className="group7-container">
         <img className="group7-bg" src={bgImage} alt="Background" />

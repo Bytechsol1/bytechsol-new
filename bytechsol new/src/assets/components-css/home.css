@@ -658,12 +658,12 @@
     font-size: 16px;
   }
   .award-desc {
-    font-size: 12px; /* smaller text to fit */
-    line-height: 1.3; /* tighter spacing */
-    word-wrap: break-word; /* break long words */
+    font-size: 12px; 
+    line-height: 1.3; 
+    word-wrap: break-word; 
     overflow-wrap: break-word;
-    white-space: normal; /* force wrapping */
-    text-align: left; /* keep alignment clean */
+    white-space: normal;
+    text-align: left; 
   }
 }
 
@@ -672,7 +672,6 @@
     font-size: 20px;
     font-weight: 350;
     line-height: 1;
-    /* text-align: center; */
     margin-top: 10px;
     margin-left: 200px;
   }
@@ -690,7 +689,7 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
-  height: 500px; /* ensures full screen height */
+  height: 500px; 
 }
 .card-title-text {
   font-size: 22px;
@@ -1046,27 +1045,26 @@
   font-weight: bold;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .contact8-content {
     flex-direction: column;
-    gap: 20px; /* reduce spacing */
+    gap: 20px;
   }
   .contact8-left,
   .contact8-form {
-    flex: 1 1 100%; /* full width */
-    min-width: 100%; /* prevent shrinking */
+    flex: 1 1 100%; 
+    min-width: 100%; 
   }
   .contact8-title {
-    font-size: 32px; /* smaller heading on mobile */
-    width: 100%; /* don’t restrict width */
+    font-size: 32px; 
+    width: 100%; 
   }
   .contact8-row {
     flex-direction: column;
   }
   .contact8-form {
-    padding: 20px; /* smaller padding */
-    margin-top: 20px; /* space below text */
+    padding: 20px; 
+    margin-top: 20px; 
   }
 }
 
@@ -1102,7 +1100,6 @@
   border-bottom: 1px solid #ccc;
 }
 
-/* Use a button for accessibility; keep existing look */
 .faq-question-row {
   display: flex;
   justify-content: space-between;
@@ -1136,18 +1133,15 @@
   transform: rotate(180deg);
 }
 
-/* Animated panel wrapper */
 .faq-panel {
   overflow: hidden;
-  max-height: 0; /* animated property */
+  max-height: 0; 
   transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease;
   opacity: 0;
   transform: translateY(-4px);
   will-change: max-height, opacity, transform;
 }
 
-/* When the item is active, allow the panel to fade/slide in.
-   Note: max-height is set inline from JS for perfect fit. */
 .faq-item.active .faq-panel {
   opacity: 1;
   transform: translateY(0);
@@ -1158,10 +1152,9 @@
   color: #444;
   font-size: 16px;
   line-height: 1.6;
-  padding-bottom: 16px; /* keeps spacing when open */
+  padding-bottom: 16px; 
 }
 
-/* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .faq-icon {
     transition: none;
@@ -1269,7 +1262,6 @@
 }
 @media (max-width: 768px) {
   .group5-content {
-    /* flex-direction: column; */
     align-items: center;
     text-align: center;
   }
@@ -1345,7 +1337,7 @@
 }
 @media (min-width: 992px) {
   .group5-content {
-    padding-bottom: 0 !important; /* remove extra bottom spacing */
+    padding-bottom: 0 !important; 
     margin-bottom: 0 !important;
   }
 }
@@ -1373,7 +1365,6 @@
   }
 }
 
-/* Vertical SERVICE text */
 .service-vertical {
   position: absolute;
   top: 0;
@@ -1399,14 +1390,13 @@
   z-index: 2;
   transform: rotate(180deg);
 }
-/* Hide on mobile */
+
 @media (max-width: 991px) {
   .service-vertical {
     display: none;
   }
 }
 
-/* ---------- */
 .slide-awd {
   width: 100%;
   white-space: nowrap;
