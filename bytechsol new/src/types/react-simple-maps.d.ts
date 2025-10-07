@@ -1,4 +1,4 @@
-declare module 'react-simple-maps';
+declare module "react-simple-maps";
 
 export interface WPPost {
   id: number;
@@ -19,7 +19,7 @@ export interface WPPost {
     protected: boolean;
   };
   _embedded?: {
-    'wp:featuredmedia'?: Array<{
+    "wp:featuredmedia"?: Array<{
       source_url: string;
       alt_text: string;
     }>;

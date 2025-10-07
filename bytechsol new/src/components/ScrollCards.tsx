@@ -88,13 +88,13 @@ const ScrollCards: React.FC = () => {
             <span className="group5-tag d-block mb-2" data-aos="fade-down">
               (Why Choose bytechsol)
             </span>
-            <h2 className="group5-heading mb-3 fs-3 fw-bold"data-aos="fade-up">
+            <h2 className="group5-heading mb-3 fs-3 fw-bold" data-aos="fade-up">
               Built by Humans. Backed by Tech. Driven by Purpose.
             </h2>
-            <p className="group5-para fs-3"data-aos="fade-up">
-              We’re not just here to code — we’re here to understand your vision,
-              solve real problems, and grow with you. At Bytechsol, your goals
-              become our mission.
+            <p className="group5-para fs-3" data-aos="fade-up">
+              We’re not just here to code — we’re here to understand your
+              vision, solve real problems, and grow with you. At Bytechsol, your
+              goals become our mission.
             </p>
           </div>
         </div>
@@ -103,7 +103,7 @@ const ScrollCards: React.FC = () => {
       {/* Only cards are pinned & animated */}
       <section
         className="performance-section"
-        style={{ height: "100vh" }}
+        // style={{ height: "100vh" }}
         ref={containerRef}
       >
         <div className="card-container">

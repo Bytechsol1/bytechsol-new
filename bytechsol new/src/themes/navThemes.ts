@@ -3,8 +3,8 @@ import Logo from "../assets/images/logo.svg";
 import LogoText from "../assets/images/Logotext.svg";
 import LogoWhite from "../assets/images/lg-white.png";
 import LogoTextWhite from "../assets/images/lg-white-text.png";
-import w1 from "../assets/images/wecom.jpg"
-import wa from "../assets/images/webapp.svg"
+import w1 from "../assets/images/wecom.jpg";
+import wa from "../assets/images/webapp.svg";
 
 export type NavTheme = NavbarProps & {
   buttonSchemeClass?: string;
@@ -34,7 +34,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-    "/services": {
+  "/services": {
     logoIconSrc: Logo,
     logoTextSrc: LogoText,
     navClassName: "",
@@ -45,7 +45,6 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     buttonSchemeClass: "btn-scheme--price",
     sticky: true,
   },
-
 
   "/services/website-design-and-development": {
     logoIconSrc: LogoWhite,
@@ -130,58 +129,58 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     buttonSchemeClass: "btn-scheme--custom",
     sticky: true,
   },
- "/services/web-ecom": {
-  logoIconSrc: Logo,
-  logoTextSrc: LogoText,
-  navClassName: "",
-  backgroundImage: w1, // ✅ imported image
-  linkClassName: "text-black",
-  buttonClassName: "",
-  buttonSchemeClass: "btn-scheme--custom",
-  sticky: true,
-},
- "/services/web-app": {
-  logoIconSrc: LogoWhite,
-  logoTextSrc: LogoTextWhite,
-  navClassName: "",
-  backgroundColor: "#289DD8",
-  backgroundImage: wa, // ✅ imported image
-  linkClassName: "text-white",
-  buttonClassName: "",
-  buttonSchemeClass: "btn-scheme--custom",
-  sticky: true,
-},
- "/services/ai-ml": {
-  logoIconSrc: LogoWhite,
-  logoTextSrc: LogoTextWhite,
-  navClassName: "",
-  backgroundColor: "#575E7C",
-  linkClassName: "text-white",
-  buttonClassName: "",
-  buttonSchemeClass: "btn-scheme--custom",
-  sticky: true,
-},
+  "/services/web-ecom": {
+    logoIconSrc: Logo,
+    logoTextSrc: LogoText,
+    navClassName: "",
+    backgroundImage: w1, // ✅ imported image
+    linkClassName: "text-black",
+    buttonClassName: "",
+    buttonSchemeClass: "btn-scheme--custom",
+    sticky: true,
+  },
+  "/services/web-app": {
+    logoIconSrc: LogoWhite,
+    logoTextSrc: LogoTextWhite,
+    navClassName: "",
+    backgroundColor: "#289DD8",
+    backgroundImage: wa, // ✅ imported image
+    linkClassName: "text-white",
+    buttonClassName: "",
+    buttonSchemeClass: "btn-scheme--custom",
+    sticky: true,
+  },
+  "/services/ai-ml": {
+    logoIconSrc: LogoWhite,
+    logoTextSrc: LogoTextWhite,
+    navClassName: "",
+    backgroundColor: "#575E7C",
+    linkClassName: "text-white",
+    buttonClassName: "",
+    buttonSchemeClass: "btn-scheme--custom",
+    sticky: true,
+  },
 
- "/services/custom-web": {
-  logoIconSrc: LogoWhite,
-  logoTextSrc: LogoTextWhite,
-  navClassName: "",
-  backgroundColor: "#2B3990",
-  linkClassName: "text-white",
-  buttonClassName: "",
-  buttonSchemeClass: "btn-scheme--web",
-  sticky: true,
-},
-"/services/e-commerce-solutions": {
-  logoIconSrc: LogoWhite,
-  logoTextSrc: LogoTextWhite,
-  navClassName: "",
-  backgroundColor: "#1C3134",
-  linkClassName: "text-white",
-  buttonClassName: "",
-  buttonSchemeClass: "btn-scheme--web",
-  sticky: true,
-},
+  "/services/custom-web": {
+    logoIconSrc: LogoWhite,
+    logoTextSrc: LogoTextWhite,
+    navClassName: "",
+    backgroundColor: "#2B3990",
+    linkClassName: "text-white",
+    buttonClassName: "",
+    buttonSchemeClass: "btn-scheme--web",
+    sticky: true,
+  },
+  "/services/e-commerce-solutions": {
+    logoIconSrc: LogoWhite,
+    logoTextSrc: LogoTextWhite,
+    navClassName: "",
+    backgroundColor: "#1C3134",
+    linkClassName: "text-white",
+    buttonClassName: "",
+    buttonSchemeClass: "btn-scheme--web",
+    sticky: true,
+  },
 
   default: {
     logoIconSrc: Logo,

@@ -11,11 +11,11 @@ import bgr from "../../assets/images/blogbgr.png";
 import rg from "../../assets/images/blogrg.png";
 import lf from "../../assets/images/bloglf.png";
 
-
 // Scroll function
-const scroll = (direction) => {
+const scroll = (direction: string) => {
   const container = document.getElementById("servicesScroll");
   const scrollAmount = 200;
+
   if (container) {
     if (direction === "left") {
       container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
@@ -94,9 +94,10 @@ const Blog = () => {
           style={{ backgroundImage: `url(${bgr})` }}
         ></div>
 
-       <h1 className="gradient-text text-start text-md-center ms-4">Blogs</h1>
-<h6 className="gradient-text1 text-start text-md-center ms-4">Read. Grow. Automate</h6>
-
+        <h1 className="gradient-text2 text-start text-md-center ms-4">Blogs</h1>
+        <h6 className="gradient-text1 text-start text-md-center ms-4">
+          Read. Grow. Automate.
+        </h6>
 
         {/* Search Placeholder */}
         <div className="blog-search-placeholder">
@@ -107,37 +108,29 @@ const Blog = () => {
             className="blog-search-input"
           />
         </div>
-    </section>
-        {/* Scrollable Services Section */}
-        <div className="services-container d-none d-md-block">
-          <button
-            className="scroll-btn left"
-            onClick={() => scroll("left")}
-          >
+      </section>
+      {/* Scrollable Services Section */}
+      <div className="services-container d-none d-md-block">
+        <button className="scroll-btn left" onClick={() => scroll("left")}>
           <img src={rg} alt="" />
-          </button>
+        </button>
 
-          <div className="services-scroll" id="servicesScroll">
-            <div className="service-item">Web Development</div>
-            <div className="service-item">App Development</div>
-            <div className="service-item">UI/UX Design</div>
-            <div className="service-item">SEO</div>
-            <div className="service-item">Digital Marketing</div>
-            <div className="service-item">Branding</div>
-            <div className="service-item">E-Commerce</div>
-            <div className="service-item">Cloud Solutions</div>
-            <div className="service-item">QA & Testing</div>
-          </div>
-    
-          <button
-  className="scroll-btn right"
-  onClick={() => scroll("right")}
->
-  <img src={lf} alt="Right Arrow" />
-</button>
-
+        <div className="services-scroll" id="servicesScroll">
+          <div className="service-item">Web Development</div>
+          <div className="service-item">App Development</div>
+          <div className="service-item">UI/UX Design</div>
+          <div className="service-item">SEO</div>
+          <div className="service-item">Digital Marketing</div>
+          <div className="service-item">Branding</div>
+          <div className="service-item">E-Commerce</div>
+          <div className="service-item">Cloud Solutions</div>
+          <div className="service-item">QA & Testing</div>
         </div>
-      
+
+        <button className="scroll-btn right" onClick={() => scroll("right")}>
+          <img src={lf} alt="Right Arrow" />
+        </button>
+      </div>
 
       {/* Blog Cards Section */}
       <section className="cards-six">
@@ -153,7 +146,6 @@ const Blog = () => {
               <h3 className="blog-title">{post.title}</h3>
               <p className="blog-date">{post.date}</p>
             </div>
-            
           ))}
         </div>
       </section>

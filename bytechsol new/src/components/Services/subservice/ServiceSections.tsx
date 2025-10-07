@@ -5,43 +5,41 @@ import "../../../assets/components-css/ServiceSection.css";
 import arr from "../../../assets/images/arrow.svg";
 import { Link } from "react-router-dom";
 import CircularText from "../../../shareable/CircularText";
-import cmsbg from "../../../assets/images/ui ux 3.png"
-import ecm from "../../../assets/images/ecomser.png"
-import ecmbg from "../../../assets/images/ecombg.png"
-import br from "../../../assets/images/brbui.png"
-import brbg from "../../../assets/images/bb-bg.png"
-import erp from "../../../assets/images/erpimg.png"
-import erpbg from "../../../assets/images/erpbg.png"
-import aml from "../../../assets/images/aimlimg.png"
-import amlbg from "../../../assets/images/aibg.png"
-import odo from "../../../assets/images/odoo.png"
-import odobg from "../../../assets/images/odoobg.png"
-import seo from "../../../assets/images/seoimg.png"
-import seobg from "../../../assets/images/seobg.png"
-import wb from "../../../assets/images/webapp.png"
-import webbg from "../../../assets/images/webbg.png"
-import cmsser from "../../..//assets/images/cms-ser.png"
+import cmsbg from "../../../assets/images/ui ux 3.png";
+import ecm from "../../../assets/images/ecomser.png";
+import ecmbg from "../../../assets/images/ecombg.png";
+import br from "../../../assets/images/brbui.png";
+import brbg from "../../../assets/images/bb-bg.png";
+import erp from "../../../assets/images/erpimg.png";
+import erpbg from "../../../assets/images/erpbg.png";
+import aml from "../../../assets/images/aimlimg.png";
+import amlbg from "../../../assets/images/aibg.png";
+import odo from "../../../assets/images/odoo.png";
+import odobg from "../../../assets/images/odoobg.png";
+import seo from "../../../assets/images/seoimg.png";
+import seobg from "../../../assets/images/seobg.png";
+import wb from "../../../assets/images/webapp.png";
+import webbg from "../../../assets/images/webbg.png";
+import cmsser from "../../..//assets/images/cms-ser.png";
 import { HashLink } from "react-router-hash-link";
 
-
-
 const services = [
-    {
-  id: 1,
-  name: "Odoo Services",
-  heading: "Odoo Services",
-  description:
-    "We offer Odoo migration, customization, and consultancy services to streamline your business operations. Our professional Odoo developers provide easy transitions, technical efforts, and integrations that are SEO friendly to provide large-scale efficiency.",
-  bullets: [
-    "Odoo Migration & Customization",
-    "Odoo Techno-Functional Consultancy",
-    "Odoo Module Development",
-    "Odoo Integration Services",
-  ],
-  image: odo,
-  bgImage: odobg,
-  pagepath : "/services/odoo-services"
-},
+  {
+    id: 1,
+    name: "Odoo Services",
+    heading: "Odoo Services",
+    description:
+      "We offer Odoo migration, customization, and consultancy services to streamline your business operations. Our professional Odoo developers provide easy transitions, technical efforts, and integrations that are SEO friendly to provide large-scale efficiency.",
+    bullets: [
+      "Odoo Migration & Customization",
+      "Odoo Techno-Functional Consultancy",
+      "Odoo Module Development",
+      "Odoo Integration Services",
+    ],
+    image: odo,
+    bgImage: odobg,
+    pagepath: "/services/odoo-services",
+  },
 
   {
     id: 2,
@@ -58,7 +56,7 @@ const services = [
     ],
     image: cmsser,
     bgImage: cmsbg,
-    pagepath : "/services/custom-web"
+    pagepath: "/services/custom-web",
   },
   {
     id: 3,
@@ -75,7 +73,7 @@ const services = [
     ],
     image: wb,
     bgImage: webbg,
-    pagepath : "/services/web-app"
+    pagepath: "/services/web-app",
   },
   {
     id: 4,
@@ -92,7 +90,7 @@ const services = [
     ],
     image: ecm,
     bgImage: ecmbg,
-    pagepath : "/services/E-Commerce-solutions"
+    pagepath: "/services/E-Commerce-solutions",
   },
   {
     id: 5,
@@ -107,7 +105,7 @@ const services = [
     ],
     image: br,
     bgImage: brbg,
-    pagepath : "/services/brand-building"
+    pagepath: "/services/brand-building",
   },
   {
     id: 6,
@@ -124,7 +122,7 @@ const services = [
     ],
     image: seo,
     bgImage: seobg,
-    pagepath : "/services/seo-service"
+    pagepath: "/services/seo-service",
   },
   {
     id: 7,
@@ -135,7 +133,7 @@ const services = [
     bullets: ["AI/ML / LLM / NLP Solutions", "AI Chatbots & Voice Assistants"],
     image: aml,
     bgImage: amlbg,
-    pagepath : "/services/Ai-Ml"
+    pagepath: "/services/Ai-Ml",
   },
   {
     id: 8,
@@ -150,8 +148,8 @@ const services = [
     ],
     image: erp,
     bgImage: erpbg,
-    pagepath : "/services/ERP-service"
-},
+    pagepath: "/services/ERP-service",
+  },
   {
     id: 9,
     name: "Website Design & Development",
@@ -167,7 +165,7 @@ const services = [
     ],
     image: web,
     bgImage: ecb,
-    pagepath : "/services/website-design-and-development"
+    pagepath: "/services/website-design-and-development",
   },
 ];
 
@@ -179,72 +177,74 @@ const ServicesSection: React.FC = () => {
       <div className="container-fluid">
         <div className="row">
           {/* Left Tabs */}
-<div className="col-lg-3 col-md-12 service-div1">
-  <div className="services-left">
-    {services.map((s) => (
-      <div
-        key={s.id}
-        className={`services-tab ${
-          activeService.id === s.id ? "active" : ""
-        }`}
-        onClick={() => setActiveService(s)}
-      >
-        {s.name}
-      </div>
-    ))}
-  </div>
-</div>
+          <div className="col-lg-3 col-md-12 service-div1">
+            <div className="services-left">
+              {services.map((s) => (
+                <div
+                  key={s.id}
+                  className={`services-tab ${
+                    activeService.id === s.id ? "active" : ""
+                  }`}
+                  onClick={() => setActiveService(s)}
+                >
+                  {s.name}
+                </div>
+              ))}
+            </div>
+          </div>
 
-{/* Middle Image (hidden on mobile via CSS) */}
-<div className="col-lg-4 col-md-12 service-div2">
-  <img
-    key={activeService.id}
-    src={activeService.image}
-    alt={activeService.name}
-    className="services-image fade-in img-fluid"
-  />
-</div>
+          {/* Middle Image (hidden on mobile via CSS) */}
+          <div className="col-lg-4 col-md-12 service-div2">
+            <img
+              key={activeService.id}
+              src={activeService.image}
+              alt={activeService.name}
+              className="services-image fade-in img-fluid"
+            />
+          </div>
 
-{/* Right Content */}
-<div className="col-lg-5 col-md-12 service-div3">
-  <div
-    key={activeService.id}
-    className="services-right fade-in"
-    style={{ backgroundImage: `url(${activeService.bgImage})` }}
-  >
-    <div className="services-overlay">
-      <div className="services-content">
-        <Link className="custom-link" to={activeService.pagepath}>    
-        <h2 className="ser-new-heading fw-bold">{activeService.heading} <img src={arr} alt="link" className="arr2"/></h2></Link>
-        <p className="mb-3">{activeService.description}</p>
-<ul className="mb-0">
-  {activeService.bullets.map((b, i) => {
-    // create safe id from bullet text (slugify)
-    const sectionId = b
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")   // replace spaces/specials with "-"
-      .replace(/(^-|-$)/g, "");     // trim dashes
+          {/* Right Content */}
+          <div className="col-lg-5 col-md-12 service-div3">
+            <div
+              key={activeService.id}
+              className="services-right fade-in"
+              style={{ backgroundImage: `url(${activeService.bgImage})` }}
+            >
+              <div className="services-overlay">
+                <div className="services-content">
+                  <Link className="custom-link" to={activeService.pagepath}>
+                    <h2 className="ser-new-heading fw-bold">
+                      {activeService.heading}{" "}
+                      <img src={arr} alt="link" className="arr2" />
+                    </h2>
+                  </Link>
+                  <p className="mb-3">{activeService.description}</p>
+                  <ul className="mb-0">
+                    {activeService.bullets.map((b, i) => {
+                      // create safe id from bullet text (slugify)
+                      const sectionId = b
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, "-") // replace spaces/specials with "-"
+                        .replace(/(^-|-$)/g, ""); // trim dashes
 
-    return (
-<li className="ul" key={i}>
-  <HashLink
-    smooth
-    to={`${activeService.pagepath}#${sectionId}`}
-    className="bullet-link custom-link2"
-  >
-    {b}
-  </HashLink>
-</li>
-    );
-  })}
-  
-</ul>
-<CircularText/>
-      </div>
-    </div>
-  </div>
-</div>
-
+                      return (
+                        <li className="ul" key={i}>
+                          <HashLink
+                            smooth
+                            to={`${activeService.pagepath}#${sectionId}`}
+                            className="bullet-link custom-link2"
+                          >
+                            {b}
+                          </HashLink>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <CircularText />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

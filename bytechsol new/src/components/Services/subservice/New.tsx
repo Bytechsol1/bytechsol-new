@@ -51,7 +51,7 @@ const items = [
     id: 1,
     title: "No more design guesswork",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "Your customers must get your product at a glance. You can count on our unique User Interface / User experience development process that will lead to your page telling more about your value, the result of the natural navigation, and a captivating layout that will make people spend more time on your page and convert more quickly.",
     image: mb,
@@ -109,7 +109,7 @@ const cms = [
     id: 2,
     title: "Launch without technical roadblocks",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We develop CMS websites that are launched on time with minimum revisions. We have an efficient approach that guarantees an easy change of design to complete the transformation of the CMS.",
     image: wb,
@@ -152,7 +152,7 @@ const land = [
     id: 1,
     title: "Designs that convert visitors into customers",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We design conversion-optimized landing pages that contain strong CTAs, compelling designs, and well-optimized design features that would prompt the user to take an action- such as making a purchase, signing up, or filling out a form.",
     image: ld,
@@ -202,7 +202,7 @@ const main = [
     id: 1,
     title: "Regular updates and performance checks",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We offer an updated schedule, optimization of speed, and technology advancements to see to it that there are no issues with your systems running smoothly and up to date with modern technologies.",
     image: cr,
@@ -253,7 +253,7 @@ const redesign = [
     id: 1,
     title: "Mobile-friendly redesign",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We make your site easy to look at and navigate on both phones and tablets, as well as desktops, and everyone will watch it without any problem.",
     image: br,
@@ -312,7 +312,7 @@ const New: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">UI/UX Design</h3>
               {items
@@ -331,7 +331,7 @@ const New: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up" >
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -346,7 +346,7 @@ const New: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -396,7 +396,7 @@ const CMS: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">CMS Design & Development</h3>
               {cms
@@ -415,7 +415,7 @@ const CMS: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -430,7 +430,7 @@ const CMS: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -472,7 +472,7 @@ const Landing: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Landing Page Design</h3>
               {land
@@ -491,7 +491,7 @@ const Landing: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -506,7 +506,7 @@ const Landing: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -547,7 +547,7 @@ const Brand: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Website Maintenance & Support</h3>
               {main
@@ -566,7 +566,7 @@ const Brand: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -581,7 +581,7 @@ const Brand: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -623,7 +623,7 @@ const Redesign: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Responsive Website Redesign</h3>
               {redesign
@@ -642,7 +642,7 @@ const Redesign: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -657,7 +657,7 @@ const Redesign: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -694,7 +694,7 @@ const webapp = [
     id: 1,
     title: "Tailored Development Approach",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We develop web apps using a tailored approach depending on your specific objectives, intended audience, and technical needs. Ensuring that your solution is matched to your business goal this provides the highest possible impact and scalability over the long term.",
     image: w01,
@@ -752,7 +752,7 @@ const softdev = [
     id: 2,
     title: "Agile Development Process",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "Using an agile approach, we are able to maintain flexibility, speedy delivery, and smooth communication during the project. The fact that we work iteratively would enable us to implement the changes easily as they occur as time goes by, and ensure that your software stays in line with your business interests.",
     image: s02,
@@ -795,7 +795,7 @@ const progapp = [
     id: 1,
     title: "Cross-Platform Compatibility",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "PWAs are cross-platform and not only work on tablets, smartphones, and desktops, but they do not need to be installed as separate native applications. This cross-platform feature saves cash and costs, and your company can reach a larger number of users with a high-performance solution.",
     image: p03,
@@ -846,7 +846,7 @@ const saasdev = [
     id: 1,
     title: "Scalable Architecture",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "Our SaaS systems have extensively scalable systems, which expand with your organization. Our solutions, whether used by a small number of users or thousands, will perform smoothly, without sacrificing speed or security, and will be the best fit in both startups and enterprises.",
     image: s04,
@@ -897,7 +897,7 @@ const enterdev = [
     id: 1,
     title: "Custom Business Solutions",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We develop enterprise applications that suit your special business processes. Our solutions measure productivity, bottleneck reduction, and provide your teams with the resources that they need to work effectively, whether it be resource planning, customer management, or workflow automation.",
     image: e05,
@@ -956,7 +956,7 @@ export const Web: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Web App Development</h3>
               {webapp
@@ -975,7 +975,7 @@ export const Web: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -990,7 +990,7 @@ export const Web: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1040,7 +1040,7 @@ const Softdev: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Software Development</h3>
               {softdev
@@ -1059,7 +1059,7 @@ const Softdev: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1074,7 +1074,7 @@ const Softdev: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1116,7 +1116,7 @@ const Progapp: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Progressive Web Apps (PWA)</h3>
               {progapp
@@ -1135,7 +1135,7 @@ const Progapp: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1150,7 +1150,7 @@ const Progapp: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1191,7 +1191,7 @@ const Saasdev: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">SaaS Application Development</h3>
               {saasdev
@@ -1210,7 +1210,7 @@ const Saasdev: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1225,7 +1225,7 @@ const Saasdev: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1267,7 +1267,7 @@ const Enterdev: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Enterprise Application Development</h3>
               {enterdev
@@ -1286,7 +1286,7 @@ const Enterdev: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1301,7 +1301,7 @@ const Enterdev: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1337,7 +1337,7 @@ const onseo = [
     id: 1,
     title: "Title Tags & Meta Descriptions",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We craft keyword-rich titles and meta descriptions that are optimized to maximize the number of clicks as well as enhance visibility within the search engines. All the elements are meant to appeal to the users and represent your content properly.",
     image: os,
@@ -1395,7 +1395,7 @@ const offseo = [
     id: 2,
     title: "High-Quality Link Building",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We achieve backlinks with reputable websites, which are related to industries, by utilizing ethical outreach and content promotion. These good links increase domain authority, visibility, and position on search engines.",
     image: fs,
@@ -1438,7 +1438,7 @@ const techseo = [
     id: 1,
     title: "Website Speed Optimization",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We also optimize scaled-back page loading times through file compression and script optimization, and caching. Quicker websites will lower the bounce rates and enhance user experience, as well as satisfy search engine ranking criteria that will favor speed and responsiveness.",
     image: ts,
@@ -1498,7 +1498,7 @@ export const Onseo: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Web App Development</h3>
               {onseo
@@ -1517,7 +1517,7 @@ export const Onseo: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1532,7 +1532,7 @@ export const Onseo: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1581,7 +1581,7 @@ const Offseo: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Software Development</h3>
               {offseo
@@ -1600,7 +1600,7 @@ const Offseo: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1615,7 +1615,7 @@ const Offseo: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1657,7 +1657,7 @@ const Techseo: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Progressive Web Apps (PWA)</h3>
               {techseo
@@ -1676,7 +1676,7 @@ const Techseo: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1691,7 +1691,7 @@ const Techseo: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1727,7 +1727,7 @@ const consult = [
     id: 1,
     title: "Market Research & Analysis",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We do extensive competitor research, industry, and market research to identify opportunities that will form a successful strategy. This makes your brand get into the market clearly and confidently.",
     image: lp2,
@@ -1785,7 +1785,7 @@ const logo = [
     id: 2,
     title: "Color Palette & Typography",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We select brand colors and fonts thoughtfully to match your values. These graphic messages create awareness and uniformity both online and offline.",
     image: v1,
@@ -1828,7 +1828,7 @@ const media = [
     id: 1,
     title: "Profile Optimization & Consistency",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We develop and streamline social media accounts that are a consistent representation of your brand within each platform. Logos to bios and graphics, our branding would be all about professionalism, recognition, and trust- to help you shine and get the right audience.",
     image: sc,
@@ -1888,7 +1888,7 @@ export const Consult: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Brand Strategy & Consulting</h3>
               {consult
@@ -1907,7 +1907,7 @@ export const Consult: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1922,7 +1922,7 @@ export const Consult: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1971,7 +1971,7 @@ const Logo: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Logo Design & Visual Identity </h3>
               {logo
@@ -1990,7 +1990,7 @@ const Logo: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2005,7 +2005,7 @@ const Logo: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2047,7 +2047,7 @@ const Media: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Social Media Branding</h3>
               {media
@@ -2066,7 +2066,7 @@ const Media: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2081,7 +2081,7 @@ const Media: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2116,7 +2116,7 @@ const llm = [
     id: 1,
     title: "AI Chatbots",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We create smart chatbots that will automate the interaction with customers, offer real-time assistance, and shorten response time. NLP and LLMs are used to train our chatbots to comprehend queries and provide correct answers to satisfy customers on various platforms.",
     image: sv,
@@ -2174,7 +2174,7 @@ const chatbot = [
     id: 2,
     title: " Multilingual Capabilities",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We create bots that will listen and speak in multiple languages, which will break the language barrier and allow companies to work with international audiences.",
     image: v1,
@@ -2226,7 +2226,7 @@ export const Llm: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">AI / ML / LLM / NLP Solutions</h3>
               {llm
@@ -2245,7 +2245,7 @@ export const Llm: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2260,7 +2260,7 @@ export const Llm: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2309,7 +2309,7 @@ const Chatbot: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Logo Design & Visual Identity </h3>
               {chatbot
@@ -2328,7 +2328,7 @@ const Chatbot: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2343,7 +2343,7 @@ const Chatbot: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2378,7 +2378,7 @@ const customerp = [
     id: 1,
     title: "Requirement Analysis & Planning",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We review business processes, issues, and business goals and create an ERP system that meets your specific requirements. This means fewer adoption hassles, less risk, and optimal ROI on your investment.",
     image: ip,
@@ -2436,7 +2436,7 @@ const erpintegra = [
     id: 2,
     title: "API Development & Integration",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "Our experts develop and develop APIs that enable your ERP to interact easily with other applications. This is to provide flexibility, scalability, and reliable system interactions.",
     image: lp,
@@ -2479,7 +2479,7 @@ const erpcustom = [
     id: 1,
     title: " CRM & Sales Integration",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We combine the ERP with CRM applications to simplify the process of customer data, sales pipelines, and performance monitoring. This enhances customer experiences, leads management, and visibility of sales teams can be up to date on the operations of the business.",
     image: am,
@@ -2530,7 +2530,7 @@ const erpmain = [
     id: 1,
     title: "Custom Workflow Design",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We create ERP workflows specific to your processes that streamline operations. Customization removes redundant procedures, lessens manual labor, and enhances total productivity.",
     image: cs,
@@ -2581,7 +2581,7 @@ const odoomain = [
     id: 1,
     title: "System Monitoring & Performance",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "The ongoing performance monitoring of the ERP helps to identify and eliminate the problem at an early stage. This guarantees a high uptime, dependability of the operations, and a smooth experience for your teams.",
     image: sp,
@@ -2640,7 +2640,7 @@ export   const Customerp: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Custom ERP Implementation & Development</h3>
               {customerp
@@ -2659,7 +2659,7 @@ export   const Customerp: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2674,7 +2674,7 @@ export   const Customerp: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2724,7 +2724,7 @@ const Erpintegra: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">ERP Integration Services</h3>
               {erpintegra
@@ -2743,7 +2743,7 @@ const Erpintegra: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2758,7 +2758,7 @@ const Erpintegra: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2800,7 +2800,7 @@ const Erpcustom: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">ERP Integration with Existing Systems</h3>
               {erpcustom
@@ -2819,7 +2819,7 @@ const Erpcustom: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2834,7 +2834,7 @@ const Erpcustom: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2875,7 +2875,7 @@ const Erpmain: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">ERP Customization & Module Development</h3>
               {erpmain
@@ -2894,7 +2894,7 @@ const Erpmain: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2909,7 +2909,7 @@ const Erpmain: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2951,7 +2951,7 @@ const Odoomain: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">ERP Maintenance & Support</h3>
               {odoomain
@@ -2970,7 +2970,7 @@ const Odoomain: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2985,7 +2985,7 @@ const Odoomain: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3020,7 +3020,7 @@ const estore = [
     id: 1,
     title: "Platform selection and customization",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We select the appropriate e-commerce platform, either Shopify, WooCommerce, or Magento, and customize it to your brand. The theme customization, versatile layouts, and key functionality integration will help your store to express your identity and, at the same time, enable further future expansion as your business expands.",
     image: es,
@@ -3078,7 +3078,7 @@ const shopify = [
     id: 2,
     title: "Product Catalog Setup",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       " Your product catalog is organized and uploaded by our team with high-quality images, detailed descriptions, and categories. Your products are showcased on the front line, and it is easy to navigate through the stores as we maximise visibility and increase the likelihood of sales conversion.",
     image: sy,
@@ -3121,7 +3121,7 @@ const woocommerce = [
     id: 1,
     title: " Custom Theme Development",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We create and develop custom WooCommerce themes to fit your brand image. Our approach to modern design, usability, and conversion optimization will make your storefront engaging and will help you build trust in your online business.",
     image: wo,
@@ -3172,7 +3172,7 @@ const payment = [
     id: 1,
     title: " Multiple Gateway Support",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "Our system combines several payment gateways, such as international and domestic service providers, which provide your customers with the option of how they pay. From credit/debit cards to digital wallets, we guarantee a seamless payment process, decreasing cart abandonment, and increasing customer satisfaction.",
     image: py,
@@ -3223,7 +3223,7 @@ const market = [
     id: 1,
     title: "Multi-Vendor Functionality",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We build powerful multi-vendor applications in which vendors can create and manage their storefronts freely, add their goods, and monitor sales. This designation provides an easy management of the vendors and provides the customers with a variety of product options within one platform.",
     image: mk,
@@ -3282,7 +3282,7 @@ export const Estore: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">E-Commerce Store Setup</h3>
               {estore
@@ -3301,7 +3301,7 @@ export const Estore: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3316,7 +3316,7 @@ export const Estore: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3366,7 +3366,7 @@ const Shopify: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Shopify Store Setup</h3>
               {shopify
@@ -3385,7 +3385,7 @@ const Shopify: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3400,7 +3400,7 @@ const Shopify: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3442,7 +3442,7 @@ const Woocommerce: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">WooCommerce Store Setup</h3>
               {woocommerce
@@ -3461,7 +3461,7 @@ const Woocommerce: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3476,7 +3476,7 @@ const Woocommerce: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3517,7 +3517,7 @@ const Payment: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Payment Gateway Integration</h3>
               {payment
@@ -3536,7 +3536,7 @@ const Payment: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3551,7 +3551,7 @@ const Payment: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3593,7 +3593,7 @@ const Market: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Marketplace Development</h3>
               {market
@@ -3612,7 +3612,7 @@ const Market: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3627,7 +3627,7 @@ const Market: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3663,7 +3663,7 @@ const customization = [
     id: 1,
     title: "Legacy System Migration",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We import data from old systems to Odoo accurately and safely. Minimal downtime, easy transition, and full data integrity are guaranteed by our process to ensure that your business operations are not interrupted in the process of the shift.",
     image: mi,
@@ -3721,7 +3721,7 @@ const consultancy = [
     id: 2,
     title: "Technical Architecture Design",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We create scalable and secure Odoo architectures to match your needs. Whether through performing optimization on the database, our consultancy guarantees you a system that is future-ready and capable of expanding with your business.",
     image: tc,
@@ -3747,7 +3747,7 @@ const consultancy = [
     title: " Continuous Improvement Strategy",
     subtitle: "Consumer Goods Automation",
     description:
-      "Our consultancy doesn’t stop at implementation. We offer continued support and optimization plans to ensure that your Odoo system is up-to-date with changing business demands and best practices in the industry.",
+      "Our consultancy doesn't stop at implementation. We offer continued support and optimization plans to ensure that your Odoo system is up-to-date with changing business demands and best practices in the industry.",
     image: tc,
   },
 ];
@@ -3764,7 +3764,7 @@ const odoomod = [
     id: 1,
     title: " Custom Module Design",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "Odoo modules are designed manually by us to suit your needs. Every module is designed to maximize performance, simplify processes, and provide a smooth user experience.",
     image: md,
@@ -3815,7 +3815,7 @@ const odooserv = [
     id: 1,
     title: "Third-Party App Integration",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We combine Odoo with key business solutions such as CRM, HR, e-commerce, nd project management solutions to create a single platform that helps improve collaboration and streamline operations across your organization.",
     image: ig,
@@ -3866,7 +3866,7 @@ const mainsupport = [
     id: 1,
     title: "Bug Fixing & Error Resolution",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We offer timely bug fixing and error-solving services to remove interference in your Odoo system. Our anticipatory measures will guarantee a seamless flow of work and continuous business running.",
     image: md,
@@ -3925,7 +3925,7 @@ export const Customization: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Odoo Migration & Customization</h3>
               {customization
@@ -3944,7 +3944,7 @@ export const Customization: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3959,7 +3959,7 @@ export const Customization: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4008,7 +4008,7 @@ const Consultancy: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Odoo Techno-Functional Consultancy</h3>
               {consultancy
@@ -4027,7 +4027,7 @@ const Consultancy: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4042,7 +4042,7 @@ const Consultancy: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4084,7 +4084,7 @@ const Odoomod: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Odoo Module Development</h3>
               {odoomod
@@ -4103,7 +4103,7 @@ const Odoomod: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4118,7 +4118,7 @@ const Odoomod: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4159,7 +4159,7 @@ const Odooserv: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Odoo Integration Services</h3>
               {odooserv
@@ -4178,7 +4178,7 @@ const Odooserv: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4193,7 +4193,7 @@ const Odooserv: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4235,7 +4235,7 @@ const Mainsupport: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Odoo Maintenance & Support</h3>
               {mainsupport
@@ -4254,7 +4254,7 @@ const Mainsupport: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4269,7 +4269,7 @@ const Mainsupport: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4303,7 +4303,7 @@ const cmsdev = [
     id: 1,
     title: "User-Friendly Dashboards",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We can have user-friendly content management in our dashboards, and this is why they can be used by non-technical users as well. It is easy to navigate, and the drag and drop features give you full control of the layout and structure of your site, as well as the process of publishing it.",
     image: cm,
@@ -4361,7 +4361,7 @@ const webdev = [
     id: 2,
     title: " Cross-Platform Compatibility",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We make sure that your web applications perform optimally across your desktop, tablets, and mobile devices. This approach to the development, responsive/adaptive, will ensure accessibility, consistency, and an easy process for all its users, regardless of the platform and browser that they might be using.",
     image: cw,
@@ -4404,7 +4404,7 @@ const apidev = [
     id: 1,
     title: " Custom API Development",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We plan and create custom APIs tailored to specific needs. Be it on mobile applications, SaaS solutions, or enterprise software, our APIs are safe, extensible, and high-performance, ensuring that your systems interrelate seamlessly and so allowing you to innovate at a rapid pace and scale your business.",
     image: ap,
@@ -4455,7 +4455,7 @@ const partyserv = [
     id: 1,
     title: "CRM Integration",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We incorporate trending CRMs such as Salesforce, HubSpot, or Zoho in your web and mobile applications, making customer data management convenient. This enables your team to monitor leads, automate approaches, and enhance customer relations with centralized and real-time data.",
     image: sd,
@@ -4506,7 +4506,7 @@ const plugin = [
     id: 1,
     title: "WordPress Plugin Development",
     subtitle:
-      "Process Automation & Digital Transformation within SLB’s Ecosyst",
+      "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We develop custom WordPress plugins that provide additional functionality to websites, including complex contact forms and booking systems, as well as eCommerce extensions. Our plugins are lightweight, secure, and optimized to be non-performance-impacting, which is why they don't make your sites slow.",
     image: pl,
@@ -4565,7 +4565,7 @@ export const Cmsdev: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Custom CMS Development</h3>
               {cmsdev
@@ -4584,7 +4584,7 @@ export const Cmsdev: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4599,7 +4599,7 @@ export const Cmsdev: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4650,7 +4650,7 @@ const Webdev: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Odoo Techno-Functional Consultancy</h3>
               {webdev
@@ -4669,7 +4669,7 @@ const Webdev: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4684,7 +4684,7 @@ const Webdev: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4726,7 +4726,7 @@ const Apidev: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Odoo Module Development</h3>
               {apidev
@@ -4745,7 +4745,7 @@ const Apidev: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4760,7 +4760,7 @@ const Apidev: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4801,7 +4801,7 @@ const Partyserv: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Odoo Integration Services</h3>
               {partyserv
@@ -4820,7 +4820,7 @@ const Partyserv: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4835,7 +4835,7 @@ const Partyserv: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4877,7 +4877,7 @@ const Plugin: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left">
+          <div className="timeline-left"  data-aos="fade-right">
             <ul>
               <h3 className="heads">Odoo Maintenance & Support</h3>
               {plugin
@@ -4896,7 +4896,7 @@ const Plugin: React.FC = () => {
           </div>
 
           {/* Center Image */}
-          <div className="timeline-center">
+          <div className="timeline-center" data-aos="fade-up">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4911,7 +4911,7 @@ const Plugin: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right">
+          <div className="timeline-right"  data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}

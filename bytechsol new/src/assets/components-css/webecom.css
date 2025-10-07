@@ -4,10 +4,9 @@
   text-align: center;
 }
 
-.webecom-content{
+.webecom-content {
   margin-left: -650px;
 }
-
 
 .ecommerce-section {
   position: relative;
@@ -22,8 +21,8 @@
 
 .ecommerce-overlay {
   width: 100%;
-   min-height: 100vh;
-  background: rgba(0, 0, 0, 0.4); 
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -57,7 +56,6 @@
   }
 }
 
-
 .webecom-buttons {
   display: flex;
   justify-content: center;
@@ -85,7 +83,7 @@
 
 .webecom-btn-outline {
   border: 2px solid #fff;
-  color: #FFF;
+  color: #fff;
   background: transparent;
 }
 
@@ -170,8 +168,8 @@
   background-color: #4a3aff;
   color: white;
 }
-.olive-bg{
-  background-color: #FFD500;
+.olive-bg {
+  background-color: #ffd500;
 }
 .white-bg {
   background-color: white;
@@ -180,7 +178,7 @@
 
 .card-text {
   flex: 1 1 50%;
-  font-family: 'Guminert';
+  font-family: "Guminert";
   font-weight: 700;
 }
 
@@ -205,8 +203,8 @@
   height: auto;
   object-fit: contain;
   border-radius: 75px 5px 75px 5px;
--webkit-border-radius: 75px 5px 75px 5px;
--moz-border-radius: 75px 5px 75px 5px;
+  -webkit-border-radius: 75px 5px 75px 5px;
+  -moz-border-radius: 75px 5px 75px 5px;
 }
 .ecomsolutions-row {
   display: flex;
@@ -215,13 +213,13 @@
   padding: 60px 10%;
   gap: 40px;
   flex-wrap: wrap;
-  background-color:#FFD500;;
+  background-color: #ffd500;
   color: black;
 }
 
 .ecomsolutions-text {
   flex: 1 1 50%;
-  font-family: 'Gilroy', sans-serif;
+  font-family: "Gilroy", sans-serif;
 }
 
 .ecomsolutions-text h2 {
@@ -246,7 +244,6 @@
   object-fit: contain;
 }
 
-
 .clouddevops-section {
   display: flex;
   flex-wrap: wrap;
@@ -254,7 +251,7 @@
   justify-content: space-between;
   padding: 60px 20px;
   gap: 2rem;
-  background-color: #FF531A;
+  background-color: #ff531a;
 }
 
 .clouddevops-content {
@@ -265,14 +262,14 @@
 .clouddevops-heading {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #FFF;
+  color: #fff;
   margin-bottom: 20px;
 }
 
 .clouddevops-description {
   font-size: 1rem;
   line-height: 1.7;
-  color: #FFF;
+  color: #fff;
 }
 
 .clouddevops-image-wrapper {
@@ -318,21 +315,19 @@
   }
 }
 
-.f-bg{
-background-color: #4A3AFF;
-color: white;
+.f-bg {
+  background-color: #4a3aff;
+  color: white;
 }
-.s-bg{
-background-color: #FFD500;
-color: #000;
+.s-bg {
+  background-color: #ffd500;
+  color: #000;
 }
-.t-bg{
-background-color: #000;
-color: white;
-
-
+.t-bg {
+  background-color: #000;
+  color: white;
 }
-.forth-bg{
-background-color: #FF531A;
-color: #000;
+.forth-bg {
+  background-color: #ff531a;
+  color: #000;
 }

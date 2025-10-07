@@ -43,27 +43,32 @@ function AppShell() {
         buttonSchemeClass={theme.buttonSchemeClass}
         sticky={theme.sticky}
       />
-        <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        <Route path="/" element={<Home /> } />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/website-design-and-development" element={<Development />} />
-        <Route path="/services/E-Commerce-solutions" element={<Webecom />} />
-        <Route path="/Careers" element={<Careers />} />
-        <Route path="/Contact" element={<ContactUs />} />
-        <Route path="/services/seo-service" element={<FullStackExpertise />} />
-        <Route path="/services/new" element={<New />} />
-        <Route path="/services/brand-building" element={<ProductDesign />} />
-        <Route path="/services/ERP-service" element={<SaasDesign />} />
-        <Route path="/services/odoo-services" element={<OdooServices />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route path="/services/custom-web" element={<CustomWeb />} />
-        <Route path="/services/web-app" element={<WebApp />} />
-        <Route path="/services/Ai-Ml" element={<Aiml />} />
-
-      </Routes>
-    </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route
+            path="/services/website-design-and-development"
+            element={<Development />}
+          />
+          <Route path="/services/E-Commerce-solutions" element={<Webecom />} />
+          <Route path="/Careers" element={<Careers />} />
+          <Route path="/Contact" element={<ContactUs />} />
+          <Route
+            path="/services/seo-service"
+            element={<FullStackExpertise />}
+          />
+          <Route path="/services/new" element={<New />} />
+          <Route path="/services/brand-building" element={<ProductDesign />} />
+          <Route path="/services/ERP-service" element={<SaasDesign />} />
+          <Route path="/services/odoo-services" element={<OdooServices />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route path="/services/custom-web" element={<CustomWeb />} />
+          <Route path="/services/web-app" element={<WebApp />} />
+          <Route path="/services/Ai-Ml" element={<Aiml />} />
+        </Routes>
+      </Suspense>
       <Footer />
     </>
   );
@@ -71,7 +76,7 @@ function AppShell() {
 
 export default function App() {
   return (
-    <Router >
+    <Router>
       <AppShell />
     </Router>
   );

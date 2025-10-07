@@ -251,8 +251,7 @@
   color: #000;
   margin-bottom: 20px;
   text-decoration: none;
-    transition: transform 0.3s ease, color 0.3s ease; /* smooth effect */
-
+  transition: transform 0.3s ease, color 0.3s ease; /* smooth effect */
 }
 
 .webdesign-desc {
@@ -299,7 +298,7 @@
   width: 20px;
   color: #111;
   transition: transform 0.3s ease;
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .webdesign-icon.rotated {
@@ -352,19 +351,18 @@
   color: #000;
   margin-bottom: 20px;
   text-decoration: none;
-    transition: transform 0.3s ease, color 0.3s ease; /* smooth effect */
-
+  transition: transform 0.3s ease, color 0.3s ease; /* smooth effect */
 }
 a {
   text-decoration: none;
 }
 .webdesign-heading1:hover {
-  transform: scale(1.05);   /* slight pop */
-  color: #000;              /* optional: change color */
+  transform: scale(1.05); /* slight pop */
+  color: #000; /* optional: change color */
 }
 .webdesign-heading:hover {
-  transform: scale(1.05);   /* slight pop */
-  color: #000;              /* optional: change color */
+  transform: scale(1.05); /* slight pop */
+  color: #000; /* optional: change color */
 }
 .webdesign-heading1:hover img.arr {
   transform: rotate(-45deg);
@@ -445,9 +443,9 @@ a {
     margin-bottom: 30px;
   }
   .webdesign-img {
-  max-height: 250px;
-  object-fit: cover;
-}
+    max-height: 250px;
+    object-fit: cover;
+  }
 }
 
 @media (max-width: 768px) {
@@ -823,19 +821,14 @@ a {
     margin-right: auto;
   }
 }
-.arr{
+.arr {
   width: 30px;
   transform: rotateX(180deg);
   margin-left: 20px;
-    transition: transform 0.3s ease;
-
+  transition: transform 0.3s ease;
 }
 
-
-
-
-----------------------------
-.our-services-section {
+---------------------------- .our-services-section {
   background: #fff;
   position: relative;
 }
@@ -843,7 +836,7 @@ a {
 .services-small {
   font-size: 4rem;
   font-weight: 600;
-  color: #289ED8;
+  color: #289ed8;
   margin-top: 50px;
 }
 
@@ -854,9 +847,9 @@ a {
 }
 
 .services-big {
-  font-size: 250px; 
+  font-size: 250px;
   font-weight: 500;
-  color: #289ED8;
+  color: #289ed8;
   line-height: 1;
   margin: 0;
 }
@@ -870,9 +863,9 @@ a {
 
 .services-description {
   font-size: 0.95rem;
-    color: #000;
-    margin-left: 20px;
-    max-width: 470px;
+  color: #000;
+  margin-left: 20px;
+  max-width: 470px;
 }
 
 .unique-service-img {
@@ -910,8 +903,8 @@ a {
 
   .unique-service-img {
     max-width: 100%;
-        margin: -0.5rem auto 0;
-        margin-left: 12px;
-        height: 300px;
+    margin: -0.5rem auto 0;
+    margin-left: 12px;
+    height: 300px;
   }
 }

@@ -13,7 +13,7 @@ const ContactUs = () => {
       <section className="belief-behind">
         <div className="container">
           <div className="row align-items-start">
-            <div className="col-lg-6 mb-4"data-aos="fade-right">
+            <div className="col-lg-6 mb-4" data-aos="fade-right">
               <h1 className="belief-heading fw-bold">
                 Let’s Build Something <br />
                 Great Together
@@ -23,7 +23,7 @@ const ContactUs = () => {
                 customized to your needs.
               </p>
             </div>
-            <div className="col-lg-6"data-aos="fade-left">
+            <div className="col-lg-6" data-aos="fade-left">
               <div className="belief-item">
                 <h2>01 Send us message </h2>
                 <p>

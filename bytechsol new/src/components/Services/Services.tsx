@@ -6,17 +6,16 @@ import FaqSection from "../../shareable/faq";
 import NewCon from "../../shareable/NewCon";
 import ServicesSection from "./subservice/ServiceSections";
 import ic from "../../assets/images/icesimg.png";
-import sbg from "../../assets/images/servbg.png"
+import sbg from "../../assets/images/servbg.png";
 
 const Services: React.FC = () => {
   return (
     <>
       {/* 1st section */}
-      <section 
-  className="our-services-section" 
-  style={{ backgroundImage: `url(${sbg})` }}
->
-
+      <section
+        className="our-services-section"
+        style={{ backgroundImage: `url(${sbg})` }}
+      >
         <div className="container">
           <div className="services-heading-wrapper">
             <h3 className="services-small">OUR </h3>

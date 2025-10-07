@@ -1,4 +1,4 @@
-import React, { useMemo,  useState } from "react";
+import React, { useMemo, useState } from "react";
 import bg from "../assets/images/frm-img.png";
 import tick from "../assets/images/contact tick.png";
 
@@ -36,13 +36,15 @@ function validate(values: FormData): Errors {
 
   const name = values.fullname.trim();
   if (!name) errors.fullname = "Full name is required.";
-  else if (name.length < 2) errors.fullname = "Please enter at least 2 characters.";
+  else if (name.length < 2)
+    errors.fullname = "Please enter at least 2 characters.";
   else if (!nameRegex.test(name))
     errors.fullname = "Only letters, spaces, hyphens, and ' are allowed.";
 
   const email = values.email.trim();
   if (!email) errors.email = "Email is required.";
-  else if (!emailRegex.test(email)) errors.email = "Enter a valid email address.";
+  else if (!emailRegex.test(email))
+    errors.email = "Enter a valid email address.";
 
   const cleaned = budgetSanitize(values.budget);
   const numeric = Number(cleaned.replace(/,/g, ""));
@@ -52,7 +54,8 @@ function validate(values: FormData): Errors {
 
   const referral = values.referral.trim();
   if (!referral) errors.referral = "This field is required.";
-  else if (referral.length < 3) errors.referral = "Please add a bit more detail.";
+  else if (referral.length < 3)
+    errors.referral = "Please add a bit more detail.";
 
   const message = values.message.trim();
   if (!message) errors.message = "Please tell us about your project.";
@@ -152,14 +155,10 @@ const ContactSection = () => {
     const output = {
       fullName: formData.fullname.trim(),
       emailAddress: formData.email.trim(),
-      projectBudget: Number(
-        budgetSanitize(formData.budget).replace(/,/g, "")
-      ),
+      projectBudget: Number(budgetSanitize(formData.budget).replace(/,/g, "")),
       referralSource: formData.referral.trim(),
       message: formData.message.trim(),
-      services: formData.selectedTags.length
-        ? formData.selectedTags
-        : ["None"],
+      services: formData.selectedTags.length ? formData.selectedTags : ["None"],
     };
 
     console.log("Submitted Form:", output);
@@ -185,22 +184,26 @@ const ContactSection = () => {
 
       <div className="container contact8-content">
         <div className="contact8-left">
-          <h2 className="contact8-title" data-aos="fade-down">Let’s Build Your Digital Future</h2>
+          <h2 className="contact8-title" data-aos="fade-down">
+            Let’s Build Your Digital Future
+          </h2>
           <div className="container text-start ps-0" data-aos="fade-right">
-  <h3 className="bytech02">
-    With Bytechsol – Where Ideas Become Impacts
-  </h3>
-  <p className="bypara01">
-    Ready to accelerate your business with intelligent digital
-    solutions that drive results? <br /> At Bytechsol, we turn complex
-    ideas into user-focused platforms built to scale and succeed.
-  </p>
-</div>
+            <h3 className="bytech02">
+              With Bytechsol – Where Ideas Become Impacts
+            </h3>
+            <p className="bypara01">
+              Ready to accelerate your business with intelligent digital
+              solutions that drive results? <br /> At Bytechsol, we turn complex
+              ideas into user-focused platforms built to scale and succeed.
+            </p>
+          </div>
 
-          <ul className="contact8-list"data-aos="fade-up" data-aos-offset="30">
+          <ul className="contact8-list" data-aos="fade-up" data-aos-offset="30">
             <li>
               <img src={tick} alt="✓" />{" "}
-              <span>Tailored Software – Fits like a glove to your objectives.</span>
+              <span>
+                Tailored Software – Fits like a glove to your objectives.
+              </span>
             </li>
             <li>
               <img src={tick} alt="✓" />{" "}
@@ -211,15 +214,25 @@ const ContactSection = () => {
               <span>Tech-Driven – Latest frameworks & tools.</span>
             </li>
           </ul>
-          <a href="#contact" className="btn-white-blue" data-aos="fade-up" data-aos-offset="30">
+          <a
+            href="#contact"
+            className="btn-white-blue"
+            data-aos="fade-up"
+            data-aos-offset="30"
+          >
             Start Your Transformation
           </a>
         </div>
 
         {/* Contact Form */}
-        <form data-aos="fade-left" className="contact8-form" onSubmit={handleSubmit} noValidate>
+        <form
+          data-aos="fade-left"
+          className="contact8-form"
+          onSubmit={handleSubmit}
+          noValidate
+        >
           {/* First row */}
-          <div className="row g-3" >
+          <div className="row g-3">
             <div className="col-12 col-md-6">
               <div className="contact8-field">
                 <input
@@ -346,12 +359,15 @@ const ContactSection = () => {
 
           {/* Tags */}
           <div className="contact8-subtitle mt-3">How can we help you?</div>
-          <div  data-aos="fade-up"
+          <div
+            data-aos="fade-up"
             className="contact8-tags d-flex flex-wrap gap-2"
             role="group"
             aria-labelledby="services-label"
             aria-describedby={
-              touched.selectedTags && errors.selectedTags ? "tags-error" : undefined
+              touched.selectedTags && errors.selectedTags
+                ? "tags-error"
+                : undefined
             }
           >
             {serviceTags.map((tag) => (
@@ -381,8 +397,8 @@ const ContactSection = () => {
 
           {/* Submit */}
           <button
-          data-aos="fade-up"
-          data-aos-offset="30"
+            data-aos="fade-up"
+            data-aos-offset="30"
             type="submit"
             className="btn btn-primary mt-3"
             disabled={!isValid}
@@ -396,18 +412,21 @@ const ContactSection = () => {
             </div>
           )}
 
-          <div className="contact8-alt mt-3" data-aos="fade-up" data-aos-offset="30">
+          <div
+            className="contact8-alt mt-3"
+            data-aos="fade-up"
+            data-aos-offset="30"
+          >
             <span>Prefer email?</span>
             <div className="form-email">
-  <a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@bytechsol.com"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    info@bytechsol.com
-  </a>
-</div>
-
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@bytechsol.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                info@bytechsol.com
+              </a>
+            </div>
           </div>
         </form>
       </div>

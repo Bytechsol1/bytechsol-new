@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import cl1 from "../assets/images/clutch1.png";
 import cl2 from "../assets/images/cluthch2.png";
 import up3 from "../assets/images/upsell3.png";
-import "../assets/components-css/NewCon.css"
+import "../assets/components-css/NewCon.css";
 
 import CircularText from "./CircularText";
 
@@ -15,7 +15,9 @@ const NewCon = () => {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -29,17 +31,17 @@ const NewCon = () => {
   };
 
   return (
-    <section className="contact8-wrapper" >
+    <section className="contact8-wrapper">
       <div className="contact8-content">
         {/* Left Content */}
         <div className="contact8-left" data-aos="fade-right">
           <h2 className="contact8-title">
             Let&apos;s Build Your <br /> Digital Future
           </h2>
-          <p className="para01" style={{width:"90%"}}>
+          <p className="para01" style={{ width: "90%" }}>
             Ready to accelerate your business with intelligent digital solutions
-            that drive results? At Bytechsol, we turn complex
-            ideas into user-focused platforms built to scale and succeed.
+            that drive results? At Bytechsol, we turn complex ideas into
+            user-focused platforms built to scale and succeed.
           </p>
 
           <div className="contact8-tags">
@@ -62,9 +64,8 @@ const NewCon = () => {
         {/* Right Form */}
         <div className="contact8-form" data-aos="fade-left">
           <div className="contact8-deco">
-            <CircularText/>
+            <CircularText />
           </div>
-
 
           {/* <CircularText/> */}
           <form onSubmit={handleSubmit}>
@@ -129,18 +130,22 @@ const NewCon = () => {
             <button type="submit" className="contact8-submit">
               Submit Enquiry
             </button>
-            <div className="contact8-alt mt-3" data-aos="fade-up" data-aos-offset="30">
-            <span>Prefer email?</span>
-            <div className="form-email">
-  <a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@bytechsol.com"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    info@bytechsol.com
-  </a>
-</div>
-</div>
+            <div
+              className="contact8-alt mt-3"
+              data-aos="fade-up"
+              data-aos-offset="30"
+            >
+              <span>Prefer email?</span>
+              <div className="form-email">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@bytechsol.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  info@bytechsol.com
+                </a>
+              </div>
+            </div>
           </form>
         </div>
       </div>

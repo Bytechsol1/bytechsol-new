@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-const words = [' Bold Innovators', 'startups.', 'AI/ML Solutions.'];
+const words = [" Bold Innovators", "startups.", "AI/ML Solutions."];
 
 const AnimatedText: React.FC = () => {
   const [index, setIndex] = useState(0);
@@ -19,7 +19,7 @@ const AnimatedText: React.FC = () => {
   }, []);
 
   return (
-    <span className={`animated-word ${animate ? 'animate-bounce-in' : ''}`}>
+    <span className={`animated-word ${animate ? "animate-bounce-in" : ""}`}>
       {words[index]}
     </span>
   );
