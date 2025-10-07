@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Testimonial from "../../../shareable/testimonial";
 import "../../../assets/components-css/development.css";
 import cl from "../../../assets/images/cwimg.png";
@@ -12,11 +12,7 @@ import { Cmsdev } from "./New";
 
 
 const CustomWeb: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
   const location = useLocation();
 
   useEffect(() => {

@@ -7,13 +7,9 @@ import et from "../../../assets/images/ideat.png";
 import lw from "../../../assets/images/lwork.png";
 import sp from "../../../assets/images/simplicity.png";
 import ma from "../../../assets/images/mobapps.png";
-import lp2 from "../../../assets/images/lapto2.jpg"
-import v1 from "../../../assets/images/visual1.jpg"
-import sc from "../../../assets/images/social.png"
-import  { useRef,  useState, useLayoutEffect } from "react";
+import  { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import arrow from "../../../assets/images/arrow.svg"
 import { Consult } from "./New";
 
 
@@ -56,11 +52,8 @@ const cards = [
 
 
 const ProductDesign = () => {
-const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-const toggleAccordion = (index: number) => {
-  setActiveIndex(activeIndex === index ? null : index);
-};
+
   const containerRef = useRef<HTMLDivElement>(null);
 
 useLayoutEffect(() => {

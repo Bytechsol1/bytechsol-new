@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect,  } from "react";
 import "../../../assets/components-css/webecom.css";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
@@ -12,11 +12,8 @@ import { Estore } from "./New";
 
 
 const Webecom: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const toggleAccordion = (index: number) => {
-    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
-  };
+
     const location = useLocation();
 
   useEffect(() => {

@@ -7,7 +7,7 @@ import lw from "../../../assets/images/lwork.png";
 import sp from "../../../assets/images/simplicity.png";
 import ma from "../../../assets/images/mobapps.png";
 import cp from "../../../assets/images/odooimg.png";
-import  { useRef,  useState,useLayoutEffect, useEffect } from "react";
+import  { useRef,useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -55,11 +55,7 @@ const cards = [
 
 
 const CustomSoftwareDev = () => {
-const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-const toggleAccordion = (index: number) => {
-  setActiveIndex(activeIndex === index ? null : index);
-};
   const containerRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {

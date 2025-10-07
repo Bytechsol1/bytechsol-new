@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import  { useEffect } from "react";
 import "../../../assets/components-css/FullStackExpertise.css";
 import se from "../../../assets/images/seonew.png"
 import Testimonial from "../../../shareable/testimonial";
@@ -62,11 +62,7 @@ const industryData = [
 
 
 const ContactUs = () => {
-const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-const toggleAccordion = (index: number) => {
-  setActiveIndex(activeIndex === index ? null : index);
-};
 
   const location = useLocation();
 

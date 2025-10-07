@@ -7,7 +7,7 @@ import id from "../../../assets/images/ideat.png"
 import bl from "../../../assets/images/blacklp.png"
 import pl from "../../../assets/images/planlp.png"
 import fw from "../../../assets/images/findwk.png"
-import React, { useRef,  useState,useLayoutEffect, useEffect } from "react";
+import React, { useRef,useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLocation } from "react-router-dom";
@@ -60,7 +60,6 @@ const cards = [
 
 
 const Webapp: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -73,9 +72,6 @@ const Webapp: React.FC = () => {
   }, [location]);
 
 
-  const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
 
   const containerRef = useRef<HTMLDivElement>(null);
 

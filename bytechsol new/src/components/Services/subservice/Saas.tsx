@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import  { useEffect } from "react";
 import "../../../assets/components-css/ProductDesign.css";
 import er from "../../../assets/images/erp01.svg"
 import Testimonial from "../../../shareable/testimonial";
@@ -62,11 +62,6 @@ const industryData = [
 
 
 const SaasDesign = () => {
-const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-const toggleAccordion = (index: number) => {
-  setActiveIndex(activeIndex === index ? null : index);
-};
 
   const location = useLocation();
 

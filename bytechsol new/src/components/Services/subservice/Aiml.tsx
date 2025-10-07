@@ -1,14 +1,11 @@
-import  { useEffect, useState } from "react";
+import  { useEffect } from "react";
 import "../../../assets/components-css/Aiml.css"; 
 import ai from "../../../assets/images/aiml.svg";
 import bgImage from "../../../assets/images/bgimg.jpg";
 import icon from "../../../assets/images/tick.svg";
-import v1 from "../../../assets/images/visual1.jpg";
-import sv from "../../../assets/images/servimg.png";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import NewCon from "../../../shareable/NewCon";
-import arrow from "../../../assets/images/arrow.svg"
 import { useLocation } from "react-router-dom";
 import { Llm } from "./New";
 
@@ -16,11 +13,6 @@ import { Llm } from "./New";
 
 const AimlSection = () => {
   
-const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-const toggleAccordion = (index: number) => {
-  setActiveIndex(activeIndex === index ? null : index);
-};
 
   const location = useLocation();
 
