@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AnimatedText from "../shareable/AnimatedText";
-import am from "../assets/images/aimlimg.jpg";
+import am from "../assets/images/aiml-home.svg";
 import "../assets/components-css/home.css";
 import Clutch from "../assets/images/clutch.png";
 import Yasir from "../assets/images/yasir.jpg";
@@ -245,50 +245,43 @@ const Home: React.FC = () => {
       <section className="services-section py-5 mb-5">
         <div className="service-vertical " >
           <span
-          data-aos="fade-down"
   
           >
             S
           </span>
           <span
-          data-aos="fade-down"
+
 
           >
             E
           </span>
           <span
-                    data-aos="fade-down"
 
           >
             R
           </span>
           <span
-                    data-aos="fade-down"
 
           >
             V
           </span>
           <span
-                      data-aos="fade-down"
 
           >
             I
           </span>
           <span
-                      data-aos="fade-down"
 
           >
             C
           </span>
           <span
-          data-aos="fade-down"
 
           >
             E
           </span>
           <span
-          data-aos="fade-down"
-
+  
           >
             S
           </span>

@@ -1384,8 +1384,12 @@
   justify-content: center;
   padding: 20px 0;
   font-size: 4rem;
-  font-weight: 600;
-  color: #000;
+  font-weight: 650;
+  /* color: #000; */
+    background: linear-gradient(90deg, #5a2fe7, #ea549f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-family: "Guminert", sans-serif;
   letter-spacing: 10px;
   writing-mode: vertical-lr;

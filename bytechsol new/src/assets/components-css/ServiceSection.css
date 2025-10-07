@@ -217,3 +217,20 @@
     margin: 0;
   }
 }
+
+/* --- Ultra-wide monitors --- */
+@media (min-width: 1400px) {
+  .services-content {
+    max-width: 850px;
+    padding: 50px 80px;
+  }
+
+  .services-overlay h2 {
+    font-size: clamp(36px, 2vw, 48px);
+  }
+
+  .services-overlay p,
+  .services-overlay ul {
+    font-size: clamp(18px, 1vw, 22px);
+  }
+}
