@@ -10,6 +10,7 @@ import bgl from "../../assets/images/blogbgl.png";
 import bgr from "../../assets/images/blogbgr.png";
 import rg from "../../assets/images/blogrg.png";
 import lf from "../../assets/images/bloglf.png";
+import { useState } from "react";
 
 // Scroll function
 const scroll = (direction: string) => {
@@ -78,6 +79,20 @@ const blogPosts = [
 ];
 
 const Blog = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredPosts, setFilteredPosts] = useState(blogPosts);
+
+  // Handle the search input change
+  const searchBlog = (e : any) => {
+    const query = e.target.value.toLowerCase(); // Convert to lowercase for case-insensitive matching
+    setSearchQuery(query);
+
+    // Filter blog posts based on the search query
+    const filtered = blogPosts.filter((post) =>
+      post.title.toLowerCase().includes(query)
+    );
+    setFilteredPosts(filtered); // Update the filtered posts state
+  };
   return (
     <>
       {/* Blog Section */}
@@ -103,7 +118,9 @@ const Blog = () => {
         <div className="blog-search-placeholder">
           <i className="fa-solid fa-magnifying-glass search-icon"></i>
           <input
-            type="text"
+            type="search"
+            value={searchQuery}
+            onChange={searchBlog}
             placeholder="Search"
             className="blog-search-input"
           />
@@ -135,7 +152,7 @@ const Blog = () => {
       {/* Blog Cards Section */}
       <section className="cards-six">
         <div className="blog-grid">
-          {blogPosts.map((post) => (
+          {filteredPosts.map((post) => (
             <div className="blog-card" key={post.id}>
               <div className="blog-image">
                 <img src={post.image} alt={post.title} />
