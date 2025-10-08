@@ -28,7 +28,13 @@
   margin: 0 auto;
   gap: 40px;
 }
-
+.dg-products-container1 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 40px;
+}
 .dg-products-content {
   flex: 1;
   min-width: 50%;
@@ -126,13 +132,13 @@
   text-align: center;
 }
 
-.dg-products-image img {
+/* .dg-products-image img {
   max-width: 80%;
   height: 450px;
   object-fit: contain;
   margin-left: 100px;
   margin-top: -50px;
-}
+} */
 
 .brand-vision-image {
   max-width: 600px;

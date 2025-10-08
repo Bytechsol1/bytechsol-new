@@ -90,7 +90,7 @@ const ContactUs = () => {
     {/* Left: Text */}
     <div className="dg-products-content">
       <h1 className="dg-products-heading text-start"data-aos="fade-down">
-  Drive Traffic, Boost <br /> Rankings, Grow <br /> Smarter with SEO
+  Drive Traffic, Boost Rankings, Grow Smarter with SEO
 </h1>
 
 <p className="dg-products-description text-start"data-aos="fade-right">

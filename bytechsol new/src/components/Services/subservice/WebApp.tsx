@@ -3,7 +3,6 @@ import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import wa from "../../../assets/images/webapp.svg"
 import NewCon from "../../../shareable/NewCon";
-import id from "../../../assets/images/ideat.png"
 import bl from "../../../assets/images/blacklp.png"
 import pl from "../../../assets/images/planlp.png"
 import fw from "../../../assets/images/findwk.png"
@@ -19,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 const cards = [
   {
     color: "f-bg",
-    image: id,
+    image: bl,
     title: ["Smarter Web & Software."],
     items: [
       "Create apps that are secure and scaling. We provide performance, reliability, and smooth user experiences, whether it is custom web solutions or enterprise systems.",

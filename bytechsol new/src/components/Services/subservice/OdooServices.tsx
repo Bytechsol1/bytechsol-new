@@ -112,11 +112,11 @@ const CustomSoftwareDev = () => {
       <section
         className="dg-products-section"
         style={{
-          backgroundColor: "#203A43",
+          backgroundColor: "#4d0549ff",
         }}
       >
         <div className="container">
-          <div className="dg-products-container">
+          <div className="dg-products-container1">
             {/* Left: Text */}
             <div className="dg-products-content">
               <h1 className="dg-products-heading text-start"data-aos="fade-left">
@@ -133,7 +133,7 @@ const CustomSoftwareDev = () => {
             </div>
 
             {/* Right: Image */}
-            <div className="dg-odoo-image d-none d-md-block"data-aos="fade-right">
+            <div className="dg-products-image d-none d-md-block"data-aos="fade-right">
               <img src={cp} alt="UI/UX Illustration" />
             </div>
           </div>
