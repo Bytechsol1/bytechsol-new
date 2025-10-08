@@ -68,8 +68,8 @@
   transform: translateY(-50%) scale(1.5); 
 }
 
-.timeline-left ul li.active::before {
-  background: #2563eb;
+.timeline-left ul li::before {
+  background: #2563eb !important;
 }
 
 .timeline-left ul li.active:hover::before {
@@ -204,13 +204,24 @@
   transform: translateY(-50%) scale(1.5);
 }
 
-.timeline-left ul li.active::before {
-  background: #2563eb;
+.timeline-left ul li:nth-child(odd)::before {
+  background: #94209e !important;
+}
+
+/* Second li element */
+.timeline-left ul li:nth-child(even)::before {
+  background: #D93D41 !important; /* Second color */
 }
 
 .timeline-left ul li.active:hover::before {
-  background: #2563eb;
+  background: #2563eb !important;
   transform: translateY(-50%) scale(1.5);
+}
+
+.timeline-left ul li.active::before {
+  background: #2563eb !important;
+  transform: translateY(-50%) scale(1.5);
+
 }
 
 .discover-btn {
