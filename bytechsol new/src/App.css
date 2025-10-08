@@ -214,13 +214,14 @@
 }
 
 .timeline-left ul li.active:hover::before {
-  background: #2563eb !important;
+  background: #2073D9 !important;
   transform: translateY(-50%) scale(1.5);
 }
 
 .timeline-left ul li.active::before {
-  background: #2563eb !important;
+  background: #2073D9 !important;
   transform: translateY(-50%) scale(1.5);
+    border: 2px solid #000;
 
 }
 

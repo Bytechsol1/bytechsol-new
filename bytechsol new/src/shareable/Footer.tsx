@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
           <div className="col-md-1 d-none d-md-block"></div>
           {/* Services */}
           <div className="col-6 col-md-2">
-            <h6 className="footer-heading">Services</h6>
+             <Link to="/services" className="service-link"><h6 className="footer-heading">Services</h6></Link>
             <ul className="footer-links">
               <Link to="/services/web-app">
                 <li>Web App</li>

@@ -90,7 +90,8 @@ const Home: React.FC = () => {
             <div className="row align-items-center">
               <div className="col-md-8">
                 <h1 data-aos="fade-right">
-                  Global Software Agency & Digital Partner for <AnimatedText />
+                  Global Software Agency & Digital Partner for <br />
+                  <AnimatedText />
                 </h1>
                 <div
                   className="cta-buttons mt-4 d-flex gap-3 flex-wrap"
@@ -216,75 +217,17 @@ const Home: React.FC = () => {
       </section>
 
       {/* Services */}
-      {/* <section className="services-section py-5 mb-5">
-      <div className="container">
-        <p className="ser-subheading text-center text-md-start" data-aos="fade-down">(SERVICES)</p>
-        {services.map((service, index) => (
-          <div
-            key={service.id}
-            className={`service-row ${activeIndex === index ? "active" : ""}`}
-            onMouseEnter={() => setActiveIndex(index)}
-            onMouseLeave={() => setActiveIndex(null)}
-          >
-            <span className="service-index" data-aos="fade-right">0{service.id}</span>
-<Link to={service.path} className="service-link">
-  <h2 className="service-title" data-aos="fade-up">{service.title}</h2>
-</Link>
-            <img src={Arrow} alt="Arrow" className="service-arrow-img"data-aos="fade-left" />
 
-            <img
-              src={service.image}
-              alt={service.title}
-              className={`service-image ${activeIndex === index ? "show" : ""}`}
-              loading="lazy"
-            />
-          </div>
-        ))}
-      </div>
-    </section> */}
       <section className="services-section py-5 mb-5">
-        <div className="service-vertical " >
-          <span
-  
-          >
-            S
-          </span>
-          <span
-
-
-          >
-            E
-          </span>
-          <span
-
-          >
-            R
-          </span>
-          <span
-
-          >
-            V
-          </span>
-          <span
-
-          >
-            I
-          </span>
-          <span
-
-          >
-            C
-          </span>
-          <span
-
-          >
-            E
-          </span>
-          <span
-  
-          >
-            S
-          </span>
+        <div className="service-vertical ">
+          <span>S</span>
+          <span>E</span>
+          <span>R</span>
+          <span>V</span>
+          <span>I</span>
+          <span>C</span>
+          <span>E</span>
+          <span>S</span>
         </div>
 
         <div className="container">

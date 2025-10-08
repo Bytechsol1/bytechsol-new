@@ -122,7 +122,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
-    backgroundColor: "#203A43",
+    backgroundColor: "#4d0549ff",
     // variant: "dark",
     linkClassName: "text-white",
     buttonClassName: "",
