@@ -3,7 +3,6 @@ import cl1 from "../assets/images/clutch1.png";
 import cl2 from "../assets/images/cluthch2.png";
 import up3 from "../assets/images/upsell3.png";
 import "../assets/components-css/NewCon.css";
-
 import CircularText from "./CircularText";
 
 const NewCon = () => {
@@ -14,6 +13,55 @@ const NewCon = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({
+    fullname: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const validate = () => {
+    let newErrors = { fullname: "", email: "", subject: "", message: "" };
+    let isValid = true;
+
+    // Name
+    if (!formData.fullname.trim()) {
+      newErrors.fullname = "Full name is required.";
+      isValid = false;
+    } else if (formData.fullname.trim().length < 3) {
+      newErrors.fullname = "Name must be at least 3 characters.";
+      isValid = false;
+    }
+
+    // Email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required.";
+      isValid = false;
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address.";
+      isValid = false;
+    }
+
+    // Subject
+    if (!formData.subject.trim()) {
+      newErrors.subject = "Please select a subject.";
+      isValid = false;
+    }
+
+    // Message
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required.";
+      isValid = false;
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = "Message must be at least 10 characters long.";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -21,19 +69,21 @@ const NewCon = () => {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: "" })); // clear error on change
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    alert(" Enquiry submitted!");
-    setFormData({ fullname: "", email: "", subject: "", message: "" });
+    if (validate()) {
+      alert("✅ Enquiry submitted successfully!");
+      setFormData({ fullname: "", email: "", subject: "", message: "" });
+    }
   };
 
   return (
     <section className="contact8-wrapper">
       <div className="contact8-content">
-        {/* Left Content */}
+        {/* Left Section */}
         <div className="contact8-left" data-aos="fade-right">
           <h2 className="contact8-title">
             Let&apos;s Build Your <br /> Digital Future
@@ -53,7 +103,6 @@ const NewCon = () => {
             </a>
           </div>
 
-          {/* Logos */}
           <div className="contact8-logos">
             <img src={cl1} alt="Clutch Award 1" />
             <img src={cl2} alt="Clutch Award 2" />
@@ -67,8 +116,7 @@ const NewCon = () => {
             <CircularText />
           </div>
 
-          {/* <CircularText/> */}
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} noValidate>
             <div className="contact8-row">
               <div className="contact8-field">
                 <h6 className="contact8-subtitle">Name</h6>
@@ -78,9 +126,13 @@ const NewCon = () => {
                   placeholder="Enter full name"
                   value={formData.fullname}
                   onChange={handleChange}
-                  required
+                  className={errors.fullname ? "error-border" : ""}
                 />
+                {errors.fullname && (
+                  <small className="error-text text-danger">{errors.fullname}</small>
+                )}
               </div>
+
               <div className="contact8-field">
                 <h6 className="contact8-subtitle">Email</h6>
                 <input
@@ -89,8 +141,11 @@ const NewCon = () => {
                   placeholder="Enter email"
                   value={formData.email}
                   onChange={handleChange}
-                  required
+                  className={errors.email ? "error-border" : ""}
                 />
+                {errors.email && (
+                  <small className="error-text text-danger">{errors.email}</small>
+                )}
               </div>
             </div>
 
@@ -100,7 +155,7 @@ const NewCon = () => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                required
+                className={errors.subject ? "error-border" : ""}
               >
                 <option value="">Select One</option>
                 <option value="Web App">Web App</option>
@@ -113,6 +168,9 @@ const NewCon = () => {
                 <option value="AI/ML">AI / ML</option>
                 <option value="Custom Web">Custom Web</option>
               </select>
+              {errors.subject && (
+                <small className="error-text text-danger">{errors.subject}</small>
+              )}
             </div>
 
             <div className="contact8-field">
@@ -123,13 +181,17 @@ const NewCon = () => {
                 placeholder="Tell us about your project..."
                 value={formData.message}
                 onChange={handleChange}
-                required
+                className={errors.message ? "error-border" : ""}
               />
+              {errors.message && (
+                <small className="error-text text-danger">{errors.message}</small>
+              )}
             </div>
 
             <button type="submit" className="contact8-submit">
               Submit Enquiry
             </button>
+
             <div
               className="contact8-alt mt-3"
               data-aos="fade-up"
