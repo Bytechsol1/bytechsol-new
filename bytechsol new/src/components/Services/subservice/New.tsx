@@ -323,7 +323,7 @@ const New: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="ui-ux-design">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -420,7 +420,7 @@ const CMS: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="cms-design-development">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -511,7 +511,7 @@ const Landing: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="landing-page-design">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -601,7 +601,7 @@ const Brand: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="website-maintenance-support">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -692,7 +692,7 @@ const Redesign: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="responsive-website-redesign">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -1044,7 +1044,7 @@ export const Web: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="web-app-development">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -1141,7 +1141,7 @@ const Softdev: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="software-development">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -1232,7 +1232,7 @@ const Progapp: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="progressive-web-apps-pwa">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -1322,7 +1322,7 @@ const Saasdev: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="saas-application-developmen">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -1413,7 +1413,7 @@ const Enterdev: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="enterprise-application-development">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -1660,14 +1660,12 @@ export const Onseo: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="on-page-seo">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>
-                Web App Development
-              </h3>
+              <h3 className="heads">On-Page SEO</h3>
               {onseo
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1755,14 +1753,12 @@ const Offseo: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="off-page-seo">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>
-                Software Development
-              </h3>
+              <h3 className="heads">Off-Page SEO</h3>
               {offseo
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1846,14 +1842,12 @@ const Techseo: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="technical-seo">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>
-                Progressive Web Apps (PWA)
-              </h3>
+              <h3 className="heads">Technical SEO</h3>
               {techseo
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -2093,7 +2087,7 @@ export const Consult: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="brand-strategy-consulting">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -2188,7 +2182,7 @@ const Logo: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="logo-design-visual-identity">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -2279,7 +2273,7 @@ const Media: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="social-media-branding">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -2473,7 +2467,7 @@ export const Llm: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="ai-ml-llm-nlp-solutions">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -2567,14 +2561,12 @@ const Chatbot: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="ai-chatbots-voice-assistants">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>
-                Logo Design & Visual Identity{" "}
-              </h3>
+              <h3 className="heads">AI Chatbots & Voice Assistants </h3>
               {chatbot
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -2919,7 +2911,7 @@ export const Customerp: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="custom-erp-implementation-development">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -3016,7 +3008,7 @@ const Erpintegra: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="erp-integration-services">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -3107,7 +3099,7 @@ const Erpcustom: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="erp-integration-with-existing-systems">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -3197,7 +3189,7 @@ const Erpmain: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="erp-customization-module-development">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -3288,7 +3280,7 @@ const Odoomain: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="erp-maintenance-support">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -3640,7 +3632,7 @@ export const Estore: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="e-commerce-store-setup">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -3737,7 +3729,7 @@ const Shopify: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="shopify-store-setup">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -3828,7 +3820,7 @@ const Woocommerce: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="woocommerce-development">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -3918,7 +3910,7 @@ const Payment: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="payment-gateway-integration">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -4009,7 +4001,7 @@ const Market: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="marketplace-development">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -4361,7 +4353,7 @@ export const Customization: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="odoo-migration-customization">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -4458,7 +4450,7 @@ const Consultancy: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="odoo-techno-functional-consultancy">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -4549,7 +4541,7 @@ const Odoomod: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="odoo-module-development">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -4639,7 +4631,7 @@ const Odooserv: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="odoo-integration-services">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -4730,7 +4722,7 @@ const Mainsupport: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="odoo-maintenance-support">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -5081,7 +5073,7 @@ export const Cmsdev: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="custom-cms-development">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
@@ -5178,14 +5170,12 @@ const Webdev: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container"id="custom-web-application-development">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>
-                Odoo Techno-Functional Consultancy
-              </h3>
+              <h3 className="heads">Custom Web Application Development</h3>
               {webdev
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -5269,14 +5259,12 @@ const Apidev: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="custom-api-development-integration">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>
-                Odoo Module Development
-              </h3>
+              <h3 className="heads">Custom API Development & Integration</h3>
               {apidev
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -5359,14 +5347,12 @@ const Partyserv: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="third-party-service-integration">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>
-                Odoo Integration Services
-              </h3>
+              <h3 className="heads">Third-Party Service Integration</h3>
               {partyserv
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -5450,14 +5436,12 @@ const Plugin: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container" id="custom-plugin-module-development">
         <div className="timeline-container">
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>
-                Odoo Maintenance & Support
-              </h3>
+              <h3 className="heads">Custom Plugin & Module Development</h3>
               {plugin
                 .filter((item) => item.id !== 0)
                 .map((item) => (
