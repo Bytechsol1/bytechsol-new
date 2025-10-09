@@ -7,7 +7,7 @@ import et from "../../../assets/images/ideat.png";
 import lw from "../../../assets/images/lwork.png";
 import sp from "../../../assets/images/simplicity.png";
 import ma from "../../../assets/images/mobapps.png";
-import  { useRef, useLayoutEffect } from "react";
+import  { useRef, useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Consult } from "./New";
@@ -92,6 +92,16 @@ useLayoutEffect(() => {
   return () => ctx.revert();
 }, []);
 
+useEffect(() => {
+  if (location.hash) {
+    const element = document.querySelector(location.hash);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 500); // wait a bit for GSAP layout to settle
+    }
+  }
+}, [location]);
 
   return (
     <>

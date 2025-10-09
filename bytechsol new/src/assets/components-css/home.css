@@ -404,13 +404,13 @@
   align-items: center;
   padding: 1.2rem 2rem;
   cursor: pointer !important;
-  border-radius: 13px;
+  border-radius: 8px;
   transition: background-color 0.4s ease, transform 0.4s ease;
   position: relative;
 }
 
 .service-row.active {
-  background: linear-gradient(90deg, #5a2fe7, #9c40c6 46.15%, #ea549f);
+  background: linear-gradient(90deg, #ea549f, #5a2fe7 46.15%, #9c40c6);
   color: #fff !important;
   transform: scale(0.98);
 }
@@ -453,7 +453,7 @@
   top: 50%;
   transform: translateY(-50%) translateX(30px) scale(0.95);
   width: 220px;
-  height: auto;
+  height: 200px;
   border-radius: 12px;
   object-fit: cover;
   opacity: 0;

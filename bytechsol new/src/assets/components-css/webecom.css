@@ -52,10 +52,15 @@
   flex: 1 1 40%;
   text-align: right;
 }
-
+@media (max-width: 768px) {
+.card-img img{
+  height: auto !important ;
+}
+}
 .card-img img {
   max-width: 100%;
-  height: auto;
+    height: 400px;
+  /* height: auto; */
   object-fit: contain;
   border-radius: 75px 5px 75px 5px;
   -webkit-border-radius: 75px 5px 75px 5px;

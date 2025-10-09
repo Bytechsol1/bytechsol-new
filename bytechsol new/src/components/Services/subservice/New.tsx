@@ -1665,7 +1665,7 @@ export const Onseo: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">On-Page SEO</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>On-Page SEO</h3>
               {onseo
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1758,7 +1758,7 @@ const Offseo: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Off-Page SEO</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>Off-Page SEO</h3>
               {offseo
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1847,7 +1847,7 @@ const Techseo: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Technical SEO</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>Technical SEO</h3>
               {techseo
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -2566,7 +2566,7 @@ const Chatbot: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">AI Chatbots & Voice Assistants </h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>AI Chatbots & Voice Assistants </h3>
               {chatbot
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -5175,7 +5175,7 @@ const Webdev: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Custom Web Application Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>Custom Web Application Development</h3>
               {webdev
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -5264,7 +5264,7 @@ const Apidev: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Custom API Development & Integration</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>Custom API Development & Integration</h3>
               {apidev
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -5352,7 +5352,7 @@ const Partyserv: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Third-Party Service Integration</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>Third-Party Service Integration</h3>
               {partyserv
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -5441,7 +5441,7 @@ const Plugin: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Custom Plugin & Module Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>Custom Plugin & Module Development</h3>
               {plugin
                 .filter((item) => item.id !== 0)
                 .map((item) => (
