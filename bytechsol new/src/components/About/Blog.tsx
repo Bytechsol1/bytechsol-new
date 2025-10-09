@@ -8,23 +8,24 @@ import py from "../../assets/images/prototype.png";
 import d15 from "../../assets/images/design15.png";
 import bgl from "../../assets/images/blogbgl.png";
 import bgr from "../../assets/images/blogbgr.png";
-import rg from "../../assets/images/blogrg.png";
-import lf from "../../assets/images/bloglf.png";
 import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 // Scroll function
-const scroll = (direction: string) => {
-  const container = document.getElementById("servicesScroll");
-  const scrollAmount = 200;
+// const scroll = (direction: string) => {
+//   const container = document.getElementById("servicesScroll");
+//   const scrollAmount = 200;
 
-  if (container) {
-    if (direction === "left") {
-      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    } else {
-      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-  }
-};
+//   if (container) {
+//     if (direction === "left") {
+//       container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+//     } else {
+//       container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+//     }
+//   }
+// };
 
 // Blog posts
 const blogPosts = [
@@ -78,12 +79,25 @@ const blogPosts = [
   },
 ];
 
+ const services = [
+    "Web Development",
+    "App Development",
+    "UI/UX Design",
+    "SEO",
+    "Digital Marketing",
+    "Branding",
+    "E-Commerce",
+    "Cloud Solutions",
+    "QA & Testing",
+  ];
+
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
 
   // Handle the search input change
-  const searchBlog = (e : any) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const searchBlog = ( e : any ) => {
     const query = e.target.value.toLowerCase(); // Convert to lowercase for case-insensitive matching
     setSearchQuery(query);
 
@@ -128,26 +142,30 @@ const Blog = () => {
       </section>
       {/* Scrollable Services Section */}
       <div className="services-container d-none d-md-block">
-        <button className="scroll-btn left" onClick={() => scroll("left")}>
-          <img src={rg} alt="" />
-        </button>
-
-        <div className="services-scroll" id="servicesScroll">
-          <div className="service-item">Web Development</div>
-          <div className="service-item">App Development</div>
-          <div className="service-item">UI/UX Design</div>
-          <div className="service-item">SEO</div>
-          <div className="service-item">Digital Marketing</div>
-          <div className="service-item">Branding</div>
-          <div className="service-item">E-Commerce</div>
-          <div className="service-item">Cloud Solutions</div>
-          <div className="service-item">QA & Testing</div>
-        </div>
-
-        <button className="scroll-btn right" onClick={() => scroll("right")}>
-          <img src={lf} alt="Right Arrow" />
-        </button>
-      </div>
+      <Swiper
+        modules={[Autoplay]}
+        spaceBetween={30}
+        slidesPerView={4}
+        loop={true}
+        autoplay={{
+          delay: 1500, // time between slides
+          disableOnInteraction: false,
+        }}
+        speed={1000} // slide animation speed
+        breakpoints={{
+          768: { slidesPerView: 4 },
+          1024: { slidesPerView: 5 },
+          1400: { slidesPerView: 6 },
+        }}
+        className="services-scroll"
+      >
+        {services.map((service, index) => (
+          <SwiperSlide key={index}>
+            <div className="service-item">{service}</div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
 
       {/* Blog Cards Section */}
       <section className="cards-six">

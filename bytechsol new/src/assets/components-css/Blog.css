@@ -211,6 +211,7 @@
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
+  gap: 11px;
   margin-top: -140px;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge */
@@ -248,7 +249,7 @@
   align-items: center;
   justify-content: center;
   margin: 40px auto;
-  max-width: 900px;
+  max-width: 1283px;
 }
 
 .services-scroll {
