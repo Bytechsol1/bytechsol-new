@@ -71,12 +71,12 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
   },
 
   "/contact": {
-    logoIconSrc: LogoWhite,
-    logoTextSrc: LogoTextWhite,
+    logoIconSrc: Logo,
+    logoTextSrc: LogoText,
     navClassName: "",
-    backgroundColor: "#289dd8",
+    backgroundColor: "white",
     variant: "dark",
-    linkClassName: "text-white",
+    linkClassName: "text-black",
     buttonClassName: "",
     buttonSchemeClass: "btn-scheme--contact",
     sticky: true,
