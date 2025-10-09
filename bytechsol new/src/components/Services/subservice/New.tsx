@@ -6,28 +6,28 @@ import wb from "../../../assets/images/web.png";
 import ld from "../../../assets/images/landesg.jpg";
 import cr from "../../../assets/images/creatim.jpg";
 import br from "../../../assets/images/braim.png";
-import w01 from "../../../assets/images/wd01.png"
-import s02 from "../../../assets/images/sd02.png" 
-import p03 from "../../../assets/images/pw03.png"
-import s04 from "../../../assets/images/ss04.png"
-import e05 from "../../../assets/images/ea05.png"
-import os from "../../../assets/images/onseo.png"
-import fs from "../../../assets/images/offseo.png"
-import ts from "../../../assets/images/techseo.png"
-import lp2 from "../../../assets/images/lapto2.jpg"
-import v1 from "../../../assets/images/visual1.jpg"
-import sc from "../../../assets/images/social.png"
+import w01 from "../../../assets/images/wd01.png";
+import s02 from "../../../assets/images/sd02.png";
+import p03 from "../../../assets/images/pw03.png";
+import s04 from "../../../assets/images/ss04.png";
+import e05 from "../../../assets/images/ea05.png";
+import os from "../../../assets/images/onseo.png";
+import fs from "../../../assets/images/offseo.png";
+import ts from "../../../assets/images/techseo.png";
+import lp2 from "../../../assets/images/lapto2.jpg";
+import v1 from "../../../assets/images/visual1.jpg";
+import sc from "../../../assets/images/social.png";
 import sv from "../../../assets/images/servimg.png";
-import ip from "../../../assets/images/imple.png"
-import lp from "../../../assets/images/laptop-image.png"
-import am from "../../../assets/images/aml.jpg"
-import cs from "../../../assets/images/cuseomiza.png"
-import sp from "../../../assets/images/support.png"
-import es from "../../../assets/images/estore.png"
-import sy from "../../../assets/images/shopify.png"
-import wo from "../../../assets/images/woocom.png"
-import py from "../../../assets/images/payment.png"
-import mk from "../../../assets/images/marketplace.png"
+import ip from "../../../assets/images/imple.png";
+import lp from "../../../assets/images/laptop-image.png";
+import am from "../../../assets/images/aml.jpg";
+import cs from "../../../assets/images/cuseomiza.png";
+import sp from "../../../assets/images/support.png";
+import es from "../../../assets/images/estore.png";
+import sy from "../../../assets/images/shopify.png";
+import wo from "../../../assets/images/woocom.png";
+import py from "../../../assets/images/payment.png";
+import mk from "../../../assets/images/marketplace.png";
 import mi from "../../../assets/images/migra.png";
 import tc from "../../../assets/images/tecno.png";
 import md from "../../../assets/images/module.png";
@@ -37,7 +37,6 @@ import cw from "../../../assets/images/cwapp.png";
 import pl from "../../../assets/images/plugimg.png";
 import ap from "../../../assets/images/apimg.png";
 import sd from "../../../assets/images/servimg.png";
-
 
 const items = [
   {
@@ -160,7 +159,8 @@ const land = [
   {
     id: 2,
     title: "Mobile-first and responsive layouts",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "We develop CMS websites that are launched on time with minimum revisions. We have an efficient approach that guarantees an easy change of design to complete the transformation of the CMS.",
     image: ld,
@@ -168,7 +168,8 @@ const land = [
   {
     id: 3,
     title: "SEO and speed optimized",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "Be it a custom CMS or a WordPress, WordPress, Shopify, or a custom CMS, we build the functionality that fits your brand, work processes, and your growth objectives, and leave out the things you do not need.",
     image: ld,
@@ -210,7 +211,8 @@ const main = [
   {
     id: 2,
     title: "Security monitoring and backups",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "We use high-level security systems, perpetual observation, and automated backup to ensure the safety of your online resource against cyber attacks, loss of information.",
     image: cr,
@@ -218,7 +220,8 @@ const main = [
   {
     id: 3,
     title: "Bug fixes and troubleshooting",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "Whether a bug or a major design mistake, we promptly diagnose and correct problems to ensure an immaculate user experience.",
     image: cr,
@@ -261,7 +264,8 @@ const redesign = [
   {
     id: 2,
     title: "Modern UI/UX upgrades",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "We redesign your site in looks to give it better layouts, easy navigation, and other attractive visual elements to subcategorize things, and sway brand perception.",
     image: br,
@@ -269,7 +273,8 @@ const redesign = [
   {
     id: 3,
     title: "Performance and speed optimization",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "We optimize the areas of code and the structure of your website to make it load faster, have fewer bounce rates, and general functionality.",
     image: br,
@@ -307,14 +312,25 @@ const New: React.FC = () => {
 
   const activeItem = items.find((item) => item.id === activeId);
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   return (
     <>
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">UI/UX Design</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                UI/UX Design
+              </h3>
               {items
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -327,91 +343,9 @@ const New: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
-          </div>
-
-          {/* Center Image */}
-          <div className="timeline-center" data-aos="fade-up" >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeItem?.id}
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -30 }}
-                transition={{ duration: 0.3 }}
-              >
-                <img src={activeItem?.image} alt={activeItem?.title} />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeItem?.id}
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -30 }}
-                transition={{ duration: 0.3 }}
-              >
-                <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* 2nd  */}
-        </div>
-      </div>
-      <CMS/>
-      <Landing/>
-      <Brand/>
-      <Redesign/>
-  
-
-    </>
-  );
-};
-
-  /* 2nd-----------------------------------------------  */
-const CMS: React.FC = () => {
-  const [activeId, setActiveId] = useState<number>(0);
-  const [fade, setFade] = useState<boolean>(false);
-
-  const handleClick = (id: number) => {
-    if (id === activeId) return;
-    setFade(true);
-    setTimeout(() => {
-      setActiveId(id);
-      setFade(false);
-    }, 300);
-  };
-
-  const activeItem = cms.find((item) => item.id === activeId);
-
-  return (
-    <>
-      <div className="container">
-        <div className="timeline-container">
-          {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
-            <ul>
-              <h3 className="heads">CMS Design & Development</h3>
-              {cms
-                .filter((item) => item.id !== 0)
-                .map((item) => (
-                  <li
-                    key={item.id}
-                    className={item.id === activeId ? "active" : ""}
-                    onClick={() => handleClick(item.id)}
-                  >
-                    {item.title}
-                  </li>
-                ))}
-            </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -430,7 +364,7 @@ const CMS: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -441,7 +375,106 @@ const CMS: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* 2nd  */}
+        </div>
+      </div>
+      <CMS />
+      <Landing />
+      <Brand />
+      <Redesign />
+    </>
+  );
+};
+
+/* 2nd-----------------------------------------------  */
+const CMS: React.FC = () => {
+  const [activeId, setActiveId] = useState<number>(0);
+  const [fade, setFade] = useState<boolean>(false);
+
+  const handleClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
+  const activeItem = cms.find((item) => item.id === activeId);
+
+  return (
+    <>
+      <div className="container">
+        <div className="timeline-container">
+          {/* Left Timeline */}
+          <div className="timeline-left" data-aos="fade-right">
+            <ul>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                CMS Design & Development
+              </h3>
+              {cms
+                .filter((item) => item.id !== 0)
+                .map((item) => (
+                  <li
+                    key={item.id}
+                    className={item.id === activeId ? "active" : ""}
+                    onClick={() => handleClick(item.id)}
+                  >
+                    {item.title}
+                  </li>
+                ))}
+            </ul>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
+          </div>
+
+          {/* Center Image */}
+          <div className="timeline-center" data-aos="fade-up">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeItem?.id}
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -30 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img src={activeItem?.image} alt={activeItem?.title} />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Right Content */}
+          <div className="timeline-right" data-aos="fade-left">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeItem?.id}
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -30 }}
+                transition={{ duration: 0.3 }}
+              >
+                <h2>{activeItem?.title}</h2>
+                <p>{activeItem?.description}</p>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -465,6 +498,15 @@ const Landing: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = land.find((item) => item.id === activeId);
 
   return (
@@ -472,9 +514,11 @@ const Landing: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Landing Page Design</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Landing Page Design
+              </h3>
               {land
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -487,7 +531,9 @@ const Landing: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -506,7 +552,7 @@ const Landing: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -517,7 +563,9 @@ const Landing: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -540,6 +588,15 @@ const Brand: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = main.find((item) => item.id === activeId);
 
   return (
@@ -547,9 +604,11 @@ const Brand: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Website Maintenance & Support</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Website Maintenance & Support
+              </h3>
               {main
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -562,7 +621,9 @@ const Brand: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -581,7 +642,7 @@ const Brand: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -592,7 +653,9 @@ const Brand: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -616,6 +679,15 @@ const Redesign: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = redesign.find((item) => item.id === activeId);
 
   return (
@@ -623,9 +695,11 @@ const Redesign: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Responsive Website Redesign</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Responsive Website Redesign
+              </h3>
               {redesign
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -638,7 +712,9 @@ const Redesign: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -657,7 +733,7 @@ const Redesign: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -668,7 +744,9 @@ const Redesign: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -677,8 +755,6 @@ const Redesign: React.FC = () => {
     </>
   );
 };
-
-
 
 // web app development-----------------------------------
 
@@ -803,7 +879,8 @@ const progapp = [
   {
     id: 2,
     title: "Offline Functionality",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "The highly developed caching and offline features allow your users to keep browsing your app even when affected by a lack of internet access. This guarantees continuous user experiences, and PWAs have the potential to be very reliable for businesses that have uneven connectivity among audiences.",
     image: p03,
@@ -811,7 +888,8 @@ const progapp = [
   {
     id: 3,
     title: "App-Like Experience",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "PWAs deliver a native app experience, sleek navigation, a user-friendly interface, and engagement. It is an interactive experience that leads to customer satisfaction, as well as the absence of downloads to app stores, which decreases friction and raises adoption rates.",
     image: p03,
@@ -854,7 +932,8 @@ const saasdev = [
   {
     id: 2,
     title: "Multi-Tenant Solutions",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Multi-tenancy is implemented in our SaaS applications, which means that several users or organizations can safely share one platform. This allows being cost-effectiveness, simplified maintenance, and regular updates, but keeps all data private to individual clients.",
     image: s04,
@@ -862,7 +941,8 @@ const saasdev = [
   {
     id: 3,
     title: "Secure Cloud Deployment",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "Our SaaS development focuses on security. In order to protect sensitive data and meet industry standards, we use powerful authentication, encrypted storage, and secure cloud infrastructure.",
     image: s04,
@@ -905,7 +985,8 @@ const enterdev = [
   {
     id: 2,
     title: "System Integration",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Our business applications can easily be consumed by the available tools, ERP, and CRM. We can also assist in breaking the silos of data, duplication, and the free flow of information within your organization by tying fragmented systems together on one platform.",
     image: e05,
@@ -913,7 +994,8 @@ const enterdev = [
   {
     id: 3,
     title: "Scalable Architecture",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "Enterprise applications that we design have a solid, scalable architecture that ensures meeting the growing business requirements. Our apps are very high-performance, secure, and reliable, whether you are adding more users, expanding departments, or dealing with complex data.",
     image: e05,
@@ -949,6 +1031,15 @@ export const Web: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = webapp.find((item) => item.id === activeId);
 
   return (
@@ -956,9 +1047,11 @@ export const Web: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Web App Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Web App Development
+              </h3>
               {webapp
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -971,7 +1064,9 @@ export const Web: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -990,7 +1085,7 @@ export const Web: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1001,7 +1096,9 @@ export const Web: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1009,22 +1106,29 @@ export const Web: React.FC = () => {
           {/* 2nd  */}
         </div>
       </div>
-      <Softdev/>
-      <Progapp/>
-      <Saasdev/>
-      <Enterdev/>
-
+      <Softdev />
+      <Progapp />
+      <Saasdev />
+      <Enterdev />
     </>
   );
 };
 
-
-  /* 2nd-----------------------------------------------  */
+/* 2nd-----------------------------------------------  */
 const Softdev: React.FC = () => {
   const [activeId, setActiveId] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(false);
 
   const handleClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
+  const defaultClick = (id: number) => {
     if (id === activeId) return;
     setFade(true);
     setTimeout(() => {
@@ -1040,9 +1144,11 @@ const Softdev: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Software Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Software Development
+              </h3>
               {softdev
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1055,7 +1161,9 @@ const Softdev: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -1074,7 +1182,7 @@ const Softdev: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1085,7 +1193,9 @@ const Softdev: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1109,6 +1219,15 @@ const Progapp: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = progapp.find((item) => item.id === activeId);
 
   return (
@@ -1116,9 +1235,11 @@ const Progapp: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Progressive Web Apps (PWA)</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Progressive Web Apps (PWA)
+              </h3>
               {progapp
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1131,7 +1252,9 @@ const Progapp: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -1150,7 +1273,7 @@ const Progapp: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1161,7 +1284,9 @@ const Progapp: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1184,6 +1309,15 @@ const Saasdev: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = saasdev.find((item) => item.id === activeId);
 
   return (
@@ -1191,9 +1325,11 @@ const Saasdev: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">SaaS Application Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                SaaS Application Development
+              </h3>
               {saasdev
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1206,7 +1342,9 @@ const Saasdev: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -1225,7 +1363,7 @@ const Saasdev: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1236,7 +1374,9 @@ const Saasdev: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1260,6 +1400,15 @@ const Enterdev: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = enterdev.find((item) => item.id === activeId);
 
   return (
@@ -1267,9 +1416,11 @@ const Enterdev: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Enterprise Application Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Enterprise Application Development
+              </h3>
               {enterdev
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1282,7 +1433,9 @@ const Enterdev: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -1301,7 +1454,7 @@ const Enterdev: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1312,7 +1465,9 @@ const Enterdev: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1321,7 +1476,6 @@ const Enterdev: React.FC = () => {
     </>
   );
 };
-
 
 // SEO Service-----------------------------------
 
@@ -1446,7 +1600,8 @@ const techseo = [
   {
     id: 2,
     title: "Mobile Responsiveness",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Our team makes sure that your site is completely mobile-friendly and provides a smooth cross-platform navigation. The responsive design is not only easily usable but also in line with the mobile-first indexing of Google as a better way of ranking.",
     image: ts,
@@ -1454,7 +1609,8 @@ const techseo = [
   {
     id: 3,
     title: "Crawlability & Indexing",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "We optimize robots.txt, XML sitemaps, and site architecture so that search engines crawl and index your content without difficulty. This will ensure that your most crucial pages get the first priority and will be located in a short time.",
     image: ts,
@@ -1491,6 +1647,15 @@ export const Onseo: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = onseo.find((item) => item.id === activeId);
 
   return (
@@ -1498,9 +1663,11 @@ export const Onseo: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Web App Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Web App Development
+              </h3>
               {onseo
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1513,7 +1680,9 @@ export const Onseo: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -1532,7 +1701,7 @@ export const Onseo: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1543,7 +1712,9 @@ export const Onseo: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1551,21 +1722,27 @@ export const Onseo: React.FC = () => {
           {/* 2nd  */}
         </div>
       </div>
-      <Offseo/>
-      <Techseo/>
-
-
+      <Offseo />
+      <Techseo />
     </>
   );
 };
 
-
-  /* 2nd-----------------------------------------------  */
+/* 2nd-----------------------------------------------  */
 const Offseo: React.FC = () => {
   const [activeId, setActiveId] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(false);
 
   const handleClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
+  const defaultClick = (id: number) => {
     if (id === activeId) return;
     setFade(true);
     setTimeout(() => {
@@ -1581,9 +1758,11 @@ const Offseo: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Software Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Software Development
+              </h3>
               {offseo
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1596,7 +1775,9 @@ const Offseo: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -1615,7 +1796,7 @@ const Offseo: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1626,7 +1807,9 @@ const Offseo: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1650,6 +1833,15 @@ const Techseo: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = techseo.find((item) => item.id === activeId);
 
   return (
@@ -1657,9 +1849,11 @@ const Techseo: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Progressive Web Apps (PWA)</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Progressive Web Apps (PWA)
+              </h3>
               {techseo
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1672,7 +1866,9 @@ const Techseo: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -1691,7 +1887,7 @@ const Techseo: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1702,7 +1898,9 @@ const Techseo: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1711,7 +1909,6 @@ const Techseo: React.FC = () => {
     </>
   );
 };
-
 
 // Brand Building-----------------------------------
 
@@ -1836,7 +2033,8 @@ const media = [
   {
     id: 2,
     title: "Content Strategy & Visual Identity",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Our content team creates strategies and content that suit your audience and industry and fit in with your brand voice. We create attention-grabbing graphics, posts, and stories that create a single visual image and spur engagement, reach, and long-term loyalty.",
     image: sc,
@@ -1844,7 +2042,8 @@ const media = [
   {
     id: 3,
     title: "Brand Messaging & Tone of Voice",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "Consistency in communication builds trust. We establish your own tone of voice and create brand messages that appeal to your target audience, and all captions, comments, and replies strengthen your digital presence and audience relationships.",
     image: sc,
@@ -1881,6 +2080,15 @@ export const Consult: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = consult.find((item) => item.id === activeId);
 
   return (
@@ -1888,9 +2096,11 @@ export const Consult: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Brand Strategy & Consulting</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Brand Strategy & Consulting
+              </h3>
               {consult
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1903,7 +2113,9 @@ export const Consult: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -1922,7 +2134,7 @@ export const Consult: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -1933,7 +2145,9 @@ export const Consult: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1941,21 +2155,27 @@ export const Consult: React.FC = () => {
           {/* 2nd  */}
         </div>
       </div>
-      <Logo/>
-      <Media/>
-
-
+      <Logo />
+      <Media />
     </>
   );
 };
 
-
-  /* 2nd-----------------------------------------------  */
+/* 2nd-----------------------------------------------  */
 const Logo: React.FC = () => {
   const [activeId, setActiveId] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(false);
 
   const handleClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
+  const defaultClick = (id: number) => {
     if (id === activeId) return;
     setFade(true);
     setTimeout(() => {
@@ -1971,9 +2191,11 @@ const Logo: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Logo Design & Visual Identity </h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Logo Design & Visual Identity{" "}
+              </h3>
               {logo
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1986,7 +2208,9 @@ const Logo: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -2005,7 +2229,7 @@ const Logo: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2016,7 +2240,9 @@ const Logo: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2040,6 +2266,15 @@ const Media: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = media.find((item) => item.id === activeId);
 
   return (
@@ -2047,9 +2282,11 @@ const Media: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Social Media Branding</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Social Media Branding
+              </h3>
               {media
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -2062,7 +2299,9 @@ const Media: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -2081,7 +2320,7 @@ const Media: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2092,7 +2331,9 @@ const Media: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2127,7 +2368,7 @@ const llm = [
     subtitle: "Enterprise Messaging & Communication",
     description:
       "Our voice-based AI-powered assistants are hands-free and conversational to businesses and end users. They are intended to be accessible with the help of high-quality speech recognition and NLP to simplify performance and provide fluid interactions, contributing to better customer engagement and productivity.",
-    image: sv ,
+    image: sv,
   },
   {
     id: 3,
@@ -2219,6 +2460,15 @@ export const Llm: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = llm.find((item) => item.id === activeId);
 
   return (
@@ -2226,9 +2476,11 @@ export const Llm: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">AI / ML / LLM / NLP Solutions</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                AI / ML / LLM / NLP Solutions
+              </h3>
               {llm
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -2241,7 +2493,9 @@ export const Llm: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -2260,7 +2514,7 @@ export const Llm: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2271,7 +2525,9 @@ export const Llm: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2279,21 +2535,26 @@ export const Llm: React.FC = () => {
           {/* 2nd  */}
         </div>
       </div>
-      <Chatbot/>
-      
-
-
+      <Chatbot />
     </>
   );
 };
 
-
-  /* 2nd-----------------------------------------------  */
+/* 2nd-----------------------------------------------  */
 const Chatbot: React.FC = () => {
   const [activeId, setActiveId] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(false);
 
   const handleClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
+  const defaultClick = (id: number) => {
     if (id === activeId) return;
     setFade(true);
     setTimeout(() => {
@@ -2309,9 +2570,11 @@ const Chatbot: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Logo Design & Visual Identity </h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Logo Design & Visual Identity{" "}
+              </h3>
               {chatbot
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -2324,7 +2587,9 @@ const Chatbot: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -2343,7 +2608,7 @@ const Chatbot: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2354,7 +2619,9 @@ const Chatbot: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2487,7 +2754,8 @@ const erpcustom = [
   {
     id: 2,
     title: "Accounting & Finance Systems",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Our financial reporting is automated with the integration of our ERP solutions with accounting software to manage transactions and compliance. Integration saves on manual labor and gives you the right real-time information on your financial status.",
     image: am,
@@ -2495,7 +2763,8 @@ const erpcustom = [
   {
     id: 3,
     title: "HR & Payroll Systems",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "We link ERP to HR and payroll applications to promote the ease of managing employees and processing payroll. This will guarantee proper management of the workforce and employee satisfaction due to smooth operations.",
     image: am,
@@ -2538,7 +2807,8 @@ const erpmain = [
   {
     id: 2,
     title: "Industry-Specific Modules",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Our modules are industry-specific, designed to meet your industry requirements, that is, manufacturing, retail, healthcare, or finance. These bespoke modules provide a solution to niche problems.",
     image: cs,
@@ -2546,7 +2816,8 @@ const erpmain = [
   {
     id: 3,
     title: "Feature Enhancements",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       " We upgrade the current ERP features or introduce new features in order to make the most of it. This keeps your system updated with business needs and competitive.",
     image: cs,
@@ -2589,7 +2860,8 @@ const odoomain = [
   {
     id: 2,
     title: "Bug Fixes & Troubleshooting",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Technical glitches, errors, and performance issues are resolved by our support team very quickly. Quick solutions reduce downtime and ensure business continuity.",
     image: sp,
@@ -2597,7 +2869,8 @@ const odoomain = [
   {
     id: 3,
     title: "Regular Updates & Upgrades",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "We maintain your ERP at the most recent features, patches, and security upgrades. This improves the stability and functionality of systems and conformance to changing industry standards.",
     image: sp,
@@ -2620,11 +2893,20 @@ const odoomain = [
   },
 ];
 
-export   const Customerp: React.FC = () => {
+export const Customerp: React.FC = () => {
   const [activeId, setActiveId] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(false);
 
   const handleClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
+  const defaultClick = (id: number) => {
     if (id === activeId) return;
     setFade(true);
     setTimeout(() => {
@@ -2640,9 +2922,11 @@ export   const Customerp: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Custom ERP Implementation & Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Custom ERP Implementation & Development
+              </h3>
               {customerp
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -2655,7 +2939,9 @@ export   const Customerp: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -2674,7 +2960,7 @@ export   const Customerp: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2685,7 +2971,9 @@ export   const Customerp: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2693,22 +2981,29 @@ export   const Customerp: React.FC = () => {
           {/* 2nd  */}
         </div>
       </div>
-      <Erpintegra/>
-      <Erpcustom/>
-      <Erpmain/>
-      <Odoomain/>
-
+      <Erpintegra />
+      <Erpcustom />
+      <Erpmain />
+      <Odoomain />
     </>
   );
 };
 
-
-  /* 2nd-----------------------------------------------  */
+/* 2nd-----------------------------------------------  */
 const Erpintegra: React.FC = () => {
   const [activeId, setActiveId] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(false);
 
   const handleClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
+  const defaultClick = (id: number) => {
     if (id === activeId) return;
     setFade(true);
     setTimeout(() => {
@@ -2724,9 +3019,11 @@ const Erpintegra: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">ERP Integration Services</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                ERP Integration Services
+              </h3>
               {erpintegra
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -2739,7 +3036,9 @@ const Erpintegra: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -2758,7 +3057,7 @@ const Erpintegra: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2769,7 +3068,9 @@ const Erpintegra: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2793,6 +3094,15 @@ const Erpcustom: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = erpcustom.find((item) => item.id === activeId);
 
   return (
@@ -2800,9 +3110,11 @@ const Erpcustom: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">ERP Integration with Existing Systems</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                ERP Integration with Existing Systems
+              </h3>
               {erpcustom
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -2815,7 +3127,9 @@ const Erpcustom: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -2834,7 +3148,7 @@ const Erpcustom: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2845,7 +3159,9 @@ const Erpcustom: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2868,6 +3184,15 @@ const Erpmain: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = erpmain.find((item) => item.id === activeId);
 
   return (
@@ -2875,9 +3200,11 @@ const Erpmain: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">ERP Customization & Module Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                ERP Customization & Module Development
+              </h3>
               {erpmain
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -2890,7 +3217,9 @@ const Erpmain: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -2909,7 +3238,7 @@ const Erpmain: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2920,7 +3249,9 @@ const Erpmain: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2944,6 +3275,15 @@ const Odoomain: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = odoomain.find((item) => item.id === activeId);
 
   return (
@@ -2951,9 +3291,11 @@ const Odoomain: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">ERP Maintenance & Support</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                ERP Maintenance & Support
+              </h3>
               {odoomain
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -2966,7 +3308,9 @@ const Odoomain: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -2985,7 +3329,7 @@ const Odoomain: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -2996,7 +3340,9 @@ const Odoomain: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3129,7 +3475,8 @@ const woocommerce = [
   {
     id: 2,
     title: "Product Management & Setup",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Our team manages uploads of products, product categories, product attributes, and product descriptions so that there is easy navigation. We make sure that your product catalog is easy to understand, searchable, and SEO, enabling potential customers to locate your products with ease and enhancing the overall sales potential.",
     image: wo,
@@ -3137,7 +3484,8 @@ const woocommerce = [
   {
     id: 3,
     title: "Secure Payment Gateway Integration",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "We combine safe and sound payment gateways such as PayPal, Stripe, and local. Frictionless checkout means that your customers will be able to shop conveniently and safely, which will decrease cart abandonment and boost your WooCommerce shop revenue.",
     image: wo,
@@ -3180,7 +3528,8 @@ const payment = [
   {
     id: 2,
     title: "Secure Transactions",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Security is our priority. To prevent sensitive data from being compromised, we have put in place SSL encryption, PCI-DSS up to date, and a fraud detection tool. This makes all transactions on your site safe, dependable, and trusted by all customers all over the world.",
     image: py,
@@ -3188,7 +3537,8 @@ const payment = [
   {
     id: 3,
     title: "One-Click Checkout Setup",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "  We enable one-click options in the checkout to enhance the user experience. This lowers the friction to the buying process because it makes buying easy and quicker, which aids in raising the number of repeat purchases and customer loyalty.",
     image: py,
@@ -3231,7 +3581,8 @@ const market = [
   {
     id: 2,
     title: "Secure & Scalable Architecture",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Our solutions are based on a secure and scalable architecture that can support high traffic, multiple vendors, and large product catalogs. This guarantees your marketplace to be efficient since your business expands without having to lose speed or security.",
     image: mk,
@@ -3239,7 +3590,8 @@ const market = [
   {
     id: 3,
     title: "Vendor & Customer Dashboards",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "We develop visually friendly boards for the vendors and customers. Vendors are able to handle inventory, monitor orders, and analyze sales, and customers can navigate with ease, check out, and monitor orders. This produces a harmonious environment on both sides.",
     image: mk,
@@ -3275,6 +3627,15 @@ export const Estore: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = estore.find((item) => item.id === activeId);
 
   return (
@@ -3282,9 +3643,11 @@ export const Estore: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">E-Commerce Store Setup</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                E-Commerce Store Setup
+              </h3>
               {estore
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -3297,7 +3660,9 @@ export const Estore: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -3316,7 +3681,7 @@ export const Estore: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3327,7 +3692,9 @@ export const Estore: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3335,22 +3702,29 @@ export const Estore: React.FC = () => {
           {/* 2nd  */}
         </div>
       </div>
-      <Shopify/>
-      <Woocommerce/>
-      <Payment/>
-      <Market/>
-
+      <Shopify />
+      <Woocommerce />
+      <Payment />
+      <Market />
     </>
   );
 };
 
-
-  /* 2nd-----------------------------------------------  */
+/* 2nd-----------------------------------------------  */
 const Shopify: React.FC = () => {
   const [activeId, setActiveId] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(false);
 
   const handleClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
+  const defaultClick = (id: number) => {
     if (id === activeId) return;
     setFade(true);
     setTimeout(() => {
@@ -3366,9 +3740,11 @@ const Shopify: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Shopify Store Setup</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Shopify Store Setup
+              </h3>
               {shopify
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -3381,7 +3757,9 @@ const Shopify: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -3400,7 +3778,7 @@ const Shopify: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3411,7 +3789,9 @@ const Shopify: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3435,6 +3815,15 @@ const Woocommerce: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = woocommerce.find((item) => item.id === activeId);
 
   return (
@@ -3442,9 +3831,11 @@ const Woocommerce: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">WooCommerce Store Setup</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                WooCommerce Store Setup
+              </h3>
               {woocommerce
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -3457,7 +3848,9 @@ const Woocommerce: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -3476,7 +3869,7 @@ const Woocommerce: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3487,7 +3880,9 @@ const Woocommerce: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3510,6 +3905,15 @@ const Payment: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = payment.find((item) => item.id === activeId);
 
   return (
@@ -3517,9 +3921,11 @@ const Payment: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Payment Gateway Integration</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Payment Gateway Integration
+              </h3>
               {payment
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -3532,7 +3938,9 @@ const Payment: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -3551,7 +3959,7 @@ const Payment: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3562,7 +3970,9 @@ const Payment: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3586,6 +3996,15 @@ const Market: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = market.find((item) => item.id === activeId);
 
   return (
@@ -3593,9 +4012,11 @@ const Market: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Marketplace Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Marketplace Development
+              </h3>
               {market
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -3608,7 +4029,9 @@ const Market: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -3627,7 +4050,7 @@ const Market: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3638,7 +4061,9 @@ const Market: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3647,7 +4072,6 @@ const Market: React.FC = () => {
     </>
   );
 };
-
 
 // Odoo-----------------------------------
 
@@ -3772,7 +4196,8 @@ const odoomod = [
   {
     id: 2,
     title: " Industry-Specific Solutions",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "We create modules specific to various industries such as manufacturing, retail, healthcare, or services, so that your Odoo system can be applied in your sector to your specific problems and processes.",
     image: md,
@@ -3780,7 +4205,8 @@ const odoomod = [
   {
     id: 3,
     title: "Module Integration",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "We make sure that any new modules we have developed perfectly fit into your existing Odoo system. This forms a cohesive ecosystem in which all processes are interrelated to improve efficiency and data transfer among the departments.",
     image: md,
@@ -3823,7 +4249,8 @@ const odooserv = [
   {
     id: 2,
     title: "Payment Gateway Integration",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Odoo is linked to online payment gateways by our team, which allows making transactions online without certain difficulties. The integration improves customer experience and provides safety and compliance in financial operations.",
     image: ig,
@@ -3831,7 +4258,8 @@ const odooserv = [
   {
     id: 3,
     title: "API Development & Integration",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       " We create and integrate bespoke APIs to interface with Odoo and third-party applications. This guarantees real-time synchronization, efficient data interchange, and the ability to be adaptive when your business processes change.",
     image: ig,
@@ -3874,7 +4302,8 @@ const mainsupport = [
   {
     id: 2,
     title: "Performance Monitoring & Optimization",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Our specialists constantly observe the functioning of the systems and optimize settings. This will make sure it is faster, there is less downtime, and it has better efficiency in your Odoo environment.",
     image: md,
@@ -3882,7 +4311,8 @@ const mainsupport = [
   {
     id: 3,
     title: "Version Upgrades & Patches",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "Stay updated with the latest Odoo features. We update to the new versions and security patches to improve the performance, functionality addition and security of your system against vulnerabilities.",
     image: md,
@@ -3918,6 +4348,15 @@ export const Customization: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = customization.find((item) => item.id === activeId);
 
   return (
@@ -3925,9 +4364,11 @@ export const Customization: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Odoo Migration & Customization</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Odoo Migration & Customization
+              </h3>
               {customization
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -3940,7 +4381,9 @@ export const Customization: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -3959,7 +4402,7 @@ export const Customization: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -3970,7 +4413,9 @@ export const Customization: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3978,21 +4423,29 @@ export const Customization: React.FC = () => {
           {/* 2nd  */}
         </div>
       </div>
-      <Consultancy/>
-      <Odoomod/>
-      <Odooserv/>
-      <Mainsupport/>
-      </>
+      <Consultancy />
+      <Odoomod />
+      <Odooserv />
+      <Mainsupport />
+    </>
   );
 };
 
-
-  /* 2nd-----------------------------------------------  */
+/* 2nd-----------------------------------------------  */
 const Consultancy: React.FC = () => {
   const [activeId, setActiveId] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(false);
 
   const handleClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
+  const defaultClick = (id: number) => {
     if (id === activeId) return;
     setFade(true);
     setTimeout(() => {
@@ -4008,9 +4461,11 @@ const Consultancy: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Odoo Techno-Functional Consultancy</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Odoo Techno-Functional Consultancy
+              </h3>
               {consultancy
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -4023,7 +4478,9 @@ const Consultancy: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -4042,7 +4499,7 @@ const Consultancy: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4053,7 +4510,9 @@ const Consultancy: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4077,6 +4536,15 @@ const Odoomod: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = odoomod.find((item) => item.id === activeId);
 
   return (
@@ -4084,9 +4552,11 @@ const Odoomod: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Odoo Module Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Odoo Module Development
+              </h3>
               {odoomod
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -4099,7 +4569,9 @@ const Odoomod: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -4118,7 +4590,7 @@ const Odoomod: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4129,7 +4601,9 @@ const Odoomod: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4152,6 +4626,15 @@ const Odooserv: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = odooserv.find((item) => item.id === activeId);
 
   return (
@@ -4159,9 +4642,11 @@ const Odooserv: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Odoo Integration Services</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Odoo Integration Services
+              </h3>
               {odooserv
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -4174,7 +4659,9 @@ const Odooserv: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -4193,7 +4680,7 @@ const Odooserv: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4204,7 +4691,9 @@ const Odooserv: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4228,6 +4717,15 @@ const Mainsupport: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = mainsupport.find((item) => item.id === activeId);
 
   return (
@@ -4235,9 +4733,11 @@ const Mainsupport: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Odoo Maintenance & Support</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Odoo Maintenance & Support
+              </h3>
               {mainsupport
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -4250,7 +4750,9 @@ const Mainsupport: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -4269,7 +4771,7 @@ const Mainsupport: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4280,7 +4782,9 @@ const Mainsupport: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4412,7 +4916,8 @@ const apidev = [
   {
     id: 2,
     title: "Third-Party API Integration",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Be it its payment gateways, CRM, marketing tools, and cloud services, we can integrate any third-party API within your existing applications. This guarantees the interconnection of your systems, automation, and optimization, which eliminates manual compensations and increases productivity in the various departments.",
     image: ap,
@@ -4420,7 +4925,8 @@ const apidev = [
   {
     id: 3,
     title: "Secure Data Transfer",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "The security of data is given high priority in our API development. We also have in place encryption, authentication, and authorization protocols to seal sensitive data when they are transferred, ensuring that we adhere to industry standards and that your business does not feel the trauma of a possible breach.",
     image: ap,
@@ -4463,7 +4969,8 @@ const partyserv = [
   {
     id: 2,
     title: "Payment Gateway Integration",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Our team integrates safe and secure payment gateways such as PayPal, Stripe, and Square into your eCommerce. Multi-currency support and encrypted transactions make online payment a simple hassle hassle-free task for your customers and secure finances for your business.",
     image: sd,
@@ -4471,7 +4978,8 @@ const partyserv = [
   {
     id: 3,
     title: "Marketing & Analytics Tools",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       " We incorporate Google Analytics and Mailchimp to combine marketing and analytics platforms that generate informative data about customer behavior and campaign effectiveness. This will enable you to support your decisions with data and track ROI, and refine strategies to grow better.",
     image: sd,
@@ -4514,7 +5022,8 @@ const plugin = [
   {
     id: 2,
     title: "CMS Module Development",
-    subtitle: "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
+    subtitle:
+      "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       " Our developers create custom modules on CMS systems such as Drupal, Joomla, and Magento. These modules make your site more flexible, allowing more functionality like advanced searching, content filtering, or user dashboards customized to your business needs.",
     image: pl,
@@ -4522,7 +5031,8 @@ const plugin = [
   {
     id: 3,
     title: " eCommerce Plugin Solutions",
-    subtitle: "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
+    subtitle:
+      "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "We create and customize unique plugins to be used by e-commerce platforms such as WooCommerce, Shopify, and Magento. Our products and solutions provide custom checkouts, dynamic product filters, and more to optimise customer journeys, increase conversions, and manage stores more efficiently, allowing business growth.",
     image: pl,
@@ -4558,6 +5068,15 @@ export const Cmsdev: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = cmsdev.find((item) => item.id === activeId);
 
   return (
@@ -4565,9 +5084,11 @@ export const Cmsdev: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Custom CMS Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Custom CMS Development
+              </h3>
               {cmsdev
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -4580,7 +5101,9 @@ export const Cmsdev: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -4599,7 +5122,7 @@ export const Cmsdev: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4610,7 +5133,9 @@ export const Cmsdev: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4618,22 +5143,29 @@ export const Cmsdev: React.FC = () => {
           {/* 2nd  */}
         </div>
       </div>
-      <Webdev/>
-      <Apidev/>
-      <Partyserv/>
-      <Plugin/>
-      </>
+      <Webdev />
+      <Apidev />
+      <Partyserv />
+      <Plugin />
+    </>
   );
-
 };
 
-
-  /* 2nd-----------------------------------------------  */
+/* 2nd-----------------------------------------------  */
 const Webdev: React.FC = () => {
   const [activeId, setActiveId] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(false);
 
   const handleClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
+  const defaultClick = (id: number) => {
     if (id === activeId) return;
     setFade(true);
     setTimeout(() => {
@@ -4649,9 +5181,11 @@ const Webdev: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Odoo Techno-Functional Consultancy</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Odoo Techno-Functional Consultancy
+              </h3>
               {webdev
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -4664,7 +5198,9 @@ const Webdev: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -4683,7 +5219,7 @@ const Webdev: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4694,7 +5230,9 @@ const Webdev: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4718,6 +5256,15 @@ const Apidev: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = apidev.find((item) => item.id === activeId);
 
   return (
@@ -4725,9 +5272,11 @@ const Apidev: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Odoo Module Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Odoo Module Development
+              </h3>
               {apidev
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -4740,7 +5289,9 @@ const Apidev: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -4759,7 +5310,7 @@ const Apidev: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4770,7 +5321,9 @@ const Apidev: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4793,6 +5346,15 @@ const Partyserv: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = partyserv.find((item) => item.id === activeId);
 
   return (
@@ -4800,9 +5362,11 @@ const Partyserv: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Odoo Integration Services</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Odoo Integration Services
+              </h3>
               {partyserv
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -4815,7 +5379,9 @@ const Partyserv: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -4834,7 +5400,7 @@ const Partyserv: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4845,7 +5411,9 @@ const Partyserv: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4869,6 +5437,15 @@ const Plugin: React.FC = () => {
     }, 300);
   };
 
+  const defaultClick = (id: number) => {
+    if (id === activeId) return;
+    setFade(true);
+    setTimeout(() => {
+      setActiveId(id);
+      setFade(false);
+    }, 300);
+  };
+
   const activeItem = plugin.find((item) => item.id === activeId);
 
   return (
@@ -4876,9 +5453,11 @@ const Plugin: React.FC = () => {
       <div className="container">
         <div className="timeline-container">
           {/* Left Timeline */}
-          <div className="timeline-left"  data-aos="fade-right">
+          <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads">Odoo Maintenance & Support</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Odoo Maintenance & Support
+              </h3>
               {plugin
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -4891,7 +5470,9 @@ const Plugin: React.FC = () => {
                   </li>
                 ))}
             </ul>
-            <button className="discover-btn d-none d-md-block">Discover More</button>
+            <button className="discover-btn d-none d-md-block">
+              Discover More
+            </button>
           </div>
 
           {/* Center Image */}
@@ -4910,7 +5491,7 @@ const Plugin: React.FC = () => {
           </div>
 
           {/* Right Content */}
-          <div className="timeline-right"  data-aos="fade-left">
+          <div className="timeline-right" data-aos="fade-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem?.id}
@@ -4921,7 +5502,9 @@ const Plugin: React.FC = () => {
               >
                 <h2>{activeItem?.title}</h2>
                 <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">Read More</button>
+                <button className="readmore-btn d-none d-md-block">
+                  Read More
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4931,8 +5514,4 @@ const Plugin: React.FC = () => {
   );
 };
 
-
 export default New;
-
-
-
