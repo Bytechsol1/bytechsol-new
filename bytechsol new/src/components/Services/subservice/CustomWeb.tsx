@@ -27,7 +27,7 @@ const CustomWeb: React.FC = () => {
     <>
       {/* 1st Section */}
       <section
-        className="dg-products-section py-5"
+        className="dg-products-section "
         style={{
           background: "#2B3990 ",
           color: "#fff",

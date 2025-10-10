@@ -103,7 +103,7 @@ const ScrollCards: React.FC = () => {
       {/* Only cards are pinned & animated */}
       <section
         className="performance-section"
-        style={{ height: "90vh" }}
+        style={{ height: "85vh" }}
         ref={containerRef}
       >
         <div className="card-container">

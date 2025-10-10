@@ -374,10 +374,7 @@ const New: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -471,10 +468,7 @@ const CMS: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -562,10 +556,7 @@ const Landing: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -652,10 +643,7 @@ const Brand: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -743,10 +731,7 @@ const Redesign: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1095,10 +1080,7 @@ export const Web: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1192,10 +1174,7 @@ const Softdev: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1283,10 +1262,7 @@ const Progapp: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1373,10 +1349,7 @@ const Saasdev: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1464,10 +1437,7 @@ const Enterdev: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1709,10 +1679,7 @@ export const Onseo: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1802,10 +1769,7 @@ const Offseo: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -1891,10 +1855,7 @@ const Techseo: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2138,10 +2099,7 @@ export const Consult: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2233,10 +2191,7 @@ const Logo: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2324,10 +2279,7 @@ const Media: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2518,10 +2470,7 @@ export const Llm: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2610,10 +2559,7 @@ const Chatbot: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -2962,10 +2908,7 @@ export const Customerp: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3059,10 +3002,7 @@ const Erpintegra: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3150,10 +3090,7 @@ const Erpcustom: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3240,10 +3177,7 @@ const Erpmain: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3331,10 +3265,7 @@ const Odoomain: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3683,10 +3614,7 @@ export const Estore: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3780,10 +3708,7 @@ const Shopify: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3871,10 +3796,7 @@ const Woocommerce: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -3961,10 +3883,7 @@ const Payment: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4052,10 +3971,7 @@ const Market: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4404,10 +4320,7 @@ export const Customization: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4501,10 +4414,7 @@ const Consultancy: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4592,10 +4502,7 @@ const Odoomod: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4682,10 +4589,7 @@ const Odooserv: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -4773,10 +4677,7 @@ const Mainsupport: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -5124,10 +5025,7 @@ export const Cmsdev: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -5219,10 +5117,7 @@ const Webdev: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -5308,10 +5203,7 @@ const Apidev: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -5396,10 +5288,7 @@ const Partyserv: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -5409,10 +5298,41 @@ const Partyserv: React.FC = () => {
   );
 };
 
+// ------------readmore-------
+const ReadMoreText: React.FC<{ text: string }> = ({ text }) => {
+  const [expanded, setExpanded] = useState(false);
+  const shortText = text.length > 150 ? text.slice(0, 150) + "..." : text;
+
+  return (
+    <>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        {expanded ? text : shortText}
+      </motion.p>
+      {text.length > 150 && (
+        <button
+          className="readmore-btn d-none d-md-block"
+          onClick={() => setExpanded(!expanded)}
+        >
+          {expanded ? "Read Less" : "Read More"}
+        </button>
+      )}
+    </>
+  );
+};
+
+
+
 // 5th ------------------------------------------------------
 const Plugin: React.FC = () => {
   const [activeId, setActiveId] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(false);
+
+  
 
   const handleClick = (id: number) => {
     if (id === activeId) return;
@@ -5485,10 +5405,7 @@ const Plugin: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h2>{activeItem?.title}</h2>
-                <p>{activeItem?.description}</p>
-                <button className="readmore-btn d-none d-md-block">
-                  Read More
-                </button>
+<ReadMoreText text={activeItem?.description || ""} />
               </motion.div>
             </AnimatePresence>
           </div>
