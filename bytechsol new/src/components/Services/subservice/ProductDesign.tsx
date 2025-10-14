@@ -11,6 +11,7 @@ import  { useRef, useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Consult } from "./New";
+import { Helmet } from "react-helmet";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -105,6 +106,19 @@ useEffect(() => {
 
   return (
     <>
+    <Helmet>
+  <title>Brand Building & Digital Identity | BytechSol</title>
+  <meta
+    name="description"
+    content="Create a strong digital brand identity with BytechSol’s creative strategies, UI/UX design, and online branding expertise."
+  />
+  <meta name="robots" content="index, follow" />
+  <link
+    rel="canonical"
+    href="https://www.bytechsol.com/services/brand-building"
+  />
+</Helmet>
+
         {/* 1st section */}
         <section className="hero-section" style={{backgroundColor: "#002F7A"}}>
           <div className="container">

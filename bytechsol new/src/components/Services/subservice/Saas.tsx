@@ -12,6 +12,7 @@ import ed from "../../../assets/images/edtech.png"
 import sv from "../../../assets/images/services.png"
 import { useLocation } from "react-router-dom";
 import { Customerp } from "./New";
+import { Helmet } from "react-helmet";
 
 
 
@@ -78,6 +79,19 @@ const SaasDesign = () => {
 
   return (
     <>
+    <Helmet>
+  <title>ERP Software Solutions | BytechSol</title>
+  <meta
+    name="description"
+    content="Optimize operations with BytechSol’s custom ERP software designed to integrate your business processes and enhance productivity."
+  />
+  <meta name="robots" content="index, follow" />
+  <link
+    rel="canonical"
+    href="https://www.bytechsol.com/services/ERP-service"
+  />
+</Helmet>
+
       {/* 1st Section */}
 
  <section

@@ -3,10 +3,21 @@ import NewCon from "../shareable/NewCon";
 import FaqSection from "../shareable/faq";
 import WorldMap from "../shareable/WorldMap";
 import Testimonial from "../shareable/testimonial";
+import { Helmet } from "react-helmet";
 
 const ContactUs = () => {
   return (
     <>
+    <Helmet>
+  <title>Contact BytechSol | Let’s Build Something Great Together</title>
+  <meta
+    name="description"
+    content="Get in touch with BytechSol for web, mobile, ERP, or AI projects. We’re here to turn your business ideas into digital success."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bytechsol.com/contact" />
+</Helmet>
+
       <NewCon />
 
       {/* 3rd section --------------- */}

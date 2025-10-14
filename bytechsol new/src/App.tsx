@@ -24,7 +24,7 @@ import { getNavThemeForPath } from "./themes/navThemes";
 import WebApp from "./components/Services/subservice/WebApp";
 import Aiml from "./components/Services/subservice/Aiml";
 import Development from "./components/Services/subservice/Development";
-import New from "./components/Services/subservice/New";
+import NotFound from "./components/404";
 
 function AppShell() {
   const location = useLocation();
@@ -59,7 +59,6 @@ function AppShell() {
             path="/services/seo-service"
             element={<FullStackExpertise />}
           />
-          <Route path="/services/new" element={<New />} />
           <Route path="/services/brand-building" element={<ProductDesign />} />
           <Route path="/services/ERP-service" element={<SaasDesign />} />
           <Route path="/services/odoo-services" element={<OdooServices />} />
@@ -67,6 +66,7 @@ function AppShell() {
           <Route path="/services/custom-web" element={<CustomWeb />} />
           <Route path="/services/web-app" element={<WebApp />} />
           <Route path="/services/Ai-Ml" element={<Aiml />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <Footer />

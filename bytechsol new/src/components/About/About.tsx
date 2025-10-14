@@ -9,6 +9,7 @@ import NewCon from "../../shareable/NewCon";
 import TrustedBySection from "../../shareable/trust500";
 import hm1 from "../../assets/images/homeimg1.png";
 import arrow from "../../assets/images/arrow.svg";
+import { Helmet } from "react-helmet";
 
 const accordionItems = [
   {
@@ -46,6 +47,16 @@ const About: React.FC = () => {
   };
   return (
     <>
+    <Helmet>
+  <title>About Us | BytechSol</title>
+  <meta
+    name="description"
+    content="Learn about BytechSol — a tech-driven company focused on delivering innovative, scalable, and performance-oriented software solutions."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bytechsol.com/about" />
+</Helmet>
+
       {/* 1st Section */}
       <section
         className="Designed-section"

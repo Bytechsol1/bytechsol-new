@@ -29,6 +29,7 @@ import up from "../assets/images/upworkimg.png";
 import ScrollCards from "./ScrollCards";
 import { Link } from "react-router-dom";
 import NewCon from "../shareable/NewCon";
+import { Helmet } from "react-helmet";
 
 const awards = [
   {
@@ -83,6 +84,16 @@ const Home: React.FC = () => {
 
   return (
     <>
+    <Helmet>
+  <title>BytechSol | Innovative Web & AI Solutions for Modern Businesses</title>
+  <meta
+    name="description"
+    content="BytechSol builds powerful web, mobile, ERP, and AI-driven digital solutions to help startups and enterprises scale efficiently."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bytechsol.com/" />
+</Helmet>
+
       {/* Hero Section */}
       <main>
         <section className="hero-section">

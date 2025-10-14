@@ -7,10 +7,44 @@ import NewCon from "../../shareable/NewCon";
 import ServicesSection from "./subservice/ServiceSections";
 import ic from "../../assets/images/icesimg.png";
 import sbg from "../../assets/images/servbg.png";
+import { Helmet } from "react-helmet"; 
+
 
 const Services: React.FC = () => {
   return (
     <>
+<Helmet>
+  <title>Our Services | BytechSol</title>
+  <meta
+    name="description"
+    content="Explore BytechSol’s professional web development, AI, ERP, and digital services designed to grow your business."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bytechsol.com/services" />
+
+  {/* Breadcrumb schema */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.bytechsol.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.bytechsol.com/services"
+        }
+      ]
+    })}
+  </script>
+</Helmet>
+
       {/* 1st section */}
       <section
         className="our-services-section"

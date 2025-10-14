@@ -8,6 +8,7 @@ import icon from "../../../assets/images/tick.svg";
 import NewCon from "../../../shareable/NewCon";
 import { useLocation } from "react-router-dom";
 import { Cmsdev } from "./New";
+import { Helmet } from "react-helmet";
 
 
 
@@ -25,6 +26,19 @@ const CustomWeb: React.FC = () => {
   }, [location]);
   return (
     <>
+    <Helmet>
+  <title>Custom Web Development | BytechSol</title>
+  <meta
+    name="description"
+    content="Build robust, scalable, and feature-rich web applications tailored to your unique business requirements with BytechSol’s development experts."
+  />
+  <meta name="robots" content="index, follow" />
+  <link
+    rel="canonical"
+    href="https://www.bytechsol.com/services/custom-web"
+  />
+</Helmet>
+
       {/* 1st Section */}
       <section
         className="dg-products-section "

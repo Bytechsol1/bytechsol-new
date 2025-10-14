@@ -29,7 +29,10 @@
     flex-direction: column;
     text-align: center;
   }
-
+ .dg-products-container1 {
+    flex-direction: column;
+    text-align: center;
+  }
   .dg-products-image img {
     max-width: 300px;
     display: none !important;

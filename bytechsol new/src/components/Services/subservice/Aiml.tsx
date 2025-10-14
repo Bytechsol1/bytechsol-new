@@ -8,6 +8,7 @@ import FaqSection from "../../../shareable/faq";
 import NewCon from "../../../shareable/NewCon";
 import { useLocation } from "react-router-dom";
 import { Llm } from "./New";
+import { Helmet } from "react-helmet";
 
 
 const AimlSection = () => {
@@ -27,6 +28,16 @@ const AimlSection = () => {
 
   return (
     <>
+    <Helmet>
+  <title>AI & Machine Learning Solutions | BytechSol</title>
+  <meta
+    name="description"
+    content="Innovate with BytechSol’s AI and ML solutions — intelligent automation, predictive analytics, and custom algorithms for smarter business decisions."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bytechsol.com/services/Ai-Ml" />
+</Helmet>
+
       {/* 1st Section */}
       <section
         className="dg-products-section"

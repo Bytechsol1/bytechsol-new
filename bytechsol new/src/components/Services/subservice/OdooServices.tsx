@@ -13,6 +13,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { useLocation } from "react-router-dom";
 import { Customization } from "./New";
+import { Helmet } from "react-helmet";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -110,6 +111,19 @@ useEffect(() => {
 
   return (
     <>
+    <Helmet>
+  <title>Odoo ERP Services | BytechSol</title>
+  <meta
+    name="description"
+    content="Get expert Odoo ERP implementation, customization, and support from BytechSol to streamline your business workflows and reporting."
+  />
+  <meta name="robots" content="index, follow" />
+  <link
+    rel="canonical"
+    href="https://www.bytechsol.com/services/odoo-services"
+  />
+</Helmet>
+
       {/* 1st Section */}
       <section
         className="dg-products-section"

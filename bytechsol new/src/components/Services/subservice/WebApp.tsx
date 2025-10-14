@@ -11,6 +11,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLocation } from "react-router-dom";
 import { Web } from "./New";
+import { Helmet } from "react-helmet";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -66,7 +67,7 @@ useEffect(() => {
     if (element) {
       setTimeout(() => {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 500); // wait a bit for GSAP layout to settle
+      }, 500); 
     }
   }
 }, [location]);
@@ -116,6 +117,16 @@ useEffect(() => {
 
   return (
     <>
+    <Helmet>
+  <title>Web App Development | BytechSol</title>
+  <meta
+    name="description"
+    content="From SaaS platforms to interactive dashboards — BytechSol builds secure and high-performance web applications that drive business results."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bytechsol.com/services/web-app" />
+</Helmet>
+
       {/* Hero Section */}
       <section
         className="dg-products-section"

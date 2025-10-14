@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Testimonial from "../../../shareable/testimonial";
@@ -6,114 +6,16 @@ import lig from "../../../assets/images/light.png";
 import "../../../assets/components-css/development.css";
 import FaqSection from "../../../shareable/faq";
 import NewCon from "../../../shareable/NewCon";
-import mb from "../../../assets/images/mb1.png";
 import wf from "../../../assets/images/wfir1.png";
 import wj from "../../../assets/images/wjourn2.png";
 import wfu from "../../../assets/images/wfut3.png";
 import wt from "../../../assets/images/wtrans4.png";
 import ww from "../../../assets/images/wswy5.png";
 import wh from "../../../assets/images/whear6.png";
-import wb from "../../../assets/images/web.png";
-import ld from "../../../assets/images/landesg.jpg";
-import cr from "../../../assets/images/creatim.jpg";
-import br from "../../../assets/images/braim.png";
-import arrow from "../../../assets/images/arrow.svg"
 import New from "./New";
+import { Helmet } from "react-helmet";
 
 
-const accordionItemsUI = [
-  {
-    title: "No more design guesswork",
-    description:
-      "Your customers must get your product at a glance. You can count on our unique User Interface / User experience development process that will lead to your page telling more about your value, the result of the natural navigation, and a captivating layout that will make people spend more time on your page and convert more quickly.",
-  },
-  {
-    title: " Launch without delays",
-    description: "SaaS platforms built to scale...",
-  },
-  {
-    title: "Interfaces that speak your brand",
-    description: "End-to-end product UI/UX design...",
-  },
-  {
-    title: "Mobile-first, responsive designs",
-    description: "From landing pages to full sites...",
-  },
-  {
-    title: "Tested for usability & performance",
-    description: "Professional B2B interfaces...",
-  },
-];
-const accordionItemscms = [
-  {
-    title: "No more complex content updates",
-    description:
-      "Say goodbye to complicated backends. Our custom-made CMS development will make sure that your pages, blogs, and media are easy to handle via a user-friendly dashboard with a few clicks.",
-  },
-  {
-    title: "Launch without technical roadblocks",
-    description: "We develop CMS websites that are launched on time with minimum revisions. We have an efficient approach that guarantees an easy change of design to complete the transformation of the CMS.",
-  },
-  {
-    title: "Tailored to your business needs",
-    description: "Be it a custom CMS or a WordPress, WordPress, Shopify, or a custom CMS, we build the functionality that fits your brand, work processes, and your growth objectives, and leave out the things you do not need.",
-  },
-  {
-    title: "SEO-friendly architecture",
-    description: "Clean URLs, optimized site architecture, and more, our CMS web development strategy considers users by ranking higher on search engines and offering them a favourable user experience.",
-  },
-  {
-    title: "Secure, scalable, and future-ready",
-    description: "We design secure and scalable CMS systems that can grow larger as your business grows, keeping your business secure but ensuring that performance does not slow down as your content increases.",
-  },
-];
-
-const accordionItemsmain = [
-  {
-    title: "Regular updates and performance checks",
-    description:
-      "We design conversion-optimized landing pages that contain strong CTAs, compelling designs, and well-optimized design features that would prompt the user to take an action- such as making a purchase, signing up, or filling out a form.",
-  },
-  {
-    title: "Security monitoring and backups",
-    description: "SaaS platforms built to scale...",
-  },
-  {
-    title: "Bug fixes and troubleshooting",
-    description: "End-to-end product UI/UX design...",
-  },
-  {
-    title: "Content updates and enhancements",
-    description: "End-to-end product UI/UX design...",
-  },
-  {
-    title: "24/7 technical support",
-    description: "End-to-end product UI/UX design...",
-  },
-];
-const accordionItemsresp = [
-  {
-    title: " Mobile-friendly redesign",
-    description:
-      "We make your site easy to look at and navigate on both phones and tablets, as well as desktops, and everyone will watch it without any problem.",
-  },
-  {
-    title: " Modern UI/UX upgradesMobile-first and responsive layouts",
-    description: "SaaS platforms built to scale...",
-  },
-  {
-    title: " Performance and speed optimizatio04. SEO-friendly structure",
-    description: "End-to-end product UI/UX design...",
-  },
-  {
-    title: "SEO-friendly structure",
-    description: "From landing pages to full sites...",
-  },
-  {
-    title: "Conversion-focused enhancements",
-    description: "Professional B2B interfaces...",
-  },
-];
 
 const industryData = [
   {
@@ -161,11 +63,8 @@ const industryData = [
 ];
 
 const Development: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+
   const location = useLocation();
 
   useEffect(() => {
@@ -178,6 +77,19 @@ const Development: React.FC = () => {
   }, [location]);
   return (
     <>
+    <Helmet>
+  <title>Website Design & Development | BytechSol</title>
+  <meta
+    name="description"
+    content="Get high-performance, visually stunning websites tailored to your business goals with BytechSol’s expert design and development team."
+  />
+  <meta name="robots" content="index, follow" />
+  <link
+    rel="canonical"
+    href="https://www.bytechsol.com/services/website-design-and-development"
+  />
+</Helmet>
+
       {/* 1st Section */}
       <section
         className="dg-products-section py-5"

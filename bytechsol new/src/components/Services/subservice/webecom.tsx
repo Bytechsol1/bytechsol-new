@@ -8,6 +8,7 @@ import icon from "../../../assets/images/tick.svg";
 import im1 from "../../../assets/images/ecomerceim.png"
 import { useLocation } from "react-router-dom";
 import { Estore } from "./New";
+import { Helmet } from "react-helmet";
 
 
 
@@ -27,6 +28,19 @@ const Webecom: React.FC = () => {
 
   return (
     <>
+    <Helmet>
+  <title>E-Commerce Solutions | BytechSol</title>
+  <meta
+    name="description"
+    content="Empower your online store with BytechSol’s secure, scalable, and conversion-focused eCommerce development solutions."
+  />
+  <meta name="robots" content="index, follow" />
+  <link
+    rel="canonical"
+    href="https://www.bytechsol.com/services/E-Commerce-solutions"
+  />
+</Helmet>
+
     {/* 1st Section */}
         <section
   className="dg-products-section py-5"

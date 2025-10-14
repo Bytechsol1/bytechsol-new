@@ -6,10 +6,21 @@ import pp from "../../../assets/images/career-left2.png";
 import lg from "../../../assets/images/career-right2.png";
 import wk from "../../../assets/images/career-center.png";
 import { FiPaperclip } from "react-icons/fi";
+import { Helmet } from "react-helmet";
 
 const Careers = () => {
   return (
     <>
+    <Helmet>
+  <title>Careers at BytechSol | Join Our Team</title>
+  <meta
+    name="description"
+    content="Grow your career with BytechSol! Join our team of developers, designers, and innovators building the future of digital technology."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bytechsol.com/Careers" />
+</Helmet>
+
       {/* 1st Section */}
       <section className="careers-section">
         <div className="careers-header">

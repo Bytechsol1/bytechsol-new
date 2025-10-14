@@ -12,6 +12,7 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { Helmet } from "react-helmet";
 
 // Scroll function
 // const scroll = (direction: string) => {
@@ -109,6 +110,16 @@ const Blog = () => {
   };
   return (
     <>
+    <Helmet>
+  <title>BytechSol Blog | Insights on Tech, AI, and Development</title>
+  <meta
+    name="description"
+    content="Read BytechSol’s latest articles and insights about web development, UI/UX design, artificial intelligence, and business technology trends."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bytechsol.com/blog" />
+</Helmet>
+
       {/* Blog Section */}
       <section className="blog-section">
         {/* Left Image */}

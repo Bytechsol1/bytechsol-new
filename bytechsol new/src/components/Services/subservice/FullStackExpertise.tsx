@@ -12,6 +12,7 @@ import ed from "../../../assets/images/edtech.png"
 import sv from "../../../assets/images/services.png"
 import { useLocation } from "react-router-dom";
 import { Onseo } from "./New";
+import { Helmet } from "react-helmet";
 
 
 const industryData = [
@@ -78,6 +79,19 @@ const ContactUs = () => {
 
   return (
     <>
+    <Helmet>
+  <title>SEO Services | BytechSol</title>
+  <meta
+    name="description"
+    content="Boost your search rankings with BytechSol’s professional SEO strategies — technical optimization, on-page SEO, and digital growth plans."
+  />
+  <meta name="robots" content="index, follow" />
+  <link
+    rel="canonical"
+    href="https://www.bytechsol.com/services/seo-service"
+  />
+</Helmet>
+
        {/* 1st Section */}
 <section
   className="dg-products-section"
