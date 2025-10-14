@@ -9,6 +9,7 @@ import NewCon from "../../shareable/NewCon";
 import TrustedBySection from "../../shareable/trust500";
 import hm1 from "../../assets/images/homeimg1.png";
 import arrow from "../../assets/images/arrow.svg";
+import cr from "../../assets/images/coreimg1.png"
 import { Helmet } from "react-helmet";
 
 const accordionItems = [
@@ -285,63 +286,67 @@ const About: React.FC = () => {
       </section>
       <Testimonial />
       {/* 5th Section */}
-      <section className="belief-behind">
-        <div className="container">
-          <div className="row align-items-start">
-            <div className="col-lg-6 mb-4" data-aos="fade-right">
-              <h1 className="belief-heading fw-bold">
-                The Principles Powering Our Projects
-              </h1>
-              <p>
-                From first brainstorm to final build, these values guide every
-                decision.
-              </p>
-              <h1 className="fw-bold">
-                <span className="gradient-text">Core Beliefs</span>
-              </h1>
-            </div>
-            <div className="col-lg-6" data-aos="fade-left">
-              <div className="belief-item">
-                <h2>01 Empathy at the Core</h2>
-                <p>
-                  We listen first before creating plans or prototyping; we
-                  listen to your story and your goals, and to users. All of our
-                  custom software solutions start with empathetic knowledge of
-                  what an actual human needs; they are not based on assumptions.
-                </p>
-              </div>
-
-              <div className="belief-item">
-                <h2>02 Simplicity that Speaks</h2>
-                <p>
-                  Complicated does not imply superior. We are user-centered
-                  design thinkers who believe in design that is intuitive,
-                  accessible, and elegant because the best of digital
-                  experiences have an effortless feel to them.
-                </p>
-              </div>
-
-              <div className="belief-item">
-                <h2>03 Speed with Purpose</h2>
-                <p>
-                  We act swiftly-not rashly. Be it lean MVPs, web development at
-                  scale, we will work with purpose, pivot when necessary, and
-                  stay focused on driving your business success.
-                </p>
-              </div>
-
-              <div className="belief-item">
-                <h2>04 Designed to Deliver Results</h2>
-                <p>
-                  We do not make design awards, we make you win customers. Our
-                  focus is to work in terms of impact: conversions, retention,
-                  performance, and ROI.
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className="belief-header  container">
+          <h2 className="belief-title ">
+            The Principles Powering Our Projects
+          </h2>
+          <p className="belief-subtext">
+            From first brainstorm to final build, these values guide every decision.
+          </p>
         </div>
-      </section>
+     <section className="belief-behind py-5">
+  <div className="container">
+    <div className="row align-items-start">
+      {/* LEFT SIDE */}
+      <div className="col-lg-6" data-aos="fade-right">
+        {/* Top heading */}
+        {/* Core beliefs title + image */}
+        <div className="core-section text-start">
+          <h1 className="core-heading fw-bold">Core Beliefs
+            <span className=""></span>
+          </h1>
+
+          <div className="core-img text-center d-none d-md-block">
+  <img src={cr} alt="Core Belief Illustration" className="img-fluid" />
+</div>
+
+        </div>
+      </div>
+
+      {/* RIGHT SIDE */}
+      <div className="col-lg-6" data-aos="fade-left">
+        <div className="belief-item mb-4">
+          <h2> <span className="index-sp mx-2">01 </span>Empathy at the Core</h2>
+          <p>
+            We listen first before creating plans or prototyping; we listen to your story and your goals, and to users. All of our custom software solutions start with empathetic knowledge of what an actual human needs; they are not based on assumptions.
+          </p>
+        </div>
+
+        <div className="belief-item mb-4">
+          <h2><span className="index-sp mx-2">02 </span> Simplicity that Speaks</h2>
+          <p>
+            Complicated does not imply superior. We are user-centered design thinkers who believe in design that is intuitive, accessible, and elegant because the best digital experiences have an effortless feel to them.
+          </p>
+        </div>
+
+        <div className="belief-item mb-4">
+          <h2><span className="index-sp mx-2">03 </span> Speed with Purpose</h2>
+          <p>
+            We act swiftly—not rashly. Be it lean MVPs or web development at scale, we work with purpose, pivot when necessary, and stay focused on driving your business success.
+          </p>
+        </div>
+
+        <div className="belief-item">
+          <h2><span className="index-sp mx-2">04 </span> Designed to Deliver Results</h2>
+          <p>
+            We don’t make design awards; we make you win customers. Our focus is impact: conversions, retention, performance, and ROI.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       <FaqSection />
       <NewCon />
     </>

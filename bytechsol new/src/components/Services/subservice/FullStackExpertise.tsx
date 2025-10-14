@@ -116,7 +116,7 @@ const ContactUs = () => {
     href="#contact" 
     className="dg-button dg-button-primary d-none d-md-inline-block"data-aos="fade-up"
   >
-    Start your website project today <span className="arrow">→</span>
+    Start your SEO project today <span className="arrow">→</span>
   </a>
 
   {/* Mobile button (unique inline style) */}

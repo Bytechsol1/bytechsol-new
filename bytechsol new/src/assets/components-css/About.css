@@ -419,15 +419,82 @@
 
 .belief-behind {
   background-color: #fff;
+  margin-top: -20px;
   padding: 80px 20px;
   font-family: "Guminert", sans-serif;
 }
 
-.belief-container h1 {
-  font-size: 50px;
-  margin-left: 50px;
-  font-weight: 700;
+.belief-title {
+  font-size: 52px;
   color: #000;
+  margin-bottom: 10px;
+  font-weight: 650;
+}
+
+.belief-subtext {
+  font-size: 19px;
+  color: #555;
+  margin-left: 10px;
+}
+
+/* CORE BELIEFS SECTION */
+.core-heading {
+  font-size: 80px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+   background: linear-gradient(90deg, #6a5acd, #b836f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+.core-img img {
+  max-width: 260px;
+  opacity: 0.9;
+  height: 350px;
+}
+.index-sp{
+  font-size: 15px;
+  color: #aaa;
+  margin-left: -30px !important;
+  margin-right: 5px;
+}
+/* BELIEF ITEMS */
+.belief-item h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.belief-item p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .core-heading {
+    font-size: 36px;
+  }
+  .core-img img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .belief-title {
+    font-size: 24px;
+  }
+  .core-heading {
+    font-size: 32px !important;
+    margin-left: 0;
+  }
+  .core-img img {
+    width: 60%;
+  }
 }
 
 @media (max-width: 768px) {

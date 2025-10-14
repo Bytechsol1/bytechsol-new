@@ -87,7 +87,7 @@ const FaqSection: React.FC = () => {
     <section className="faq-wrapper">
       <div className="faq-container">
         <p className="faq-label" data-aos="fade-down">
-          (FAQs)
+        
         </p>
         <h2 className="faq-heading" data-aos="fade-up">
           Frequently asked questions

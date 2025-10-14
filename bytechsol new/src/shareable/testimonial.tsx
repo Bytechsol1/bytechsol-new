@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import com from "../assets/images/comma.png";
 import cut from "../assets/images/cut.png";
+import jen from "../assets/images/Jennifer.jpg"
+import lin from "../assets/images/lina.jpg"
+import kr from "../assets/images/karla.jpg"
 
 const testimonials = [
   {
@@ -10,28 +13,22 @@ const testimonials = [
     avatar: cut,
   },
   {
-    text: "Working with your team was a delight. The project was delivered on time and exceeded our expectations. Support has also been fantastic.",
-    author: "Liam Carter",
-    role: "CTO, FinEdge (USA)",
-    avatar: cut,
+    text: "We wanted a team that did design and development in one place, and you have truly surpassed our expectations. Everything was aligned, from branding to delivery.",
+    author: "Jennifer Blake",
+    role: " Founder, Blakestone Creative (USA)",
+    avatar: jen,
   },
   {
-    text: "Your solutions are top-notch. Our customer engagement has doubled since implementing the new platform. Highly recommended!",
-    author: "Sophia Turner",
-    role: "Marketing Director, NovaSoft (Canada)",
-    avatar: cut,
+    text: "We migrated to the cloud and improved our deployment pipeline with your DevOps services. Downtime is now close to zero, and we can deploy updates much faster and more safely.",
+    author: "Lina Romero",
+    role: "CTO, NexChain (Germany)",
+    avatar: lin,
   },
   {
-    text: "Excellent collaboration throughout the process! The new system boosted our workflow efficiency significantly.",
-    author: "Ethan Roberts",
-    role: "COO, CloudWorks (USA)",
-    avatar: cut,
-  },
-  {
-    text: "Their attention to detail and responsiveness made the entire experience smooth and professional. Highly recommend!",
-    author: "Emma Davis",
-    role: "Project Lead, SkyCom (Canada)",
-    avatar: cut,
+    text: "The UI/UX work on our dashboard was flawless. Our users are finally navigating things with ease. The clean layout and user flow reflect deep thinking and solid design principles.",
+    author: "Karla Smith",
+    role: "Product Manager, Flowmatic (USA)",
+    avatar: kr,
   },
 ];
 

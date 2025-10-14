@@ -868,9 +868,11 @@ a {
 }
 
 .services-description {
-  font-size: 0.95rem;
-  color: #000;
+  font-size: 16px;
+  color: #888888;
   margin-left: 20px;
+  font-family: Guminert;
+  letter-spacing: 1px;
   max-width: 470px;
 }
 

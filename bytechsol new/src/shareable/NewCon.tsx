@@ -167,6 +167,7 @@ const NewCon = () => {
                 <option value="Odoo">Odoo Services</option>
                 <option value="AI/ML">AI / ML</option>
                 <option value="Custom Web">Custom Web</option>
+                <option value="Other">Other</option>
               </select>
               {errors.subject && (
                 <small className="error-text text-danger">{errors.subject}</small>
