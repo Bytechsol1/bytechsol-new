@@ -21,16 +21,30 @@ const testimonials = [
     role: "Marketing Director, NovaSoft (Canada)",
     avatar: cut,
   },
+  {
+    text: "Excellent collaboration throughout the process! The new system boosted our workflow efficiency significantly.",
+    author: "Ethan Roberts",
+    role: "COO, CloudWorks (USA)",
+    avatar: cut,
+  },
+  {
+    text: "Their attention to detail and responsiveness made the entire experience smooth and professional. Highly recommend!",
+    author: "Emma Davis",
+    role: "Project Lead, SkyCom (Canada)",
+    avatar: cut,
+  },
 ];
 
 const Testimonial = () => {
   const [index, setIndex] = useState(0);
 
-  // Auto slide every 2s
+  // Auto slide every 3s — supports dynamic testimonial count
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 2000);
+      setIndex((prevIndex) =>
+        prevIndex + 1 === testimonials.length ? 0 : prevIndex + 1
+      );
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -56,7 +70,7 @@ const Testimonial = () => {
             />
 
             <p className="group5-quote" data-aos="fade-right">
-              {current.text}
+              “{current.text}”
             </p>
 
             <div
@@ -76,6 +90,17 @@ const Testimonial = () => {
                   {current.role}
                 </div>
               </div>
+            </div>
+
+            {/* Optional: navigation dots */}
+            <div className="group5-dots mt-4 d-flex justify-content-center justify-content-md-start gap-2">
+              {testimonials.map((_, i) => (
+                <span
+                  key={i}
+                  onClick={() => setIndex(i)}
+                  className={`dot ${i === index ? "active" : ""}`}
+                ></span>
+              ))}
             </div>
           </div>
         </div>
