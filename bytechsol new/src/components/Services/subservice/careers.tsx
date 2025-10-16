@@ -43,7 +43,7 @@ const Careers = () => {
           <div className="career-div1" data-aos="fade-right">
             <img src={wh} alt="Work" width={"100%"} height={"100%"} />
           </div>
-          <div className="career-div2" data-aos="fade-left">
+          <div className="career-div2" data-aos="fade-up">
             <img src={pi} alt="Light" width={"100%"} height={"100%"} />
           </div>
           <div className="career-div3" data-aos="fade-right">
@@ -52,7 +52,7 @@ const Careers = () => {
           <div className="career-div4" data-aos="fade-left">
             <img src={lg} alt="Pink" width={"100%"} height={"100%"} />
           </div>
-          <div className="career-div5" data-aos="fade-down">
+          <div className="career-div5" data-aos="fade-up">
             <img src={wk} alt="PPS" width={"100%"} height={"100%"} />
           </div>
         </div>
@@ -64,7 +64,7 @@ const Careers = () => {
           Grow With Us, Not Just Work With Us
         </h1>
 
-        <p className="careers-intro-text" data-aos="fade-left">
+        <p className="careers-intro-text" data-aos="fade-up">
           At Bytechsol, we believe a career should be more than a paycheck — it
           should inspire you, challenge you, and help you become the best
           version of yourself. Here, you’ll be surrounded by people who
@@ -74,7 +74,7 @@ const Careers = () => {
 
         <p
           className="careers-intro-text careers-intro-cta"
-          data-aos="fade-right"
+          data-aos="fade-up"
         >
           Explore our current opportunities and discover where you can fit in.
           Even if you don’t find the perfect role listed, we’d still love to
@@ -158,14 +158,14 @@ const Careers = () => {
             <button
               type="submit"
               className="application-submit-btn"
-              data-aos="fade-right"
+              data-aos="fade-up"
             >
               Apply now
             </button>
-            <div className="form-email" data-aos="fade-left">
+            <div className="form-email" data-aos="fade-up">
               Prefer email? <br />
               <div className="contact8-alt mt-3">
-                <div className="form-email" data-aos="fade-left">
+                <div className="form-email" data-aos="fade-up">
                   <a
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=info@bytechsol.com"
                     target="_blank"

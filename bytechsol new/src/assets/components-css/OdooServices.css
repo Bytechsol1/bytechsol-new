@@ -23,7 +23,6 @@
   margin-left: 60px;
 }
 
-/* Responsive for mobile */
 @media (max-width: 992px) {
   .dg-products-container {
     flex-direction: column;
@@ -43,7 +42,6 @@
   }
 }
 
-/* Tablet */
 @media (max-width: 1024px) {
   .webdesign-heading1 {
     margin-left: -100px;
@@ -61,7 +59,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .webdesign-heading1 {
     margin-left: 0;
@@ -81,7 +78,6 @@
   }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
   .webdesign-heading1 {
     font-size: 1.5rem;

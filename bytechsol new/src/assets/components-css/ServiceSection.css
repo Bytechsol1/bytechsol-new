@@ -68,7 +68,7 @@
 
 .services-right {
   width: 100%;
-  height: 100%; /* fill col-5 completely */
+  height: 100%; 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,9 +78,7 @@
 .services-overlay {
   background: rgba(0, 0, 0, 0.7);
   width: 100%;
-  /* height: 100%;  */
   display: flex;
-  /* align-items: center; */
 }
 @media (max-width: 768px) {
   .services-overlay {
@@ -96,7 +94,7 @@
 }
 .services-overlay h2 {
   margin-left: 20px;
-  font-size: clamp(20px, 2.5vw, 32px); /* scales between 20px - 32px */
+  font-size: clamp(20px, 2.5vw, 32px); 
   margin-bottom: 20px;
 }
 .services-overlay p {
@@ -143,16 +141,16 @@
   filter: brightness(0) invert(1);
 }
 .ul {
-  transition: transform 0.3s ease, color 0.3s ease; /* smooth effect */
+  transition: transform 0.3s ease, color 0.3s ease; 
 }
 .ul:hover {
-  transform: scale(1.05); /* slight pop */
+  transform: scale(1.05); 
 }
 .ser-new-heading {
-  transition: transform 0.3s ease, color 0.3s ease; /* smooth effect */
+  transition: transform 0.3s ease, color 0.3s ease; 
 }
 .ser-new-heading:hover {
-  transform: scale(1.05); /* slight pop */
+  transform: scale(1.05); 
 }
 .ser-new-heading:hover img.arr2 {
   transform: rotate(-45deg);
@@ -172,7 +170,7 @@
   }
 }
 
-/* Mobile: hide middle image */
+
 @media (max-width: 991px) {
   .service-div2 {
     display: none;
@@ -181,7 +179,6 @@
     width: 20px;
   }
 
-  /* Left menu as horizontal scroll */
   .services-left {
     flex-direction: row;
     overflow-x: auto;
@@ -197,7 +194,6 @@
     white-space: nowrap;
   }
 
-  /* Right content takes full width */
   .service-div3 {
     width: 100%;
     margin-top: 10px;
@@ -207,7 +203,6 @@
     width: 100%;
     height: auto;
     min-height: 45vh;
-    /* padding: 20px; */
   }
 
   .services-content {
@@ -218,7 +213,6 @@
   }
 }
 
-/* --- Ultra-wide monitors --- */
 @media (min-width: 1400px) {
   .services-content {
     max-width: 850px;

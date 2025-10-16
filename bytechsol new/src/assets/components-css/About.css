@@ -154,6 +154,7 @@
   border-radius: 16px;
   padding: 90px 40px;
   width: 100%;
+  height: 440px;
   text-align: left;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
@@ -166,6 +167,7 @@
   border-radius: 16px;
   padding: 90px 40px;
   width: 100%;
+  height: 440px;
   text-align: left;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
@@ -178,6 +180,7 @@
   border-radius: 16px;
   padding: 90px 40px;
   width: 100%;
+  height: 440px;
   text-align: left;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
@@ -190,7 +193,7 @@
   border-radius: 16px;
   padding: 90px 40px;
   width: 100%;
-  height: 420px;
+  height: 380px;
   text-align: left;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
@@ -203,7 +206,7 @@
   background-color: #fff;
   border-radius: 16px;
   padding: 90px 40px;
-  height: 420px;
+  height: 380px;
   width: 100%;
   text-align: left;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
@@ -231,38 +234,38 @@
 }
 
 .metric-number1 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   color: #999;
-  margin-bottom: 150px;
-  margin-top: -50px;
+  margin-bottom: 100px;
+  margin-top: -65px;
 }
 .metric-number2 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   color: #999;
-  margin-bottom: 150px;
-  margin-top: -50px;
+  margin-bottom: 100px;
+  margin-top: -65px;
 }
 .metric-number3 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   color: #999;
-  margin-bottom: 150px;
-  margin-top: -50px;
+  margin-bottom: 100px;
+  margin-top: -65px;
 }
 .metric-number4 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   color: #999;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   margin-top: -50px;
 }
 .metric-number5 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   color: #999;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   margin-top: -50px;
 }
 .metric-value1 {
@@ -448,12 +451,6 @@
 }
 
 
-
-.core-img img {
-  max-width: 260px;
-  opacity: 0.9;
-  height: 350px;
-}
 .index-sp{
   font-size: 15px;
   color: #aaa;
@@ -602,11 +599,6 @@
     margin: 20px auto 0;
   }
 
-  .belief-container h1 {
-    font-size: 2rem;
-    margin-left: 0;
-    text-align: center;
-  }
   .metric-number1 {
     font-size: 20px;
     font-weight: 600;

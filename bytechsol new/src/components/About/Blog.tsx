@@ -14,21 +14,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { Helmet } from "react-helmet";
 
-// Scroll function
-// const scroll = (direction: string) => {
-//   const container = document.getElementById("servicesScroll");
-//   const scrollAmount = 200;
 
-//   if (container) {
-//     if (direction === "left") {
-//       container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-//     } else {
-//       container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-//     }
-//   }
-// };
-
-// Blog posts
 const blogPosts = [
   {
     id: 1,

@@ -213,11 +213,11 @@
   scroll-behavior: smooth;
   gap: 11px;
   margin-top: -140px;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
 .services-scroll::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none; 
 }
 
 .service-item {

@@ -105,7 +105,7 @@ const About: React.FC = () => {
           </p>
 
           <div className="metrics-grid">
-            <div className="card1 " data-aos="fade-down">
+            <div className="card1" data-aos="fade-down">
               <p className="metric-number1">01/</p>
               <h2 className="metric-value1">
                 Designing Impactful Digital Experiences
@@ -180,7 +180,7 @@ const About: React.FC = () => {
               <div className="vision-image" data-aos="fade-right">
                 <img src={co} alt="Vision Preview" />
               </div>
-              <div className="vision-text" data-aos="fade-left">
+              <div className="vision-text" data-aos="fade-up">
                 <p>
                   Bytechsol did not turn out to be the best software agency in
                   one day. Where it all began is a small team with huge

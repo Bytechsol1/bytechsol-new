@@ -25,6 +25,7 @@ import WebApp from "./components/Services/subservice/WebApp";
 import Aiml from "./components/Services/subservice/Aiml";
 import Development from "./components/Services/subservice/Development";
 import NotFound from "./components/404";
+import Blogdetail from "./components/About/BlogDetail";
 
 function AppShell() {
   const location = useLocation();
@@ -66,6 +67,7 @@ function AppShell() {
           <Route path="/services/custom-web" element={<CustomWeb />} />
           <Route path="/services/web-app" element={<WebApp />} />
           <Route path="/services/Ai-Ml" element={<Aiml />} />
+          <Route path="Blogdetail" element={<Blogdetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
