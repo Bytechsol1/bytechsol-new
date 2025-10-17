@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import "../../../assets/components-css/ServiceSection.css";
 import arr from "../../../assets/images/arrow.svg";
 import { Link } from "react-router-dom";
-import CircularText from "../../../shareable/CircularText";
 import cmsbg from "../../../assets/images/ui ux 3.png";
 import ecm from "../../../assets/images/ecomser.png";
 import ecmbg from "../../../assets/images/ecombg.png";
@@ -241,7 +240,6 @@ const ServicesSection: React.FC = () => {
                       );
                     })}
                   </ul>
-                  <CircularText />
                 </div>
               </div>
             </div>

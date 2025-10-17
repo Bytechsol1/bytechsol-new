@@ -470,7 +470,11 @@
   color: #555;
   line-height: 1.7;
 }
-
+.core-img img {
+    max-width: 260px;
+    opacity: .9;
+    height: 350px;
+}
 /* RESPONSIVE */
 @media (max-width: 992px) {
   .core-heading {
