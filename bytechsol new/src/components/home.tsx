@@ -25,11 +25,11 @@ import o1 from "../assets/images/odoo3.png";
 import bh from "../assets/images/behanceimg.png";
 import tr from "../assets/images/trustimg.png";
 import up from "../assets/images/upworkimg.png";
-
 import ScrollCards from "./ScrollCards";
 import { Link } from "react-router-dom";
 import NewCon from "../shareable/NewCon";
 import { Helmet } from "react-helmet";
+import { homePageFaqs } from "../shareable/faqData";
 
 const awards = [
   {
@@ -383,7 +383,7 @@ const Home: React.FC = () => {
 
       {/* Shared Sections */}
       <Testimonial />
-      <FaqSection />
+      <FaqSection faqs={homePageFaqs}/>
 
       <NewCon />
     </>

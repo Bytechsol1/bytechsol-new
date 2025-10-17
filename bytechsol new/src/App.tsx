@@ -63,11 +63,11 @@ function AppShell() {
           <Route path="/services/brand-building" element={<ProductDesign />} />
           <Route path="/services/ERP-service" element={<SaasDesign />} />
           <Route path="/services/odoo-services" element={<OdooServices />} />
-          <Route path="/Blog" element={<Blog />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/services/custom-web" element={<CustomWeb />} />
           <Route path="/services/web-app" element={<WebApp />} />
           <Route path="/services/Ai-Ml" element={<Aiml />} />
-          <Route path="Blogdetail" element={<Blogdetail />} />
+          <Route path="blog-detail" element={<Blogdetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

@@ -59,9 +59,6 @@ const Footer: React.FC = () => {
               <Link to="/services/website-design-and-development">
                 <li>Website Design & Development</li>
               </Link>
-              <Link to="Blogdetail">
-                <li>Blogdetail</li>
-              </Link>
             </ul>
           </div>
 

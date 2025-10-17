@@ -6,6 +6,8 @@ import FaqSection from "../../shareable/faq";
 import er from "../../assets/images/erp.png";
 import gu from "../../assets/images/uxgui.png";
 import t8 from "../../assets/images/top8.png";
+import { blogPageFaqs } from "../../shareable/faqData";
+
 
 const blogPosts = [
   {
@@ -122,7 +124,7 @@ const Blogdetail = () => {
             </article>
 
             {/* Right Sidebar */}
-            <aside className="blog-meta text-end">
+            <aside className="blog-meta1 text-end">
               <div className="blog-meta-item">
                 <h5>(PUBLISHED)</h5>
                 <p>26 July 2025</p>
@@ -190,7 +192,7 @@ const Blogdetail = () => {
       </section>
 
       {/* FAQ Section */}
-      <FaqSection />
+      <FaqSection faqs={blogPageFaqs}/>
     </>
   );
 };

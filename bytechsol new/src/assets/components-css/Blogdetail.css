@@ -68,7 +68,7 @@
 }
 
 /* Right Sidebar */
-.blog-meta {
+.blog-meta1 {
   border-left: 1px solid #ddd;
   padding-left: 1rem;
   font-size: 0.9rem;
@@ -208,7 +208,6 @@
 
 .related-blog-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 .related-blog-card img {
