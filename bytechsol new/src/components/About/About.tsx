@@ -11,6 +11,8 @@ import hm1 from "../../assets/images/homeimg1.png";
 import arrow from "../../assets/images/arrow.svg";
 import cr from "../../assets/images/coreimg1.png"
 import { Helmet } from "react-helmet";
+import { aboutPageFaqs } from "../../shareable/faqData";
+
 
 const accordionItems = [
   {
@@ -347,7 +349,7 @@ const About: React.FC = () => {
   </div>
 </section>
 
-      <FaqSection />
+      <FaqSection faqs={aboutPageFaqs}/>
       <NewCon />
     </>
   );

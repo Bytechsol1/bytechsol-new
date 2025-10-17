@@ -6,7 +6,7 @@ import FaqSection from "../../shareable/faq";
 import er from "../../assets/images/erp.png";
 import gu from "../../assets/images/uxgui.png";
 import t8 from "../../assets/images/top8.png";
-import { blogPageFaqs } from "../../shareable/faqData";
+import { homePageFaqs } from "../../shareable/faqData";
 
 
 const blogPosts = [
@@ -59,7 +59,7 @@ const Blogdetail = () => {
           <div className="container blog-detail-container">
             
             {/* Left Sidebar */}
-            <aside className="blog-sidebar">
+            <aside className="blog-sidebar d-none d-md-block">
               <h4>Table of Contents</h4>
               <ul>
                 <li>Introduction</li>
@@ -72,7 +72,7 @@ const Blogdetail = () => {
             <article className="blog-main">
               <div className="blog-detail-head">
                 <h1 className="blog-detail-title">
-                  Top 20 UI/UX Design Agencies <br /> in the USA - July 2025 Rankings
+                  Top 20 UI/UX Design Agencies in the USA - July 2025 Rankings
                 </h1>
               </div>
 
@@ -192,7 +192,7 @@ const Blogdetail = () => {
       </section>
 
       {/* FAQ Section */}
-      <FaqSection faqs={blogPageFaqs}/>
+      <FaqSection faqs={homePageFaqs}/>
     </>
   );
 };

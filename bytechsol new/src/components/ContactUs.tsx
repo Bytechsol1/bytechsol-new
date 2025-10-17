@@ -1,9 +1,11 @@
 import "../assets/components-css/ContactUs.css";
 import NewCon from "../shareable/NewCon";
-import FaqSection from "../shareable/faq";
+import { contactUsFaqs } from "../shareable/faqData";
 import WorldMap from "../shareable/WorldMap";
 import Testimonial from "../shareable/testimonial";
 import { Helmet } from "react-helmet";
+import FaqSection from "../shareable/faq";
+
 
 const ContactUs = () => {
   return (
@@ -75,7 +77,7 @@ const ContactUs = () => {
       </section>
       <WorldMap />
       <Testimonial />
-      <FaqSection />
+      <FaqSection faqs={contactUsFaqs}/>
     </>
   );
 };

@@ -13,6 +13,8 @@ import sv from "../../../assets/images/services.png"
 import { useLocation } from "react-router-dom";
 import { Customerp } from "./New";
 import { Helmet } from "react-helmet";
+import { erpFaqs } from "../../../shareable/faqData";
+
 
 
 
@@ -183,7 +185,7 @@ Start your website project today <span className="arrow">→</span>
 </section>
 
       <Testimonial />
-      <FaqSection />
+      <FaqSection  faqs={erpFaqs}/>
       <NewCon />
     </>
   );

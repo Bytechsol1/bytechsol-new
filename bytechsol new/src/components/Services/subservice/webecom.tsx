@@ -9,6 +9,7 @@ import im1 from "../../../assets/images/ecomerceim.png"
 import { useLocation } from "react-router-dom";
 import { Estore } from "./New";
 import { Helmet } from "react-helmet";
+import { ecomFaqs } from "../../../shareable/faqData";
 
 
 
@@ -115,7 +116,7 @@ const Webecom: React.FC = () => {
         </div>
       </section>
               <Testimonial/>
-              <FaqSection/>
+              <FaqSection faqs={ecomFaqs}/>
               <NewCon />
     </>
   );

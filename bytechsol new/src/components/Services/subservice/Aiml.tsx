@@ -9,6 +9,8 @@ import NewCon from "../../../shareable/NewCon";
 import { useLocation } from "react-router-dom";
 import { Llm } from "./New";
 import { Helmet } from "react-helmet";
+import { aimlFaqs } from "../../../shareable/faqData";
+
 
 
 const AimlSection = () => {
@@ -105,7 +107,7 @@ const AimlSection = () => {
         </div>
       </section>
         <Testimonial />
-        <FaqSection />
+        <FaqSection  faqs={aimlFaqs}/>
         <NewCon />
     </>
   );

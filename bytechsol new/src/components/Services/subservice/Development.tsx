@@ -14,6 +14,8 @@ import ww from "../../../assets/images/wswy5.png";
 import wh from "../../../assets/images/whear6.png";
 import New from "./New";
 import { Helmet } from "react-helmet";
+import { webdesignFaqs } from "../../../shareable/faqData";
+
 
 
 
@@ -166,7 +168,7 @@ const Development: React.FC = () => {
       </section>
 
       <Testimonial />
-      <FaqSection />
+      <FaqSection  faqs={webdesignFaqs}/>
       <NewCon />
     </>
   );

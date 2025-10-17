@@ -51,6 +51,22 @@
   margin-bottom: 50px;
 }
 
+@media (max-width: 768px) {
+  .blog-detail-image {
+    max-height: 400px;
+    margin-bottom: 300px;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-detail-image {
+    max-height: 300px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    margin-top: -40px;
+  }
+}
 
 .blog-detail-title {
   font-weight: 700;
@@ -155,6 +171,11 @@
   .blog-meta {
     display: none;
   }
+  .blog-detail-title {
+  font-weight: 700;
+  
+}
+
 }
 
 @media (max-width: 768px) {
@@ -170,7 +191,7 @@
   }
 
   .blog-detail-title {
-    font-size: 1.6rem;
+    font-size: 18px;
   }
 
   .blog-detail-body {

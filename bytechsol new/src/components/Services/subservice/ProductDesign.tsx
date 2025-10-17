@@ -12,6 +12,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Consult } from "./New";
 import { Helmet } from "react-helmet";
+import { brandFaqs } from "../../../shareable/faqData";
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -175,7 +177,7 @@ useEffect(() => {
 
 
       <Testimonial />
-      <FaqSection />
+      <FaqSection  faqs={brandFaqs}/>
       <NewCon />
     </>
   );

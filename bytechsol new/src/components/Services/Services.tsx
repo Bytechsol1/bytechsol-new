@@ -8,6 +8,8 @@ import ServicesSection from "./subservice/ServiceSections";
 import ic from "../../assets/images/icesimg.png";
 import sbg from "../../assets/images/servbg.png";
 import { Helmet } from "react-helmet"; 
+import { servicesPageFaqs } from "../../shareable/faqData";
+
 
 
 const Services: React.FC = () => {
@@ -77,7 +79,7 @@ const Services: React.FC = () => {
       <ServicesSection />
 
       <Testimonial />
-      <FaqSection />
+      <FaqSection  faqs={servicesPageFaqs}/>
       <NewCon />
     </>
   );

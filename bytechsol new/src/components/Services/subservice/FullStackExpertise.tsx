@@ -13,6 +13,8 @@ import sv from "../../../assets/images/services.png"
 import { useLocation } from "react-router-dom";
 import { Onseo } from "./New";
 import { Helmet } from "react-helmet";
+import { seoFaqs } from "../../../shareable/faqData";
+
 
 
 const industryData = [
@@ -181,7 +183,7 @@ Start your website project today <span className="arrow">→</span>
   </div>
 </section>
       <Testimonial />
-      <FaqSection />
+      <FaqSection  faqs={seoFaqs}/>
       <NewCon />
     </>
   );

@@ -12,6 +12,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLocation } from "react-router-dom";
 import { Web } from "./New";
 import { Helmet } from "react-helmet";
+import { webappFaqs } from "../../../shareable/faqData";
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -172,7 +174,7 @@ useEffect(() => {
             </section>
               
       <Testimonial />
-      <FaqSection />
+      <FaqSection faqs={webappFaqs}/>
       <NewCon />
     </>
   );

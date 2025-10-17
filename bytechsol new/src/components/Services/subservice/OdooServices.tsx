@@ -10,10 +10,11 @@ import cp from "../../../assets/images/odooimg.png";
 import  { useRef,useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import { useLocation } from "react-router-dom";
 import { Customization } from "./New";
 import { Helmet } from "react-helmet";
+import { odooFaqs } from "../../../shareable/faqData";
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -184,7 +185,7 @@ useEffect(() => {
 
           
       <Testimonial />
-      <FaqSection />
+      <FaqSection  faqs={odooFaqs}/>
       <NewCon />
     </>
   );

@@ -9,6 +9,8 @@ import NewCon from "../../../shareable/NewCon";
 import { useLocation } from "react-router-dom";
 import { Cmsdev } from "./New";
 import { Helmet } from "react-helmet";
+import { customwebFaqs } from "../../../shareable/faqData";
+
 
 
 
@@ -116,7 +118,7 @@ const CustomWeb: React.FC = () => {
       </section>
             
       <Testimonial />
-      <FaqSection />
+      <FaqSection  faqs={customwebFaqs}/>
       <NewCon />
     </>
   );
