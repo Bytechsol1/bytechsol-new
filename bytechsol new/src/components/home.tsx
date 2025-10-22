@@ -3,8 +3,8 @@ import AnimatedText from "../shareable/AnimatedText";
 import am from "../assets/images/aiml-home.svg";
 import "../assets/components-css/home.css";
 import Clutch from "../assets/images/clutch.png";
-import Yasir from "../assets/images/yasir.jpg";
-import Salik from "../assets/images/salik.png";
+import jen from "../assets/images/Jennifer.jpg";
+import kr from "../assets/images/karla.jpg";
 import Top1 from "../assets/images/top1.png";
 import Top2 from "../assets/images/top2.png";
 import Top3 from "../assets/images/top3.png";
@@ -134,14 +134,14 @@ const Home: React.FC = () => {
                         style={{ left: 0, zIndex: 2 }}
                       >
                         <img
-                          src={Yasir}
-                          alt="Yasir Irfan"
+                          src={kr}
+                          alt="Karla Smith"
                           className="founder-img"
                         />
                         <div className="custom-tooltip">
-                          <strong>Yasir Irfan</strong>
+                          <strong>Karla Smith</strong>
                           <br />
-                          Founder & CEO @BTS
+                          Product Manager, Flowmatic (USA)
                           <br />
                         </div>
                       </div>
@@ -150,14 +150,14 @@ const Home: React.FC = () => {
                         style={{ left: "22px", zIndex: 1 }}
                       >
                         <img
-                          src={Salik}
-                          alt="Hazrat Bilal"
+                          src={jen}
+                          alt="Jennifer Blake"
                           className="founder-img"
                         />
                         <div className="custom-tooltip">
-                          <strong>Hazrat Bilal</strong>
+                          <strong>Jennifer Blake</strong>
                           <br />
-                          Co-Founder of BTS
+                          Founder, Blakestone Creative (USA)
                           <br />
                         </div>
                       </div>

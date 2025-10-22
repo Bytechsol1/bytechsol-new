@@ -198,6 +198,7 @@
   background: #ddd;
   border-radius: 50%;
   transition: all 0.3s ease;
+  
 }
 
 .timeline-left ul li:hover::before {
@@ -217,8 +218,11 @@
 .timeline-left ul li.active:hover::before {
   background: #2073D9 !important;
   transform: translateY(-50%) scale(1.5);
+  
 }
-
+.timeline-left ul li.active {
+  font-weight: bold;
+}
 .timeline-left ul li.active::before {
   background: #2073D9 !important;
   transform: translateY(-50%) scale(1.5);
