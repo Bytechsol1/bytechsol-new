@@ -103,7 +103,7 @@ const Blog = () => {
     content="Read BytechSol’s latest articles and insights about web development, UI/UX design, artificial intelligence, and business technology trends."
   />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.bytechsol.com/blog" />
+  <link rel="canonical" href="https://bytechsol.com/blog" />
 </Helmet>
 
       {/* Blog Section */}

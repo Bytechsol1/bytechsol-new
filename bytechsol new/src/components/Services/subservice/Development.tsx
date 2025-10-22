@@ -88,7 +88,7 @@ const Development: React.FC = () => {
   <meta name="robots" content="index, follow" />
   <link
     rel="canonical"
-    href="https://www.bytechsol.com/services/website-design-and-development"
+    href="https://bytechsol.com/services/website-design-and-development"
   />
 </Helmet>
 

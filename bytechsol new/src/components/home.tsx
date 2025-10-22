@@ -91,7 +91,7 @@ const Home: React.FC = () => {
     content="BytechSol builds powerful web, mobile, ERP, and AI-driven digital solutions to help startups and enterprises scale efficiently."
   />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.bytechsol.com/" />
+  <link rel="canonical" href="https://bytechsol.com/" />
 </Helmet>
 
       {/* Hero Section */}

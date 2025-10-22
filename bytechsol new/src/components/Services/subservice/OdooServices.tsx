@@ -121,7 +121,7 @@ useEffect(() => {
   <meta name="robots" content="index, follow" />
   <link
     rel="canonical"
-    href="https://www.bytechsol.com/services/odoo-services"
+    href="https://bytechsol.com/services/odoo-services"
   />
 </Helmet>
 

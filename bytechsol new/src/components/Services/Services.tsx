@@ -22,7 +22,7 @@ const Services: React.FC = () => {
     content="Explore BytechSol’s professional web development, AI, ERP, and digital services designed to grow your business."
   />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.bytechsol.com/services" />
+  <link rel="canonical" href="https://bytechsol.com/services" />
 
   {/* Breadcrumb schema */}
   <script type="application/ld+json">
@@ -34,13 +34,13 @@ const Services: React.FC = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.bytechsol.com"
+          "item": "https://bytechsol.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Services",
-          "item": "https://www.bytechsol.com/services"
+          "item": "https://bytechsol.com/services"
         }
       ]
     })}

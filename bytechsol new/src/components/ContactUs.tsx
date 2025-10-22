@@ -17,7 +17,7 @@ const ContactUs = () => {
     content="Get in touch with BytechSol for web, mobile, ERP, or AI projects. We’re here to turn your business ideas into digital success."
   />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.bytechsol.com/contact" />
+  <link rel="canonical" href="https://bytechsol.com/contact" />
 </Helmet>
 
       <NewCon />

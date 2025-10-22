@@ -13,7 +13,7 @@ const NotFound = () => {
     content="Oops! The page you’re looking for doesn’t exist. Return to BytechSol’s homepage and explore our digital solutions."
   />
   <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://www.bytechsol.com/404" />
+  <link rel="canonical" href="https://bytechsol.com/404" />
 </Helmet>
 
     <div className="notfound-container">
