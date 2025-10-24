@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import com from "../assets/images/comma.png";
-import cut from "../assets/images/cut.png";
 import jen from "../assets/images/Jennifer.jpg"
 import lin from "../assets/images/lina.jpg"
-import kr from "../assets/images/karla.jpg"
+import ba from "../assets/images/Bilal Asif.jpg"
+import tr from "../assets/images/Thomas Reed.jpg"
 
 const testimonials = [
   {
     text: "The custom software your team developed has streamlined our internal operations like never before. It was built exactly to our specs, with performance and scalability in mind. Truly a game-changer for our workflow.",
-    author: "Olivia Morgan",
-    role: "Operations Head, TechNexus (UK)",
-    avatar: cut,
+    author: " Bilal Asif",
+    role: " Senior Developer, RizaSoft (Pakistan)",
+    avatar: ba,
   },
   {
     text: "We wanted a team that did design and development in one place, and you have truly surpassed our expectations. Everything was aligned, from branding to delivery.",
@@ -26,9 +26,9 @@ const testimonials = [
   },
   {
     text: "The UI/UX work on our dashboard was flawless. Our users are finally navigating things with ease. The clean layout and user flow reflect deep thinking and solid design principles.",
-    author: "Karla Smith",
-    role: "Product Manager, Flowmatic (USA)",
-    avatar: kr,
+    author: "Thomas Reed",
+    role: "Director, OmniParts (Canada)",
+    avatar: tr,
   },
 ];
 
