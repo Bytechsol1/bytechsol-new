@@ -15,10 +15,14 @@
 
 /* Sidebar (Left) */
 .blog-sidebar {
+  position: sticky;
+  top: 100px; /* distance from top before sticking */
   border-right: 1px solid #ddd;
   padding-right: 1rem;
-  margin-top: 120px;
+  height: fit-content;
+  align-self: start;
 }
+
 
 .blog-sidebar h4 {
   font-weight: 600;
@@ -33,21 +37,19 @@
 .blog-sidebar li {
   margin-bottom: 0.8rem;
   font-size: 0.95rem;
-  cursor: pointer;
   transition: color 0.3s;
-}
-
-.blog-sidebar li:hover {
-  color: #007bff;
 }
 
 /* Main Content */
 .blog-main {
   line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .blog-detail-image {
   width: 100%;
   object-fit: cover;
+  height: 600px;
   margin-bottom: 50px;
 }
 
@@ -85,11 +87,13 @@
 
 /* Right Sidebar */
 .blog-meta1 {
-  border-left: 1px solid #ddd;
-  padding-left: 1rem;
-  font-size: 0.9rem;
-  color: #444;
-      margin-top: 120px;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  align-self: start;
+  border-left: 1px solid #e5e5e5;
+  padding-left: 15px;
+  text-align: right;
 }
 
 .blog-meta-item {
@@ -281,3 +285,22 @@
   }
 }
 
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #000;
+  padding: 10px 15px;
+  vertical-align: top;
+}
+
+.comparison-table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
