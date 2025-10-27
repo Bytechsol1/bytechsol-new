@@ -67,7 +67,7 @@ function AppShell() {
           <Route path="/services/custom-web" element={<CustomWeb />} />
           <Route path="/services/web-app" element={<WebApp />} />
           <Route path="/services/Ai-Ml" element={<Aiml />} />
-          <Route path="blog-detail" element={<Blogdetail />} />
+          <Route path="/blog/the-pros-and-cons-of-waterfall-software-development" element={<Blogdetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

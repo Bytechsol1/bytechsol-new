@@ -335,3 +335,10 @@
   background-clip: text;
   font-weight: bold;
 }
+.blog-link{
+  text-decoration: none;
+  color: #000;
+}
+.blog-link:hover{
+  color: #007bff;
+}

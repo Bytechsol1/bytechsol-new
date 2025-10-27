@@ -13,16 +13,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { Helmet } from "react-helmet";
-
+import { Link } from "react-router-dom";
+import FaqSection from "../../shareable/faq";
+import {blogSoftwarePros} from "../../shareable/faqData"
 
 const blogPosts = [
   {
     id: 1,
     image: er,
-    category: "UI UX",
+    category: "Development",
     readTime: "14 MINUTES",
-    title: "Top 20 UI/UX Design Agencies in the USA - July 2025 Rankings",
-    date: "26 May, 2025",
+    title: "The Pros and Cons of Waterfall Software Development",
+    date: "28 October, 2025",
+    linkpath: "/blog/the-pros-and-cons-of-waterfall-software-development"
   },
   {
     id: 2,
@@ -31,6 +34,8 @@ const blogPosts = [
     readTime: "14 MINUTES",
     title: "8 Common Mistakes in UX User Flows to Avoid",
     date: "26 May, 2025",
+        linkpath: "/blog"
+
   },
   {
     id: 3,
@@ -47,6 +52,8 @@ const blogPosts = [
     readTime: "14 MINUTES",
     title: "7 Benefits of Hiring a Usability Testing Consultancy",
     date: "26 May, 2025",
+        linkpath: "/blog"
+
   },
   {
     id: 5,
@@ -55,6 +62,8 @@ const blogPosts = [
     readTime: "14 MINUTES",
     title: "What is UX Prototyping? Why DO You Need Consultancy?",
     date: "26 May, 2025",
+        linkpath: "/blog"
+
   },
   {
     id: 6,
@@ -63,6 +72,8 @@ const blogPosts = [
     readTime: "14 MINUTES",
     title: "15 Innovative UX Design Examples for Your Next Project",
     date: "26 May, 2025",
+        linkpath: "/blog"
+
   },
 ];
 
@@ -76,6 +87,7 @@ const blogPosts = [
     "E-Commerce",
     "Cloud Solutions",
     "QA & Testing",
+
   ];
 
 const Blog = () => {
@@ -168,7 +180,7 @@ const Blog = () => {
       <section className="cards-six">
         <div className="blog-grid">
           {filteredPosts.map((post) => (
-            <div className="blog-card" key={post.id}>
+           <Link to={post.linkpath} className="blog-link"> <div className="blog-card" key={post.id}>
               <div className="blog-image">
                 <img src={post.image} alt={post.title} />
               </div>
@@ -178,11 +190,13 @@ const Blog = () => {
               <h3 className="blog-title">{post.title}</h3>
               <p className="blog-date">{post.date}</p>
             </div>
+                          </Link>
           ))}
         </div>
       </section>
 
       <NewCon />
+      <FaqSection faqs={blogSoftwarePros}/>
     </>
   );
 };
