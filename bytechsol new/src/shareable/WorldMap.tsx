@@ -109,7 +109,7 @@ const WorldMap: React.FC = () => {
                       className="d-flex flex-column align-items-center text-center"
                       style={{
                         fontSize: "12px", // smaller font for mobile
-                        fontFamily: "Gilroy-SemiBold, sans-serif",
+                        fontFamily: "Guminert-SemiBold, sans-serif",
                         fontWeight: "bold",
                         color: "#000",
                         gap: "4px",

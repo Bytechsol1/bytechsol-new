@@ -11,7 +11,7 @@ import FaqSection from "../../shareable/faq";
 import er from "../../assets/images/erp.png";
 import gu from "../../assets/images/uxgui.png";
 import t8 from "../../assets/images/top8.png";
-import { homePageFaqs } from "../../shareable/faqData";
+import { blogSoftwarePros } from "../../shareable/faqData";
 import d1 from "../../assets/images/det01.png"
 import w2 from "../../assets/images/wfall02.jpg"
 import w3 from "../../assets/images/wagile03.jpg"
@@ -47,6 +47,9 @@ const blogPosts = [
 const Blogdetail = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
+  const [email, setEmail] = useState("");
+const [subscribed, setSubscribed] = useState(false);
+
 
   const searchBlog = (e) => {
     const query = e.target.value.toLowerCase();
@@ -68,7 +71,7 @@ const Blogdetail = () => {
         />
         <link
           rel="canonical"
-          href="https://yourwebsite.com/the-pros-and-cons-of-waterfall-software-development"
+          href="https://bytechsol.com/blog/the-pros-and-cons-of-waterfall-software-development"
         />
       </Helmet>
 
@@ -85,17 +88,16 @@ const Blogdetail = () => {
             <aside className="blog-sidebar d-none d-md-block">
               <h4>Table of Contents</h4>
               <ul>
-                <li>Introduction</li>
-                <li>What is Waterfall Software Development?</li>
-                <li>The Waterfall Model Process Explained</li>
-                <li>Pros and Cons of Waterfall Development at a Glance</li>
-                <li>Pros of Waterfall Development</li>
-                <li>Cons of Waterfall Development</li>
-                <li>Waterfall vs. Agile</li>
-                <li>When to Use Waterfall Development</li>
-                <li>Conclusion</li>
-                <li>FAQs</li>
-              </ul>
+                <li>1. Introduction</li>
+                <li>2. What is Waterfall Software Development?</li>
+                <li>3. The Waterfall Model Process Explained</li>
+                <li>4. Pros and Cons of Waterfall Development at a Glance</li>
+                <li>5. Pros of Waterfall Development</li>
+                <li>6. Cons of Waterfall Development</li>
+                <li>7. Waterfall vs. Agile</li>
+                <li>8. When to Use Waterfall Development</li>
+                <li>9. Conclusion</li>
+                   </ul>
             </aside>
 
             {/* Main Blog Content */}
@@ -320,18 +322,18 @@ All these failures of the Waterfall model have led to the popularity of Agile te
             </article>
 
             {/* Right Sidebar */}
-            <aside className="blog-meta1 text-end">
+            <aside className="blog-meta1 text-start">
               <div className="blog-meta-item">
-                <h5>(PUBLISHED)</h5>
-                <p>26 July 2025</p>
+                <h5>PUBLISHED</h5>
+                <p>28 October 2025</p>
               </div>
               <div className="blog-meta-item">
-                <h5>(WRITER)</h5>
-                <p>Karla Smith</p>
+                <h5>Author</h5>
+                <p>Noor Ul Sabah</p>
               </div>
 
-              <div className="blog-meta-item">
-                <h5>(SOCIAL SHARE)</h5>
+              <div className="blog-meta-item text-start">
+                <h5>SOCIAL SHARE</h5>
                 <div className="blog-social-icons">
                   <a
                     href="https://www.linkedin.com/company/bytechsol-llc"
@@ -363,10 +365,40 @@ All these failures of the Waterfall model have led to the popularity of Agile te
                   </a>
                 </div>
               </div>
+<div className="newsletter-section">
+  <h5>NEWSLETTER</h5>
+  <p>Get the latest updates, blogs and news delivered to your inbox.</p>
+
+  <form
+    className="newsletter-form"
+    onSubmit={(e) => {
+      e.preventDefault();
+      setSubscribed(true);
+      setEmail("");
+      setTimeout(() => setSubscribed(false), 3000);
+    }}
+  >
+    <input
+      type="email"
+      placeholder="Email"
+      required
+      className="newsletter-input"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+    />
+    <button type="submit" className="newsletter-btn">
+      Submit
+    </button>
+  </form>
+
+  {subscribed && <p className="subscribed-msg">Subscribed!</p>}
+</div>
+
             </aside>
           </div>
         </div>
       </section>
+      <FaqSection faqs={blogSoftwarePros} />
 
       {/* ✅ Related Blogs Section */}
       <section className="related-blogs">
@@ -388,7 +420,6 @@ All these failures of the Waterfall model have led to the popularity of Agile te
       </section>
 
       {/* ✅ FAQ Section */}
-      <FaqSection faqs={homePageFaqs} />
     </>
   );
 };

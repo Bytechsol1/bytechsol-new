@@ -1,8 +1,15 @@
+@font-face {
+  font-family: "Guminert";
+  src: url("/Fonts/Guminert Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 .blog-detail-section {
   padding: 3rem 1rem;
   background: #fff;
   color: #111;
-  font-family: "Gilroy", sans-serif;
+  font-family: "Guminert", sans-serif;
 }
 
 .blog-detail-container {
@@ -18,7 +25,7 @@
   position: sticky;
   top: 100px; /* distance from top before sticking */
   border-right: 1px solid #ddd;
-  padding-right: 1rem;
+  padding-right: 25px;
   height: fit-content;
   align-self: start;
 }
@@ -48,9 +55,11 @@
 }
 .blog-detail-image {
   width: 100%;
+  border-radius: 12px;
   object-fit: cover;
   height: 600px;
   margin-bottom: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -92,7 +101,7 @@
   height: fit-content;
   align-self: start;
   border-left: 1px solid #e5e5e5;
-  padding-left: 15px;
+  padding-left: 25px;
   text-align: right;
 }
 
@@ -207,7 +216,7 @@
 .related-blogs {
   padding: 4rem 1rem;
   background: #fff;
-  font-family: "Gilroy", sans-serif;
+  font-family: "Guminert", sans-serif;
 }
 
 .related-blogs h2 {
@@ -304,3 +313,76 @@
   background-color: #f8f8f8;
   font-weight: bold;
 }
+/* Newsletter Section */
+.newsletter-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #aaa;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.newsletter-section h5 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 0.4rem;
+  font-weight: 750;
+}
+
+.newsletter-section p {
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.newsletter-input {
+  width: 100%;
+  max-width: 250px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.newsletter-btn {
+  background-color: #007bff;
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Subscribed message */
+.subscribed-msg {
+  color: rgb(36, 255, 36);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* Responsive alignment for mobile */
+@media (max-width: 768px) {
+  .newsletter-section {
+    text-align: left;
+  }
+  .newsletter-form {
+    align-items: flex-start;
+  }
+}
+
