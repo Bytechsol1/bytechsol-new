@@ -35,7 +35,7 @@ const testimonials = [
 const Testimonial = () => {
   const [index, setIndex] = useState(0);
 
-  // Auto slide every 3s — supports dynamic testimonial count
+  // Auto slide every 3s — supports dynamic testimonial count 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) =>
