@@ -850,3 +850,48 @@ export const blogSoftwarePros = [
       "Projects with many iterations, constant interaction with the client, or experimentation, such as SaaS products or mobile applications, should not use the Waterfall model but Agile.",
   },
 ];
+
+export const blogAdvaceAi = [
+  {
+    id: 1,
+    question: "What is the most advanced AI system right now?",
+    answer:
+      "OpenAI projects GPT-5 is the highest-functioning AI system in the NLP industry by 2025. The other leading AI systems include Google Gemini, a multimodal AI system, and AlphaFold, a scientific research AI system that can show how AI is the ultimate in various fields.",
+  },
+  {
+    id: 2,
+    question: "How do advanced AI systems impact daily life?",
+    answer:
+      "The current AI systems intrude into our lives in different ways, be it Netflix suggestions or voice-assisting systems, i.e., Alexa, AI-fraud detection systems, or AI-improved health-care applications. They are smarter and customized, and thus, show how deeply the hi-tech AI technology has penetrated our lives.",
+  },
+  {
+    id: 3,
+    question: "Are these advanced AI systems safe to use?",
+    answer:
+      "Yes, but with caution. Although the majority of the developed AI technologies comply with the ethics and safety standards of AI, problems such as prejudice, fake information, or data security appear. Its creators also ensure that AI is safer, more reliable, and ethical, which is also constantly developed by its developers.",
+  },
+  {
+    id: 4,
+    question: "Can AI replace human jobs completely?",
+    answer:
+      "AI is most likely not going to eliminate human labor. Instead, it automates the repetitive operations in the companies, including customer service, finance and logistics. This will allow individuals to focus on the creative, strategic, and decision-making. AI will be a workforce addition and not a replacement.",
+  },
+  {
+    id: 5,
+    question: "Which industries benefit the most from advanced AI?",
+    answer:
+      "The most significant impact of advanced systems of AI can be experienced in healthcare, finance, transportation, retail, and education. These spheres show how AI in business is efficient and innovative.",
+  },
+  {
+    id: 6,
+    question: "How do AI systems like ChatGPT learn?",
+    answer:
+      "AI tools like ChatGPT are trained on large quantities of books, articles, and web resources. They use machine learning and deep learning algorithms to find patterns and generate responses that are similar to human responses. Feedback training increases their proficiency in being accurate and in comprehending natural language as time continues to pass.",
+  },
+  {
+    id: 7,
+    question: "What is the future of advanced AI systems?",
+    answer:
+      "In the future, AI technology is developing to multimodal AI and customised digital assistants, as well as healthcare and research. In the meantime, governments and businesses are focusing on ethical AI, transparency, and safe adoption, which indicates that the future of AI-based systems will be innovative and responsible.",
+  },
+];

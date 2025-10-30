@@ -26,6 +26,7 @@ import Aiml from "./components/Services/subservice/Aiml";
 import Development from "./components/Services/subservice/Development";
 import NotFound from "./components/404";
 import Blogdetail from "./components/About/BlogDetail";
+import Blogdetail2 from "./components/About/BlogDetail2";
 
 function AppShell() {
   const location = useLocation();
@@ -68,6 +69,7 @@ function AppShell() {
           <Route path="/services/web-app" element={<WebApp />} />
           <Route path="/services/Ai-Ml" element={<Aiml />} />
           <Route path="/blog/the-pros-and-cons-of-waterfall-software-development" element={<Blogdetail />} />
+          <Route path="/blog/advanced-ai-systems-2025" element={<Blogdetail2/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

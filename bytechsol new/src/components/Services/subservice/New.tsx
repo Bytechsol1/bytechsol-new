@@ -670,7 +670,7 @@ const Redesign: React.FC = () => {
   const defaultClick = (id: number) => {
     if (id === activeId) return;
     setFade(true);
-    setTimeout(() => {
+    setTimeout(() => {   
       setActiveId(id);
       setFade(false);
     }, 300);

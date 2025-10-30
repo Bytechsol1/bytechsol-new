@@ -34,7 +34,7 @@ const blogPosts = [
     readTime: "14 MINUTES",
     title: "8 Common Mistakes in UX User Flows to Avoid",
     date: "26 May, 2025",
-        linkpath: "/blog"
+        linkpath: "/blog/advanced-ai-systems-2025"
 
   },
   {
