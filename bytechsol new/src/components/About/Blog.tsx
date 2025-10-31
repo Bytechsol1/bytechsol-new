@@ -1,13 +1,14 @@
 import NewCon from "../../shareable/NewCon";
 import "../../assets/components-css/Blog.css";
 import er from "../../assets/images/erp.png";
-import gu from "../../assets/images/uxgui.png";
+import d1 from "../../assets/images/det01.png";
 import t8 from "../../assets/images/top8.png";
 import b7 from "../../assets/images/benfit7.png";
 import py from "../../assets/images/prototype.png";
 import d15 from "../../assets/images/design15.png";
 import bgl from "../../assets/images/blogbgl.png";
 import bgr from "../../assets/images/blogbgr.png";
+import ai from "../../assets/images/bl-detail2.png"
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -20,7 +21,7 @@ import {blogSoftwarePros} from "../../shareable/faqData"
 const blogPosts = [
   {
     id: 1,
-    image: er,
+    image: d1,
     category: "Development",
     readTime: "14 MINUTES",
     title: "The Pros and Cons of Waterfall Software Development",
@@ -29,52 +30,52 @@ const blogPosts = [
   },
   {
     id: 2,
-    image: gu,
-    category: "UI UX",
+    image: d15,
+    category: "AI ML",
     readTime: "14 MINUTES",
-    title: "8 Common Mistakes in UX User Flows to Avoid",
-    date: "26 May, 2025",
+    title: "15 Most Advanced AI Systems in 2025 – Complete Overview",
+    date: "31 October, 2025",
         linkpath: "/blog/advanced-ai-systems-2025"
 
   },
-  {
-    id: 3,
-    image: t8,
-    category: "UI UX",
-    readTime: "14 MINUTES",
-    title: "Top 8 Usability Testing Consultancy Agencies You Can Trust (2025)",
-    date: "26 May, 2025",
-  },
-  {
-    id: 4,
-    image: b7,
-    category: "UI UX",
-    readTime: "14 MINUTES",
-    title: "7 Benefits of Hiring a Usability Testing Consultancy",
-    date: "26 May, 2025",
-        linkpath: "/blog"
+  // {
+  //   id: 3,
+  //   image: t8,
+  //   category: "UI UX",
+  //   readTime: "14 MINUTES",
+  //   title: "Top 8 Usability Testing Consultancy Agencies You Can Trust (2025)",
+  //   date: "26 May, 2025",
+  // },
+  // {
+  //   id: 4,
+  //   image: b7,
+  //   category: "UI UX",
+  //   readTime: "14 MINUTES",
+  //   title: "7 Benefits of Hiring a Usability Testing Consultancy",
+  //   date: "26 May, 2025",
+  //       linkpath: "/blog"
 
-  },
-  {
-    id: 5,
-    image: py,
-    category: "UI UX",
-    readTime: "14 MINUTES",
-    title: "What is UX Prototyping? Why DO You Need Consultancy?",
-    date: "26 May, 2025",
-        linkpath: "/blog"
+  // },
+  // {
+  //   id: 5,
+  //   image: py,
+  //   category: "UI UX",
+  //   readTime: "14 MINUTES",
+  //   title: "What is UX Prototyping? Why DO You Need Consultancy?",
+  //   date: "26 May, 2025",
+  //       linkpath: "/blog"
 
-  },
-  {
-    id: 6,
-    image: d15,
-    category: "UI UX",
-    readTime: "14 MINUTES",
-    title: "15 Innovative UX Design Examples for Your Next Project",
-    date: "26 May, 2025",
-        linkpath: "/blog"
+  // },
+  // {
+  //   id: 6,
+  //   image: d15,
+  //   category: "UI UX",
+  //   readTime: "14 MINUTES",
+  //   title: "15 Innovative UX Design Examples for Your Next Project",
+  //   date: "26 May, 2025",
+  //       linkpath: "/blog"
 
-  },
+  // },
 ];
 
  const services = [

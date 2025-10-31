@@ -485,7 +485,7 @@ const BlogdetailAI2025 = () => {
               </div>
               <div className="blog-meta-item">
                 <h5>Author</h5>
-                <p>Noor Ul Sabah</p>
+                <p>Unknown</p>
               </div>
 
               <div className="blog-meta-item text-start">
