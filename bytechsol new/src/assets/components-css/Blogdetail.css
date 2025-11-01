@@ -161,7 +161,7 @@
 .blog-social-icons {
   display: flex;
   gap: 0.8rem;
-  justify-content: right;
+  justify-content: left;
 }
 
 .blog-social-icons a {
@@ -209,6 +209,7 @@
 
   .blog-detail-body {
     font-size: 0.95rem;
+    text-align: justify;
   }
 }
 

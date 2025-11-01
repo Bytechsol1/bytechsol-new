@@ -167,7 +167,7 @@ const BlogdetailAI2025 = () => {
   Here are the leaders redefining artificial intelligence this year:
 </p>
 
-<ol style={{ lineHeight: "1.8", marginLeft: "1.5rem" }}>
+<ol style={{ lineHeight: "1.8" }}>
   <li style={{ marginBottom: "1.2rem" }}>
     <strong>GPT-5 (OpenAI) – Leading the Future of AI:</strong>
     <br />
@@ -321,6 +321,7 @@ const BlogdetailAI2025 = () => {
 </ol>
 
                 <h3 id="comparison">Comparing the Most Advanced AI Tools</h3>
+                {/* <section className="table-responsive">
                 <table className="table table-bordered comparison-table">
                   <thead>
                     <tr>
@@ -443,6 +444,7 @@ const BlogdetailAI2025 = () => {
                     </tr>
                   </tbody>
                 </table>
+                </section> */}
 
                 <h3 id="future">The Future of Advanced AI Systems</h3>
                 <ul>

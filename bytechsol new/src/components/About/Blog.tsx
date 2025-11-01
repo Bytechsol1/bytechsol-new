@@ -17,6 +17,8 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import FaqSection from "../../shareable/faq";
 import {blogSoftwarePros} from "../../shareable/faqData"
+import tm from "../../assets/images/topmost.png"
+
 
 const blogPosts = [
   {
@@ -30,7 +32,7 @@ const blogPosts = [
   },
   {
     id: 2,
-    image: d15,
+    image: tm,
     category: "AI ML",
     readTime: "14 MINUTES",
     title: "15 Most Advanced AI Systems in 2025 – Complete Overview",
@@ -38,14 +40,15 @@ const blogPosts = [
         linkpath: "/blog/advanced-ai-systems-2025"
 
   },
-  // {
-  //   id: 3,
-  //   image: t8,
-  //   category: "UI UX",
-  //   readTime: "14 MINUTES",
-  //   title: "Top 8 Usability Testing Consultancy Agencies You Can Trust (2025)",
-  //   date: "26 May, 2025",
-  // },
+  {
+    id: 3,
+    image: t8,
+    category: "UI UX",
+    readTime: "14 MINUTES",
+    title: "Top 8 Usability Testing Consultancy Agencies You Can Trust (2025)",
+    date: "26 May, 2025",
+    linkpath: "/blog/custom-web-solutions-digital-growth"
+  },
   // {
   //   id: 4,
   //   image: b7,
