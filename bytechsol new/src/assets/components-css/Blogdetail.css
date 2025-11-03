@@ -56,7 +56,6 @@
 .blog-detail-image {
   width: 100%;
   border-radius: 12px;
-  object-fit: cover;
   height: 600px;
   margin-bottom: 50px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -64,20 +63,15 @@
 
 @media (max-width: 768px) {
   .blog-detail-image {
-    max-height: 400px;
-    margin-bottom: 300px;
-    border-radius: 6px;
+    max-height: 300px;
   }
 }
 
 @media (max-width: 480px) {
   .blog-detail-image {
-    max-height: 300px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    margin-top: -40px;
+    max-height: 220px;
   }
-}
+} 
 
 .blog-detail-title {
   font-weight: 700;

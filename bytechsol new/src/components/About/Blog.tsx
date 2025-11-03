@@ -18,6 +18,8 @@ import { Link } from "react-router-dom";
 import FaqSection from "../../shareable/faq";
 import {blogSoftwarePros} from "../../shareable/faqData"
 import tm from "../../assets/images/topmost.png"
+import cw1 from "../../assets/images/cweb01.jpg"
+import az1 from "../../assets/images/azone01.png"
 
 
 const blogPosts = [
@@ -25,7 +27,6 @@ const blogPosts = [
     id: 1,
     image: d1,
     category: "Development",
-    readTime: "14 MINUTES",
     title: "The Pros and Cons of Waterfall Software Development",
     date: "28 October, 2025",
     linkpath: "/blog/the-pros-and-cons-of-waterfall-software-development"
@@ -34,7 +35,6 @@ const blogPosts = [
     id: 2,
     image: tm,
     category: "AI ML",
-    readTime: "14 MINUTES",
     title: "15 Most Advanced AI Systems in 2025 – Complete Overview",
     date: "31 October, 2025",
         linkpath: "/blog/advanced-ai-systems-2025"
@@ -42,23 +42,20 @@ const blogPosts = [
   },
   {
     id: 3,
-    image: t8,
-    category: "UI UX",
-    readTime: "14 MINUTES",
-    title: "Top 8 Usability Testing Consultancy Agencies You Can Trust (2025)",
-    date: "26 May, 2025",
+    image: cw1,
+    category: "Custom Web",
+    title: "Custom-Web-Solutions-Digital-Growth",
+    date: "03 November, 2025",
     linkpath: "/blog/custom-web-solutions-digital-growth"
   },
-  // {
-  //   id: 4,
-  //   image: b7,
-  //   category: "UI UX",
-  //   readTime: "14 MINUTES",
-  //   title: "7 Benefits of Hiring a Usability Testing Consultancy",
-  //   date: "26 May, 2025",
-  //       linkpath: "/blog"
-
-  // },
+  {
+    id: 4,
+    image: az1,
+    category: "UI UX",
+    title: "AR Zone App: Features, Benefits & How to Download for Android",
+    date: "04 November, 2025",
+        linkpath: "/blog/ar-zone-app-features-benefits-download-android"
+  },
   // {
   //   id: 5,
   //   image: py,

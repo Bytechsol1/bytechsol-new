@@ -895,3 +895,37 @@ export const blogAdvaceAi = [
       "In the future, AI technology is developing to multimodal AI and customised digital assistants, as well as healthcare and research. In the meantime, governments and businesses are focusing on ethical AI, transparency, and safe adoption, which indicates that the future of AI-based systems will be innovative and responsible.",
   },
 ];
+
+export const blogCustomWeb = [
+  {
+    id: 1,
+    question: "What makes custom web solutions better than pre-built software?",
+    answer:
+      "Tailor-made solutions are crafted with your business objectives in mind and therefore offer flexibility, scaling, and can be owned fully, unlike generic software with a limited ability to be customized.",
+  },
+  {
+    id: 2,
+    question: "Are custom web solutions expensive?",
+    answer:
+      "They can be more expensive to start you, but ultimately they are also cost-effective as they reduce repetitive charges, enhance efficiency, and enhance ROI.",
+  },
+  {
+    id: 3,
+    question: "Can I integrate existing tools with a custom web solution?",
+    answer:
+      "Absolutely. The development of a custom web will enable easy connectivity to CRM, ERP, payment systems, and other third-party tools.",
+  },
+  {
+    id: 4,
+    question: "How long does it take to build a custom web solution?",
+    answer:
+      "The schedule is based on the complexity, and the majority of the projects take 6-12 weeks. The project timelines are detailed, and there is open communication with the clients in the course of the work performed by Bytechsol.",
+  },
+  {
+    id: 5,
+    question: "Does Bytechsol offer post-launch support?",
+    answer:
+      "Yes. Our team is available to maintain, update, and offer technical support to your web solution in order to have a smooth-running and secure web solution.",
+  },
+];
+

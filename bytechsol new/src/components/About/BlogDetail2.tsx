@@ -9,39 +9,10 @@ import {
 } from "react-icons/fa6";
 import { Helmet } from "react-helmet";
 import FaqSection from "../../shareable/faq";
-import er from "../../assets/images/erp.png";
-import gu from "../../assets/images/uxgui.png";
-import t8 from "../../assets/images/top8.png";
 import { blogAdvaceAi, blogSoftwarePros } from "../../shareable/faqData";
 import tm from "../../assets/images/topmost.png"
 import ai from "../../assets/images/advai.png"
 
-const blogPosts = [
-  {
-    id: 1,
-    image: er,
-    category: "AI Technology",
-    readTime: "14 MINUTES",
-    title: "Top 20 UI/UX Design Agencies in the USA - July 2025 Rankings",
-    date: "26 May, 2025",
-  },
-  {
-    id: 2,
-    image: gu,
-    category: "AI Development",
-    readTime: "14 MINUTES",
-    title: "8 Common Mistakes in UX User Flows to Avoid",
-    date: "26 May, 2025",
-  },
-  {
-    id: 3,
-    image: t8,
-    category: "AI Innovation",
-    readTime: "14 MINUTES",
-    title: "Top 8 Usability Testing Consultancy Agencies You Can Trust (2025)",
-    date: "26 May, 2025",
-  },
-];
 
 const tocItems = [
   { id: "introduction", label: "Introduction to Advanced AI Systems" },
@@ -55,7 +26,6 @@ const tocItems = [
 ];
 
 const BlogdetailAI2025 = () => {
-  const [filteredPosts, setFilteredPosts] = useState(blogPosts);
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
@@ -560,24 +530,6 @@ const BlogdetailAI2025 = () => {
       </section>
 
       <FaqSection faqs={blogAdvaceAi} />
-
-      <section className="related-blogs">
-        <div className="container">
-          <h2>Related Blogs</h2>
-          <div className="related-blog-grid">
-            {filteredPosts.map((post) => (
-              <div key={post.id} className="related-blog-card">
-                <img src={post.image} alt={post.title} />
-                <div className="related-blog-content">
-                  <span className="related-category">{post.category}</span>
-                  <h4>{post.title}</h4>
-                  <p className="related-date">{post.date}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 };

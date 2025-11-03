@@ -9,40 +9,12 @@ import {
 } from "react-icons/fa6";
 import { Helmet } from "react-helmet";
 import FaqSection from "../../shareable/faq";
-import er from "../../assets/images/erp.png";
-import gu from "../../assets/images/uxgui.png";
-import t8 from "../../assets/images/top8.png";
 import { blogSoftwarePros } from "../../shareable/faqData";
 import d1 from "../../assets/images/det01.png";
 import w2 from "../../assets/images/wfall02.jpg";
 import w3 from "../../assets/images/wagile03.jpg";
 
-const blogPosts = [
-  {
-    id: 1,
-    image: er,
-    category: "UI UX",
-    readTime: "14 MINUTES",
-    title: "Top 20 UI/UX Design Agencies in the USA - July 2025 Rankings",
-    date: "26 May, 2025",
-  },
-  {
-    id: 2,
-    image: gu,
-    category: "UI UX",
-    readTime: "14 MINUTES",
-    title: "8 Common Mistakes in UX User Flows to Avoid",
-    date: "26 May, 2025",
-  },
-  {
-    id: 3,
-    image: t8,
-    category: "UI UX",
-    readTime: "14 MINUTES",
-    title: "Top 8 Usability Testing Consultancy Agencies You Can Trust (2025)",
-    date: "26 May, 2025",
-  },
-];
+
 
 const tocItems = [
   { id: "introduction", label: "Introduction" },
@@ -75,7 +47,6 @@ const tocItems = [
 ];
 
 const Blogdetail = () => {
-  const [filteredPosts, setFilteredPosts] = useState(blogPosts);
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
@@ -548,26 +519,7 @@ const Blogdetail = () => {
           </div>
         </div>
       </section>
-
       <FaqSection faqs={blogSoftwarePros} />
-
-      <section className="related-blogs">
-        <div className="container">
-          <h2>Related Blogs</h2>
-          <div className="related-blog-grid">
-            {filteredPosts.map((post) => (
-              <div key={post.id} className="related-blog-card">
-                <img src={post.image} alt={post.title} />
-                <div className="related-blog-content">
-                  <span className="related-category">{post.category}</span>
-                  <h4>{post.title}</h4>
-                  <p className="related-date">{post.date}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 };

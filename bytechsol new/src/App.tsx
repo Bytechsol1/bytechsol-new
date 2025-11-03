@@ -28,6 +28,7 @@ import NotFound from "./components/404";
 import Blogdetail from "./components/About/BlogDetail";
 import Blogdetail2 from "./components/About/BlogDetail2";
 import Blogdetail3 from "./components/About/BlogDetail3";
+import Blogdetail4 from "./components/About/BlogDetail4";
 
 function AppShell() {
   const location = useLocation();
@@ -72,6 +73,7 @@ function AppShell() {
           <Route path="/blog/the-pros-and-cons-of-waterfall-software-development" element={<Blogdetail />} />
           <Route path="/blog/advanced-ai-systems-2025" element={<Blogdetail2/>} />
           <Route path="/blog/custom-web-solutions-digital-growth" element={<Blogdetail3/>} />
+          <Route path="/blog/ar-zone-app-features-benefits-download-android" element={<Blogdetail4/>} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
