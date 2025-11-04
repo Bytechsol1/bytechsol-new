@@ -44,7 +44,7 @@ const blogPosts = [
     id: 3,
     image: cw1,
     category: "Custom Web",
-    title: "Custom-Web-Solutions-Digital-Growth",
+    title: "Why Custom Web Solutions Are the Future of Digital Growth",
     date: "03 November, 2025",
     linkpath: "/blog/custom-web-solutions-digital-growth"
   },
