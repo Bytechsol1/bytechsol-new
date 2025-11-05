@@ -56,16 +56,15 @@ const blogPosts = [
     date: "04 November, 2025",
         linkpath: "/blog/ar-zone-app-features-benefits-download-android"
   },
-  // {
-  //   id: 5,
-  //   image: py,
-  //   category: "UI UX",
-  //   readTime: "14 MINUTES",
-  //   title: "What is UX Prototyping? Why DO You Need Consultancy?",
-  //   date: "26 May, 2025",
-  //       linkpath: "/blog"
-
-  // },
+  {
+    id: 5,
+    image: py,
+    category: "UI UX",
+    readTime: "14 MINUTES",
+    title: "What is UX Prototyping? Why DO You Need Consultancy?",
+    date: "26 May, 2025",
+        linkpath: "/blog/what-is-no-code-guide-2025"
+  },
   // {
   //   id: 6,
   //   image: d15,

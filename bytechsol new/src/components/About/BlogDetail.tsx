@@ -9,12 +9,42 @@ import {
 } from "react-icons/fa6";
 import { Helmet } from "react-helmet";
 import FaqSection from "../../shareable/faq";
+import tm from "../../assets/images/topmost.png"
+import cw1 from "../../assets/images/cweb01.jpg"
+import az1 from "../../assets/images/azone01.png"
 import { blogSoftwarePros } from "../../shareable/faqData";
 import d1 from "../../assets/images/det01.png";
 import w2 from "../../assets/images/wfall02.jpg";
 import w3 from "../../assets/images/wagile03.jpg";
 
+const blogPosts = [
 
+{
+    id: 2,
+    image: tm,
+    category: "AI ML",
+    title: "15 Most Advanced AI Systems in 2025 – Complete Overview",
+    date: "31 October, 2025",
+        linkpath: "/blog/advanced-ai-systems-2025"
+
+  },
+  {
+    id: 3,
+    image: cw1,
+    category: "Custom Web",
+    title: "Why Custom Web Solutions Are the Future of Digital Growth",
+    date: "03 November, 2025",
+    linkpath: "/blog/custom-web-solutions-digital-growth"
+  },
+  {
+    id: 4,
+    image: az1,
+    category: "UI UX",
+    title: "AR Zone App: Features, Benefits & How to Download for Android",
+    date: "04 November, 2025",
+        linkpath: "/blog/ar-zone-app-features-benefits-download-android"
+  },
+];
 
 const tocItems = [
   { id: "introduction", label: "Introduction" },
@@ -47,6 +77,7 @@ const tocItems = [
 ];
 
 const Blogdetail = () => {
+  const [filteredPosts, setFilteredPosts] = useState(blogPosts);
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
@@ -519,7 +550,26 @@ const Blogdetail = () => {
           </div>
         </div>
       </section>
+
       <FaqSection faqs={blogSoftwarePros} />
+
+      <section className="related-blogs">
+        <div className="container">
+          <h2>Related Blogs</h2>
+          <div className="related-blog-grid">
+            {filteredPosts.map((post) => (
+              <div key={post.id} className="related-blog-card">
+                <img src={post.image} alt={post.title} />
+                <div className="related-blog-content">
+                  <span className="related-category">{post.category}</span>
+                  <h4>{post.title}</h4>
+                  <p className="related-date">{post.date}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 };

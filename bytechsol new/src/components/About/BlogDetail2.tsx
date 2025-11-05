@@ -10,9 +10,39 @@ import {
 import { Helmet } from "react-helmet";
 import FaqSection from "../../shareable/faq";
 import { blogAdvaceAi, blogSoftwarePros } from "../../shareable/faqData";
-import tm from "../../assets/images/topmost.png"
 import ai from "../../assets/images/advai.png"
+import tm from "../../assets/images/topmost.png"
+import cw1 from "../../assets/images/cweb01.jpg"
+import az1 from "../../assets/images/azone01.png"
+import d1 from "../../assets/images/det01.png";
 
+
+const blogPosts = [
+  {
+    id: 1,
+    image: d1,
+    category: "Development",
+    title: "The Pros and Cons of Waterfall Software Development",
+    date: "28 October, 2025",
+    linkpath: "/blog/the-pros-and-cons-of-waterfall-software-development"
+  },
+  {
+    id: 3,
+    image: cw1,
+    category: "Custom Web",
+    title: "Why Custom Web Solutions Are the Future of Digital Growth",
+    date: "03 November, 2025",
+    linkpath: "/blog/custom-web-solutions-digital-growth"
+  },
+  {
+    id: 4,
+    image: az1,
+    category: "UI UX",
+    title: "AR Zone App: Features, Benefits & How to Download for Android",
+    date: "04 November, 2025",
+        linkpath: "/blog/ar-zone-app-features-benefits-download-android"
+  },
+];
 
 const tocItems = [
   { id: "introduction", label: "Introduction to Advanced AI Systems" },
@@ -26,6 +56,7 @@ const tocItems = [
 ];
 
 const BlogdetailAI2025 = () => {
+  const [filteredPosts, setFilteredPosts] = useState(blogPosts);
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
@@ -530,6 +561,23 @@ const BlogdetailAI2025 = () => {
       </section>
 
       <FaqSection faqs={blogAdvaceAi} />
+      <section className="related-blogs">
+        <div className="container">
+          <h2>Related Blogs</h2>
+          <div className="related-blog-grid">
+            {filteredPosts.map((post) => (
+              <div key={post.id} className="related-blog-card">
+                <img src={post.image} alt={post.title} />
+                <div className="related-blog-content">
+                  <span className="related-category">{post.category}</span>
+                  <h4>{post.title}</h4>
+                  <p className="related-date">{post.date}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 };

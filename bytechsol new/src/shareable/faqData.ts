@@ -929,3 +929,54 @@ export const blogCustomWeb = [
   },
 ];
 
+export const blogArZone = [
+  {
+    id: 1,
+    question: "What is the AR Zone App used for?",
+    answer:
+      "The AR Zone App enables users to make AR content like emojis, doodles, and stickers that combine virtual and actual images.",
+  },
+  {
+    id: 2,
+    question: "Is AR Zone available for all Android phones?",
+    answer:
+      "No. It is unique to Samsung devices, but there are other AR applications in Google Play on other Android phones.",
+  },
+  {
+    id: 3,
+    question: "How can I uninstall or hide the AR Zone App?",
+    answer:
+      "It cannot be completely uninstalled, but it can be disabled or removed from your list of applications through settings.",
+  },
+  {
+    id: 4,
+    question: "Do I need an internet connection to use AR Zone?",
+    answer:
+      "Most features work offline. But the updates or new stickers can only be downloaded with the help of the internet.",
+  },
+  {
+    id: 5,
+    question: "Can I share my AR Zone creations?",
+    answer:
+      "It is possible to save and share AR-created photos and videos on social networking platforms or messaging applications.",
+  },
+  {
+    id: 6,
+    question: "Which Samsung devices support the AR Zone App?",
+    answer:
+      "It’s available on Samsung Galaxy S, Note, and A series running Android 10 or higher.",
+  },
+  {
+    id: 7,
+    question: "Is AR Zone free to use?",
+    answer:
+      "Yes, it’s a completely free feature for Samsung users.",
+  },
+  {
+    id: 8,
+    question: "Can AR features be added to custom business apps?",
+    answer:
+      "Yes, Bytechsol can help businesses integrate AR in the product demos, training or engagement, which is what custom AR app development allows them to do.",
+  },
+];
+

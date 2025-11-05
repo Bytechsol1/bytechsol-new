@@ -61,7 +61,14 @@
   margin-bottom: 50px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-
+.blog-detail-image-4 {
+  width: 100%;
+  border-radius: 12px;
+  height: 700px;
+  object-fit: cover;
+  margin-bottom: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 @media (max-width: 768px) {
   .blog-detail-image {
     max-height: 300px;
@@ -70,6 +77,15 @@
 
 @media (max-width: 480px) {
   .blog-detail-image {
+    max-height: 220px;
+  }
+    .blog-detail-image-4 {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-detail-image-4 {
     max-height: 220px;
   }
 } 

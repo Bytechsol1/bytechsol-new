@@ -14,7 +14,36 @@ import cw1 from "../../assets/images/cweb01.jpg"
 import cw2 from "../../assets/images/cweb02.jpg"
 import cw3 from "../../assets/images/cweb03.jpg"
 import { blogCustomWeb, blogSoftwarePros } from "../../shareable/faqData";
+import tm from "../../assets/images/topmost.png"
+import d1 from "../../assets/images/det01.png";
+import az1 from "../../assets/images/azone01.png"
 
+const blogPosts = [
+  {
+    id: 1,
+    image: d1,
+    category: "Development",
+    title: "The Pros and Cons of Waterfall Software Development",
+    date: "28 October, 2025",
+    linkpath: "/blog/the-pros-and-cons-of-waterfall-software-development"
+  },
+  {
+    id: 2,
+    image: tm,
+    category: "AI ML",
+    title: "15 Most Advanced AI Systems in 2025 – Complete Overview",
+    date: "31 October, 2025",
+        linkpath: "/blog/advanced-ai-systems-2025"
+  },
+  {
+    id: 4,
+    image: az1,
+    category: "UI UX",
+    title: "AR Zone App: Features, Benefits & How to Download for Android",
+    date: "04 November, 2025",
+    linkpath: "/blog/ar-zone-app-features-benefits-download-android"
+  },
+];
 
 const tocItems = [
   { id: "introduction", label: "Introduction" },
@@ -28,6 +57,7 @@ const tocItems = [
 ];
 
 const Blogdetail3 = () => {
+  const [filteredPosts, setFilteredPosts] = useState(blogPosts);
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
@@ -310,6 +340,23 @@ const Blogdetail3 = () => {
       </section>
 
       <FaqSection faqs={blogCustomWeb} />
+      <section className="related-blogs">
+        <div className="container">
+          <h2>Related Blogs</h2>
+          <div className="related-blog-grid">
+            {filteredPosts.map((post) => (
+              <div key={post.id} className="related-blog-card">
+                <img src={post.image} alt={post.title} />
+                <div className="related-blog-content">
+                  <span className="related-category">{post.category}</span>
+                  <h4>{post.title}</h4>
+                  <p className="related-date">{post.date}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 };
