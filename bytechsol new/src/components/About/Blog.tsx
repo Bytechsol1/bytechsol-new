@@ -20,6 +20,7 @@ import {blogSoftwarePros} from "../../shareable/faqData"
 import tm from "../../assets/images/topmost.png"
 import cw1 from "../../assets/images/cweb01.jpg"
 import az1 from "../../assets/images/azone01.png"
+import n1 from "../../assets/images/ncode01.jpg"
 
 
 const blogPosts = [
@@ -51,18 +52,17 @@ const blogPosts = [
   {
     id: 4,
     image: az1,
-    category: "UI UX",
+    category: "Development",
     title: "AR Zone App: Features, Benefits & How to Download for Android",
     date: "04 November, 2025",
         linkpath: "/blog/ar-zone-app-features-benefits-download-android"
   },
   {
     id: 5,
-    image: py,
-    category: "UI UX",
-    readTime: "14 MINUTES",
-    title: "What is UX Prototyping? Why DO You Need Consultancy?",
-    date: "26 May, 2025",
+    image: n1,
+    category: "Development",
+    title: "What is No-Code? A Full Guide to No-Code for 2025",
+    date: "06 November, 2025",
         linkpath: "/blog/what-is-no-code-guide-2025"
   },
   // {
