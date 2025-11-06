@@ -225,7 +225,7 @@ const Blogdetail4 = () => {
               </div>
               <div className="blog-meta-item">
                 <h5>Author</h5>
-                <p>Bytechsol Editorial Team</p>
+                <p>Uknown</p>
               </div>
 
               <div className="blog-meta-item text-start">
