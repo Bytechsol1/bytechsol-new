@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /*.htm$
+Disallow: /404
+Allow: /
+Sitemap: https://bytechsol.com/sitemap.xml
