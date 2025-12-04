@@ -18,7 +18,7 @@ const Careers = () => {
     content="Grow your career with BytechSol! Join our team of developers, designers, and innovators building the future of digital technology."
   />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://bytechsol.com/Careers" />
+  <link rel="canonical" href="https://bytechsol.com/careers" />
 </Helmet>
 
       {/* 1st Section */}

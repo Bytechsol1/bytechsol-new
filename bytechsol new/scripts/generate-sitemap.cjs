@@ -18,9 +18,9 @@ const routes = [
   "/services/seo-service",
   "/services/web-app",
   "/services/website-design-and-development",
-  "/Blog",
-  "/Careers",
-  "/Contact",
+  "/blog",
+  "/careers",
+  "/contact",
 ];
 
 const publicDir = path.resolve(process.cwd(), "public");

@@ -6,9 +6,34 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "react-snap",
     "lint": "eslint .",
     "preview": "vite preview",
     "generate-sitemap": "node scripts/generate-sitemap.cjs"
+  },
+  "reactSnap": {
+    "include": [
+      "/",
+      "/about",
+      "/services",
+      "/services/website-design-and-development",
+      "/services/E-Commerce-solutions",
+      "/careers",
+      "/contact",
+      "/services/seo-service",
+      "/services/brand-building",
+      "/services/ERP-service",
+      "/services/odoo-services",
+      "/blog",
+      "/services/custom-web",
+      "/services/web-app",
+      "/services/Ai-Ml",
+      "/404"
+    ],
+    "puppeteerArgs": [
+      "--no-sandbox", 
+      "--disable-setuid-sandbox"
+    ]
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",
@@ -44,6 +69,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "react-snap": "^1.23.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",
     "vite": "^7.0.4"

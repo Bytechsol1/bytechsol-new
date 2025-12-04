@@ -26,10 +26,6 @@ import Aiml from "./components/Services/subservice/Aiml";
 import Development from "./components/Services/subservice/Development";
 import NotFound from "./components/404";
 import Blogdetail from "./components/About/BlogDetail";
-import Blogdetail2 from "./components/About/BlogDetail2";
-import Blogdetail3 from "./components/About/BlogDetail3";
-import Blogdetail4 from "./components/About/BlogDetail4";
-import Blogdetail5 from "./components/About/BlogDetail5";
 
 function AppShell() {
   const location = useLocation();
@@ -58,8 +54,8 @@ function AppShell() {
             element={<Development />}
           />
           <Route path="/services/E-Commerce-solutions" element={<Webecom />} />
-          <Route path="/Careers" element={<Careers />} />
-          <Route path="/Contact" element={<ContactUs />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route
             path="/services/seo-service"
             element={<FullStackExpertise />}
@@ -71,11 +67,7 @@ function AppShell() {
           <Route path="/services/custom-web" element={<CustomWeb />} />
           <Route path="/services/web-app" element={<WebApp />} />
           <Route path="/services/Ai-Ml" element={<Aiml />} />
-          <Route path="/blog/the-pros-and-cons-of-waterfall-software-development" element={<Blogdetail />} />
-          <Route path="/blog/advanced-ai-systems-2025" element={<Blogdetail2/>} />
-          <Route path="/blog/custom-web-solutions-digital-growth" element={<Blogdetail3/>} />
-          <Route path="/blog/ar-zone-app-features-benefits-download-android" element={<Blogdetail4/>} />
-          <Route path="/blog/what-is-no-code-guide-2025" element={<Blogdetail5/>} />
+          <Route path="/blog/:slug" element={<Blogdetail />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
