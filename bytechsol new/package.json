@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "generate-sitemap": "node scripts/generate-sitemap.cjs"
   },
-  "reactSnap": {
+"reactSnap": {
     "include": [
       "/",
       "/about",
@@ -25,17 +25,19 @@
       "/services/ERP-service",
       "/services/odoo-services",
       "/blog",
+      "/services/custom-web",
+      "/services/web-app",
+      "/services/Ai-Ml",
+      "/404",
       "/blog/the-pros-and-cons-of-waterfall-software-development",
       "/blog/advanced-ai-systems-2025",
       "/blog/custom-web-solutions-digital-growth",
       "/blog/ar-zone-app-features-benefits-how-to-download-for-android",
       "/blog/no-code-development-2025-guide",
-      "/blog/top-benefits-of-using-odoo-erp-for-business-automation",
-      "/services/custom-web",
-      "/services/web-app",
-      "/services/Ai-Ml",
-      "/404"
+      "/blog/top-benefits-of-using-odoo-erp-for-business-automation"
     ],
+    "source": "dist", 
+    "destination": "dist", 
     "puppeteerArgs": [
       "--no-sandbox", 
       "--disable-setuid-sandbox"
