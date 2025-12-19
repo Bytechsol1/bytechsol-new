@@ -111,7 +111,6 @@ const Blog = () => {
         </div>
       </section>
       <NewCon />
-      <FaqSection faqs={blogSoftwarePros} />
     </>
   );
 };

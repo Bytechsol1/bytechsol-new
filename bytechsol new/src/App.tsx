@@ -1,5 +1,4 @@
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
   useLocation,
@@ -27,7 +26,9 @@ import Development from "./components/Services/subservice/Development";
 import NotFound from "./components/404";
 import Blogdetail from "./components/About/BlogDetail";
 
-function AppShell() {
+// We simply export the component logic. 
+// The Router will be provided by index.js (Client) or server.js (Server)
+export default function App() {
   const location = useLocation();
   const theme = getNavThemeForPath(location.pathname);
 
@@ -49,17 +50,11 @@ function AppShell() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route
-            path="/services/website-design-and-development"
-            element={<Development />}
-          />
+          <Route path="/services/website-design-and-development" element={<Development />} />
           <Route path="/services/E-Commerce-solutions" element={<Webecom />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route
-            path="/services/seo-service"
-            element={<FullStackExpertise />}
-          />
+          <Route path="/services/seo-service" element={<FullStackExpertise />} />
           <Route path="/services/brand-building" element={<ProductDesign />} />
           <Route path="/services/ERP-service" element={<SaasDesign />} />
           <Route path="/services/odoo-services" element={<OdooServices />} />
@@ -68,19 +63,10 @@ function AppShell() {
           <Route path="/services/web-app" element={<WebApp />} />
           <Route path="/services/Ai-Ml" element={<Aiml />} />
           <Route path="/blog/:slug" element={<Blogdetail />} />
-
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <Footer />
     </>
-  );
-}
-
-export default function App() {
-  return (
-    <Router>
-      <AppShell />
-    </Router>
   );
 }
