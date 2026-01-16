@@ -117,7 +117,7 @@ useEffect(() => {
   <meta name="robots" content="index, follow" />
   <link
     rel="canonical"
-    href="https://bytechsol.com/services/brand-building"
+    href="https://bytechsol.com/services/brand-building/"
   />
 </Helmet>
 

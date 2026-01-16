@@ -57,7 +57,7 @@ const About: React.FC = () => {
     content="Learn about BytechSol — a tech-driven company focused on delivering innovative, scalable, and performance-oriented software solutions."
   />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://bytechsol.com/about" />
+  <link rel="canonical" href="https://bytechsol.com/about/" />
 </Helmet>
 
       {/* 1st Section */}

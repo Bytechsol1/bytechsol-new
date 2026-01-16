@@ -37,7 +37,7 @@ const CustomWeb: React.FC = () => {
   <meta name="robots" content="index, follow" />
   <link
     rel="canonical"
-    href="https://bytechsol.com/services/custom-web"
+    href="https://bytechsol.com/services/custom-web/"
   />
 </Helmet>
 

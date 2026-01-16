@@ -90,7 +90,7 @@ const services = [
     ],
     image: ecm,
     bgImage: ecmbg,
-    pagepath: "/services/E-Commerce-solutions",
+    pagepath: "/services/e-commerce-solutions",
   },
   {
     id: 5,
@@ -131,7 +131,7 @@ const services = [
     bullets: ["AI/ML / LLM / NLP Solutions", "AI Chatbots & Voice Assistants"],
     image: aml,
     bgImage: amlbg,
-    pagepath: "/services/Ai-Ml",
+    pagepath: "/services/ai-ml",
   },
   {
     id: 8,
@@ -148,7 +148,7 @@ const services = [
     ],
     image: erp,
     bgImage: erpbg,
-    pagepath: "/services/ERP-service",
+    pagepath: "/services/erp-service",
   },
   {
     id: 9,

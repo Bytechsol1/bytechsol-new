@@ -38,7 +38,7 @@ const Webecom: React.FC = () => {
   <meta name="robots" content="index, follow" />
   <link
     rel="canonical"
-    href="https://bytechsol.com/services/E-Commerce-solutions"
+    href="https://bytechsol.com/services/e-commerce-solutions/"
   />
 </Helmet>
 

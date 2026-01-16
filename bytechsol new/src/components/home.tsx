@@ -73,7 +73,7 @@ const services = [
     image: o1,
     path: "/services/odoo-services",
   },
-  { id: 4, title: "AI / ML", image: am, path: "/services/Ai-Ml" },
+  { id: 4, title: "AI / ML", image: am, path: "/services/ai-ml" },
 ];
 
 const topImages = [Top1, Top2, Top3, hm1];

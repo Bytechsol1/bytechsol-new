@@ -126,7 +126,7 @@ useEffect(() => {
     content="From SaaS platforms to interactive dashboards — BytechSol builds secure and high-performance web applications that drive business results."
   />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://bytechsol.com/services/web-app" />
+  <link rel="canonical" href="https://bytechsol.com/services/web-app/" />
 </Helmet>
 
       {/* Hero Section */}

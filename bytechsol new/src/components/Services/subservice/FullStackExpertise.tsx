@@ -90,7 +90,7 @@ const ContactUs = () => {
   <meta name="robots" content="index, follow" />
   <link
     rel="canonical"
-    href="https://bytechsol.com/services/seo-service"
+    href="https://bytechsol.com/services/seo-service/"
   />
 </Helmet>
 

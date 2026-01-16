@@ -90,7 +90,7 @@ const SaasDesign = () => {
   <meta name="robots" content="index, follow" />
   <link
     rel="canonical"
-    href="https://bytechsol.com/services/ERP-service"
+    href="https://bytechsol.com/services/erp-service/"
   />
 </Helmet>
 

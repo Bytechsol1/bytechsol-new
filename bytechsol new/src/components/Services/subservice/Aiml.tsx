@@ -37,7 +37,7 @@ const AimlSection = () => {
     content="Innovate with BytechSol’s AI and ML solutions — intelligent automation, predictive analytics, and custom algorithms for smarter business decisions."
   />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://bytechsol.com/services/Ai-Ml" />
+  <link rel="canonical" href="https://bytechsol.com/services/ai-ml/" />
 </Helmet>
 
       {/* 1st Section */}
