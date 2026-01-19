@@ -9,20 +9,20 @@ const distPath = path.resolve(__dirname, 'dist');
 // Routes to pre-render (Matches your sitemap)
 const routes = [
   '/',
-  '/about',
-  '/services',
-  '/services/ai-ml',
-  '/services/e-commerce-solutions',
-  '/services/erp-service',
-  '/services/brand-building',
-  '/services/custom-web',
-  '/services/odoo-services',
-  '/services/seo-service',
-  '/services/web-app',
-  '/services/website-design-and-development',
-  '/blog',
-  '/careers',
-  '/contact'
+  '/about/',
+  '/services/',
+  '/services/ai-ml/',
+  '/services/e-commerce-solutions/',
+  '/services/erp-service/',
+  '/services/brand-building/',
+  '/services/custom-web/',
+  '/services/odoo-services/',
+  '/services/seo-service/',
+  '/services/web-app/',
+  '/services/website-design-and-development/',
+  '/blog/',
+  '/careers/',
+  '/contact/'
 ];
 
 async function prerender() {

@@ -38,7 +38,7 @@ const services = [
     ],
     image: odo,
     bgImage: odobg,
-    pagepath: "/services/odoo-services",
+    pagepath: "/services/odoo-services/",
   },
 
   {
@@ -56,7 +56,7 @@ const services = [
     ],
     image: cmsser,
     bgImage: cmsbg,
-    pagepath: "/services/custom-web",
+    pagepath: "/services/custom-web/",
   },
   {
     id: 3,
@@ -73,7 +73,7 @@ const services = [
     ],
     image: wb,
     bgImage: webbg,
-    pagepath: "/services/web-app",
+    pagepath: "/services/web-app/",
   },
   {
     id: 4,
@@ -90,7 +90,7 @@ const services = [
     ],
     image: ecm,
     bgImage: ecmbg,
-    pagepath: "/services/e-commerce-solutions",
+    pagepath: "/services/e-commerce-solutions/",
   },
   {
     id: 5,
@@ -105,7 +105,7 @@ const services = [
     ],
     image: br,
     bgImage: brbg,
-    pagepath: "/services/brand-building",
+    pagepath: "/services/brand-building/",
   },
   {
     id: 6,
@@ -120,7 +120,7 @@ const services = [
     ],
     image: seo,
     bgImage: seobg,
-    pagepath: "/services/seo-service",
+    pagepath: "/services/seo-service/",
   },
   {
     id: 7,
@@ -131,7 +131,7 @@ const services = [
     bullets: ["AI/ML / LLM / NLP Solutions", "AI Chatbots & Voice Assistants"],
     image: aml,
     bgImage: amlbg,
-    pagepath: "/services/ai-ml",
+    pagepath: "/services/ai-ml/",
   },
   {
     id: 8,
@@ -148,7 +148,7 @@ const services = [
     ],
     image: erp,
     bgImage: erpbg,
-    pagepath: "/services/erp-service",
+    pagepath: "/services/erp-service/",
   },
   {
     id: 9,
@@ -165,7 +165,7 @@ const services = [
     ],
     image: web,
     bgImage: ecb,
-    pagepath: "/services/website-design-and-development",
+    pagepath: "/services/website-design-and-development/",
   },
 ];
 

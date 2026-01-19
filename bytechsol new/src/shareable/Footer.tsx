@@ -35,28 +35,28 @@ const Footer: React.FC = () => {
               marketing.
             </p>
 
-            <Link className="deck-button" to="/contact">
+            <Link className="deck-button" to="/contact/">
               Contact Us <i className="bi bi-arrow-up-right"></i>
             </Link>
           </div>
           <div className="col-md-1 d-none d-md-block"></div>
           {/* Services */}
           <div className="col-6 col-md-2">
-             <Link to="/services" className="service-link"><h6 className="footer-heading">Services</h6></Link>
+             <Link to="/services/" className="service-link"><h6 className="footer-heading">Services</h6></Link>
             <ul className="footer-links">
-              <Link to="/services/web-app">
+              <Link to="/services/web-app/">
                 <li>Web App</li>
               </Link>
-              <Link to="/services/seo-service">
+              <Link to="/services/seo-service/">
                 <li>SEO Service</li>
               </Link>
-              <Link to="/services/brand-building">
+              <Link to="/services/brand-building/">
                 <li>Brand Building</li>
               </Link>
-              <Link to="/services/erp-service">
+              <Link to="/services/erp-service/">
                 <li>ERP Service</li>
               </Link>
-              <Link to="/services/website-design-and-development">
+              <Link to="/services/website-design-and-development/">
                 <li>Website Design & Development</li>
               </Link>
             </ul>
@@ -65,16 +65,16 @@ const Footer: React.FC = () => {
           {/* Additional Services */}
           <div className="col-6 col-md-2">
             <ul className="footer-links mt-md-4 pt-md-2">
-              <Link to="/services/e-commerce-solutions">
+              <Link to="/services/e-commerce-solutions/">
                 <li>E-Commerce Solutions</li>
               </Link>
-              <Link to="/services/odoo-services">
+              <Link to="/services/odoo-services/">
                 <li>Odoo Services</li>
               </Link>
-              <Link to="/services/ai-ml">
+              <Link to="/services/ai-ml/">
                 <li>AI / ML</li>
               </Link>
-              <Link to="/services/custom-web">
+              <Link to="/services/custom-web/">
                 <li>Custom Web</li>
               </Link>
             </ul>
@@ -84,16 +84,16 @@ const Footer: React.FC = () => {
           <div className="col-6 col-md-2">
             <h6 className="footer-heading">Quick Links</h6>
             <ul className="footer-links">
-              <Link to="/about">
+              <Link to="/about/">
                 <li>About</li>
               </Link>
-              <Link to="/blog">
+              <Link to="/blog/">
                 <li>Blog</li>
               </Link>
-              <Link to="/careers">
+              <Link to="/careers/">
                 <li>Career</li>
               </Link>
-              <Link to="/contact">
+              <Link to="/contact/">
                 <li>Contact Us</li>
               </Link>
             </ul>

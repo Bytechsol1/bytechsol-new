@@ -22,7 +22,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/about": {
+  "/about/": {
     logoIconSrc: Logo,
     logoTextSrc: LogoText,
     navClassName: "",
@@ -34,7 +34,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/services": {
+  "/services/": {
     logoIconSrc: Logo,
     logoTextSrc: LogoText,
     navClassName: "",
@@ -46,7 +46,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/services/website-design-and-development": {
+  "/services/website-design-and-development/": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
@@ -58,7 +58,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/blog": {
+  "/blog/": {
     logoIconSrc: Logo,
     logoTextSrc: LogoText,
     navClassName: "",
@@ -70,7 +70,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/contact": {
+  "/contact/": {
     logoIconSrc: Logo,
     logoTextSrc: LogoText,
     navClassName: "",
@@ -82,7 +82,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/services/seo-service": {
+  "/services/seo-service/": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
@@ -94,7 +94,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/services/brand-building": {
+  "/services/brand-building/": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
@@ -106,7 +106,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/services/erp-service": {
+  "/services/erp-service/": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
@@ -118,7 +118,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/services/odoo-services": {
+  "/services/odoo-services/": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
@@ -139,7 +139,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     buttonSchemeClass: "btn-scheme--custom",
     sticky: true,
   },
-  "/services/web-app": {
+  "/services/web-app/": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
@@ -150,7 +150,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     buttonSchemeClass: "btn-scheme--custom",
     sticky: true,
   },
-  "/services/ai-ml": {
+  "/services/ai-ml/": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
@@ -161,7 +161,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     sticky: true,
   },
 
-  "/services/custom-web": {
+  "/services/custom-web/": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",
@@ -171,7 +171,7 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
     buttonSchemeClass: "btn-scheme--web",
     sticky: true,
   },
-  "/services/e-commerce-solutions": {
+  "/services/e-commerce-solutions/": {
     logoIconSrc: LogoWhite,
     logoTextSrc: LogoTextWhite,
     navClassName: "",

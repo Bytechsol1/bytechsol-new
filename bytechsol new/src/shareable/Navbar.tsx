@@ -88,22 +88,22 @@ const Navbar: React.FC<NavbarProps> = ({
           >
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className={`nav-link ${linkClassName}`} href="/services">
+                <a className={`nav-link ${linkClassName}`} href="/services/">
                   Services
                 </a>
               </li>
               <li className="nav-item">
-                <Link className={`nav-link ${linkClassName}`} to="/about">
+                <Link className={`nav-link ${linkClassName}`} to="/about/">
                   About
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className={`nav-link ${linkClassName}`} to="/blog">
+                <Link className={`nav-link ${linkClassName}`} to="/blog/">
                   Blog
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className={`nav-link ${linkClassName}`} to="/careers">
+                <Link className={`nav-link ${linkClassName}`} to="/careers/">
                   Careers
                 </Link>
               </li>
@@ -111,7 +111,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
             <Link
               className={`btn contact-btn ${buttonClassName} ${buttonSchemeClass}`}
-              to="/contact"
+              to="/contact/"
               data-aos="fade-left"
             >
               <span className="btn-label">

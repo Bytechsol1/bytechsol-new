@@ -64,16 +64,16 @@ const services = [
     id: 1,
     title: "Web development",
     image: wb2,
-    path: "/services/website-design-and-development",
+    path: "/services/website-design-and-development/",
   },
-  { id: 2, title: "Marketing", image: bd2, path: "/services/brand-building" },
+  { id: 2, title: "Marketing", image: bd2, path: "/services/brand-building/" },
   {
     id: 3,
     title: "Odoo & Custom ERPs",
     image: o1,
-    path: "/services/odoo-services",
+    path: "/services/odoo-services/",
   },
-  { id: 4, title: "AI / ML", image: am, path: "/services/ai-ml" },
+  { id: 4, title: "AI / ML", image: am, path: "/services/ai-ml/" },
 ];
 
 const topImages = [Top1, Top2, Top3, hm1];

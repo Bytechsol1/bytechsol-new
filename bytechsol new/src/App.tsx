@@ -48,20 +48,20 @@ export default function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/website-design-and-development" element={<Development />} />
-          <Route path="/services/e-commerce-solutions" element={<Webecom />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/services/seo-service" element={<FullStackExpertise />} />
-          <Route path="/services/brand-building" element={<ProductDesign />} />
-          <Route path="/services/erp-service" element={<SaasDesign />} />
-          <Route path="/services/odoo-services" element={<OdooServices />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/services/custom-web" element={<CustomWeb />} />
-          <Route path="/services/web-app" element={<WebApp />} />
-          <Route path="/services/ai-ml" element={<Aiml />} />
+          <Route path="/about/" element={<About />} />
+          <Route path="/services/" element={<Services />} />
+          <Route path="/services/website-design-and-development/" element={<Development />} />
+          <Route path="/services/e-commerce-solutions/" element={<Webecom />} />
+          <Route path="/careers/" element={<Careers />} />
+          <Route path="/contact/" element={<ContactUs />} />
+          <Route path="/services/seo-service/" element={<FullStackExpertise />} />
+          <Route path="/services/brand-building/" element={<ProductDesign />} />
+          <Route path="/services/erp-service/" element={<SaasDesign />} />
+          <Route path="/services/odoo-services/" element={<OdooServices />} />
+          <Route path="/blog/" element={<Blog />} />
+          <Route path="/services/custom-web/" element={<CustomWeb />} />
+          <Route path="/services/web-app/" element={<WebApp />} />
+          <Route path="/services/ai-ml/" element={<Aiml />} />
           <Route path="/blog/:slug" element={<Blogdetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
