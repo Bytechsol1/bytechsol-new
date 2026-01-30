@@ -28,12 +28,13 @@ import Blogdetail from "./components/About/BlogDetail";
 import { ThemeProvider } from "./components/Portfolio/ThemeContext";
 import { PortfolioPage } from "./components/Portfolio/PortfolioPage";
 
-// Portal Components Removed for Production Push
+// Portal Components Removed
 // import PortalLayout from "./components/Portal/PortalLayout";
 // import Dashboard from "./components/Portal/Dashboard";
 // import PortfolioManager from "./components/Portal/PortfolioManager";
 // import SEOManager from "./components/Portal/SEOManager";
 // import PageEditor from "./components/Portal/PageEditor";
+
 // import Login from "./components/Portal/Login";
 // import RequireAuth from "./components/Portal/RequireAuth";
 
@@ -43,8 +44,8 @@ export default function App() {
   const location = useLocation();
   const theme = getNavThemeForPath(location.pathname);
 
-  // Check if we are in the Portal
-  const isPortal = location.pathname.startsWith('/portal');
+  // Portal logic removed
+  const isPortal = false;
 
   return (
     <>

@@ -1,10 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from './ThemeContext';
 import { ArrowUpRight } from 'lucide-react';
 import { ImageWithFallback } from './ImageWithFallback';
 import "../../assets/components-css/Services.css";
 import FaqSection from "../../shareable/faq";
+
+// Import Data Directly
+import portfolioData from '../../data/portfolioData.json';
+import siteDataLib from '../../data/siteData.json';
 
 interface Project {
     id: string;
@@ -14,13 +18,6 @@ interface Project {
     link: string;
     description: string;
     tags: string[];
-}
-
-interface CMSPageData {
-    hero: {
-        title: string;
-        description: string;
-    };
 }
 
 const faqItems = [
@@ -44,48 +41,25 @@ const faqItems = [
 export const PortfolioPage = () => {
     const { theme } = useTheme();
     const [filter, setFilter] = useState('All');
-    const [projects, setProjects] = useState<Project[]>([]);
-    const [cmsData, setCmsData] = useState<CMSPageData | null>(null);
-    const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const [projRes, siteRes] = await Promise.all([
-                    fetch('/api/cms/portfolio'),
-                    fetch('/api/cms/site')
-                ]);
-                const projData = await projRes.json();
-                const siteData = await siteRes.json();
-
-                setProjects(projData.portfolio || []);
-                setCmsData(siteData.pages.portfolio || null);
-            } catch (err) {
-                console.error("Failed to fetch CMS data:", err);
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchData();
-    }, []);
+    // Load initial state from imports
+    const projects: Project[] = portfolioData.portfolio || [];
+    const pageData = siteDataLib.pages.portfolio;
+    const heroContent = pageData?.sections?.find((s: any) => s.id === 'hero')?.content;
 
     const categories = ['All', ...new Set(projects.map(p => p.category))];
     const filteredProjects = filter === 'All'
         ? projects
         : projects.filter(p => p.category === filter);
 
-    const heroTitle = cmsData?.hero?.title || "OUR PORTFOLIO";
-    const heroDesc = cmsData?.hero?.description || "A curated showcase of digital excellence. We turn complex ideas into high-performance products that set new industry standards.";
+    const heroTitle = heroContent?.title || "OUR PORTFOLIO";
+    const heroDesc = heroContent?.description || "A curated showcase of digital excellence. We turn complex ideas into high-performance products that set new industry standards.";
 
     const titleParts = heroTitle.split(" ");
     const word1 = titleParts[0] || "OUR";
     const word2 = titleParts[1] || "PORTFOLIO";
 
-    if (loading) return (
-        <div className="min-h-screen bg-white flex items-center justify-center">
-            <div className="w-12 h-12 border-4 border-blue-600/30 border-t-blue-600 rounded-full animate-spin" />
-        </div>
-    );
+
 
     return (
         <main className={`min-h-screen ${theme === 'dark' ? 'bg-[#0a0a0a] text-white' : 'bg-white text-slate-900'}`}>

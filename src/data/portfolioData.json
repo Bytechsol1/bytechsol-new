@@ -1,11 +1,11 @@
 {
     "portfolio": [
         {
-            "id": "bellroy-1",
+            "id": "bellroy",
             "title": "Bellroy",
             "category": "Custom Web Solution",
             "image": "/assets/portfolio/custom-web-solution/bellroy.png",
-            "link": "https://bellroy.com/",
+            "link": "#",
             "description": "Premium lifestyle brand experience built for high-scale conversion.",
             "tags": [
                 "Next.js",
@@ -14,16 +14,211 @@
             ]
         },
         {
-            "id": "bouqs-2",
+            "id": "bouqs",
             "title": "Bouqs",
             "category": "Custom Web Solution",
             "image": "/assets/portfolio/custom-web-solution/bouqs.png",
-            "link": "https://bouqs.com/",
+            "link": "#",
             "description": "Flower delivery service with a focus on fresh, farm-direct blooms.",
             "tags": [
                 "React",
                 "E-commerce",
                 "UX"
+            ]
+        },
+        {
+            "id": "bricklink",
+            "title": "BrickLink",
+            "category": "Custom Web Solution",
+            "image": "/assets/portfolio/custom-web-solution/bricklink.png",
+            "link": "#",
+            "description": "The world's largest online marketplace for LEGO parts and sets.",
+            "tags": [
+                "Marketplace",
+                "Community",
+                "Scale"
+            ]
+        },
+        {
+            "id": "crutchfield",
+            "title": "Crutchfield",
+            "category": "Custom Web Solution",
+            "image": "/assets/portfolio/custom-web-solution/crutchfield.png",
+            "link": "#",
+            "description": "Electronics retailer with a focus on deep technical guidance and user education.",
+            "tags": [
+                "Retail",
+                "Guidance",
+                "Tech"
+            ]
+        },
+        {
+            "id": "petlabco",
+            "title": "PetLab Co.",
+            "category": "Custom Web Solution",
+            "image": "/assets/portfolio/custom-web-solution/petlabco.png",
+            "link": "#",
+            "description": "Leading pet health and wellness brand with high-performance web solutions.",
+            "tags": [
+                "Wellness",
+                "DTC",
+                "Growth"
+            ]
+        },
+        {
+            "id": "realerestate",
+            "title": "Realer Estate",
+            "category": "Custom Web Solution",
+            "image": "/assets/portfolio/custom-web-solution/realerestate.png",
+            "link": "#",
+            "description": "Modern real estate platform connecting buyers and sellers efficiently.",
+            "tags": [
+                "Real Estate",
+                "Platform",
+                "Map"
+            ]
+        },
+        {
+            "id": "trulia",
+            "title": "Trulia",
+            "category": "Custom Web Solution",
+            "image": "/assets/portfolio/custom-web-solution/trulia.png",
+            "link": "#",
+            "description": "Real estate mobile and web application for home search and insights.",
+            "tags": [
+                "Real Estate",
+                "Search",
+                "Mobile"
+            ]
+        },
+        {
+            "id": "luxedh",
+            "title": "LuxeDH",
+            "category": "Shopify",
+            "image": "/assets/portfolio/shopify/luxedh.png",
+            "link": "#",
+            "description": "Luxury designer handbags and accessories with a focus on premium aesthetics.",
+            "tags": [
+                "Shopify",
+                "Fashion",
+                "Luxury"
+            ]
+        },
+        {
+            "id": "anewproject",
+            "title": "A New Project",
+            "category": "Squarespace",
+            "image": "/assets/portfolio/squarespace/anewproject.jpg",
+            "link": "#",
+            "description": "Clean and minimalist portfolio site for creative professionals.",
+            "tags": [
+                "Squarespace",
+                "Creative",
+                "Portfolio"
+            ]
+        },
+        {
+            "id": "coresurvival",
+            "title": "Core Survival",
+            "category": "Squarespace",
+            "image": "/assets/portfolio/squarespace/coresurvival.jpg",
+            "link": "#",
+            "description": "Tactical lighting solutions website with a rugged, functional design.",
+            "tags": [
+                "Squarespace",
+                "Industrial",
+                "Gear"
+            ]
+        },
+        {
+            "id": "haircuttery",
+            "title": "Hair Cuttery",
+            "category": "WordPress",
+            "image": "/assets/portfolio/wordpress/haircuttery.jpg",
+            "link": "#",
+            "description": "Full-service salon chain website with booking integration.",
+            "tags": [
+                "WordPress",
+                "Booking",
+                "Salon"
+            ]
+        },
+        {
+            "id": "ledger",
+            "title": "Ledger",
+            "category": "WordPress",
+            "image": "/assets/portfolio/wordpress/ledger.jpg",
+            "link": "#",
+            "description": "Construction and infrastructure company portfolio.",
+            "tags": [
+                "WordPress",
+                "Corporate",
+                "B2B"
+            ]
+        },
+        {
+            "id": "nativesoul",
+            "title": "Native Soul",
+            "category": "WordPress",
+            "image": "/assets/portfolio/wordpress/nativesoul.jpg",
+            "link": "#",
+            "description": "Lifestyle and wellness blog with a serene, nature-inspired design.",
+            "tags": [
+                "WordPress",
+                "Blog",
+                "Lifestyle"
+            ]
+        },
+        {
+            "id": "noagentproperty",
+            "title": "No Agent Property",
+            "category": "WordPress",
+            "image": "/assets/portfolio/wordpress/noagentproperty.jpg",
+            "link": "#",
+            "description": "Real estate sales platform for private sellers.",
+            "tags": [
+                "WordPress",
+                "Real Estate",
+                "Listing"
+            ]
+        },
+        {
+            "id": "owner",
+            "title": "Owner",
+            "category": "WordPress",
+            "image": "/assets/portfolio/wordpress/owner.jpg",
+            "link": "#",
+            "description": "Restaurant marketing and website platform.",
+            "tags": [
+                "WordPress",
+                "SaaS",
+                "Marketing"
+            ]
+        },
+        {
+            "id": "perfectketo",
+            "title": "Perfect Keto",
+            "category": "WordPress",
+            "image": "/assets/portfolio/wordpress/perfectketo.jpg",
+            "link": "#",
+            "description": "Health and nutrition e-commerce site with educational content.",
+            "tags": [
+                "WordPress",
+                "Health",
+                "Content"
+            ]
+        },
+        {
+            "id": "salesbyhomeowner",
+            "title": "Sales By Homeowner",
+            "category": "WordPress",
+            "image": "/assets/portfolio/wordpress/salesbyhomeowner.jpg",
+            "link": "#",
+            "description": "Property listing site empowering homeowners to sell directly.",
+            "tags": [
+                "WordPress",
+                "Directory",
+                "Sales"
             ]
         }
     ]
