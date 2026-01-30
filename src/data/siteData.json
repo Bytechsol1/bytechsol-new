@@ -1,0 +1,81 @@
+{
+    "pages": {
+        "home": {
+            "label": "Home Page",
+            "sections": [
+                {
+                    "id": "hero",
+                    "label": "Hero Section",
+                    "content": {
+                        "heading": "Global Software Agency & Digital Partner for",
+                        "animatedText": [
+                            "Next Gen Startups",
+                            "Enterprises",
+                            "Visionaries"
+                        ],
+                        "subheading": "We craft scalable, user-focused digital solutions for startups and enterprises. From concept to code, we deliver results that fuel growth.",
+                        "primaryButton": "Book a strategy call",
+                        "secondaryButton": "Get a custom quote"
+                    }
+                },
+                {
+                    "id": "about_preview",
+                    "label": "Who We Are Preview",
+                    "content": {
+                        "subheading": "(WHO WE ARE)",
+                        "description": "Bytechsol is a software agency built for modern businesses. We specialize in web development, mobile apps, and custom software, designed to help companies thrive in a fast-paced digital world."
+                    }
+                }
+            ]
+        },
+        "services": {
+            "label": "Main Services Page",
+            "sections": [
+                {
+                    "id": "hero",
+                    "label": "Hero Section",
+                    "content": {
+                        "title": "OUR SERVICES",
+                        "description": "At Bytechsol, we create beautiful websites, interactive eCommerce applications, intelligent ERP platforms, AI-driven applications, and tailored software to suit the needs of every company, startup, creative, and individual user."
+                    }
+                }
+            ]
+        },
+        "portfolio": {
+            "label": "Portfolio Page",
+            "sections": [
+                {
+                    "id": "hero",
+                    "label": "Hero Section",
+                    "content": {
+                        "title": "OUR PORTFOLIO",
+                        "description": "A curated showcase of digital excellence. We turn complex ideas into high-performance products that set new industry standards."
+                    }
+                }
+            ]
+        },
+        "development": {
+            "label": "Sub: Web Development",
+            "sections": [
+                {
+                    "id": "hero",
+                    "label": "Hero Section",
+                    "content": {
+                        "title": "Website Design & Development",
+                        "description": "Bytechsol is an organization that provides professional web development and web design services optimized for search engines, mobile-friendliness, and responsiveness. We design e-commerce stores, business websites, and landing pages to generate traffic, interest, and convert the viewers into loyal customers.",
+                        "buttonText": "Start your website project today",
+                        "image": "/assets/images/light.png"
+                    }
+                },
+                {
+                    "id": "intro",
+                    "label": "Intro Section",
+                    "content": {
+                        "title": "Turning Your Ideas Into Something Real",
+                        "paragraph": "All great digital initiatives begin with a spark, a concept, a challenge, or perhaps a spark of a what-if thought. We are not the traditional web designers that build websites or applications… we help you create your vision in a way that feels natural to you and memorable to your users."
+                    }
+                }
+            ]
+        }
+    }
+}

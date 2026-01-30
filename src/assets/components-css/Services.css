@@ -5,6 +5,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Guminert";
   src: url("/Fonts/Guminert Medium.ttf") format("truetype");
@@ -28,6 +29,7 @@
   margin: 0 auto;
   gap: 40px;
 }
+
 .dg-products-container1 {
   display: flex;
   justify-content: space-between;
@@ -35,6 +37,7 @@
   margin: 0 auto;
   gap: 40px;
 }
+
 .dg-products-content {
   flex: 1;
   min-width: 50%;
@@ -160,7 +163,7 @@
   color: #000;
   margin-bottom: 20px;
   text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease; 
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .webdesign-desc {
@@ -259,31 +262,38 @@
   color: #000;
   margin-bottom: 20px;
   text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease; 
+  transition: transform 0.3s ease, color 0.3s ease;
 }
+
 a {
   text-decoration: none;
 }
+
 .webdesign-heading1:hover {
-  transform: scale(1.05); 
-  color: #000; 
-}
-.webdesign-heading:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
   color: #000;
 }
+
+.webdesign-heading:hover {
+  transform: scale(1.05);
+  color: #000;
+}
+
 .webdesign-heading1:hover img.arr {
   transform: rotate(-45deg);
 }
+
 .webdesign-heading:hover img.arr {
   transform: rotate(-45deg);
 }
+
 .webdesign-desc1 {
   font-size: 16px;
   color: #444;
   line-height: 1.7;
   max-width: 550px;
 }
+
 .webdesign-accordion1 {
   margin-top: 30px;
 }
@@ -350,6 +360,7 @@ a {
   .webdesign-img1 {
     margin-bottom: 30px;
   }
+
   .webdesign-img {
     max-height: 250px;
     object-fit: cover;
@@ -570,6 +581,7 @@ a {
     width: 100%;
   }
 }
+
 @media (max-width: 1300px) {
   .industry-flex-grid {
     justify-content: space-between;
@@ -678,5 +690,93 @@ a {
     margin: -0.5rem auto 0;
     margin-left: 12px;
     height: 300px;
+  }
+}
+
+/* Staggered Heading Styles */
+.staggered-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4rem 0;
+}
+
+.staggered-our {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #289ed8;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: -1rem;
+}
+
+.staggered-line {
+  height: 2px;
+  width: 150px;
+  background: #289ed8;
+  opacity: 0.5;
+}
+
+.staggered-text-1 {
+  font-size: clamp(80px, 15vw, 250px);
+  font-weight: 900;
+  color: #289ed8;
+  line-height: 0.8;
+  letter-spacing: -5px;
+}
+
+.staggered-text-2 {
+  font-size: clamp(80px, 15vw, 250px);
+  font-weight: 900;
+  color: #289ed8;
+  line-height: 0.8;
+  letter-spacing: -5px;
+  margin-left: 15vw;
+  margin-top: -20px;
+}
+
+/* Circular Text Animation */
+.circular-text-wrapper {
+  position: absolute;
+  right: 15%;
+  top: 40%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.circular-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 15s linear infinite;
+  color: #888;
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 992px) {
+  .staggered-text-2 {
+    margin-left: 20px;
+  }
+
+  .circular-text-wrapper {
+    right: 5%;
+    top: 60%;
+    width: 120px;
+    height: 120px;
   }
 }

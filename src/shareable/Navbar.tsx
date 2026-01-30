@@ -103,6 +103,11 @@ const Navbar: React.FC<NavbarProps> = ({
                 </Link>
               </li>
               <li className="nav-item">
+                <Link className={`nav-link ${linkClassName}`} to="/portfolio/">
+                  Portfolio
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link className={`nav-link ${linkClassName}`} to="/careers/">
                   Careers
                 </Link>

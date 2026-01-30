@@ -28,14 +28,15 @@ import Blogdetail from "./components/About/BlogDetail";
 import { ThemeProvider } from "./components/Portfolio/ThemeContext";
 import { PortfolioPage } from "./components/Portfolio/PortfolioPage";
 
-// Portal Components Removed for Production Push
-// import PortalLayout from "./components/Portal/PortalLayout";
-// import Dashboard from "./components/Portal/Dashboard";
-// import PortfolioManager from "./components/Portal/PortfolioManager";
-// import SEOManager from "./components/Portal/SEOManager";
-// import PageEditor from "./components/Portal/PageEditor";
-// import Login from "./components/Portal/Login";
-// import RequireAuth from "./components/Portal/RequireAuth";
+// Portal Components
+import PortalLayout from "./components/Portal/PortalLayout";
+import Dashboard from "./components/Portal/Dashboard";
+import PortfolioManager from "./components/Portal/PortfolioManager";
+import SEOManager from "./components/Portal/SEOManager";
+import PageEditor from "./components/Portal/PageEditor";
+
+import Login from "./components/Portal/Login";
+import RequireAuth from "./components/Portal/RequireAuth";
 
 // We simply export the component logic. 
 // The Router will be provided by index.js (Client) or server.js (Server)
@@ -63,7 +64,7 @@ export default function App() {
       )}
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          {/* Login Route Removed */}
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
           <Route path="/about/" element={<About />} />
           <Route path="/services/" element={<Services />} />
@@ -86,7 +87,20 @@ export default function App() {
             </ThemeProvider>
           } />
 
-          {/* CMS Portal Routes Removed */}
+          {/* CMS Portal Routes */}
+          <Route path="/portal/*" element={
+            <RequireAuth>
+              <PortalLayout>
+                <Routes>
+                  <Route index element={<Dashboard />} />
+                  <Route path="portfolio" element={<PortfolioManager />} />
+                  <Route path="seo" element={<SEOManager />} />
+                  <Route path="pages" element={<PageEditor />} />
+                  <Route path="settings" element={<div className="p-10 text-center text-slate-500 font-bold uppercase tracking-widest border-2 border-dashed border-white/5 rounded-3xl">System Settings Coming Soon...</div>} />
+                </Routes>
+              </PortalLayout>
+            </RequireAuth>
+          } />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

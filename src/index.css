@@ -1,3 +1,14 @@
+@import "tailwindcss";
+
+/* Fix conflict between Tailwind v4 .collapse and Bootstrap .collapse */
+.collapse:not(.navbar-collapse) {
+  visibility: collapse;
+}
+
+.navbar-collapse.collapse {
+  visibility: visible !important;
+}
+
 @font-face {
   font-family: "Guminert";
   src: url("/Fonts/Guminert-6Y5gD.ttf") format("truetype");

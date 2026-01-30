@@ -1,0 +1,23 @@
+{
+    "routes": {
+        "/": {
+            "title": "BytechSol | Engineering Premium Digital Solutions",
+            "description": "Top-tier ERP, AI, and Custom Web Development services in UK & UAE.",
+            "keywords": "ERP, AI, Web Development, Dubai, UK, Software",
+            "h1": "BytechSol Digital Excellence",
+            "ogImage": "/assets/images/og-home.jpg"
+        },
+        "/services/": {
+            "title": "Our Services | BytechSol",
+            "description": "Explore our expert services in Odoo, AI/ML research, and custom software development.",
+            "keywords": "Odoo Services, AI ML Company, Custom Web",
+            "h1": "Premium Tech Services"
+        },
+        "/portfolio/": {
+            "title": "Our Portfolio | BytechSol",
+            "description": "A showcase of high-performance digital products and enterprise platforms.",
+            "keywords": "Portfolio, Case Studies, Success Stories",
+            "h1": "Featured Works"
+        }
+    }
+}

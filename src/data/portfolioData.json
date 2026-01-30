@@ -1,0 +1,30 @@
+{
+    "portfolio": [
+        {
+            "id": "bellroy-1",
+            "title": "Bellroy",
+            "category": "Custom Web Solution",
+            "image": "/assets/portfolio/custom-web-solution/bellroy.png",
+            "link": "https://bellroy.com/",
+            "description": "Premium lifestyle brand experience built for high-scale conversion.",
+            "tags": [
+                "Next.js",
+                "Headless",
+                "Performance"
+            ]
+        },
+        {
+            "id": "bouqs-2",
+            "title": "Bouqs",
+            "category": "Custom Web Solution",
+            "image": "/assets/portfolio/custom-web-solution/bouqs.png",
+            "link": "https://bouqs.com/",
+            "description": "Flower delivery service with a focus on fresh, farm-direct blooms.",
+            "tags": [
+                "React",
+                "E-commerce",
+                "UX"
+            ]
+        }
+    ]
+}

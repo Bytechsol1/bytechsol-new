@@ -11,6 +11,7 @@ import App from '../src/App.tsx';
 
 const PORT = 8081;
 const app = express();
+app.use(express.json()); // Enable JSON body parsing
 const router = express.Router();
 
 // 1. Resolve path to dist folder
@@ -39,6 +40,36 @@ router.use((req, res, next) => {
 
 // 2. Serve static assets
 router.use(express.static(distPath, { index: false, maxAge: '30d' }));
+
+// ---------------------------------------------------------------------------
+// CMS API ENDPOINTS
+// ---------------------------------------------------------------------------
+
+const DATA_DIR = path.resolve(__dirname, '../src/data');
+
+router.get('/api/cms/:type', (req, res) => {
+  const { type } = req.params;
+  const filePath = path.join(DATA_DIR, `${type}Data.json`);
+
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).json({ error: 'Data not found' });
+  }
+
+  const data = fs.readFileSync(filePath, 'utf-8');
+  res.json(JSON.parse(data));
+});
+
+router.post('/api/cms/:type', (req, res) => {
+  const { type } = req.params;
+  const filePath = path.join(DATA_DIR, `${type}Data.json`);
+
+  try {
+    fs.writeFileSync(filePath, JSON.stringify(req.body, null, 2));
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to save data' });
+  }
+});
 
 // ---------------------------------------------------------------------------
 // A. PROXY: Fixes the "/cms" Redirect Issue
