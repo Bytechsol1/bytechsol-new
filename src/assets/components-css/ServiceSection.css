@@ -67,6 +67,8 @@
 .services-image {
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  padding: 20px;
 }
 
 .services-right {
@@ -93,9 +95,13 @@
 }
 
 .services-content {
-  width: 550px;
-  padding: 20px 40px;
-  margin-top: 40px;
+  width: 100%;
+  max-width: 700px;
+  /* Prevent it from getting too wide on massive screens */
+  padding: 40px;
+  margin-top: 0;
+  /* Align center vertically via flex parent */
+  align-self: center;
 }
 
 .services-overlay h2 {

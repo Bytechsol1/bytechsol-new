@@ -55,7 +55,7 @@ const awards = [
   },
   {
     text: "Clutch",
-    description: "Top B2B Service Provider and UX Design Agency",
+    description: "Top B2B Service Provider and Development Agency",
     img: Clutch,
     trans: "fade-up",
     color: "#16313a", // Clutch Dark Blue
@@ -75,18 +75,18 @@ const awards = [
 const services = [
   {
     id: 1,
+    title: "Odoo",
+    image: o1,
+    path: "/services/odoo-services/",
+  },
+  { id: 2, title: "AI / ML", image: am, path: "/services/ai-ml/" },
+  {
+    id: 3,
     title: "Web development",
     image: wb2,
     path: "/services/website-design-and-development/",
   },
-  { id: 2, title: "Marketing", image: bd2, path: "/services/brand-building/" },
-  {
-    id: 3,
-    title: "Odoo & Custom ERPs",
-    image: o1,
-    path: "/services/odoo-services/",
-  },
-  { id: 4, title: "AI / ML", image: am, path: "/services/ai-ml/" },
+  { id: 4, title: "Marketing", image: bd2, path: "/services/brand-building/" },
 ];
 
 const topImages = [Top1, Top2, Top3, hm1];
@@ -255,7 +255,7 @@ const Home: React.FC = () => {
       {/* Services */}
 
       <section className="services-section py-5 mb-5">
-        <div className="service-vertical ">
+        {/* <div className="service-vertical ">
           <span>S</span>
           <span>E</span>
           <span>R</span>
@@ -264,7 +264,7 @@ const Home: React.FC = () => {
           <span>C</span>
           <span>E</span>
           <span>S</span>
-        </div>
+        </div> */}
 
         <div className="container">
           <p
@@ -327,8 +327,8 @@ const Home: React.FC = () => {
             </div>
           </div>
 
-          {/* Desktop Grid */}
-          <div className="container d-none d-lg-block">
+          {/* Unified Grid for all screens */}
+          <div className="container">
             <div className="row justify-content-center">
               {awards.map((item, idx) => {
                 const CardContent = (
@@ -352,7 +352,7 @@ const Home: React.FC = () => {
 
                 return (
                   <div
-                    className="col-lg-3 d-flex justify-content-center"
+                    className="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-4 mb-lg-0"
                     key={idx}
                     data-aos={item.trans}
                   >
@@ -376,25 +376,6 @@ const Home: React.FC = () => {
               })}
             </div>
           </div>
-
-          {/* Mobile Vertical Scroll */}
-          <div className="scrolling-images-section d-lg-none">
-            <div className="slide-awd">
-              <div className="awards-vertical-scroll">
-                {[...awards, ...awards].map((item, idx) => (
-                  <div className="award-card text-start mb-4" key={idx}>
-                    <img
-                      src={item.img}
-                      alt={`award-${idx}`}
-                      className="award-img img-fluid"
-                    />
-                    <p className="award-text">{item.text}</p>
-                    <p className="award-desc">{item.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -405,7 +386,7 @@ const Home: React.FC = () => {
       <section className="group7-container">
         {/* <img className="group7-bg" src={bgImage} alt="Background" /> */}
         <div className="group7-content">
-          <h2 className="group7-main-title" data-aos="fade-down">
+          <h2 className="group7-main-title" >
             Your Growth, Our Priority
           </h2>
           <div className="group7-columns">

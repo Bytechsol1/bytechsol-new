@@ -41,7 +41,7 @@ const WorldMap: React.FC = () => {
                 color: "#000",
               }}
             >
-              Our Headquarters centrally based in Pakistan & USA
+              Our Headquarters centrally based in USA & Pakistan
             </span>
           </div>
         </div>
@@ -87,8 +87,8 @@ const WorldMap: React.FC = () => {
                           fill: isPakistan
                             ? "#32CD32"
                             : isUSA
-                            ? "#000"
-                            : "#fff",
+                              ? "#000"
+                              : "#fff",
                           outline: "none",
                         },
                         pressed: { outline: "none" },

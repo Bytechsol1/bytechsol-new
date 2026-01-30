@@ -521,11 +521,7 @@
   font-family: "Guminert", sans-serif;
 }
 
-.awards-vertical-scroll {
-  display: inline-flex;
-  gap: 1rem;
-  animation: scroll-right 18s linear infinite;
-}
+
 
 .overlay1 {
   width: 100%;
@@ -636,7 +632,7 @@
   }
 
   .awards-grid {
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1410,8 +1406,11 @@
   }
 
   .group5-vector {
-    margin: 30px auto 0 auto;
+    margin: 30px auto 30px auto;
     margin-left: 0;
+    width: 80%;
+    /* Reduce size on mobile */
+    height: auto;
   }
 }
 
