@@ -1,0 +1,107 @@
+/* ScrollCards Enhancements */
+.card-row {
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 5%;
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* Ensure content doesn't spill */
+}
+
+.card-text {
+    flex: 1;
+    padding-right: 30px;
+    z-index: 2;
+}
+
+.card-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: "Guminert", sans-serif;
+    line-height: 1.2;
+}
+
+.card-text p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.card-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    z-index: 1;
+}
+
+.card-img img {
+    max-width: 100%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+@media (max-width: 991px) {
+    .card-row {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .card-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+        flex: 0 0 auto;
+    }
+
+    .card-text h2 {
+        font-size: 2rem;
+    }
+
+    .card-img {
+        justify-content: center;
+        align-items: flex-start;
+        flex: 1;
+        width: 100%;
+    }
+
+    .card-img img {
+        max-height: 100%;
+    }
+}
+
+.card-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.f-bg {
+    background-color: #4a3aff;
+    color: white;
+}
+
+.s-bg {
+    background-color: #ffd500;
+    color: #000;
+}
+
+.t-bg {
+    background-color: #000;
+    color: white;
+}
+
+.forth-bg {
+    background-color: #ff531a;
+    color: #000;
+}

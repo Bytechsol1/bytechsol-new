@@ -1,0 +1,207 @@
+/* Solar System Animation Styles */
+.solar-container {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ensure it doesn't overflow improperly on mobile */
+    max-width: 100%;
+}
+
+/* The Sun (Center Logo) */
+.solar-sun {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(43, 57, 144, 0.15);
+    /* Light glow matching brand color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.solar-sun img {
+    width: 40px;
+    height: auto;
+}
+
+/* Orbits */
+.solar-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid rgba(43, 57, 144, 0.1);
+    /* Subtle orbital path */
+}
+
+.orbit-1 {
+    width: 280px;
+    height: 280px;
+    animation: orbit-rotate 20s linear infinite;
+}
+
+.orbit-2 {
+    width: 412px;
+    height: 412px;
+    animation: orbit-rotate 30s linear infinite reverse;
+    /* Outer orbit moves slower and reverse */
+}
+
+/* Planets (Icons) */
+.solar-planet {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.solar-planet:hover {
+    transform: scale(1.1);
+    color: #2b3990;
+    /* Brand color on hover */
+    box-shadow: 0 8px 20px rgba(43, 57, 144, 0.2);
+}
+
+/* Positioning planets on the orbit */
+/* We use top/left percentages to place them roughly on the circle, 
+   then transform to center them. 
+   Correction: To make them rotate with the orbit, we just place them 
+   at specific angles relative to the orbit container which is rotating. */
+
+.planet-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    /* This wrapper aligns with the orbit size */
+}
+
+/* Counter-rotation to keep icons upright */
+.planet-icon {
+    animation: counter-rotate 20s linear infinite;
+}
+
+.orbit-2 .planet-icon {
+    animation: counter-rotate 30s linear infinite reverse;
+    /* Must match parent orbit duration and direction (reverse of reverse is normal) 
+     Wait, if orbit is reverse, counter should be normal. */
+    animation: counter-rotate-reverse 30s linear infinite;
+}
+
+/* Keyframes */
+@keyframes orbit-rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes counter-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes counter-rotate-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .solar-container {
+        width: 400px;
+        height: 400px;
+    }
+
+    .orbit-1 {
+        width: 220px;
+        height: 220px;
+    }
+
+    .orbit-2 {
+        width: 360px;
+        height: 360px;
+    }
+
+    .solar-sun {
+        width: 90px;
+        height: 90px;
+    }
+
+    .solar-sun img {
+        width: 50px;
+    }
+
+    .solar-planet {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .solar-container {
+        width: 300px;
+        height: 300px;
+        margin-top: 2rem;
+    }
+
+    .orbit-1 {
+        width: 160px;
+        height: 160px;
+    }
+
+    .orbit-2 {
+        width: 280px;
+        height: 280px;
+    }
+
+    .solar-sun {
+        width: 70px;
+        height: 70px;
+    }
+
+    .solar-sun img {
+        width: 40px;
+    }
+
+    .solar-planet {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    /* Adjust animation speeds for mobile if needed, or keep same */
+}
