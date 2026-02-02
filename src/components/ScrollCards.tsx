@@ -2,41 +2,81 @@ import "../assets/components-css/home.css";
 import React, { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import cr1 from "../assets/images/card-value.png";
-import cr2 from "../assets/images/card-automation.png";
-import cr3 from "../assets/images/card-commit.png";
+import odo from "../assets/images/odoo-service-sec.png";
+import ml from "../assets/images/ai-service-sec.png";
+import mob from "../assets/images/mobile-service-sec.png";
+import web from "../assets/images/webapp-service-sec.png";
+import arr from "../assets/images/arrow.svg";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
   {
-    label: "We add value to your business",
-    color: "card-gradient-pink",
-    image: cr1,
-    title: ["We add value to your business"],
+    label: "Odoo Services",
+    color: "card-gradient-1",
+    image: odo,
+    title: ["Odoo Services"],
     items: [
-      "At Bytechsol, clear timelines and open communication are our foundation. We treat your project like it’s our own — staying flexible when you need to pivot and focused when it’s time to ship. Fast, reliable, and stress-free delivery — just how it should be.",
+      "We offer Odoo migration, customization, and consultancy services to streamline your business operations. Our professional Odoo developers provide easy transitions, technical efforts, and integrations that are SEO friendly to provide large-scale efficiency.",
     ],
+    bullets: [
+      "Odoo Migration & Customization",
+      "Odoo Techno-Functional Consultancy",
+      "Odoo Module Development",
+      "Odoo Integration Services",
+      "Odoo Maintenance & Support",
+    ],
+    link: "/services/odoo-services/",
   },
   {
-    label: "We provide growth to your business by implementing automation",
-    color: "card-gradient-purple",
-    image: cr2,
-    title: [
-      "We provide growth to your business by implementing automation",
-    ],
+    label: "AI / ML Services",
+    color: "card-gradient-2",
+    image: ml,
+    title: ["AI / ML Services"],
     items: [
-      "We dive deep into your goals to craft solutions that make sense for you, not just the market. From strategy to design to launch, we’re with you at every step — like a tech partner who listens (and delivers).",
+      "We provide world-edge artificial intelligence and machine learning technologies such as chatbots, NLP models, and predictive analytics. Our artificial intelligence development services ensure automation of the processes, improved customer experience, as well as a way to promote data-driven business development.",
     ],
+    bullets: [
+      "AI / ML / LLM / NLP Solutions",
+      "AI Chatbots & Voice Assistants",
+    ],
+    link: "/services/ai-ml/",
   },
   {
-    label: "We Commit and over deliver",
-    color: "card-gradient-magenta",
-    image: cr3,
-    title: ["We Commit and over deliver"],
+    label: "Web App & Software Development",
+    color: "card-gradient-3",
+    image: mob,
+    title: ["Web App & Software Development"],
     items: [
-      "We don’t believe in one-size-fits-all. Whatever your needs: AI, web applications, or custom software — we develop tools that can scale with you. Smart, scalable, and built to last — so you don’t have to rebuild six months later.",
+      "Our specialization lies in secure, scalable software solutions and the development of websites. Our development cycle guarantees performance speed, a friendly user interface, and leverages an SEO-friendly structure that generates business growth and customer satisfaction.",
     ],
+    bullets: [
+      "Web App Development",
+      "SaaS Application Development",
+      "Software Development",
+      "Enterprise Application Development",
+      "Progressive Web Apps (PWA)",
+    ],
+    link: "/services/web-app/",
+  },
+  {
+    label: "Web Design & Development",
+    color: "card-gradient-4",
+    image: web,
+    title: ["Website Design & Development"],
+    items: [
+      "We design eye-catching, easy-to-use, and mobile-friendly websites that combine your business objectives with your brand identity.Whether you need a new website or improvements to your current one, we offer essential services to enhance the performance,responsiveness, and increase your company with maximum visibilityand customer response.",
+    ],
+    bullets: [
+      "UI / UX Design",
+      "CMS Design & Development",
+      "Landing Page Design",
+      "Website Maintenance & Support",
+      "Responsive Website Redesign",
+    ],
+    link: "/services/website-design-and-development/",
   },
 ];
 
@@ -82,7 +122,7 @@ const ScrollCards: React.FC = () => {
   return (
     <>
       {/* Heading outside the pinned animation */}
-      <div className="container">
+      {/* <div className="container">
         <div className="group5-content py-5">
           <div className="group5-text-block text-center text-md-start">
             <span className="group5-tag d-block mb-2" data-aos="fade-down">
@@ -98,7 +138,7 @@ const ScrollCards: React.FC = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Only cards are pinned & animated */}
       <section
@@ -110,10 +150,41 @@ const ScrollCards: React.FC = () => {
           {cards.map((card, index) => (
             <div key={index} className={`card-row ${card.color}`}>
               <div className="card-text">
-                <h2>{card.title[0]}</h2>
+                {card.link ? (
+                  <Link to={card.link} className="card-heading-link">
+                    <h2>
+                      {card.title[0]}
+                      <img src={arr} alt="arrow" className="card-arrow" />
+                    </h2>
+                  </Link>
+                ) : (
+                  <h2>{card.title[0]}</h2>
+                )}
                 <p>{card.items[0]}</p>
+                {/* Render Bullets if available */}
+                {card.bullets && (
+                  <ul className="card-bullets">
+                    {card.bullets.map((b, i) => {
+                      const sectionId = b
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, "-")
+                        .replace(/(^-|-$)/g, "");
+                      return (
+                        <li key={i} className="bullet-item">
+                          <HashLink
+                            smooth
+                            to={`${card.link}#${sectionId}`}
+                            className="bullet-link"
+                          >
+                            {b}
+                          </HashLink>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
               </div>
-              <div className="card-img">
+              <div className="card-image-container">
                 <img src={card.image} alt={card.label} />
               </div>
             </div>

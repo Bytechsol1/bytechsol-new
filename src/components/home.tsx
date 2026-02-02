@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AnimatedText from "../shareable/AnimatedText";
 import { Target, Users, ShieldCheck } from "lucide-react";
-import am from "../assets/images/aiml-home.svg";
+// import am from "../assets/images/aiml-home.svg";
 import "../assets/components-css/home.css";
 import Clutch from "../assets/images/clutch.png";
 import jen from "../assets/images/susie.jpg";
@@ -14,19 +14,19 @@ import Bottom1 from "../assets/images/bottom1.png";
 import Bottom2 from "../assets/images/bottom2.png";
 import Bottom3 from "../assets/images/bottom3.png";
 import hm2 from "../assets/images/home2img.png";
-import Arrow from "../assets/images/arrow.svg";
+// import Arrow from "../assets/images/arrow.svg";
 // import AwardBg from "../assets/images/award-bg.jpg"; // Removed
-import bgImage from "../assets/images/bgimg.jpg";
+// import bgImage from "../assets/images/bgimg.jpg";
 import Testimonial from "../shareable/testimonial";
 import FaqSection from "../shareable/faq";
-import wb2 from "../assets/images/web1img.jpg";
-import bd2 from "../assets/images/brandim.jpg";
-import o1 from "../assets/images/odoo3.png";
+// import wb2 from "../assets/images/web1img.jpg";
+// import bd2 from "../assets/images/brandim.jpg";
+// import o1 from "../assets/images/odoo3.png";
 import bh from "../assets/images/behanceimg.png";
 import tr from "../assets/images/trustimg.png";
 import up from "../assets/images/upworkimg.png";
 import ScrollCards from "./ScrollCards";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import NewCon from "../shareable/NewCon";
 import { Helmet } from "react-helmet";
 import { homePageFaqs } from "../shareable/faqData";
@@ -72,22 +72,22 @@ const awards = [
   },
 ];
 
-const services = [
-  {
-    id: 1,
-    title: "Odoo",
-    image: o1,
-    path: "/services/odoo-services/",
-  },
-  { id: 2, title: "AI / ML", image: am, path: "/services/ai-ml/" },
-  {
-    id: 3,
-    title: "Web development",
-    image: wb2,
-    path: "/services/website-design-and-development/",
-  },
-  { id: 4, title: "Marketing", image: bd2, path: "/services/brand-building/" },
-];
+// const services = [
+//   {
+//     id: 1,
+//     title: "Odoo",
+//     image: o1,
+//     path: "/services/odoo-services/",
+//   },
+//   { id: 2, title: "AI / ML", image: am, path: "/services/ai-ml/" },
+//   {
+//     id: 3,
+//     title: "Web development",
+//     image: wb2,
+//     path: "/services/website-design-and-development/",
+//   },
+//   { id: 4, title: "Marketing", image: bd2, path: "/services/brand-building/" },
+// ];
 
 const topImages = [Top1, Top2, Top3, hm1];
 const bottomImages = [Bottom1, Bottom2, Bottom3, hm2];
@@ -118,11 +118,12 @@ const Home: React.FC = () => {
       <main>
         <section className="hero-section" style={{ position: "relative" }}>
           <MagneticDots variant="logo" />
-          <div className="container" style={{ position: "relative", zIndex: 1 }}>
+          <div className="container-fluid px-md-5" style={{ position: "relative", zIndex: 1 }}>
             <div className="row align-items-center">
               <div className="col-md-8">
                 <h1 data-aos="fade-right">
-                  Global Software Agency & Digital Partner for <br />
+                  Global Software Agency <br />
+                  & Digital Partner for <br />
                   <AnimatedText />
                 </h1>
                 <div
@@ -254,8 +255,8 @@ const Home: React.FC = () => {
 
       {/* Services */}
 
-      <section className="services-section py-5 mb-5">
-        {/* <div className="service-vertical ">
+      {/* <section className="services-section py-5 mb-5"> */}
+      {/* <div className="service-vertical ">
           <span>S</span>
           <span>E</span>
           <span>R</span>
@@ -266,7 +267,7 @@ const Home: React.FC = () => {
           <span>S</span>
         </div> */}
 
-        <div className="container">
+      {/* <div className="container">
           <p
             className="ser-subheading text-center text-md-start"
             data-aos="fade-down"
@@ -295,7 +296,6 @@ const Home: React.FC = () => {
                 data-aos="fade-left"
               />
 
-              {/* Image pinned at bottom */}
               <img
                 src={service.image}
                 alt={service.title}
@@ -305,6 +305,46 @@ const Home: React.FC = () => {
               />
             </div>
           ))}
+        </div> */}
+      {/* </section> */}
+
+
+
+      {/* Scroll Cards */}
+      <ScrollCards />
+
+      {/* Growth Section */}
+      <section className="group7-container">
+        {/* <img className="group7-bg" src={bgImage} alt="Background" /> */}
+        <div className="group7-content">
+          <h2 className="group7-main-title" >
+            Your Growth, Our Priority
+          </h2>
+          <div className="group7-columns">
+            {[
+              {
+                title: "Focused on What Matters",
+                desc: "We are not a company that just creates websites, but creates solutions to help your business flourish and attract customers to achieve real results.",
+                Icon: Target,
+              },
+              {
+                title: "A Team by Your Side",
+                desc: "Our engineers, designers, and strategists collaborate closely with you. We take care and commitment to everything and do it in-house (we never outsource anything).",
+                Icon: Users,
+              },
+              {
+                title: "Quality You Can Rely On",
+                desc: "We put our heart into every project, making sure your website is secure, fast, and built to support your success long-term.",
+                Icon: ShieldCheck,
+              },
+            ].map((col, idx) => (
+              <div className="group7-column" key={idx} data-aos="fade-up">
+                <col.Icon className="group7-icon" size={48} color="#fff" strokeWidth={1.5} />
+                <h3 className="group7-heading">{col.title}</h3>
+                <p className="group7-description">{col.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -317,11 +357,11 @@ const Home: React.FC = () => {
         <div className="overlay1" style={{ position: "relative", zIndex: 1 }}>
           <div className="awards-heading-container">
             <div className="container text-center">
-              <h2 className="awards-heading" data-aos="fade-right">
+              <h2 className="awards-heading" data-aos="fade-up">
                 Our Awards &
               </h2>
               <br />
-              <h2 className="awards-heading2" data-aos="fade-left">
+              <h2 className="awards-heading2" data-aos="fade-up">
                 Achievements
               </h2>
             </div>
@@ -378,45 +418,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Scroll Cards */}
-      <ScrollCards />
-
-      {/* Growth Section */}
-      <section className="group7-container">
-        {/* <img className="group7-bg" src={bgImage} alt="Background" /> */}
-        <div className="group7-content">
-          <h2 className="group7-main-title" >
-            Your Growth, Our Priority
-          </h2>
-          <div className="group7-columns">
-            {[
-              {
-                title: "Focused on What Matters",
-                desc: "We are not a company that just creates websites, but creates solutions to help your business flourish and attract customers to achieve real results.",
-                Icon: Target,
-              },
-              {
-                title: "A Team by Your Side",
-                desc: "Our engineers, designers, and strategists collaborate closely with you. We take care and commitment to everything and do it in-house (we never outsource anything).",
-                Icon: Users,
-              },
-              {
-                title: "Quality You Can Rely On",
-                desc: "We put our heart into every project, making sure your website is secure, fast, and built to support your success long-term.",
-                Icon: ShieldCheck,
-              },
-            ].map((col, idx) => (
-              <div className="group7-column" key={idx} data-aos="fade-up">
-                <col.Icon className="group7-icon" size={48} color="#fff" strokeWidth={1.5} />
-                <h3 className="group7-heading">{col.title}</h3>
-                <p className="group7-description">{col.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Shared Sections */}
       <Testimonial />
       <FaqSection faqs={homePageFaqs} />

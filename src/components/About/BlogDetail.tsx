@@ -33,9 +33,9 @@ const Blogdetail = () => {
       .replace(/<nav[\s\S]*?<\/nav>/gi, "")
       .replace(/<ul class="ez-toc-list[\s\S]*?<\/ul>/gi, "");
   };
-const removeFaqHtml = (html: string) => {
-  return html.replace(/<div class="schema-faq[\s\S]*?<\/div>/gi, "");
-};
+  const removeFaqHtml = (html: string) => {
+    return html.replace(/<div class="schema-faq[\s\S]*?<\/div>/gi, "");
+  };
 
   const generateToc = (rawHtml: string) => {
     const parser = new DOMParser();
@@ -113,16 +113,16 @@ const removeFaqHtml = (html: string) => {
       try {
         const p = await fetchPostBySlug(slug as string);
 
-const cleaned = removeOldWPTOC(p.content);
+        const cleaned = removeOldWPTOC(p.content);
 
-let { updatedHtml, tocItems } = generateToc(cleaned);
+        let { updatedHtml, tocItems } = generateToc(cleaned);
 
-extractFaqs(updatedHtml);
+        extractFaqs(updatedHtml);
 
-updatedHtml = removeFaqHtml(updatedHtml);
+        updatedHtml = removeFaqHtml(updatedHtml);
 
-setToc(tocItems);
-setPost({ ...p, content: updatedHtml });
+        setToc(tocItems);
+        setPost({ ...p, content: updatedHtml });
 
 
         const r = await fetchAllPosts();
@@ -181,7 +181,7 @@ setPost({ ...p, content: updatedHtml });
       <Helmet>
         <title>{post.title} | BytechSol Blog</title>
         <meta name="description" content={post.title} />
-        <link rel="canonical" href={`https://bytechsol.com/blog/${slug}`} />
+        <link rel="canonical" href={`https://bytechsol.com/blog/${slug}/`} />
       </Helmet>
 
       <section className="blog-detail-section">
@@ -298,7 +298,7 @@ setPost({ ...p, content: updatedHtml });
 
           <div className="related-blog-grid">
             {related.map((r) => (
-              <Link to={`/blog/${r.slug}`} key={r.id} className="related-blog-card">
+              <Link to={`/blog/${r.slug}/`} key={r.id} className="related-blog-card">
                 <img src={r.image} alt={r.title} />
 
                 <div className="related-blog-content">

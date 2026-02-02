@@ -80,7 +80,7 @@ export default function App() {
           <Route path="/services/custom-web/" element={<CustomWeb />} />
           <Route path="/services/web-app/" element={<WebApp />} />
           <Route path="/services/ai-ml/" element={<Aiml />} />
-          <Route path="/blog/:slug" element={<Blogdetail />} />
+          <Route path="/blog/:slug/" element={<Blogdetail />} />
           <Route path="/portfolio/" element={
             <ThemeProvider>
               <PortfolioPage />

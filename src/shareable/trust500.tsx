@@ -1,14 +1,12 @@
 import React from "react";
-import t1 from "../assets/images/tss1.png";
-import t2 from "../assets/images/tss2.png";
 import gg from "../assets/images/google.webp";
 import mc from "../assets/images/micro.png";
-import op from "../assets/images/opexer.png";
-import eb from "../assets/images/ebay.png";
-import xo from "../assets/images/xero.png";
-import cn from "../assets/images/coin.png";
+import aws from "../assets/images/aws-logo.png";
+import purity from "../assets/images/purity-logo.png";
+import babylon from "../assets/images/babylon-logo.png";
+import racerbio from "../assets/images/racerbio.svg";
 
-const topImages = [t1, t2, gg, eb, mc, op, xo, cn];
+const topImages = [aws, gg, mc, purity, babylon, racerbio];
 
 const TrustedBySection = () => {
   return (

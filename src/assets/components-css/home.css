@@ -856,9 +856,10 @@
 }
 
 .group7-column:hover {
-  transform: translateY(-15px) scale(1.08);
+  transform: translateY(-10px) scale(1.02) !important;
+  /* Smoother lift */
   border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
 
@@ -875,9 +876,16 @@
   width: 100%;
   height: 3px;
   background: linear-gradient(90deg, #5a2fe7, #ea549f);
-  transform: scaleX(1);
-  /* Static line, always visible */
+  transform: scaleX(0);
+  /* Hidden initially */
   transform-origin: left;
+  transition: transform 0.4s ease;
+  /* Animate it */
+}
+
+.group7-column:hover::after {
+  transform: scaleX(1);
+  /* Expand on hover */
 }
 
 
@@ -1326,14 +1334,18 @@
   transition: opacity 0.5s ease-in-out;
   min-height: 100px;
   /* prevents layout jump */
-  width: 900px;
+  max-width: 900px;
+  /* Changed from width to max-width */
+  width: 100%;
   font-size: 20px;
   margin: 30px 0;
   line-height: 1.6;
   color: #7e7e81;
   font-weight: 600;
-  padding-left: 190px;
-  margin-top: -108px;
+  padding-left: 200px;
+  /* Aligned with heading */
+  margin-top: 20px;
+  /* Restored natural flow */
 }
 
 .group5-author-block {
@@ -1363,17 +1375,35 @@
 .group5-vector {
   flex: 1 1 300px;
   max-width: 400px;
-  width: 100%;
-  height: 200px;
+  width: 300px;
+  /* Fixed larger size for background */
+  height: auto;
   object-fit: contain;
-  margin-top: -60px;
-  margin-left: 760px;
+  margin-top: 0;
+  margin-left: auto;
+  right: 0;
+  top: 0;
+  /* Align to top right */
+  position: absolute;
+  /* Keep absolute */
+  opacity: 0.1;
+  /* Fade it out slightly so it doesn't fight with text? Or keep it behind? */
+  z-index: 0;
+}
+
+.group5-text-block {
+  position: relative;
+  z-index: 1;
+  /* Ensure text is above watermark */
 }
 
 @media (max-width: 768px) {
   .group5-content {
     align-items: center;
     text-align: center;
+    flex-direction: column;
+    padding: 0 15px;
+    /* Add padding to prevent edge touching */
   }
 
   .group5-tag,
@@ -1382,10 +1412,13 @@
   .group5-avatar {
     margin-left: 0;
     padding-left: 0;
+    width: 100%;
+    /* Ensure full width on mobile */
   }
 
   .group5-heading {
-    font-size: 30px;
+    font-size: 28px;
+    /* Slightly smaller for mobile */
     margin-top: 20px;
   }
 
@@ -1394,6 +1427,8 @@
     font-size: 16px;
     margin: 20px 0;
     margin-top: 0;
+    padding: 0 10px;
+    /* Internal padding */
   }
 
   .group5-avatar {
@@ -1403,14 +1438,20 @@
   .group5-author-block {
     justify-content: center;
     margin-top: 20px;
+    flex-direction: column;
+    /* Stack author info on very small screens if needed */
   }
 
   .group5-vector {
-    margin: 30px auto 30px auto;
-    margin-left: 0;
-    width: 80%;
-    /* Reduce size on mobile */
+    margin: 20px auto;
+    /* Center the vector */
+    margin-left: auto;
+    /* Reset the large margin */
+    width: 60px;
+    /* Smaller fixed size */
     height: auto;
+    display: block;
+    /* Ensure it behaves as a block for centering */
   }
 }
 
@@ -1541,6 +1582,32 @@
   overflow: hidden;
   /* Ensure content doesn't spill */
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  padding: 0 !important;
+  /* Remove default padding for split layout */
+  background: white;
+  /* Default bg */
+  border: none;
+}
+
+/* Specific Card Gradients - Vibrant & Premium */
+.card-gradient-1 {
+  background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+  /* Odoo - Soft Blue/Pink */
+}
+
+.card-gradient-2 {
+  background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  /* AI - Tech Purple/Blue */
+}
+
+.card-gradient-3 {
+  background: linear-gradient(135deg, #FAACA8 0%, #DDD6F3 100%);
+  /* Mobile - Peach/Lavender */
+}
+
+.card-gradient-4 {
+  background: linear-gradient(135deg, #FAD961 0%, #F76B1C 100%);
+  /* Web - Vibrant Orange/Yellow */
 }
 
 .card-row:hover {
@@ -1550,37 +1617,75 @@
 }
 
 .card-text {
-  flex: 1;
-  padding-right: 30px;
+  flex: 0 0 65%;
+  /* 65% width */
+  width: 65%;
+  padding: 60px;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-text h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 3.5rem;
+  /* Larger heading */
+  font-weight: 800;
+  margin-bottom: 30px;
   font-family: "Guminert", sans-serif;
-  line-height: 1.2;
+  line-height: 1.1;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card-heading-link {
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+}
+
+.card-arrow {
+  width: 40px;
+  filter: brightness(0);
+  /* Make black */
+  transition: transform 0.3s ease;
+}
+
+.card-heading-link:hover h2 {
+  transform: scale(1.02);
+  /* Little pop */
+}
+
+.card-heading-link:hover .card-arrow {
+  transform: translate(5px, -5px) rotate(-45deg);
+  /* Arrow animation */
 }
 
 .card-text p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.6;
+  color: #333;
+  max-width: 90%;
 }
 
-.card-img {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.card-image-container {
+  flex: 0 0 35%;
+  /* 35% width */
+  width: 35%;
   height: 100%;
-  z-index: 1;
+  position: relative;
+  overflow: hidden;
 }
 
-.card-img img {
-  max-width: 100%;
-  max-height: 80%;
-  object-fit: contain;
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Cover full height */
+  display: block;
 }
 
 @media (max-width: 991px) {
@@ -1716,4 +1821,99 @@
 .card-row.card-gradient-purple .card-title-text,
 .card-row.card-gradient-magenta .card-title-text {
   color: #fff;
+}
+
+/* Odoo Services Bullets Styling */
+.card-bullets {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 20px;
+  color: #000;
+}
+
+.bullet-item {
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  font-family: "Guminert", sans-serif;
+}
+
+.bullet-item:hover {
+  transform: scale(1.05);
+  transform-origin: left;
+}
+
+.bullet-link {
+  color: #000 !important;
+  font-size: 20px !important;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Mobile Responsiveness for Service Cards */
+@media (max-width: 768px) {
+  .card-row {
+    flex-direction: column !important;
+    height: auto !important;
+    padding-bottom: 30px !important;
+  }
+
+  .card-image-container {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    /* Full width */
+    height: auto !important;
+    margin: 20px auto 0 auto !important;
+    /* Center horizontally */
+  }
+
+  .card-image-container img {
+    object-fit: contain;
+    max-height: 200px;
+    /* Limit height */
+  }
+
+  .card-text p {
+    display: none !important;
+  }
+
+  .card-text {
+    width: 100% !important;
+    padding: 20px !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+    padding-bottom: 0 !important;
+  }
+
+  .card-bullets {
+    text-align: left;
+    margin-top: 10px;
+  }
+}
+
+/* Tablet Responsiveness */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .card-text p {
+    display: none !important;
+    /* Hide description */
+  }
+
+  .card-image-container {
+    display: none !important;
+    /* Hide image */
+  }
+
+  .card-row {
+    height: auto !important;
+    /* Adapt height properly */
+    min-height: 400px;
+    /* Ensure some minimum height if needed, or let content dictate */
+    align-items: flex-start !important;
+    padding: 40px !important;
+  }
+
+  .card-text {
+    width: 100% !important;
+  }
 }

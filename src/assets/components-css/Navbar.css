@@ -1,0 +1,170 @@
+/* Navbar Dropdown Styles */
+.nav-item.dropdown-parent {
+    position: static;
+    /* For full-width mega menu if needed, or relative for standard */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link-content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    /* Bootstrap nav-link padding */
+}
+
+/* Reset inner link styles to avoid double padding */
+.nav-link-content a {
+    padding: 0 !important;
+    text-decoration: none;
+    color: inherit;
+}
+
+.dropdown-arrow {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item.dropdown-parent:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Mega Menu Container */
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 90vw;
+    /* Wide menu */
+    max-width: 1200px;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 cols for 9 services */
+    gap: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-item.dropdown-parent:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Service Columns */
+.menu-column h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #999;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+
+.service-item:hover {
+    background: #f8f9fa;
+}
+
+.service-icon-box {
+    width: 40px;
+    height: 40px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.service-item:hover .service-icon-box {
+    background: black;
+    color: white;
+}
+
+.service-info h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+}
+
+/* Promo Card */
+.promo-card {
+    background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+    border-radius: 16px;
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.promo-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.promo-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.promo-card p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.promo-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.promo-btn:hover {
+    transform: scale(1.05);
+    color: white;
+}

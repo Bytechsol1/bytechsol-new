@@ -62,7 +62,7 @@ const Services: React.FC = () => {
       </Helmet>
 
       {/* 1st section - Refined Hero */}
-      <section className="relative overflow-hidden pt-32 pb-20 bg-white">
+      <section className="relative overflow-hidden pt-22 pb-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="staggered-wrapper">
             <motion.div
@@ -121,7 +121,7 @@ const Services: React.FC = () => {
           </div>
 
           {/* SolarSystem Revolve Elements - Restored as requested */}
-          <div className="absolute top-0 right-[-10%] w-[60%] h-full pointer-events-none opacity-40">
+          <div className="absolute top-0 right-[-10%] w-[60%] h-full pointer-events-none">
             <SolarSystem />
           </div>
         </div>

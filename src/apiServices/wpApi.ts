@@ -50,7 +50,7 @@ export async function fetchAllPosts() {
     }),
     image: getImage(post),
     category: post._embedded?.["wp:term"]?.[0]?.[0]?.name || "General",
-    linkpath: `/blog/${post.slug}`,
+    linkpath: `/blog/${post.slug}/`,
   }));
 }
 
