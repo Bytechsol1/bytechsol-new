@@ -174,7 +174,7 @@ const ScrollCards: React.FC = () => {
                           <HashLink
                             smooth
                             to={`${card.link}#${sectionId}`}
-                            className="bullet-link"
+                            className="bullet-link2"
                           >
                             {b}
                           </HashLink>

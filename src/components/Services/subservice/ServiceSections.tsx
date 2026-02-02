@@ -207,9 +207,13 @@ const ServicesSection: React.FC = () => {
             <div
               key={activeService.id}
               className="services-right fade-in"
-            // style={{ backgroundImage: `url(${activeService.bgImage})` }}
             >
-              <div className="services-overlay">
+              {/* Watermark Background Image */}
+              <div
+                className="service-watermark"
+                style={{ backgroundImage: `url(${activeService.bgImage})` }}
+              />
+              <div className="services-overlay text">
                 <div className="services-content">
                   <Link className="custom-link" to={activeService.pagepath}>
                     <h2 className="ser-new-heading fw-bold">
@@ -217,8 +221,8 @@ const ServicesSection: React.FC = () => {
                       <img src={arr} alt="link" className="arr2" />
                     </h2>
                   </Link>
-                  <p className="mb-3">{activeService.description}</p>
-                  <ul className="mb-0">
+                  <p className="mb-3 text-white">{activeService.description}</p>
+                  <ul className="mb-0 text-white">
                     {activeService.bullets.map((b, i) => {
                       // create safe id from bullet text (slugify)
                       const sectionId = b
@@ -231,7 +235,7 @@ const ServicesSection: React.FC = () => {
                           <HashLink
                             smooth
                             to={`${activeService.pagepath}#${sectionId}`}
-                            className="bullet-link custom-link2"
+                            className="bullet-link custom-link2 "
                           >
                             {b}
                           </HashLink>
