@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import "../../../assets/components-css/Aiml.css";
-import ai from "../../../assets/images/aiml.svg";
+import "../../../assets/components-css/Services.css";
+import ai from "../../../assets/images/aiml-3d-iso.png";
 import bgImage from "../../../assets/images/bgimg.jpg";
 import icon from "../../../assets/images/tick.svg";
 import Testimonial from "../../../shareable/testimonial";
@@ -40,37 +40,41 @@ const AimlSection = () => {
         <link rel="canonical" href="https://bytechsol.com/services/ai-ml/" />
       </Helmet>
 
-      {/* 1st Section */}
+      {/* 1st Section - Hero */}
       <section
         className="dg-products-section"
         style={{
-          background: "linear-gradient(180deg, #575E7C 0%, #2D3536 100%)",
+          background: "#0F0C29",
           color: "#fff",
         }}
       >
-        <div className="container">
-          <div className="dg-products-container">
-            {/* Left: Text */}
-            <div className="dg-products-content">
-              <h1 className="dg-products-heading text-start" data-aos="fade-down">
-                AI & ML Solutions That
-                <br className="d-none d-md-block" />
-                Redefine Possibilities
-              </h1>
+        <div className="dg-products-container">
+          {/* Left: Text */}
+          <div className="dg-products-content">
+            <h1 className="dg-products-heading text-start" data-aos="fade-down">
+              AI & ML Solutions That
+              <br className="d-none d-md-block" />
+              Redefine Possibilities
+            </h1>
 
-              <p className="dg-products-description text-start" data-aos="fade-right">
-                Our AI and ML solutions will enable businesses to realize the
-                strength of data and intelligent automation. Predictive
-                analytics, natural language processing, or any other solution,
-                we can design to help your business run efficiently and make
-                better decisions, and open up new avenues of growth.
-              </p>
-            </div>
+            <p className="dg-products-description text-start" data-aos="fade-right">
+              Our AI and ML solutions will enable businesses to realize the
+              strength of data and intelligent automation. Predictive
+              analytics, natural language processing, or any other solution,
+              we can design to help your business run efficiently and make
+              better decisions, and open up new avenues of growth.
+            </p>
 
-            {/* Right: Image */}
-            <div className="dg-products-image">
-              <img src={ai} alt="AI/ML Illustration" data-aos="fade-left" />
+            <div className="dg-products-buttons" data-aos="fade-left">
+              <a href="#contact" className="dg-button dg-button-primary">
+                Scale with AI <span className="arrow">→</span>
+              </a>
             </div>
+          </div>
+
+          {/* Right: Image */}
+          <div className="dg-products-image" data-aos="fade-left">
+            <img src={ai} alt="AI/ML 3D" className="floating-3d img-fluid" />
           </div>
         </div>
       </section>

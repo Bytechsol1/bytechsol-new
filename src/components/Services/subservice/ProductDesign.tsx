@@ -1,8 +1,8 @@
-import "../../../assets/components-css/ProductDesign.css";
+import "../../../assets/components-css/Services.css";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import NewCon from "../../../shareable/NewCon";
-import y1 from "../../../assets/images/yel1.png"
+import y1 from "../../../assets/images/brand-3d-iso.png"
 import et from "../../../assets/images/ideat.png";
 import lw from "../../../assets/images/lwork.png";
 import sp from "../../../assets/images/simplicity.png";
@@ -121,22 +121,19 @@ const ProductDesign = () => {
         />
       </Helmet>
 
-      {/* 1st section */}
-      <section className="hero-section" style={{ backgroundColor: "#002F7A" }}>
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-8 ">
-              <h1 className="text-white" data-aos="fade-right">
-                Crafting Brands <br /> That Inspire
-              </h1>
-              <p className="text-white fs-5" data-aos="fade-down">We help businesses create powerful brand identities that build trust, recognition, and lasting customer connections. From strategy and visuals to messaging and digital presence, our brand building services ensure your business stands out and resonates with the right audience.</p>
-
-            </div>
-            <div className="col-md-4 d-none d-md-block">
-              <img src={y1} alt="Brand Branding" className="img-fluid" data-aos="fade-left" />
-            </div>
-
+      {/* 1st section - Hero */}
+      <section className="dg-products-section" style={{ background: "#0F0C29", color: "#fff" }}>
+        <div className="dg-products-container">
+          <div className="dg-products-content text-start">
+            <h1 className="dg-products-heading" data-aos="fade-right">
+              Crafting Brands <br /> That Inspire
+            </h1>
+            <p className="dg-products-description" data-aos="fade-down">We help businesses create powerful brand identities that build trust, recognition, and lasting customer connections. From strategy and visuals to messaging and digital presence, our brand building services ensure your business stands out and resonates with the right audience.</p>
           </div>
+          <div className="dg-products-image" data-aos="fade-left">
+            <img src={y1} alt="Brand 3D" className="floating-3d img-fluid" />
+          </div>
+
         </div>
       </section>
 

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Testimonial from "../../../shareable/testimonial";
-import "../../../assets/components-css/development.css";
-import cl from "../../../assets/images/cwimg.png";
+import "../../../assets/components-css/Services.css";
+import cl from "../../../assets/images/customweb-3d-iso.png";
 import FaqSection from "../../../shareable/faq";
 import bgImage from "../../../assets/images/bgimg.jpg";
 import icon from "../../../assets/images/tick.svg";
@@ -41,43 +41,34 @@ const CustomWeb: React.FC = () => {
         />
       </Helmet>
 
-      {/* 1st Section */}
+      {/* 1st Section - Hero */}
       <section
         className="dg-products-section "
-        style={{
-          background: "#2B3990 ",
-          color: "#fff",
-        }}
+        style={{ background: "#0F0C29", color: "#fff" }}
       >
-        <div className="container">
-          <div className="row align-items-center">
-            {/* Left content */}
-            <div className="col-lg-7">
-              <div className="dg-products-content text-start">
-                <h1 className="dg-products-heading" data-aos="fade-down">
-                  Custom Web Solutions <br /> Tailored to Your Business
-                </h1>
-                <p className="dg-products-description" data-aos="fade-up">
-                  Increase your brand with our custom web development solutions.
-                  We create dynamic, SEO optimized websites — corporate sites,
-                  e-commerce, and apps — blending design, usability, and
-                  performance to draw traffic and convert.
-                </p>
-                <div className="dg-products-buttons" data-aos="fade-left">
-                  <a href="#contact" className="dg-button dg-button-primary">
-                    Start your website project today{" "}
-                    <span className="arrow">→</span>
-                  </a>
-                </div>
-              </div>
+        <div className="dg-products-container">
+          {/* Left content */}
+          <div className="dg-products-content text-start">
+            <h1 className="dg-products-heading" data-aos="fade-down">
+              Custom Web Solutions <br /> Tailored to Your Business
+            </h1>
+            <p className="dg-products-description" data-aos="fade-up">
+              Increase your brand with our custom web development solutions.
+              We create dynamic, SEO optimized websites — corporate sites,
+              e-commerce, and apps — blending design, usability, and
+              performance to draw traffic and convert.
+            </p>
+            <div className="dg-products-buttons" data-aos="fade-left">
+              <a href="#contact" className="dg-button dg-button-primary">
+                Start your website project today{" "}
+                <span className="arrow">→</span>
+              </a>
             </div>
+          </div>
 
-            {/* Right image */}
-            <div className="col-lg-5 text-center">
-              <div className="dg-products-image">
-                <img src={cl} alt="UI/UX Illustration" className="img-fluid" data-aos="fade-left" />
-              </div>
-            </div>
+          {/* Right image */}
+          <div className="dg-products-image" data-aos="fade-left">
+            <img src={cl} alt="Custom Web 3D" className="floating-3d img-fluid" />
           </div>
         </div>
       </section>

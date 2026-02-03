@@ -1,4 +1,4 @@
-import "../../../assets/components-css/OdooServices.css";
+import "../../../assets/components-css/Services.css";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import NewCon from "../../../shareable/NewCon";
@@ -6,11 +6,12 @@ import et from "../../../assets/images/ideat.png";
 import lw from "../../../assets/images/lwork.png";
 import sp from "../../../assets/images/simplicity.png";
 import ma from "../../../assets/images/mobapps.png";
-import cp from "../../../assets/images/odooimg.png";
+import cp from "../../../assets/images/odoo-3d-final.png";
 import { useRef, useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Customization } from "./New";
 import { Helmet } from "react-helmet";
 import { odooFaqs } from "../../../shareable/faqData";
@@ -125,35 +126,65 @@ const CustomSoftwareDev = () => {
         />
       </Helmet>
 
-      {/* 1st Section */}
+      {/* 1st Section - Hero */}
       <section
         className="dg-products-section"
         style={{
-          backgroundColor: "#4d0549ff",
+          background: "#0F0C29",
+          color: "#fff",
         }}
       >
-        <div className="container">
-          <div className="dg-products-container1">
-            {/* Left: Text */}
-            <div className="dg-products-content">
-              <h1 className="dg-products-heading text-start" data-aos="fade-left">
-                Unlock Business <br /> Potential with Tailored <br /> Odoo
-                Solutions
-              </h1>
-              <p className="dg-products-description text-start" data-aos="fade-right">
-                Our Odoo services support businesses in streamlining workflows,
-                enhancing efficiency, and experiencing scalable growth with a
-                completely customized ERP platform. Since implementation and
-                integration to support and upgrades, we provide end-to-end Odoo
-                solutions based on your business requirements.
-              </p>
-            </div>
-
-            {/* Right: Image */}
-            <div className="dg-products-image d-none d-md-block" data-aos="fade-right">
-              <img src={cp} alt="UI/UX Illustration" />
-            </div>
+        <div className="dg-products-container">
+          {/* Left: Text */}
+          <div className="dg-products-content">
+            <h1 className="dg-products-heading text-start" data-aos="fade-left">
+              Unlock Business <br /> Potential with Tailored <br /> Odoo
+              Solutions
+            </h1>
+            <p className="dg-products-description text-start" data-aos="fade-right">
+              Our Odoo services support businesses in streamlining workflows,
+              enhancing efficiency, and experiencing scalable growth with a
+              completely customized ERP platform. Since implementation and
+              integration to support and upgrades, we provide end-to-end Odoo
+              solutions based on your business requirements.
+            </p>
           </div>
+
+          {/* Right: Image with 3D Mouse Tilt */}
+          <motion.div
+            className="dg-products-image"
+            data-aos="fade-left"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            style={{ perspective: 1000 }}
+          >
+            <motion.img
+              src={cp}
+              alt="Odoo 3D"
+              className="img-fluid"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              onMouseMove={(e) => {
+                const { clientX, clientY, currentTarget } = e;
+                const { left, top, width, height } = currentTarget.getBoundingClientRect();
+                const x = (clientX - left) / width - 0.5;
+                const y = (clientY - top) / height - 0.5;
+                currentTarget.style.transform = `perspective(1000px) rotateY(${x * 40}deg) rotateX(${-y * 40}deg) scale(1.1)`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1)";
+              }}
+              style={{
+                transition: "transform 0.1s ease-out",
+                filter: "drop-shadow(0 0 30px rgba(100, 0, 255, 0.4))",
+                cursor: "pointer",
+                maxWidth: "600px",
+                width: "100%",
+                // mixBlendMode: "screen" // Removed as image is now transparent
+              }}
+            />
+          </motion.div>
         </div>
       </section>
 

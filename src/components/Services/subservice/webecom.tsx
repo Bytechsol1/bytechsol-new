@@ -1,11 +1,11 @@
 import React, { useEffect, } from "react";
-import "../../../assets/components-css/webecom.css";
+import "../../../assets/components-css/Services.css";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import NewCon from "../../../shareable/NewCon";
 import bgImage from "../../../assets/images/bgimg.jpg";
 import icon from "../../../assets/images/tick.svg";
-import im1 from "../../../assets/images/ecomerceim.png"
+import im1 from "../../../assets/images/ecom-3d-iso.png"
 import { useLocation } from "react-router-dom";
 import { Estore } from "./New";
 import { Helmet } from "react-helmet";
@@ -42,39 +42,33 @@ const Webecom: React.FC = () => {
         />
       </Helmet>
 
-      {/* 1st Section */}
+      {/* 1st Section - Hero */}
       <section
-        className="dg-products-section py-5"
-        style={{ backgroundColor: "#1C3134" }}
+        className="dg-products-section"
+        style={{ background: "#0F0C29", color: "#fff" }}
       >
-        <div className="container">
-          <div className="row align-items-center">
-
-            {/* Left content */}
-            <div className="col-lg-7">
-              <div className="dg-products-content text-start">
-                <h1 className="dg-products-heading" data-aos="fade-down">
-                  Next-Level E-Commerce Solutions for Your Digital Store
-                </h1>
-                <p className="dg-products-description" data-aos="fade-up">
-                  Our e-commerce solutions assist companies in creating scalable,
-                  secure, and easy-to-use online stores that drive sales. We design
-                  custom websites, integrate payment gateways, and develop advanced
-                  shopping carts to expand your online store and boost revenue.
-                </p>
-                <div className="dg-products-buttons" data-aos="fade-left">
-                  <a href="#contact" className="dg-button dg-button-primary">
-                    Start your website project today <span className="arrow">→</span>
-                  </a>
-                </div>
-              </div>
+        <div className="dg-products-container">
+          {/* Left content */}
+          <div className="dg-products-content text-start">
+            <h1 className="dg-products-heading" data-aos="fade-down">
+              Next-Level E-Commerce Solutions for Your Digital Store
+            </h1>
+            <p className="dg-products-description" data-aos="fade-up">
+              Our e-commerce solutions assist companies in creating scalable,
+              secure, and easy-to-use online stores that drive sales. We design
+              custom websites, integrate payment gateways, and develop advanced
+              shopping carts to expand your online store and boost revenue.
+            </p>
+            <div className="dg-products-buttons" data-aos="fade-left">
+              <a href="#contact" className="dg-button dg-button-primary">
+                Start your website project today <span className="arrow">→</span>
+              </a>
             </div>
+          </div>
 
-            {/* Right image */}
-            <div className="col-lg-5 text-center d-none d-lg-block" style={{ width: "30%", marginLeft: "80px" }}>
-              <img src={im1} alt="Brand Branding" className="img-fluid" data-aos="fade-left" />
-            </div>
-
+          {/* Right image */}
+          <div className="dg-products-image" data-aos="fade-left">
+            <img src={im1} alt="E-commerce 3D" className="floating-3d img-fluid" />
           </div>
         </div>
       </section>

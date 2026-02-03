@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Testimonial from "../../../shareable/testimonial";
-import lig from "../../../assets/images/light.png";
-import "../../../assets/components-css/development.css";
+import lig from "../../../assets/images/webdev-3d-v2.png";
+import "../../../assets/components-css/Services.css";
 import FaqSection from "../../../shareable/faq";
 import NewCon from "../../../shareable/NewCon";
 import wf from "../../../assets/images/wfir1.png";
@@ -110,39 +110,46 @@ const Development: React.FC = () => {
         />
       </Helmet>
 
+
+
+
+
       {/* 1st Section - Hero */}
       <section
-        className="dg-products-section py-5"
-        style={{ backgroundColor: "#000", color: "#fff" }}
+        className="dg-products-section"
+        style={{ background: "#0F0C29", color: "#fff" }}
       >
-        <div className="container">
-          <div className="row align-items-center">
-            {/* Left content */}
-            <div className="col-lg-7">
-              <div className="dg-products-content text-start">
-                <h1 className="dg-products-heading" data-aos="fade-down">
-                  {heroContent.title || <>Website Design & <br /> Development</>}
-                </h1>
-                <p className="dg-products-description" data-aos="fade-right">
-                  {heroContent.description || "Bytechsol is an organization that provides professional web development and web design services optimized for search engines, mobile-friendliness, and responsiveness. We design e-commerce stores, business websites, and landing pages to generate traffic, interest, and convert the viewers into loyal customers."}
-                </p>
-                <div className="dg-products-buttons" data-aos="fade-up">
-                  <a href={heroContent.buttonLink || "#contact"} className="dg-button dg-button-primary">
-                    {heroContent.buttonText || "Start your website project today"} <span className="arrow">→</span>
-                  </a>
-                </div>
-              </div>
+        <div className="dg-products-container">
+          {/* Left content */}
+          <div className="dg-products-content text-start">
+            <h1 className="dg-products-heading" data-aos="fade-down">
+              {heroContent.title || <>Website Design & <br /> Development</>}
+            </h1>
+            <p className="dg-products-description" data-aos="fade-right">
+              {heroContent.description || "Bytechsol is an organization that provides professional web development and web design services optimized for search engines, mobile-friendliness, and responsiveness. We design e-commerce stores, business websites, and landing pages to generate traffic, interest, and convert the viewers into loyal customers."}
+            </p>
+            <div className="dg-products-buttons" data-aos="fade-up">
+              <a href={heroContent.buttonLink || "#contact"} className="dg-button dg-button-primary">
+                {heroContent.buttonText || "Start your website project today"} <span className="arrow">→</span>
+              </a>
             </div>
+          </div>
 
-            {/* Right image */}
-            <div className="col-lg-5 text-center">
-              <div className="dg-products-image" data-aos="fade-left">
-                <img src={heroContent.image || lig} alt="UI/UX Illustration" className="img-fluid" />
-              </div>
-            </div>
+          {/* Right image - Fixed Path & Removed AOS */}
+          <div className="dg-products-image">
+            <img
+              src="/webdev-3d-v2.png"
+              alt="Web Dev 3D"
+              className="floating-3d img-fluid"
+              onError={(e) => {
+                e.currentTarget.src = lig; // Fallback to import if public fails
+              }}
+            />
           </div>
         </div>
       </section>
+
+      {/* ... (rest of component) */}
 
       <New />
 

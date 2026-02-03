@@ -1,7 +1,7 @@
-import "../../../assets/components-css/webapp.css";
+import "../../../assets/components-css/Services.css";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
-import wa from "../../../assets/images/webapp.svg"
+import wa from "../../../assets/images/webapp-3d-iso.png"
 import NewCon from "../../../shareable/NewCon";
 import bl from "../../../assets/images/blacklp.png"
 import pl from "../../../assets/images/planlp.png"
@@ -132,22 +132,24 @@ const Webapp: React.FC = () => {
       {/* Hero Section */}
       <section
         className="dg-products-section"
-        style={{
-          background: "#289DD8 ",
-          color: "#fff",
-        }}
+        style={{ background: "#0F0C29", color: "#fff" }}
       >
-        <div className="container d-flex align-items-center justify-content-between">
-          <div className="dg-products-content">
+        <div className="dg-products-container">
+          <div className="dg-products-content text-start">
             <h1 className="dg-products-heading" data-aos="fade-right">
               Building Powerful Web Apps & Software for the Digital Era
             </h1>
             <p className="dg-products-description" data-aos="fade-up">
               Transform your business with our web app and software development services. We develop scalable, secure, and usable applications, such as bespoke web applications and enterprise software, and deliver new solutions that enhance performance, expansion, and easy user experiences.
             </p>
+            <div className="dg-products-buttons" data-aos="fade-left">
+              <a href="#contact" className="dg-button dg-button-primary">
+                Build your Web App <span className="arrow">→</span>
+              </a>
+            </div>
           </div>
-          <div className="dg02-products02-image w-25 d-none d-lg-block" data-aos="fade-left">
-            <img src={wa} alt="UI/UX Illustration" className="img-fluid" />
+          <div className="dg-products-image" data-aos="fade-left">
+            <img src={wa} alt="Web App 3D" className="floating-3d img-fluid" />
           </div>
         </div>
       </section>

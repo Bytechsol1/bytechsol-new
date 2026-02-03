@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import "../../../assets/components-css/FullStackExpertise.css";
-import se from "../../../assets/images/seonew.png"
+import "../../../assets/components-css/Services.css";
+import se from "../../../assets/images/seo-3d-iso.png"
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import NewCon from "../../../shareable/NewCon";
@@ -94,58 +94,35 @@ const ContactUs = () => {
         />
       </Helmet>
 
-      {/* 1st Section */}
+      {/* 1st Section - Hero */}
       <section
         className="dg-products-section"
-        style={{
-          background: "#004E92",
-        }}
+        style={{ background: "#0F0C29", color: "#fff" }}
       >
-        <div className="container">
-          <div className="dg-products-container">
-            {/* Left: Text */}
-            <div className="dg-products-content">
-              <h1 className="dg-products-heading text-start" data-aos="fade-down">
-                Drive Traffic, Boost Rankings, Grow Smarter with SEO
-              </h1>
+        <div className="dg-products-container">
+          {/* Left: Text */}
+          <div className="dg-products-content">
+            <h1 className="dg-products-heading text-start" data-aos="fade-down">
+              Drive Traffic, Boost Rankings, Grow Smarter with SEO
+            </h1>
 
-              <p className="dg-products-description text-start" data-aos="fade-right">
-                Increase your online presence through our customised SEO plans. Raising businesses to the top of the search engines, bringing the right leads on board, and expanding businesses in an environmentally friendly fashion are some of the ways we achieve this by using the techniques of keyword optimization, technical optimization, and content-driven optimization
-              </p>
+            <p className="dg-products-description text-start" data-aos="fade-right">
+              Increase your online presence through our customised SEO plans. Raising businesses to the top of the search engines, bringing the right leads on board, and expanding businesses in an environmentally friendly fashion are some of the ways we achieve this by using the techniques of keyword optimization, technical optimization, and content-driven optimization
+            </p>
 
-              <div className="dg-products-buttons">
-                <a
-                  href="#contact"
-                  className="dg-button dg-button-primary d-none d-md-inline-block" data-aos="fade-up"
-                >
-                  Start your SEO project today <span className="arrow">→</span>
-                </a>
-
-                {/* Mobile button (unique inline style) */}
-                <a
-                  href="#contact"
-                  className="d-inline-block d-md-none"
-                  style={{
-                    width: "93%",
-                    padding: "12px 20px",
-                    borderRadius: "50px",
-                    backgroundColor: "#289ED8",
-                    color: "#fff",
-                    textDecoration: "none",
-                  }}
-                >
-                  Start your website project today <span className="arrow">→</span>
-                </a>
-              </div>
-
-
-
+            <div className="dg-products-buttons" data-aos="fade-up">
+              <a
+                href="#contact"
+                className="dg-button dg-button-primary"
+              >
+                Start your SEO project today <span className="arrow">→</span>
+              </a>
             </div>
+          </div>
 
-            {/* Right: Image */}
-            <div className="dg-products-image" data-aos="fade-left">
-              <img src={se} alt="UI/UX Illustration" />
-            </div>
+          {/* Right: Image */}
+          <div className="dg-products-image" data-aos="fade-left">
+            <img src={se} alt="SEO 3D" className="floating-3d img-fluid" />
           </div>
         </div>
       </section>
