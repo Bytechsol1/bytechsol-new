@@ -5,7 +5,7 @@
             "title": "Bellroy",
             "category": "Custom Web Solution",
             "image": "/assets/portfolio/custom-web-solution/bellroy.png",
-            "link": "#",
+            "link": "https://bellroy.com/",
             "description": "Premium lifestyle brand experience built for high-scale conversion.",
             "tags": [
                 "Next.js",
@@ -18,7 +18,7 @@
             "title": "Bouqs",
             "category": "Custom Web Solution",
             "image": "/assets/portfolio/custom-web-solution/bouqs.png",
-            "link": "#",
+            "link": "https://bouqs.com/",
             "description": "Flower delivery service with a focus on fresh, farm-direct blooms.",
             "tags": [
                 "React",
@@ -31,7 +31,7 @@
             "title": "BrickLink",
             "category": "Custom Web Solution",
             "image": "/assets/portfolio/custom-web-solution/bricklink.png",
-            "link": "#",
+            "link": "https://www.bricklink.com/v2/main.page",
             "description": "The world's largest online marketplace for LEGO parts and sets.",
             "tags": [
                 "Marketplace",
@@ -44,7 +44,7 @@
             "title": "Crutchfield",
             "category": "Custom Web Solution",
             "image": "/assets/portfolio/custom-web-solution/crutchfield.png",
-            "link": "#",
+            "link": "https://www.crutchfield.com/",
             "description": "Electronics retailer with a focus on deep technical guidance and user education.",
             "tags": [
                 "Retail",
@@ -57,7 +57,7 @@
             "title": "PetLab Co.",
             "category": "Custom Web Solution",
             "image": "/assets/portfolio/custom-web-solution/petlabco.png",
-            "link": "#",
+            "link": "https://thepetlabco.com/",
             "description": "Leading pet health and wellness brand with high-performance web solutions.",
             "tags": [
                 "Wellness",
@@ -70,7 +70,7 @@
             "title": "Realer Estate",
             "category": "Custom Web Solution",
             "image": "/assets/portfolio/custom-web-solution/realerestate.png",
-            "link": "#",
+            "link": "https://realerestate.org/",
             "description": "Modern real estate platform connecting buyers and sellers efficiently.",
             "tags": [
                 "Real Estate",
@@ -83,7 +83,7 @@
             "title": "Trulia",
             "category": "Custom Web Solution",
             "image": "/assets/portfolio/custom-web-solution/trulia.png",
-            "link": "#",
+            "link": "https://www.trulia.com/",
             "description": "Real estate mobile and web application for home search and insights.",
             "tags": [
                 "Real Estate",
@@ -96,7 +96,7 @@
             "title": "LuxeDH",
             "category": "Shopify",
             "image": "/assets/portfolio/shopify/luxedh.png",
-            "link": "#",
+            "link": "https://www.luxedh.com/",
             "description": "Luxury designer handbags and accessories with a focus on premium aesthetics.",
             "tags": [
                 "Shopify",
@@ -109,7 +109,7 @@
             "title": "A New Project",
             "category": "Squarespace",
             "image": "/assets/portfolio/squarespace/anewproject.jpg",
-            "link": "#",
+            "link": "https://www.anewproject.org/",
             "description": "Clean and minimalist portfolio site for creative professionals.",
             "tags": [
                 "Squarespace",
@@ -122,7 +122,7 @@
             "title": "Core Survival",
             "category": "Squarespace",
             "image": "/assets/portfolio/squarespace/coresurvival.jpg",
-            "link": "#",
+            "link": "https://www.coresurvival.com/",
             "description": "Tactical lighting solutions website with a rugged, functional design.",
             "tags": [
                 "Squarespace",
@@ -135,7 +135,7 @@
             "title": "Hair Cuttery",
             "category": "WordPress",
             "image": "/assets/portfolio/wordpress/haircuttery.jpg",
-            "link": "#",
+            "link": "https://www.haircuttery.com/",
             "description": "Full-service salon chain website with booking integration.",
             "tags": [
                 "WordPress",
@@ -148,7 +148,7 @@
             "title": "Ledger",
             "category": "WordPress",
             "image": "/assets/portfolio/wordpress/ledger.jpg",
-            "link": "#",
+            "link": "https://www.ledger.com/",
             "description": "Construction and infrastructure company portfolio.",
             "tags": [
                 "WordPress",
@@ -161,7 +161,7 @@
             "title": "Native Soul",
             "category": "WordPress",
             "image": "/assets/portfolio/wordpress/nativesoul.jpg",
-            "link": "#",
+            "link": "https://nativesoul.co/",
             "description": "Lifestyle and wellness blog with a serene, nature-inspired design.",
             "tags": [
                 "WordPress",
@@ -174,7 +174,7 @@
             "title": "No Agent Property",
             "category": "WordPress",
             "image": "/assets/portfolio/wordpress/noagentproperty.jpg",
-            "link": "#",
+            "link": "https://www.noagentproperty.com.au/",
             "description": "Real estate sales platform for private sellers.",
             "tags": [
                 "WordPress",
@@ -187,7 +187,7 @@
             "title": "Owner",
             "category": "WordPress",
             "image": "/assets/portfolio/wordpress/owner.jpg",
-            "link": "#",
+            "link": "https://www.owner.com.au/",
             "description": "Restaurant marketing and website platform.",
             "tags": [
                 "WordPress",
@@ -200,7 +200,7 @@
             "title": "Perfect Keto",
             "category": "WordPress",
             "image": "/assets/portfolio/wordpress/perfectketo.jpg",
-            "link": "#",
+            "link": "https://perfectketo.com/",
             "description": "Health and nutrition e-commerce site with educational content.",
             "tags": [
                 "WordPress",
@@ -213,7 +213,7 @@
             "title": "Sales By Homeowner",
             "category": "WordPress",
             "image": "/assets/portfolio/wordpress/salesbyhomeowner.jpg",
-            "link": "#",
+            "link": "https://www.salebyhomeowner.com.au/",
             "description": "Property listing site empowering homeowners to sell directly.",
             "tags": [
                 "WordPress",

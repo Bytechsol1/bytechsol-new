@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'; // Changed to framer-mo
 import { useTheme } from './ThemeContext';
 import { ArrowUpRight, ChevronDown, ArrowRight, Star } from 'lucide-react';
 import { ImageWithFallback } from './ImageWithFallback';
+import React from 'react';
 
 const projects = [
     {
@@ -133,9 +134,13 @@ export function PortfolioPage() {
                                                 ))}
                                             </div>
                                         </div>
-                                        <motion.div whileHover={{ scale: 1.2, rotate: 45 }} className={`w-14 h-14 rounded-full flex items-center justify-center cursor-pointer transition-colors ${theme === 'dark' ? 'bg-white/10 hover:bg-blue-600' : 'bg-slate-900 hover:bg-blue-600'} text-white shadow-xl`}>
+                                        <div
+                                            className={`w-14 h-14 rounded-full flex items-center justify-center cursor-pointer transition-colors transition-transform duration-300 ease-out
+                                            ${theme === 'dark' ? 'bg-white/10 hover:bg-blue-600' : 'bg-slate-900 hover:bg-blue-600'}
+                                            group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:-rotate-12`}
+                                        >
                                             <ArrowUpRight className="w-6 h-6" />
-                                        </motion.div>
+                                        </div>
                                     </div>
                                 </div>
                             </motion.div>

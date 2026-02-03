@@ -141,7 +141,14 @@ export const PortfolioPage = () => {
                                     }}
                                     className="absolute w-64 aspect-video rounded-3xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/30 bg-white/10 backdrop-blur-xl p-1 z-10"
                                 >
-                                    <img src={card.image} className="w-full h-full object-cover rounded-2xl" alt="Showcase" />
+                                    <img
+                                        src={card.image}
+                                        className="w-full h-full object-cover rounded-2xl"
+                                        alt="Showcase"
+                                        loading={i === 0 ? "eager" : "lazy"}
+                                        decoding="async"
+                                        sizes="(min-width:1024px) 256px, 40vw"
+                                    />
                                 </motion.div>
                             ))}
                         </div>
@@ -175,56 +182,67 @@ export const PortfolioPage = () => {
             <section className="py-24 px-6 overflow-hidden">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <AnimatePresence mode="popLayout">
-                        {filteredProjects.map((project: Project, idx: number) => (
-                            <motion.div
-                                layout
-                                key={project.title}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.9 }}
-                                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className="group relative"
-                            >
-                                <div className={`p-6 rounded-[3rem] border h-full flex flex-col transition-all duration-500 ${theme === 'dark' ? 'bg-slate-900/50 border-white/10 hover:border-blue-500/30' : 'bg-white border-slate-200 hover:border-blue-500 shadow-xl'
-                                    }`}>
-                                    <div className="relative aspect-[16/10] rounded-[2rem] overflow-hidden mb-8 border border-white/10 shadow-lg bg-slate-100">
-                                        <ImageWithFallback
-                                            src={project.image}
-                                            alt={project.title}
-                                            fallback="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
-                                            className="w-full h-full object-[center_top] scale-[1.02] group-hover:scale-110 transition-transform duration-700"
-                                        />
-                                        <div className="absolute top-4 left-4 z-10">
-                                            <span className="px-3 py-1 rounded-full bg-[#289ed8]/90 backdrop-blur-sm text-white text-[9px] font-black uppercase tracking-widest shadow-lg">
-                                                {project.category}
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-col flex-grow">
-                                        <h3 className="text-2xl font-black mb-4 tracking-tight">{project.title}</h3>
-                                        <p className="text-slate-500 text-sm mb-8 leading-relaxed line-clamp-3">
-                                            {project.description}
-                                        </p>
-                                        <div className="mt-auto flex items-center justify-between">
-                                            <div className="flex flex-wrap gap-2">
-                                                {project.tags.map((tag: string) => (
-                                                    <span key={tag} className="text-[10px] font-bold text-slate-400">#{tag}</span>
-                                                ))}
+                        {filteredProjects.map((project: Project, idx: number) => {
+                            // fall back to image URL if link is missing or placeholder to avoid redirecting to "#"
+                            const projectLink = project.link && project.link !== '#' ? project.link : project.image;
+
+                            return (
+                                <motion.div
+                                    layout
+                                    key={project.title}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.9 }}
+                                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                    className="group relative"
+                                >
+                                    <div className={`p-6 rounded-[3rem] border h-full flex flex-col transition-all duration-500 ${theme === 'dark' ? 'bg-slate-900/50 border-white/10 hover:border-blue-500/30' : 'bg-white border-slate-200 hover:border-blue-500 shadow-xl'
+                                        }`}>
+                                        <div className="relative aspect-[16/10] rounded-[2rem] overflow-hidden mb-8 border border-white/10 shadow-lg bg-slate-100">
+                                            <ImageWithFallback
+                                                src={project.image}
+                                                alt={project.title}
+                                                fallback="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                                                className="w-full h-full object-[center_top] scale-[1.02] group-hover:scale-110 transition-transform duration-700"
+                                                sizes="(min-width:1280px) 30vw, (min-width:768px) 45vw, 100vw"
+                                            />
+                                            <div className="absolute top-4 left-4 z-10">
+                                                <span className="px-3 py-1 rounded-full bg-[#289ed8]/90 backdrop-blur-sm text-white text-[9px] font-black uppercase tracking-widest shadow-lg">
+                                                    {project.category}
+                                                </span>
                                             </div>
-                                            <a
-                                                href={project.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                <motion.div whileHover={{ scale: 1.1, rotate: 15 }} className={`w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-colors ${theme === 'dark' ? 'bg-white/10 hover:bg-blue-600' : 'bg-slate-900 hover:bg-blue-600'} text-white shadow-lg`}>
-                                                    <ArrowUpRight className="w-5 h-5" />
-                                                </motion.div>
-                                            </a>
+                                        </div>
+                                        <div className="flex flex-col flex-grow">
+                                            <h3 className="text-2xl font-black mb-4 tracking-tight">{project.title}</h3>
+                                            <p className="text-slate-500 text-sm mb-8 leading-relaxed line-clamp-3">
+                                                {project.description}
+                                            </p>
+                                            <div className="mt-auto flex items-center justify-between">
+                                                <div className="flex flex-wrap gap-2">
+                                                    {project.tags.map((tag: string) => (
+                                                        <span key={tag} className="text-[10px] font-bold text-slate-400">#{tag}</span>
+                                                    ))}
+                                                </div>
+                                                <a
+                                                    href={projectLink}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-block"
+                                                >
+                                                    <div
+                                                        className={`w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-colors transition-transform duration-300 ease-out
+                                                        ${theme === 'dark' ? 'bg-white/10 hover:bg-blue-600' : 'bg-slate-900 hover:bg-blue-600'}
+                                                        group-hover:translate-x-1.5 group-hover:-translate-y-1.5 group-hover:-rotate-12`}
+                                                    >
+                                                        <ArrowUpRight className="w-5 h-5 text-white" />
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </motion.div>
-                        ))}
+                                </motion.div>
+                            );
+                        })}
                     </AnimatePresence>
                 </div>
             </section>
