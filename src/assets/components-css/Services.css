@@ -737,6 +737,17 @@ a {
   margin-top: -20px;
 }
 
+/* Increased specificity to override global p tags */
+.staggered-wrapper .staggered-p2 {
+  max-width: 750px !important;
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
 /* Circular Text Animation */
 .circular-text-wrapper {
   position: absolute;

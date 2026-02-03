@@ -40,14 +40,14 @@ async function prerender() {
       }
 
       // 2. Visit the local server (Must be running!)
-      await page.goto(`http://localhost:8000${route}`, { waitUntil: 'networkidle0' });
+      await page.goto(`http://localhost:8081${route}`, { waitUntil: 'networkidle0' });
 
       // 3. Grab the HTML
       let html = await page.content();
 
       // 4. Fix image paths (remove "assets/" prefix for root relative paths)
       html = html.replace(/src="assets\//g, 'src="/assets/')
-                 .replace(/href="assets\//g, 'href="/assets/');
+        .replace(/href="assets\//g, 'href="/assets/');
 
       // 5. Save the file
       fs.writeFileSync(path.join(folderPath, 'index.html'), html);

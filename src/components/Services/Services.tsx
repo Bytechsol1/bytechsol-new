@@ -62,7 +62,7 @@ const Services: React.FC = () => {
       </Helmet>
 
       {/* 1st section - Refined Hero */}
-      <section className="relative overflow-hidden pt-22 pb-20 bg-white">
+      <section className="relative overflow-hidden pt-10 pb-10 bg-white">
         <div className="container mx-auto px-6">
           <div className="staggered-wrapper">
             <motion.div
@@ -114,7 +114,7 @@ const Services: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="staggered-p"
+              className="staggered-p2"
             >
               {heroDesc}
             </motion.p>

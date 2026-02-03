@@ -17,6 +17,7 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
+    assetsInlineLimit: 0, // Force all assets to be files, fixing SSR missing file issues
     minify: false,
     rollupOptions: {
       output: {

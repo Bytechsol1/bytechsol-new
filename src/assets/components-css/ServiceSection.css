@@ -96,7 +96,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.2;
+  opacity: 0.1;
   /* Increased opacity for better visibility */
   pointer-events: none;
   z-index: 0;
@@ -196,6 +196,8 @@
 
 .ser-new-heading {
   transition: transform 0.3s ease, color 0.3s ease;
+  display: flex !important;
+  align-items: center;
 }
 
 .ser-new-heading:hover {
