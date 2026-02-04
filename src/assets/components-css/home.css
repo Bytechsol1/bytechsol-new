@@ -1509,6 +1509,11 @@
   }
 }
 
+.home-video-section {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 @media (min-width: 992px) {
   .group5-content {
     padding-bottom: 0 !important;
