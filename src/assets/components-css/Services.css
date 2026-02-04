@@ -856,3 +856,34 @@ a {
     height: 120px;
   }
 }
+
+@media (max-width: 768px) {
+
+  .staggered-text-1,
+  .staggered-text-2 {
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: normal;
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  .staggered-text-2 {
+    margin-left: 3.5ch;
+  }
+
+  .staggered-wrapper {
+    padding: 2rem 0;
+    align-items: flex-start;
+  }
+
+  .staggered-our {
+    font-size: 2rem;
+    gap: 1rem;
+  }
+
+  .staggered-line {
+    width: 80px;
+  }
+}

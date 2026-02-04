@@ -25,6 +25,7 @@ import FaqSection from "../shareable/faq";
 import bh from "../assets/images/behanceimg.png";
 import tr from "../assets/images/trustimg.png";
 import up from "../assets/images/upworkimg.png";
+import tr_img from "../assets/images/Thomas Reed.jpg";
 import ScrollCards from "./ScrollCards";
 // import { Link } from "react-router-dom";
 import NewCon from "../shareable/NewCon";
@@ -32,7 +33,7 @@ import { Helmet } from "react-helmet";
 import { homePageFaqs } from "../shareable/faqData";
 import StrategyModal from "../shareable/StrategyModal";
 import MagneticDots from "../shareable/MagneticDots";
-
+import HomeVideo from "./HomeVideo";
 const awards = [
   {
     text: "Behance",
@@ -152,28 +153,30 @@ const Home: React.FC = () => {
                   and enterprises. From concept to code, we deliver results that
                   fuel growth.
                 </p>
-                <div className="founders-rating d-none d-md-flex align-items-center">
+                <div className="founders-rating d-flex align-items-center">
                   <div className="d-flex align-items-center">
                     <div className="founders-stack">
+                      {/* Image 1 (Front) */}
                       <div
                         className="tooltip-wrapper"
-                        style={{ left: 0, zIndex: 2 }}
+                        style={{ left: 0, zIndex: 3 }}
                       >
                         <img
                           src={kr}
-                          alt="Dr. Cody Chalker, Ph.D"
+                          alt="Dr. Cody Chalker"
                           className="founder-img"
                         />
                         <div className="custom-tooltip">
-                          <strong>Dr. Cody Chalker, Ph.D</strong>
+                          <strong>Dr. Cody Chalker</strong>
                           <br />
                           CEO, Babylon LLC
-                          <br />
                         </div>
                       </div>
+
+                      {/* Image 2 (Middle) */}
                       <div
                         className="tooltip-wrapper"
-                        style={{ left: "22px", zIndex: 1 }}
+                        style={{ left: "15px", zIndex: 2 }}
                       >
                         <img
                           src={jen}
@@ -183,12 +186,28 @@ const Home: React.FC = () => {
                         <div className="custom-tooltip">
                           <strong>Susie Wang</strong>
                           <br />
-                          COO and Founder, Purity Cosmetics
+                          COO, Purity Cosmetics
+                        </div>
+                      </div>
+
+                      {/* Image 3 (Back) */}
+                      <div
+                        className="tooltip-wrapper"
+                        style={{ left: "50px", zIndex: 1 }}
+                      >
+                        <img
+                          src={kr} // Using 'kr' again as placeholder if no 3rd img
+                          alt="Trusted Founder"
+                          className="founder-img"
+                        />
+                        <div className="custom-tooltip">
+                          <strong>Alex Morgan</strong>
                           <br />
+                          Founder, TechFlow
                         </div>
                       </div>
                     </div>
-                    <span className="ms-3" style={{ lineHeight: "15px" }}>
+                    <span className="ms-1" style={{ lineHeight: "15px" }}>
                       Trusted by forward-thinking founders and businesses
                       worldwide.
                     </span>
@@ -204,6 +223,9 @@ const Home: React.FC = () => {
           </div>
         </section>
       </main>
+
+      {/* Video Section */}
+      <HomeVideo />
 
       {/* Scrolling Images */}
       <section className="scrolling-images-section py-5">

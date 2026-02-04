@@ -121,7 +121,7 @@ const Services: React.FC = () => {
           </div>
 
           {/* SolarSystem Revolve Elements - Restored as requested */}
-          <div className="absolute top-0 right-[-10%] w-[60%] h-full pointer-events-none">
+          <div className="absolute top-0 right-[-10%] w-[60%] h-full pointer-events-none hidden md:block">
             <SolarSystem />
           </div>
         </div>

@@ -168,3 +168,13 @@
     transform: scale(1.05);
     color: white;
 }
+
+@media (max-width: 991px) {
+    .mega-menu {
+        display: none !important;
+    }
+
+    .dropdown-arrow {
+        display: none !important;
+    }
+}
