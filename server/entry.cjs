@@ -3,7 +3,7 @@ const path = require('path'); // Import path module
 
 // 1. Mock Image & CSS imports
 // FIX: Return a web path ('/assets/filename') instead of a hard drive path
-const extensions = ['.css', '.scss', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico', '.webp'];
+const extensions = ['.css', '.scss', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico', '.webp', '.mp4'];
 extensions.forEach((ext) => {
   require.extensions[ext] = (module, filename) => {
     // Instead of returning the full absolute path (which breaks the browser),

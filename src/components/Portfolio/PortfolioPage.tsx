@@ -5,6 +5,17 @@ import { ArrowUpRight } from 'lucide-react';
 import { ImageWithFallback } from './ImageWithFallback';
 import "../../assets/components-css/Services.css";
 import FaqSection from "../../shareable/faq";
+import Top1 from "../../assets/images/top1.png";
+import Top2 from "../../assets/images/top2.png";
+import Top3 from "../../assets/images/top3.png";
+import hm1 from "../../assets/images/home1img.png";
+import Bottom1 from "../../assets/images/bottom1.png";
+import Bottom2 from "../../assets/images/bottom2.png";
+import Bottom3 from "../../assets/images/bottom3.png";
+import hm2 from "../../assets/images/home2img.png";
+
+
+
 
 // Import Data Directly
 import portfolioData from '../../data/portfolioData.json';
@@ -58,6 +69,9 @@ export const PortfolioPage = () => {
     const titleParts = heroTitle.split(" ");
     const word1 = titleParts[0] || "OUR";
     const word2 = titleParts[1] || "PORTFOLIO";
+
+    const topImages = [Top1, Top2, Top3, hm1];
+    const bottomImages = [Bottom1, Bottom2, Bottom3, hm2];
 
 
 
@@ -139,7 +153,7 @@ export const PortfolioPage = () => {
                                         right: `${10 + (i * 5)}%`,
                                         zIndex: 3 - i
                                     }}
-                                    className="absolute w-64 aspect-video rounded-3xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/30 bg-white/10 backdrop-blur-xl p-1 z-10"
+                                    className="absolute w-64 aspect-video rounded-3xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/30 bg-white/10 backdrop-blur-md p-1 z-10"
                                 >
                                     <img
                                         src={card.image}
@@ -155,6 +169,39 @@ export const PortfolioPage = () => {
                     </div>
                 </div>
             </section>
+            {/* Scrolling Images */}
+            <section className="scrolling-images-section py-5">
+                <div className="scroll-row scroll-row-1">
+                    <div className="scroll-track">
+                        {[...topImages, ...topImages].map((img, index) => (
+                            <img
+                                key={`top-${index}`}
+                                src={img}
+                                alt={`Top image ${index}`}
+                                className="scroll-image"
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="scroll-row scroll-row-2 mt-5 d-none d-md-block">
+                    <div className="scroll-track reverse">
+                        {[...bottomImages, ...bottomImages].map((img, index) => (
+                            <img
+                                key={`bottom-${index}`}
+                                src={img}
+                                alt={`Bottom image ${index}`}
+                                className="scroll-image"
+                            />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
 
             {/* Categories Filter Section */}
             <section className="py-16 bg-white border-y border-slate-100">
@@ -181,14 +228,13 @@ export const PortfolioPage = () => {
             {/* Grid */}
             <section className="py-24 px-6 overflow-hidden">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <AnimatePresence mode="popLayout">
+                    <AnimatePresence mode="wait">
                         {filteredProjects.map((project: Project, idx: number) => {
                             // fall back to image URL if link is missing or placeholder to avoid redirecting to "#"
                             const projectLink = project.link && project.link !== '#' ? project.link : project.image;
 
                             return (
                                 <motion.div
-                                    layout
                                     key={project.title}
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={{ opacity: 1, scale: 1 }}

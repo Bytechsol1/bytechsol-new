@@ -102,21 +102,31 @@ const ScrollCards: React.FC = () => {
           scrub: true,
           pin: container,
           pinSpacing: true,
+          invalidateOnRefresh: true, // Handle resizes better
         },
       });
 
       // skip animating the first card → keep it fixed
-      cardsEls.slice(1).forEach((card, i) => {
+      cardsEls.forEach((card, i) => {
+        if (i === 0) return;
         tl.fromTo(
           card,
           { y: window.innerHeight },
           { y: 0, duration: 0.8 },
-          i // stagger
+          i - 1 // stagger
         );
       });
     }, containerRef);
 
     return () => ctx.revert();
+  }, []);
+
+  // Force refresh after mount to account for layout shifts from images above
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 1000); // Wait 1s for all assets/layout to settle
+    return () => clearTimeout(timer);
   }, []);
 
   return (

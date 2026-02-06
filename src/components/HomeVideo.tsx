@@ -1,7 +1,7 @@
 import React, { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import videoSrc from "../assets/videos/Video.mp4";
+import videoSrc from "../assets/videos/video1.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 

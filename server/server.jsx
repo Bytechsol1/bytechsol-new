@@ -121,7 +121,7 @@ router.get(/(.*)/, (req, res) => {
     return res.status(500).send("Build missing. Please run 'npm run build' first.");
   }
 
-  fs.readFile(indexFile, 'utf-8', (err, data) => {
+  fs.readFile(indexFile, 'utf-8', async (err, data) => {
     if (err) {
       console.error('❌ Error reading index.html:', err);
       return res.status(500).send("Server Error");
@@ -139,10 +139,52 @@ router.get(/(.*)/, (req, res) => {
 
       const helmet = Helmet.renderStatic();
 
+      let titleString = helmet.title.toString();
+      let metaString = helmet.meta.toString();
+
+      // --- SERVER-SIDE DATA FETCHING FOR BLOGS ---
+      // If we are on a blog page, fetch the specific post data to fix SEO tags.
+      if (req.url.startsWith('/blog/')) {
+        try {
+          // Extract slug: /blog/my-post-title/ -> my-post-title
+          const slug = req.url.split('/blog/')[1].split('?')[0].replace(/\/$/, '');
+
+          if (slug) {
+            console.log(`🔍 SSR fetching blog data for slug: ${slug}`);
+            const apiUrl = `https://bytechsol.com/cms/wp-json/wp/v2/posts?slug=${slug}`;
+            const response = await axios.get(apiUrl);
+
+            if (response.data && response.data.length > 0) {
+              const post = response.data[0];
+              const safeTitle = post.title.rendered;
+              // Strip HTML from excerpt and limit length
+              const cleanExcerpt = post.excerpt.rendered
+                .replace(/<[^>]*>?/gm, '')
+                .replace(/\n/g, ' ')
+                .trim()
+                .substring(0, 160);
+
+              console.log(`✅ SSR found blog: "${safeTitle}"`);
+
+              // Overwrite/Inject Title
+              titleString = `<title>${safeTitle} | BytechSol Blog</title>`;
+
+              // Prepend description meta tag (Helmet might be empty due to async component loading)
+              metaString = `<meta name="description" content="${cleanExcerpt}" /> ${metaString}`;
+            } else {
+              console.log(`⚠️ SSR blog not found for slug: ${slug}`);
+            }
+          }
+        } catch (fetchErr) {
+          console.error('❌ SSR Blog Fetch Error:', fetchErr.message);
+        }
+      }
+      // -------------------------------------------
+
       const finalHtml = data
         .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
-        .replace(/<title>.*<\/title>/, helmet.title.toString())
-        .replace('</head>', `${helmet.meta.toString()} ${helmet.link.toString()} ${helmet.script.toString()} </head>`);
+        .replace(/<title>.*<\/title>/, titleString)
+        .replace('</head>', `${metaString} ${helmet.link.toString()} ${helmet.script.toString()} </head>`);
 
       return res.send(finalHtml);
 

@@ -159,7 +159,7 @@ const Webapp: React.FC = () => {
       {/* 3rd section--- */}
 
 
-      <section className="performance-section" style={{ height: "85vh" }} ref={containerRef}>
+      <section className="performance-section service-page-cards" style={{ height: "85vh" }} ref={containerRef}>
         <div className="card-container">
           {cards.map((card, index) => (
             <div key={index} className={`card-row ${card.color}`}>

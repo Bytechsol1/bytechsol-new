@@ -887,3 +887,10 @@ a {
     width: 80px;
   }
 }
+
+/* Specific override for Service Pages (Odoo, WebApp, ProductDesign) 
+   to have white text instead of black/dark */
+.service-page-cards .card-text h2,
+.service-page-cards .card-text p {
+  color: #fff !important;
+}

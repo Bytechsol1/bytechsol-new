@@ -163,26 +163,14 @@ const CustomSoftwareDev = () => {
               src={cp}
               alt="Odoo 3D"
               className="img-fluid"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onMouseMove={(e) => {
-                const { clientX, clientY, currentTarget } = e;
-                const { left, top, width, height } = currentTarget.getBoundingClientRect();
-                const x = (clientX - left) / width - 0.5;
-                const y = (clientY - top) / height - 0.5;
-                currentTarget.style.transform = `perspective(1000px) rotate(-45deg) rotateY(${x * 40}deg) rotateX(${-y * 40}deg) scale(1.1)`;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "perspective(1000px) rotate(-45deg) rotateY(0deg) rotateX(0deg) scale(1)";
-              }}
               style={{
-                transform: "perspective(1000px) rotate(-45deg)",
-                transition: "transform 0.1s ease-out",
+                transition: "all 0.3s ease",
                 filter: "drop-shadow(0 0 30px rgba(100, 0, 255, 0.4))",
                 cursor: "pointer",
                 maxWidth: "600px",
                 width: "100%",
-                // mixBlendMode: "screen" // Removed as image is now transparent
               }}
             />
           </motion.div>
@@ -196,7 +184,7 @@ const CustomSoftwareDev = () => {
       {/* 4th section */}
 
       <section
-        className="performance-section"
+        className="performance-section service-page-cards"
         style={{ height: "85vh" }}
         ref={containerRef}
       >

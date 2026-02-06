@@ -152,7 +152,7 @@ const ProductDesign = () => {
 
 
       <section
-        className="performance-section"
+        className="performance-section service-page-cards"
         style={{ height: "85vh" }}
         ref={containerRef}
       >

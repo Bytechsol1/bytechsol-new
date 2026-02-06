@@ -176,11 +176,17 @@ const Blogdetail = () => {
     post?.image ||
     "https://bytechsol.com/cms/wp-content/uploads/2024/11/default-blog.png";
 
+  const getMetaDescription = () => {
+    if (post.excerpt && post.excerpt.rendered) {
+      return post.excerpt.rendered.replace(/<[^>]+>/g, '').substring(0, 160);
+    }
+    return post.title; // Fallback to title if no excerpt
+  };
   return (
     <>
       <Helmet>
         <title>{post.title} | BytechSol Blog</title>
-        <meta name="description" content={post.title} />
+        <meta name="description" content={getMetaDescription()} />
         <link rel="canonical" href={`https://bytechsol.com/blog/${slug}/`} />
       </Helmet>
 

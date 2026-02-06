@@ -1,39 +1,23 @@
 import React, { useState } from "react";
 import AnimatedText from "../shareable/AnimatedText";
 import { Target, Users, ShieldCheck } from "lucide-react";
-// import am from "../assets/images/aiml-home.svg";
 import "../assets/components-css/home.css";
 import Clutch from "../assets/images/clutch.png";
 import jen from "../assets/images/susie.jpg";
 import kr from "../assets/images/cody.jpg";
-import Top1 from "../assets/images/top1.png";
-import Top2 from "../assets/images/top2.png";
-import Top3 from "../assets/images/top3.png";
-import hm1 from "../assets/images/home1img.png";
-import Bottom1 from "../assets/images/bottom1.png";
-import Bottom2 from "../assets/images/bottom2.png";
-import Bottom3 from "../assets/images/bottom3.png";
-import hm2 from "../assets/images/home2img.png";
-// import Arrow from "../assets/images/arrow.svg";
-// import AwardBg from "../assets/images/award-bg.jpg"; // Removed
-// import bgImage from "../assets/images/bgimg.jpg";
 import Testimonial from "../shareable/testimonial";
 import FaqSection from "../shareable/faq";
-// import wb2 from "../assets/images/web1img.jpg";
-// import bd2 from "../assets/images/brandim.jpg";
-// import o1 from "../assets/images/odoo3.png";
 import bh from "../assets/images/behanceimg.png";
 import tr from "../assets/images/trustimg.png";
 import up from "../assets/images/upworkimg.png";
-import tr_img from "../assets/images/Thomas Reed.jpg";
 import ScrollCards from "./ScrollCards";
-// import { Link } from "react-router-dom";
 import NewCon from "../shareable/NewCon";
 import { Helmet } from "react-helmet";
 import { homePageFaqs } from "../shareable/faqData";
 import StrategyModal from "../shareable/StrategyModal";
 import MagneticDots from "../shareable/MagneticDots";
 import HomeVideo from "./HomeVideo";
+import TrustedBySection from "../shareable/trust500";
 const awards = [
   {
     text: "Behance",
@@ -73,28 +57,12 @@ const awards = [
   },
 ];
 
-// const services = [
-//   {
-//     id: 1,
-//     title: "Odoo",
-//     image: o1,
-//     path: "/services/odoo-services/",
-//   },
-//   { id: 2, title: "AI / ML", image: am, path: "/services/ai-ml/" },
-//   {
-//     id: 3,
-//     title: "Web development",
-//     image: wb2,
-//     path: "/services/website-design-and-development/",
-//   },
-//   { id: 4, title: "Marketing", image: bd2, path: "/services/brand-building/" },
-// ];
 
-const topImages = [Top1, Top2, Top3, hm1];
-const bottomImages = [Bottom1, Bottom2, Bottom3, hm2];
+
+
 
 const Home: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  // const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalType, setModalType] = useState<"strategy" | "quote">("strategy");
 
@@ -190,22 +158,7 @@ const Home: React.FC = () => {
                         </div>
                       </div>
 
-                      {/* Image 3 (Back) */}
-                      <div
-                        className="tooltip-wrapper"
-                        style={{ left: "50px", zIndex: 1 }}
-                      >
-                        <img
-                          src={kr} // Using 'kr' again as placeholder if no 3rd img
-                          alt="Trusted Founder"
-                          className="founder-img"
-                        />
-                        <div className="custom-tooltip">
-                          <strong>Alex Morgan</strong>
-                          <br />
-                          Founder, TechFlow
-                        </div>
-                      </div>
+
                     </div>
                     <span className="ms-1" style={{ lineHeight: "15px" }}>
                       Trusted by forward-thinking founders and businesses
@@ -225,41 +178,11 @@ const Home: React.FC = () => {
       </main>
 
       {/* Video Section */}
+
       <HomeVideo />
+      <TrustedBySection />
 
-      {/* Scrolling Images */}
-      <section className="scrolling-images-section py-5">
-        {/* First row - always visible */}
-        <div className="scroll-row scroll-row-1">
-          <div className="scroll-track">
-            {[...topImages, ...topImages].map((img, index) => (
-              <img
-                key={`top-${index}`}
-                src={img}
-                alt={`Top image ${index}`}
-                className="scroll-image"
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Second row - hidden on mobile */}
-        <div className="scroll-row scroll-row-2 mt-5 d-none d-md-block">
-          <div className="scroll-track reverse">
-            {[...bottomImages, ...bottomImages].map((img, index) => (
-              <img
-                key={`bottom-${index}`}
-                src={img}
-                alt={`Bottom image ${index}`}
-                className="scroll-image"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 3rd Section */}
-      <section className="who-we-are-section py-5">
+      <section className="who-we-are-section py-5 pb-10">
         <div className="container">
           <p className="subheading" data-aos="fade-down">
             (WHO WE ARE)
@@ -275,60 +198,6 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Services */}
-
-      {/* <section className="services-section py-5 mb-5"> */}
-      {/* <div className="service-vertical ">
-          <span>S</span>
-          <span>E</span>
-          <span>R</span>
-          <span>V</span>
-          <span>I</span>
-          <span>C</span>
-          <span>E</span>
-          <span>S</span>
-        </div> */}
-
-      {/* <div className="container">
-          <p
-            className="ser-subheading text-center text-md-start"
-            data-aos="fade-down"
-          >
-            (SERVICES)
-          </p>
-          {services.map((service, index) => (
-            <div
-              key={service.id}
-              className={`service-row ${activeIndex === index ? "active" : ""}`}
-              onMouseEnter={() => setActiveIndex(index)}
-              onMouseLeave={() => setActiveIndex(null)}
-            >
-              <span className="service-index" data-aos="fade-right">
-                0{service.id}
-              </span>
-              <Link to={service.path} className="service-link">
-                <h2 className="service-title" data-aos="fade-right">
-                  {service.title}
-                </h2>
-              </Link>
-              <img
-                src={Arrow}
-                alt="Arrow"
-                className="service-arrow-img"
-                data-aos="fade-left"
-              />
-
-              <img
-                src={service.image}
-                alt={service.title}
-                className={`service-image ${activeIndex === index ? "show" : ""
-                  }`}
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div> */}
-      {/* </section> */}
 
 
 
@@ -337,9 +206,9 @@ const Home: React.FC = () => {
 
       {/* Growth Section */}
       <section className="group7-container">
-        {/* <img className="group7-bg" src={bgImage} alt="Background" /> */}
+
         <div className="group7-content">
-          <h2 className="group7-main-title" >
+          <h2 className="group7-main-title" style={{ fontSize: "80px" }} data-aos="fade-up">
             Your Growth, Our Priority
           </h2>
           <div className="group7-columns">
@@ -348,19 +217,27 @@ const Home: React.FC = () => {
                 title: "Focused on What Matters",
                 desc: "We are not a company that just creates websites, but creates solutions to help your business flourish and attract customers to achieve real results.",
                 Icon: Target,
+                bg: "linear-gradient(125.88deg, #DE9FB4 3.07%, #532C53 56.27%, #1B021B 103.82%)"
               },
               {
                 title: "A Team by Your Side",
                 desc: "Our engineers, designers, and strategists collaborate closely with you. We take care and commitment to everything and do it in-house (we never outsource anything).",
                 Icon: Users,
+                bg: "linear-gradient(124.26deg, #A7FEEB -1.43%, #14655C 53.56%, rgba(2, 53, 47, 0.207843) 101.66%)"
               },
               {
                 title: "Quality You Can Rely On",
                 desc: "We put our heart into every project, making sure your website is secure, fast, and built to support your success long-term.",
                 Icon: ShieldCheck,
+                bg: "linear-gradient(123.88deg, #01D0FA 1.43%, #000326 89.16%)"
               },
             ].map((col, idx) => (
-              <div className="group7-column" key={idx} data-aos="fade-up">
+              <div
+                className="group7-column"
+                key={idx}
+                data-aos="fade-up"
+                style={{ background: col.bg, border: "none" }}
+              >
                 <col.Icon className="group7-icon" size={48} color="#fff" strokeWidth={1.5} />
                 <h3 className="group7-heading">{col.title}</h3>
                 <p className="group7-description">{col.desc}</p>
