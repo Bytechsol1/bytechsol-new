@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "../../assets/components-css/About.css";
-import co from "../../assets/images/comp.png";
+import visionMeeting from "../../assets/images/vision-meeting.jpg";
 import bk from "../../assets/images/blacky.png";
 import Testimonial from "../../shareable/testimonial";
 import FaqSection from "../../shareable/faq";
@@ -50,15 +50,15 @@ const About: React.FC = () => {
   };
   return (
     <>
-    <Helmet>
-  <title>About Us | BytechSol</title>
-  <meta
-    name="description"
-    content="Learn about BytechSol — a tech-driven company focused on delivering innovative, scalable, and performance-oriented software solutions."
-  />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://bytechsol.com/about/" />
-</Helmet>
+      <Helmet>
+        <title>About Us | BytechSol</title>
+        <meta
+          name="description"
+          content="Learn about BytechSol — a tech-driven company focused on delivering innovative, scalable, and performance-oriented software solutions."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://bytechsol.com/about/" />
+      </Helmet>
 
       {/* 1st Section */}
       <section
@@ -169,49 +169,71 @@ const About: React.FC = () => {
       </section>
 
       {/* 3th Section */}
-      <section className="vision-section">
-        <div className="vision-container">
-          <div className="vision-content">
-            <h1 className="vision-heading" data-aos="fade-down">
-              From <span className="gradient">one vision </span>to becoming a
-              global tech partner, we help businesses{" "}
-              <span className="gradient">scale smarter</span>.
-            </h1>
+      {/* 3rd Section - Vision */}
+      {/* 3rd Section - Vision */}
+      <section className="vision-section py-5">
+        <div className="container">
+          {/* Heading - Top Full Width */}
+          <div className="row mb-5" data-aos="fade-down">
+            <div className="col-12 text-center">
+              <h2 className="vision-heading fw-bold">
+                From <span className="gradient-text">one vision </span>to becoming a
+                global tech partner, we help businesses{" "}
+                <span className="gradient-text">scale smarter</span>.
+              </h2>
+            </div>
+          </div>
 
-            <div className="vision-grid">
-              <div className="vision-image" data-aos="fade-right">
-                <img src={co} alt="Vision Preview" />
+          <div className="row">
+            {/* Left Column - Scrolling Text */}
+            <div className="col-lg-6" data-aos="fade-right">
+              <div className="vision-content pe-lg-5">
+                <div className="vision-text">
+                  <p className="mb-4">
+                    Bytechsol did not turn out to be the best software agency in
+                    one day. Where it all began is a small team with huge
+                    ambitions and a dedication to creating smarter digital
+                    solutions and not simply prettier websites.
+                  </p>
+                  <p className="mb-4">
+                    That side hustle eventually led to a complete digital
+                    powerhouse. Whether it was working with startups to create
+                    their initial MVPs or building enterprise systems at scale, we
+                    have created custom web solutions, AI products, ERP solutions,
+                    and even executed SEO to move the needle.
+                  </p>
+                  <p className="mb-4">
+                    Bytechsol has served clients in 15+ countries today. Our
+                    products touch thousands of users and drive productive
+                    business in a hurry. Regardless of the project (web design,
+                    software development, or machine learning integrations), we
+                    develop as we did on day one: strategic, scalable, and
+                    user-first.
+                  </p>
+                  <p className="mb-5 fst-italic fw-medium text-white-50">
+                    "But honestly? We still build like it’s day one, fast, honest,
+                    human. Behind every screen is someone betting it all on an
+                    idea."
+                  </p>
+
+                  <a href="#" className="vision-btn d-inline-flex align-items-center">
+                    Shape your vision <span className="ms-2">↗</span>
+                  </a>
+                </div>
               </div>
-              <div className="vision-text" data-aos="fade-up">
-                <p>
-                  Bytechsol did not turn out to be the best software agency in
-                  one day. Where it all began is a small team with huge
-                  ambitions and a dedication to creating smarter digital
-                  solutions and not simply prettier websites.
-                </p>
-                <p>
-                  That side hustle eventually led to a complete digital
-                  powerhouse. Whether it was working with startups to create
-                  their initial MVPs or building enterprise systems at scale, we
-                  have created custom web solutions, AI products, ERP solutions,
-                  and even executed SEO to move the needle.
-                </p>
-                <p>
-                  Bytechsol has served clients in 15+ countries today. Our
-                  products touch thousands of users and drive productive
-                  business in a hurry. Regardless of the project (web design,
-                  software development, or machine learning integrations), we
-                  develop as we did on day one: strategic, scalable, and
-                  user-first.
-                </p>
-                <p>
-                  But honestly? We still build like it’s day one, fast, honest,
-                  human. Behind every screen is someone betting it all on an
-                  idea.
-                </p>
-                <a href="#" className="vision-btn">
-                  Shape your vision <span>↗</span>
-                </a>
+            </div>
+
+            {/* Right Column - Sticky Image */}
+            <div className="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+              <div className="vision-sticky-wrapper">
+                <div className="vision-img-wrapper position-relative">
+                  <div className="vision-decoration"></div>
+                  <img
+                    src={visionMeeting}
+                    alt="Team Vision Meeting"
+                    className="img-fluid rounded-4 shadow-lg position-relative z-1 vision-img-glow"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -259,9 +281,8 @@ const About: React.FC = () => {
                       <img
                         src={arrow}
                         alt="arrow"
-                        className={`webdesign-icon ${
-                          activeIndex === index ? "rotated" : ""
-                        }`}
+                        className={`webdesign-icon ${activeIndex === index ? "rotated" : ""
+                          }`}
                       />
                     </div>
                     {activeIndex === index && (
@@ -289,67 +310,67 @@ const About: React.FC = () => {
       <Testimonial />
       {/* 5th Section */}
       <div className="belief-header  container">
-          <h2 className="belief-title ">
-            The Principles Powering Our Projects
-          </h2>
-          <p className="belief-subtext">
-            From first brainstorm to final build, these values guide every decision.
-          </p>
-        </div>
-     <section className="belief-behind py-5">
-  <div className="container">
-    <div className="row align-items-start">
-      {/* LEFT SIDE */}
-      <div className="col-lg-6" data-aos="fade-right">
-        {/* Top heading */}
-        {/* Core beliefs title + image */}
-        <div className="core-section text-start">
-          <h1 className="core-heading fw-bold">Core Beliefs
-            <span className=""></span>
-          </h1>
-
-          <div className="core-img text-center d-none d-md-block">
-  <img src={cr} alt="Core Belief Illustration" className="img-fluid" />
-</div>
-
-        </div>
+        <h2 className="belief-title ">
+          The Principles Powering Our Projects
+        </h2>
+        <p className="belief-subtext">
+          From first brainstorm to final build, these values guide every decision.
+        </p>
       </div>
+      <section className="belief-behind py-5">
+        <div className="container">
+          <div className="row align-items-start">
+            {/* LEFT SIDE */}
+            <div className="col-lg-6" data-aos="fade-right">
+              {/* Top heading */}
+              {/* Core beliefs title + image */}
+              <div className="core-section text-start">
+                <h1 className="core-heading fw-bold">Core Beliefs
+                  <span className=""></span>
+                </h1>
 
-      {/* RIGHT SIDE */}
-      <div className="col-lg-6" data-aos="fade-left">
-        <div className="belief-item mb-4">
-          <h2> <span className="index-sp mx-2">01 </span>Empathy at the Core</h2>
-          <p>
-            We listen first before creating plans or prototyping; we listen to your story and your goals, and to users. All of our custom software solutions start with empathetic knowledge of what an actual human needs; they are not based on assumptions.
-          </p>
+                <div className="core-img text-center d-none d-md-block">
+                  <img src={cr} alt="Core Belief Illustration" className="img-fluid" />
+                </div>
+
+              </div>
+            </div>
+
+            {/* RIGHT SIDE */}
+            <div className="col-lg-6" data-aos="fade-left">
+              <div className="belief-item mb-4">
+                <h2> <span className="index-sp mx-2">01 </span>Empathy at the Core</h2>
+                <p>
+                  We listen first before creating plans or prototyping; we listen to your story and your goals, and to users. All of our custom software solutions start with empathetic knowledge of what an actual human needs; they are not based on assumptions.
+                </p>
+              </div>
+
+              <div className="belief-item mb-4">
+                <h2><span className="index-sp mx-2">02 </span> Simplicity that Speaks</h2>
+                <p>
+                  Complicated does not imply superior. We are user-centered design thinkers who believe in design that is intuitive, accessible, and elegant because the best digital experiences have an effortless feel to them.
+                </p>
+              </div>
+
+              <div className="belief-item mb-4">
+                <h2><span className="index-sp mx-2">03 </span> Speed with Purpose</h2>
+                <p>
+                  We act swiftly—not rashly. Be it lean MVPs or web development at scale, we work with purpose, pivot when necessary, and stay focused on driving your business success.
+                </p>
+              </div>
+
+              <div className="belief-item">
+                <h2><span className="index-sp mx-2">04 </span> Designed to Deliver Results</h2>
+                <p>
+                  We don’t make design awards; we make you win customers. Our focus is impact: conversions, retention, performance, and ROI.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div className="belief-item mb-4">
-          <h2><span className="index-sp mx-2">02 </span> Simplicity that Speaks</h2>
-          <p>
-            Complicated does not imply superior. We are user-centered design thinkers who believe in design that is intuitive, accessible, and elegant because the best digital experiences have an effortless feel to them.
-          </p>
-        </div>
-
-        <div className="belief-item mb-4">
-          <h2><span className="index-sp mx-2">03 </span> Speed with Purpose</h2>
-          <p>
-            We act swiftly—not rashly. Be it lean MVPs or web development at scale, we work with purpose, pivot when necessary, and stay focused on driving your business success.
-          </p>
-        </div>
-
-        <div className="belief-item">
-          <h2><span className="index-sp mx-2">04 </span> Designed to Deliver Results</h2>
-          <p>
-            We don’t make design awards; we make you win customers. Our focus is impact: conversions, retention, performance, and ROI.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-      <FaqSection faqs={aboutPageFaqs}/>
+      <FaqSection faqs={aboutPageFaqs} />
       <NewCon />
     </>
   );

@@ -28,6 +28,7 @@
 .gradient {
   background: linear-gradient(90deg, #3b82f6, #ec4899);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -37,6 +38,7 @@
   margin-top: 1rem;
   width: 100%;
 }
+
 .trust-500 p {
   color: #000;
   font-family: Guminert;
@@ -80,6 +82,7 @@
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0%);
   }
@@ -89,6 +92,7 @@
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -119,6 +123,7 @@
   font-weight: 550;
   line-height: 70px;
 }
+
 .metrics-para1 {
   width: 1020px;
   position: relative;
@@ -131,6 +136,7 @@
   display: inline-block;
   height: 138px;
 }
+
 .gradient-text {
   background: linear-gradient(90deg, #5a2fe7, #9c40c6 46.15%, #ea549f);
   -webkit-background-clip: text;
@@ -159,6 +165,7 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
 }
+
 .car2 {
   grid-column: span 2 / span 2;
   grid-row: span 3 / span 3;
@@ -172,6 +179,7 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
 }
+
 .cam3 {
   grid-column: span 2 / span 2;
   grid-row: span 3 / span 3;
@@ -185,6 +193,7 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
 }
+
 .css4 {
   grid-column: span 3 / span 3;
   grid-row: span 3 / span 3;
@@ -198,6 +207,7 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
 }
+
 .csm5 {
   grid-column: span 3 / span 3;
   grid-row: span 3 / span 3;
@@ -212,25 +222,35 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
 }
+
 .card1:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px) scale(1.05) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  z-index: 10;
 }
+
 .car2:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px) scale(1.05) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  z-index: 10;
 }
+
 .cam3:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px) scale(1.05) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  z-index: 10;
 }
+
 .css4:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px) scale(1.05) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  z-index: 10;
 }
+
 .csm5:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px) scale(1.05) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  z-index: 10;
 }
 
 .metric-number1 {
@@ -240,6 +260,7 @@
   margin-bottom: 100px;
   margin-top: -65px;
 }
+
 .metric-number2 {
   font-size: 25px;
   font-weight: 600;
@@ -247,6 +268,7 @@
   margin-bottom: 100px;
   margin-top: -65px;
 }
+
 .metric-number3 {
   font-size: 25px;
   font-weight: 600;
@@ -254,6 +276,7 @@
   margin-bottom: 100px;
   margin-top: -65px;
 }
+
 .metric-number4 {
   font-size: 25px;
   font-weight: 600;
@@ -261,6 +284,7 @@
   margin-bottom: 100px;
   margin-top: -50px;
 }
+
 .metric-number5 {
   font-size: 25px;
   font-weight: 600;
@@ -268,30 +292,35 @@
   margin-bottom: 100px;
   margin-top: -50px;
 }
+
 .metric-value1 {
   font-size: 32px;
   font-weight: 700;
   color: #000;
   margin-bottom: 12px;
 }
+
 .metric-value2 {
   font-size: 32px;
   font-weight: 700;
   color: #000;
   margin-bottom: 12px;
 }
+
 .metric-value3 {
   font-size: 32px;
   font-weight: 700;
   color: #000;
   margin-bottom: 12px;
 }
+
 .metric-value4 {
   font-size: 32px;
   font-weight: 700;
   color: #000;
   margin-bottom: 12px;
 }
+
 .metric-value5 {
   font-size: 32px;
   font-weight: 700;
@@ -304,21 +333,25 @@
   color: #444;
   line-height: 1.6;
 }
+
 .metric-description2 {
   font-size: 16px;
   color: #444;
   line-height: 1.6;
 }
+
 .metric-description3 {
   font-size: 16px;
   color: #444;
   line-height: 1.6;
 }
+
 .metric-description4 {
   font-size: 16px;
   color: #444;
   line-height: 1.6;
 }
+
 .metric-description5 {
   font-size: 16px;
   color: #444;
@@ -326,73 +359,101 @@
 }
 
 .vision-section {
-  background-color: #fff;
-  padding: 80px 20px;
-  font-family: "Guminert", sans-serif;
-}
-
-.vision-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
 }
 
 .vision-heading {
-  font-size: 50px;
-  font-weight: bold;
-  line-height: 1.3;
-  margin-bottom: 60px;
-  color: #000;
-  text-align: center;
-}
-
-.gradient-text {
-  background: linear-gradient(90deg, #5a2fe7, #9c40c6 46.15%, #ea549f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.vision-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
-
-.vision-image img {
-  width: 602px;
-  height: 700px;
-  margin-left: -30px;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  margin-bottom: 2rem;
 }
 
 .vision-text p {
-  color: #353535;
-  font-family: Guminert;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 35px;
+  color: #e0e0e0;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+.vision-sticky-wrapper {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 150px;
+  /* Adjust based on navbar height/preference */
+  z-index: 10;
+}
+
+.vision-img-wrapper {
+  position: relative;
+  padding: 20px;
+}
+
+.vision-decoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.vision-img-glow {
+  box-shadow: 0 0 40px rgba(138, 43, 226, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vision-img-wrapper:hover .vision-img-glow {
+  transform: scale(1.02);
+  box-shadow: 0 0 60px rgba(138, 43, 226, 0.7);
 }
 
 .vision-btn {
-  display: inline-block;
-  background-color: #0000ff;
+  background: linear-gradient(90deg, #8a2be2, #00d4ff);
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 99px;
-  font-weight: 600;
-  font-size: 14px;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-weight: 700;
   text-decoration: none;
-  margin-top: 20px;
-  transition: background-color 0.3s;
-}
-
-.vision-btn span {
-  margin-left: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+  border: none;
 }
 
 .vision-btn:hover {
-  background-color: #0000cc;
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+  color: #fff;
 }
+
+@media (max-width: 991px) {
+  .vision-heading {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .vision-text {
+    text-align: center;
+  }
+
+  .vision-btn {
+    margin: 0 auto;
+    display: flex;
+    width: fit-content;
+  }
+}
+
 .gradient-text {
   background: linear-gradient(90deg, #5a2fe7, #9c40c6 46.15%, #ea549f);
   -webkit-background-clip: text;
@@ -445,18 +506,19 @@
   font-size: 80px;
   margin-bottom: 30px;
   margin-left: 10px;
-   background: linear-gradient(90deg, #6a5acd, #b836f5);
+  background: linear-gradient(90deg, #6a5acd, #b836f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 
-.index-sp{
+.index-sp {
   font-size: 15px;
   color: #aaa;
   margin-left: -30px !important;
   margin-right: 5px;
 }
+
 /* BELIEF ITEMS */
 .belief-item h2 {
   font-size: 20px;
@@ -470,16 +532,19 @@
   color: #555;
   line-height: 1.7;
 }
+
 .core-img img {
-    max-width: 260px;
-    opacity: .9;
-    height: 350px;
+  max-width: 260px;
+  opacity: .9;
+  height: 350px;
 }
+
 /* RESPONSIVE */
 @media (max-width: 992px) {
   .core-heading {
     font-size: 36px;
   }
+
   .core-img img {
     max-width: 220px;
   }
@@ -489,10 +554,12 @@
   .belief-title {
     font-size: 24px;
   }
+
   .core-heading {
     font-size: 32px !important;
     margin-left: 0;
   }
+
   .core-img img {
     width: 60%;
   }
@@ -610,6 +677,7 @@
     margin-bottom: 150px;
     margin-top: 5px;
   }
+
   .metric-number2 {
     font-size: 20px;
     font-weight: 600;
@@ -617,6 +685,7 @@
     margin-bottom: 150px;
     margin-top: 5px;
   }
+
   .metric-number3 {
     font-size: 20px;
     font-weight: 600;
@@ -624,6 +693,7 @@
     margin-bottom: 150px;
     margin-top: 5px;
   }
+
   .metric-number4 {
     font-size: 20px;
     font-weight: 600;
@@ -631,6 +701,7 @@
     margin-bottom: 150px;
     margin-top: 5px;
   }
+
   .metric-number5 {
     font-size: 20px;
     font-weight: 600;

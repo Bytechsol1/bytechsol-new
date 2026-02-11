@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/lg.svg";
 import LogoText from "../assets/images/lg-text.svg";
 import "flag-icons/css/flag-icons.min.css";
+import CursorColorSection from "../components/CustomCursor/CursorColorSection";
 
 const Footer: React.FC = () => {
   // Smoothly scroll to top whenever the route (pathname) changes
@@ -12,7 +13,7 @@ const Footer: React.FC = () => {
   }, [pathname]);
 
   return (
-    <footer className="footer-section pt-5 pb-4">
+    <CursorColorSection color="#a3e635" className="footer-section pt-5 pb-4">
       <div className="container" data-aos="fade-up">
         <div className="row gy-4">
           {/* Left Column: Logo + Description */}
@@ -135,7 +136,7 @@ const Footer: React.FC = () => {
           </small>
         </div>
       </div>
-    </footer>
+    </CursorColorSection>
   );
 };
 

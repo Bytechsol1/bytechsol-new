@@ -3,8 +3,7 @@ import Logo from "../assets/images/logo.svg";
 import LogoText from "../assets/images/Logotext.svg";
 import LogoWhite from "../assets/images/lg-white.png";
 import LogoTextWhite from "../assets/images/lg-white-text.png";
-import w1 from "../assets/images/wecom.jpg";
-import wa from "../assets/images/webapp.svg";
+
 
 export type NavTheme = NavbarProps & {
   buttonSchemeClass?: string;

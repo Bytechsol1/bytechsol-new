@@ -38,17 +38,19 @@ import { PortfolioPage } from "./components/Portfolio/PortfolioPage";
 // import Login from "./components/Portal/Login";
 // import RequireAuth from "./components/Portal/RequireAuth";
 
-// We simply export the component logic. 
-// The Router will be provided by index.js (Client) or server.js (Server)
+import { CursorProvider } from "./components/CustomCursor/CursorContext";
+import CustomCursor from "./components/CustomCursor/CustomCursor";
+
+// ...
+
 export default function App() {
   const location = useLocation();
   const theme = getNavThemeForPath(location.pathname);
-
-  // Portal logic removed
   const isPortal = false;
 
   return (
-    <>
+    <CursorProvider>
+      <CustomCursor />
       {!isPortal && (
         <Navbar
           logoIconSrc={theme.logoIconSrc}
@@ -64,7 +66,7 @@ export default function App() {
       )}
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          {/* Login Route Removed */}
+          {/* ... routes ... */}
           <Route path="/" element={<Home />} />
           <Route path="/about/" element={<About />} />
           <Route path="/services/" element={<Services />} />
@@ -86,13 +88,10 @@ export default function App() {
               <PortfolioPage />
             </ThemeProvider>
           } />
-
-          {/* CMS Portal Routes Removed */}
-
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       {!isPortal && <Footer />}
-    </>
+    </CursorProvider>
   );
 }

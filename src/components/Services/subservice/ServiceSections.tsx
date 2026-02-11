@@ -1,24 +1,15 @@
-import ecb from "../../../assets/images/webecommerce-bg.webp";
 import web from "../../../assets/images/najeeb.png";
 import React, { useState } from "react";
 import "../../../assets/components-css/ServiceSection.css";
 import arr from "../../../assets/images/arrow.svg";
 import { Link } from "react-router-dom";
-import cmsbg from "../../../assets/images/ui ux 3.png";
 import ecm from "../../../assets/images/ecom-service-sec.png";
-import ecmbg from "../../../assets/images/ecombg.png";
 import br from "../../../assets/images/brand-service-sec.png";
-import brbg from "../../../assets/images/bb-bg.png";
 import erp from "../../../assets/images/erp-service-sec.png";
-import erpbg from "../../../assets/images/erpbg.png";
 import aml from "../../../assets/images/ai-service-sec.png";
-import amlbg from "../../../assets/images/aibg.png";
 import odo from "../../../assets/images/odoo-service-sec.png";
-import odobg from "../../../assets/images/odoobg.png";
 import seo from "../../../assets/images/seo-service-sec.png";
-import seobg from "../../../assets/images/seobg.png";
 import wb from "../../../assets/images/webapp-service-sec.png";
-import webbg from "../../../assets/images/webbg.png";
 import cmsser from "../../..//assets/images/cutomweb-service-sec.png";
 import { HashLink } from "react-router-hash-link";
 

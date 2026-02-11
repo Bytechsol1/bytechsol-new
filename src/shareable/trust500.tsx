@@ -32,6 +32,7 @@ const logos = [
   {
     name: "Oracle",
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/2560px-Oracle_logo.svg.png",
+    height: "22px",
   },
   {
     name: "HP",

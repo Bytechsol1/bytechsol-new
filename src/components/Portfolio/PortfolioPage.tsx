@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useTheme } from './ThemeContext';
 import { ArrowUpRight } from 'lucide-react';
 import { ImageWithFallback } from './ImageWithFallback';
@@ -51,17 +51,15 @@ const faqItems = [
 
 export const PortfolioPage = () => {
     const { theme } = useTheme();
-    const [filter, setFilter] = useState('All');
+    // const [filter, setFilter] = useState('All'); // Variable removed
 
     // Load initial state from imports
     const projects: Project[] = portfolioData.portfolio || [];
     const pageData = siteDataLib.pages.portfolio;
     const heroContent = pageData?.sections?.find((s: any) => s.id === 'hero')?.content;
 
-    const categories = ['All', ...new Set(projects.map(p => p.category))];
-    const filteredProjects = filter === 'All'
-        ? projects
-        : projects.filter(p => p.category === filter);
+    // Filter removed as per request - showing all projects
+    const filteredProjects = projects;
 
     const heroTitle = heroContent?.title || "OUR PORTFOLIO";
     const heroDesc = heroContent?.description || "A curated showcase of digital excellence. We turn complex ideas into high-performance products that set new industry standards.";
@@ -198,98 +196,68 @@ export const PortfolioPage = () => {
                 </div>
             </section>
 
-
-
-
-
-
-            {/* Categories Filter Section */}
-            <section className="py-16 bg-white border-y border-slate-100">
-                <div className="container">
-                    <div className="flex flex-wrap justify-center gap-4 mb-2">
-                        {categories.map((cat: string) => (
-                            <motion.button
-                                key={cat}
-                                whileHover={{ y: -2 }}
-                                whileTap={{ scale: 0.95 }}
-                                onClick={() => setFilter(cat)}
-                                className={`px-10 py-3 !rounded-full font-black text-[11px] uppercase tracking-[0.2em] transition-all duration-500 ease-out border-2 ${filter === cat
-                                    ? 'bg-[#289ed8] border-[#289ed8] text-white shadow-[0_15px_40px_-10px_rgba(40,158,216,0.6)] scale-110'
-                                    : 'bg-transparent border-slate-100 text-slate-400 hover:border-[#289ed8] hover:text-[#289ed8]'
-                                    }`}
-                            >
-                                {cat}
-                            </motion.button>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* Grid */}
             <section className="py-24 px-6 overflow-hidden">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <AnimatePresence mode="wait">
-                        {filteredProjects.map((project: Project, idx: number) => {
-                            // fall back to image URL if link is missing or placeholder to avoid redirecting to "#"
-                            const projectLink = project.link && project.link !== '#' ? project.link : project.image;
+                    {filteredProjects.map((project: Project, idx: number) => {
+                        // fall back to image URL if link is missing or placeholder to avoid redirecting to "#"
+                        const projectLink = project.link && project.link !== '#' ? project.link : project.image;
 
-                            return (
-                                <motion.div
-                                    key={project.title}
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.9 }}
-                                    transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                    className="group relative"
-                                >
-                                    <div className={`p-6 rounded-[3rem] border h-full flex flex-col transition-all duration-500 ${theme === 'dark' ? 'bg-slate-900/50 border-white/10 hover:border-blue-500/30' : 'bg-white border-slate-200 hover:border-blue-500 shadow-xl'
-                                        }`}>
-                                        <div className="relative aspect-[16/10] rounded-[2rem] overflow-hidden mb-8 border border-white/10 shadow-lg bg-slate-100">
-                                            <ImageWithFallback
-                                                src={project.image}
-                                                alt={project.title}
-                                                fallback="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
-                                                className="w-full h-full object-[center_top] scale-[1.02] group-hover:scale-110 transition-transform duration-700"
-                                                sizes="(min-width:1280px) 30vw, (min-width:768px) 45vw, 100vw"
-                                            />
-                                            <div className="absolute top-4 left-4 z-10">
-                                                <span className="px-3 py-1 rounded-full bg-[#289ed8]/90 backdrop-blur-sm text-white text-[9px] font-black uppercase tracking-widest shadow-lg">
-                                                    {project.category}
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-col flex-grow">
-                                            <h3 className="text-2xl font-black mb-4 tracking-tight">{project.title}</h3>
-                                            <p className="text-slate-500 text-sm mb-8 leading-relaxed line-clamp-3">
-                                                {project.description}
-                                            </p>
-                                            <div className="mt-auto flex items-center justify-between">
-                                                <div className="flex flex-wrap gap-2">
-                                                    {project.tags.map((tag: string) => (
-                                                        <span key={tag} className="text-[10px] font-bold text-slate-400">#{tag}</span>
-                                                    ))}
-                                                </div>
-                                                <a
-                                                    href={projectLink}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-block"
-                                                >
-                                                    <div
-                                                        className={`w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-colors transition-transform duration-300 ease-out
-                                                        ${theme === 'dark' ? 'bg-white/10 hover:bg-blue-600' : 'bg-slate-900 hover:bg-blue-600'}
-                                                        group-hover:translate-x-1.5 group-hover:-translate-y-1.5 group-hover:-rotate-12`}
-                                                    >
-                                                        <ArrowUpRight className="w-5 h-5 text-white" />
-                                                    </div>
-                                                </a>
-                                            </div>
+                        return (
+                            <motion.div
+                                key={project.title} // Consider using project.id if available for better stability
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                className="group relative"
+                            >
+                                <div className={`p-6 rounded-[3rem] border h-full flex flex-col transition-all duration-500 ${theme === 'dark' ? 'bg-slate-900/50 border-white/10 hover:border-blue-500/30' : 'bg-white border-slate-200 hover:border-blue-500 shadow-xl'
+                                    }`}>
+                                    <div className="relative aspect-[16/10] rounded-[2rem] overflow-hidden mb-8 border border-white/10 shadow-lg bg-slate-100">
+                                        <ImageWithFallback
+                                            src={project.image}
+                                            alt={project.title}
+                                            fallback="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                                            className="w-full h-full object-[center_top] scale-[1.02] group-hover:scale-110 transition-transform duration-700"
+                                            sizes="(min-width:1280px) 30vw, (min-width:768px) 45vw, 100vw"
+                                        />
+                                        <div className="absolute top-4 left-4 z-10">
+                                            <span className="px-3 py-1 rounded-full bg-[#289ed8]/90 backdrop-blur-sm text-white text-[9px] font-black uppercase tracking-widest shadow-lg">
+                                                {project.category}
+                                            </span>
                                         </div>
                                     </div>
-                                </motion.div>
-                            );
-                        })}
-                    </AnimatePresence>
+                                    <div className="flex flex-col flex-grow">
+                                        <h3 className="text-2xl font-black mb-4 tracking-tight">{project.title}</h3>
+                                        <p className="text-slate-500 text-sm mb-8 leading-relaxed line-clamp-3">
+                                            {project.description}
+                                        </p>
+                                        <div className="mt-auto flex items-center justify-between">
+                                            <div className="flex flex-wrap gap-2">
+                                                {project.tags?.map((tag: string) => (
+                                                    <span key={tag} className="text-[10px] font-bold text-slate-400">#{tag}</span>
+                                                ))}
+                                            </div>
+                                            <a
+                                                href={projectLink}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-block"
+                                            >
+                                                <div
+                                                    className={`w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-colors transition-transform duration-300 ease-out
+                                                    ${theme === 'dark' ? 'bg-white/10 hover:bg-blue-600' : 'bg-slate-900 hover:bg-blue-600'}
+                                                    group-hover:translate-x-1.5 group-hover:-translate-y-1.5 group-hover:-rotate-12`}
+                                                >
+                                                    <ArrowUpRight className="w-5 h-5 text-white" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        );
+                    })}
                 </div>
             </section>
 
