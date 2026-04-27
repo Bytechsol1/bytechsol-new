@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -l \"dg-hero-section\" \"e:/Bytechsol/bytechsol-new/bytechsol new/src/components/Services/subservice/\"*.tsx)",
+      "Bash(grep -l \"dg-products-section\" \"e:/Bytechsol/bytechsol-new/bytechsol new/src/components/Services/subservice/\"*.tsx)",
+      "Read(//c/Users/**)",
+      "Read(//c/Users/HIJAZ TR/Downloads/**)"
+    ]
+  }
+}

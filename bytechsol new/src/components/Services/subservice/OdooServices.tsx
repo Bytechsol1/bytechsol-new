@@ -1,0 +1,204 @@
+import "../../../assets/components-css/Services.css";
+import Testimonial from "../../../shareable/testimonial";
+import FaqSection from "../../../shareable/faq";
+import NewCon from "../../../shareable/NewCon";
+import et from "../../../assets/images/ideat.png";
+import lw from "../../../assets/images/lwork.png";
+import sp from "../../../assets/images/simplicity.png";
+import ma from "../../../assets/images/mobapps.png";
+import cp from "../../../assets/images/odoonew.png";
+import { useRef, useLayoutEffect, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Customization } from "./New";
+import { Helmet } from "react-helmet";
+import { odooFaqs } from "../../../shareable/faqData";
+import ERPPartnerSection from "../../ERPPartnerSection";
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const cards = [
+  {
+    color: "f-bg",
+    image: et,
+    title: ["ERP Without Limits"],
+    items: [
+      "Odoo isn’t just software, it’s a growth engine. Our fully customizable ERP solutions break the barriers, streamline all processes, and expand as your business expands. Everything is constructed around the way in which you work rather than vice versa, between planning and implementation.",
+    ],
+  },
+  {
+    color: "s-bg",
+    image: lw,
+    title: ["From Chaos to Clicks"],
+    items: [
+      "Migration and customization do not need to be messy. We transfer your data, modernize your system,  and develop bespoke workflows without raising an eyelid. Individual modules, individual dashboards, and individual features are all optimized to ensure that your teams are moving at a greater pace and your information is flowing more cleanly.",
+    ],
+  },
+  {
+    color: "t-bg",
+    image: sp,
+    title: ["Brains + Code = Magic"],
+    items: [
+      "Our technology-functional consultants transform complicated issues into scaled-down systems. We architect and map your processes, build resilient ararchitectu sd train your teams to unlock the full potential of Odoo - so each click has a tangible effect on the business.",
+    ],
+  },
+  {
+    color: "forth-bg",
+    image: ma,
+    title: ["Plug In. Power Up."],
+    items: [
+      "Integrate Odoo with everything — apps, payment gateways, e-commerce, IoT, or cloud. We communicate your systems with each other, share the data in real time, and become a powerhouse. The result? Fewer silos, smarter decisions, and serious speed.",
+    ],
+  },
+];
+
+
+
+const CustomSoftwareDev = () => {
+
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const cardsEls = gsap.utils.toArray<HTMLElement>(".card-row");
+      const container = containerRef.current;
+      if (!container) return;
+
+      cardsEls.forEach((card, i) => {
+        card.style.zIndex = `${i + 1}`;
+      });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          start: "top top",
+          end: () => `+=${(cardsEls.length - 1) * window.innerHeight}`,
+          scrub: true,
+          pin: container,
+          pinSpacing: true,
+        },
+      });
+
+
+      cardsEls.forEach((card, i) => {
+        if (i === 0) return;
+        tl.fromTo(
+          card,
+          { y: window.innerHeight },
+          { y: 0, duration: 0.8 },
+          i - 1
+        );
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 500); // wait a bit for GSAP layout to settle
+      }
+    }
+  }, [location]);
+
+
+  return (
+    <>
+      <Helmet>
+        <title>Odoo ERP Services | BytechSol</title>
+        <meta
+          name="description"
+          content="Get expert Odoo ERP implementation, customization, and support from BytechSol to streamline your business workflows and reporting."
+        />
+        <meta name="robots" content="index, follow" />
+        <link
+          rel="canonical"
+          href="https://bytechsol.com/services/odoo-services/"
+        />
+      </Helmet>
+
+      {/* Hero */}
+      <section className="dg-hero-section">
+        <div className="dg-hero-left">
+          <div className="dg-hero-title-wrap">
+            <h1 className="dg-hero-heading" data-aos="fade-down">
+              Unlock Business <br /> Potential with Tailored Odoo Solutions
+            </h1>
+          </div>
+          <div className="dg-hero-body-wrap">
+            <p className="dg-hero-desc" data-aos="fade-right">
+              Our Odoo services support businesses in streamlining workflows,
+              enhancing efficiency, and experiencing scalable growth with a
+              completely customized ERP platform. Since implementation and
+              integration to support and upgrades, we provide end-to-end Odoo
+              solutions based on your business requirements.
+            </p>
+            <a href="#contact" className="dg-hero-cta" data-aos="fade-up">
+              Start Your Website Project Today <span className="arrow">↗</span>
+            </a>
+          </div>
+        </div>
+        <div className="dg-hero-right odoo-right" style={{ overflow: "visible" }}>
+          <img
+            src={cp}
+            alt="Odoo 3D"
+            style={{
+              position: "absolute",
+              width: "470px",
+              height: "560px",
+              top: "0px",
+              left: "0px",
+              maxWidth: "none",
+              zIndex: 10
+            }}
+          />
+        </div>
+      </section>
+
+      <ERPPartnerSection />
+
+      <Customization />
+
+
+
+      {/* 4th section */}
+
+      <section
+        className="performance-section service-page-cards"
+        style={{ height: "85vh" }}
+        ref={containerRef}
+      >
+        <div className="card-container">
+          {cards.map((card, index) => (
+            <div key={index} className={`card-row ${card.color}`}>
+              <div className="card-text">
+                <h2>{card.title[0]}</h2>
+                <p>{card.items[0]}</p>
+              </div>
+              <div className="card-img">
+                <img src={card.image} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
+      <Testimonial />
+      <FaqSection faqs={odooFaqs} />
+      <NewCon />
+    </>
+  );
+};
+
+export default CustomSoftwareDev;
