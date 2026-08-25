@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "../../../assets/components-css/Services.css";
-import se from "../../../assets/images/seonew.png"
+import se from "../../../assets/images/seo-service-sec.png"
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import NewCon from "../../../shareable/NewCon";
@@ -119,7 +119,7 @@ const ContactUs = () => {
         <div className="dg-hero-right seo-right" style={{ overflow: "visible" }}>
           <img
             src={se}
-            alt="SEO 3D"
+            alt="SEO Services"
             style={{
               position: "absolute",
               width: "470px",

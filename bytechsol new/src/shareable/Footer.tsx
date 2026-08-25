@@ -40,44 +40,44 @@ const Footer: React.FC = () => {
               Contact Us <i className="bi bi-arrow-up-right"></i>
             </Link>
           </div>
-          <div className="col-md-1 d-none d-md-block"></div>
+          <div className="col-md-1 d-none d-xl-block"></div>
           {/* Services */}
           <div className="col-6 col-md-2">
             <Link to="/services/" className="service-link"><h6 className="footer-heading">Services</h6></Link>
             <ul className="footer-links">
-              <Link to="/services/web-app/">
-                <li>Web App</li>
-              </Link>
-              <Link to="/services/seo-service/">
-                <li>SEO Service</li>
-              </Link>
-              <Link to="/services/brand-building/">
-                <li>Brand Building</li>
-              </Link>
-              <Link to="/services/erp-service/">
-                <li>ERP Service</li>
-              </Link>
-              <Link to="/services/website-design-and-development/">
-                <li>Website Design & Development</li>
-              </Link>
+              <li>
+                <Link to="/services/web-app/">Web App</Link>
+              </li>
+              <li>
+                <Link to="/services/seo-service/">SEO Service</Link>
+              </li>
+              <li>
+                <Link to="/services/brand-building/">Brand Building</Link>
+              </li>
+              <li>
+                <Link to="/services/erp-service/">ERP Service</Link>
+              </li>
+              <li>
+                <Link to="/services/website-design-and-development/">Website Design & Development</Link>
+              </li>
             </ul>
           </div>
 
           {/* Additional Services */}
           <div className="col-6 col-md-2">
             <ul className="footer-links mt-md-4 pt-md-2">
-              <Link to="/services/e-commerce-solutions/">
-                <li>E-Commerce Solutions</li>
-              </Link>
-              <Link to="/services/odoo-services/">
-                <li>Odoo Services</li>
-              </Link>
-              <Link to="/services/ai-ml/">
-                <li>AI / ML</li>
-              </Link>
-              <Link to="/services/custom-web/">
-                <li>Custom Web</li>
-              </Link>
+              <li>
+                <Link to="/services/e-commerce-solutions/">E-Commerce Solutions</Link>
+              </li>
+              <li>
+                <Link to="/services/odoo-services/">Odoo Services</Link>
+              </li>
+              <li>
+                <Link to="/services/ai-ml/">AI / ML</Link>
+              </li>
+              <li>
+                <Link to="/services/custom-web/">Custom Web</Link>
+              </li>
             </ul>
           </div>
 
@@ -85,18 +85,18 @@ const Footer: React.FC = () => {
           <div className="col-6 col-md-2">
             <h6 className="footer-heading">Quick Links</h6>
             <ul className="footer-links">
-              <Link to="/about/">
-                <li>About</li>
-              </Link>
-              <Link to="/blog/">
-                <li>Blog</li>
-              </Link>
-              <Link to="/careers/">
-                <li>Career</li>
-              </Link>
-              <Link to="/contact/">
-                <li>Contact Us</li>
-              </Link>
+              <li>
+                <Link to="/about/">About</Link>
+              </li>
+              <li>
+                <Link to="/blog/">Blog</Link>
+              </li>
+              <li>
+                <Link to="/careers/">Career</Link>
+              </li>
+              <li>
+                <Link to="/contact/">Contact Us</Link>
+              </li>
             </ul>
           </div>
 
@@ -104,36 +104,57 @@ const Footer: React.FC = () => {
           <div className="col-6 col-md-2">
             <h6 className="footer-heading">Social</h6>
             <ul className="footer-links">
-              <Link
-                to="https://www.linkedin.com/company/bytechsol-llc"
-                target="_blank"
-              >
-                <li>LinkedIn</li>
-              </Link>
-              <Link to="https://www.instagram.com/bytechsol1/" target="_blank">
-                <li>Instagram</li>
-              </Link>
-              <Link
-                to="https://www.facebook.com/profile.php?id=100092258931848"
-                target="_blank"
-              >
-                <li>Facebook</li>
-              </Link>
-              <Link to="https://x.com/BytechSol" target="_blank">
-                <li>Twitter</li>
-              </Link>
+              <li>
+                <Link
+                  to="https://www.linkedin.com/company/bytechsol-llc"
+                  target="_blank"
+                >
+                  LinkedIn
+                </Link>
+              </li>
+              <li>
+                <Link to="https://www.instagram.com/bytechsol1/" target="_blank">
+                  Instagram
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="https://www.facebook.com/profile.php?id=100092258931848"
+                  target="_blank"
+                >
+                  Facebook
+                </Link>
+              </li>
+              <li>
+                <Link to="https://x.com/BytechSol" target="_blank">
+                  Twitter
+                </Link>
+              </li>
             </ul>
           </div>
+
+          {/* Removed Legal Column */}
         </div>
 
         {/* Divider */}
         <hr className="footer-divider" />
 
         {/* Bottom Footer */}
-        <div className="footer-bottom d-flex justify-content-center align-items-center pt-4">
-          <small className="text" style={{ color: "#aaa" }}>
-            © 2025 BytechSol LLC
-          </small>
+        <div className="footer-bottom row pt-4 pb-3 align-items-center">
+          <div className="col-12 col-md-4 d-none d-md-block"></div>
+          <div className="col-12 col-md-4 text-center">
+            <small className="text" style={{ color: "#aaa" }}>
+              © {new Date().getFullYear()} BytechSol LLC
+            </small>
+          </div>
+          <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end gap-4 mt-3 mt-md-0">
+            <Link to="/privacy-policy/" style={{ color: "#fff", textDecoration: "none", fontSize: "14px", fontWeight: "500" }}>
+              Privacy Policy
+            </Link>
+            <Link to="/terms-and-condition/" style={{ color: "#fff", textDecoration: "none", fontSize: "14px", fontWeight: "500" }}>
+              Terms & Conditions
+            </Link>
+          </div>
         </div>
       </div>
     </CursorColorSection>

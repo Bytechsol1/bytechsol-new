@@ -10,21 +10,27 @@ import type { Feature } from "geojson";
 import { GEO_API_URL } from "../enviroment/BytechsolApi";
 import usa from "../assets/images/united states.png";
 import pak from "../assets/images/pakista.svg";
+import { useState } from "react";
 
 const WorldMap: React.FC = () => {
+  const [hoveredMarker, setHoveredMarker] = useState<string | null>(null);
   const markers = [
     {
       name: "Pakistan",
       coordinates: [67.0011, 24.8607],
       code: "PK",
       flag: pak,
+      address: `Office 301 4th floor, Business bay, M9, Block 3 A
+Gulistan-e-Johar, Karachi, 75290, Pakistan`
     },
     {
       name: "USA",
       coordinates: [-98.5795, 39.8283],
       code: "US",
       flag: usa,
-    },
+      address: `30 N Gould St Ste R,
+Sheridan, WY 82801`
+    }
   ];
 
   return (
@@ -101,10 +107,15 @@ const WorldMap: React.FC = () => {
 
             {/* Fixed visible country labels with flags */}
             {markers.map((marker) => (
-              <Marker key={marker.name} coordinates={marker.coordinates}>
+              <Marker 
+                key={marker.name} 
+                coordinates={marker.coordinates}
+                onMouseEnter={() => setHoveredMarker(marker.name)}
+                onMouseLeave={() => setHoveredMarker(null)}
+              >
                 <g>
                   {/* Country name + flag */}
-                  <foreignObject width={80} height={50} x={-40} y={-60}>
+                  <foreignObject width={200} height={150} x={-100} y={-80} style={{overflow: 'visible', pointerEvents: 'none'}}>
                     <div
                       className="d-flex flex-column align-items-center text-center"
                       style={{
@@ -113,6 +124,9 @@ const WorldMap: React.FC = () => {
                         fontWeight: "bold",
                         color: "#000",
                         gap: "4px",
+                        cursor: "default",
+                        marginTop: "20px",
+                        pointerEvents: 'auto'
                       }}
                     >
                       <img
@@ -122,15 +136,25 @@ const WorldMap: React.FC = () => {
                         style={{ width: "24px", height: "24px" }}
                       />
                       <span>{marker.name}</span>
+
+                      <div 
+                        className="mt-2 p-2 bg-slate-900 text-white text-[11px] text-center font-medium rounded-lg shadow-xl transition-all duration-300"
+                        style={{
+                          width: marker.name === 'Pakistan' ? '220px' : '160px',
+                          opacity: hoveredMarker === marker.name ? 1 : 0,
+                          height: hoveredMarker === marker.name ? 'auto' : '0px',
+                          overflow: 'hidden'
+                        }}
+                      >
+                        {marker.address.split('\n').map((line, i) => (
+                          <React.Fragment key={i}>
+                            {line}
+                            {i === 0 && <br/>}
+                          </React.Fragment>
+                        ))}
+                      </div>
                     </div>
                   </foreignObject>
-
-                  {/* Location icon */}
-                  {/* <foreignObject width={30} height={30} x={-8} y={-25}>
-              <div className=" text-center" style={{ fontSize: "20px", color:"#289dd8" }}>
-                <i className="fa-solid fa-location-dot"></i>
-              </div>
-            </foreignObject> */}
                 </g>
               </Marker>
             ))}

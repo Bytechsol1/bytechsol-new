@@ -64,6 +64,22 @@
   color: #fff;
 }
 
+.btn-white-hover-black {
+  background-color: #fff;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-white-hover-black:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
 .btn-white-black {
   background-color: #2f3133;
   color: #fff;
@@ -84,11 +100,13 @@
   gap: 20px;
   align-items: center;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 .contact8-logos img {
   max-height: 75px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .contact8-form {

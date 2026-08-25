@@ -13,6 +13,19 @@ import Bottom1 from "../../assets/images/bottom1.png";
 import Bottom2 from "../../assets/images/bottom2.png";
 import Bottom3 from "../../assets/images/bottom3.png";
 import hm2 from "../../assets/images/home2img.png";
+import loopHoverImg from "../../assets/images/loop-hover.png";
+import voxiqHoverImg from "../../assets/images/voxiq-hover.png";
+import skynodeHoverImg from "../../assets/images/skynode-hover.png";
+import arr from "../../assets/images/arrow.svg";
+import babylonHoverImg from "../../assets/images/babylon-hover.png";
+import expeditedHoverImg from "../../assets/images/expedited-hover.png";
+import clockitHoverImg from "../../assets/images/clockit-hover.png";
+import clockitLogoImg from "../../assets/images/clockit-logo.png";
+import frigoHoverImg from "../../assets/images/frigo-hover.png";
+import frigoLogoImg from "../../assets/images/frigo-logo.png";
+import cmjlHoverImg from "../../assets/images/cmjl-hover.png";
+import labourHoverImg from "../../assets/images/labour-hover.png";
+import labourLogoImg from "../../assets/images/labour-logo.png";
 
 
 
@@ -75,10 +88,11 @@ export const PortfolioPage = () => {
 
     return (
         <main className={`min-h-screen ${theme === 'dark' ? 'bg-[#0a0a0a] text-white' : 'bg-white text-slate-900'}`}>
-            {/* Hero Section */}
-            <section className="relative overflow-hidden pt-32 pb-20 bg-white">
-                <div className="container mx-auto px-6">
-                    <div className="staggered-wrapper">
+            {/* Services Page Style Hero */}
+            <section className={`relative overflow-hidden pt-10 pb-10 ${theme === 'dark' ? 'bg-[#0a0a0a]' : 'bg-white'}`}>
+                <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+                    <div className="md:w-1/2">
+                        <div className="staggered-wrapper">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -88,7 +102,7 @@ export const PortfolioPage = () => {
                             {word1} <span className="staggered-line" />
                         </motion.div>
 
-                        <motion.h1 className="staggered-text-1">
+                        <motion.h1 className="staggered-text-1 block" style={{ whiteSpace: 'nowrap' }}>
                             {word2.slice(0, 4).split("").map((letter: string, index: number) => (
                                 <motion.span
                                     key={index}
@@ -106,7 +120,7 @@ export const PortfolioPage = () => {
                             ))}
                         </motion.h1>
 
-                        <motion.h1 className="staggered-text-2">
+                        <motion.h1 className="staggered-text-2 block" style={{ whiteSpace: 'nowrap' }}>
                             {word2.slice(4).split("").map((letter: string, index: number) => (
                                 <motion.span
                                     key={index}
@@ -128,61 +142,52 @@ export const PortfolioPage = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1, delay: 0.6 }}
-                            className="staggered-p"
+                            className="staggered-p2"
                         >
                             {heroDesc}
                         </motion.p>
                     </div>
+                    </div>
+                    <div className="md:w-5/12 relative h-[500px] flex flex-col justify-center items-end hidden md:flex">
+                        
+                        {/* Top Card - Gray - Loop */}
+                        <motion.div 
+                            initial={{ opacity: 0, x: 50, y: -20 }}
+                            animate={{ opacity: 1, x: 0, y: 0 }}
+                            transition={{ duration: 1, delay: 0.2 }}
+                            className="absolute right-0 top-[5%] w-[320px] xl:w-[380px] h-[220px] xl:h-[260px] transform rotate-[3deg] translate-x-12 z-10 flex items-center justify-center"
+                        >
+                            <img src={loopHoverImg} alt="Loop Project" className="w-full h-full object-contain" />
+                        </motion.div>
+                        
+                        {/* Middle Card - Dusty Rose - Babylon */}
+                        <motion.div 
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1, delay: 0.4 }}
+                            className="absolute right-8 xl:right-16 top-[35%] w-[340px] xl:w-[400px] h-[240px] xl:h-[280px] z-20 flex items-center justify-center transform -rotate-[1deg]"
+                        >
+                            <img src={babylonHoverImg} alt="Babylon OS Project" className="w-full h-full object-contain" />
+                        </motion.div>
 
-                    <div className="absolute top-0 right-[-10%] w-[60%] h-full pointer-events-none opacity-40">
-                        <div className="relative w-full h-full">
-                            {projects.slice(0, 3).map((card: Project, i: number) => (
-                                <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0, scale: 0.5, x: 100, rotate: -10 }}
-                                    animate={{ opacity: 1, scale: 1, x: 0, rotate: -5 }}
-                                    transition={{
-                                        duration: 1.5,
-                                        delay: 0.5 + (i * 0.3),
-                                        ease: [0.22, 1, 0.36, 1]
-                                    }}
-                                    style={{
-                                        top: `${20 + (i * 25)}%`,
-                                        right: `${10 + (i * 5)}%`,
-                                        zIndex: 3 - i
-                                    }}
-                                    className="absolute w-64 aspect-video rounded-3xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/30 bg-white/10 backdrop-blur-md p-1 z-10"
-                                >
-                                    <img
-                                        src={card.image}
-                                        className="w-full h-full object-cover rounded-2xl"
-                                        alt="Showcase"
-                                        loading={i === 0 ? "eager" : "lazy"}
-                                        decoding="async"
-                                        sizes="(min-width:1024px) 256px, 40vw"
-                                    />
-                                </motion.div>
-                            ))}
-                        </div>
+                        {/* Bottom Card - Soft Yellow - Skynode */}
+                        <motion.div 
+                            initial={{ opacity: 0, x: 50, y: 20 }}
+                            animate={{ opacity: 1, x: 0, y: 0 }}
+                            transition={{ duration: 1, delay: 0.6 }}
+                            className="absolute right-4 xl:right-8 top-[65%] w-[330px] xl:w-[390px] h-[230px] xl:h-[270px] transform rotate-[2deg] z-30 flex items-center justify-center"
+                        >
+                            <img src={skynodeHoverImg} alt="Skynode Project" className="w-full h-full object-contain" />
+                        </motion.div>
+                        
                     </div>
                 </div>
             </section>
+
+
             {/* Scrolling Images */}
             <section className="scrolling-images-section py-5">
-                <div className="scroll-row scroll-row-1">
-                    <div className="scroll-track">
-                        {[...topImages, ...topImages].map((img, index) => (
-                            <img
-                                key={`top-${index}`}
-                                src={img}
-                                alt={`Top image ${index}`}
-                                className="scroll-image"
-                            />
-                        ))}
-                    </div>
-                </div>
-
-                <div className="scroll-row scroll-row-2 mt-5 d-none d-md-block">
+                <div className="scroll-row scroll-row-2 d-none d-md-block">
                     <div className="scroll-track reverse">
                         {[...bottomImages, ...bottomImages].map((img, index) => (
                             <img
@@ -196,72 +201,319 @@ export const PortfolioPage = () => {
                 </div>
             </section>
 
-            {/* Grid */}
-            <section className="px-6 pt-24 pb-32 overflow-hidden">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {filteredProjects.map((project: Project, idx: number) => {
-                        // fall back to image URL if link is missing or placeholder to avoid redirecting to "#"
-                        const projectLink = project.link && project.link !== '#' ? project.link : project.image;
+            {/* Project Cards Grid */}
+            <section className={`py-24 ${theme === 'dark' ? 'bg-[#0a0a0a]' : 'bg-white'}`}>
+                <div className="w-full max-w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                    {/* Loop Card - Bellroy Style */}
+                    <a href="https://loop.bytechsol.com/login" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                        
+                        {/* Image Container */}
+                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f8f9fa]">
+                            {/* Default State: Logo */}
+                            <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#f8f9fa]">
+                                <img src="https://loop.bytechsol.com/loop.svg" alt="Loop Logo" className="w-32 md:w-40 h-auto transition-transform duration-500 group-hover:scale-110" />
+                            </div>
 
-                        return (
-                            <motion.div
-                                key={project.title}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className="group relative"
-                            >
-                                <div className={`h-full overflow-hidden rounded-[2.35rem] border transition-all duration-500 ${theme === 'dark' ? 'bg-slate-900/50 border-white/10 hover:border-blue-500/30' : 'bg-white border-slate-200 hover:border-blue-500 shadow-xl'
-                                     }`}>
-                                    <div className="relative aspect-[16/10] overflow-hidden rounded-t-[2.35rem] bg-slate-100">
-                                        <ImageWithFallback
-                                            src={project.image}
-                                            alt={project.title}
-                                            fallback="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
-                                            className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                                            sizes="(min-width:1280px) 30vw, (min-width:768px) 45vw, 100vw"
-                                        />
-                                        <div className="absolute top-4 left-4 z-10">
-                                            <span className="px-3 py-1 rounded-full bg-[#289ed8]/90 backdrop-blur-sm text-white text-[9px] font-black uppercase tracking-widest shadow-lg">
-                                                {project.category}
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div className="flex h-[240px] flex-col p-5 md:p-6">
-                                        <h3 className="mb-3 line-clamp-2 min-h-[3.75rem] text-[2rem] font-black leading-[1.05] tracking-tight text-slate-950">
-                                            {project.title}
-                                        </h3>
-                                        <p className="line-clamp-3 text-[1.02rem] leading-8 text-slate-500">
-                                            {project.description}
-                                        </p>
-                                        <div className="mt-auto flex items-end justify-between gap-4 pt-5">
-                                            <div className="flex flex-wrap gap-x-3 gap-y-2">
-                                                {project.tags?.map((tag: string) => (
-                                                    <span key={tag} className="text-xs font-bold text-slate-400">#{tag}</span>
-                                                ))}
-                                            </div>
-                                            <a
-                                                href={projectLink}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-block"
-                                            >
-                                                <div
-                                                    className={`h-11 w-11 shrink-0 rounded-full flex items-center justify-center cursor-pointer transition-colors transition-transform duration-300 ease-out
-                                                    ${theme === 'dark' ? 'bg-white/10 hover:bg-blue-600' : 'bg-slate-900 hover:bg-blue-600'}
-                                                    group-hover:translate-x-1.5 group-hover:-translate-y-1.5 group-hover:-rotate-12`}
-                                                >
-                                                    <ArrowUpRight className="w-5 h-5 text-white" />
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
+                            {/* Hover State: Screenshot */}
+                            <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
+                                <img src={loopHoverImg} alt="Loop Dashboard" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                            </div>
+                        </div>
+                        
+                        {/* Content Container */}
+                        <div className="flex flex-col justify-center flex-grow min-h-[140px]" style={{ padding: "32px 32px" }}>
+                            <div className="relative w-full">
+                                <div>
+                                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black text-left pr-14 flex items-center gap-2">
+                                        Loop
+                                    
+                                        <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                                    </h3>
+                                    <p className="text-slate-500 mt-2 text-sm text-left pr-14">
+                                        Intelligent logistics and fleet management platform.
+                                    </p>
                                 </div>
-                            </motion.div>
-                        );
-                    })}
+                                
+                            </div>
+                        </div>
+                    </a>
+
+                    {/* Voxiq Card */}
+                    <a href="https://voxiq.bytechsol.com/" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                        
+                        {/* Image Container */}
+                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f8f9fa]">
+                            {/* Default State: Logo */}
+                            <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#f8f9fa]">
+                                <img src="https://voxiq.bytechsol.com/logo-darker.png" alt="Voxiq Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                            </div>
+
+                            {/* Hover State: Screenshot */}
+                            <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
+                                <img src={voxiqHoverImg} alt="Voxiq Platform" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                            </div>
+                        </div>
+                        
+                        {/* Content Container */}
+                        <div className="flex flex-col justify-center flex-grow min-h-[140px]" style={{ padding: "32px 32px" }}>
+                            <div className="relative w-full">
+                                <div>
+                                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black text-left pr-14 flex items-center gap-2">
+                                        Voxiq
+                                    
+                                        <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                                    </h3>
+                                    <p className="text-slate-500 mt-2 text-sm text-left pr-14">
+                                        AI-powered voice analytics and communication.
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+
+                    {/* Skynode Card */}
+                    <a href="https://sky-node-edge-solution-new-design.vercel.app/" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                        
+                        {/* Image Container */}
+                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f8f9fa]">
+                            {/* Default State: Logo */}
+                            <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#f8f9fa]">
+                                <img src="https://sky-node-edge-solution-new-design.vercel.app/logo-skynode-light-bg.svg" alt="Skynode Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                            </div>
+
+                            {/* Hover State: Screenshot */}
+                            <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
+                                <img src={skynodeHoverImg} alt="Skynode Platform" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                            </div>
+                        </div>
+                        
+                        {/* Content Container */}
+                        <div className="flex flex-col justify-center flex-grow min-h-[140px]" style={{ padding: "32px 32px" }}>
+                            <div className="relative w-full">
+                                <div>
+                                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black text-left pr-14 flex items-center gap-2">
+                                        Skynode
+                                    
+                                        <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                                    </h3>
+                                    <p className="text-slate-500 mt-2 text-sm text-left pr-14">
+                                        Advanced edge computing solutions.
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+
+                    {/* Babylon OS Card */}
+                    <a href="https://babylon-os.vercel.app/login" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                        
+                        {/* Image Container */}
+                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f8f9fa]">
+                            {/* Default State: Logo */}
+                            <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#f8f9fa]">
+                                <img src="https://babylon-os.vercel.app/assets/Babylon-CPVhAjWe.webp" alt="Babylon OS Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                            </div>
+
+                            {/* Hover State: Screenshot */}
+                            <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
+                                <img src={babylonHoverImg} alt="Babylon OS Dashboard" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                            </div>
+                        </div>
+                        
+                        {/* Content Container */}
+                        <div className="flex flex-col justify-center flex-grow min-h-[140px]" style={{ padding: "32px 32px" }}>
+                            <div className="relative w-full">
+                                <div>
+                                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black text-left pr-14 flex items-center gap-2">
+                                        Babylon OS
+                                    
+                                        <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                                    </h3>
+                                    <p className="text-slate-500 mt-2 text-sm text-left pr-14">
+                                        Comprehensive enterprise operating system.
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+
+                    {/* Expedited Transport Card */}
+                    <a href="https://expeditedtransport.net/" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                        
+                        {/* Image Container */}
+                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f8f9fa]">
+                            {/* Default State: Logo */}
+                            <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#f8f9fa]">
+                                <img src="https://expeditedtransport.net/assets/bg-logo-dyMm7NFV.png" alt="Expedited Transport Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                            </div>
+
+                            {/* Hover State: Screenshot */}
+                            <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
+                                <img src={expeditedHoverImg} alt="Expedited Transport Dashboard" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                            </div>
+                        </div>
+                        
+                        {/* Content Container */}
+                        <div className="flex flex-col justify-center flex-grow min-h-[140px]" style={{ padding: "32px 32px" }}>
+                            <div className="relative w-full">
+                                <div>
+                                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black text-left pr-14 flex items-center gap-2">
+                                        Expedited Transport
+                                    
+                                        <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                                    </h3>
+                                    <p className="text-slate-500 mt-2 text-sm text-left pr-14">
+                                        Fast and reliable freight transportation.
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+
+                    {/* ClockIt Card */}
+                    <a href="https://clockit.expeditedtransportservices.net/" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                        
+                        {/* Image Container */}
+                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#0c1825]">
+                            {/* Default State: Logo */}
+                            <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#0c1825]">
+                                <img src={clockitLogoImg} alt="ClockIt Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                            </div>
+
+                            {/* Hover State: Screenshot */}
+                            <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
+                                <img src={clockitHoverImg} alt="ClockIt Dashboard" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                            </div>
+                        </div>
+                        
+                        {/* Content Container */}
+                        <div className="flex flex-col justify-center flex-grow min-h-[140px]" style={{ padding: "32px 32px" }}>
+                            <div className="relative w-full">
+                                <div>
+                                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black text-left pr-14 flex items-center gap-2">
+                                        ClockIt
+                                    
+                                        <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                                    </h3>
+                                    <p className="text-slate-500 mt-2 text-sm text-left pr-14">
+                                        Time tracking and employee management.
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+
+                    {/* Frigo Labs Card */}
+                    <a href="https://frigolabs.vercel.app/login" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                        
+                        {/* Image Container */}
+                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f8f9fa]">
+                            {/* Default State: Logo */}
+                            <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#f8f9fa]">
+                                <img src={frigoLogoImg} alt="Frigo Labs Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                            </div>
+
+                            {/* Hover State: Screenshot */}
+                            <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
+                                <img src={frigoHoverImg} alt="Frigo Labs Dashboard" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                            </div>
+                        </div>
+                        
+                        {/* Content Container */}
+                        <div className="flex flex-col justify-center flex-grow min-h-[140px]" style={{ padding: "32px 32px" }}>
+                            <div className="relative w-full">
+                                <div>
+                                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black text-left pr-14 flex items-center gap-2">
+                                        Frigo Labs
+                                    
+                                        <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                                    </h3>
+                                    <p className="text-slate-500 mt-2 text-sm text-left pr-14">
+                                        Innovative cold chain technology solutions.
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+
+                    {/* CMJL Mobile App Card */}
+                    <a href="https://play.google.com/store/apps/details?id=net.expeditedtransport.driverapp" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                        
+                        {/* Image Container */}
+                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f8f9fa]">
+                            {/* Default State: Logo */}
+                            <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#f8f9fa]">
+                                <img src="https://expeditedtransport.net/assets/bg-logo-dyMm7NFV.png" alt="CMJL Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                            </div>
+
+                            {/* Hover State: Screenshot */}
+                            <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
+                                <img src={cmjlHoverImg} alt="CMJL Mobile App" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                            </div>
+                        </div>
+                        
+                        {/* Content Container */}
+                        <div className="flex flex-col justify-center flex-grow min-h-[140px]" style={{ padding: "32px 32px" }}>
+                            <div className="relative w-full">
+                                <div>
+                                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black text-left pr-14 flex items-center gap-2">
+                                        CMJL Mobile App
+                                    
+                                        <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                                    </h3>
+                                    <p className="text-slate-500 mt-2 text-sm text-left pr-14">
+                                        Dedicated application for professional drivers.
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+
+                    {/* Labour Tracker App Card */}
+                    <a href="https://labour-tracker-app-alpha.vercel.app/worker-portal" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                        
+                        {/* Image Container */}
+                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-white">
+                            {/* Default State: Logo */}
+                            <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-white">
+                                <img src="https://babylon-os.vercel.app/assets/Babylon-CPVhAjWe.webp" alt="Labour Tracker Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                            </div>
+
+                            {/* Hover State: Screenshot */}
+                            <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
+                                <img src={labourHoverImg} alt="Labour Tracker Dashboard" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                            </div>
+                        </div>
+                        
+                        {/* Content Container */}
+                        <div className="flex flex-col justify-center flex-grow min-h-[140px]" style={{ padding: "32px 32px" }}>
+                            <div className="relative w-full">
+                                <div>
+                                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black text-left pr-14 flex items-center gap-2">
+                                        Labour Tracker App
+                                    
+                                        <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                                    </h3>
+                                    <p className="text-slate-500 mt-2 text-sm text-left pr-14">
+                                        Real-time workforce monitoring and portal.
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+
+                    {/* Future cards will go here */}
                 </div>
             </section>
+
 
             <div className="px-6 pb-8 md:pb-12">
                 <div className="mx-auto max-w-7xl">

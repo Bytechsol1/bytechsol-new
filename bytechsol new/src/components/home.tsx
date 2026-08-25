@@ -16,7 +16,6 @@ import { Helmet } from "react-helmet";
 import { homePageFaqs } from "../shareable/faqData";
 import StrategyModal from "../shareable/StrategyModal";
 import MagneticDots from "../shareable/MagneticDots";
-import HomeVideo from "./HomeVideo";
 import TrustedBySection from "../shareable/trust500";
 const awards = [
   {
@@ -178,8 +177,6 @@ const Home: React.FC = () => {
       </main>
 
       {/* Video Section */}
-
-      <HomeVideo />
       <TrustedBySection />
 
       <section className="who-we-are-section py-5 pb-10">

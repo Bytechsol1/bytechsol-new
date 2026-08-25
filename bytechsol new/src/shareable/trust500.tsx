@@ -1,48 +1,52 @@
 import React from "react";
 import purity from "../assets/images/purity-logo.png";
 import babylon from "../assets/images/babylon-logo.png";
-import cisco from "../assets/images/cisco.svg";
-import akamai from "../assets/images/akamai.svg";
-import sap from "../assets/images/sap.svg";
-import microsoft from "../assets/images/microsoft.svg";
-import oracle from "../assets/images/oracle.svg";
-import hp from "../assets/images/hp.svg";
 
+import oracle from "../assets/images/oracle.svg";
+import voxiq from "../assets/images/voxiq-darker.png";
+import loop from "../assets/images/loop.svg";
+import skynode from "../assets/images/skynode-light-bg.svg";
+import racerbio from "../assets/images/racerbio.png";
+import expeditedtransport from "../assets/images/expeditedtransport.png";
+import expeditedtransport3 from "../assets/images/expeditedtransport3.png";
 // Using reliable public URLs for the logos
 const logos = [
   {
     name: "Babylon LLC",
     src: babylon,
-    height: "80px", // Increased from 60px
   },
   {
     name: "100% Pure",
     src: purity,
   },
   {
-    name: "Cisco",
-    src: cisco,
-  },
-  {
-    name: "Akamai",
-    src: akamai,
-  },
-  {
-    name: "SAP",
-    src: sap,
-  },
-  {
-    name: "Microsoft",
-    src: microsoft,
-  },
-  {
     name: "Oracle",
     src: oracle,
-    height: "35px", // Increased from 22px
   },
   {
-    name: "HP",
-    src: hp,
+    name: "Racerbio",
+    src: racerbio,
+  },
+  {
+    name: "Expedited Transport 1",
+    src: expeditedtransport,
+  },
+
+  {
+    name: "Expedited Transport 3",
+    src: expeditedtransport3,
+  },
+  {
+    name: "Voxiq",
+    src: voxiq,
+  },
+  {
+    name: "Loop",
+    src: loop,
+  },
+  {
+    name: "SkyNode",
+    src: skynode,
   },
 ];
 
@@ -67,10 +71,12 @@ const TrustedBySection = () => {
                 src={logo.src}
                 alt={`${logo.name} Logo`}
                 style={{
-                  height: logo.height || "55px", // Increased default height
+                  height: "45px", // Standard fixed height for all
                   width: "auto",
+                  maxWidth: "180px", // Prevent extremely wide logos from taking over
                   objectFit: "contain",
-                  margin: "0 40px", // Adjusted spacing
+                  margin: "0 40px",
+                  imageRendering: "-webkit-optimize-contrast", // Prevent pixelation
                   filter: "none",
                   opacity: 1,
                   background: "transparent",

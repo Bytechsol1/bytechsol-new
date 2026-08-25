@@ -27,6 +27,8 @@ import NotFound from "./components/404";
 import Blogdetail from "./components/About/BlogDetail";
 import { ThemeProvider } from "./components/Portfolio/ThemeContext";
 import { PortfolioPage } from "./components/Portfolio/PortfolioPage";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsAndCondition from "./components/TermsAndCondition";
 
 // Portal Components Removed
 // import PortalLayout from "./components/Portal/PortalLayout";
@@ -39,7 +41,6 @@ import { PortfolioPage } from "./components/Portfolio/PortfolioPage";
 // import RequireAuth from "./components/Portal/RequireAuth";
 
 import { CursorProvider } from "./components/CustomCursor/CursorContext";
-import CustomCursor from "./components/CustomCursor/CustomCursor";
 import ChatWidget from "./shareable/ChatWidget";
 
 // ...
@@ -51,7 +52,6 @@ export default function App() {
 
   return (
     <CursorProvider>
-      <CustomCursor />
       {!isPortal && (
         <Navbar
           logoIconSrc={theme.logoIconSrc}
@@ -89,6 +89,8 @@ export default function App() {
               <PortfolioPage />
             </ThemeProvider>
           } />
+          <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-condition/" element={<TermsAndCondition />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

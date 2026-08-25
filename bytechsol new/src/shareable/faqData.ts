@@ -674,66 +674,55 @@ export const aimlFaqs = [
 ];
 
 export const erpFaqs = [
-{
-    id: 1,
-    question: "What are AI & ML solutions, and how can they help my business?",
-    answer:
-      "AI and ML solutions are based on data-driven intelligence, predictive analytics,c, and automation to enhance decision-making. They assist businesses to optimise operations, cut down on costs, and discover untapped growth prospects through smarter insights.",
+  {
+      id: 1,
+      question: "What is an ERP system and how can it help my business?",
+      answer: "An ERP (Enterprise Resource Planning) system connects important business operations such as finance, inventory, sales, purchasing, HR, and customer management in one centralized platform. It helps businesses improve efficiency, reduce manual work, and make better decisions using real-time data.",
   },
   {
-    id: 2,
-    question:
-      "How do AI chatbots improve customer support?",
-    answer:
-      "NLP-based and LLM-based AI chatbots respond in real time and 24/7. They are effective in dealing with repeated questions, lessening response time, increasing customer satisfaction, and decreasing costs to support a business.",
+      id: 2,
+      question: "What ERP solutions do you provide?",
+      answer: "We provide customized ERP solutions based on your business requirements, including ERP implementation, customization, integration, migration, and ongoing support. We can also help businesses optimize existing ERP systems.",
   },
   {
-    id: 3,
-    question: "What is the role of voice assistants in business?",
-    answer:
-      "Voice assistants enable hands-free, natural interactions through speech recognition and NLP. They enhance accessibility and make daily operations easy, and provide fluid customer experiences across devices and platforms.",
+      id: 3,
+      question: "Can you customize an ERP system according to our business needs?",
+      answer: "Yes. We customize ERP systems according to your business processes, workflows, departments, and reporting requirements. Our goal is to make the ERP work around your business rather than forcing your business to change unnecessarily.",
   },
   {
-    id: 4,
-    question: "How can NLP solutions benefit my business operations?",
-    answer:
-      "NLP solutions read and understand text and speech to derive meaning and context. They enhance communication, support multilinguality, streamline workflows, and give actionable feedback on unstructured data.",
+      id: 4,
+      question: "Can you integrate ERP with our existing software?",
+      answer: "Yes. We can integrate ERP systems with existing websites, e-commerce platforms, CRM systems, payment gateways, third-party applications, and other business tools to keep your data and processes connected.",
   },
   {
-    id: 5,
-    question: "What are Large Language Models (LLMs), and why are they important?",
-    answer:
-      "LLMs are state-of-the-art AI that can comprehend and produce human-like writing. They are very common in chatbots, automation, content generation, and customer support to provide context-sensitive and correct output.",
+      id: 5,
+      question: "How can an ERP system improve business efficiency?",
+      answer: "An ERP system automates repetitive tasks, centralizes business data, reduces manual errors, and gives teams access to the information they need. This can improve productivity and help management make faster, data-driven decisions.",
   },
   {
-    id: 6,
-    question: "Can you build multilingual AI chatbots for global businesses?",
-    answer:
-      "Yes, we generate multilingual chatbots that are trained on NLP and LLMs to be able to communicate in other languages. This would assist businesses in serving international markets and forging closer international interaction.",
+      id: 6,
+      question: "Do you provide ERP data migration services?",
+      answer: "Yes. We can help migrate your existing business data into the new ERP system. We focus on proper data mapping, validation, and testing to minimize data loss and disruption during the migration process.",
   },
   {
-    id: 7,
-    question: "How do machine learning models optimize decision-making?",
-    answer:
-      "Machine learning models identify patterns, process huge amounts of data, and make predictions. They enhance business activities such as forecasting, fraud detection, and recommendations to enable quicker and more intelligent decision-making.",
+      id: 7,
+      question: "Is ERP suitable for small and growing businesses?",
+      answer: "Yes. ERP solutions can be useful for small, medium-sized, and growing businesses. We can recommend and configure an ERP solution based on your current operations, budget, and future growth plans.",
   },
   {
-    id: 8,
-    question: "Do you integrate chatbots and voice assistants with existing systems?",
-    answer:
-      "Absolutely. We combine AI chatbots and voice assistants with websites, mobile apps, CRM, and messaging platforms. This guarantees effective interaction and integration of data management in all the business systems.",
+      id: 8,
+      question: "Do you provide ERP support and maintenance after implementation?",
+      answer: "Yes. We provide ongoing ERP support and maintenance to help keep your system secure, updated, and running efficiently. We can also assist with troubleshooting, improvements, and future customizations.",
   },
   {
-    id: 9,
-    question: "How secure are your AI-driven solutions?",
-    answer:
-      "Our AI solutions are highly encrypted and compliant. We keep your business data secure, confidential, and trustworthy, and allow complex automation.",
+      id: 9,
+      question: "How long does ERP implementation take?",
+      answer: "The timeline depends on the size of the business, number of modules, level of customization, data migration requirements, and integrations. After understanding your requirements, we can provide a more accurate implementation timeline.",
   },
-   {
-    id: 10,
-    question: "Why choose ByTechsol for AI & ML solutions?",
-    answer:
-      "ByTechsol focuses on providing custom AI, ML, NLP,  and LLM solutions aligned to business objectives. We are scalable, secure, and result-driven, which assists businesses in long-term success.",
+  {
+      id: 10,
+      question: "How can I get started with your ERP services?",
+      answer: "You can get started by contacting our team and sharing your business requirements, current systems, and the challenges you want to solve. We will review your needs and recommend an ERP approach that fits your business.",
   },
 ];
 

@@ -23,7 +23,9 @@ let routes = [
   '/services/website-design-and-development/',
   '/blog/',
   '/careers/',
-  '/contact/'
+  '/contact/',
+  '/privacy-policy/',
+  '/terms-and-condition/'
 ];
 
 function isBlogDetailRoute(route) {
