@@ -78,6 +78,7 @@ async function freePort() {
     const data = JSON.parse(raw);
     assert.equal(typeof data.error, 'string');
     assert.ok(!JSON.stringify(data).includes('test-api-key'));
+    return data;
   }
   try {
     let ready = false;
@@ -94,8 +95,30 @@ async function freePort() {
     await expectError(send([]), 400);
     await expectError(send([{ role: 'assistant', content: 'Invalid final role' }]), 400);
     await expectError(send(), 503);
+    assert.equal((await expectError(fetch(url + '?check=1'), 503)).code, 'CONFIG_FILE_NOT_FOUND');
+    for (const [contents, expectedCode] of [
+      ["test-api-key", 'CONFIG_RETURN_ARRAY_REQUIRED'],
+      ["<?php echo 'test-api-key'; return 1;", 'CONFIG_RETURN_ARRAY_REQUIRED'],
+      ["<?php return ['api_key' => 'test-api-key';", 'CONFIG_PHP_INVALID'],
+      ["<?php return ['api_key' => 'test-api-key with spaces'];", 'CONFIG_API_KEY_FORMAT'],
+      ["<?php return ['api_key' => 'test-api-key', 'model' => ''];", 'CONFIG_MODEL_INVALID'],
+    ]) {
+      fs.writeFileSync(configPath, contents);
+      assert.equal((await expectError(fetch(url + '?check=1'), 503)).code, expectedCode);
+    }
     fs.writeFileSync(configPath, "<?php return ['api_key' => 'REPLACE_WITH_YOUR_GROQ_API_KEY'];");
     await expectError(send(), 503);
+    fs.writeFileSync(configPath, "<?php return ['GROQ_API_KEY' => ' test-api-key ', 'GROQ_MODEL' => 'openai/gpt-oss-120b'];");
+    assert.deepEqual(await (await fetch(url + '?check=1')).json(), { status: 'configured', code: 'CHAT_CONFIG_OK' });
+    assert.equal(fs.existsSync(capturedPath), false);
+    console.log('PASS: config diagnostics never expose keys and accept uppercase config names');
+    setFixture({ choices: [{ message: { content: 'Uppercase config works' } }] });
+    const uppercaseResponse = await send();
+    assert.equal(uppercaseResponse.status, 200);
+    assert.equal((await uppercaseResponse.json()).reply, 'Uppercase config works');
+    fs.mkdirSync(path.join(siteRoot, 'nested/api'), { recursive: true });
+    fs.copyFileSync(path.join(siteRoot, 'api/chat.php'), path.join(siteRoot, 'nested/api/chat.php'));
+    assert.equal((await fetch(`http://127.0.0.1:${port}/nested/api/chat.php?check=1`)).status, 200);
     fs.writeFileSync(configPath, "<?php return ['api_key' => 'test-api-key'];");
     console.log('PASS: method, content type, JSON, size, message and config validation');
 

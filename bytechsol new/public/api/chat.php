@@ -63,60 +63,106 @@ function allowRequest(string $filename, string $ip): bool
     }
 }
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
+$configurationCheck = ($_SERVER['REQUEST_METHOD'] ?? '') === 'GET' && ($_GET['check'] ?? '') === '1';
+if (!$configurationCheck && ($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
     header('Allow: POST');
     respond(405, ['error' => 'Use POST to send a chat message.']);
 }
 
-if (stripos($_SERVER['CONTENT_TYPE'] ?? '', 'application/json') !== 0) {
-    respond(415, ['error' => 'Send the message as JSON.']);
-}
-
-$raw = file_get_contents('php://input', false, null, 0, 32769);
-if ($raw === false || strlen($raw) > 32768) {
-    respond(413, ['error' => 'The message is too large.']);
-}
-try {
-    $body = json_decode($raw, true, 32, JSON_THROW_ON_ERROR);
-} catch (\JsonException $error) {
-    respond(400, ['error' => 'The message contains invalid JSON.']);
-}
-if (!is_array($body) || !isset($body['messages']) || !is_array($body['messages']) || count($body['messages']) === 0) {
-    respond(400, ['error' => 'A message is required.']);
-}
-
-$messages = [];
-foreach (array_slice($body['messages'], -12) as $message) {
-    if (!is_array($message) || !in_array($message['role'] ?? null, ['user', 'assistant'], true) || !is_string($message['content'] ?? null)) {
-        continue;
+if (!$configurationCheck) {
+    if (stripos($_SERVER['CONTENT_TYPE'] ?? '', 'application/json') !== 0) {
+        respond(415, ['error' => 'Send the message as JSON.']);
     }
-    $content = trim($message['content']);
-    // Count Unicode characters without requiring the mbstring extension.
-    preg_match('/^.{0,1000}/us', $content, $match);
-    $content = $match[0] ?? '';
-    if ($content !== '') {
-        $messages[] = ['role' => $message['role'], 'content' => $content];
+
+    $raw = file_get_contents('php://input', false, null, 0, 32769);
+    if ($raw === false || strlen($raw) > 32768) {
+        respond(413, ['error' => 'The message is too large.']);
     }
-}
-if (count($messages) === 0 || $messages[count($messages) - 1]['role'] !== 'user') {
-    respond(400, ['error' => 'A valid user message is required.']);
+    try {
+        $body = json_decode($raw, true, 32, JSON_THROW_ON_ERROR);
+    } catch (\JsonException $error) {
+        respond(400, ['error' => 'The message contains invalid JSON.']);
+    }
+    if (!is_array($body) || !isset($body['messages']) || !is_array($body['messages']) || count($body['messages']) === 0) {
+        respond(400, ['error' => 'A message is required.']);
+    }
+
+    $messages = [];
+    foreach (array_slice($body['messages'], -12) as $message) {
+        if (!is_array($message) || !in_array($message['role'] ?? null, ['user', 'assistant'], true) || !is_string($message['content'] ?? null)) {
+            continue;
+        }
+        $content = trim($message['content']);
+        // Count Unicode characters without requiring the mbstring extension.
+        preg_match('/^.{0,1000}/us', $content, $match);
+        $content = $match[0] ?? '';
+        if ($content !== '') {
+            $messages[] = ['role' => $message['role'], 'content' => $content];
+        }
+    }
+    if (count($messages) === 0 || $messages[count($messages) - 1]['role'] !== 'user') {
+        respond(400, ['error' => 'A valid user message is required.']);
+    }
 }
 
 // For /domains/example.com/public_html/api/chat.php this is /domains/example.com.
 $privateDirectory = dirname(__DIR__, 2);
 $configFile = $privateDirectory . '/bytechsol-chat-config.php';
-if (!is_file($configFile)) {
-    respond(503, ['error' => 'Chat is not configured yet.']);
+// Some hosting layouts resolve the PHP script and document root differently.
+// The only fallback is still outside the domain's public document root.
+if (!is_file($configFile) && !empty($_SERVER['DOCUMENT_ROOT'])) {
+    $documentRoot = realpath($_SERVER['DOCUMENT_ROOT']);
+    if ($documentRoot !== false) {
+        $fallbackDirectory = dirname($documentRoot);
+        $fallbackFile = $fallbackDirectory . '/bytechsol-chat-config.php';
+        if (is_file($fallbackFile)) {
+            $privateDirectory = $fallbackDirectory;
+            $configFile = $fallbackFile;
+        }
+    }
 }
-$config = require $configFile;
-$apiKey = is_array($config) ? ($config['api_key'] ?? '') : '';
-$model = is_array($config) ? ($config['model'] ?? 'openai/gpt-oss-120b') : '';
-if (!is_string($apiKey) || trim($apiKey) === '' || $apiKey === 'REPLACE_WITH_YOUR_GROQ_API_KEY' || preg_match('/\s/', $apiKey) || !is_string($model) || trim($model) === '') {
-    respond(503, ['error' => 'Chat is not configured yet.']);
+if (!is_file($configFile)) {
+    respond(503, ['error' => 'Chat is not configured yet.', 'code' => 'CONFIG_FILE_NOT_FOUND']);
+}
+if (!is_readable($configFile)) {
+    respond(503, ['error' => 'Chat is not configured yet.', 'code' => 'CONFIG_FILE_NOT_READABLE']);
+}
+$config = null;
+$configLoadFailed = false;
+// Invalid PHP, a missing opening tag, or accidental echo statements must never
+// expose private config contents or a key in the HTTP response.
+ob_start();
+try {
+    $config = require $configFile;
+} catch (\Throwable $error) {
+    $configLoadFailed = true;
+} finally {
+    ob_end_clean();
+}
+if ($configLoadFailed) {
+    respond(503, ['error' => 'Chat is not configured yet.', 'code' => 'CONFIG_PHP_INVALID']);
+}
+if (!is_array($config)) {
+    respond(503, ['error' => 'Chat is not configured yet.', 'code' => 'CONFIG_RETURN_ARRAY_REQUIRED']);
+}
+$apiKey = $config['api_key'] ?? $config['GROQ_API_KEY'] ?? '';
+$model = $config['model'] ?? $config['GROQ_MODEL'] ?? 'openai/gpt-oss-120b';
+if (!is_string($apiKey) || trim($apiKey) === '' || trim($apiKey) === 'REPLACE_WITH_YOUR_GROQ_API_KEY') {
+    respond(503, ['error' => 'Chat is not configured yet.', 'code' => 'CONFIG_API_KEY_MISSING']);
+}
+$apiKey = trim($apiKey);
+if (preg_match('/\s/', $apiKey)) {
+    respond(503, ['error' => 'Chat is not configured yet.', 'code' => 'CONFIG_API_KEY_FORMAT']);
+}
+if (!is_string($model) || trim($model) === '') {
+    respond(503, ['error' => 'Chat is not configured yet.', 'code' => 'CONFIG_MODEL_INVALID']);
 }
 if (!function_exists('curl_init')) {
     error_log('Bytechsol chat requires the PHP cURL extension.');
-    respond(503, ['error' => 'The assistant is temporarily unavailable.']);
+    respond(503, ['error' => 'The assistant is temporarily unavailable.', 'code' => 'PHP_CURL_MISSING']);
+}
+if ($configurationCheck) {
+    respond(200, ['status' => 'configured', 'code' => 'CHAT_CONFIG_OK']);
 }
 if (!allowRequest($privateDirectory . '/bytechsol-chat-rate-limit.json', $_SERVER['REMOTE_ADDR'] ?? 'unknown')) {
     header('Retry-After: 600');
