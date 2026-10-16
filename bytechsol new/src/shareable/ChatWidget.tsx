@@ -35,7 +35,32 @@ function createMessage(text: string, sender: Message["sender"], chips?: string[]
   };
 }
 
-function renderMessageText(text: string) {
+function readSavedMessages(value: unknown): Message[] {
+  if (!Array.isArray(value)) return [];
+
+  return value.flatMap((message): Message[] => {
+    if (
+      !message ||
+      typeof message !== "object" ||
+      typeof message.id !== "string" ||
+      typeof message.text !== "string" ||
+      !message.text.trim() ||
+      (message.sender !== "user" && message.sender !== "bot")
+    ) return [];
+
+    return [{
+      id: message.id,
+      text: message.text,
+      sender: message.sender,
+      chips: Array.isArray(message.chips)
+        ? message.chips.filter((chip: unknown): chip is string => typeof chip === "string" && chip.trim().length > 0)
+        : undefined,
+    }];
+  }).slice(-30);
+}
+
+function renderMessageText(text: unknown) {
+  if (typeof text !== "string") return null;
   const parts = text.split(/(https?:\/\/[^\s)\]}>;,]+|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,})/g);
 
   return parts.map((part, index) => {
@@ -55,6 +80,7 @@ export default function ChatWidget() {
   const [inputText, setInputText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [error, setError] = useState("");
+  const [historyLoaded, setHistoryLoaded] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const abortRef = useRef<AbortController | null>(null);
@@ -63,17 +89,24 @@ export default function ChatWidget() {
     try {
       const saved = window.localStorage.getItem(STORAGE_KEY);
       if (saved) {
-        const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) setMessages(parsed);
+        const restored = readSavedMessages(JSON.parse(saved));
+        if (restored.length > 0) setMessages(restored);
       }
     } catch {
-      window.localStorage.removeItem(STORAGE_KEY);
+      // Chat remains usable when storage is unavailable or contains invalid JSON.
+    } finally {
+      setHistoryLoaded(true);
     }
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(messages.slice(-30)));
-  }, [messages]);
+    if (!historyLoaded) return;
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(messages.slice(-30)));
+    } catch {
+      // Saving history is optional when browser storage is blocked or full.
+    }
+  }, [messages, historyLoaded]);
 
   useEffect(() => {
     if (isOpen) {
@@ -99,7 +132,11 @@ export default function ChatWidget() {
     setInputText("");
     setError("");
     setIsTyping(false);
-    window.localStorage.removeItem(STORAGE_KEY);
+    try {
+      window.localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      // Resetting the visible chat also works without browser storage.
+    }
   };
 
   const sendMessage = async (text: string) => {
@@ -130,8 +167,13 @@ export default function ChatWidget() {
       });
 
       const data = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(data.error || "The assistant is unavailable right now.");
-      setMessages((previous) => [...previous, createMessage(data.reply, "bot")]);
+      if (!response.ok) throw new Error(
+        typeof data?.error === "string" ? data.error : "The assistant is unavailable right now.",
+      );
+      if (typeof data?.reply !== "string" || !data.reply.trim()) {
+        throw new Error("The assistant returned an invalid response. Please try again later.");
+      }
+      setMessages((previous) => [...previous, createMessage(data.reply.trim(), "bot")]);
     } catch (requestError) {
       if (requestError instanceof DOMException && requestError.name === "AbortError") return;
       setError(requestError instanceof Error ? requestError.message : "Something went wrong. Please try again.");
