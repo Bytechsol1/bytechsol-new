@@ -68,7 +68,7 @@ function cleanChatReply(value) {
     .trim();
 }
 
-router.post('/api/chat', async (req, res) => {
+router.post(['/api/chat', '/api/chat.php'], async (req, res) => {
   if (!process.env.GROQ_API_KEY) {
     return res.status(503).json({ error: 'Chat is not configured yet.' });
   }

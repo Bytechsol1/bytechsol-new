@@ -2,7 +2,33 @@
 
 ## AI chatbot setup
 
-The website chatbot calls Groq through the Express server so the API key never reaches the browser.
+The website chatbot calls `/api/chat.php`. Hostinger runs the PHP endpoint; the local Express server handles the same route during development. API keys stay on the server.
+
+### Hostinger File Manager deployment (no VPS or Node server)
+
+1. Use PHP 8.3 or later with the cURL extension enabled in hPanel.
+2. Run `npm install` and `npm run build` locally. Upload the **contents** of `dist` into your domain's `public_html`, including `api/chat.php` and `.htaccess`. Keep the existing `cms` WordPress folder. If your hosting already has custom `.htaccess` rules, merge the React fallback rules instead of overwriting those custom rules. The `!-f` condition must remain so PHP files run instead of returning `index.html`.
+3. In File Manager, go **one level above** that domain's `public_html`. Copy the contents of `deploy/bytechsol-chat-config.example.php` into a new file named `bytechsol-chat-config.php`, and replace its placeholder with your Groq API key. This private file is uploaded separately; it must never go inside `public_html` or `dist`.
+
+   ```text
+   your-domain-folder/
+     bytechsol-chat-config.php      (private key; create once)
+     public_html/
+       index.html
+       .htaccess
+       assets/
+       api/
+         chat.php
+       cms/                        (keep existing WordPress files)
+   ```
+
+4. PHP creates `bytechsol-chat-rate-limit.json` beside the private config file. PHP needs write access to that parent directory. The limit is 20 requests per client IP per 10 minutes; the client IP comes from the server's `REMOTE_ADDR` value.
+5. Open `https://bytechsol.com/api/chat.php` directly. JSON saying `Use POST to send a chat message.` is expected, with HTTP 405. It proves the PHP endpoint is executing; it does not verify the key. Then send a message through the website chatbot to test Groq.
+6. Clear the website/CDN cache and hard refresh after uploading the new assets. Future builds include the PHP endpoint automatically; the private key file stays outside `public_html`.
+
+If `/api/chat.php` returns the homepage, check the upload path and existing rewrite rules. HTTP 503 saying `Chat is not configured yet.` means the private configuration is missing or invalid. A 502/504 may indicate the provider rejected the key/model, a provider limit, a timeout, or an outbound connection problem; inspect PHP error logs for the provider HTTP status/cURL error code. Never disable TLS verification to work around connection errors. A local `.env` file does not configure this PHP deployment.
+
+### Local Express development
 
 1. Copy `.env.example` to `.env`.
 2. Create a new Groq API key and set it as `GROQ_API_KEY` in `.env`.

@@ -154,7 +154,7 @@ export default function ChatWidget() {
     abortRef.current = controller;
 
     try {
-      const response = await fetch("/api/chat", {
+      const response = await fetch("/api/chat.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
