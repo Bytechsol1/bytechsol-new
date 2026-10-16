@@ -1,4 +1,5 @@
 // server/entry.cjs
+require('dotenv/config');
 const path = require('path'); // Import path module
 
 // 1. Mock Image & CSS imports

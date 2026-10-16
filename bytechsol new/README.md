@@ -1,5 +1,17 @@
 # React + TypeScript + Vite
 
+## AI chatbot setup
+
+The website chatbot calls Groq through the Express server so the API key never reaches the browser.
+
+1. Copy `.env.example` to `.env`.
+2. Create a new Groq API key and set it as `GROQ_API_KEY` in `.env`.
+   The default model is `openai/gpt-oss-120b`; change `GROQ_MODEL` only if your Groq account supports a different production model.
+3. Run `npm run build`.
+4. Run `npm run serve:ssr` for the production server, or `npm run cms` for the Vite development proxy plus API server.
+
+Never commit `.env` or place the API key in a `VITE_` environment variable. If a key is pasted into chat, logs, or source code, revoke it and create another one.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

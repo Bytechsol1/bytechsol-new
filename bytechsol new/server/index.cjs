@@ -1,4 +1,5 @@
 // server/index.cjs
+require('dotenv/config');
 require('ignore-styles');
 const path = require('path'); // Import path
 

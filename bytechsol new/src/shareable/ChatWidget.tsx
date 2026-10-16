@@ -1,165 +1,144 @@
 import { useEffect, useRef, useState } from "react";
-import { Bot, CheckCircle, Send, X } from "lucide-react";
+import { Bot, CheckCircle, RotateCcw, Send, X } from "lucide-react";
 import "../assets/components-css/ChatWidget.css";
 
 type Message = {
   id: string;
   text: string;
   sender: "user" | "bot";
-  timestamp: Date;
   chips?: string[];
 };
 
 const QUICK_ACTIONS = [
-  "Web Development",
-  "E-Commerce",
-  "Odoo Services",
-  "AI & Chatbots",
-  "Get a Quote",
+  "What services do you offer?",
+  "I need a website",
+  "Tell me about Odoo",
+  "Get a project quote",
 ];
 
 const INITIAL_MESSAGE: Message = {
-  id: "init-1",
-  text: "Hello! I am Bytechsol AI. How can I help you today?",
+  id: "welcome",
+  text: "Hi! I’m Bytechsol AI. Tell me about your project, ask about our services, or request a quote.",
   sender: "bot",
-  timestamp: new Date(),
   chips: QUICK_ACTIONS,
 };
 
-const KNOWLEDGE_BASE = [
-  {
-    question: "what services do you offer",
-    answer:
-      "We provide web development, e-commerce, ERP/Odoo services, AI chatbot development, SEO, and branding.",
-  },
-  {
-    question: "do you build custom websites",
-    answer: "Yes, we build custom websites based on your business goals and brand.",
-  },
-  {
-    question: "do you provide odoo services",
-    answer:
-      "Yes, we provide Odoo implementation, customization, migration, and support.",
-  },
-  {
-    question: "do you build ai chatbots",
-    answer:
-      "Yes, we build AI chatbots for websites, support workflows, and lead qualification.",
-  },
-  {
-    question: "how can i contact you",
-    answer: "You can contact us at contact@bytechsol.com.",
-  },
-  {
-    question: "how do i get a quote",
-    answer:
-      "Share your requirements, timeline, and budget at contact@bytechsol.com and we will send a proposal.",
-  },
-];
+const STORAGE_KEY = "bytechsol-chat-v1";
+const MAX_INPUT_LENGTH = 1000;
 
-const MENU_RESPONSES: Record<string, { text: string; chips?: string[] }> = {
-  "web development": {
-    text: "We build fast and scalable websites, dashboards, and custom web apps.",
-    chips: ["Get a Quote", "Back to Menu"],
-  },
-  "e-commerce": {
-    text: "We build Shopify, WooCommerce, and custom e-commerce solutions.",
-    chips: ["Get a Quote", "Back to Menu"],
-  },
-  "odoo services": {
-    text: "We provide Odoo setup, module customization, integrations, and training.",
-    chips: ["Get a Quote", "Back to Menu"],
-  },
-  "ai & chatbots": {
-    text: "We develop AI chatbots and automation flows tailored to your business.",
-    chips: ["Get a Quote", "Back to Menu"],
-  },
-  "get a quote": {
-    text: "Please send your project details to contact@bytechsol.com and our team will respond quickly.",
-  },
-  "back to menu": {
-    text: "Sure, here is the main menu:",
-    chips: QUICK_ACTIONS,
-  },
-};
-
-const normalize = (value: string) =>
-  value.toLowerCase().replace(/[^a-z0-9\s]/g, "").trim();
-
-const getBotResponse = (input: string): { text: string; chips?: string[] } => {
-  const normalizedInput = normalize(input);
-
-  if (MENU_RESPONSES[normalizedInput]) {
-    return MENU_RESPONSES[normalizedInput];
-  }
-
-  const exact = KNOWLEDGE_BASE.find(
-    (entry) => normalize(entry.question) === normalizedInput,
-  );
-  if (exact) {
-    return { text: exact.answer };
-  }
-
-  const partial = KNOWLEDGE_BASE.find((entry) =>
-    normalize(entry.question).includes(normalizedInput),
-  );
-  if (partial) {
-    return { text: partial.answer };
-  }
-
-  if (normalizedInput === "menu" || normalizedInput === "options") {
-    return {
-      text: "Here is the main menu:",
-      chips: QUICK_ACTIONS,
-    };
-  }
-
+function createMessage(text: string, sender: Message["sender"], chips?: string[]): Message {
   return {
-    text: "I can help with services, pricing, and project planning. Please ask in another way or choose an option below.",
-    chips: QUICK_ACTIONS,
+    id: `${sender}-${Date.now()}-${Math.random().toString(36).slice(2)}`,
+    text,
+    sender,
+    chips,
   };
-};
+}
+
+function renderMessageText(text: string) {
+  const parts = text.split(/(https?:\/\/[^\s)\]}>;,]+|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,})/g);
+
+  return parts.map((part, index) => {
+    if (/^https?:\/\//.test(part)) {
+      return <a key={`${part}-${index}`} href={part} target="_blank" rel="noreferrer">{part}</a>;
+    }
+    if (/^[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}$/.test(part)) {
+      return <a key={`${part}-${index}`} href={`mailto:${part}`}>{part}</a>;
+    }
+    return part;
+  });
+}
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([INITIAL_MESSAGE]);
   const [inputText, setInputText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
+  const [error, setError] = useState("");
   const endRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const abortRef = useRef<AbortController | null>(null);
+
+  useEffect(() => {
+    try {
+      const saved = window.localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) setMessages(parsed);
+      }
+    } catch {
+      window.localStorage.removeItem(STORAGE_KEY);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(messages.slice(-30)));
+  }, [messages]);
 
   useEffect(() => {
     if (isOpen) {
       endRef.current?.scrollIntoView({ behavior: "smooth" });
+      window.setTimeout(() => inputRef.current?.focus(), 200);
     }
   }, [isOpen, messages, isTyping]);
 
-  const sendMessage = (text: string) => {
-    const value = text.trim();
-    if (!value) return;
-
-    const userMessage: Message = {
-      id: `${Date.now()}-user`,
-      text: value,
-      sender: "user",
-      timestamp: new Date(),
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsOpen(false);
     };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => {
+      window.removeEventListener("keydown", closeOnEscape);
+      abortRef.current?.abort();
+    };
+  }, []);
 
-    setMessages((previous) => [...previous, userMessage]);
+  const resetChat = () => {
+    abortRef.current?.abort();
+    setMessages([INITIAL_MESSAGE]);
     setInputText("");
+    setError("");
+    setIsTyping(false);
+    window.localStorage.removeItem(STORAGE_KEY);
+  };
+
+  const sendMessage = async (text: string) => {
+    const value = text.trim().slice(0, MAX_INPUT_LENGTH);
+    if (!value || isTyping) return;
+
+    const userMessage = createMessage(value, "user");
+    const nextMessages = [...messages, userMessage];
+    setMessages(nextMessages);
+    setInputText("");
+    setError("");
     setIsTyping(true);
 
-    window.setTimeout(() => {
-      const response = getBotResponse(value);
-      const botMessage: Message = {
-        id: `${Date.now()}-bot`,
-        text: response.text,
-        sender: "bot",
-        timestamp: new Date(),
-        chips: response.chips,
-      };
-      setMessages((previous) => [...previous, botMessage]);
+    const controller = new AbortController();
+    abortRef.current = controller;
+
+    try {
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          messages: nextMessages.slice(-12).map((message) => ({
+            role: message.sender === "user" ? "user" : "assistant",
+            content: message.text,
+          })),
+        }),
+        signal: controller.signal,
+      });
+
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || "The assistant is unavailable right now.");
+      setMessages((previous) => [...previous, createMessage(data.reply, "bot")]);
+    } catch (requestError) {
+      if (requestError instanceof DOMException && requestError.name === "AbortError") return;
+      setError(requestError instanceof Error ? requestError.message : "Something went wrong. Please try again.");
+    } finally {
+      if (abortRef.current === controller) abortRef.current = null;
       setIsTyping(false);
-    }, 700);
+    }
   };
 
   return (
@@ -168,50 +147,43 @@ export default function ChatWidget() {
         type="button"
         className={`bs-chat-toggle ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen((previous) => !previous)}
-        aria-label="Toggle chat"
+        aria-label={isOpen ? "Close chat" : "Chat with Bytechsol AI"}
+        aria-expanded={isOpen}
+        aria-controls="bytechsol-chat"
       >
-        {isOpen ? (
-          <X size={22} />
-        ) : (
-          <img src="/bot-icon.svg" alt="Chat with us" width="110" height="110" />
-        )}
+        {isOpen ? <X size={22} /> : <img src="/bot-icon.svg" alt="" width="110" height="110" />}
       </button>
 
-      <section className={`bs-chat-container ${isOpen ? "open" : "closed"}`}>
+      <section
+        id="bytechsol-chat"
+        className={`bs-chat-container ${isOpen ? "open" : "closed"}`}
+        role="dialog"
+        aria-modal="false"
+        aria-label="Bytechsol AI assistant"
+        aria-hidden={!isOpen}
+      >
         <header className="bs-chat-header">
-          <div className="bs-chat-avatar">
-            <Bot size={16} />
-          </div>
+          <div className="bs-chat-avatar"><Bot size={16} /></div>
           <div className="bs-chat-title-wrap">
-            <p className="bs-chat-title">
-              Bytechsol AI
-              <CheckCircle size={12} />
-            </p>
-            <p className="bs-chat-subtitle">24/7 assistant</p>
+            <p className="bs-chat-title">Bytechsol AI <CheckCircle size={12} /></p>
+            <p className="bs-chat-subtitle">Online assistant</p>
           </div>
-          <button
-            type="button"
-            className="bs-chat-close"
-            onClick={() => setIsOpen(false)}
-            aria-label="Close chat"
-          >
+          <button type="button" className="bs-chat-header-action" onClick={resetChat} aria-label="Start a new chat" title="New chat">
+            <RotateCcw size={15} />
+          </button>
+          <button type="button" className="bs-chat-header-action" onClick={() => setIsOpen(false)} aria-label="Close chat">
             <X size={16} />
           </button>
         </header>
 
-        <div className="bs-chat-messages">
+        <div className="bs-chat-messages" role="log" aria-live="polite" aria-relevant="additions">
           {messages.map((message) => (
             <div key={message.id} className={`bs-msg-row ${message.sender}`}>
-              <div className="bs-msg-bubble">{message.text}</div>
+              <div className="bs-msg-bubble">{renderMessageText(message.text)}</div>
               {message.sender === "bot" && message.chips && (
                 <div className="bs-chat-chips">
                   {message.chips.map((chip) => (
-                    <button
-                      key={`${message.id}-${chip}`}
-                      type="button"
-                      className="bs-chip"
-                      onClick={() => sendMessage(chip)}
-                    >
+                    <button key={`${message.id}-${chip}`} type="button" className="bs-chip" onClick={() => sendMessage(chip)} disabled={isTyping}>
                       {chip}
                     </button>
                   ))}
@@ -219,33 +191,30 @@ export default function ChatWidget() {
               )}
             </div>
           ))}
-
-          {isTyping && (
-            <div className="bs-msg-row bot">
-              <div className="bs-msg-bubble">Typing...</div>
-            </div>
-          )}
+          {isTyping && <div className="bs-msg-row bot"><div className="bs-msg-bubble bs-typing"><span /><span /><span /></div></div>}
+          {error && <div className="bs-chat-error" role="alert">{error}</div>}
           <div ref={endRef} />
         </div>
 
-        <form
-          className="bs-chat-input-wrap"
-          onSubmit={(event) => {
-            event.preventDefault();
-            sendMessage(inputText);
-          }}
-        >
+        <form className="bs-chat-input-wrap" onSubmit={(event) => { event.preventDefault(); sendMessage(inputText); }}>
+          <label className="bs-sr-only" htmlFor="bs-chat-input">Message Bytechsol AI</label>
           <input
+            ref={inputRef}
+            id="bs-chat-input"
             className="bs-chat-input"
             type="text"
-            placeholder="Ask me anything..."
+            placeholder="Ask about your project..."
             value={inputText}
+            maxLength={MAX_INPUT_LENGTH}
             onChange={(event) => setInputText(event.target.value)}
+            disabled={isTyping}
+            autoComplete="off"
           />
-          <button type="submit" className="bs-chat-send" aria-label="Send">
+          <button type="submit" className="bs-chat-send" aria-label="Send message" disabled={isTyping || !inputText.trim()}>
             <Send size={18} />
           </button>
         </form>
+        <p className="bs-chat-disclaimer">AI can make mistakes. Don’t share sensitive information.</p>
       </section>
     </>
   );
