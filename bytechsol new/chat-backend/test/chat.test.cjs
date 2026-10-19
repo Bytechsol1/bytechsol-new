@@ -69,6 +69,18 @@ test('provider payload filters system-role injection, bounds history and preserv
   assert.equal(payload.messages.length, 13);
 });
 
+test('the documented Render origin list permits local preview and Vite without a wildcard', async t => {
+  const localOrigins = ['http://localhost:8081', 'http://127.0.0.1:8081', 'http://localhost:5173', 'http://127.0.0.1:5173'];
+  const { base, send } = await serve(t, { allowedOrigins: [ORIGIN, ...localOrigins].join(',') });
+  for (const origin of localOrigins) {
+    const preflight = await fetch(base + '/api/chat', { method: 'OPTIONS', headers: { Origin: origin, 'Access-Control-Request-Method': 'POST', 'Access-Control-Request-Headers': 'content-type' } });
+    assert.equal(preflight.status, 204);
+    assert.equal(preflight.headers.get('access-control-allow-origin'), origin);
+  }
+  assert.equal((await send(undefined, { Origin: 'http://localhost:8081' })).status, 200);
+  assert.equal((await send(undefined, { Origin: 'https://unrelated.example' })).status, 403);
+});
+
 test('invalid JSON, payload sizes and invalid messages are rejected before the provider', async t => {
   let calls = 0;
   const { base, send } = await serve(t, { fetchImpl: () => { calls++; return validReply(); } });

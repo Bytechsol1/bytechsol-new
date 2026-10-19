@@ -22,7 +22,7 @@ Set these environment variables on the Render service:
 
 - GROQ_API_KEY: a newly generated Groq key. Never put it in the frontend or commit it.
 - GROQ_MODEL: openai/gpt-oss-120b
-- ALLOWED_ORIGINS: https://bytechsolllc.com,https://www.bytechsolllc.com
+- ALLOWED_ORIGINS: https://bytechsolllc.com,https://www.bytechsolllc.com,http://localhost:8081,http://127.0.0.1:8081,http://localhost:5173,http://127.0.0.1:5173
 - NODE_ENV: production
 
 Render sets PORT; the backend binds to 0.0.0.0 and uses that value automatically. For local use, it defaults to port 8081.
@@ -62,6 +62,8 @@ Once the new integration is verified live, remove the obsolete Hostinger files *
 5. In another terminal start Vite: npm run dev
 
 The backend uses chat-backend/.env if present, otherwise the existing project .env for local compatibility. Render uses dashboard environment variables. CORS is restricted to ALLOWED_ORIGINS; include your local Vite origin when overriding that setting for development.
+
+When testing a local frontend against the Render backend, Render's ALLOWED_ORIGINS must include the exact local browser origin, including the port. The configuration above permits the SSR preview on port 8081 and Vite on port 5173. For an existing manually created Render service, update the dashboard variable and use Save, rebuild, and deploy; pushing render.yaml alone does not update that service's saved environment variables.
 
 The existing SSR/CMS server remains available through npm run serve:ssr. It uses the same chat router at /api/chat; its CMS and blog routes are unchanged.
 
