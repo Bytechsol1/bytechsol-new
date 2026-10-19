@@ -1,109 +1,75 @@
-# React + TypeScript + Vite
+# Bytechsol
 
-## AI chatbot setup
+The React/Vite frontend is hosted on Hostinger. The chatbot runs as a separate Node/Express service on Render and calls Groq server-side. PHP is no longer used by the chatbot.
 
-The website chatbot calls `/api/chat.php`. Hostinger runs the PHP endpoint; the local Express server handles the same route during development. API keys stay on the server.
+## Deploy the chat backend on Render
 
-### Hostinger File Manager deployment (no VPS or Node server)
+Create a **Web Service** connected to this GitHub repository with these settings:
 
-1. Use PHP 8.3 or later with the cURL extension enabled in hPanel.
-2. Run `npm install` and `npm run build` locally. Upload the **contents** of `dist` into your domain's `public_html`, including `api/chat.php` and `.htaccess`. Keep the existing `cms` WordPress folder. If your hosting already has custom `.htaccess` rules, merge the React fallback rules instead of overwriting those custom rules. The `!-f` condition must remain so PHP files run instead of returning `index.html`.
-3. In File Manager, go **one level above** that domain's `public_html`. Copy the contents of `deploy/bytechsol-chat-config.example.php` into a new file named `bytechsol-chat-config.php`, and replace its placeholder with your Groq API key. This private file is uploaded separately; it must never go inside `public_html` or `dist`.
+| Setting | Value |
+| --- | --- |
+| Branch | main |
+| Root Directory | bytechsol new/chat-backend |
+| Runtime | Node |
+| Build Command | npm ci --omit=dev |
+| Start Command | npm start |
+| Health Check Path | /health |
+| Node version | 22 |
 
-   ```text
-   your-domain-folder/
-     bytechsol-chat-config.php      (private key; create once)
-     public_html/
-       index.html
-       .htaccess
-       assets/
-       api/
-         chat.php
-       cms/                        (keep existing WordPress files)
-   ```
+The repository contains a Render Blueprint at **bytechsol new/render.yaml**. If using New > Blueprint, use that Blueprint Path. The Blueprint selects a free service; the service can take time to wake after inactivity.
 
-4. PHP creates `bytechsol-chat-rate-limit.json` beside the private config file. PHP needs write access to that parent directory. The limit is 20 requests per client IP per 10 minutes; the client IP comes from the server's `REMOTE_ADDR` value.
-5. Open `https://bytechsol.com/api/chat.php` directly. JSON saying `Use POST to send a chat message.` is expected, with HTTP 405. It proves the PHP endpoint is executing; it does not verify the key. Then send a message through the website chatbot to test Groq.
-6. Clear the website/CDN cache and hard refresh after uploading the new assets. Future builds include the PHP endpoint automatically; the private key file stays outside `public_html`.
+Set these environment variables on the Render service:
 
-The PHP config accepts either `api_key` / `model` or `GROQ_API_KEY` / `GROQ_MODEL` array keys. Opening `/api/chat.php?check=1` checks the private config and cURL availability without calling Groq. It returns only a status/error code, never credentials or filesystem paths; `CHAT_CONFIG_OK` confirms local configuration loading, not provider key validity.
+- GROQ_API_KEY: a newly generated Groq key. Never put it in the frontend or commit it.
+- GROQ_MODEL: openai/gpt-oss-120b
+- ALLOWED_ORIGINS: https://bytechsolllc.com,https://www.bytechsolllc.com
+- NODE_ENV: production
 
-If `/api/chat.php` returns the homepage, check the upload path and existing rewrite rules. HTTP 503 saying `Chat is not configured yet.` means the private configuration is missing or invalid. A 502/504 may indicate the provider rejected the key/model, a provider limit, a timeout, or an outbound connection problem; inspect PHP error logs for the provider HTTP status/cURL error code. Never disable TLS verification to work around connection errors. A local `.env` file does not configure this PHP deployment.
+Render sets PORT; the backend binds to 0.0.0.0 and uses that value automatically. For local use, it defaults to port 8081.
 
-### Local Express development
+After deployment:
 
-1. Copy `.env.example` to `.env`.
-2. Create a new Groq API key and set it as `GROQ_API_KEY` in `.env`.
-   The default model is `openai/gpt-oss-120b`; change `GROQ_MODEL` only if your Groq account supports a different production model.
-3. Run `npm run build`.
-4. Run `npm run serve:ssr` for the production server, or `npm run cms` for the Vite development proxy plus API server.
+1. Open the service URL followed by **/health**. It should return status ok and configured true. This confirms the process and key configuration, not that Groq accepts the key.
+2. Open **/ready**; it should return HTTP 200 with status ready.
+3. Test POST **/api/chat** with JSON: {"messages":[{"role":"user","content":"Hello"}]}. A successful response contains a nonempty reply string. Provider errors return a safe code such as PROVIDER_AUTH_ERROR or PROVIDER_RATE_LIMIT, without exposing credentials.
 
-Never commit `.env` or place the API key in a `VITE_` environment variable. If a key is pasted into chat, logs, or source code, revoke it and create another one.
+## Connect Hostinger to Render
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Edit **public/chat-config.json** and set its public endpoint URL:
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```json
+{
+  "apiUrl": "https://YOUR_ACTUAL_RENDER_SERVICE.onrender.com/api/chat"
+}
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Use the actual URL shown by Render. The URL does not include a port number. The config contains no secret.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Run **npm run build** yourself and upload the contents of dist to the domain's public_html. The build includes chat-config.json and the existing full .htaccess. Preserve the cms WordPress folder and any hosting-specific configuration. Clear website/CDN cache after uploading updated assets.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+You can also change **public_html/chat-config.json** directly in Hostinger File Manager if the frontend has already been built with this integration. Changing that public URL does not require another build. Keep the source copy in public/chat-config.json aligned for future builds.
+
+An empty URL is intentional until Render assigns the service URL. On localhost it uses /api/chat through the Vite proxy. On the live website it shows a controlled unavailable message until a valid HTTPS backend URL is configured; it never falls back to PHP.
+
+Once the new integration is verified live, remove the obsolete Hostinger files **public_html/api/chat.php**, **public_html/api/hostinger-chat-refresh.php**, and the old **bytechsol-chat-config.php** / **bytechsol-chat-rate-limit.json** outside public_html. Those files are not part of new builds. Existing dist files are not changed by source updates; only a build you run regenerates dist.
+
+## Local development
+
+1. Install frontend dependencies: npm install
+2. Install backend dependencies: npm --prefix chat-backend ci
+3. Copy chat-backend/.env.example to chat-backend/.env and enter a new Groq key.
+4. Start the backend: npm run chat
+5. In another terminal start Vite: npm run dev
+
+The backend uses chat-backend/.env if present, otherwise the existing project .env for local compatibility. Render uses dashboard environment variables. CORS is restricted to ALLOWED_ORIGINS; include your local Vite origin when overriding that setting for development.
+
+The existing SSR/CMS server remains available through npm run serve:ssr. It uses the same chat router at /api/chat; its CMS and blog routes are unchanged.
+
+## Validation
+
+- npm run test:chat ? real local HTTP tests with mocked Groq responses; no real keys or billable calls.
+- npm run test:chat:frontend ? endpoint-config checks and headless browser regression tests. Uses the project's existing TypeScript and Puppeteer dependencies.
+
+The chat API limits message size and history and allows 20 requests per client IP per 10 minutes. Limits are held in memory per backend instance and reset on restart. Groq calls time out after 25 seconds. The browser waits up to 90 seconds to accommodate a Render service waking up.
+
+Reference: [Render web services](https://render.com/docs/web-services), [Render Blueprints](https://render.com/docs/blueprint-spec), [Groq Chat API](https://console.groq.com/docs/api-reference).

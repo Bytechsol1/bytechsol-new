@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "chat": "node chat-backend/server.cjs",
+    "test:chat": "node --test chat-backend/test/*.test.cjs",
+    "test:chat:frontend": "node scripts/test-chat-frontend.cjs",
     "serve:ssr": "node server/entry.cjs",
     "build": "vite build",
     "lint": "eslint .",

@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: bytechsol-chatbot
+    runtime: node
+    plan: free
+    rootDir: bytechsol new/chat-backend
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-120b
+      - key: ALLOWED_ORIGINS
+        value: https://bytechsolllc.com,https://www.bytechsolllc.com

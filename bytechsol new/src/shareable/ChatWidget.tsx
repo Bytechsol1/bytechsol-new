@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Bot, CheckCircle, RotateCcw, Send, X } from "lucide-react";
 import "../assets/components-css/ChatWidget.css";
+import { getChatApiUrl } from "./chatApi";
 
 type Message = {
   id: string;
@@ -152,9 +153,15 @@ export default function ChatWidget() {
 
     const controller = new AbortController();
     abortRef.current = controller;
+    let timedOut = false;
+    const timeout = window.setTimeout(() => {
+      timedOut = true;
+      controller.abort();
+    }, 90000);
 
     try {
-      const response = await fetch("/api/chat.php", {
+      const endpoint = await getChatApiUrl(controller.signal);
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -173,13 +180,21 @@ export default function ChatWidget() {
       if (typeof data?.reply !== "string" || !data.reply.trim()) {
         throw new Error("The assistant returned an invalid response. Please try again later.");
       }
+      if (abortRef.current !== controller || controller.signal.aborted) return;
       setMessages((previous) => [...previous, createMessage(data.reply.trim(), "bot")]);
     } catch (requestError) {
-      if (requestError instanceof DOMException && requestError.name === "AbortError") return;
-      setError(requestError instanceof Error ? requestError.message : "Something went wrong. Please try again.");
+      if (abortRef.current !== controller) return;
+      if (controller.signal.aborted) {
+        if (timedOut) setError("The assistant is taking too long to respond. Please try again.");
+        return;
+      }
+      setError(requestError instanceof TypeError ? "Unable to connect to the assistant. Please try again in a moment." : requestError instanceof Error ? requestError.message : "Something went wrong. Please try again.");
     } finally {
-      if (abortRef.current === controller) abortRef.current = null;
-      setIsTyping(false);
+      window.clearTimeout(timeout);
+      if (abortRef.current === controller) {
+        abortRef.current = null;
+        setIsTyping(false);
+      }
     }
   };
 
