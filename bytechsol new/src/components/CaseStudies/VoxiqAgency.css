@@ -1,0 +1,2158 @@
+﻿/* BytechSol art direction. Workspace and browser primitives live in VoxiqPremium.css. */
+.vx-agency {
+  --vx-ink: #050505;
+  --vx-muted: #525866;
+  --vx-line: #e4e9f0;
+  --vx-navy: #061c3d;
+}
+.vx-agency .vx-section {
+  padding: 110px 0;
+}
+.vx-agency h2 {
+  font-size: clamp(40px, 4.2vw, 62px);
+  letter-spacing: -0.055em;
+}
+.vx-agency .vx-section-heading h2 em,
+.vx-agency .vx-product-text h3 em,
+.vx-agency .vx-results h2 em {
+  background: linear-gradient(90deg, #087be6, #299fd8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.vx-agency .vx-eyebrow {
+  font-size: 10px;
+  color: #293c4a;
+  letter-spacing: 0.12em;
+  font-weight: 400;
+}
+.vx-agency .vx-eyebrow > i {
+  display: none;
+}
+.vx-agency .vx-eyebrow > span {
+  color: #299fd8;
+  margin-right: 5px;
+}
+.vx-agency .vx-action--primary {
+  color: #fff;
+  background: #050505;
+}
+.vx-agency .vx-action--primary:before {
+  background: linear-gradient(105deg, transparent 20%, #ffffff55 50%, transparent 80%);
+}
+.vx-agency .vx-action--primary:is(:hover, :focus-visible) {
+  background: #087be6;
+  color: #fff;
+  box-shadow:
+    0 0 0 4px #299fd812,
+    0 10px 25px -12px #087be699;
+}
+.vx-agency .vx-action--secondary {
+  color: #050505;
+  border-color: #282d34;
+  background: #fff;
+}
+.vx-agency .vx-action--secondary:is(:hover, :focus-visible) {
+  color: #fff;
+  border-color: #087be6;
+}
+/* White opening: an asymmetric agency headline, not a product landing-page masthead. */
+.vx-agency .vx-hero {
+  background: linear-gradient(180deg, #fff 65%, #f7faff);
+  color: #050505;
+  padding-top: 12px;
+  overflow: hidden;
+}
+.vx-agency .vx-hero-grid {
+  inset: auto 4% auto auto;
+  top: 55px;
+  width: 230px;
+  height: 330px;
+  background-image: radial-gradient(#299fd8 1.2px, transparent 1.5px);
+  background-size: 9px 9px;
+  mask-image: url("../../assets/images/logo.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  opacity: 0.12;
+  transform: rotate(12deg);
+  animation: vx-brand-drift 12s ease-in-out infinite;
+}
+.vx-agency .vx-hero-top {
+  border: 0;
+  padding-bottom: 22px;
+}
+.vx-agency .vx-back {
+  color: #788b9a;
+  font-size: 11px;
+}
+.vx-agency .vx-back:hover {
+  color: #087be6;
+}
+.vx-agency .vx-hero-editorial {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: end;
+  padding: 28px 0 48px;
+  position: relative;
+}
+.vx-agency .vx-hero-copy {
+  margin: 0;
+  text-align: left;
+  max-width: none;
+}
+.vx-agency .vx-hero .vx-eyebrow {
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  color: #324351;
+  font-size: 9px;
+}
+.vx-agency .vx-hero h1 {
+  font-size: clamp(54px, 5.4vw, 78px);
+  line-height: 1.025;
+  letter-spacing: -0.065em;
+}
+.vx-agency .vx-hero h1 > span {
+  display: block;
+}
+.vx-agency .vx-hero h1 .vx-product-name {
+  font-size: clamp(70px, 7vw, 104px);
+  letter-spacing: -0.075em;
+  margin-bottom: 17px;
+}
+.vx-agency .vx-hero h1 em {
+  display: block;
+  background: linear-gradient(90deg, #087be6, #299fd8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-bottom: 8px;
+}
+.vx-agency .vx-hero-summary {
+  padding-bottom: 16px;
+}
+.vx-hero-kicker {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: #299fd8;
+  margin-bottom: 19px;
+}
+.vx-agency .vx-hero-summary > p {
+  font-size: 19px;
+  line-height: 1.75;
+  color: #38434e;
+  max-width: 390px;
+}
+.vx-agency .vx-hero-summary .vx-actions {
+  margin-top: 27px;
+  gap: 10px;
+}
+.vx-agency .vx-hero-summary .vx-action {
+  font-size: 11px;
+  padding: 14px 19px;
+  gap: 12px;
+}
+.vx-agency-signature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: #8c9aa6;
+  margin-top: 25px;
+}
+.vx-agency-signature > i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #299fd8;
+}
+.vx-agency .vx-hero-meta {
+  max-width: none;
+  border-block: 1px solid #e3eaf1;
+  padding: 23px 0;
+  margin: 0 0 40px;
+  gap: 0;
+  position: relative;
+}
+.vx-agency .vx-hero-meta > div {
+  padding: 0 40px;
+  border-right: 1px solid #e2e9f0;
+  gap: 8px;
+}
+.vx-agency .vx-hero-meta > div:first-child {
+  padding-left: 0;
+}
+.vx-agency .vx-hero-meta > div:nth-child(4) {
+  border: 0;
+}
+.vx-agency .vx-hero-meta > div > span {
+  color: #8b96a2;
+  font-size: 8px;
+}
+.vx-agency .vx-hero-meta b {
+  color: #17232e;
+  font-size: 12px;
+}
+.vx-continue {
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border: 1px solid #b4d5e7;
+  border-radius: 50%;
+  color: #299fd8;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+.vx-continue svg {
+  transform: rotate(135deg);
+}
+.vx-continue:hover {
+  background: #eaf3ff;
+  transform: translateY(3px);
+}
+.vx-agency .vx-hero-product {
+  max-width: none;
+  padding: 52px 45px 38px;
+  margin: 0;
+  background: linear-gradient(135deg, #f0f6ff, #dbeaff);
+  border-radius: 24px 24px 0 0;
+  border: 1px solid #e1ebf8;
+  border-bottom: 0;
+}
+/* Layered product composition, with all non-authentic UI labeled as illustrative. */
+.vx-composition {
+  position: relative;
+  height: 535px;
+  isolation: isolate;
+  perspective: 1400px;
+}
+.vx-compose-dashboard {
+  position: relative;
+  width: 88%;
+  margin: auto;
+  padding-top: 35px;
+  z-index: 1;
+  transform: rotate(-2deg);
+}
+.vx-compose-dashboard > .vx-dashboard {
+  box-shadow: 0 30px 55px -25px #244d7b66;
+  border-color: #cad8e7;
+}
+.vx-compose-orbit {
+  position: absolute;
+  inset: 4% 0 5%;
+  border: 1px solid #a8c8e655;
+  border-radius: 50%;
+  transform: rotate(-13deg);
+}
+.vx-compose-call {
+  position: absolute;
+  bottom: 21px;
+  left: 0;
+  width: 230px;
+  z-index: 2;
+  background: #fff;
+  border: 1px solid #d4e1ef;
+  border-radius: 13px;
+  box-shadow: 0 20px 45px -20px #1d426b66;
+  padding: 19px;
+  transform: rotate(4deg);
+  animation: vx-interface-float 9s ease-in-out infinite;
+}
+.vx-composition-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 6px;
+  letter-spacing: 0.1em;
+  color: #7b97aa;
+}
+.vx-composition-label > i {
+  width: 4px;
+  height: 4px;
+  background: #35ad9d;
+  border-radius: 50%;
+}
+.vx-compose-person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 17px;
+}
+.vx-compose-person > span {
+  height: 32px;
+  width: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e9f6fa;
+  color: #4d9aaf;
+  font-size: 10px;
+}
+.vx-compose-person > div {
+  flex: 1;
+}
+.vx-compose-person strong {
+  display: block;
+  font-weight: 400;
+  font-size: 10px;
+  color: #1b3f56;
+}
+.vx-compose-person small {
+  display: block;
+  font-size: 7px;
+  color: #96a9b7;
+  margin-top: 5px;
+}
+.vx-compose-person > svg {
+  color: #68adbf;
+  width: 15px;
+}
+.vx-compose-call .vx-wave {
+  margin: 14px 0 8px;
+}
+.vx-compose-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #85a3b7;
+}
+.vx-compose-controls > span {
+  height: 27px;
+  width: 27px;
+  display: grid;
+  place-items: center;
+  background: #e5f4f8;
+  color: #2c95b2;
+  border-radius: 50%;
+}
+.vx-compose-insight {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 215px;
+  background: #fff;
+  border: 1px solid #d4e1ef;
+  border-radius: 12px;
+  z-index: 2;
+  padding: 18px;
+  box-shadow: 0 20px 45px -25px #254c7d66;
+  transform: rotate(5deg);
+}
+.vx-compose-chart {
+  display: flex;
+  align-items: end;
+  height: 68px;
+  gap: 7px;
+  margin: 17px 0 13px;
+  border-bottom: 1px solid #e7eef6;
+  padding-bottom: 5px;
+}
+.vx-compose-chart > i {
+  flex: 1;
+  border-radius: 3px 3px 0 0;
+  background: linear-gradient(#90d6f3, #5b8ae2);
+}
+.vx-compose-insight > small {
+  font-size: 6px;
+  color: #98aaba;
+  display: block;
+}
+.vx-compose-caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #7994b0;
+  font-size: 7px;
+  letter-spacing: 0.13em;
+}
+/* Editorial overview: typography and fine dividers, without a large summary card. */
+.vx-agency .vx-section-marker {
+  margin-bottom: 54px;
+}
+.vx-agency .vx-overview-grid {
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 100px;
+}
+.vx-agency .vx-overview h2 {
+  font-size: clamp(38px, 4vw, 57px);
+}
+.vx-agency .vx-overview .vx-lead {
+  font-size: 18px;
+  line-height: 1.85;
+  max-width: 670px;
+}
+.vx-agency .vx-brief-notes {
+  padding-top: 26px;
+  margin-top: 32px;
+}
+.vx-agency .vx-brief-notes p {
+  font-size: 14px;
+}
+.vx-agency .vx-project-file {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 5px 0 0 28px;
+  box-shadow: none;
+}
+.vx-agency .vx-project-file:before {
+  left: 0;
+  top: 5px;
+  width: 1px;
+  height: 72px;
+  background: #299fd8;
+}
+.vx-agency .vx-file-title {
+  margin: 24px 0 27px;
+}
+.vx-agency .vx-file-title h3 {
+  font-size: 36px;
+}
+.vx-agency .vx-project-file dl {
+  margin-top: 0;
+}
+.vx-agency .vx-project-file dl > div {
+  padding: 19px 0;
+  font-size: 12px;
+}
+.vx-agency .vx-project-file dd {
+  color: #1d2d3d;
+}
+.vx-agency .vx-project-file dd > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #208fbd;
+}
+/* Challenge: a deliberate editorial break with offset numbered statements. */
+.vx-agency .vx-challenge {
+  background: #fff;
+  border-top: 1px solid #e9edf2;
+  border-bottom: 0;
+  padding-bottom: 120px;
+}
+.vx-agency .vx-challenge > .vx-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 90px;
+  align-items: start;
+}
+.vx-challenge-story h2 {
+  font-size: clamp(38px, 3.8vw, 54px);
+  line-height: 1.13;
+  letter-spacing: -0.055em;
+}
+.vx-challenge-story h2 > span {
+  color: #697781;
+}
+.vx-challenge-story h2 > em {
+  color: #299fd8;
+}
+.vx-challenge-story > p {
+  max-width: 390px;
+  margin-top: 26px;
+  font-size: 13px;
+}
+.vx-challenge-line {
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, #299fd8, #299fd8);
+  margin-top: 35px;
+}
+.vx-agency .vx-challenge-list {
+  margin-top: 20px;
+}
+.vx-agency .vx-challenge-row {
+  display: grid;
+  grid-template-columns: 65px minmax(0, 1fr);
+  gap: 13px 24px;
+  align-items: start;
+  padding: 28px 0;
+  border-top: 1px solid #dce6ef;
+}
+.vx-agency .vx-challenge-row:nth-child(2) {
+  margin-left: 25px;
+}
+.vx-agency .vx-challenge-row:nth-child(3) {
+  margin-left: 50px;
+}
+.vx-agency .vx-big-number {
+  font-size: 60px;
+  color: #bfd9ed;
+  grid-row: span 2;
+  letter-spacing: -0.075em;
+}
+.vx-agency .vx-challenge-row h3 {
+  font-size: 23px;
+  line-height: 1.25;
+  padding-top: 2px;
+}
+.vx-agency .vx-challenge-row p {
+  grid-column: 2;
+  font-size: 13px;
+  line-height: 1.8;
+}
+/* Odoo-inspired split-screen product moment. */
+.vx-agency .vx-approach {
+  padding: 0 22px;
+}
+.vx-agency .vx-approach-grid {
+  width: min(1360px, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.vx-solution-copy {
+  background: linear-gradient(120deg, #e7f0ff, #a2bfff);
+  padding: 65px 55px;
+}
+.vx-agency .vx-solution-copy h2 {
+  font-size: clamp(35px, 3.3vw, 49px);
+}
+.vx-agency .vx-solution-copy h2 em {
+  background: none;
+  color: #1e3866;
+}
+.vx-solution-copy .vx-section-heading > p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #394c6a;
+  margin-top: 24px;
+}
+.vx-solution-capabilities {
+  margin-top: 33px;
+}
+.vx-solution-capabilities > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid #6683b938;
+  padding: 17px 0;
+}
+.vx-solution-capabilities > div > span:first-child {
+  color: #6689bd;
+  font-size: 9px;
+}
+.vx-solution-capabilities > div > span:nth-child(2) {
+  flex: 1;
+  font-size: 16px;
+  color: #152d51;
+}
+.vx-solution-capabilities svg {
+  color: #436998;
+}
+.vx-solution-copy > small {
+  display: block;
+  font-size: 9px;
+  line-height: 1.7;
+  color: #5a73a0;
+  margin-top: 24px;
+}
+.vx-solution-visual {
+  position: relative;
+  background: radial-gradient(ellipse at 0% 45%, #143e89, transparent 70%), #030b18;
+  padding: 75px 27px 80px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.vx-solution-visual .vx-composition {
+  width: 100%;
+  height: 500px;
+}
+.vx-solution-visual .vx-compose-dashboard {
+  width: 96%;
+  padding-top: 70px;
+  transform: rotate(-8deg);
+}
+.vx-solution-visual .vx-dash-shell {
+  grid-template-columns: 1fr;
+}
+.vx-solution-visual .vx-dash-sidebar {
+  display: none;
+}
+.vx-solution-visual .vx-dash-main {
+  padding-inline: 17px;
+}
+.vx-solution-visual .vx-dash-heading h3 {
+  font-size: 20px;
+}
+.vx-solution-visual .vx-dash-search {
+  display: none;
+}
+.vx-solution-visual .vx-compose-call {
+  width: 205px;
+  bottom: 10px;
+  left: -4px;
+  transform: rotate(7deg);
+}
+.vx-solution-visual .vx-compose-insight {
+  width: 170px;
+  top: 13px;
+  right: -8px;
+  transform: rotate(9deg);
+}
+.vx-solution-visual .vx-compose-caption {
+  display: none;
+}
+.vx-solution-visual .vx-compose-orbit {
+  border-color: #2b77b533;
+  inset: 0 -50px;
+}
+.vx-solution-caption {
+  position: absolute;
+  bottom: 33px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  color: #557aab;
+}
+/* A full-width dialer canvas, an editorial live-call split, a layered AI study. */
+.vx-agency .vx-showcase {
+  padding-top: 115px;
+}
+.vx-agency .vx-showcase-intro {
+  border-bottom: 0;
+  padding-bottom: 25px;
+}
+.vx-agency .vx-showcase-intro h2 {
+  font-size: clamp(42px, 4.7vw, 68px);
+}
+.vx-agency .vx-showcase-intro > p {
+  font-size: 14px;
+  max-width: 320px;
+}
+.vx-agency .vx-product-row--dialer {
+  grid-template-columns: 1fr;
+  gap: 33px;
+  padding: 50px 0 100px;
+}
+.vx-product-row--dialer .vx-product-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px 80px;
+  align-items: center;
+}
+.vx-product-row--dialer .vx-product-index {
+  grid-column: 1/-1;
+  margin-bottom: 0;
+}
+.vx-agency .vx-product-text h3 {
+  font-size: clamp(35px, 3.5vw, 50px);
+  line-height: 1.16;
+}
+.vx-product-row--dialer .vx-product-text > p {
+  margin-top: 0;
+  max-width: 470px;
+}
+.vx-agency .vx-dialer-stage {
+  padding: 34px 65px 30px;
+  background: linear-gradient(140deg, #eff6ff, #dae9ff);
+  border: 0;
+  border-radius: 18px;
+}
+.vx-agency .vx-dialer-stage > .vx-dashboard {
+  transform: perspective(1800px) rotateX(4deg);
+  box-shadow: 0 25px 50px -25px #32547f66;
+  border-color: #c3d4e7;
+}
+.vx-stage-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: #6a87ab;
+  margin-bottom: 28px;
+}
+.vx-stage-label > span {
+  font-size: 7px;
+  border: 1px solid #bed1e7;
+  border-radius: 4px;
+  padding: 5px 7px;
+}
+.vx-stage-caption {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  color: #728dac;
+  margin-top: 25px;
+}
+.vx-agency .vx-live-showcase {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 80px;
+  color: #050505;
+}
+.vx-agency .vx-live-showcase > .vx-product-text {
+  order: 2;
+}
+.vx-agency .vx-live-showcase > .vx-live-panel {
+  order: 1;
+  background: radial-gradient(ellipse at 100% 0%, #23547466, transparent 70%), #061c3d;
+  border: 1px solid #173c62;
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 30px 55px -30px #061c3d55;
+  min-height: 350px;
+}
+.vx-agency .vx-live-showcase .vx-product-index {
+  color: #588397;
+}
+.vx-agency .vx-live-showcase .vx-product-text h3 em {
+  color: transparent;
+}
+.vx-agency .vx-live-showcase .vx-product-text p {
+  color: #525866;
+  font-size: 14px;
+  line-height: 1.85;
+}
+.vx-agency .vx-live-showcase h4 {
+  color: #fff;
+}
+.vx-agency .vx-live-showcase .vx-live-person p {
+  color: #799ebd;
+}
+.vx-agency .vx-live-showcase .vx-live-person {
+  margin-top: 35px;
+}
+.vx-agency .vx-live-showcase .vx-wave {
+  height: 135px;
+}
+.vx-agency .vx-product-row--reverse {
+  padding: 100px 0 0;
+  gap: 80px;
+}
+.vx-agency .vx-ai-stage {
+  background: linear-gradient(125deg, #f0f7ff, #dcecff 55%, #eaf6ff);
+  border: 1px solid #d9e8f5;
+  padding: 38px;
+  isolation: isolate;
+}
+.vx-agency .vx-ai-header,
+.vx-agency .vx-transcript,
+.vx-agency .vx-ai-summary,
+.vx-agency .vx-ai-stage > .vx-study-caption {
+  position: relative;
+  z-index: 1;
+}
+.vx-agency .vx-ai-summary {
+  border-top-color: #80c6ee;
+  box-shadow: 0 20px 45px -25px #299fd855;
+  transform: rotate(-3deg);
+}
+.vx-agency .vx-ai-stage:hover .vx-ai-summary {
+  transform: rotate(0) translateY(-3px);
+}
+.vx-ai-orbit {
+  position: absolute;
+  inset: 10% -30px;
+  border: 1px solid #87bde444;
+  border-radius: 50%;
+  transform: rotate(-25deg);
+  z-index: 0;
+}
+/* Analytics returns to a light, screenshot-led canvas. */
+.vx-agency .vx-analytics {
+  background: linear-gradient(180deg, #f4f8ff, #eaf3ff);
+  color: #050505;
+  overflow: hidden;
+}
+.vx-agency .vx-analytics-heading {
+  gap: 65px;
+}
+.vx-agency .vx-analytics-heading h2 em {
+  background: linear-gradient(90deg, #087be6, #299fd8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.vx-agency .vx-analytics-heading > p {
+  color: #525866;
+  font-size: 14px;
+}
+.vx-agency .vx-analytics-heading .vx-product-index {
+  color: #588397;
+}
+.vx-agency .vx-analytics-image {
+  position: relative;
+  background: #dfefff;
+  border: 1px solid #cfdfef;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 30px 65px -40px #3363a355;
+}
+.vx-agency .vx-analytics-image .vx-browser {
+  box-shadow: 0 15px 35px -25px #16466a88;
+}
+.vx-agency .vx-analytics-image .vx-browser figcaption {
+  display: none;
+}
+.vx-analytics-corner {
+  position: absolute;
+  right: -16px;
+  bottom: 35px;
+  border: 1px solid #c5e9f5;
+  background: #f3fcff;
+  border-radius: 15px;
+  padding: 23px;
+  color: #00add1;
+  box-shadow: 0 15px 40px -20px #167a9d55;
+}
+.vx-agency .vx-analytics-caption {
+  color: #7d92aa;
+}
+.vx-agency .vx-analytics-caption i {
+  background: #00b8d9;
+}
+/* Modular capability composition, with an authentic messaging capture. */
+.vx-agency .vx-feature-grid {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 20px;
+}
+.vx-agency .vx-feature {
+  grid-column: span 3;
+  padding: 30px;
+  border-radius: 16px;
+  min-height: 270px;
+}
+.vx-agency .vx-feature h3 {
+  font-size: 24px;
+}
+.vx-agency .vx-feature p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.vx-agency .vx-feature--0 {
+  grid-column: span 7;
+  background: #061c3d;
+}
+.vx-agency .vx-feature--0 p {
+  color: #9eb4d2;
+  max-width: 65%;
+}
+.vx-agency .vx-feature--1 {
+  grid-column: span 5;
+  background: linear-gradient(135deg, #ecf4ff, #dceaff);
+}
+.vx-agency .vx-feature--2 {
+  grid-column: span 3;
+  background: #eef7ff;
+}
+.vx-agency .vx-feature--3 {
+  grid-column: span 4;
+}
+.vx-agency .vx-feature--4 {
+  grid-column: span 5;
+  background: #f2f8fb;
+}
+.vx-feature-capture {
+  margin-top: 24px !important;
+  border: 1px solid #dbe6ee;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -18px #17426a66;
+}
+.vx-feature-capture > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.vx-feature-capture > figcaption {
+  background: white;
+  padding: 7px 10px;
+  color: #8aa2b3;
+  font-size: 6px;
+  letter-spacing: 0.1em;
+}
+.vx-agency .vx-feature--5 {
+  grid-column: span 12;
+  min-height: 150px;
+  display: grid;
+  grid-template-columns: 45px 250px minmax(0, 1fr);
+  gap: 10px 28px;
+  align-items: center;
+  background: #fff;
+  border-radius: 0;
+  border-inline: 0;
+  border-bottom: 0;
+}
+.vx-agency .vx-feature--5 .vx-feature-icon {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  margin: 0;
+}
+.vx-agency .vx-feature--5 .vx-feature-number {
+  position: absolute;
+  top: 28px;
+  right: 0;
+}
+.vx-agency .vx-feature--5 h3 {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+.vx-agency .vx-feature--5 p {
+  grid-column: 3;
+  grid-row: 1;
+  max-width: 570px;
+  margin: 0;
+}
+.vx-integration-note {
+  grid-column: 3;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 9px;
+  color: #91a4b5;
+}
+.vx-integration-note > span {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: #a9bdce;
+}
+/* Engineering reserves space for evidence rather than guessing at a stack. */
+.vx-agency .vx-engineering-grid {
+  grid-template-columns: 1.1fr 1fr;
+  gap: 100px;
+  align-items: start;
+}
+.vx-agency .vx-engineering .vx-section-heading p {
+  max-width: 520px;
+}
+.vx-contribution-list {
+  margin-top: 34px;
+}
+.vx-contribution-list > div {
+  display: flex;
+  gap: 19px;
+  border-top: 1px solid #e1e8ef;
+  padding: 24px 0;
+}
+.vx-contribution-list > div > span {
+  color: #299fd8;
+  font-size: 10px;
+  flex-shrink: 0;
+  padding-top: 3px;
+}
+.vx-contribution-list h3 {
+  font-size: 20px;
+  margin-bottom: 13px;
+}
+.vx-contribution-list p {
+  font-size: 13px;
+  line-height: 1.85;
+}
+.vx-stack-display {
+  position: relative;
+  padding: 32px;
+  border: 1px solid #e1e9f3;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #fff, #f7faff);
+  overflow: hidden;
+}
+.vx-stack-kicker {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 8px;
+  letter-spacing: 0.13em;
+  color: #7d98af;
+}
+.vx-stack-outline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+  padding: 26px 24px;
+  margin: 25px 0;
+  position: relative;
+}
+.vx-stack-outline > span {
+  height: 34px;
+  border: 1px solid #d7e4f2;
+  border-radius: 4px;
+  background: #fff;
+  z-index: 1;
+}
+.vx-stack-outline > span:nth-child(2) {
+  background: #f0f6ff;
+}
+.vx-stack-outline > i {
+  position: absolute;
+  inset: 20% 30%;
+  border: 1px solid #c4d9ed;
+  transform: rotate(45deg);
+}
+.vx-stack-display h3 {
+  font-size: 35px;
+  line-height: 1.13;
+}
+.vx-stack-display h3 em {
+  color: #299fd8;
+}
+.vx-stack-display > p {
+  font-size: 12px;
+  line-height: 1.9;
+  margin-top: 17px;
+}
+.vx-stack-status {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border-top: 1px solid #e1eaf4;
+  padding-top: 19px;
+  margin-top: 22px;
+  font-size: 8px;
+  line-height: 1.7;
+  color: #83a0b7;
+}
+/* An editorial outcome, anchored by genuine imagery. */
+.vx-agency .vx-results {
+  background: #fff;
+  border-top: 1px solid #e7edf3;
+}
+.vx-result-story {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 75px;
+  align-items: center;
+}
+.vx-result-story > .vx-file-preview {
+  margin: 0;
+  transform: rotate(3deg);
+}
+.vx-agency .vx-file-preview .vx-browser {
+  border-radius: 12px;
+  box-shadow: 0 25px 55px -30px #31577b66;
+}
+.vx-agency .vx-outcome-grid {
+  display: block;
+  margin-top: 55px;
+}
+.vx-agency .vx-outcome {
+  display: grid;
+  grid-template-columns: 45px minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+  padding: 27px 0;
+  border-top: 1px solid #e0e7ee;
+}
+.vx-agency .vx-outcome > small {
+  float: none;
+  font-size: 11px;
+  color: #299fd8;
+  padding-top: 5px;
+}
+.vx-agency .vx-outcome h3 {
+  font-size: 24px;
+  line-height: 1.25;
+  margin: 0;
+}
+.vx-agency .vx-outcome p {
+  font-size: 13px;
+}
+/* BytechSol's blue-gradient closing. */
+.vx-agency .vx-final {
+  background: linear-gradient(110deg, #087be6, #58c3f4);
+}
+.vx-agency .vx-final .vx-eyebrow {
+  color: #e6f6ff;
+}
+.vx-agency .vx-final-star {
+  display: flex;
+  justify-content: center;
+}
+.vx-agency .vx-final h2 {
+  font-size: clamp(58px, 7.5vw, 106px);
+}
+.vx-agency .vx-final h2 em {
+  color: #fff;
+}
+.vx-agency .vx-final p {
+  color: #eef8ff;
+  max-width: 530px;
+  margin: 25px auto 0;
+  font-size: 16px;
+}
+.vx-agency .vx-final .vx-action--primary {
+  background: #fff;
+  color: #050505;
+}
+.vx-agency .vx-final .vx-action--primary:hover {
+  background: #fff;
+  color: #087be6;
+}
+.vx-agency .vx-final .vx-action--primary:before {
+  background: linear-gradient(105deg, transparent, #c8ebff, transparent);
+}
+.vx-agency .vx-final .vx-action--secondary {
+  background: #050505;
+  color: #fff;
+  border-color: #050505;
+}
+.vx-agency .vx-final .vx-action--secondary:hover {
+  color: #fff;
+}
+.vx-agency .vx-final-contact {
+  color: #e6f5ff;
+}
+@keyframes vx-interface-float {
+  50% {
+    translate: 0 -7px;
+  }
+}
+@keyframes vx-brand-drift {
+  50% {
+    transform: rotate(16deg) translateY(-8px);
+  }
+}
+@media (max-width: 1100px) {
+  .vx-agency .vx-hero-editorial {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+  }
+  .vx-agency .vx-hero h1 {
+    font-size: 63px;
+  }
+  .vx-agency .vx-hero h1 .vx-product-name {
+    font-size: 90px;
+  }
+  .vx-agency .vx-hero-summary > p {
+    font-size: 17px;
+  }
+  .vx-agency .vx-hero-summary .vx-actions {
+    flex-direction: column;
+    align-items: start;
+  }
+  .vx-agency .vx-hero-meta > div {
+    padding-inline: 28px;
+  }
+  .vx-agency .vx-hero-product {
+    padding-inline: 30px;
+  }
+  .vx-composition {
+    height: 500px;
+  }
+  .vx-compose-dashboard {
+    width: 90%;
+  }
+  .vx-compose-insight {
+    width: 185px;
+  }
+  .vx-compose-call {
+    width: 205px;
+  }
+  .vx-agency .vx-overview-grid,
+  .vx-agency .vx-engineering-grid {
+    gap: 55px;
+  }
+  .vx-agency .vx-challenge > .vx-container {
+    gap: 50px;
+  }
+  .vx-challenge-story h2 {
+    font-size: 43px;
+  }
+  .vx-agency .vx-challenge-row {
+    grid-template-columns: 53px 1fr;
+    gap: 13px 18px;
+  }
+  .vx-agency .vx-big-number {
+    font-size: 53px;
+  }
+  .vx-solution-copy {
+    padding: 45px 35px;
+  }
+  .vx-solution-visual {
+    padding-inline: 18px;
+  }
+  .vx-solution-visual .vx-compose-call {
+    width: 180px;
+    bottom: 10px;
+  }
+  .vx-solution-visual .vx-compose-insight {
+    width: 150px;
+  }
+  .vx-solution-visual .vx-dash-heading h3 {
+    font-size: 18px;
+  }
+  .vx-agency .vx-product-row--reverse,
+  .vx-agency .vx-live-showcase {
+    gap: 45px;
+  }
+  .vx-agency .vx-live-showcase > .vx-live-panel {
+    padding: 25px;
+  }
+  .vx-agency .vx-dialer-stage {
+    padding-inline: 40px;
+  }
+  .vx-agency .vx-feature {
+    padding: 25px;
+  }
+  .vx-agency .vx-feature h3 {
+    font-size: 22px;
+  }
+  .vx-agency .vx-feature--5 {
+    grid-template-columns: 42px 220px 1fr;
+    gap: 10px 24px;
+  }
+  .vx-result-story {
+    gap: 45px;
+  }
+}
+@media (max-width: 800px) {
+  .vx-agency .vx-section {
+    padding: 80px 0;
+  }
+  .vx-agency .vx-hero-editorial {
+    gap: 30px;
+  }
+  .vx-agency .vx-hero h1 {
+    font-size: 48px;
+  }
+  .vx-agency .vx-hero h1 .vx-product-name {
+    font-size: 73px;
+  }
+  .vx-agency .vx-hero-summary > p {
+    font-size: 15px;
+  }
+  .vx-agency .vx-hero .vx-eyebrow {
+    font-size: 8px;
+    margin-bottom: 23px;
+  }
+  .vx-hero-kicker {
+    font-size: 7px;
+  }
+  .vx-agency .vx-hero-meta > div {
+    padding-inline: 20px;
+  }
+  .vx-agency .vx-hero-meta b {
+    font-size: 10px;
+  }
+  .vx-agency .vx-hero-summary .vx-action {
+    font-size: 10px;
+    padding: 12px 15px;
+  }
+  .vx-agency .vx-hero-product {
+    padding: 35px 25px 25px;
+  }
+  .vx-composition {
+    height: 465px;
+  }
+  .vx-compose-dashboard {
+    width: 92%;
+    padding-top: 30px;
+  }
+  .vx-compose-insight {
+    width: 155px;
+    padding: 13px;
+  }
+  .vx-compose-call {
+    width: 185px;
+    padding: 15px;
+  }
+  .vx-compose-chart {
+    height: 52px;
+  }
+  .vx-agency .vx-overview-grid {
+    gap: 35px;
+  }
+  .vx-agency .vx-overview h2 {
+    font-size: 39px;
+  }
+  .vx-agency .vx-project-file {
+    padding-left: 20px;
+  }
+  .vx-agency .vx-project-file dl > div {
+    font-size: 11px;
+  }
+  .vx-agency .vx-challenge > .vx-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .vx-challenge-story h2 {
+    font-size: 49px;
+  }
+  .vx-challenge-story h2 > br:first-of-type {
+    display: none;
+  }
+  .vx-challenge-story > p {
+    max-width: 540px;
+  }
+  .vx-agency .vx-challenge-list {
+    max-width: 580px;
+    margin-left: auto;
+    width: 90%;
+  }
+  .vx-agency .vx-challenge-row {
+    grid-template-columns: 65px 1fr;
+  }
+  .vx-agency .vx-approach-grid {
+    grid-template-columns: 1fr;
+  }
+  .vx-solution-copy {
+    padding: 45px;
+  }
+  .vx-agency .vx-solution-copy h2 {
+    font-size: 46px;
+  }
+  .vx-solution-capabilities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 35px;
+  }
+  .vx-solution-visual {
+    min-height: 580px;
+    padding: 40px 55px 65px;
+  }
+  .vx-solution-visual .vx-composition {
+    height: 470px;
+  }
+  .vx-solution-visual .vx-compose-dashboard {
+    padding-top: 50px;
+    width: 90%;
+  }
+  .vx-solution-visual .vx-compose-call {
+    width: 205px;
+  }
+  .vx-solution-visual .vx-compose-insight {
+    width: 180px;
+  }
+  .vx-agency .vx-product-row--dialer {
+    padding-bottom: 70px;
+  }
+  .vx-agency .vx-product-row--dialer .vx-product-text {
+    gap: 17px 35px;
+  }
+  .vx-agency .vx-product-text h3 {
+    font-size: 38px;
+  }
+  .vx-agency .vx-live-showcase {
+    gap: 30px;
+  }
+  .vx-agency .vx-live-showcase > .vx-live-panel {
+    padding: 22px;
+  }
+  .vx-agency .vx-product-row--reverse {
+    gap: 35px;
+    padding-top: 75px;
+  }
+  .vx-agency .vx-ai-stage {
+    padding: 26px;
+  }
+  .vx-agency .vx-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .vx-agency .vx-feature {
+    grid-column: span 1;
+    min-height: 270px;
+  }
+  .vx-agency .vx-feature--0 {
+    grid-column: span 2;
+    min-height: 240px;
+  }
+  .vx-agency .vx-feature--5 {
+    grid-column: span 1;
+    display: block;
+    border: 1px solid #e1eaf0;
+    border-radius: 16px;
+  }
+  .vx-agency .vx-feature--5 .vx-feature-icon {
+    margin-bottom: 26px;
+  }
+  .vx-agency .vx-feature--5 .vx-feature-number {
+    right: 25px;
+    top: 26px;
+  }
+  .vx-agency .vx-feature--5 p {
+    margin-top: 13px;
+  }
+  .vx-integration-note {
+    margin-top: 25px;
+    font-size: 8px;
+    line-height: 1.7;
+  }
+  .vx-agency .vx-engineering-grid {
+    gap: 40px;
+  }
+  .vx-stack-display {
+    padding: 25px;
+  }
+  .vx-agency .vx-engineering h2 {
+    font-size: 40px;
+  }
+  .vx-result-story {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 30px;
+  }
+  .vx-agency .vx-results h2 {
+    font-size: 40px;
+  }
+  .vx-agency .vx-outcome {
+    gap: 25px;
+    grid-template-columns: 30px 0.9fr 1fr;
+  }
+  .vx-agency .vx-outcome h3 {
+    font-size: 21px;
+  }
+}
+@media (max-width: 600px) {
+  .vx-agency .vx-section {
+    padding: 65px 0;
+  }
+  .vx-agency h2 {
+    font-size: 37px;
+  }
+  .vx-agency .vx-hero {
+    padding-top: 5px;
+  }
+  .vx-agency .vx-hero-top {
+    padding-bottom: 20px;
+  }
+  .vx-agency .vx-hero-grid {
+    width: 160px;
+    height: 230px;
+    right: -40px;
+    top: 70px;
+    opacity: 0.09;
+  }
+  .vx-agency .vx-hero-editorial {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 10px 0 32px;
+  }
+  .vx-agency .vx-hero h1 {
+    font-size: clamp(43px, 10.6vw, 62px);
+    line-height: 1.055;
+  }
+  .vx-agency .vx-hero h1 .vx-product-name {
+    font-size: clamp(66px, 16vw, 88px);
+    margin-bottom: 15px;
+  }
+  .vx-agency .vx-hero .vx-eyebrow {
+    font-size: 7px;
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+  }
+  .vx-agency .vx-hero-summary {
+    padding-bottom: 0;
+  }
+  .vx-hero-kicker {
+    display: none;
+  }
+  .vx-agency .vx-hero-summary > p {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 450px;
+  }
+  .vx-agency .vx-hero-summary .vx-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    gap: 10px;
+  }
+  .vx-agency .vx-hero-summary .vx-action {
+    font-size: 10px;
+    padding: 12px 15px;
+    gap: 10px;
+  }
+  .vx-agency-signature {
+    font-size: 9px;
+    margin-top: 20px;
+  }
+  .vx-agency .vx-hero-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 24px;
+    margin-bottom: 27px;
+    padding: 24px 0;
+  }
+  .vx-agency .vx-hero-meta > div {
+    padding: 0 !important;
+    border: 0;
+    gap: 7px;
+  }
+  .vx-agency .vx-hero-meta > div > span {
+    font-size: 7px;
+  }
+  .vx-agency .vx-hero-meta b {
+    font-size: 11px;
+  }
+  .vx-continue {
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+  }
+  .vx-continue > svg {
+    width: 16px;
+  }
+  .vx-agency .vx-hero-product {
+    padding: 28px 12px 22px;
+    border-radius: 16px 16px 0 0;
+    margin-inline: -6px;
+  }
+  .vx-composition {
+    height: 455px;
+  }
+  .vx-compose-dashboard {
+    width: 100%;
+    padding-top: 33px;
+    transform: rotate(-2deg);
+  }
+  .vx-compose-insight {
+    width: 125px;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .vx-compose-chart {
+    height: 33px;
+    gap: 5px;
+    margin: 10px 0 8px;
+  }
+  .vx-composition-label {
+    font-size: 5px;
+    letter-spacing: 0.04em;
+  }
+  .vx-compose-insight > small {
+    font-size: 4px;
+  }
+  .vx-compose-insight .vx-composition-label > svg {
+    width: 10px;
+    height: 10px;
+  }
+  .vx-compose-call {
+    bottom: 15px;
+    left: 0;
+    width: 165px;
+    padding: 12px;
+    border-radius: 10px;
+  }
+  .vx-compose-person {
+    gap: 7px;
+    margin-top: 12px;
+  }
+  .vx-compose-person > span {
+    width: 25px;
+    height: 25px;
+    font-size: 8px;
+  }
+  .vx-compose-person strong {
+    font-size: 8px;
+  }
+  .vx-compose-person small {
+    font-size: 5px;
+  }
+  .vx-compose-person > svg {
+    width: 13px;
+  }
+  .vx-compose-call .vx-wave {
+    height: 24px;
+    margin: 8px 0;
+  }
+  .vx-compose-controls {
+    gap: 15px;
+  }
+  .vx-compose-controls > span {
+    width: 22px;
+    height: 22px;
+  }
+  .vx-compose-controls > svg {
+    width: 12px;
+  }
+  .vx-compose-caption {
+    font-size: 5px;
+    bottom: 0;
+    right: 0;
+    letter-spacing: 0.04em;
+  }
+  .vx-agency .vx-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .vx-agency .vx-overview h2 {
+    font-size: 39px;
+  }
+  .vx-agency .vx-overview .vx-lead {
+    font-size: 16px;
+  }
+  .vx-agency .vx-brief-notes {
+    gap: 23px;
+  }
+  .vx-agency .vx-brief-notes p {
+    font-size: 13px;
+  }
+  .vx-agency .vx-project-file {
+    padding: 0 0 0 20px;
+  }
+  .vx-agency .vx-project-file:before {
+    height: 50px;
+  }
+  .vx-agency .vx-file-title h3 {
+    font-size: 32px;
+  }
+  .vx-agency .vx-file-title {
+    margin: 20px 0;
+  }
+  .vx-agency .vx-project-file dl > div {
+    font-size: 12px;
+    padding: 16px 0;
+  }
+  .vx-agency .vx-section-marker {
+    font-size: 7px;
+    letter-spacing: 0.06em;
+    margin-bottom: 35px;
+    gap: 15px;
+  }
+  .vx-challenge-story h2 {
+    font-size: 38px;
+    line-height: 1.18;
+  }
+  .vx-challenge-story h2 > br:first-of-type {
+    display: block;
+  }
+  .vx-challenge-story > p {
+    font-size: 13px;
+    max-width: 350px;
+  }
+  .vx-challenge-line {
+    width: 70px;
+    margin-top: 25px;
+  }
+  .vx-agency .vx-challenge-list {
+    width: 100%;
+    margin: 0;
+  }
+  .vx-agency .vx-challenge-row {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 12px 16px;
+    padding: 25px 0;
+  }
+  .vx-agency .vx-challenge-row:nth-child(2),
+  .vx-agency .vx-challenge-row:nth-child(3) {
+    margin-left: 0;
+  }
+  .vx-agency .vx-big-number {
+    font-size: 48px;
+  }
+  .vx-agency .vx-challenge-row h3 {
+    font-size: 22px;
+  }
+  .vx-agency .vx-challenge-row p {
+    font-size: 13px;
+  }
+  .vx-agency .vx-approach {
+    padding-inline: 12px;
+  }
+  .vx-agency .vx-approach-grid {
+    border-radius: 17px;
+  }
+  .vx-solution-copy {
+    padding: 35px 26px;
+  }
+  .vx-agency .vx-solution-copy h2 {
+    font-size: 35px;
+  }
+  .vx-solution-copy .vx-section-heading > p {
+    font-size: 14px;
+  }
+  .vx-solution-capabilities {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 25px;
+  }
+  .vx-solution-capabilities > div {
+    padding: 14px 0;
+  }
+  .vx-solution-capabilities > div > span:nth-child(2) {
+    font-size: 15px;
+  }
+  .vx-solution-visual {
+    min-height: 515px;
+    padding: 35px 19px 50px;
+  }
+  .vx-solution-visual .vx-composition {
+    height: 430px;
+  }
+  .vx-solution-visual .vx-compose-dashboard {
+    width: 100%;
+    padding-top: 34px;
+    transform: rotate(-6deg);
+  }
+  .vx-solution-visual .vx-compose-call {
+    width: 165px;
+    left: -4px;
+    bottom: 6px;
+  }
+  .vx-solution-visual .vx-compose-insight {
+    width: 125px;
+    right: -3px;
+    top: 5px;
+  }
+  .vx-solution-caption {
+    font-size: 6px;
+    bottom: 23px;
+  }
+  .vx-solution-visual .vx-dash-main {
+    padding-inline: 10px;
+  }
+  .vx-solution-visual .vx-dash-heading h3 {
+    font-size: 17px;
+  }
+  .vx-agency .vx-showcase {
+    padding-top: 70px;
+  }
+  .vx-agency .vx-showcase-intro h2 {
+    font-size: 40px;
+  }
+  .vx-agency .vx-showcase-intro > p {
+    font-size: 13px;
+    max-width: 100%;
+  }
+  .vx-agency .vx-product-row--dialer {
+    padding: 30px 0 65px;
+    gap: 25px;
+  }
+  .vx-agency .vx-product-row--dialer .vx-product-text {
+    display: block;
+  }
+  .vx-agency .vx-product-row--dialer .vx-product-index {
+    margin-bottom: 20px;
+  }
+  .vx-agency .vx-product-text h3 {
+    font-size: 36px;
+  }
+  .vx-product-row--dialer .vx-product-text > p {
+    margin-top: 21px;
+    font-size: 14px;
+  }
+  .vx-agency .vx-dialer-stage {
+    padding: 21px 11px;
+    border-radius: 13px;
+  }
+  .vx-stage-label {
+    font-size: 5px;
+    letter-spacing: 0.04em;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .vx-stage-label > span {
+    font-size: 5px;
+    padding: 4px 5px;
+    flex-shrink: 0;
+  }
+  .vx-stage-caption {
+    font-size: 8px;
+    margin-top: 18px;
+  }
+  .vx-agency .vx-live-showcase {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .vx-agency .vx-live-showcase > .vx-product-text {
+    order: 1;
+  }
+  .vx-agency .vx-live-showcase > .vx-live-panel {
+    order: 2;
+    min-height: 315px;
+    padding: 25px 20px;
+  }
+  .vx-agency .vx-live-showcase .vx-wave {
+    height: 115px;
+  }
+  .vx-agency .vx-product-row--reverse {
+    padding: 70px 0 0;
+    gap: 30px;
+  }
+  .vx-agency .vx-ai-stage {
+    padding: 27px 21px;
+  }
+  .vx-agency .vx-analytics-heading {
+    gap: 25px;
+  }
+  .vx-agency .vx-analytics-image {
+    padding: 11px;
+    border-radius: 14px;
+  }
+  .vx-analytics-corner {
+    padding: 12px;
+    right: -7px;
+    bottom: 20px;
+    border-radius: 10px;
+  }
+  .vx-analytics-corner svg {
+    height: 19px;
+    width: 19px;
+  }
+  .vx-agency .vx-analytics-caption {
+    font-size: 7px;
+  }
+  .vx-agency .vx-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .vx-agency .vx-feature,
+  .vx-agency .vx-feature--0,
+  .vx-agency .vx-feature--1,
+  .vx-agency .vx-feature--2,
+  .vx-agency .vx-feature--3,
+  .vx-agency .vx-feature--4,
+  .vx-agency .vx-feature--5 {
+    grid-column: auto;
+    min-height: 240px;
+    padding: 27px;
+  }
+  .vx-agency .vx-feature h3 {
+    font-size: 24px;
+  }
+  .vx-agency .vx-feature p {
+    font-size: 13px;
+  }
+  .vx-agency .vx-feature--0 p {
+    max-width: 75%;
+  }
+  .vx-feature-capture {
+    max-width: 420px;
+  }
+  .vx-agency .vx-feature--5 .vx-feature-number {
+    right: 27px;
+    top: 27px;
+  }
+  .vx-integration-note {
+    font-size: 9px;
+  }
+  .vx-agency .vx-engineering-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .vx-agency .vx-engineering h2 {
+    font-size: 38px;
+  }
+  .vx-stack-display {
+    padding: 28px;
+  }
+  .vx-stack-display h3 {
+    font-size: 34px;
+  }
+  .vx-stack-display > p {
+    font-size: 13px;
+  }
+  .vx-stack-status {
+    font-size: 9px;
+  }
+  .vx-stack-outline {
+    max-width: 320px;
+    margin: 25px auto;
+  }
+  .vx-result-story {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .vx-agency .vx-results h2 {
+    font-size: 38px;
+  }
+  .vx-result-story > .vx-file-preview {
+    max-width: 460px;
+    margin-inline: 8px;
+  }
+  .vx-agency .vx-outcome-grid {
+    margin-top: 42px;
+  }
+  .vx-agency .vx-outcome {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 12px 14px;
+    padding: 25px 0;
+  }
+  .vx-agency .vx-outcome > small {
+    grid-row: span 2;
+  }
+  .vx-agency .vx-outcome h3 {
+    font-size: 23px;
+  }
+  .vx-agency .vx-outcome p {
+    grid-column: 2;
+  }
+  .vx-agency .vx-final h2 {
+    font-size: 64px;
+  }
+  .vx-agency .vx-final p {
+    font-size: 14px;
+    max-width: 340px;
+  }
+  .vx-agency .vx-final .vx-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .vx-agency .vx-final .vx-action {
+    min-width: 220px;
+    font-size: 12px;
+    justify-content: space-between;
+    padding: 15px 22px;
+  }
+  .vx-agency .vx-final .vx-eyebrow {
+    font-size: 7px;
+  }
+  .vx-agency .vx-final-contact {
+    font-size: 11px;
+  }
+}
+@media (max-width: 360px) {
+  .vx-agency .vx-hero h1 {
+    font-size: 43px;
+  }
+  .vx-agency .vx-hero h1 .vx-product-name {
+    font-size: 68px;
+  }
+  .vx-agency .vx-hero-summary .vx-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .vx-agency .vx-hero-summary .vx-action {
+    justify-content: space-between;
+    font-size: 12px;
+  }
+  .vx-agency .vx-hero-summary > p {
+    font-size: 15px;
+  }
+  .vx-agency .vx-hero h1 em {
+    font-size: 42px;
+  }
+  .vx-agency .vx-hero-product {
+    padding-inline: 9px;
+  }
+  .vx-composition {
+    height: 445px;
+  }
+  .vx-compose-call {
+    width: 150px;
+    padding: 10px;
+  }
+  .vx-compose-insight {
+    width: 112px;
+  }
+  .vx-agency .vx-overview h2,
+  .vx-agency .vx-results h2 {
+    font-size: 35px;
+  }
+  .vx-challenge-story h2 {
+    font-size: 35px;
+  }
+  .vx-agency .vx-solution-copy h2 {
+    font-size: 32px;
+  }
+  .vx-solution-copy {
+    padding-inline: 23px;
+  }
+  .vx-solution-visual {
+    padding-inline: 15px;
+  }
+  .vx-agency .vx-feature--0 p {
+    max-width: 100%;
+  }
+  .vx-agency .vx-final h2 {
+    font-size: 55px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vx-agency .vx-hero-grid,
+  .vx-agency .vx-compose-call {
+    animation: none;
+  }
+  .vx-agency .vx-compose-dashboard,
+  .vx-agency .vx-dialer-stage > .vx-dashboard,
+  .vx-agency .vx-ai-summary,
+  .vx-agency .vx-result-story > .vx-file-preview {
+    transform: none;
+  }
+  .vx-agency .vx-continue:hover {
+    transform: none;
+  }
+}
+/* Keep full product frames visible; floating panels retain their own intentional overlap. */
+.vx-agency .vx-composition {
+  height: auto;
+  min-height: 535px;
+  padding-bottom: 65px;
+}
+.vx-agency .vx-solution-visual .vx-composition {
+  height: auto;
+  min-height: 500px;
+  padding-bottom: 55px;
+}
+@media (max-width: 800px) {
+  .vx-agency .vx-composition {
+    min-height: 465px;
+  }
+  .vx-agency .vx-solution-visual .vx-composition {
+    min-height: 470px;
+  }
+}
+@media (max-width: 600px) {
+  .vx-agency .vx-composition {
+    min-height: 455px;
+    padding-bottom: 95px;
+  }
+  .vx-agency .vx-solution-visual .vx-composition {
+    min-height: 430px;
+    padding-bottom: 75px;
+  }
+  .vx-agency .vx-approach-grid > .vx-solution-copy,
+  .vx-agency .vx-approach-grid > .vx-solution-visual {
+    order: 0;
+  }
+}
+.vx-feature-call-study {
+  margin-top: 29px;
+  padding-top: 19px;
+  border-top: 1px solid #aac7e844;
+}
+.vx-feature-call-study > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  color: #7796b8;
+}
+.vx-feature-call-study > span > i {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: #74a9ce;
+}
+.vx-feature-call-study .vx-wave {
+  max-width: 230px;
+  margin-top: 13px;
+  justify-content: flex-start;
+}
+.vx-feature-ai-study {
+  margin-top: 28px;
+  padding: 18px;
+  border: 1px solid #cfe3f3;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 15px 25px -20px #299fd855;
+  transform: rotate(-3deg);
+}
+.vx-feature-ai-study > span {
+  display: block;
+  font-size: 6px;
+  letter-spacing: 0.08em;
+  color: #6697b5;
+  margin-bottom: 18px;
+}
+.vx-feature-ai-study > i {
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 3px;
+  background: #dceaf6;
+}
+.vx-feature-ai-study > i:nth-of-type(2) {
+  width: 78%;
+}
+.vx-feature-ai-study > i:nth-of-type(3) {
+  width: 56%;
+}
+.vx-feature-ai-study > small {
+  display: block;
+  font-size: 6px;
+  color: #8aa9bf;
+  margin-top: 18px;
+}
+.vx-feature-analytics-study {
+  margin-top: 27px;
+  padding: 0 8px;
+}
+.vx-feature-analytics-study .vx-compose-chart {
+  height: 95px;
+  gap: 9px;
+}
+.vx-feature-analytics-study > small {
+  display: block;
+  font-size: 6px;
+  color: #93a7ba;
+  margin-top: 12px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vx-feature-ai-study {
+    transform: none;
+  }
+}
+
+/* Clean hero photograph: no product frames, captions, text, or UI overlays. */
+.vx-agency .vx-hero-product.vx-hero-photo {
+  padding: 0;
+  border: 0;
+  border-radius: 18px;
+  background: none;
+  margin: 0 0 44px;
+  overflow: hidden;
+}
+.vx-hero-photo > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1950 / 807;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .vx-agency .vx-hero-product.vx-hero-photo {
+    margin: 0 0 28px;
+    border-radius: 12px;
+  }
+}
+
+.vx-agency .vx-dialer-stage.vx-dialer-photo {
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  background: none;
+  overflow: hidden;
+}
+.vx-dialer-photo > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Match the main website's Guminert typeface and natural heading spacing. */
+.vx-case.vx-agency h1,
+.vx-case.vx-agency h2,
+.vx-case.vx-agency h3,
+.vx-case.vx-agency h4,
+.vx-case.vx-agency .vx-hero h1 .vx-product-name {
+  font-family: "Guminert", sans-serif;
+  letter-spacing: normal;
+}
+.vx-case.vx-agency h1,
+.vx-case.vx-agency h2 {
+  font-weight: 600;
+}
+@media (max-width: 360px) {
+  .vx-case.vx-agency .vx-hero h1 em {
+    font-size: 36px;
+  }
+}

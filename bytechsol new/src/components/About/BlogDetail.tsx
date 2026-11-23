@@ -2,12 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "../../assets/components-css/Blogdetail.css";
 import { fetchPostBySlug, fetchAllPosts } from "../../apiServices/wpApi";
-import {
-  FaLinkedinIn,
-  FaInstagram,
-  FaFacebookF,
-  FaXTwitter,
-} from "react-icons/fa6";
+import { FaLinkedinIn, FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
 import { Helmet } from "react-helmet";
 import FaqSection from "../../shareable/faq";
 
@@ -204,7 +199,7 @@ const Blogdetail = () => {
 
   const getMetaDescription = () => {
     if (post.excerpt && post.excerpt.rendered) {
-      return post.excerpt.rendered.replace(/<[^>]+>/g, '').substring(0, 160);
+      return post.excerpt.rendered.replace(/<[^>]+>/g, "").substring(0, 160);
     }
     return post.title; // Fallback to title if no excerpt
   };
@@ -235,10 +230,7 @@ const Blogdetail = () => {
                 <h4>Table of Contents</h4>
                 <ul className="toc-list">
                   {toc.map((item) => (
-                    <li
-                      key={item.id}
-                      className={item.type === "h3" ? "toc-sub" : "toc-main"}
-                    >
+                    <li key={item.id} className={item.type === "h3" ? "toc-sub" : "toc-main"}>
                       <a href={`#${item.id}`}>
                         {item.number} {item.label}
                       </a>

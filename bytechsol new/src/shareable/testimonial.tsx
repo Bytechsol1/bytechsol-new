@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import com from "../assets/images/comma.png";
-import jen from "../assets/images/susie.jpg"
-import lin from "../assets/images/lina.jpg"
-import ba from "../assets/images/cody.jpg"
-import tr from "../assets/images/Thomas Reed.jpg"
+import jen from "../assets/images/susie.jpg";
+import lin from "../assets/images/lina.jpg";
+import ba from "../assets/images/cody.jpg";
+import tr from "../assets/images/Thomas Reed.jpg";
 
 const testimonials = [
   {
@@ -35,12 +35,10 @@ const testimonials = [
 const Testimonial = () => {
   const [index, setIndex] = useState(0);
 
-  // Auto slide every 3s — supports dynamic testimonial count 
+  // Auto slide every 3s — supports dynamic testimonial count
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prevIndex) =>
-        prevIndex + 1 === testimonials.length ? 0 : prevIndex + 1
-      );
+      setIndex((prevIndex) => (prevIndex + 1 === testimonials.length ? 0 : prevIndex + 1));
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -80,12 +78,8 @@ const Testimonial = () => {
                 className="group5-avatar rounded-circle"
               />
               <div>
-                <div className="group5-author-name fw-bold">
-                  {current.author}
-                </div>
-                <div className="group5-author-role text-muted">
-                  {current.role}
-                </div>
+                <div className="group5-author-name fw-bold">{current.author}</div>
+                <div className="group5-author-role text-muted">{current.role}</div>
               </div>
             </div>
 

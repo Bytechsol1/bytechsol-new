@@ -18,7 +18,8 @@
   position: relative;
   overflow: hidden;
   padding: 90px 24px 110px;
-  background: radial-gradient(circle at 22% 25%, rgba(39, 190, 255, 0.14), transparent 24%),
+  background:
+    radial-gradient(circle at 22% 25%, rgba(39, 190, 255, 0.14), transparent 24%),
     radial-gradient(circle at 90% 15%, rgba(42, 114, 255, 0.16), transparent 18%),
     linear-gradient(180deg, #0f0c29 0%, #120f3c 100%);
   color: #fff;
@@ -190,7 +191,6 @@
   padding: 20px;
 }
 
-
 @keyframes float3d {
   0% {
     transform: translateY(0) rotateY(0deg);
@@ -252,13 +252,7 @@
   .floating-3d {
     max-width: 80%;
   }
-
 }
-
-
-
-
-
 
 /* ═══════════════════════════════════════════════════════════════════════════
    NEW SPLIT HERO — white left / dark right
@@ -334,7 +328,7 @@
   gap: 9px;
   padding: 13px 26px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #27AAE1 0%, #1a7ab5 100%);
+  background: linear-gradient(135deg, #27aae1 0%, #1a7ab5 100%);
   color: #ffffff;
   font-family: "Guminert", sans-serif;
   font-weight: 700;
@@ -492,7 +486,9 @@
   color: #000;
   margin-bottom: 20px;
   text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .webdesign-desc {
@@ -591,7 +587,9 @@
   color: #000;
   margin-bottom: 20px;
   text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 a {
@@ -739,13 +737,11 @@ a {
   margin: 0;
 }
 
-
 @media (max-width: 1024px) {
   .industry-title {
     font-size: 38px;
     max-width: 90%;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -1122,7 +1118,6 @@ a {
 }
 
 @media (max-width: 768px) {
-
   .staggered-text-1,
   .staggered-text-2 {
     font-size: 50px;

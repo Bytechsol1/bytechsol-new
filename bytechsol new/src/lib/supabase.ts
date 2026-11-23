@@ -7,8 +7,7 @@ function readServerEnv(name: string) {
 }
 
 const SUPABASE_URL =
-  readServerEnv("VITE_SUPABASE_URL") ??
-  "https://pkbsyhqejbfenlvnmzme.supabase.co";
+  readServerEnv("VITE_SUPABASE_URL") ?? "https://pkbsyhqejbfenlvnmzme.supabase.co";
 
 const SUPABASE_ANON_KEY =
   readServerEnv("VITE_SUPABASE_ANON_KEY") ??

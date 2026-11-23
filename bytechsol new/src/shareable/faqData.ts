@@ -1,6 +1,6 @@
 // src/data/faqData.ts
 export const homePageFaqs = [
-{
+  {
     id: 1,
     question: "What services does Bytechsol offer?",
     answer:
@@ -8,8 +8,7 @@ export const homePageFaqs = [
   },
   {
     id: 2,
-    question:
-      "Do you build custom software solutions for startups and enterprises?",
+    question: "Do you build custom software solutions for startups and enterprises?",
     answer:
       "Yes! We help startups establish their business ideas or customize enterprise software in large organizations based on the needs of every business, from MVPs to complex enterprise systems.",
   },
@@ -64,7 +63,7 @@ export const homePageFaqs = [
 ];
 
 export const contactUsFaqs = [
-{
+  {
     id: 1,
     question: "How do I get started with Bytechsol?",
     answer:
@@ -72,8 +71,7 @@ export const contactUsFaqs = [
   },
   {
     id: 2,
-    question:
-      "Can I book a discovery call before starting a project?",
+    question: "Can I book a discovery call before starting a project?",
     answer:
       "Yes, absolutely. We offer no-obligation discovery calls to understand your business needs. It is the initial procedure in providing a custom approach, be it web development, ERP implementation, or AI integration.",
   },
@@ -122,7 +120,7 @@ export const contactUsFaqs = [
 ];
 
 export const aboutPageFaqs = [
-{
+  {
     id: 1,
     question: "What makes Bytechsol different from other software development companies?",
     answer:
@@ -130,8 +128,7 @@ export const aboutPageFaqs = [
   },
   {
     id: 2,
-    question:
-      "What industries does Bytechsol specialize in?",
+    question: "What industries does Bytechsol specialize in?",
     answer:
       "Our clients have been in eCommerce, SaaS, EdTech, FinTech, Healthcare, Logistics, and Retail. No matter the industry, our solutions are created specifically for you. It could be a tailor-made CMS, ERP solution, or hybrid mobile application; we focus on your needs.",
   },
@@ -180,7 +177,7 @@ export const aboutPageFaqs = [
 ];
 
 export const servicesPageFaqs = [
-{
+  {
     id: 1,
     question: "What services does Bytechsol offer?",
     answer:
@@ -188,8 +185,7 @@ export const servicesPageFaqs = [
   },
   {
     id: 2,
-    question:
-      "Do you work with startups or only established businesses?",
+    question: "Do you work with startups or only established businesses?",
     answer:
       "Timelines are dependent on the scope and complexity of the project. A simple site can be done in 3 4 weeks, whereas more complicated software or e-business sites can cost 6- 8 months. We facilitate timely delivery with proper scheduling, frequent updates, and streamlined processes without compromising quality.",
   },
@@ -238,7 +234,7 @@ export const servicesPageFaqs = [
 ];
 
 export const webdesignFaqs = [
-{
+  {
     id: 1,
     question: "What is included in your website design and development services?",
     answer:
@@ -246,8 +242,7 @@ export const webdesignFaqs = [
   },
   {
     id: 2,
-    question:
-      "Do you create mobile-friendly and responsive websites?",
+    question: "Do you create mobile-friendly and responsive websites?",
     answer:
       "Yes. We are creating mobile-responsive sites that can accommodate smartphones, tablets, and computers. Sticking to the mobile-friendly strategy, we can achieve quick loading, easy navigation, and improve user experience across all devices, which will enable us to increase customer satisfaction and search engine ranking.",
   },
@@ -284,7 +279,7 @@ export const webdesignFaqs = [
 ];
 
 export const customwebFaqs = [
-{
+  {
     id: 1,
     question: "What are custom web solutions, and how do they help my business grow?",
     answer:
@@ -292,8 +287,7 @@ export const customwebFaqs = [
   },
   {
     id: 2,
-    question:
-      "How is custom CMS development different from using ready-made platforms?",
+    question: "How is custom CMS development different from using ready-made platforms?",
     answer:
       "We take pride in developing a CMS that provides you with total control over your content through user-friendly dashboards, multi-user access control, as well as integration with third parties. At any rate, our CMS is designed in a way that it is secure, scalable, and SEO friendly, as opposed to off-the-shelf ones that require your business to operate without technical crutches.",
   },
@@ -323,7 +317,8 @@ export const customwebFaqs = [
   },
   {
     id: 7,
-    question: "Can you integrate third-party services like CRMs or payment gateways into my website?",
+    question:
+      "Can you integrate third-party services like CRMs or payment gateways into my website?",
     answer:
       "Definitely. We integrate modules like Salesforce, HubSpot, PayPal, Stripe, and Google Analytics into your website or application. Such integrations improve workflow automation and payments, and provide a deeper insight into customer behavior.",
   },
@@ -335,7 +330,8 @@ export const customwebFaqs = [
   },
   {
     id: 9,
-    question: "Do you develop plugins for platforms like WordPress, WooCommerce, Shopify, and Magento?",
+    question:
+      "Do you develop plugins for platforms like WordPress, WooCommerce, Shopify, and Magento?",
     answer:
       "Yes. We create customisable modules and plugins to be used in the major CMS and eCommerce packages. Our solutions are customisable to improve flexibility, speed, and security, and drive up conversions and customer satisfaction.",
   },
@@ -360,7 +356,7 @@ export const customwebFaqs = [
 ];
 
 export const webappFaqs = [
-{
+  {
     id: 1,
     question: "What makes your web and software development services different from others?",
     answer:
@@ -368,8 +364,7 @@ export const webappFaqs = [
   },
   {
     id: 2,
-    question:
-      "How does your web app development process work?",
+    question: "How does your web app development process work?",
     answer:
       "We are building a web application in a systematic manner- strategy, user-friendly design, scalable architecture, and strong security. We also offer continuous optimization and support where your web applications are always efficient, reliable, le and future-ready.",
   },
@@ -418,7 +413,7 @@ export const webappFaqs = [
 ];
 
 export const ecomFaqs = [
-{
+  {
     id: 1,
     question: "Why should I choose ByTechsol for my e-commerce solutions?",
     answer:
@@ -426,8 +421,7 @@ export const ecomFaqs = [
   },
   {
     id: 2,
-    question:
-      "Do you provide support after launching my online store?",
+    question: "Do you provide support after launching my online store?",
     answer:
       "Yes, we do offer comprehensive after-sales services, including updates, troubleshooting, performance maintenance, and the incorporation of new features to make sure that your store is running well.",
   },
@@ -476,7 +470,7 @@ export const ecomFaqs = [
 ];
 
 export const brandFaqs = [
-{
+  {
     id: 1,
     question: "What is included in your brand-building services?",
     answer:
@@ -484,8 +478,7 @@ export const brandFaqs = [
   },
   {
     id: 2,
-    question:
-      "What makes your branding approach different?",
+    question: "What makes your branding approach different?",
     answer:
       "We integrate research of the market, competition, and audience with design and message creativity. This makes your brand name not only attractive to the eyes, but also strategically oriented to your business objectives.",
   },
@@ -552,7 +545,7 @@ export const brandFaqs = [
 ];
 
 export const seoFaqs = [
-{
+  {
     id: 1,
     question: "What is included in your SEO services?",
     answer:
@@ -560,8 +553,7 @@ export const seoFaqs = [
   },
   {
     id: 2,
-    question:
-      "How does On-Page SEO help improve rankings?",
+    question: "How does On-Page SEO help improve rankings?",
     answer:
       "On-Page SEO optimizes your website to be search-engine and user-friendly in order to improve the structure, content, and technical aspects of your site. Designation of titles, heads, pictures, and URLs enhances rank, involvement, and ranking potential.",
   },
@@ -616,7 +608,7 @@ export const seoFaqs = [
 ];
 
 export const aimlFaqs = [
-{
+  {
     id: 1,
     question: "What industries can benefit from your AI and ML solutions?",
     answer:
@@ -624,8 +616,7 @@ export const aimlFaqs = [
   },
   {
     id: 2,
-    question:
-      "How do AI chatbots improve customer support?",
+    question: "How do AI chatbots improve customer support?",
     answer:
       "Instant response, wait reduction, and 24/7 are some of the benefits of AI chatbots. They are driven by NLP and LLMs, comprehending the context and providing correct responses, which enhances the level of customer satisfaction and reduces the costs of operation.",
   },
@@ -675,59 +666,69 @@ export const aimlFaqs = [
 
 export const erpFaqs = [
   {
-      id: 1,
-      question: "What is an ERP system and how can it help my business?",
-      answer: "An ERP (Enterprise Resource Planning) system connects important business operations such as finance, inventory, sales, purchasing, HR, and customer management in one centralized platform. It helps businesses improve efficiency, reduce manual work, and make better decisions using real-time data.",
+    id: 1,
+    question: "What is an ERP system and how can it help my business?",
+    answer:
+      "An ERP (Enterprise Resource Planning) system connects important business operations such as finance, inventory, sales, purchasing, HR, and customer management in one centralized platform. It helps businesses improve efficiency, reduce manual work, and make better decisions using real-time data.",
   },
   {
-      id: 2,
-      question: "What ERP solutions do you provide?",
-      answer: "We provide customized ERP solutions based on your business requirements, including ERP implementation, customization, integration, migration, and ongoing support. We can also help businesses optimize existing ERP systems.",
+    id: 2,
+    question: "What ERP solutions do you provide?",
+    answer:
+      "We provide customized ERP solutions based on your business requirements, including ERP implementation, customization, integration, migration, and ongoing support. We can also help businesses optimize existing ERP systems.",
   },
   {
-      id: 3,
-      question: "Can you customize an ERP system according to our business needs?",
-      answer: "Yes. We customize ERP systems according to your business processes, workflows, departments, and reporting requirements. Our goal is to make the ERP work around your business rather than forcing your business to change unnecessarily.",
+    id: 3,
+    question: "Can you customize an ERP system according to our business needs?",
+    answer:
+      "Yes. We customize ERP systems according to your business processes, workflows, departments, and reporting requirements. Our goal is to make the ERP work around your business rather than forcing your business to change unnecessarily.",
   },
   {
-      id: 4,
-      question: "Can you integrate ERP with our existing software?",
-      answer: "Yes. We can integrate ERP systems with existing websites, e-commerce platforms, CRM systems, payment gateways, third-party applications, and other business tools to keep your data and processes connected.",
+    id: 4,
+    question: "Can you integrate ERP with our existing software?",
+    answer:
+      "Yes. We can integrate ERP systems with existing websites, e-commerce platforms, CRM systems, payment gateways, third-party applications, and other business tools to keep your data and processes connected.",
   },
   {
-      id: 5,
-      question: "How can an ERP system improve business efficiency?",
-      answer: "An ERP system automates repetitive tasks, centralizes business data, reduces manual errors, and gives teams access to the information they need. This can improve productivity and help management make faster, data-driven decisions.",
+    id: 5,
+    question: "How can an ERP system improve business efficiency?",
+    answer:
+      "An ERP system automates repetitive tasks, centralizes business data, reduces manual errors, and gives teams access to the information they need. This can improve productivity and help management make faster, data-driven decisions.",
   },
   {
-      id: 6,
-      question: "Do you provide ERP data migration services?",
-      answer: "Yes. We can help migrate your existing business data into the new ERP system. We focus on proper data mapping, validation, and testing to minimize data loss and disruption during the migration process.",
+    id: 6,
+    question: "Do you provide ERP data migration services?",
+    answer:
+      "Yes. We can help migrate your existing business data into the new ERP system. We focus on proper data mapping, validation, and testing to minimize data loss and disruption during the migration process.",
   },
   {
-      id: 7,
-      question: "Is ERP suitable for small and growing businesses?",
-      answer: "Yes. ERP solutions can be useful for small, medium-sized, and growing businesses. We can recommend and configure an ERP solution based on your current operations, budget, and future growth plans.",
+    id: 7,
+    question: "Is ERP suitable for small and growing businesses?",
+    answer:
+      "Yes. ERP solutions can be useful for small, medium-sized, and growing businesses. We can recommend and configure an ERP solution based on your current operations, budget, and future growth plans.",
   },
   {
-      id: 8,
-      question: "Do you provide ERP support and maintenance after implementation?",
-      answer: "Yes. We provide ongoing ERP support and maintenance to help keep your system secure, updated, and running efficiently. We can also assist with troubleshooting, improvements, and future customizations.",
+    id: 8,
+    question: "Do you provide ERP support and maintenance after implementation?",
+    answer:
+      "Yes. We provide ongoing ERP support and maintenance to help keep your system secure, updated, and running efficiently. We can also assist with troubleshooting, improvements, and future customizations.",
   },
   {
-      id: 9,
-      question: "How long does ERP implementation take?",
-      answer: "The timeline depends on the size of the business, number of modules, level of customization, data migration requirements, and integrations. After understanding your requirements, we can provide a more accurate implementation timeline.",
+    id: 9,
+    question: "How long does ERP implementation take?",
+    answer:
+      "The timeline depends on the size of the business, number of modules, level of customization, data migration requirements, and integrations. After understanding your requirements, we can provide a more accurate implementation timeline.",
   },
   {
-      id: 10,
-      question: "How can I get started with your ERP services?",
-      answer: "You can get started by contacting our team and sharing your business requirements, current systems, and the challenges you want to solve. We will review your needs and recommend an ERP approach that fits your business.",
+    id: 10,
+    question: "How can I get started with your ERP services?",
+    answer:
+      "You can get started by contacting our team and sharing your business requirements, current systems, and the challenges you want to solve. We will review your needs and recommend an ERP approach that fits your business.",
   },
 ];
 
 export const odooFaqs = [
-{
+  {
     id: 1,
     question: "What are Odoo services, and how can they benefit my business?",
     answer:
@@ -735,8 +736,7 @@ export const odooFaqs = [
   },
   {
     id: 2,
-    question:
-      "Can you migrate my legacy system or older Odoo version?",
+    question: "Can you migrate my legacy system or older Odoo version?",
     answer:
       "Yes, we are experts in a smooth migration. Regardless of whether you are leaving a legacy system or upgrading to the new version of Odoo, we guarantee proper data transfer, minimum downtime, and maximum security.",
   },
@@ -782,7 +782,7 @@ export const odooFaqs = [
     answer:
       "Yes, we provide unlimited Odoo maintenance, bug fixes, performance checks, upgrades, backups, and 24/7 services to make sure that your ERP system is always running in the right way.",
   },
-   {
+  {
     id: 10,
     question: "Why should we choose ByTechsol for Odoo services?",
     answer:
@@ -952,14 +952,12 @@ export const blogArZone = [
   {
     id: 6,
     question: "Which Samsung devices support the AR Zone App?",
-    answer:
-      "It’s available on Samsung Galaxy S, Note, and A series running Android 10 or higher.",
+    answer: "It’s available on Samsung Galaxy S, Note, and A series running Android 10 or higher.",
   },
   {
     id: 7,
     question: "Is AR Zone free to use?",
-    answer:
-      "Yes, it’s a completely free feature for Samsung users.",
+    answer: "Yes, it’s a completely free feature for Samsung users.",
   },
   {
     id: 8,
@@ -1013,4 +1011,3 @@ export const blogNoCode = [
       "It has weaknesses such as constrained customization, scaling to more complex applications, vendor lock-in, and the use of third-party security. Numerous companies engage the help of agencies such as Bytechsol to gain a way out of these discrepancies and create stable and future-proof no-code solutions.",
   },
 ];
-

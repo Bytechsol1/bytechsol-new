@@ -1,11 +1,11 @@
-import React, { StrictMode } from 'react';
+import React, { StrictMode } from "react";
 // Import createRoot for client-side rendering and hydrateRoot for prerendered content
-import { createRoot, hydrateRoot } from 'react-dom/client'; 
-import './index.css';
-import App from './App.tsx';
+import { createRoot, hydrateRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.tsx";
 
 // Find the root container
-const container = document.getElementById('root');
+const container = document.getElementById("root");
 
 if (container) {
   // Check if the container has child nodes (meaning content was pre-rendered by React Snap)
@@ -15,14 +15,14 @@ if (container) {
       container,
       <StrictMode>
         <App />
-      </StrictMode>
+      </StrictMode>,
     );
   } else {
     // If not pre-rendered (e.g., in development), use createRoot to render normally
     createRoot(container).render(
       <StrictMode>
         <App />
-      </StrictMode>
+      </StrictMode>,
     );
   }
 } else {

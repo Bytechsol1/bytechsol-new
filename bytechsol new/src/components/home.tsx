@@ -25,17 +25,16 @@ const awards = [
     trans: "fade-up",
     link: "https://www.behance.net/bytechsol",
     color: "#000000", // Behance Black (User Request)
-    imgClass: "img-white-bg"
+    imgClass: "img-white-bg",
   },
   {
     text: "Trust Pilot",
-    description:
-      "Trusted by global clients, BytechSol delivers award-winning digital solutions.",
+    description: "Trusted by global clients, BytechSol delivers award-winning digital solutions.",
     img: tr,
     trans: "fade-up",
     link: "https://www.trustpilot.com/review/bytechsol.com",
     color: "#00b67a", // Trustpilot Green
-    imgClass: "img-white-bg"
+    imgClass: "img-white-bg",
   },
   {
     text: "Clutch",
@@ -43,7 +42,7 @@ const awards = [
     img: Clutch,
     trans: "fade-up",
     color: "#16313a", // Clutch Dark Blue
-    imgClass: "img-white-bg"
+    imgClass: "img-white-bg",
   },
   {
     text: "Upwork",
@@ -52,13 +51,9 @@ const awards = [
     trans: "fade-up",
     link: "https://www.upwork.com/freelancers/hazratb11?mp_source=share",
     color: "#14a800", // Upwork Green
-    imgClass: "img-transparent"
+    imgClass: "img-transparent",
   },
 ];
-
-
-
-
 
 const Home: React.FC = () => {
   // const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -94,17 +89,13 @@ const Home: React.FC = () => {
                   & Digital Partner for <br />
                   <AnimatedText />
                 </h1>
-                <div
-                  className="cta-buttons mt-4 d-flex gap-3 flex-wrap"
-                  data-aos="fade-up"
-                >
+                <div className="cta-buttons mt-4 d-flex gap-3 flex-wrap" data-aos="fade-up">
                   <button
                     onClick={() => openModal("strategy")}
                     className="btn btn-black custom-cta"
                     style={{ border: "none" }}
                   >
-                    Book a strategy call{" "}
-                    <i className="bi bi-arrow-up-right arrow-icon"></i>
+                    Book a strategy call <i className="bi bi-arrow-up-right arrow-icon"></i>
                   </button>
                   <button
                     onClick={() => openModal("quote")}
@@ -116,23 +107,15 @@ const Home: React.FC = () => {
               </div>
               <div className="col-md-4" data-aos="fade-left">
                 <p>
-                  We craft scalable, user-focused digital solutions for startups
-                  and enterprises. From concept to code, we deliver results that
-                  fuel growth.
+                  We craft scalable, user-focused digital solutions for startups and enterprises.
+                  From concept to code, we deliver results that fuel growth.
                 </p>
                 <div className="founders-rating d-flex align-items-center">
                   <div className="d-flex align-items-center">
                     <div className="founders-stack">
                       {/* Image 1 (Front) */}
-                      <div
-                        className="tooltip-wrapper"
-                        style={{ left: 0, zIndex: 3 }}
-                      >
-                        <img
-                          src={kr}
-                          alt="Dr. Cody Chalker"
-                          className="founder-img"
-                        />
+                      <div className="tooltip-wrapper" style={{ left: 0, zIndex: 3 }}>
+                        <img src={kr} alt="Dr. Cody Chalker" className="founder-img" />
                         <div className="custom-tooltip">
                           <strong>Dr. Cody Chalker</strong>
                           <br />
@@ -141,27 +124,17 @@ const Home: React.FC = () => {
                       </div>
 
                       {/* Image 2 (Middle) */}
-                      <div
-                        className="tooltip-wrapper"
-                        style={{ left: "15px", zIndex: 2 }}
-                      >
-                        <img
-                          src={jen}
-                          alt="Susie Wang"
-                          className="founder-img"
-                        />
+                      <div className="tooltip-wrapper" style={{ left: "15px", zIndex: 2 }}>
+                        <img src={jen} alt="Susie Wang" className="founder-img" />
                         <div className="custom-tooltip">
                           <strong>Susie Wang</strong>
                           <br />
                           COO, Purity Cosmetics
                         </div>
                       </div>
-
-
                     </div>
                     <span className="ms-1" style={{ lineHeight: "15px" }}>
-                      Trusted by forward-thinking founders and businesses
-                      worldwide.
+                      Trusted by forward-thinking founders and businesses worldwide.
                     </span>
                   </div>
                   <img src={Clutch} alt="Clutch" className="clutch-logo" />
@@ -185,25 +158,19 @@ const Home: React.FC = () => {
             (WHO WE ARE)
           </p>
           <p className="description" data-aos="fade-up">
-            Bytechsol is a{" "}
-            <span className="gradient-text">software agency</span> built for
-            modern businesses. We specialize in web development, mobile apps,
-            and custom software, designed to help companies thrive in a
-            fast-paced digital world. At Bytechsol, we blend innovation with
-            simplicity to deliver reliable, performance-driven products.
+            Bytechsol is a <span className="gradient-text">software agency</span> built for modern
+            businesses. We specialize in web development, mobile apps, and custom software, designed
+            to help companies thrive in a fast-paced digital world. At Bytechsol, we blend
+            innovation with simplicity to deliver reliable, performance-driven products.
           </p>
         </div>
       </section>
-
-
-
 
       {/* Scroll Cards */}
       <ScrollCards />
 
       {/* Growth Section */}
       <section className="group7-container">
-
         <div className="group7-content">
           <h2 className="group7-main-title" style={{ fontSize: "80px" }} data-aos="fade-up">
             Your Growth, Our Priority
@@ -214,19 +181,19 @@ const Home: React.FC = () => {
                 title: "Focused on What Matters",
                 desc: "We are not a company that just creates websites, but creates solutions to help your business flourish and attract customers to achieve real results.",
                 Icon: Target,
-                bg: "linear-gradient(125.88deg, #DE9FB4 3.07%, #532C53 56.27%, #1B021B 103.82%)"
+                bg: "linear-gradient(125.88deg, #DE9FB4 3.07%, #532C53 56.27%, #1B021B 103.82%)",
               },
               {
                 title: "A Team by Your Side",
                 desc: "Our engineers, designers, and strategists collaborate closely with you. We take care and commitment to everything and do it in-house (we never outsource anything).",
                 Icon: Users,
-                bg: "linear-gradient(124.26deg, #A7FEEB -1.43%, #14655C 53.56%, rgba(2, 53, 47, 0.207843) 101.66%)"
+                bg: "linear-gradient(124.26deg, #A7FEEB -1.43%, #14655C 53.56%, rgba(2, 53, 47, 0.207843) 101.66%)",
               },
               {
                 title: "Quality You Can Rely On",
                 desc: "We put our heart into every project, making sure your website is secure, fast, and built to support your success long-term.",
                 Icon: ShieldCheck,
-                bg: "linear-gradient(123.88deg, #01D0FA 1.43%, #000326 89.16%)"
+                bg: "linear-gradient(123.88deg, #01D0FA 1.43%, #000326 89.16%)",
               },
             ].map((col, idx) => (
               <div
@@ -298,12 +265,17 @@ const Home: React.FC = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="award-card-wrapper"
-                        style={{ textDecoration: "none", color: "inherit", display: 'block', width: '100%' }}
+                        style={{
+                          textDecoration: "none",
+                          color: "inherit",
+                          display: "block",
+                          width: "100%",
+                        }}
                       >
                         {CardContent}
                       </a>
                     ) : (
-                      <div className="award-card-wrapper" style={{ width: '100%' }}>
+                      <div className="award-card-wrapper" style={{ width: "100%" }}>
                         {CardContent}
                       </div>
                     )}
@@ -318,11 +290,7 @@ const Home: React.FC = () => {
       <Testimonial />
       <FaqSection faqs={homePageFaqs} />
 
-      <StrategyModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        type={modalType}
-      />
+      <StrategyModal isOpen={modalOpen} onClose={() => setModalOpen(false)} type={modalType} />
 
       <NewCon />
     </>

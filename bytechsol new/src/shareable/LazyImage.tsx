@@ -4,12 +4,7 @@ type Props = React.ImgHTMLAttributes<HTMLImageElement> & {
   rootMargin?: string;
 };
 
-const LazyImageComponent: React.FC<Props> = ({
-  src,
-  alt,
-  rootMargin = "200px",
-  ...rest
-}) => {
+const LazyImageComponent: React.FC<Props> = ({ src, alt, rootMargin = "200px", ...rest }) => {
   const imgRef = useRef<HTMLImageElement | null>(null);
   const [inView, setInView] = useState(false);
 
@@ -28,7 +23,7 @@ const LazyImageComponent: React.FC<Props> = ({
           }
         });
       },
-      { rootMargin }
+      { rootMargin },
     );
     observer.observe(imgRef.current);
     return () => observer.disconnect();

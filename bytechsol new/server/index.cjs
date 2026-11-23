@@ -1,10 +1,10 @@
 // server/index.cjs
-require('dotenv/config');
-require('ignore-styles');
-const path = require('path'); // Import path
+require("dotenv/config");
+require("ignore-styles");
+const path = require("path"); // Import path
 
 // Handle images
-const imageExtensions = ['.webp', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico'];
+const imageExtensions = [".webp", ".png", ".jpg", ".jpeg", ".gif", ".svg", ".ico"];
 imageExtensions.forEach((ext) => {
   require.extensions[ext] = (module, filename) => {
     // FIX: Return web path
@@ -14,14 +14,14 @@ imageExtensions.forEach((ext) => {
 });
 
 // ... rest of your babel config and require('./server.jsx')
-require('@babel/register')({
+require("@babel/register")({
   ignore: [/(node_modules)/],
   presets: [
-    '@babel/preset-env',
-    ['@babel/preset-react', { runtime: 'automatic' }],
-    '@babel/preset-typescript'
+    "@babel/preset-env",
+    ["@babel/preset-react", { runtime: "automatic" }],
+    "@babel/preset-typescript",
   ],
-  extensions: ['.js', '.jsx', '.ts', '.tsx']
+  extensions: [".js", ".jsx", ".ts", ".tsx"],
 });
 
-require('./server.jsx');
+require("./server.jsx");

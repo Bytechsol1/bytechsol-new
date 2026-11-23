@@ -4,7 +4,6 @@ import LogoText from "../assets/images/Logotext.svg";
 import LogoWhite from "../assets/images/lg-white.png";
 import LogoTextWhite from "../assets/images/lg-white-text.png";
 
-
 export type NavTheme = NavbarProps & {
   buttonSchemeClass?: string;
 };
@@ -199,6 +198,13 @@ export const NAV_THEMES: Record<string, NavTheme> & { default: NavTheme } = {
 
 export function getNavThemeForPath(pathname: string): NavTheme {
   const rawPath = (pathname || "/").toLowerCase();
+
+  if (rawPath === "/case-studies" || rawPath.startsWith("/case-studies/")) {
+    return {
+      ...NAV_THEMES.default,
+      navClassName: `${NAV_THEMES.default.navClassName} navbar-case-study`,
+    };
+  }
 
   // 1. Try exact match
   if (NAV_THEMES[rawPath]) return NAV_THEMES[rawPath];

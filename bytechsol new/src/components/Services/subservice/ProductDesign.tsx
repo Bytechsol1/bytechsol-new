@@ -2,7 +2,7 @@ import "../../../assets/components-css/Services.css";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import NewCon from "../../../shareable/NewCon";
-import y1 from "../../../assets/images/brandbuildingnew.png"
+import y1 from "../../../assets/images/brandbuildingnew.png";
 import et from "../../../assets/images/ideat.png";
 import lw from "../../../assets/images/lwork.png";
 import sp from "../../../assets/images/simplicity.png";
@@ -13,8 +13,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Consult } from "./New";
 import { Helmet } from "react-helmet";
 import { brandFaqs } from "../../../shareable/faqData";
-
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,10 +51,7 @@ const cards = [
   },
 ];
 
-
 const ProductDesign = () => {
-
-
   const containerRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
@@ -83,12 +78,7 @@ const ProductDesign = () => {
 
       cardsEls.forEach((card, i) => {
         if (i === 0) return;
-        tl.fromTo(
-          card,
-          { y: window.innerHeight },
-          { y: 0, duration: 0.8 },
-          i - 1
-        );
+        tl.fromTo(card, { y: window.innerHeight }, { y: 0, duration: 0.8 }, i - 1);
       });
     }, containerRef);
 
@@ -115,10 +105,7 @@ const ProductDesign = () => {
           content="Create a strong digital brand identity with BytechSol’s creative strategies, UI/UX design, and online branding expertise."
         />
         <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href="https://bytechsol.com/services/brand-building/"
-        />
+        <link rel="canonical" href="https://bytechsol.com/services/brand-building/" />
       </Helmet>
 
       {/* Hero */}
@@ -131,10 +118,9 @@ const ProductDesign = () => {
           </div>
           <div className="dg-hero-body-wrap">
             <p className="dg-hero-desc" data-aos="fade-right">
-              We help businesses create powerful brand identities that build
-              trust, recognition, and lasting customer connections. From
-              strategy and visuals to messaging and digital presence, our brand
-              building services ensure your business stands out and resonates
+              We help businesses create powerful brand identities that build trust, recognition, and
+              lasting customer connections. From strategy and visuals to messaging and digital
+              presence, our brand building services ensure your business stands out and resonates
               with the right audience.
             </p>
             <a href="#contact" className="dg-hero-cta" data-aos="fade-up">
@@ -153,12 +139,11 @@ const ProductDesign = () => {
               top: "0px",
               left: "0px",
               maxWidth: "none",
-              zIndex: 10
+              zIndex: 10,
             }}
           />
         </div>
       </section>
-
 
       <Consult />
 
@@ -172,7 +157,6 @@ const ProductDesign = () => {
         </a>
       </div>
 
-
       <section
         className="performance-section service-page-cards"
         style={{ height: "85vh" }}
@@ -181,7 +165,6 @@ const ProductDesign = () => {
         <div className="card-container">
           {cards.map((card, index) => (
             <div key={index} className={`card-row ${card.color}`}>
-
               <div className="card-text">
                 <h2>{card.title[0]}</h2>
                 <p>{card.items[0]}</p>
@@ -193,7 +176,6 @@ const ProductDesign = () => {
           ))}
         </div>
       </section>
-
 
       <Testimonial />
       <FaqSection faqs={brandFaqs} />

@@ -1,21 +1,19 @@
 import { useEffect } from "react";
 import "../../../assets/components-css/Services.css";
-import se from "../../../assets/images/seo-service-sec.png"
+import se from "../../../assets/images/seo-service-sec.png";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import NewCon from "../../../shareable/NewCon";
-import fin from "../../../assets/images/fintech.png"
-import ec from "../../../assets/images/ecom.png"
-import pl from "../../../assets/images/plat.png"
-import we from "../../../assets/images/web3.png"
-import ed from "../../../assets/images/edtech.png"
-import sv from "../../../assets/images/services.png"
+import fin from "../../../assets/images/fintech.png";
+import ec from "../../../assets/images/ecom.png";
+import pl from "../../../assets/images/plat.png";
+import we from "../../../assets/images/web3.png";
+import ed from "../../../assets/images/edtech.png";
+import sv from "../../../assets/images/services.png";
 import { useLocation } from "react-router-dom";
 import { Onseo } from "./New";
 import { Helmet } from "react-helmet";
 import { seoFaqs } from "../../../shareable/faqData";
-
-
 
 const industryData = [
   {
@@ -62,11 +60,7 @@ const industryData = [
   },
 ];
 
-
-
 const ContactUs = () => {
-
-
   const location = useLocation();
 
   useEffect(() => {
@@ -78,7 +72,6 @@ const ContactUs = () => {
     }
   }, [location]);
 
-
   return (
     <>
       <Helmet>
@@ -88,10 +81,7 @@ const ContactUs = () => {
           content="Boost your search rankings with BytechSol’s professional SEO strategies — technical optimization, on-page SEO, and digital growth plans."
         />
         <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href="https://bytechsol.com/services/seo-service/"
-        />
+        <link rel="canonical" href="https://bytechsol.com/services/seo-service/" />
       </Helmet>
 
       {/* Hero */}
@@ -104,12 +94,11 @@ const ContactUs = () => {
           </div>
           <div className="dg-hero-body-wrap">
             <p className="dg-hero-desc" data-aos="fade-right">
-              Increase your online presence through our customised SEO plans.
-              Raising businesses to the top of the search engines, bringing the
-              right leads on board, and expanding businesses in an
-              environmentally friendly fashion are some of the ways we achieve
-              this by using the techniques of keyword optimization, technical
-              optimization, and content-driven optimization.
+              Increase your online presence through our customised SEO plans. Raising businesses to
+              the top of the search engines, bringing the right leads on board, and expanding
+              businesses in an environmentally friendly fashion are some of the ways we achieve this
+              by using the techniques of keyword optimization, technical optimization, and
+              content-driven optimization.
             </p>
             <a href="#contact" className="dg-hero-cta" data-aos="fade-up">
               Start Your Website Project Today <span className="arrow">↗</span>
@@ -127,7 +116,7 @@ const ContactUs = () => {
               top: "0px",
               left: "0px",
               maxWidth: "none",
-              zIndex: 10
+              zIndex: 10,
             }}
           />
         </div>
@@ -135,16 +124,18 @@ const ContactUs = () => {
 
       <Onseo />
 
-
       {/* 5th section------------- */}
       <section className="industry-section">
         <div className="container">
           <div className="industry-header">
-            <h2 className="industry-title" data-aos="fade-down">Turning Your Ideas Into Something Real</h2>
+            <h2 className="industry-title" data-aos="fade-down">
+              Turning Your Ideas Into Something Real
+            </h2>
             <p className="ms-2 fs-6" data-aos="fade-up">
-              All great digital initiatives begin with a spark, a concept, a challenge, or perhaps a spark of a what-if thought.
-              We are <br /> not the traditional web designers that build websites or applications…
-              we help you create your vision in a way that <br /> feels natural to you and memorable to your users.
+              All great digital initiatives begin with a spark, a concept, a challenge, or perhaps a
+              spark of a what-if thought. We are <br /> not the traditional web designers that build
+              websites or applications… we help you create your vision in a way that <br /> feels
+              natural to you and memorable to your users.
             </p>
           </div>
         </div>

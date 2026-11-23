@@ -156,7 +156,7 @@
   outline: none;
   font-size: 16px;
   padding: 8px 12px;
-  border-radius: 50p
+  border-radius: 50p;
 }
 .blog-search-btn {
   background: none;
@@ -213,11 +213,11 @@
   scroll-behavior: smooth;
   gap: 11px;
   margin-top: -140px;
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .services-scroll::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 .service-item {
@@ -258,7 +258,7 @@
   scroll-behavior: smooth;
   gap: 15px;
   padding: 10px;
-  scrollbar-width: none; 
+  scrollbar-width: none;
 }
 
 .services-scroll::-webkit-scrollbar {
@@ -335,15 +335,14 @@
   background-clip: text;
   font-weight: bold;
 }
-.blog-link{
+.blog-link {
   text-decoration: none;
   color: #000;
 }
-.blog-link:hover{
+.blog-link:hover {
   color: #007bff;
-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
-
 
 /* BLOG TABLE FIX */
 .blog-detail-body table {

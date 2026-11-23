@@ -11,11 +11,7 @@ import { Cmsdev } from "./New";
 import { Helmet } from "react-helmet";
 import { customwebFaqs } from "../../../shareable/faqData";
 
-
-
-
 const CustomWeb: React.FC = () => {
-
   const location = useLocation();
 
   useEffect(() => {
@@ -35,10 +31,7 @@ const CustomWeb: React.FC = () => {
           content="Build robust, scalable, and feature-rich web applications tailored to your unique business requirements with BytechSol’s development experts."
         />
         <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href="https://bytechsol.com/services/custom-web/"
-        />
+        <link rel="canonical" href="https://bytechsol.com/services/custom-web/" />
       </Helmet>
 
       {/* Hero */}
@@ -51,10 +44,9 @@ const CustomWeb: React.FC = () => {
           </div>
           <div className="dg-hero-body-wrap">
             <p className="dg-hero-desc" data-aos="fade-right">
-              Increase your brand with our custom web development solutions.
-              We create dynamic, SEO optimized websites — corporate sites,
-              e-commerce, and apps — blending design, usability, and
-              performance to draw traffic and convert.
+              Increase your brand with our custom web development solutions. We create dynamic, SEO
+              optimized websites — corporate sites, e-commerce, and apps — blending design,
+              usability, and performance to draw traffic and convert.
             </p>
             <a href="#contact" className="dg-hero-cta" data-aos="fade-up">
               Start Your Website Project Today <span className="arrow">↗</span>
@@ -62,9 +54,9 @@ const CustomWeb: React.FC = () => {
           </div>
         </div>
         <div className="dg-hero-right customweb-right" style={{ overflow: "visible" }}>
-          <img 
-            src={cl} 
-            alt="Custom Web 3D" 
+          <img
+            src={cl}
+            alt="Custom Web 3D"
             style={{
               position: "absolute",
               width: "448px",
@@ -72,8 +64,8 @@ const CustomWeb: React.FC = () => {
               top: "0px",
               left: "-1px",
               maxWidth: "none",
-              zIndex: 10
-            }} 
+              zIndex: 10,
+            }}
           />
         </div>
       </section>
@@ -91,11 +83,9 @@ const CustomWeb: React.FC = () => {
                 <img src={icon} alt="Icon" className="group7-icon" />
                 <h3 className="group7-heading">
                   {
-                    [
-                      "Focused on What Matters",
-                      "A Team by Your Side",
-                      "Quality You Can Rely On",
-                    ][idx]
+                    ["Focused on What Matters", "A Team by Your Side", "Quality You Can Rely On"][
+                      idx
+                    ]
                   }
                 </h3>
                 <p className="group7-description">

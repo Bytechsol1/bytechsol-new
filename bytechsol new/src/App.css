@@ -48,7 +48,6 @@ textarea,
   position: relative;
 }
 
-
 .timeline-left ul::before {
   content: "";
   position: absolute;
@@ -116,7 +115,6 @@ textarea,
   align-items: center;
   justify-content: center;
 }
-
 
 .timeline-center img,
 .timeline-center video {
@@ -214,7 +212,6 @@ textarea,
   background: #ddd;
   border-radius: 50%;
   transition: all 0.3s ease;
-
 }
 
 .timeline-left ul li:hover::before {
@@ -228,14 +225,13 @@ textarea,
 
 /* Second li element */
 .timeline-left ul li:nth-child(even)::before {
-  background: #D93D41 !important;
+  background: #d93d41 !important;
   /* Second color */
 }
 
 .timeline-left ul li.active:hover::before {
-  background: #2073D9 !important;
+  background: #2073d9 !important;
   transform: translateY(-50%) scale(1.5);
-
 }
 
 .timeline-left ul li.active {
@@ -243,10 +239,9 @@ textarea,
 }
 
 .timeline-left ul li.active::before {
-  background: #2073D9 !important;
+  background: #2073d9 !important;
   transform: translateY(-50%) scale(1.5);
   border: 1px solid #000;
-
 }
 
 .discover-btn {
@@ -377,7 +372,6 @@ textarea,
   }
 }
 
-
 @font-face {
   font-family: "Guminert";
   src: url("/Fonts/Guminert Medium.ttf") format("truetype");
@@ -391,7 +385,6 @@ textarea,
   border: none;
   outline: none;
 }
-
 
 .navbar-toggler-icon {
   background-image: none !important;
@@ -484,7 +477,9 @@ textarea,
   gap: 0.5rem;
   position: relative;
   overflow: hidden;
-  transition: background-color 0.3s ease, color 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.2s ease;
 }
 
 .contact-btn .btn-label {
@@ -787,7 +782,6 @@ textarea,
   .footer-description {
     max-width: 100%;
   }
-
 
   .footer-bottom {
     text-align: center;

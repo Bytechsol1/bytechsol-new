@@ -14,13 +14,21 @@ import bgl from "../../assets/images/blogbgl.png";
 import bgr from "../../assets/images/blogbgr.png";
 
 function getInitialBlogPosts() {
-  const initialData = (globalThis as { __INITIAL_WP_DATA__?: { blogPosts?: any[] } }).__INITIAL_WP_DATA__;
+  const initialData = (globalThis as { __INITIAL_WP_DATA__?: { blogPosts?: any[] } })
+    .__INITIAL_WP_DATA__;
   return initialData?.blogPosts ?? [];
 }
 
 const services = [
-  "Web Development", "App Development", "UI/UX Design", "SEO",
-  "Digital Marketing", "Branding", "E-Commerce", "Cloud Solutions", "QA & Testing"
+  "Web Development",
+  "App Development",
+  "UI/UX Design",
+  "SEO",
+  "Digital Marketing",
+  "Branding",
+  "E-Commerce",
+  "Cloud Solutions",
+  "QA & Testing",
 ];
 const Blog = () => {
   const initialPosts = getInitialBlogPosts();
@@ -49,9 +57,7 @@ const Blog = () => {
   const searchBlog = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
-    const filtered = posts.filter((post) =>
-      post.title.toLowerCase().includes(query)
-    );
+    const filtered = posts.filter((post) => post.title.toLowerCase().includes(query));
     setFilteredPosts(filtered);
   };
   if (loading) return <p className="text-center my-5">Loading blogs...</p>;
@@ -68,7 +74,10 @@ const Blog = () => {
       </Helmet>
       {/* Blog Header */}
       <section className="blog-section">
-        <div className="blog-bg-left d-none d-lg-block" style={{ backgroundImage: `url(${bgl})` }}></div>
+        <div
+          className="blog-bg-left d-none d-lg-block"
+          style={{ backgroundImage: `url(${bgl})` }}
+        ></div>
         <div className="blog-bg-right" style={{ backgroundImage: `url(${bgr})` }}></div>
         <h1 className="gradient-text2 text-start text-md-center ms-4">Blogs</h1>
         <h6 className="gradient-text1 text-start text-md-center ms-4">Read. Grow. Automate.</h6>
@@ -92,7 +101,11 @@ const Blog = () => {
           loop={true}
           autoplay={{ delay: 1500, disableOnInteraction: false }}
           speed={1000}
-          breakpoints={{ 768: { slidesPerView: 4 }, 1024: { slidesPerView: 5 }, 1400: { slidesPerView: 6 } }}
+          breakpoints={{
+            768: { slidesPerView: 4 },
+            1024: { slidesPerView: 5 },
+            1400: { slidesPerView: 6 },
+          }}
           className="services-scroll"
         >
           {services.map((service, index) => (

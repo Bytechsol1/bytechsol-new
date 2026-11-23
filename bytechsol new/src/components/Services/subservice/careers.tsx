@@ -7,15 +7,15 @@ import { Helmet } from "react-helmet";
 const Careers = () => {
   return (
     <>
-    <Helmet>
-  <title>Careers at BytechSol | Join Our Team</title>
-  <meta
-    name="description"
-    content="Grow your career with BytechSol! Join our team of developers, designers, and innovators building the future of digital technology."
-  />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://bytechsol.com/careers/" />
-</Helmet>
+      <Helmet>
+        <title>Careers at BytechSol | Join Our Team</title>
+        <meta
+          name="description"
+          content="Grow your career with BytechSol! Join our team of developers, designers, and innovators building the future of digital technology."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://bytechsol.com/careers/" />
+      </Helmet>
 
       {/* 1st Section */}
       <section className="careers-section">
@@ -24,13 +24,11 @@ const Careers = () => {
             Careers
           </h2>
           <p className="careers-subtitle" data-aos="fade-right">
-            <strong>
-              Growth, Innovation, Collaboration, and a Culture That Inspires!
-            </strong>
+            <strong>Growth, Innovation, Collaboration, and a Culture That Inspires!</strong>
           </p>
           <p className="join01 jn1 fs-2 fw-light  m-6" data-aos="fade-up">
-            Join the Bytechsol team and help shape the future of technology with
-            creativity, passion, and purpose.
+            Join the Bytechsol team and help shape the future of technology with creativity,
+            passion, and purpose.
           </p>
         </div>
       </section>
@@ -47,21 +45,16 @@ const Careers = () => {
         </h1>
 
         <p className="careers-intro-text" data-aos="fade-up">
-          At Bytechsol, we believe a career should be more than a paycheck — it
-          should inspire you, challenge you, and help you become the best
-          version of yourself. Here, you’ll be surrounded by people who
-          celebrate your wins, support your ideas, and work together like a true
-          family.
+          At Bytechsol, we believe a career should be more than a paycheck — it should inspire you,
+          challenge you, and help you become the best version of yourself. Here, you’ll be
+          surrounded by people who celebrate your wins, support your ideas, and work together like a
+          true family.
         </p>
 
-        <p
-          className="careers-intro-text careers-intro-cta"
-          data-aos="fade-up"
-        >
-          Explore our current opportunities and discover where you can fit in.
-          Even if you don’t find the perfect role listed, we’d still love to
-          hear from you, because great people make great teams, and we’re always
-          excited to welcome new talent.
+        <p className="careers-intro-text careers-intro-cta" data-aos="fade-up">
+          Explore our current opportunities and discover where you can fit in. Even if you don’t
+          find the perfect role listed, we’d still love to hear from you, because great people make
+          great teams, and we’re always excited to welcome new talent.
         </p>
         <form className="application-form">
           <div className="form-row">
@@ -137,11 +130,7 @@ const Careers = () => {
             ></textarea>
           </div>
           <div className="form-footer">
-            <button
-              type="submit"
-              className="application-submit-btn"
-              data-aos="fade-up"
-            >
+            <button type="submit" className="application-submit-btn" data-aos="fade-up">
               Apply now
             </button>
             <div className="form-email" data-aos="fade-up">

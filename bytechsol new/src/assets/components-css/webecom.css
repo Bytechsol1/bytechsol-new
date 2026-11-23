@@ -5,7 +5,7 @@
 }
 
 .card-row {
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -18,7 +18,6 @@
   gap: 40px;
   flex-wrap: wrap;
 }
-
 
 .card-text {
   flex: 1 1 50%;
@@ -42,13 +41,13 @@
   text-align: right;
 }
 @media (max-width: 768px) {
-.card-img img{
-  height: auto !important ;
-}
+  .card-img img {
+    height: auto !important ;
+  }
 }
 .card-img img {
   max-width: 100%;
-    height: 400px;
+  height: 400px;
   object-fit: contain;
   border-radius: 75px 5px 75px 5px;
   -webkit-border-radius: 75px 5px 75px 5px;

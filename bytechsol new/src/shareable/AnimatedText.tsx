@@ -19,9 +19,7 @@ const AnimatedText: React.FC = () => {
   }, []);
 
   return (
-    <span className={`animated-word ${animate ? "animate-bounce-in" : ""}`}>
-      {words[index]}
-    </span>
+    <span className={`animated-word ${animate ? "animate-bounce-in" : ""}`}>{words[index]}</span>
   );
 };
 

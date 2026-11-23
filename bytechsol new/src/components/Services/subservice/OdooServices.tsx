@@ -17,8 +17,6 @@ import { Helmet } from "react-helmet";
 import { odooFaqs } from "../../../shareable/faqData";
 import ERPPartnerSection from "../../ERPPartnerSection";
 
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
@@ -56,10 +54,7 @@ const cards = [
   },
 ];
 
-
-
 const CustomSoftwareDev = () => {
-
   const containerRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
@@ -83,15 +78,9 @@ const CustomSoftwareDev = () => {
         },
       });
 
-
       cardsEls.forEach((card, i) => {
         if (i === 0) return;
-        tl.fromTo(
-          card,
-          { y: window.innerHeight },
-          { y: 0, duration: 0.8 },
-          i - 1
-        );
+        tl.fromTo(card, { y: window.innerHeight }, { y: 0, duration: 0.8 }, i - 1);
       });
     }, containerRef);
 
@@ -111,7 +100,6 @@ const CustomSoftwareDev = () => {
     }
   }, [location]);
 
-
   return (
     <>
       <Helmet>
@@ -121,10 +109,7 @@ const CustomSoftwareDev = () => {
           content="Get expert Odoo ERP implementation, customization, and support from BytechSol to streamline your business workflows and reporting."
         />
         <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href="https://bytechsol.com/services/odoo-services/"
-        />
+        <link rel="canonical" href="https://bytechsol.com/services/odoo-services/" />
       </Helmet>
 
       {/* Hero */}
@@ -137,10 +122,9 @@ const CustomSoftwareDev = () => {
           </div>
           <div className="dg-hero-body-wrap">
             <p className="dg-hero-desc" data-aos="fade-right">
-              Our Odoo services support businesses in streamlining workflows,
-              enhancing efficiency, and experiencing scalable growth with a
-              completely customized ERP platform. Since implementation and
-              integration to support and upgrades, we provide end-to-end Odoo
+              Our Odoo services support businesses in streamlining workflows, enhancing efficiency,
+              and experiencing scalable growth with a completely customized ERP platform. Since
+              implementation and integration to support and upgrades, we provide end-to-end Odoo
               solutions based on your business requirements.
             </p>
             <a href="#contact" className="dg-hero-cta" data-aos="fade-up">
@@ -159,7 +143,7 @@ const CustomSoftwareDev = () => {
               top: "0px",
               left: "0px",
               maxWidth: "none",
-              zIndex: 10
+              zIndex: 10,
             }}
           />
         </div>
@@ -168,8 +152,6 @@ const CustomSoftwareDev = () => {
       <ERPPartnerSection />
 
       <Customization />
-
-
 
       {/* 4th section */}
 
@@ -192,7 +174,6 @@ const CustomSoftwareDev = () => {
           ))}
         </div>
       </section>
-
 
       <Testimonial />
       <FaqSection faqs={odooFaqs} />

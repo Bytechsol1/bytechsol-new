@@ -11,11 +11,7 @@ import { Llm } from "./New";
 import { Helmet } from "react-helmet";
 import { aimlFaqs } from "../../../shareable/faqData";
 
-
-
 const AimlSection = () => {
-
-
   const location = useLocation();
 
   useEffect(() => {
@@ -26,7 +22,6 @@ const AimlSection = () => {
       }
     }
   }, [location]);
-
 
   return (
     <>
@@ -50,11 +45,10 @@ const AimlSection = () => {
           </div>
           <div className="dg-hero-body-wrap">
             <p className="dg-hero-desc" data-aos="fade-right">
-              Our AI and ML solutions will enable businesses to realize the
-              strength of data and intelligent automation. Predictive analytics,
-              natural language processing, or any other solution, we can design
-              to help your business run efficiently and make better decisions,
-              and open up new avenues of growth.
+              Our AI and ML solutions will enable businesses to realize the strength of data and
+              intelligent automation. Predictive analytics, natural language processing, or any
+              other solution, we can design to help your business run efficiently and make better
+              decisions, and open up new avenues of growth.
             </p>
             <a href="#contact" className="dg-hero-cta" data-aos="fade-up">
               Start Your Website Project Today <span className="arrow">↗</span>
@@ -62,9 +56,9 @@ const AimlSection = () => {
           </div>
         </div>
         <div className="dg-hero-right aiml-right" style={{ overflow: "visible" }}>
-          <img 
-            src={ai} 
-            alt="AI/ML 3D" 
+          <img
+            src={ai}
+            alt="AI/ML 3D"
             style={{
               position: "absolute",
               width: "540px",
@@ -72,14 +66,13 @@ const AimlSection = () => {
               top: "0px",
               left: "0px",
               maxWidth: "none",
-              zIndex: 10
-            }} 
+              zIndex: 10,
+            }}
           />
         </div>
       </section>
 
       <Llm />
-
 
       {/* 2nd Section */}
       <section className="group7-container">
@@ -91,18 +84,20 @@ const AimlSection = () => {
               <div className="group7-column" key={idx}>
                 <img src={icon} alt="Icon" className="group7-icon" />
                 <h3 className="group7-heading">
-                  {[
-                    "Focused on What Matters",
-                    "A Team by Your Side",
-                    "Quality You Can Rely On",
-                  ][idx]}
+                  {
+                    ["Focused on What Matters", "A Team by Your Side", "Quality You Can Rely On"][
+                      idx
+                    ]
+                  }
                 </h3>
                 <p className="group7-description">
-                  {[
-                    "We are not a company that just creates websites, but creates solutions to help your business flourish and attract customers to achieve real results.",
-                    "Our engineers, designers, and strategists collaborate closely with you. We take care and commitment to everything and do it in-house (we never outsource anything).",
-                    "We put our heart into every project, making sure your website is secure, fast, and built to support your success long-term.",
-                  ][idx]}
+                  {
+                    [
+                      "We are not a company that just creates websites, but creates solutions to help your business flourish and attract customers to achieve real results.",
+                      "Our engineers, designers, and strategists collaborate closely with you. We take care and commitment to everything and do it in-house (we never outsource anything).",
+                      "We put our heart into every project, making sure your website is secure, fast, and built to support your success long-term.",
+                    ][idx]
+                  }
                 </p>
               </div>
             ))}

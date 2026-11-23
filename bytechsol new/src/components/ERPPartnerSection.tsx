@@ -21,14 +21,54 @@ const proofItems = [
 ];
 
 const commandNodes = [
-  { label: ["Health", "Systems"], Icon: Heart, cls: "erp-node-card erp-p-teal erp-node-top-left", iconColor: "#99f6e4" },
-  { label: ["Commerce", "Ops"], Icon: ShoppingCart, cls: "erp-node-card erp-p-orange erp-node-top-center", iconColor: "#fde68a" },
-  { label: ["Sales", "Growth"], Icon: TrendingUp, cls: "erp-node-card erp-p-green erp-node-top-right", iconColor: "#bbf7d0" },
-  { label: ["Supply", "Chain"], Icon: Truck, cls: "erp-node-card erp-p-amber erp-node-right", iconColor: "#fde68a" },
-  { label: ["Travel", "Operations"], Icon: Plane, cls: "erp-node-card erp-p-purple erp-node-bottom-right", iconColor: "#e9d5ff" },
-  { label: ["Learning", "Flows"], Icon: GraduationCap, cls: "erp-node-card erp-p-blue erp-node-bottom-center", iconColor: "#bfdbfe" },
-  { label: ["Real Estate", "Projects"], Icon: Building2, cls: "erp-node-card erp-p-slate erp-node-bottom-left", iconColor: "#e2e8f0" },
-  { label: ["Non-Profit", "Teams"], Icon: Users, cls: "erp-node-card erp-p-indigo erp-node-left", iconColor: "#c7d2fe" },
+  {
+    label: ["Health", "Systems"],
+    Icon: Heart,
+    cls: "erp-node-card erp-p-teal erp-node-top-left",
+    iconColor: "#99f6e4",
+  },
+  {
+    label: ["Commerce", "Ops"],
+    Icon: ShoppingCart,
+    cls: "erp-node-card erp-p-orange erp-node-top-center",
+    iconColor: "#fde68a",
+  },
+  {
+    label: ["Sales", "Growth"],
+    Icon: TrendingUp,
+    cls: "erp-node-card erp-p-green erp-node-top-right",
+    iconColor: "#bbf7d0",
+  },
+  {
+    label: ["Supply", "Chain"],
+    Icon: Truck,
+    cls: "erp-node-card erp-p-amber erp-node-right",
+    iconColor: "#fde68a",
+  },
+  {
+    label: ["Travel", "Operations"],
+    Icon: Plane,
+    cls: "erp-node-card erp-p-purple erp-node-bottom-right",
+    iconColor: "#e9d5ff",
+  },
+  {
+    label: ["Learning", "Flows"],
+    Icon: GraduationCap,
+    cls: "erp-node-card erp-p-blue erp-node-bottom-center",
+    iconColor: "#bfdbfe",
+  },
+  {
+    label: ["Real Estate", "Projects"],
+    Icon: Building2,
+    cls: "erp-node-card erp-p-slate erp-node-bottom-left",
+    iconColor: "#e2e8f0",
+  },
+  {
+    label: ["Non-Profit", "Teams"],
+    Icon: Users,
+    cls: "erp-node-card erp-p-indigo erp-node-left",
+    iconColor: "#c7d2fe",
+  },
 ];
 
 const ERPPartnerSection: React.FC = () => (
@@ -85,15 +125,13 @@ const ERPPartnerSection: React.FC = () => (
           <div className="erp-section-eyebrow">Trusted Odoo Delivery Partner</div>
 
           <h2 className="erp-section-headline">
-            A Partner For Global Enterprise Success: Optimized Solutions for
-            Your Business.
+            A Partner For Global Enterprise Success: Optimized Solutions for Your Business.
           </h2>
 
           <p className="erp-section-body">
-            We are certified partners who help businesses streamline operations
-            and improve efficiency by customizing and deploying advanced ERP
-            applications. Our expertise covers deep optimization across various
-            industries to meet your exact needs.
+            We are certified partners who help businesses streamline operations and improve
+            efficiency by customizing and deploying advanced ERP applications. Our expertise covers
+            deep optimization across various industries to meet your exact needs.
           </p>
 
           <div className="erp-proof-grid">

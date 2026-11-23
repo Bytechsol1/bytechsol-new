@@ -21,6 +21,7 @@ const routes = [
   "/blog/",
   "/careers/",
   "/contact/",
+  "/case-studies",
 ];
 
 const publicDir = path.resolve(process.cwd(), "public");

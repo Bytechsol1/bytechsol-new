@@ -41,11 +41,7 @@ const FaqSection: React.FC<FaqSectionProps> = ({ faqs }) => {
                 : "0px";
 
             return (
-              <div
-                key={item.id}
-                className={`faq-item ${isOpen ? "active" : ""}`}
-                role="listitem"
-              >
+              <div key={item.id} className={`faq-item ${isOpen ? "active" : ""}`} role="listitem">
                 <button
                   id={buttonId}
                   className="faq-question-row"

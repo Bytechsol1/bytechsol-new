@@ -40,7 +40,9 @@
 .fa-solid {
   font-size: 1.5rem;
   margin-right: 10px;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 .fa-solid:hover {
   color: red;

@@ -203,7 +203,9 @@
 }
 
 .ul {
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .ul:hover {
@@ -211,7 +213,9 @@
 }
 
 .ser-new-heading {
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
   display: flex !important;
   align-items: center;
 }
@@ -239,7 +243,6 @@
     transform: translateY(0);
   }
 }
-
 
 @media (max-width: 991px) {
   .service-div2 {

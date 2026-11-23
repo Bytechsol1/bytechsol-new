@@ -1,0 +1,41 @@
+.vt-readable {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.vt-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+.vt-piece {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.22em);
+}
+.vt-text--visible .vt-piece {
+  animation: vt-text-enter 500ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: var(--vt-delay);
+}
+.vu-hero-copy h1 em .vt-piece {
+  background: linear-gradient(110deg, #087be6, #299fd8);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+@keyframes vt-text-enter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vt-piece {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

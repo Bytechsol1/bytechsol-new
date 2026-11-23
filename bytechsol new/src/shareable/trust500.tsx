@@ -37,7 +37,7 @@ const logos = [
     src: expeditedtransport3,
   },
   {
-    name: "Voxiq",
+    name: "Voxxiq",
     src: voxiq,
   },
   {
@@ -58,7 +58,7 @@ const TrustedBySection = () => {
         backgroundColor: "#fff",
         borderTop: "1px solid #e0e0e0",
         borderBottom: "1px solid #e0e0e0",
-        overflow: "hidden" // Ensure no scrollbars
+        overflow: "hidden", // Ensure no scrollbars
       }}
     >
       <section className="scrolling-images-section1 py-2">
@@ -83,7 +83,7 @@ const TrustedBySection = () => {
                   boxShadow: "none",
                   borderRadius: "0",
                   border: "none",
-                  display: "block"
+                  display: "block",
                 }}
               />
             ))}

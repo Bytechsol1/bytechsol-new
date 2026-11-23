@@ -36,15 +36,13 @@ function validate(values: FormData): Errors {
 
   const name = values.fullname.trim();
   if (!name) errors.fullname = "Full name is required.";
-  else if (name.length < 2)
-    errors.fullname = "Please enter at least 2 characters.";
+  else if (name.length < 2) errors.fullname = "Please enter at least 2 characters.";
   else if (!nameRegex.test(name))
     errors.fullname = "Only letters, spaces, hyphens, and ' are allowed.";
 
   const email = values.email.trim();
   if (!email) errors.email = "Email is required.";
-  else if (!emailRegex.test(email))
-    errors.email = "Enter a valid email address.";
+  else if (!emailRegex.test(email)) errors.email = "Enter a valid email address.";
 
   const cleaned = budgetSanitize(values.budget);
   const numeric = Number(cleaned.replace(/,/g, ""));
@@ -54,13 +52,11 @@ function validate(values: FormData): Errors {
 
   const referral = values.referral.trim();
   if (!referral) errors.referral = "This field is required.";
-  else if (referral.length < 3)
-    errors.referral = "Please add a bit more detail.";
+  else if (referral.length < 3) errors.referral = "Please add a bit more detail.";
 
   const message = values.message.trim();
   if (!message) errors.message = "Please tell us about your project.";
-  else if (message.length < 10)
-    errors.message = "Message should be at least 10 characters.";
+  else if (message.length < 10) errors.message = "Message should be at least 10 characters.";
 
   if (REQUIRED_TAGS && values.selectedTags.length === 0) {
     errors.selectedTags = "Pick at least one service.";
@@ -79,25 +75,19 @@ const ContactSection = () => {
     selectedTags: [],
   });
 
-  const [touched, setTouched] = useState<
-    Partial<Record<keyof FormData, boolean>>
-  >({});
+  const [touched, setTouched] = useState<Partial<Record<keyof FormData, boolean>>>({});
   const [success, setSuccess] = useState(false);
 
   const errors = useMemo(() => validate(formData), [formData]);
   const isValid = useMemo(() => Object.keys(errors).length === 0, [errors]);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    if (!["fullname", "email", "budget", "referral", "message"].includes(name))
-      return;
+    if (!["fullname", "email", "budget", "referral", "message"].includes(name)) return;
 
     if (name === "fullname" && /\d/.test(value)) return;
 
-    const nextValue =
-      name === "budget" ? value.replace(/[^\d.,$ ]/g, "") : value;
+    const nextValue = name === "budget" ? value.replace(/[^\d.,$ ]/g, "") : value;
 
     setFormData((prev) => ({
       ...prev,
@@ -105,9 +95,7 @@ const ContactSection = () => {
     }));
   };
 
-  const handleBlur = (
-    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name } = e.target;
     setTouched((t) => ({ ...t, [name]: true }));
   };
@@ -135,18 +123,12 @@ const ContactSection = () => {
     });
 
     if (!isValid) {
-      const order: (keyof FormData)[] = [
-        "fullname",
-        "email",
-        "budget",
-        "referral",
-        "message",
-      ];
+      const order: (keyof FormData)[] = ["fullname", "email", "budget", "referral", "message"];
       const firstInvalidKey = order.find((k) => errors[k]);
       if (firstInvalidKey) {
-        const el = document.querySelector<
-          HTMLInputElement | HTMLTextAreaElement
-        >(`[name="${firstInvalidKey}"]`);
+        const el = document.querySelector<HTMLInputElement | HTMLTextAreaElement>(
+          `[name="${firstInvalidKey}"]`,
+        );
         if (el) el.focus();
       }
       return;
@@ -188,49 +170,33 @@ const ContactSection = () => {
             Let’s Build Your Digital Future
           </h2>
           <div className="container text-start ps-0" data-aos="fade-right">
-            <h3 className="bytech02">
-              With Bytechsol – Where Ideas Become Impacts
-            </h3>
+            <h3 className="bytech02">With Bytechsol – Where Ideas Become Impacts</h3>
             <p className="bypara01">
-              Ready to accelerate your business with intelligent digital
-              solutions that drive results? <br /> At Bytechsol, we turn complex
-              ideas into user-focused platforms built to scale and succeed.
+              Ready to accelerate your business with intelligent digital solutions that drive
+              results? <br /> At Bytechsol, we turn complex ideas into user-focused platforms built
+              to scale and succeed.
             </p>
           </div>
 
           <ul className="contact8-list" data-aos="fade-up" data-aos-offset="30">
             <li>
               <img src={tick} alt="✓" />{" "}
-              <span>
-                Tailored Software – Fits like a glove to your objectives.
-              </span>
+              <span>Tailored Software – Fits like a glove to your objectives.</span>
             </li>
             <li>
-              <img src={tick} alt="✓" />{" "}
-              <span>Speed Optimized – Built for performance.</span>
+              <img src={tick} alt="✓" /> <span>Speed Optimized – Built for performance.</span>
             </li>
             <li>
-              <img src={tick} alt="✓" />{" "}
-              <span>Tech-Driven – Latest frameworks & tools.</span>
+              <img src={tick} alt="✓" /> <span>Tech-Driven – Latest frameworks & tools.</span>
             </li>
           </ul>
-          <a
-            href="#contact"
-            className="btn-white-blue"
-            data-aos="fade-up"
-            data-aos-offset="30"
-          >
+          <a href="#contact" className="btn-white-blue" data-aos="fade-up" data-aos-offset="30">
             Start Your Transformation
           </a>
         </div>
 
         {/* Contact Form */}
-        <form
-          data-aos="fade-left"
-          className="contact8-form"
-          onSubmit={handleSubmit}
-          noValidate
-        >
+        <form data-aos="fade-left" className="contact8-form" onSubmit={handleSubmit} noValidate>
           {/* First row */}
           <div className="row g-3">
             <div className="col-12 col-md-6">
@@ -268,9 +234,7 @@ const ContactSection = () => {
                   onBlur={handleBlur}
                   aria-invalid={!!(touched.email && errors.email)}
                   aria-describedby="email-error"
-                  className={`form-control ${
-                    touched.email && errors.email ? "is-invalid" : ""
-                  }`}
+                  className={`form-control ${touched.email && errors.email ? "is-invalid" : ""}`}
                   required
                 />
                 {touched.email && errors.email && (
@@ -296,9 +260,7 @@ const ContactSection = () => {
                   inputMode="decimal"
                   aria-invalid={!!(touched.budget && errors.budget)}
                   aria-describedby="budget-error"
-                  className={`form-control ${
-                    touched.budget && errors.budget ? "is-invalid" : ""
-                  }`}
+                  className={`form-control ${touched.budget && errors.budget ? "is-invalid" : ""}`}
                   required
                 />
                 {touched.budget && errors.budget && (
@@ -345,9 +307,7 @@ const ContactSection = () => {
               onBlur={handleBlur}
               aria-invalid={!!(touched.message && errors.message)}
               aria-describedby="message-error"
-              className={`form-control ${
-                touched.message && errors.message ? "is-invalid" : ""
-              }`}
+              className={`form-control ${touched.message && errors.message ? "is-invalid" : ""}`}
               required
             />
             {touched.message && errors.message && (
@@ -365,21 +325,15 @@ const ContactSection = () => {
             role="group"
             aria-labelledby="services-label"
             aria-describedby={
-              touched.selectedTags && errors.selectedTags
-                ? "tags-error"
-                : undefined
+              touched.selectedTags && errors.selectedTags ? "tags-error" : undefined
             }
           >
             {serviceTags.map((tag) => (
               <span
                 key={tag}
-                className={`contact8-tag ${
-                  formData.selectedTags.includes(tag) ? "selected" : ""
-                }`}
+                className={`contact8-tag ${formData.selectedTags.includes(tag) ? "selected" : ""}`}
                 onClick={() => toggleTag(tag)}
-                onKeyDown={(e) =>
-                  (e.key === "Enter" || e.key === " ") && toggleTag(tag)
-                }
+                onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && toggleTag(tag)}
                 tabIndex={0}
                 role="checkbox"
                 aria-checked={formData.selectedTags.includes(tag)}
@@ -406,17 +360,9 @@ const ContactSection = () => {
             Send message
           </button>
 
-          {success && (
-            <div className="contact8-success mt-2">
-              ✅ Submitted successfully!
-            </div>
-          )}
+          {success && <div className="contact8-success mt-2">✅ Submitted successfully!</div>}
 
-          <div
-            className="contact8-alt mt-3"
-            data-aos="fade-up"
-            data-aos-offset="30"
-          >
+          <div className="contact8-alt mt-3" data-aos="fade-up" data-aos-offset="30">
             <span>Prefer email?</span>
             <div className="form-email">
               <a

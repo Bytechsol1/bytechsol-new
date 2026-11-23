@@ -6,15 +6,15 @@ The React/Vite frontend is hosted on Hostinger. The chatbot runs as a separate N
 
 Create a **Web Service** connected to this GitHub repository with these settings:
 
-| Setting | Value |
-| --- | --- |
-| Branch | main |
-| Root Directory | bytechsol new/chat-backend |
-| Runtime | Node |
-| Build Command | npm ci --omit=dev |
-| Start Command | npm start |
-| Health Check Path | /health |
-| Node version | 22 |
+| Setting           | Value                      |
+| ----------------- | -------------------------- |
+| Branch            | main                       |
+| Root Directory    | bytechsol new/chat-backend |
+| Runtime           | Node                       |
+| Build Command     | npm ci --omit=dev          |
+| Start Command     | npm start                  |
+| Health Check Path | /health                    |
+| Node version      | 22                         |
 
 The repository contains a Render Blueprint at **bytechsol new/render.yaml**. If using New > Blueprint, use that Blueprint Path. The Blueprint selects a free service; the service can take time to wake after inactivity.
 

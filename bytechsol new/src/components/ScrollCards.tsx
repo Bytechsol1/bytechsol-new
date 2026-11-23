@@ -38,10 +38,7 @@ const cards = [
     items: [
       "We provide world-edge artificial intelligence and machine learning technologies such as chatbots, NLP models, and predictive analytics. Our artificial intelligence development services ensure automation of the processes, improved customer experience, as well as a way to promote data-driven business development.",
     ],
-    bullets: [
-      "AI / ML / LLM / NLP Solutions",
-      "AI Chatbots & Voice Assistants",
-    ],
+    bullets: ["AI / ML / LLM / NLP Solutions", "AI Chatbots & Voice Assistants"],
     link: "/services/ai-ml/",
   },
   {
@@ -113,7 +110,7 @@ const ScrollCards: React.FC = () => {
           card,
           { y: window.innerHeight },
           { y: 0, duration: 0.8 },
-          i - 1 // stagger
+          i - 1, // stagger
         );
       });
     }, containerRef);
@@ -151,11 +148,7 @@ const ScrollCards: React.FC = () => {
       </div> */}
 
       {/* Only cards are pinned & animated */}
-      <section
-        className="performance-section"
-        style={{ height: "85vh" }}
-        ref={containerRef}
-      >
+      <section className="performance-section" style={{ height: "85vh" }} ref={containerRef}>
         <div className="card-container">
           {cards.map((card, index) => (
             <div key={index} className={`card-row ${card.color}`}>

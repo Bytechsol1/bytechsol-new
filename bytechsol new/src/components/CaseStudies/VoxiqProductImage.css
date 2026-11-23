@@ -1,0 +1,127 @@
+.vn-product-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+.vn-product-image > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.vu-page .vn-product-image:focus-visible {
+  outline-offset: -4px;
+}
+.vn-product-image-expand {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border: 1px solid #ffffff80;
+  border-radius: 50%;
+  color: white;
+  background: #052238a6;
+  transition:
+    background 200ms ease,
+    transform 200ms ease;
+}
+.vn-product-image:hover .vn-product-image-expand {
+  background: #087be6;
+  transform: scale(1.08);
+}
+.vn-image-dialog {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 40px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-family: "Guminert", sans-serif;
+  box-sizing: border-box;
+}
+.vn-image-dialog[open] {
+  display: grid;
+  place-items: center;
+}
+.vn-image-dialog::backdrop {
+  background: #031323ed;
+  backdrop-filter: blur(8px);
+}
+.vn-image-dialog-surface {
+  width: min(1440px, 100%);
+  overflow: hidden;
+  border: 1px solid #5c8aa855;
+  border-radius: 18px;
+  background: #08243b;
+  box-shadow: 0 30px 100px #0005;
+}
+.vn-image-dialog-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 22px;
+}
+.vu-page .vn-image-dialog-toolbar p {
+  color: #d8efff;
+  font-size: 13px;
+  margin: 0;
+}
+.vn-image-dialog-toolbar > button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #88b6d34d;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.vn-image-dialog-toolbar > button:hover {
+  background: #299fd8;
+}
+.vn-image-dialog-surface > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100dvh - 160px);
+  object-fit: contain;
+  border-radius: 0;
+}
+@media (max-width: 540px) {
+  .vn-image-dialog {
+    padding: 15px;
+  }
+  .vn-image-dialog-toolbar {
+    padding: 10px 14px;
+  }
+  .vu-page .vn-image-dialog-toolbar p {
+    font-size: 11px;
+  }
+  .vn-product-image-expand {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    right: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vn-product-image-expand {
+    transition: none;
+  }
+}

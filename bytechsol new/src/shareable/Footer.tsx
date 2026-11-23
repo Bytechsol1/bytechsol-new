@@ -19,21 +19,12 @@ const Footer: React.FC = () => {
           {/* Left Column: Logo + Description */}
           <div className="col-12 col-md-3">
             <Link to="/">
-              <img
-                src={logo}
-                alt="Bytechsol Logo"
-                className="footer-logo mb-3 mx-1"
-              />
-              <img
-                src={LogoText}
-                alt="Bytechsol Text"
-                className="footer-logo"
-              />
+              <img src={logo} alt="Bytechsol Logo" className="footer-logo mb-3 mx-1" />
+              <img src={LogoText} alt="Bytechsol Text" className="footer-logo" />
             </Link>
             <p className="footer-description">
-              BytechSol is a full-service software agency offering web
-              development, AI/ML solutions, ERP implementation, and digital
-              marketing.
+              BytechSol is a full-service software agency offering web development, AI/ML solutions,
+              ERP implementation, and digital marketing.
             </p>
 
             <Link className="deck-button" to="/contact/">
@@ -43,7 +34,9 @@ const Footer: React.FC = () => {
           <div className="col-md-1 d-none d-xl-block"></div>
           {/* Services */}
           <div className="col-6 col-md-2">
-            <Link to="/services/" className="service-link"><h6 className="footer-heading">Services</h6></Link>
+            <Link to="/services/" className="service-link">
+              <h6 className="footer-heading">Services</h6>
+            </Link>
             <ul className="footer-links">
               <li>
                 <Link to="/services/web-app/">Web App</Link>
@@ -58,7 +51,9 @@ const Footer: React.FC = () => {
                 <Link to="/services/erp-service/">ERP Service</Link>
               </li>
               <li>
-                <Link to="/services/website-design-and-development/">Website Design & Development</Link>
+                <Link to="/services/website-design-and-development/">
+                  Website Design & Development
+                </Link>
               </li>
             </ul>
           </div>
@@ -105,10 +100,7 @@ const Footer: React.FC = () => {
             <h6 className="footer-heading">Social</h6>
             <ul className="footer-links">
               <li>
-                <Link
-                  to="https://www.linkedin.com/company/bytechsol-llc"
-                  target="_blank"
-                >
+                <Link to="https://www.linkedin.com/company/bytechsol-llc" target="_blank">
                   LinkedIn
                 </Link>
               </li>
@@ -118,10 +110,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="https://www.facebook.com/profile.php?id=100092258931848"
-                  target="_blank"
-                >
+                <Link to="https://www.facebook.com/profile.php?id=100092258931848" target="_blank">
                   Facebook
                 </Link>
               </li>
@@ -148,10 +137,16 @@ const Footer: React.FC = () => {
             </small>
           </div>
           <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end gap-4 mt-3 mt-md-0">
-            <Link to="/privacy-policy/" style={{ color: "#fff", textDecoration: "none", fontSize: "14px", fontWeight: "500" }}>
+            <Link
+              to="/privacy-policy/"
+              style={{ color: "#fff", textDecoration: "none", fontSize: "14px", fontWeight: "500" }}
+            >
               Privacy Policy
             </Link>
-            <Link to="/terms-and-condition/" style={{ color: "#fff", textDecoration: "none", fontSize: "14px", fontWeight: "500" }}>
+            <Link
+              to="/terms-and-condition/"
+              style={{ color: "#fff", textDecoration: "none", fontSize: "14px", fontWeight: "500" }}
+            >
               Terms & Conditions
             </Link>
           </div>

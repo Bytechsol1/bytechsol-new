@@ -1,0 +1,382 @@
+.vu-routing-visual,
+.vu-structure-visual,
+.vu-property-journey,
+.vu-saas-lead-visual {
+  overflow: hidden;
+  border: 1px solid #cee3f1;
+  border-radius: 25px;
+}
+.vu-routing-visual {
+  padding: 35px;
+  background: linear-gradient(145deg, #f7fcff, #e4f4ff);
+}
+.vu-routing-intro {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 25px;
+  flex-direction: row-reverse;
+  color: #087be6;
+}
+.vu-page .vu-routing-intro h3 {
+  font-size: clamp(28px, 3vw, 39px);
+  line-height: 1.1;
+  color: #071e35;
+  letter-spacing: -0.035em;
+}
+.vu-routing-map {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  margin-top: 30px;
+  color: #6592af;
+}
+.vu-routing-origin {
+  font-size: 12px;
+  color: #4b718a;
+}
+.vu-routing-center {
+  padding: 16px 28px;
+  border: 1px solid #95c8e8;
+  border-radius: 14px;
+  background: #fff;
+  color: #086cac;
+  font-size: 16px;
+  box-shadow: 0 15px 25px -20px #155a8a77;
+}
+.vu-routing-branches {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  width: 100%;
+  padding-top: 25px;
+}
+.vu-routing-branches::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 25px;
+  border: solid #9dcde8;
+  border-width: 1px 1px 0;
+  border-radius: 12px 12px 0 0;
+}
+.vu-routing-branches > div {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.vu-routing-branches svg {
+  color: #087be6;
+}
+.vu-routing-branches strong {
+  color: #163d59;
+  font-size: 14px;
+  font-weight: 500;
+}
+.vu-routing-branches span {
+  font-size: 11px;
+}
+.vu-routing-outcome {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border-top: 1px solid #bddbec;
+  padding-top: 20px;
+  margin-top: 12px;
+  color: #1b6797;
+  font-size: 11px;
+}
+.vu-routing-visual figcaption,
+.vu-structure-visual figcaption,
+.vu-property-journey figcaption,
+.vu-saas-lead-visual figcaption {
+  margin-top: 26px;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #496b84;
+}
+
+.vu-structure-visual {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  gap: 30px 55px;
+  padding: 42px;
+  background: #071f36;
+  color: #fff;
+}
+.vu-structure-title > span {
+  color: #79c9ef;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+.vu-page .vu-structure-title h3 {
+  margin-top: 18px;
+  font-size: clamp(35px, 3.7vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+.vu-structure-title h3 em {
+  color: #72d3ff;
+}
+.vu-structure-map {
+  padding-top: 0;
+}
+.vu-structure-core {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 22px 25px;
+  border: 1px solid #64bbf088;
+  border-radius: 16px;
+  background: linear-gradient(130deg, #0c6cac, #174668);
+}
+.vu-structure-core strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+.vu-structure-branches {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding-top: 52px;
+}
+.vu-structure-branches::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  height: 20px;
+  left: 16%;
+  right: 16%;
+  border: solid #42779a;
+  border-width: 1px 1px 0;
+}
+.vu-structure-branches::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 45px;
+  width: 1px;
+  background: #42779a;
+}
+.vu-structure-branches > div {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.vu-structure-branches svg {
+  color: #81d6fb;
+}
+.vu-structure-branches strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+.vu-structure-branches span {
+  font-size: 10px;
+  color: #8eb2cc;
+}
+.vu-structure-visual figcaption {
+  grid-column: 1 / -1;
+  margin-top: 0;
+  color: #7b9db5;
+}
+
+.vu-property-journey {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 30px 65px;
+  align-items: start;
+  padding: 40px;
+  background: #fff;
+  box-shadow: 0 22px 50px -35px #164c8055;
+}
+.vu-property-journey-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+  color: #299fd8;
+}
+.vu-page .vu-property-journey-title h3 {
+  color: #071e35;
+  font-size: clamp(29px, 3.2vw, 43px);
+  line-height: 1.13;
+  letter-spacing: -0.035em;
+}
+.vu-property-journey ol {
+  display: grid;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.vu-property-journey figcaption {
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+.vu-property-journey li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 18px;
+}
+.vu-property-journey li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 44px;
+  bottom: -30px;
+  width: 1px;
+  background: #cee2ee;
+}
+.vu-property-journey li > span {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ebf7ff;
+  color: #087be6;
+}
+.vu-property-journey strong {
+  display: block;
+  padding-top: 3px;
+  color: #143b57;
+  font-size: 15px;
+  font-weight: 500;
+}
+.vu-page .vu-property-journey li p {
+  margin-top: 7px;
+  font-size: 12px;
+  color: #718b9c;
+  line-height: 1.7;
+}
+
+.vu-saas-lead-visual {
+  padding: 38px;
+  background: linear-gradient(145deg, #f5fbff, #e7f3fd);
+}
+.vu-saas-lead-title > span {
+  font-size: 10px;
+  color: #5185a5;
+  letter-spacing: 0.06em;
+}
+.vu-page .vu-saas-lead-title h3 {
+  margin-top: 18px;
+  font-size: clamp(33px, 3.5vw, 47px);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: #071e35;
+}
+.vu-saas-lead-map {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  padding-top: 30px;
+  color: #72a4c4;
+}
+.vu-saas-lead-input {
+  display: flex;
+  gap: 14px;
+}
+.vu-saas-lead-input > span {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #b2d2e6;
+  font-size: 12px;
+  color: #487592;
+}
+.vu-saas-lead-core {
+  display: grid;
+  justify-items: center;
+  gap: 13px;
+  width: 85%;
+  padding: 27px;
+  border: 1px solid #badbef;
+  border-radius: 19px;
+  background: #fff;
+  box-shadow: 0 20px 32px -28px #0b4d8177;
+  color: #087be6;
+}
+.vu-saas-lead-core strong {
+  font-size: 18px;
+  font-weight: 500;
+  color: #143b57;
+}
+.vu-saas-lead-core > span {
+  font-size: 10px;
+  color: #7b96aa;
+  text-align: center;
+}
+.vu-saas-lead-output {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #236992;
+  font-size: 12px;
+}
+@media (max-width: 850px) {
+  .vu-structure-visual,
+  .vu-property-journey {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .vu-property-journey-title {
+    flex-direction: row-reverse;
+  }
+}
+@media (max-width: 540px) {
+  .vu-routing-visual,
+  .vu-structure-visual,
+  .vu-property-journey,
+  .vu-saas-lead-visual {
+    padding: 25px 20px;
+    border-radius: 19px;
+  }
+  .vu-routing-branches {
+    gap: 15px;
+  }
+  .vu-routing-branches strong {
+    font-size: 12px;
+  }
+  .vu-routing-branches span {
+    font-size: 10px;
+  }
+  .vu-structure-core {
+    padding: 18px 14px;
+    gap: 10px;
+  }
+  .vu-structure-core strong {
+    font-size: 12px;
+  }
+  .vu-structure-branches {
+    gap: 10px;
+  }
+  .vu-structure-branches strong {
+    font-size: 11px;
+  }
+  .vu-structure-branches span {
+    font-size: 10px;
+  }
+  .vu-property-journey li {
+    gap: 14px;
+  }
+  .vu-saas-lead-core {
+    width: 100%;
+    padding: 23px 15px;
+  }
+  .vu-saas-lead-output {
+    gap: 10px;
+    font-size: 11px;
+  }
+}

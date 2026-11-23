@@ -1,13 +1,11 @@
-import {
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+﻿import { Routes, Route, useLocation } from "react-router-dom";
 import { Suspense } from "react";
 import "./App.css";
 import Navbar from "./shareable/Navbar";
 import Footer from "./shareable/Footer";
 import Home from "./components/home";
+import ProjectCaseStudy from "./components/CaseStudies/ProjectCaseStudy";
+import VoxiqUseCases from "./components/CaseStudies/VoxiqUseCases";
 import About from "./components/About/About";
 import Services from "./components/Services/Services";
 import Webecom from "./components/Services/subservice/webecom";
@@ -69,6 +67,8 @@ export default function App() {
         <Routes>
           {/* ... routes ... */}
           <Route path="/" element={<Home />} />
+          <Route path="/case-studies" element={<VoxiqUseCases />} />
+          <Route path="/case-studies/:slug" element={<ProjectCaseStudy />} />
           <Route path="/about/" element={<About />} />
           <Route path="/services/" element={<Services />} />
           <Route path="/services/website-design-and-development/" element={<Development />} />
@@ -84,11 +84,14 @@ export default function App() {
           <Route path="/services/web-app/" element={<WebApp />} />
           <Route path="/services/ai-ml/" element={<Aiml />} />
           <Route path="/blog/:slug/" element={<Blogdetail />} />
-          <Route path="/portfolio/" element={
-            <ThemeProvider>
-              <PortfolioPage />
-            </ThemeProvider>
-          } />
+          <Route
+            path="/portfolio/"
+            element={
+              <ThemeProvider>
+                <PortfolioPage />
+              </ThemeProvider>
+            }
+          />
           <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
           <Route path="/terms-and-condition/" element={<TermsAndCondition />} />
           <Route path="*" element={<NotFound />} />

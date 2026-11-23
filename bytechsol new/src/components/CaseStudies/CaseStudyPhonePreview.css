@@ -1,0 +1,115 @@
+.vu-flagship .vn-overview-grid {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(40px, 6vw, 90px);
+  align-items: center;
+}
+.vu-flagship .vn-overview-editorial .vn-overview-copy {
+  display: block;
+}
+.vu-flagship .vn-overview-editorial h2 {
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+.vu-flagship .vn-overview-editorial .vn-project-details {
+  margin-top: 35px;
+}
+.vu-flagship .vn-overview-editorial .vn-project-details dl {
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 30px;
+}
+.vu-flagship .vn-overview-editorial .vn-project-details dl > div {
+  display: block;
+  border-top: 1px solid #cfe2ee;
+  padding-top: 15px;
+}
+.vu-flagship .vn-overview-editorial .vn-project-details dl > div:last-child {
+  grid-column: 1 / -1;
+}
+.vu-flagship .vp-phone-scene {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  padding: 30px 0 0;
+  margin: 0;
+  isolation: isolate;
+}
+.vp-phone-scene::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 105%;
+  aspect-ratio: 1;
+  top: 75px;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #dcefff 15%, #8bd0ef 65%, #299fd8);
+}
+.vp-phone-orbit {
+  position: absolute;
+  z-index: -1;
+  inset: 100px -12px 130px;
+  border: 1px solid #84c9e6;
+  border-radius: 50%;
+  transform: rotate(-28deg) scaleX(1.12);
+}
+.vp-phone-device {
+  position: relative;
+  width: min(290px, 100%);
+  padding: 8px;
+  border: 2px solid #7592a6;
+  border-radius: 44px;
+  background: linear-gradient(140deg, #496276, #061b2e 35%, #172f43 75%, #7895a9);
+  box-shadow: 0 35px 55px -25px #06375f80, inset 0 0 0 2px #061b2e;
+  transform: rotate(4deg);
+  transition: transform 500ms ease;
+}
+.vp-phone-device::before,
+.vp-phone-device::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  border-radius: 3px;
+  background: #496276;
+}
+.vp-phone-device::before { left: -4px; top: 105px; height: 62px; }
+.vp-phone-device::after { right: -4px; top: 130px; height: 42px; }
+.vp-phone-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 36px;
+  padding: 0 16px;
+  background: #fff;
+  border-radius: 33px 33px 0 0;
+  color: #061c3d;
+  font-size: 10px;
+  font-weight: 700;
+}
+.vp-phone-status > span:last-child { display: flex; align-items: center; gap: 3px; }
+.vp-phone-island { width: 74px; height: 20px; background: #061523; border-radius: 20px; }
+.vp-phone-screen {
+  height: 490px;
+  overflow: hidden;
+  background: #fff;
+}
+.vu-flagship .vp-phone-screen video { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.vp-phone-home { display: grid; place-items: center; height: 22px; background: #fff; border-radius: 0 0 33px 33px; }
+.vp-phone-home span { width: 86px; height: 4px; border-radius: 5px; background: #061c3d; }
+.vp-phone-scene figcaption { display: grid; gap: 8px; text-align: center; margin-top: 36px; color: #061c3d; font-size: 15px; }
+.vp-phone-scene figcaption > span:last-child { display: flex; justify-content: center; align-items: center; gap: 8px; color: #527084; font-size: 12px; }
+@media (hover: hover) and (pointer: fine) {
+  .vp-phone-device:hover,
+  .vp-phone-device:focus-within { transform: rotate(0); }
+}
+@media (max-width: 850px) {
+  .vu-flagship .vn-overview-grid { grid-template-columns: 1fr; }
+  .vu-flagship .vp-phone-scene { width: min(430px, 100%); margin-inline: auto; }
+}
+@media (max-width: 540px) {
+  .vp-phone-device { width: 250px; }
+  .vp-phone-screen { height: 420px; }
+  .vp-phone-orbit { inset-inline: 0; transform: rotate(-28deg); }
+  .vp-phone-scene::before { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vp-phone-device { transform: none; transition: none; }
+}

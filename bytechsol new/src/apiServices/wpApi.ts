@@ -1,7 +1,6 @@
 export const WP_BASE = "https://bytechsol.com/cms/wp-json/wp/v2";
 
-const DEFAULT_IMAGE =
-  "https://bytechsol.com/wp-content/uploads/2024/11/default-blog.png";
+const DEFAULT_IMAGE = "https://bytechsol.com/wp-content/uploads/2024/11/default-blog.png";
 
 export const slugify = (text: string) =>
   text

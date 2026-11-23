@@ -1,0 +1,244 @@
+/* Page-scoped presentation inspired by the reference's editorial rhythm. */
+.vu-flagship .vu-hero {
+  padding-top: 20px;
+  padding-bottom: 90px;
+  background: #f7fbfe;
+}
+.vu-flagship .vu-breadcrumbs {
+  justify-content: center;
+  padding-bottom: 40px;
+}
+.vu-flagship .vu-hero-grid {
+  grid-template-columns: 1fr;
+  gap: 55px;
+}
+.vu-flagship .vu-hero-copy {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.vu-flagship .vn-opening-title h1 {
+  font-size: clamp(46px, 6.7vw, 96px);
+  line-height: 1.02;
+  margin: 22px 0 26px;
+}
+.vu-flagship .vn-hero-name {
+  font-size: 0.34em;
+  letter-spacing: -0.03em;
+  margin-bottom: 25px;
+}
+.vu-flagship .vn-opening-title h1 em {
+  color: #299fd8;
+}
+.vu-flagship .vn-opening-description > p {
+  max-width: 650px;
+  margin-inline: auto;
+  font-size: 18px;
+}
+.vu-flagship .vu-hero-copy .vu-actions {
+  justify-content: center;
+}
+.vu-flagship .vn-hero-meta {
+  justify-content: center;
+  border: 0;
+  gap: 50px;
+  margin-top: 28px !important;
+  padding-top: 0;
+}
+.vu-flagship .vu-hero-visual {
+  width: 100%;
+  max-width: 1120px;
+  height: 520px;
+  margin: 0 auto;
+  isolation: isolate;
+}
+.vu-flagship .vu-hero-visual::before {
+  inset: 15px 0 0;
+  transform: none;
+  border-radius: 30px;
+  background: #dceefa;
+  box-shadow: none;
+}
+.vu-flagship .vu-hero-photo {
+  width: 83%;
+  height: 440px;
+  top: 0;
+  left: 0;
+  border: 0;
+  box-shadow: 0 25px 50px -35px #061e3570;
+}
+.vu-flagship .vu-hero-photo img {
+  object-position: 30% center;
+}
+.vu-flagship .vu-hero-visual > .vu-workspace {
+  width: 470px;
+  max-width: 52%;
+  right: 25px;
+  bottom: 0;
+  transform: rotate(2deg);
+  box-shadow: 0 25px 60px -24px #061e3570;
+}
+.vu-flagship .vn-connection-rail {
+  top: auto;
+  bottom: 24px;
+  left: 38px;
+  right: auto;
+  flex-direction: row;
+}
+.vu-flagship .vn-connection-rail i {
+  width: 38px;
+  height: 1px;
+}
+.vu-flagship .vn-voice-detail {
+  top: 30px;
+  right: 30px;
+  left: auto;
+}
+.vu-flagship .vn-hero-orbit {
+  display: none;
+}
+.vu-flagship .vn-challenge-body {
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 60px;
+  align-items: start;
+}
+.vu-flagship .vn-challenge-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 30px;
+}
+.vu-flagship .vn-challenge-list > div {
+  border-top: 1px solid #ffffff24;
+  border-bottom: 0;
+  padding: 24px 0;
+}
+.vu-flagship .vn-challenge-list h3 {
+  font-size: 21px;
+}
+.vu-flagship .vn-challenge-list p {
+  margin: 0;
+}
+.vd-industry-plan {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  border-bottom: 1px solid #dce6ee;
+  padding: 22px 0;
+  color: #526d80;
+  font-size: 13px;
+}
+.vd-industry-plan strong {
+  color: #087be6;
+  font-weight: 500;
+}
+.vu-page .vd-reported-result {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 35px 0;
+  border-block: 1px solid #cadde9;
+}
+.vd-reported-result > strong {
+  font-size: clamp(58px, 6vw, 88px);
+  letter-spacing: -0.06em;
+  color: #087be6;
+  line-height: 1;
+  white-space: nowrap;
+}
+.vd-reported-result > strong span {
+  color: #8aafc7;
+  font-size: 0.6em;
+  margin: 0 18px;
+}
+.vd-reported-result > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.vd-reported-result > div > span {
+  color: #617e93;
+  font-size: 12px;
+}
+@media (max-width: 850px) {
+  .vu-flagship .vu-hero-visual {
+    height: 450px;
+  }
+  .vu-flagship .vu-hero-photo {
+    height: 350px;
+    width: 90%;
+  }
+  .vu-flagship .vu-hero-visual > .vu-workspace {
+    max-width: 60%;
+    width: 400px;
+  }
+  .vu-flagship .vn-challenge-body {
+    grid-template-columns: 1fr;
+  }
+  .vu-flagship .vn-fragment-visual {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 540px) {
+  .vu-flagship .vu-hero {
+    padding-bottom: 55px;
+  }
+  .vu-flagship .vu-breadcrumbs {
+    padding-bottom: 25px;
+  }
+  .vu-flagship .vn-opening-title h1 {
+    font-size: clamp(43px, 10.6vw, 58px);
+  }
+  .vu-flagship .vn-hero-name {
+    font-size: 26px;
+  }
+  .vu-flagship .vn-opening-description > p {
+    font-size: 16px;
+  }
+  .vu-flagship .vn-hero-meta {
+    gap: 30px;
+  }
+  .vu-flagship .vu-hero-grid {
+    gap: 35px;
+  }
+  .vu-flagship .vu-hero-visual {
+    height: auto;
+    padding: 0 0 15px;
+  }
+  .vu-flagship .vu-hero-photo {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    top: auto;
+    border-radius: 18px;
+  }
+  .vu-flagship .vu-hero-visual > .vu-workspace {
+    position: relative;
+    width: calc(100% - 28px);
+    max-width: none;
+    margin: -42px 14px 0;
+    right: auto;
+    bottom: auto;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+  .vu-flagship .vn-voice-detail,
+  .vu-flagship .vn-connection-rail {
+    display: none;
+  }
+  .vu-flagship .vn-challenge-list {
+    grid-template-columns: 1fr;
+  }
+  .vd-industry-plan {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .vu-page .vd-reported-result {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+}

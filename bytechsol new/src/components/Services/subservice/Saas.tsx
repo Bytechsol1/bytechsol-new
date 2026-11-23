@@ -1,23 +1,20 @@
 import { useEffect } from "react";
 import "../../../assets/components-css/ProductDesign.css";
 import "../../../assets/components-css/Services.css";
-import er from "../../../assets/images/createim.png"
+import er from "../../../assets/images/createim.png";
 import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import NewCon from "../../../shareable/NewCon";
-import fin from "../../../assets/images/fintech.png"
-import ec from "../../../assets/images/ecom.png"
-import pl from "../../../assets/images/plat.png"
-import we from "../../../assets/images/web3.png"
-import ed from "../../../assets/images/edtech.png"
-import sv from "../../../assets/images/services.png"
+import fin from "../../../assets/images/fintech.png";
+import ec from "../../../assets/images/ecom.png";
+import pl from "../../../assets/images/plat.png";
+import we from "../../../assets/images/web3.png";
+import ed from "../../../assets/images/edtech.png";
+import sv from "../../../assets/images/services.png";
 import { useLocation } from "react-router-dom";
 import { Customerp } from "./New";
 import { Helmet } from "react-helmet";
 import { erpFaqs } from "../../../shareable/faqData";
-
-
-
 
 const industryData = [
   {
@@ -64,9 +61,7 @@ const industryData = [
   },
 ];
 
-
 const SaasDesign = () => {
-
   const location = useLocation();
 
   useEffect(() => {
@@ -78,8 +73,6 @@ const SaasDesign = () => {
     }
   }, [location]);
 
-
-
   return (
     <>
       <Helmet>
@@ -89,10 +82,7 @@ const SaasDesign = () => {
           content="Optimize operations with BytechSol’s custom ERP software designed to integrate your business processes and enhance productivity."
         />
         <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href="https://bytechsol.com/services/erp-service/"
-        />
+        <link rel="canonical" href="https://bytechsol.com/services/erp-service/" />
       </Helmet>
 
       {/* 1st Section */}
@@ -107,11 +97,10 @@ const SaasDesign = () => {
           </div>
           <div className="dg-hero-body-wrap">
             <p className="dg-hero-desc" data-aos="fade-right">
-              Our ERP services can simplify the business processes by
-              consolidating finance, human resources, supply chain, sales, etc.,
-              into one system. Our personalized ERP systems enable greater
-              productivity, more effective collaboration, and smarter
-              decision-making and growth-sustainable insights.
+              Our ERP services can simplify the business processes by consolidating finance, human
+              resources, supply chain, sales, etc., into one system. Our personalized ERP systems
+              enable greater productivity, more effective collaboration, and smarter decision-making
+              and growth-sustainable insights.
             </p>
             <a href="#contact" className="dg-hero-cta" data-aos="fade-up">
               Start Your Website Project Today <span className="arrow">↗</span>
@@ -119,9 +108,9 @@ const SaasDesign = () => {
           </div>
         </div>
         <div className="dg-hero-right saas-right" style={{ overflow: "visible" }}>
-          <img 
-            src={er} 
-            alt="ERP 3D" 
+          <img
+            src={er}
+            alt="ERP 3D"
             style={{
               position: "absolute",
               width: "460px",
@@ -129,24 +118,26 @@ const SaasDesign = () => {
               top: "0px",
               left: "0px",
               maxWidth: "none",
-              zIndex: 10
-            }} 
+              zIndex: 10,
+            }}
           />
         </div>
       </section>
 
       <Customerp />
 
-
       {/* 5th section------------- */}
       <section className="industry-section">
         <div className="container">
           <div className="industry-header">
-            <h2 className="industry-title" data-aos="fade-down">Turning Your Ideas Into Something Real</h2>
+            <h2 className="industry-title" data-aos="fade-down">
+              Turning Your Ideas Into Something Real
+            </h2>
             <p className="ms-2 fs-6" data-aos="fade-up">
-              All great digital initiatives begin with a spark, a concept, a challenge, or perhaps a spark of a what-if thought.
-              We are <br /> not the traditional web designers that build websites or applications…
-              we help you create your vision in a way that <br /> feels natural to you and memorable to your users.
+              All great digital initiatives begin with a spark, a concept, a challenge, or perhaps a
+              spark of a what-if thought. We are <br /> not the traditional web designers that build
+              websites or applications… we help you create your vision in a way that <br /> feels
+              natural to you and memorable to your users.
             </p>
           </div>
         </div>

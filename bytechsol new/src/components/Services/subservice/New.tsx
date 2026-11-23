@@ -52,8 +52,7 @@ const items = [
   {
     id: 1,
     title: "No more design guesswork",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "Your customers must get your product at a glance. You can count on our unique User Interface / User experience development process that will lead to your page telling more about your value, the result of the natural navigation, and a captivating layout that will make people spend more time on your page and convert more quickly.",
     image: uiuxn1,
@@ -110,8 +109,7 @@ const cms = [
   {
     id: 2,
     title: "Launch without technical roadblocks",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We develop CMS websites that are launched on time with minimum revisions. We have an efficient approach that guarantees an easy change of design to complete the transformation of the CMS.",
     image: webn1,
@@ -153,8 +151,7 @@ const land = [
   {
     id: 1,
     title: "Designs that convert visitors into customers",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We design conversion-optimized landing pages that contain strong CTAs, compelling designs, and well-optimized design features that would prompt the user to take an action- such as making a purchase, signing up, or filling out a form.",
     image: ld,
@@ -205,8 +202,7 @@ const main = [
   {
     id: 1,
     title: "Regular updates and performance checks",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We offer an updated schedule, optimization of speed, and technology advancements to see to it that there are no issues with your systems running smoothly and up to date with modern technologies.",
     image: cr,
@@ -258,8 +254,7 @@ const redesign = [
   {
     id: 1,
     title: "Mobile-friendly redesign",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We make your site easy to look at and navigate on both phones and tablets, as well as desktops, and everyone will watch it without any problem.",
     image: br,
@@ -346,7 +341,6 @@ const New: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -438,7 +432,6 @@ const CMS: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -524,7 +517,6 @@ const Landing: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -609,7 +601,6 @@ const Brand: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -695,7 +686,6 @@ const Redesign: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -747,8 +737,7 @@ const webapp = [
   {
     id: 1,
     title: "Tailored Development Approach",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We develop web apps using a tailored approach depending on your specific objectives, intended audience, and technical needs. Ensuring that your solution is matched to your business goal this provides the highest possible impact and scalability over the long term.",
     image: w01,
@@ -805,8 +794,7 @@ const softdev = [
   {
     id: 2,
     title: "Agile Development Process",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "Using an agile approach, we are able to maintain flexibility, speedy delivery, and smooth communication during the project. The fact that we work iteratively would enable us to implement the changes easily as they occur as time goes by, and ensure that your software stays in line with your business interests.",
     image: s02,
@@ -848,8 +836,7 @@ const progapp = [
   {
     id: 1,
     title: "Cross-Platform Compatibility",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "PWAs are cross-platform and not only work on tablets, smartphones, and desktops, but they do not need to be installed as separate native applications. This cross-platform feature saves cash and costs, and your company can reach a larger number of users with a high-performance solution.",
     image: p03,
@@ -901,8 +888,7 @@ const saasdev = [
   {
     id: 1,
     title: "Scalable Architecture",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "Our SaaS systems have extensively scalable systems, which expand with your organization. Our solutions, whether used by a small number of users or thousands, will perform smoothly, without sacrificing speed or security, and will be the best fit in both startups and enterprises.",
     image: s04,
@@ -954,8 +940,7 @@ const enterdev = [
   {
     id: 1,
     title: "Custom Business Solutions",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We develop enterprise applications that suit your special business processes. Our solutions measure productivity, bottleneck reduction, and provide your teams with the resources that they need to work effectively, whether it be resource planning, customer management, or workflow automation.",
     image: e05,
@@ -1042,7 +1027,6 @@ export const Web: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -1134,7 +1118,6 @@ const Softdev: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -1220,7 +1203,6 @@ const Progapp: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -1305,7 +1287,6 @@ const Saasdev: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -1391,7 +1372,6 @@ const Enterdev: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -1443,8 +1423,7 @@ const onseo = [
   {
     id: 1,
     title: "Title Tags & Meta Descriptions",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We craft keyword-rich titles and meta descriptions that are optimized to maximize the number of clicks as well as enhance visibility within the search engines. All the elements are meant to appeal to the users and represent your content properly.",
     image: os,
@@ -1501,8 +1480,7 @@ const offseo = [
   {
     id: 2,
     title: "High-Quality Link Building",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We achieve backlinks with reputable websites, which are related to industries, by utilizing ethical outreach and content promotion. These good links increase domain authority, visibility, and position on search engines.",
     image: fs,
@@ -1544,8 +1522,7 @@ const techseo = [
   {
     id: 1,
     title: "Website Speed Optimization",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We also optimize scaled-back page loading times through file compression and script optimization, and caching. Quicker websites will lower the bounce rates and enhance user experience, as well as satisfy search engine ranking criteria that will favor speed and responsiveness.",
     image: ts,
@@ -1618,7 +1595,9 @@ export const Onseo: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>On-Page SEO</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                On-Page SEO
+              </h3>
               {onseo
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1631,7 +1610,6 @@ export const Onseo: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -1706,7 +1684,9 @@ const Offseo: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>Off-Page SEO</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Off-Page SEO
+              </h3>
               {offseo
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1719,7 +1699,6 @@ const Offseo: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -1790,7 +1769,9 @@ const Techseo: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>Technical SEO</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Technical SEO
+              </h3>
               {techseo
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -1803,7 +1784,6 @@ const Techseo: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -1855,8 +1835,7 @@ const consult = [
   {
     id: 1,
     title: "Market Research & Analysis",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We do extensive competitor research, industry, and market research to identify opportunities that will form a successful strategy. This makes your brand get into the market clearly and confidently.",
     image: lp2,
@@ -1913,8 +1892,7 @@ const logo = [
   {
     id: 2,
     title: "Color Palette & Typography",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We select brand colors and fonts thoughtfully to match your values. These graphic messages create awareness and uniformity both online and offline.",
     image: v1,
@@ -1956,8 +1934,7 @@ const media = [
   {
     id: 1,
     title: "Profile Optimization & Consistency",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We develop and streamline social media accounts that are a consistent representation of your brand within each platform. Logos to bios and graphics, our branding would be all about professionalism, recognition, and trust- to help you shine and get the right audience.",
     image: sc,
@@ -2045,7 +2022,6 @@ export const Consult: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -2135,7 +2111,6 @@ const Logo: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -2221,7 +2196,6 @@ const Media: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -2273,8 +2247,7 @@ const llm = [
   {
     id: 1,
     title: "AI Chatbots",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We create smart chatbots that will automate the interaction with customers, offer real-time assistance, and shorten response time. NLP and LLMs are used to train our chatbots to comprehend queries and provide correct answers to satisfy customers on various platforms.",
     image: sv,
@@ -2331,8 +2304,7 @@ const chatbot = [
   {
     id: 2,
     title: " Multilingual Capabilities",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We create bots that will listen and speak in multiple languages, which will break the language barrier and allow companies to work with international audiences.",
     image: chatbotImg,
@@ -2410,7 +2382,6 @@ export const Llm: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -2484,7 +2455,9 @@ const Chatbot: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>AI Chatbots & Voice Assistants </h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                AI Chatbots & Voice Assistants{" "}
+              </h3>
               {chatbot
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -2497,7 +2470,6 @@ const Chatbot: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -2549,8 +2521,7 @@ const customerp = [
   {
     id: 1,
     title: "Requirement Analysis & Planning",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We review business processes, issues, and business goals and create an ERP system that meets your specific requirements. This means fewer adoption hassles, less risk, and optimal ROI on your investment.",
     image: ip,
@@ -2607,8 +2578,7 @@ const erpintegra = [
   {
     id: 2,
     title: "API Development & Integration",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "Our experts develop and develop APIs that enable your ERP to interact easily with other applications. This is to provide flexibility, scalability, and reliable system interactions.",
     image: lp,
@@ -2650,8 +2620,7 @@ const erpcustom = [
   {
     id: 1,
     title: " CRM & Sales Integration",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We combine the ERP with CRM applications to simplify the process of customer data, sales pipelines, and performance monitoring. This enhances customer experiences, leads management, and visibility of sales teams can be up to date on the operations of the business.",
     image: am,
@@ -2703,8 +2672,7 @@ const erpmain = [
   {
     id: 1,
     title: "Custom Workflow Design",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We create ERP workflows specific to your processes that streamline operations. Customization removes redundant procedures, lessens manual labor, and enhances total productivity.",
     image: cs,
@@ -2756,8 +2724,7 @@ const odoomain = [
   {
     id: 1,
     title: "System Monitoring & Performance",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "The ongoing performance monitoring of the ERP helps to identify and eliminate the problem at an early stage. This guarantees a high uptime, dependability of the operations, and a smooth experience for your teams.",
     image: sp,
@@ -2844,7 +2811,6 @@ export const Customerp: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -2936,7 +2902,6 @@ const Erpintegra: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -3022,7 +2987,6 @@ const Erpcustom: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -3107,7 +3071,6 @@ const Erpmain: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -3193,7 +3156,6 @@ const Odoomain: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -3245,8 +3207,7 @@ const estore = [
   {
     id: 1,
     title: "Platform selection and customization",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We select the appropriate e-commerce platform, either Shopify, WooCommerce, or Magento, and customize it to your brand. The theme customization, versatile layouts, and key functionality integration will help your store to express your identity and, at the same time, enable further future expansion as your business expands.",
     image: es,
@@ -3303,8 +3264,7 @@ const shopify = [
   {
     id: 2,
     title: "Product Catalog Setup",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       " Your product catalog is organized and uploaded by our team with high-quality images, detailed descriptions, and categories. Your products are showcased on the front line, and it is easy to navigate through the stores as we maximise visibility and increase the likelihood of sales conversion.",
     image: sy,
@@ -3346,8 +3306,7 @@ const woocommerce = [
   {
     id: 1,
     title: " Custom Theme Development",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We create and develop custom WooCommerce themes to fit your brand image. Our approach to modern design, usability, and conversion optimization will make your storefront engaging and will help you build trust in your online business.",
     image: wo,
@@ -3399,8 +3358,7 @@ const payment = [
   {
     id: 1,
     title: " Multiple Gateway Support",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "Our system combines several payment gateways, such as international and domestic service providers, which provide your customers with the option of how they pay. From credit/debit cards to digital wallets, we guarantee a seamless payment process, decreasing cart abandonment, and increasing customer satisfaction.",
     image: py,
@@ -3452,8 +3410,7 @@ const market = [
   {
     id: 1,
     title: "Multi-Vendor Functionality",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We build powerful multi-vendor applications in which vendors can create and manage their storefronts freely, add their goods, and monitor sales. This designation provides an easy management of the vendors and provides the customers with a variety of product options within one platform.",
     image: mk,
@@ -3540,7 +3497,6 @@ export const Estore: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -3632,7 +3588,6 @@ const Shopify: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -3718,7 +3673,6 @@ const Woocommerce: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -3803,7 +3757,6 @@ const Payment: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -3889,7 +3842,6 @@ const Market: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -3941,8 +3893,7 @@ const customization = [
   {
     id: 1,
     title: "Legacy System Migration",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We import data from old systems to Odoo accurately and safely. Minimal downtime, easy transition, and full data integrity are guaranteed by our process to ensure that your business operations are not interrupted in the process of the shift.",
     image: mi,
@@ -3999,8 +3950,7 @@ const consultancy = [
   {
     id: 2,
     title: "Technical Architecture Design",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We create scalable and secure Odoo architectures to match your needs. Whether through performing optimization on the database, our consultancy guarantees you a system that is future-ready and capable of expanding with your business.",
     image: tc,
@@ -4042,8 +3992,7 @@ const odoomod = [
   {
     id: 1,
     title: " Custom Module Design",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "Odoo modules are designed manually by us to suit your needs. Every module is designed to maximize performance, simplify processes, and provide a smooth user experience.",
     image: md,
@@ -4095,8 +4044,7 @@ const odooserv = [
   {
     id: 1,
     title: "Third-Party App Integration",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We combine Odoo with key business solutions such as CRM, HR, e-commerce, nd project management solutions to create a single platform that helps improve collaboration and streamline operations across your organization.",
     image: odooIntegrationImg,
@@ -4148,8 +4096,7 @@ const mainsupport = [
   {
     id: 1,
     title: "Bug Fixing & Error Resolution",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We offer timely bug fixing and error-solving services to remove interference in your Odoo system. Our anticipatory measures will guarantee a seamless flow of work and continuous business running.",
     image: ms,
@@ -4236,7 +4183,6 @@ export const Customization: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -4328,7 +4274,6 @@ const Consultancy: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -4414,7 +4359,6 @@ const Odoomod: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -4499,7 +4443,6 @@ const Odooserv: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -4585,7 +4528,6 @@ const Mainsupport: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -4636,8 +4578,7 @@ const cmsdev = [
   {
     id: 1,
     title: "User-Friendly Dashboards",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We can have user-friendly content management in our dashboards, and this is why they can be used by non-technical users as well. It is easy to navigate, and the drag and drop features give you full control of the layout and structure of your site, as well as the process of publishing it.",
     image: cm,
@@ -4694,8 +4635,7 @@ const webdev = [
   {
     id: 2,
     title: " Cross-Platform Compatibility",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We make sure that your web applications perform optimally across your desktop, tablets, and mobile devices. This approach to the development, responsive/adaptive, will ensure accessibility, consistency, and an easy process for all its users, regardless of the platform and browser that they might be using.",
     image: cw,
@@ -4737,8 +4677,7 @@ const apidev = [
   {
     id: 1,
     title: " Custom API Development",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We plan and create custom APIs tailored to specific needs. Be it on mobile applications, SaaS solutions, or enterprise software, our APIs are safe, extensible, and high-performance, ensuring that your systems interrelate seamlessly and so allowing you to innovate at a rapid pace and scale your business.",
     image: ap,
@@ -4790,8 +4729,7 @@ const partyserv = [
   {
     id: 1,
     title: "CRM Integration",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We incorporate trending CRMs such as Salesforce, HubSpot, or Zoho in your web and mobile applications, making customer data management convenient. This enables your team to monitor leads, automate approaches, and enhance customer relations with centralized and real-time data.",
     image: sd,
@@ -4843,8 +4781,7 @@ const plugin = [
   {
     id: 1,
     title: "WordPress Plugin Development",
-    subtitle:
-      "Process Automation & Digital Transformation within SLB's Ecosyst",
+    subtitle: "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We develop custom WordPress plugins that provide additional functionality to websites, including complex contact forms and booking systems, as well as eCommerce extensions. Our plugins are lightweight, secure, and optimized to be non-performance-impacting, which is why they don't make your sites slow.",
     image: pl,
@@ -4931,7 +4868,6 @@ export const Cmsdev: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -5008,7 +4944,9 @@ const Webdev: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>Custom Web Application Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Custom Web Application Development
+              </h3>
               {webdev
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -5021,7 +4959,6 @@ const Webdev: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -5092,7 +5029,9 @@ const Apidev: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>Custom API Development & Integration</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Custom API Development & Integration
+              </h3>
               {apidev
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -5105,7 +5044,6 @@ const Apidev: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -5175,7 +5113,9 @@ const Partyserv: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>Third-Party Service Integration</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Third-Party Service Integration
+              </h3>
               {partyserv
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -5188,7 +5128,6 @@ const Partyserv: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}
@@ -5243,10 +5182,7 @@ const ReadMoreText: React.FC<{ text: string }> = ({ text }) => {
         {expanded ? text : shortText}
       </motion.p>
       {text.length > 150 && (
-        <button
-          className="readmore-btn d-none d-md-block"
-          onClick={() => setExpanded(!expanded)}
-        >
+        <button className="readmore-btn d-none d-md-block" onClick={() => setExpanded(!expanded)}>
           {expanded ? "Read Less" : "Read More"}
         </button>
       )}
@@ -5254,14 +5190,10 @@ const ReadMoreText: React.FC<{ text: string }> = ({ text }) => {
   );
 };
 
-
-
 // 5th ------------------------------------------------------
 const Plugin: React.FC = () => {
   const [activeId, setActiveId] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(false);
-
-
 
   const handleClick = (id: number) => {
     if (id === activeId) return;
@@ -5290,7 +5222,9 @@ const Plugin: React.FC = () => {
           {/* Left Timeline */}
           <div className="timeline-left" data-aos="fade-right">
             <ul>
-              <h3 className="heads" onClick={() => defaultClick(0)}>Custom Plugin & Module Development</h3>
+              <h3 className="heads" onClick={() => defaultClick(0)}>
+                Custom Plugin & Module Development
+              </h3>
               {plugin
                 .filter((item) => item.id !== 0)
                 .map((item) => (
@@ -5303,7 +5237,6 @@ const Plugin: React.FC = () => {
                   </li>
                 ))}
             </ul>
-
           </div>
 
           {/* Center Image */}

@@ -1,0 +1,743 @@
+.vu-case-visual {
+  min-width: 0;
+}
+.vu-sales-scene {
+  position: relative;
+  padding-bottom: 33px;
+}
+.vu-sales-scene > img {
+  display: block;
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: 65% center;
+  border-radius: 120px 24px 24px 24px;
+}
+.vu-conversation-note {
+  position: absolute;
+  left: -30px;
+  bottom: 0;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: white;
+  border: 1px solid #d9e7f1;
+  box-shadow: 0 20px 45px -24px #143c6066;
+  padding: 22px 25px;
+  border-radius: 16px;
+}
+.vu-note-icon {
+  display: grid;
+  place-items: center;
+  color: #087be6;
+  background: #e7f5ff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+.vu-conversation-note > div {
+  display: grid;
+  gap: 7px;
+}
+.vu-conversation-note span:not(.vu-note-icon) {
+  font-size: 8px;
+  color: #7590a5;
+  letter-spacing: 0.12em;
+}
+.vu-conversation-note strong {
+  font-size: 16px;
+  font-weight: 400;
+}
+.vu-conversation-note small {
+  color: #7c93a6;
+  font-size: 10px;
+}
+.vu-workflow-disclosure {
+  margin-top: 35px;
+  border-top: 1px solid var(--vu-line);
+}
+.vu-workflow-disclosure summary {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 65px;
+  padding-block: 18px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 12px;
+}
+.vu-workflow-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+.vu-workflow-disclosure summary svg {
+  color: #5a93bb;
+  transition: transform 0.2s;
+}
+.vu-workflow-disclosure[open] summary svg {
+  transform: rotate(180deg);
+}
+.vu-workflow-disclosure > .vu-diagram {
+  margin-top: 5px;
+}
+.vu-case .vu-feature-disclosure {
+  margin-top: 8px;
+}
+.vu-case--sales-teams .vu-case-header h2 {
+  max-width: 900px;
+}
+.vu-case--sales-teams .vu-case-layout {
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 55px;
+  padding: 45px;
+  border-radius: 24px;
+  background: linear-gradient(110deg, #f5f9ff, #d5e3ff 65%, #a9c6ff);
+}
+.vu-case--sales-teams .vu-case-story {
+  padding-right: 0;
+}
+.vu-case--sdr-bdr-teams {
+  background: #fff;
+  color: #050505;
+  --vu-muted: #525866;
+  --vu-line: #dce6ee;
+  padding-block: 85px;
+}
+.vu-case--sdr-bdr-teams .vu-case-header {
+  border-top: 0;
+  padding-top: 0;
+}
+.vu-case--sdr-bdr-teams .vu-case-label,
+.vu-case--sdr-bdr-teams .vu-case-focus strong {
+  color: #289ed8;
+}
+.vu-case--sdr-bdr-teams .vu-case-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.vu-case--sdr-bdr-teams .vu-case-visual {
+  width: 100%;
+  order: -1;
+}
+.vu-sdr-film {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #c7e0ef;
+  border-radius: 24px;
+  background: #071e35;
+  box-shadow: 0 28px 55px -32px #0b365a88;
+}
+.vu-case--sdr-bdr-teams .vu-sdr-film {
+  margin-inline: auto;
+}
+.vu-sdr-film video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #071e35;
+  pointer-events: none;
+}
+@media (max-width: 540px) {
+  .vu-sdr-film {
+    border-radius: 17px;
+  }
+}
+.vu-case--sdr-bdr-teams .vu-case-story {
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 70px;
+  width: 100%;
+}
+.vu-case--sdr-bdr-teams .vu-case-cta {
+  grid-column: 1 / -1;
+  border: 0;
+  justify-content: start;
+  color: #289ed8 !important;
+  padding-top: 0;
+}
+.vu-case--sdr-bdr-teams .vu-diagram {
+  --vu-muted: #5c6b7a;
+  --vu-line: #dce6ee;
+  color: #0b1736;
+}
+.vu-case--sdr-bdr-teams .vu-feature-preview {
+  color: #657b8d;
+}
+.vu-case--sdr-bdr-teams .vu-availability {
+  background: #eaf5ff;
+  color: #286889;
+}
+.vu-case--small-business {
+  background: #f8fbff;
+}
+.vu-case--small-business .vu-case-header {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  gap: 55px;
+  border-top: 0;
+}
+.vu-case--small-business .vu-case-label {
+  align-self: start;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.vu-case--small-business .vu-case-focus {
+  flex-basis: 100%;
+  margin: 10px 0 0 32px;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+.vu-case--small-business .vu-case-focus strong {
+  padding: 0;
+  border: 0;
+}
+.vu-case--small-business .vu-case-layout {
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 100px;
+}
+.vu-case--small-business .vu-case-visual {
+  order: -1;
+}
+.vu-case--enterprise .vu-case-header {
+  max-width: 1000px;
+}
+.vu-case--enterprise .vu-case-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+.vu-case--enterprise .vu-case-visual {
+  order: -1;
+  width: 100%;
+}
+.vu-case--enterprise .vu-case-story {
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 80px;
+}
+.vu-case--enterprise .vu-case-cta {
+  grid-column: 1 / -1;
+  border: 0;
+  padding-top: 0;
+  justify-content: start;
+}
+.vu-case--real-estate {
+  padding-block: 25px;
+}
+.vu-case--real-estate > .vx-container {
+  width: min(1328px, calc(100% - 40px));
+  padding: 60px 64px 45px;
+  background: linear-gradient(120deg, #f4f9ff, #d7e6ff);
+  border-radius: 30px;
+}
+.vu-case--real-estate .vu-case-header {
+  border: 0;
+  padding-top: 0;
+}
+.vu-case--real-estate .vu-case-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.vu-case--real-estate .vu-case-visual {
+  width: 100%;
+}
+.vu-case--real-estate .vu-case-story {
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 70px;
+}
+.vu-case--real-estate .vu-case-cta {
+  grid-column: 1 / -1;
+  justify-content: start;
+  padding-top: 0;
+  border: 0;
+}
+.vu-case--insurance .vu-case-layout {
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 70px;
+}
+.vu-case--insurance .vu-case-visual {
+  order: -1;
+}
+.vu-case--insurance .vu-case-header h2 {
+  max-width: 900px;
+}
+.vu-case--insurance .vu-case-story {
+  gap: 28px;
+}
+.vu-case--insurance .vu-insurance-image {
+  height: auto;
+}
+.vu-case--saas {
+  background: #eef7fe;
+  padding-block: 85px;
+}
+.vu-case--saas .vu-case-header {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  gap: 55px;
+  border-top: 0;
+  padding-top: 0;
+}
+.vu-case--saas .vu-case-label {
+  flex-wrap: wrap;
+  align-self: start;
+  margin-top: 8px;
+}
+.vu-case--saas .vu-case-focus {
+  flex-basis: 100%;
+  margin: 10px 0 0 32px;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+.vu-case--saas .vu-case-focus strong {
+  padding: 0;
+  border: 0;
+}
+.vu-case--saas .vu-case-layout {
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 50px;
+}
+.vu-case--collections .vu-case-header h2 {
+  max-width: 1000px;
+}
+.vu-case--collections .vu-case-layout {
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 80px;
+}
+.vu-case--collections .vu-case-visual {
+  order: -1;
+}
+.vu-account-scene {
+  display: grid;
+  grid-template-columns: 0.65fr 1fr;
+  border: 1px solid #d9e6ef;
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 470px;
+  box-shadow: 0 25px 40px -35px #17395455;
+}
+.vu-account-side {
+  padding: 28px 23px;
+  background: linear-gradient(150deg, #087be6, #299fd8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.vu-account-side > span {
+  font-size: 9px;
+  line-height: 1.8;
+  letter-spacing: 0.12em;
+  color: #d2f2ff;
+}
+.vu-account-orbit {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border: 1px solid #ffffff55;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: auto 0;
+}
+.vu-account-orbit::after {
+  content: "";
+  position: absolute;
+  inset: -15px;
+  border: 1px solid #ffffff25;
+  border-radius: 50%;
+}
+.vu-account-side p {
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.2;
+}
+.vu-account-sheet {
+  padding: 30px 25px;
+  background: #f8fbfd;
+}
+.vu-account-eyebrow {
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  color: #6b89a0;
+}
+.vu-account-sheet > h3 {
+  font-size: 25px;
+  margin: 20px 0 28px;
+}
+.vu-account-row {
+  display: flex;
+  align-items: start;
+  gap: 11px;
+  border-top: 1px solid #dce7ef;
+  padding: 16px 0;
+}
+.vu-account-row > svg {
+  margin-top: 3px;
+  color: #299fd8;
+  flex-shrink: 0;
+}
+.vu-account-row > div {
+  display: grid;
+  gap: 7px;
+}
+.vu-account-row strong {
+  font-size: 12px;
+  font-weight: 400;
+}
+.vu-account-row span {
+  color: #7790a4;
+  font-size: 10px;
+}
+.vu-case--gohighlevel-agencies {
+  background: #f8fafc;
+}
+.vu-case--gohighlevel-agencies .vu-case-header {
+  border: 0;
+}
+.vu-case--gohighlevel-agencies .vu-case-layout {
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 65px;
+}
+.vu-agency-scene {
+  position: relative;
+  min-height: 490px;
+  border-radius: 30px;
+  overflow: hidden;
+  color: #fff;
+  background: radial-gradient(ellipse at 50% 60%, #174c78, #0b1736 75%);
+  border: 1px solid #274760;
+}
+.vu-agency-eyebrow {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  color: #87b7d5;
+}
+.vu-agency-lines {
+  position: absolute;
+  inset: 120px 80px 90px;
+  border: 1px solid #3a92c766;
+  border-radius: 50%;
+  transform: rotate(-18deg);
+}
+.vu-agency-lines::before {
+  content: "";
+  position: absolute;
+  inset: 28px -25px;
+  border: 1px solid #3a92c744;
+  border-radius: 50%;
+  transform: rotate(30deg);
+}
+.vu-agency-core {
+  position: absolute;
+  left: 37%;
+  top: 33%;
+  width: 155px;
+  height: 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  border-radius: 22px;
+  background: linear-gradient(140deg, #1685e8, #237abb);
+  box-shadow: 0 25px 50px #0004;
+  transform: rotate(-5deg);
+  z-index: 2;
+}
+.vu-agency-core strong {
+  font-size: 18px;
+  font-weight: 400;
+}
+.vu-agency-core span {
+  font-size: 9px;
+  color: #d4eeff;
+}
+.vu-agency-node {
+  position: absolute;
+  display: grid;
+  gap: 9px;
+  padding: 20px;
+  width: 185px;
+  border: 1px solid #456f8d;
+  border-radius: 14px;
+  background: #17324eea;
+  box-shadow: 0 20px 30px #0002;
+}
+.vu-agency-node > svg {
+  color: #7ad1f1;
+}
+.vu-agency-node strong {
+  font-size: 12px;
+  font-weight: 400;
+}
+.vu-agency-node span {
+  font-size: 9px;
+  color: #a7c1d7;
+}
+.vu-agency-node--clients {
+  top: 80px;
+  left: 25px;
+  transform: rotate(-7deg);
+}
+.vu-agency-node--crm {
+  top: 100px;
+  right: 20px;
+  transform: rotate(6deg);
+}
+.vu-agency-node--seats {
+  bottom: 35px;
+  left: 32%;
+  transform: rotate(-3deg);
+}
+@media (max-width: 1100px) {
+  .vu-case--sales-teams .vu-case-layout,
+  .vu-case--small-business .vu-case-layout {
+    gap: 50px;
+  }
+  .vu-conversation-note {
+    left: -15px;
+    padding: 18px;
+  }
+  .vu-case--real-estate > .vx-container {
+    padding: 45px;
+  }
+  .vu-case--insurance .vu-case-layout,
+  .vu-case--collections .vu-case-layout,
+  .vu-case--gohighlevel-agencies .vu-case-layout {
+    gap: 40px;
+  }
+  .vu-agency-node {
+    width: 155px;
+    padding: 16px;
+  }
+  .vu-agency-core {
+    left: 32%;
+    width: 145px;
+  }
+  .vu-account-scene {
+    grid-template-columns: 0.55fr 1fr;
+  }
+  .vu-account-side {
+    padding-inline: 18px;
+  }
+  .vu-account-orbit {
+    width: 65px;
+    height: 65px;
+  }
+}
+@media (max-width: 850px) {
+  .vu-case--sales-teams .vu-case-layout,
+  .vu-case--small-business .vu-case-layout,
+  .vu-case--insurance .vu-case-layout,
+  .vu-case--saas .vu-case-layout,
+  .vu-case--collections .vu-case-layout,
+  .vu-case--gohighlevel-agencies .vu-case-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .vu-case--small-business .vu-case-header,
+  .vu-case--saas .vu-case-header {
+    display: block;
+  }
+  .vu-case--small-business .vu-case-label,
+  .vu-case--saas .vu-case-label {
+    flex-wrap: nowrap;
+  }
+  .vu-case--small-business .vu-case-focus,
+  .vu-case--saas .vu-case-focus {
+    flex-basis: auto;
+    margin: 0 0 0 auto;
+    flex-direction: row;
+    align-items: center;
+  }
+  .vu-case--small-business .vu-case-focus strong,
+  .vu-case--saas .vu-case-focus strong {
+    padding-left: 10px;
+    border-left: 1px solid var(--vu-line);
+  }
+  .vu-case--small-business .vu-case-visual,
+  .vu-case--insurance .vu-case-visual,
+  .vu-case--collections .vu-case-visual {
+    order: initial;
+  }
+  .vu-case--sales-teams .vu-case-story {
+    padding: 0;
+  }
+  .vu-sales-scene > img {
+    height: 420px;
+  }
+  .vu-conversation-note {
+    left: 20px;
+  }
+  .vu-case--real-estate > .vx-container {
+    padding: 35px;
+  }
+  .vu-case--real-estate .vu-case-story,
+  .vu-case--sdr-bdr-teams .vu-case-story,
+  .vu-case--enterprise .vu-case-story {
+    gap: 25px 40px;
+  }
+  .vu-agency-node {
+    width: 185px;
+    padding: 20px;
+  }
+  .vu-agency-core {
+    left: 37%;
+    width: 155px;
+  }
+  .vu-account-scene {
+    grid-template-columns: 0.65fr 1fr;
+  }
+  .vu-case--sales-teams .vu-case-layout {
+    padding: 30px;
+  }
+}
+@media (max-width: 540px) {
+  .vu-case--small-business .vu-case-label,
+  .vu-case--saas .vu-case-label {
+    flex-wrap: wrap;
+  }
+  .vu-case--small-business .vu-case-focus,
+  .vu-case--saas .vu-case-focus {
+    flex-basis: 100%;
+    margin: 6px 0 0 30px;
+  }
+  .vu-sales-scene > img {
+    height: 360px;
+    border-radius: 80px 17px 17px;
+  }
+  .vu-conversation-note {
+    left: 10px;
+    right: 10px;
+    padding: 17px;
+    gap: 12px;
+  }
+  .vu-note-icon {
+    width: 37px;
+    height: 37px;
+    flex-shrink: 0;
+  }
+  .vu-conversation-note strong {
+    font-size: 13px;
+  }
+  .vu-conversation-note small {
+    font-size: 8px;
+  }
+  .vu-case--sdr-bdr-teams,
+  .vu-case--saas {
+    padding-block: 50px;
+  }
+  .vu-case--sdr-bdr-teams .vu-case-story,
+  .vu-case--enterprise .vu-case-story,
+  .vu-case--real-estate .vu-case-story {
+    grid-template-columns: 1fr;
+  }
+  .vu-case--sdr-bdr-teams .vu-case-cta,
+  .vu-case--enterprise .vu-case-cta,
+  .vu-case--real-estate .vu-case-cta {
+    grid-column: auto;
+  }
+  .vu-case--real-estate > .vx-container {
+    width: calc(100% - 20px);
+    padding: 28px 18px;
+    border-radius: 22px;
+  }
+  .vu-account-scene {
+    grid-template-columns: 0.55fr 1fr;
+    min-height: 410px;
+    border-radius: 17px;
+  }
+  .vu-account-side {
+    padding: 23px 15px;
+  }
+  .vu-account-side > span {
+    font-size: 7px;
+  }
+  .vu-account-side p {
+    font-size: 20px;
+  }
+  .vu-account-orbit {
+    width: 55px;
+    height: 55px;
+  }
+  .vu-account-orbit svg {
+    width: 30px;
+  }
+  .vu-account-orbit::after {
+    inset: -8px;
+  }
+  .vu-account-sheet {
+    padding: 25px 17px;
+  }
+  .vu-account-eyebrow {
+    font-size: 6px;
+  }
+  .vu-account-sheet > h3 {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+  .vu-account-row {
+    gap: 8px;
+    padding-block: 14px;
+  }
+  .vu-account-row strong {
+    font-size: 10px;
+  }
+  .vu-account-row span {
+    font-size: 8px;
+    line-height: 1.6;
+  }
+  .vu-agency-scene {
+    min-height: 450px;
+    border-radius: 20px;
+  }
+  .vu-agency-core {
+    left: calc(50% - 64px);
+    top: 44%;
+    width: 128px;
+    height: 120px;
+    gap: 9px;
+  }
+  .vu-agency-core strong {
+    font-size: 16px;
+  }
+  .vu-agency-core span {
+    font-size: 8px;
+  }
+  .vu-agency-node {
+    width: 135px;
+    padding: 15px;
+    gap: 7px;
+  }
+  .vu-agency-node strong {
+    font-size: 10px;
+  }
+  .vu-agency-node span {
+    font-size: 8px;
+    line-height: 1.5;
+  }
+  .vu-agency-node--clients {
+    top: 75px;
+    left: 17px;
+  }
+  .vu-agency-node--crm {
+    top: 100px;
+    right: 12px;
+  }
+  .vu-agency-node--seats {
+    left: calc(50% - 67px);
+    bottom: 25px;
+  }
+  .vu-case--sales-teams .vu-case-layout {
+    padding: 22px;
+  }
+}

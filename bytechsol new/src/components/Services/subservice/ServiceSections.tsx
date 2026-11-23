@@ -104,11 +104,7 @@ const services = [
     heading: "SEO Services",
     description:
       "Our professional search engine optimization services enhance your search engine ranking with Google, targeted traffic, and more conversions. Our expertise lies in on-page SEO, off-page optimization, and technical SEO that will position your business to own search results.",
-    bullets: [
-      "On-Page SEO",
-      "Off-Page SEO",
-      "Technical SEO",
-    ],
+    bullets: ["On-Page SEO", "Off-Page SEO", "Technical SEO"],
     image: seo,
     bgImage: seo,
     pagepath: "/services/seo-service/",
@@ -173,8 +169,7 @@ const ServicesSection: React.FC = () => {
               {services.map((s) => (
                 <div
                   key={s.id}
-                  className={`services-tab ${activeService.id === s.id ? "active" : ""
-                    }`}
+                  className={`services-tab ${activeService.id === s.id ? "active" : ""}`}
                   onClick={() => setActiveService(s)}
                 >
                   {s.name}
@@ -195,10 +190,7 @@ const ServicesSection: React.FC = () => {
 
           {/* Right Content */}
           <div className="col-lg-5 col-md-12 service-div3">
-            <div
-              key={activeService.id}
-              className="services-right fade-in"
-            >
+            <div key={activeService.id} className="services-right fade-in">
               {/* Watermark Background Image */}
               <div
                 className="service-watermark"
@@ -208,8 +200,7 @@ const ServicesSection: React.FC = () => {
                 <div className="services-content">
                   <Link className="custom-link" to={activeService.pagepath}>
                     <h2 className="ser-new-heading fw-bold">
-                      {activeService.heading}{" "}
-                      <img src={arr} alt="link" className="arr2" />
+                      {activeService.heading} <img src={arr} alt="link" className="arr2" />
                     </h2>
                   </Link>
                   <p className="mb-3 text-white">{activeService.description}</p>

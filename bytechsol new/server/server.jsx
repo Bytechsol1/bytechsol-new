@@ -1,63 +1,66 @@
-import express from 'express';
-import chatBackend from '../chat-backend/app.cjs';
-import fs from 'fs';
-import path from 'path';
-import React from 'react';
-import ReactDOMServer from 'react-dom/server';
-import { StaticRouter } from 'react-router-dom/server';
-import { Helmet } from 'react-helmet';
-import { createProxyMiddleware } from 'http-proxy-middleware';
-import axios from 'axios'; // Import Axios for sitemap fetching
-import { WP_BASE, getImage } from '../src/apiServices/wpApi.ts';
-import App from '../src/App.tsx';
+import express from "express";
+import chatBackend from "../chat-backend/app.cjs";
+import fs from "fs";
+import path from "path";
+import React from "react";
+import ReactDOMServer from "react-dom/server";
+import { StaticRouter } from "react-router-dom/server";
+import { Helmet } from "react-helmet";
+import { createProxyMiddleware } from "http-proxy-middleware";
+import axios from "axios"; // Import Axios for sitemap fetching
+import { WP_BASE, getImage } from "../src/apiServices/wpApi.ts";
+import App from "../src/App.tsx";
 
 const PORT = Number(process.env.PORT || 8081);
 const WORDPRESS_TIMEOUT_MS = 10000;
 const app = express();
-app.disable('x-powered-by');
-app.set('trust proxy', 1);
-app.use(express.json({ limit: '32kb' }));
+app.disable("x-powered-by");
+app.set("trust proxy", 1);
+app.use(express.json({ limit: "32kb" }));
 const router = express.Router();
-router.use('/api/chat', chatBackend.createChatRouter());
+router.use("/api/chat", chatBackend.createChatRouter());
 
 // 1. Resolve path to dist folder
-const distPath = path.resolve(__dirname, '../dist');
-const indexFile = path.join(distPath, 'index.html');
-console.log('Server - __dirname:', __dirname);
-console.log('Server - distPath resolved to:', distPath);
+const distPath = path.resolve(__dirname, "../dist");
+const indexFile = path.join(distPath, "index.html");
+console.log("Server - __dirname:", __dirname);
+console.log("Server - distPath resolved to:", distPath);
 
 // Debug Middleware
 router.use((req, res, next) => {
-  console.log('Request URL:', req.url);
-  if (req.url.startsWith('/assets/')) {
+  console.log("Request URL:", req.url);
+  if (req.url.startsWith("/assets/")) {
     const filePath = path.join(distPath, req.url);
-    const assetsDir = path.join(distPath, 'assets');
-    console.log('Checking file:', filePath);
-    console.log('File exists:', fs.existsSync(filePath));
+    const assetsDir = path.join(distPath, "assets");
+    console.log("Checking file:", filePath);
+    console.log("File exists:", fs.existsSync(filePath));
     if (fs.existsSync(assetsDir)) {
-      console.log('Assets dir contents sample:', fs.readdirSync(assetsDir).slice(0, 5));
-      console.log('Does clutch.png exist in dir listing?', fs.readdirSync(assetsDir).includes('clutch.png'));
+      console.log("Assets dir contents sample:", fs.readdirSync(assetsDir).slice(0, 5));
+      console.log(
+        "Does clutch.png exist in dir listing?",
+        fs.readdirSync(assetsDir).includes("clutch.png"),
+      );
     } else {
-      console.log('Assets dir NOT found at:', assetsDir);
+      console.log("Assets dir NOT found at:", assetsDir);
     }
   }
   next();
 });
 
 // 2. Serve static assets
-router.use(express.static(distPath, { index: false, maxAge: '30d' }));
+router.use(express.static(distPath, { index: false, maxAge: "30d" }));
 
 // ---------------------------------------------------------------------------
 // CMS API ENDPOINTS
 // ---------------------------------------------------------------------------
 
-const DATA_DIR = path.resolve(__dirname, '../src/data');
+const DATA_DIR = path.resolve(__dirname, "../src/data");
 
 function formatWpDate(value) {
-  return new Date(value).toLocaleDateString('en-US', {
-    day: '2-digit',
-    month: 'long',
-    year: 'numeric',
+  return new Date(value).toLocaleDateString("en-US", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
   });
 }
 
@@ -68,16 +71,16 @@ function mapPostSummary(post) {
     title: post.title.rendered,
     date: formatWpDate(post.date),
     image: getImage(post),
-    category: post._embedded?.['wp:term']?.[0]?.[0]?.name || 'General',
+    category: post._embedded?.["wp:term"]?.[0]?.[0]?.name || "General",
     linkpath: `/blog/${post.slug}/`,
   };
 }
 
-function stripOldTOC(html = '') {
+function stripOldTOC(html = "") {
   return html
-    .replace(/<div id="ez-toc-container[\s\S]*?<\/div>/gi, '')
-    .replace(/<nav[\s\S]*?<\/nav>/gi, '')
-    .replace(/<ul[\s\S]*?ez-toc-list[\s\S]*?<\/ul>/gi, '')
+    .replace(/<div id="ez-toc-container[\s\S]*?<\/div>/gi, "")
+    .replace(/<nav[\s\S]*?<\/nav>/gi, "")
+    .replace(/<ul[\s\S]*?ez-toc-list[\s\S]*?<\/ul>/gi, "")
     .trim();
 }
 
@@ -88,29 +91,29 @@ function mapPostDetail(post) {
     id: post.id,
     slug: post.slug,
     title: post.title.rendered,
-    content: stripOldTOC(post.content?.rendered || ''),
+    content: stripOldTOC(post.content?.rendered || ""),
     date: formatWpDate(post.date),
     image: finalImage,
     og_image: finalImage,
-    author: post._embedded?.author?.[0]?.name || 'BytechSol Team',
-    category: post._embedded?.['wp:term']?.[0]?.[0]?.name || 'General',
+    author: post._embedded?.author?.[0]?.name || "BytechSol Team",
+    category: post._embedded?.["wp:term"]?.[0]?.[0]?.name || "General",
     excerpt: post.excerpt,
   };
 }
 
-router.get('/api/cms/:type', (req, res) => {
+router.get("/api/cms/:type", (req, res) => {
   const { type } = req.params;
   const filePath = path.join(DATA_DIR, `${type}Data.json`);
 
   if (!fs.existsSync(filePath)) {
-    return res.status(404).json({ error: 'Data not found' });
+    return res.status(404).json({ error: "Data not found" });
   }
 
-  const data = fs.readFileSync(filePath, 'utf-8');
+  const data = fs.readFileSync(filePath, "utf-8");
   res.json(JSON.parse(data));
 });
 
-router.post('/api/cms/:type', (req, res) => {
+router.post("/api/cms/:type", (req, res) => {
   const { type } = req.params;
   const filePath = path.join(DATA_DIR, `${type}Data.json`);
 
@@ -118,7 +121,7 @@ router.post('/api/cms/:type', (req, res) => {
     fs.writeFileSync(filePath, JSON.stringify(req.body, null, 2));
     res.json({ success: true });
   } catch (err) {
-    res.status(500).json({ error: 'Failed to save data' });
+    res.status(500).json({ error: "Failed to save data" });
   }
 });
 
@@ -141,25 +144,24 @@ router.post('/api/cms/:type', (req, res) => {
 // B. SITEMAP: Fixes the "/blog" SEO Issue
 // ---------------------------------------------------------------------------
 // We create a custom sitemap that fetches WP data but acts like it's React data.
-router.get('/sitemap.xml', async (req, res) => {
+router.get("/sitemap.xml", async (req, res) => {
   try {
     // 1. Fetch the sitemap generated by Yoast/WP
-    const wpSitemapUrl = 'https://bytechsol.com/cms/post-sitemap.xml';
+    const wpSitemapUrl = "https://bytechsol.com/cms/post-sitemap.xml";
     const response = await axios.get(wpSitemapUrl, { timeout: WORDPRESS_TIMEOUT_MS });
 
     let sitemapData = response.data;
 
     // 2. THE MAGIC FIX: Replace '/cms/' with '/blog/' in the XML content
     // This tricks Google into thinking the posts live at /blog/slug
-    sitemapData = sitemapData.replace(/\/cms\//g, '/blog/');
+    sitemapData = sitemapData.replace(/\/cms\//g, "/blog/");
 
     // 3. Send the modified XML
-    res.header('Content-Type', 'application/xml');
+    res.header("Content-Type", "application/xml");
     res.send(sitemapData);
-
   } catch (error) {
-    console.error('Error generating sitemap:', error);
-    res.status(500).send('Error generating sitemap');
+    console.error("Error generating sitemap:", error);
+    res.status(500).send("Error generating sitemap");
   }
 });
 
@@ -168,19 +170,19 @@ router.get('/sitemap.xml', async (req, res) => {
 // ---------------------------------------------------------------------------
 router.get(/(.*)/, (req, res) => {
   if (!fs.existsSync(indexFile)) {
-    console.error('❌ Missing dist/index.html');
+    console.error("❌ Missing dist/index.html");
     return res.status(500).send("Build missing. Please run 'npm run build' first.");
   }
 
-  fs.readFile(indexFile, 'utf-8', async (err, data) => {
+  fs.readFile(indexFile, "utf-8", async (err, data) => {
     if (err) {
-      console.error('❌ Error reading index.html:', err);
+      console.error("❌ Error reading index.html:", err);
       return res.status(500).send("Server Error");
     }
 
     try {
       const AppComponent = App.default || App;
-      const isBlogIndexRoute = req.url === '/blog/' || req.url === '/blog';
+      const isBlogIndexRoute = req.url === "/blog/" || req.url === "/blog";
       const initialWpData = {
         blogPosts: null,
         blogPost: null,
@@ -195,7 +197,7 @@ router.get(/(.*)/, (req, res) => {
           });
           initialWpData.blogPosts = response.data.map(mapPostSummary);
         } catch (fetchErr) {
-          console.error('âŒ SSR Blog List Fetch Error:', fetchErr.message);
+          console.error("âŒ SSR Blog List Fetch Error:", fetchErr.message);
         }
       }
 
@@ -205,7 +207,7 @@ router.get(/(.*)/, (req, res) => {
       const appHtml = ReactDOMServer.renderToString(
         <StaticRouter location={req.url}>
           <AppComponent />
-        </StaticRouter>
+        </StaticRouter>,
       );
 
       const helmet = Helmet.renderStatic();
@@ -215,10 +217,10 @@ router.get(/(.*)/, (req, res) => {
 
       // --- SERVER-SIDE DATA FETCHING FOR BLOGS ---
       // If we are on a blog page, fetch the specific post data to fix SEO tags.
-      if (req.url.startsWith('/blog/')) {
+      if (req.url.startsWith("/blog/")) {
         try {
           // Extract slug: /blog/my-post-title/ -> my-post-title
-          const slug = req.url.split('/blog/')[1].split('?')[0].replace(/\/$/, '');
+          const slug = req.url.split("/blog/")[1].split("?")[0].replace(/\/$/, "");
 
           if (slug) {
             console.log(`🔍 SSR fetching blog data for slug: ${slug}`);
@@ -233,8 +235,8 @@ router.get(/(.*)/, (req, res) => {
               const safeTitle = post.title.rendered;
               // Strip HTML from excerpt and limit length
               const cleanExcerpt = post.excerpt.rendered
-                .replace(/<[^>]*>?/gm, '')
-                .replace(/\n/g, ' ')
+                .replace(/<[^>]*>?/gm, "")
+                .replace(/\n/g, " ")
                 .trim()
                 .substring(0, 160);
 
@@ -247,22 +249,25 @@ router.get(/(.*)/, (req, res) => {
               metaString = `<meta name="description" content="${cleanExcerpt}" /> ${metaString}`;
 
               try {
-                const relatedResponse = await axios.get(`${WP_BASE}/posts?_embed=true&per_page=100`, {
-                  timeout: WORDPRESS_TIMEOUT_MS,
-                });
+                const relatedResponse = await axios.get(
+                  `${WP_BASE}/posts?_embed=true&per_page=100`,
+                  {
+                    timeout: WORDPRESS_TIMEOUT_MS,
+                  },
+                );
                 initialWpData.relatedPosts = relatedResponse.data
                   .map(mapPostSummary)
                   .filter((item) => item.id !== mappedPost.id)
                   .slice(0, 3);
               } catch (relatedErr) {
-                console.error('âŒ SSR Related Blogs Fetch Error:', relatedErr.message);
+                console.error("âŒ SSR Related Blogs Fetch Error:", relatedErr.message);
               }
             } else {
               console.log(`⚠️ SSR blog not found for slug: ${slug}`);
             }
           }
         } catch (fetchErr) {
-          console.error('❌ SSR Blog Fetch Error:', fetchErr.message);
+          console.error("❌ SSR Blog Fetch Error:", fetchErr.message);
         }
       }
       // -------------------------------------------
@@ -271,16 +276,15 @@ router.get(/(.*)/, (req, res) => {
         .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
         .replace(/<title>.*<\/title>/, titleString)
         .replace(
-          '</head>',
-          `${metaString} ${helmet.link.toString()} ${helmet.script.toString()} <script>window.__INITIAL_WP_DATA__ = ${JSON.stringify(initialWpData).replace(/</g, '\\u003c')};</script> </head>`
+          "</head>",
+          `${metaString} ${helmet.link.toString()} ${helmet.script.toString()} <script>window.__INITIAL_WP_DATA__ = ${JSON.stringify(initialWpData).replace(/</g, "\\u003c")};</script> </head>`,
         );
 
       delete globalThis.__INITIAL_WP_DATA__;
       return res.send(finalHtml);
-
     } catch (renderErr) {
       delete globalThis.__INITIAL_WP_DATA__;
-      console.error('❌ SSR Rendering Error:', renderErr);
+      console.error("❌ SSR Rendering Error:", renderErr);
       return res.send(data);
     }
   });
@@ -288,6 +292,6 @@ router.get(/(.*)/, (req, res) => {
 
 app.use(router);
 
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
 });

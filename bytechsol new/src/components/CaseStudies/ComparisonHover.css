@@ -1,0 +1,46 @@
+.vc-hover-table {
+  position: relative;
+  isolation: isolate;
+}
+.vc-row-highlight {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 18px;
+  background: #087be6;
+  box-shadow: 0 18px 35px -18px #075ca56b;
+}
+.vu-flagship .vc-hover-table .vu-comparison-table tbody tr {
+  background: transparent;
+}
+.vu-flagship .vc-hover-table .vu-comparison-table tbody th {
+  padding-left: 18px;
+}
+.vu-flagship .vc-hover-table tbody :is(th, td, a, svg),
+.vu-flagship .vc-hover-table tbody td::before {
+  transition: color 180ms ease;
+}
+.vu-flagship .vc-hover-table tbody tr:focus-within :is(th, td, a, svg),
+.vu-flagship .vc-hover-table tbody tr:focus-within td::before {
+  color: #fff;
+}
+@media (hover: hover) and (pointer: fine) {
+  .vu-flagship .vc-hover-table tbody tr:hover :is(th, td, a, svg),
+  .vu-flagship .vc-hover-table tbody tr:hover td::before {
+    color: #fff;
+  }
+}
+@media (max-width: 540px) {
+  .vu-flagship .vc-hover-table .vu-comparison-table tbody tr {
+    padding-inline: 16px;
+  }
+  .vu-flagship .vc-hover-table .vu-comparison-table tbody th {
+    padding-left: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vu-flagship .vc-hover-table tbody :is(th, td, a, svg) {
+    transition: none;
+  }
+}

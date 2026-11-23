@@ -410,7 +410,9 @@
   padding: 1.2rem 2rem;
   cursor: pointer !important;
   border-radius: 8px;
-  transition: background-color 0.4s ease, transform 0.4s ease;
+  transition:
+    background-color 0.4s ease,
+    transform 0.4s ease;
   position: relative;
 }
 
@@ -442,7 +444,9 @@
 .service-arrow-img {
   width: 24px;
   height: 24px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
   flex-shrink: 0;
 }
 
@@ -461,7 +465,9 @@
   object-fit: cover;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .service-image.show {
@@ -521,8 +527,6 @@
   position: relative;
   font-family: "Guminert", sans-serif;
 }
-
-
 
 .overlay1 {
   width: 100%;
@@ -844,7 +848,7 @@
 }
 
 .group7-column::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -870,7 +874,7 @@
 
 /* Gradient accent line on top */
 .group7-column::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -888,7 +892,6 @@
   transform: scaleX(1);
   /* Expand on hover */
 }
-
 
 .group7-icon {
   width: 48px;
@@ -1234,7 +1237,10 @@
 .faq-panel {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease;
+  transition:
+    max-height 320ms ease,
+    opacity 220ms ease,
+    transform 220ms ease;
   opacity: 0;
   transform: translateY(-4px);
   will-change: max-height, opacity, transform;
@@ -1517,7 +1523,6 @@
 }
 
 @media (max-width: 992px) {
-
   .card-container {
     display: flex;
     flex-direction: column;
@@ -1623,7 +1628,11 @@
 .card-gradient-3 {
   background:
     radial-gradient(circle at top left, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0) 34%),
-    radial-gradient(circle at bottom right, rgba(191, 235, 217, 0.38) 0%, rgba(191, 235, 217, 0) 28%),
+    radial-gradient(
+      circle at bottom right,
+      rgba(191, 235, 217, 0.38) 0%,
+      rgba(191, 235, 217, 0) 28%
+    ),
     linear-gradient(135deg, #fcfffe 0%, #edf7f1 48%, #d8ebe2 100%);
   /* Web app - Pearl sage */
 }
@@ -1631,7 +1640,11 @@
 .card-gradient-4 {
   background:
     radial-gradient(circle at top center, rgba(135, 170, 255, 0.44) 0%, rgba(135, 170, 255, 0) 38%),
-    radial-gradient(circle at bottom left, rgba(223, 234, 255, 0.42) 0%, rgba(223, 234, 255, 0) 26%),
+    radial-gradient(
+      circle at bottom left,
+      rgba(223, 234, 255, 0.42) 0%,
+      rgba(223, 234, 255, 0) 26%
+    ),
     linear-gradient(180deg, #f7f9ff 0%, #d9e4ff 46%, #b5c8ff 100%);
   /* Web design - Powder cornflower */
 }
@@ -1837,14 +1850,13 @@
   color: #fff;
 }
 
-
 .card-row.card-gradient-purple {
-  background: linear-gradient(90deg, #8E2DE2, #4A00E0);
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
   color: #fff;
 }
 
 .card-row.card-gradient-magenta {
-  background: linear-gradient(90deg, #DD2476, #FF512F);
+  background: linear-gradient(90deg, #dd2476, #ff512f);
   color: #fff;
 }
 

@@ -1,6 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, BarChart, BrainCircuit, Monitor, PenTool, AppWindow, Search, Layers, ShoppingCart, Code } from "lucide-react";
+import {
+  ChevronDown,
+  BarChart,
+  BrainCircuit,
+  Monitor,
+  PenTool,
+  AppWindow,
+  Search,
+  Layers,
+  ShoppingCart,
+  Code,
+} from "lucide-react";
 import "../assets/components-css/Navbar.css";
 import "../App.css";
 
@@ -31,11 +42,11 @@ const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const backgroundStyle = backgroundImage
     ? {
-      backgroundImage: `url(${backgroundImage})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-    }
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }
     : backgroundColor
       ? { backgroundColor }
       : {};
@@ -55,12 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({
       >
         <div className="container-fluid px-md-5">
           <Link className="navbar-brand d-flex align-items-center" to="/">
-            <img
-              src={logoIconSrc}
-              alt="logo-icon"
-              className="logo-icon"
-              data-aos="fade-right"
-            />
+            <img src={logoIconSrc} alt="logo-icon" className="logo-icon" data-aos="fade-right" />
             {logoTextSrc ? (
               <img
                 src={logoTextSrc}
@@ -83,17 +89,13 @@ const Navbar: React.FC<NavbarProps> = ({
             </button>
           </nav>
 
-          <div
-            className="collapse navbar-collapse"
-            id="navbarNav"
-            data-aos="fade-down"
-          >
+          <div className="collapse navbar-collapse" id="navbarNav" data-aos="fade-down">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-
-
               <li className="nav-item dropdown-parent">
                 <div className={`nav-link-content ${linkClassName}`}>
-                  <Link to="/services/" className={`text-decoration-none ${linkClassName}`}>Services</Link>
+                  <Link to="/services/" className={`text-decoration-none ${linkClassName}`}>
+                    Services
+                  </Link>
                   <ChevronDown className="dropdown-arrow" size={16} />
                 </div>
 

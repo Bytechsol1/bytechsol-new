@@ -3,9 +3,9 @@ import Testimonial from "../../../shareable/testimonial";
 import FaqSection from "../../../shareable/faq";
 import wa from "../../../assets/images/webappnew.png";
 import NewCon from "../../../shareable/NewCon";
-import bl from "../../../assets/images/blacklp.png"
-import pl from "../../../assets/images/planlp.png"
-import fw from "../../../assets/images/findwk.png"
+import bl from "../../../assets/images/blacklp.png";
+import pl from "../../../assets/images/planlp.png";
+import fw from "../../../assets/images/findwk.png";
 import React, { useRef, useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,8 +13,6 @@ import { useLocation } from "react-router-dom";
 import { Web } from "./New";
 import { Helmet } from "react-helmet";
 import { webappFaqs } from "../../../shareable/faqData";
-
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,9 +28,7 @@ const cards = [
   {
     color: "s-bg",
     image: bl,
-    title: [
-      "Web Apps Built for Growth",
-    ],
+    title: ["Web Apps Built for Growth"],
     items: [
       "  Our lightning-fast, high-performing applications simplify workflows and increase productivity securely, scalably, and future-ready.",
     ],
@@ -40,9 +36,7 @@ const cards = [
   {
     color: "t-bg",
     image: pl,
-    title: [
-      "Custom Software, Real Results",
-    ],
+    title: ["Custom Software, Real Results"],
     items: [
       "                  Turn ideas into powerful web and software solutions. We make our applications scale and change so that you stay ahead of the curve.",
     ],
@@ -50,16 +44,12 @@ const cards = [
   {
     color: "forth-bg",
     image: fw,
-    title: [
-      "Web Solutions That Work for You",
-    ],
+    title: ["Web Solutions That Work for You"],
     items: [
       "      We build applications that are user-friendly, secure, and capable of providing the desired performance at any scale.",
     ],
   },
-
 ];
-
 
 const Webapp: React.FC = () => {
   const location = useLocation();
@@ -74,9 +64,7 @@ const Webapp: React.FC = () => {
     }
   }, [location]);
 
-
   const containerRef = useRef<HTMLDivElement>(null);
-
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -107,15 +95,13 @@ const Webapp: React.FC = () => {
           card,
           { y: window.innerHeight },
           { y: 0, duration: 0.8 },
-          i - 1 // position in timeline (shifted since we skip index 0)
+          i - 1, // position in timeline (shifted since we skip index 0)
         );
       });
     }, containerRef);
 
     return () => ctx.revert();
   }, []);
-
-
 
   return (
     <>
@@ -139,11 +125,10 @@ const Webapp: React.FC = () => {
           </div>
           <div className="dg-hero-body-wrap">
             <p className="dg-hero-desc" data-aos="fade-right">
-              Transform your business with our web app and software development
-              services. We develop scalable, secure, and usable applications,
-              such as bespoke web applications and enterprise software, and
-              deliver new solutions that enhance performance, expansion, and
-              easy user experiences.
+              Transform your business with our web app and software development services. We develop
+              scalable, secure, and usable applications, such as bespoke web applications and
+              enterprise software, and deliver new solutions that enhance performance, expansion,
+              and easy user experiences.
             </p>
             <a href="#contact" className="dg-hero-cta" data-aos="fade-up">
               Start Your Website Project Today <span className="arrow">↗</span>
@@ -161,7 +146,7 @@ const Webapp: React.FC = () => {
               top: "0px",
               left: "0px",
               maxWidth: "none",
-              zIndex: 10
+              zIndex: 10,
             }}
           />
         </div>
@@ -171,14 +156,17 @@ const Webapp: React.FC = () => {
 
       {/* 3rd section--- */}
 
-
-      <section className="performance-section service-page-cards" style={{ height: "85vh" }} ref={containerRef}>
+      <section
+        className="performance-section service-page-cards"
+        style={{ height: "85vh" }}
+        ref={containerRef}
+      >
         <div className="card-container">
           {cards.map((card, index) => (
             <div key={index} className={`card-row ${card.color}`}>
               <div className="card-text">
-                <h2 >{card.title[0]}</h2>
-                <p >{card.items[0]}</p>
+                <h2>{card.title[0]}</h2>
+                <p>{card.items[0]}</p>
               </div>
               <div className="card-img">
                 <img src={card.image} />

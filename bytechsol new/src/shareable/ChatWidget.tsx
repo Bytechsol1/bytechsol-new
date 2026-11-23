@@ -39,25 +39,33 @@ function createMessage(text: string, sender: Message["sender"], chips?: string[]
 function readSavedMessages(value: unknown): Message[] {
   if (!Array.isArray(value)) return [];
 
-  return value.flatMap((message): Message[] => {
-    if (
-      !message ||
-      typeof message !== "object" ||
-      typeof message.id !== "string" ||
-      typeof message.text !== "string" ||
-      !message.text.trim() ||
-      (message.sender !== "user" && message.sender !== "bot")
-    ) return [];
+  return value
+    .flatMap((message): Message[] => {
+      if (
+        !message ||
+        typeof message !== "object" ||
+        typeof message.id !== "string" ||
+        typeof message.text !== "string" ||
+        !message.text.trim() ||
+        (message.sender !== "user" && message.sender !== "bot")
+      )
+        return [];
 
-    return [{
-      id: message.id,
-      text: message.text,
-      sender: message.sender,
-      chips: Array.isArray(message.chips)
-        ? message.chips.filter((chip: unknown): chip is string => typeof chip === "string" && chip.trim().length > 0)
-        : undefined,
-    }];
-  }).slice(-30);
+      return [
+        {
+          id: message.id,
+          text: message.text,
+          sender: message.sender,
+          chips: Array.isArray(message.chips)
+            ? message.chips.filter(
+                (chip: unknown): chip is string =>
+                  typeof chip === "string" && chip.trim().length > 0,
+              )
+            : undefined,
+        },
+      ];
+    })
+    .slice(-30);
 }
 
 function renderMessageText(text: unknown) {
@@ -66,10 +74,18 @@ function renderMessageText(text: unknown) {
 
   return parts.map((part, index) => {
     if (/^https?:\/\//.test(part)) {
-      return <a key={`${part}-${index}`} href={part} target="_blank" rel="noreferrer">{part}</a>;
+      return (
+        <a key={`${part}-${index}`} href={part} target="_blank" rel="noreferrer">
+          {part}
+        </a>
+      );
     }
     if (/^[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}$/.test(part)) {
-      return <a key={`${part}-${index}`} href={`mailto:${part}`}>{part}</a>;
+      return (
+        <a key={`${part}-${index}`} href={`mailto:${part}`}>
+          {part}
+        </a>
+      );
     }
     return part;
   });
@@ -174,9 +190,10 @@ export default function ChatWidget() {
       });
 
       const data = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(
-        typeof data?.error === "string" ? data.error : "The assistant is unavailable right now.",
-      );
+      if (!response.ok)
+        throw new Error(
+          typeof data?.error === "string" ? data.error : "The assistant is unavailable right now.",
+        );
       if (typeof data?.reply !== "string" || !data.reply.trim()) {
         throw new Error("The assistant returned an invalid response. Please try again later.");
       }
@@ -188,7 +205,13 @@ export default function ChatWidget() {
         if (timedOut) setError("The assistant is taking too long to respond. Please try again.");
         return;
       }
-      setError(requestError instanceof TypeError ? "Unable to connect to the assistant. Please try again in a moment." : requestError instanceof Error ? requestError.message : "Something went wrong. Please try again.");
+      setError(
+        requestError instanceof TypeError
+          ? "Unable to connect to the assistant. Please try again in a moment."
+          : requestError instanceof Error
+            ? requestError.message
+            : "Something went wrong. Please try again.",
+      );
     } finally {
       window.clearTimeout(timeout);
       if (abortRef.current === controller) {
@@ -220,15 +243,30 @@ export default function ChatWidget() {
         aria-hidden={!isOpen}
       >
         <header className="bs-chat-header">
-          <div className="bs-chat-avatar"><Bot size={16} /></div>
+          <div className="bs-chat-avatar">
+            <Bot size={16} />
+          </div>
           <div className="bs-chat-title-wrap">
-            <p className="bs-chat-title">Bytechsol AI <CheckCircle size={12} /></p>
+            <p className="bs-chat-title">
+              Bytechsol AI <CheckCircle size={12} />
+            </p>
             <p className="bs-chat-subtitle">Online assistant</p>
           </div>
-          <button type="button" className="bs-chat-header-action" onClick={resetChat} aria-label="Start a new chat" title="New chat">
+          <button
+            type="button"
+            className="bs-chat-header-action"
+            onClick={resetChat}
+            aria-label="Start a new chat"
+            title="New chat"
+          >
             <RotateCcw size={15} />
           </button>
-          <button type="button" className="bs-chat-header-action" onClick={() => setIsOpen(false)} aria-label="Close chat">
+          <button
+            type="button"
+            className="bs-chat-header-action"
+            onClick={() => setIsOpen(false)}
+            aria-label="Close chat"
+          >
             <X size={16} />
           </button>
         </header>
@@ -240,7 +278,13 @@ export default function ChatWidget() {
               {message.sender === "bot" && message.chips && (
                 <div className="bs-chat-chips">
                   {message.chips.map((chip) => (
-                    <button key={`${message.id}-${chip}`} type="button" className="bs-chip" onClick={() => sendMessage(chip)} disabled={isTyping}>
+                    <button
+                      key={`${message.id}-${chip}`}
+                      type="button"
+                      className="bs-chip"
+                      onClick={() => sendMessage(chip)}
+                      disabled={isTyping}
+                    >
                       {chip}
                     </button>
                   ))}
@@ -248,13 +292,33 @@ export default function ChatWidget() {
               )}
             </div>
           ))}
-          {isTyping && <div className="bs-msg-row bot"><div className="bs-msg-bubble bs-typing"><span /><span /><span /></div></div>}
-          {error && <div className="bs-chat-error" role="alert">{error}</div>}
+          {isTyping && (
+            <div className="bs-msg-row bot">
+              <div className="bs-msg-bubble bs-typing">
+                <span />
+                <span />
+                <span />
+              </div>
+            </div>
+          )}
+          {error && (
+            <div className="bs-chat-error" role="alert">
+              {error}
+            </div>
+          )}
           <div ref={endRef} />
         </div>
 
-        <form className="bs-chat-input-wrap" onSubmit={(event) => { event.preventDefault(); sendMessage(inputText); }}>
-          <label className="bs-sr-only" htmlFor="bs-chat-input">Message Bytechsol AI</label>
+        <form
+          className="bs-chat-input-wrap"
+          onSubmit={(event) => {
+            event.preventDefault();
+            sendMessage(inputText);
+          }}
+        >
+          <label className="bs-sr-only" htmlFor="bs-chat-input">
+            Message Bytechsol AI
+          </label>
           <input
             ref={inputRef}
             id="bs-chat-input"
@@ -267,11 +331,18 @@ export default function ChatWidget() {
             disabled={isTyping}
             autoComplete="off"
           />
-          <button type="submit" className="bs-chat-send" aria-label="Send message" disabled={isTyping || !inputText.trim()}>
+          <button
+            type="submit"
+            className="bs-chat-send"
+            aria-label="Send message"
+            disabled={isTyping || !inputText.trim()}
+          >
             <Send size={18} />
           </button>
         </form>
-        <p className="bs-chat-disclaimer">AI can make mistakes. Don’t share sensitive information.</p>
+        <p className="bs-chat-disclaimer">
+          AI can make mistakes. Don’t share sensitive information.
+        </p>
       </section>
     </>
   );

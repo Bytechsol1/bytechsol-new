@@ -1,0 +1,224 @@
+.vn-workflow-study {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  min-height: 575px;
+  border: 1px solid #d2e6f3;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #f4faff;
+}
+.vn-workflow-selector {
+  padding: 38px;
+  background: white;
+}
+.vn-workflow-selector > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  min-height: 65px;
+  padding: 18px 0;
+  border: 0;
+  border-bottom: 1px solid #dbe6ee;
+  color: #788896;
+  background: transparent;
+  text-align: left;
+  font-size: 17px;
+  cursor: pointer;
+  transition:
+    color 250ms ease,
+    padding 250ms ease;
+}
+.vn-workflow-selector > button[aria-pressed="true"] {
+  color: #087be6;
+  border-bottom-color: #299fd8;
+  padding-left: 10px;
+}
+.vn-workflow-selector > button:hover {
+  color: #087be6;
+}
+.vu-page .vn-workflow-explanation h3 {
+  margin-top: 34px;
+  margin-bottom: 13px;
+  font-size: 25px;
+  letter-spacing: -0.025em;
+}
+.vu-page .vn-workflow-explanation p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.vn-workflow-canvas {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-content: center;
+  padding: 45px 50px 65px;
+  background: linear-gradient(135deg, #e4f4ff, #b4dbf4);
+}
+.vn-workflow-guide {
+  position: absolute;
+  z-index: -1;
+  inset: 40px -35px;
+  border: 1px solid #fff8;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+}
+.vn-workflow-guide::after {
+  content: "";
+  position: absolute;
+  inset: 35px -25px;
+  border: 1px solid #fff7;
+  border-radius: 50%;
+}
+.vn-workflow-preview {
+  overflow: hidden;
+  border: 1px solid #bcdcf0;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow:
+    0 35px 60px -35px #164e7c88,
+    10px 10px 0 -5px #ffffff88;
+  transform: perspective(1600px) rotateY(-7deg) rotateZ(1deg);
+}
+.vn-workflow-preview-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 18px 22px;
+  border-bottom: 1px solid #e2edf4;
+}
+.vn-workflow-preview-top > span:first-child {
+  color: #071e35;
+  font-size: 22px;
+  letter-spacing: -0.05em;
+}
+.vn-workflow-preview-top > span:last-child {
+  color: #7a94a6;
+  font-size: 10px;
+}
+.vn-workflow-focus {
+  padding: 26px 22px;
+  text-align: center;
+}
+.vn-workflow-focus-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin-inline: auto;
+  color: #087be6;
+  background: #e7f6ff;
+  border-radius: 22px;
+}
+.vu-page .vn-workflow-focus h4 {
+  font-size: 21px;
+  margin-top: 20px;
+  letter-spacing: -0.02em;
+}
+.vu-page .vn-workflow-focus p {
+  font-size: 11px;
+  color: #7891a4;
+  margin-top: 8px;
+}
+.vn-workflow-wave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 50px;
+  margin-top: 17px;
+}
+.vn-workflow-wave i {
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(#8ae6ff, #087be6);
+  transition:
+    transform 450ms ease,
+    opacity 450ms ease;
+}
+.vn-workflow-preview[data-phase="0"] .vn-workflow-wave i {
+  transform: scaleY(0.4);
+  opacity: 0.5;
+}
+.vn-workflow-preview[data-phase="2"] .vn-workflow-wave i {
+  transform: scaleY(0.7);
+}
+.vn-workflow-checklist {
+  list-style: none;
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0 22px 20px;
+}
+.vn-workflow-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 0;
+  border-top: 1px solid #e9eff4;
+  font-size: 11px;
+  color: #506d82;
+}
+.vn-workflow-checklist svg {
+  color: #299fd8;
+}
+.vn-workflow-caption {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  text-align: center;
+  font-size: 9px;
+  color: #557e9b;
+}
+@media (max-width: 1024px) {
+  .vn-workflow-study {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+  .vn-workflow-selector {
+    padding: 28px;
+  }
+  .vn-workflow-canvas {
+    padding: 35px 28px 60px;
+  }
+}
+@media (max-width: 700px) {
+  .vn-workflow-study {
+    grid-template-columns: 1fr;
+    border-radius: 20px;
+  }
+  .vn-workflow-selector {
+    padding: 25px;
+  }
+  .vn-workflow-selector > button {
+    min-height: 55px;
+    font-size: 16px;
+  }
+  .vu-page .vn-workflow-explanation h3 {
+    margin-top: 24px;
+    font-size: 23px;
+  }
+  .vn-workflow-canvas {
+    padding: 30px 25px 60px;
+  }
+  .vn-workflow-preview {
+    transform: none;
+  }
+  .vn-workflow-wave {
+    gap: 4px;
+  }
+  .vn-workflow-wave i {
+    width: 3px;
+  }
+  .vn-workflow-caption {
+    font-size: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vn-workflow-wave i,
+  .vn-workflow-selector > button {
+    transition: none;
+  }
+}
