@@ -1,0 +1,76 @@
+/* The ERP illustration only; the surrounding section keeps its existing design. */
+.erp-workflow-visual {
+  --wv-ink: #102a43;
+  --wv-blue: #1e6091;
+  --wv-line: #d7e3ed;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  border: 1px solid #dce5ed;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 16px 40px -18px #102a4326;
+  font-family: "Guminert", Arial, sans-serif;
+  color: var(--wv-ink);
+}
+.erp-workflow-visual *, .erp-workflow-visual *::before, .erp-workflow-visual *::after { box-sizing: border-box; }
+.erp-wv-brandbar { display: flex; align-items: center; gap: 18px; padding: 23px 25px; border-bottom: 1px solid #e6edf3; }
+.erp-wv-brand { display: inline-flex; align-items: center; gap: 8px; }
+.erp-wv-brand img { display: block; object-fit: contain; width: auto; }
+.erp-wv-brand img:first-child { height: 32px; }
+.erp-wv-brand img:last-child { height: 22px; }
+.erp-wv-multiply { color: #687f91; font: 400 20px/1 Arial, sans-serif; }
+.erp-wv-odoo { font: 600 32px/1 Arial, sans-serif; letter-spacing: -.065em; color: #714b67; }
+.erp-wv-body { padding: 24px; }
+.erp-wv-captionline { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 18px; color: #526b80; }
+.erp-wv-captionline > span { font: 600 12px/1.5 Arial, sans-serif; letter-spacing: .08em; }
+.erp-wv-control { display: flex; align-items: center; gap: 14px; padding: 22px 19px; border: 1px solid #183d5c; border-radius: 12px; background: #102f49; color: #fff; }
+.erp-wv-control-icon { display: grid; place-items: center; flex: 0 0 46px; height: 46px; border: 1px solid #ffffff24; border-radius: 10px; background: #ffffff0a; color: #91d4f1; }
+.erp-wv-control h3 { margin: 0 0 5px; color: #fff; font-size: 23px; font-weight: 600; letter-spacing: -.025em; line-height: 1.2; }
+.erp-wv-control p { margin: 0; color: #cadce9; font: 400 12px/1.65 Arial, sans-serif; }
+.erp-wv-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1fr); gap: 12px 0; margin-top: 24px; }
+.erp-wv-card { position: relative; grid-row: var(--erp-wv-row); grid-column: var(--erp-wv-column); display: flex; align-items: center; gap: 10px; min-width: 0; min-height: 90px; padding: 14px 12px; border: 1px solid #dfe8ef; border-radius: 10px; background: #fbfdff; }
+.erp-wv-card-icon { display: grid; place-items: center; flex: 0 0 34px; height: 36px; border-radius: 8px; color: #1e6091; background: #edf4fa; }
+.erp-wv-card > div { min-width: 0; }
+.erp-wv-card h4 { margin: 0 0 5px; color: var(--wv-ink); font-size: 14px; font-weight: 600; letter-spacing: -.02em; line-height: 1.35; }
+.erp-wv-card p { margin: 0; color: #526b80; font: 400 12px/1.6 Arial, sans-serif; }
+.erp-wv-junction { position: relative; grid-column: 2; }
+.erp-wv-junction::before { content: ""; position: absolute; top: -12px; bottom: -12px; left: 50%; width: 1px; background: var(--wv-line); }
+.erp-wv-junction-1::before { top: -24px; }
+.erp-wv-junction-4::before { bottom: 50%; }
+.erp-wv-junction::after { content: ""; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--wv-line); }
+.erp-wv-junction > span { position: absolute; z-index: 1; width: 5px; height: 5px; border-radius: 50%; background: #5a9bc3; left: calc(50% - 2px); top: calc(50% - 2px); }
+.erp-wv-footer { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 22px; padding-top: 18px; border-top: 1px solid #e6edf3; color: #526b80; font: 400 12px/1.6 Arial, sans-serif; }
+.erp-wv-footer > svg { color: #1e6091; flex-shrink: 0; }
+.erp-wv-count { margin-left: auto; color: #1e6091; font-size: 12px; }
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .erp-wv-body { padding: 20px; }
+  .erp-wv-card { padding: 12px 10px; gap: 8px; }
+  .erp-wv-card-icon { flex-basis: 29px; height: 32px; }
+  .erp-wv-card-icon svg { width: 18px; height: 18px; }
+}
+@media (max-width: 640px) {
+  .erp-workflow-visual { border-radius: 16px; }
+  .erp-wv-brandbar { padding: 20px; gap: 15px; }
+  .erp-wv-body { padding: 20px; }
+  .erp-wv-control { padding: 19px 16px; }
+  .erp-wv-control h3 { font-size: 21px; }
+  .erp-wv-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 18px; }
+  .erp-wv-card { grid-column: auto; grid-row: auto; min-height: 76px; padding: 15px; gap: 13px; }
+  .erp-wv-card h4 { font-size: 15px; }
+  .erp-wv-card p { font-size: 12px; }
+  .erp-wv-card-icon { flex-basis: 38px; height: 40px; }
+  .erp-wv-junction { display: none; }
+  .erp-wv-captionline > span { font-size: 12px; }
+}
+@media (max-width: 360px) {
+  .erp-wv-brandbar, .erp-wv-body { padding: 17px; }
+  .erp-wv-brandbar { gap: 12px; }
+  .erp-wv-brand img:last-child { height: 19px; }
+  .erp-wv-odoo { font-size: 29px; }
+  .erp-wv-control { gap: 10px; padding: 17px 12px; }
+  .erp-wv-control-icon { flex-basis: 36px; height: 40px; }
+  .erp-wv-control h3 { font-size: 20px; }
+  .erp-wv-control p { font-size: 12px; }
+  .erp-wv-count { width: 100%; margin-left: 24px; }
+}

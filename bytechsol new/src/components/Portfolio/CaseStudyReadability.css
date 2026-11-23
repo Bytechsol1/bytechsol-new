@@ -1,0 +1,154 @@
+/* Shared reading rhythm; project colors and visual compositions stay local. */
+main.case-study-readable {
+  --cs-copy: #3b4b5e;
+  --cs-label: #405d70;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+}
+
+main.case-study-readable :is(h1, h2, h3, h4, p, button, input, select, textarea) {
+  font-family: inherit;
+}
+
+main.case-study-readable :is(p, p[class]) {
+  color: var(--cs-copy);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: normal;
+  max-width: 66ch;
+  text-wrap: pretty;
+}
+
+main.case-study-readable :is(h1, h2) {
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+main.case-study-readable h2 {
+  font-size: clamp(2rem, 3.25vw, 3.25rem);
+}
+
+main.case-study-readable :is(h3, h4) {
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+  text-wrap: pretty;
+}
+
+main.case-study-readable :is(p[class*="lead"], [class*="hero-intro"] > p, [class*="v2-deck"] > p) {
+  font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+  line-height: 1.7;
+}
+
+main.case-study-readable :is(figcaption, small) {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  letter-spacing: normal;
+}
+
+main.case-study-readable figcaption {
+  color: var(--cs-copy);
+}
+
+main.case-study-readable :is([class*="eyebrow"], [class*="kicker"], [class*="small-label"]) {
+  color: var(--cs-label);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.075em;
+}
+
+main.case-study-readable :is(nav a, dt, legend, [class*="breadcrumb"], [class*="-back"], [class*="-status"], [class*="-pill"], [class*="-badge"], [class*="-chip"], [class*="-tags"] > span, [class*="-meta"] span) {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  letter-spacing: 0.025em;
+}
+
+main.case-study-readable :is(button[role="tab"], [class*="-primary"], [class*="-button"], [class*="text-link"], [class*="-meta"] strong, dd, table, li) {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+main.case-study-readable :is(td, th) {
+  padding-block: 1rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+main.case-study-readable :is([role="tab"], summary, [class*="-primary"], [class*="text-link"], nav a) {
+  min-height: 44px;
+}
+
+main.case-study-readable :is([class*="-heading"], [class*="-editorial"]) > * {
+  min-width: 0;
+}
+
+main.case-study-readable :is(.odoo-mandates, .odoo-shared-core, .odoo-cta, .babylon-roles, .babylon-cta, .clockit-scanner, .clockit-cta, .frigo-readiness, .frigo-cta, .frigo-v2-brand-card, .cmjl-driver-section, .cmjl-cta, .voxiq-agent, .vq-cta, .vq-type-tile, .vq-brand-copy, .loop-ai, .loop-cta, .loop-type-tile, .loop-brand-copy, .sky-network, .sky-cta) {
+  --cs-copy: #d5e3eb;
+  --cs-label: #acd8e4;
+}
+
+main.case-study-readable.sky-dark {
+  --cs-copy: #c5dbe6;
+  --cs-label: #8ed0e8;
+}
+
+main.case-study-readable :is(.sky-v2-art-copy, .sky-v2-logo-board) {
+  --cs-copy: #3b4b5e;
+  --cs-label: #405d70;
+}
+
+main.case-study-readable :is(.odoo-lightbox-toolbar, .babylon-lightbox-toolbar, .clockit-lightbox-toolbar, .frigo-lightbox-toolbar, .cmjl-lightbox-toolbar, .vq-lightbox-toolbar, .loop-lightbox-toolbar, .sky-lightbox-toolbar) > span {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 760px) {
+  main.case-study-readable ~ .bs-chat-toggle:not(.open) {
+    width: 64px;
+    height: 64px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  main.case-study-readable h1 {
+    font-size: clamp(2.125rem, 8.4vw, 3.25rem);
+    letter-spacing: -0.04em;
+    overflow-wrap: anywhere;
+  }
+
+  main.case-study-readable h2 {
+    font-size: clamp(1.875rem, 6.6vw, 2.5rem);
+    letter-spacing: -0.035em;
+  }
+
+  main.case-study-readable h3 {
+    font-size: clamp(1.25rem, 5vw, 1.625rem);
+  }
+
+  main.case-study-readable :is(p, p[class]) {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  main.case-study-readable :is([role="tab"], [class*="-primary"]) {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main.case-study-readable *,
+  main.case-study-readable *::before,
+  main.case-study-readable *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}

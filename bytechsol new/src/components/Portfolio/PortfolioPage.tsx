@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import loopLogo from '../../assets/images/loop.svg';
 import { motion } from 'framer-motion';
 import { useTheme } from './ThemeContext';
 import { ArrowUpRight } from 'lucide-react';
@@ -15,17 +17,13 @@ import Bottom3 from "../../assets/images/bottom3.png";
 import hm2 from "../../assets/images/home2img.png";
 import loopHoverImg from "../../assets/images/loop-hover.png";
 import voxiqHoverImg from "../../assets/images/voxiq-hover.png";
+import voxiqLogo from "../../assets/images/voxiq-darker.png";
 import skynodeHoverImg from "../../assets/images/skynode-hover.png";
 import arr from "../../assets/images/arrow.svg";
 import babylonHoverImg from "../../assets/images/babylon-hover.png";
-import expeditedHoverImg from "../../assets/images/expedited-hover.png";
-import clockitHoverImg from "../../assets/images/clockit-hover.png";
+import cmjlLogo from "../../assets/images/expeditedtransport.png";
 import clockitLogoImg from "../../assets/images/clockit-logo.png";
-import frigoHoverImg from "../../assets/images/frigo-hover.png";
-import frigoLogoImg from "../../assets/images/frigo-logo.png";
 import cmjlHoverImg from "../../assets/images/cmjl-hover.png";
-import labourHoverImg from "../../assets/images/labour-hover.png";
-import labourLogoImg from "../../assets/images/labour-logo.png";
 
 
 
@@ -205,18 +203,18 @@ export const PortfolioPage = () => {
             <section className={`py-24 ${theme === 'dark' ? 'bg-[#0a0a0a]' : 'bg-white'}`}>
                 <div className="w-full max-w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                     {/* Loop Card - Bellroy Style */}
-                    <a href="https://loop.bytechsol.com/login" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                    <Link to="/portfolio/loop/" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
                         
                         {/* Image Container */}
                         <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f8f9fa]">
                             {/* Default State: Logo */}
                             <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#f8f9fa]">
-                                <img src="https://loop.bytechsol.com/loop.svg" alt="Loop Logo" className="w-32 md:w-40 h-auto transition-transform duration-500 group-hover:scale-110" />
+                                <img src={loopLogo} alt="Loop Logo" className="w-32 md:w-40 h-auto transition-transform duration-500 group-hover:scale-110" />
                             </div>
 
                             {/* Hover State: Screenshot */}
                             <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
-                                <img src={loopHoverImg} alt="Loop Dashboard" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                                <img src="/images/loop/workspace-showcase-v2.png" alt="Loop workspace and messaging interface showcase" loading="lazy" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                             </div>
                         </div>
                         
@@ -230,27 +228,27 @@ export const PortfolioPage = () => {
                                         <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                                     </h3>
                                     <p className="text-slate-500 mt-2 text-sm text-left pr-14">
-                                        Intelligent logistics and fleet management platform.
+                                        Team communication and work management, in one workspace.
                                     </p>
                                 </div>
                                 
                             </div>
                         </div>
-                    </a>
+                    </Link>
 
                     {/* Voxiq Card */}
-                    <a href="https://voxiq.bytechsol.com/" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                    <Link to="/portfolio/voxiq/" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
                         
                         {/* Image Container */}
                         <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f8f9fa]">
                             {/* Default State: Logo */}
                             <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#f8f9fa]">
-                                <img src="https://voxiq.bytechsol.com/logo-darker.png" alt="Voxiq Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                                <img src={voxiqLogo} alt="Voxiq Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
                             </div>
 
                             {/* Hover State: Screenshot */}
                             <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
-                                <img src={voxiqHoverImg} alt="Voxiq Platform" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                                <img src="/images/voxiq/workspace-showcase-v2.png" alt="Voxiq calling workspace and shared inbox showcase" loading="lazy" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                             </div>
                         </div>
                         
@@ -264,27 +262,27 @@ export const PortfolioPage = () => {
                                         <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                                     </h3>
                                     <p className="text-slate-500 mt-2 text-sm text-left pr-14">
-                                        AI-powered voice analytics and communication.
+                                        Browser-based sales calling, AI and multichannel outreach.
                                     </p>
                                 </div>
                                 
                             </div>
                         </div>
-                    </a>
+                    </Link>
 
                     {/* Skynode Card */}
-                    <a href="https://sky-node-edge-solution-new-design.vercel.app/" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                    <Link to="/portfolio/skynode-partners/" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
                         
                         {/* Image Container */}
                         <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f8f9fa]">
                             {/* Default State: Logo */}
                             <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#f8f9fa]">
-                                <img src="https://sky-node-edge-solution-new-design.vercel.app/logo-skynode-light-bg.svg" alt="Skynode Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                                <img src="/images/skynode/logo-light.svg" alt="Skynode Partners Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
                             </div>
 
                             {/* Hover State: Screenshot */}
                             <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
-                                <img src={skynodeHoverImg} alt="Skynode Platform" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                                <img src="/images/skynode/website-showcase-v2.png" alt="Skynode Partners desktop and mobile website showcase" loading="lazy" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                             </div>
                         </div>
                         
@@ -293,18 +291,18 @@ export const PortfolioPage = () => {
                             <div className="relative w-full">
                                 <div>
                                     <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black text-left pr-14 flex items-center gap-2">
-                                        Skynode
+                                        Skynode Partners
                                     
                                         <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                                     </h3>
                                     <p className="text-slate-500 mt-2 text-sm text-left pr-14">
-                                        Advanced edge computing solutions.
+                                        A searchable urban infrastructure platform across four markets.
                                     </p>
                                 </div>
                                 
                             </div>
                         </div>
-                    </a>
+                    </Link>
 
                     {/* Babylon OS Card */}
                     <a href="https://babylon-os.vercel.app/login" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
@@ -341,18 +339,18 @@ export const PortfolioPage = () => {
                     </a>
 
                     {/* Expedited Transport Card */}
-                    <a href="https://expeditedtransport.net/" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                    <Link to="/portfolio/cmjl/" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
                         
                         {/* Image Container */}
                         <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f8f9fa]">
                             {/* Default State: Logo */}
                             <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#f8f9fa]">
-                                <img src="https://expeditedtransport.net/assets/bg-logo-dyMm7NFV.png" alt="Expedited Transport Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                                <img src={cmjlLogo} alt="Expedited Transport Logo" className="w-32 md:w-40 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
                             </div>
 
                             {/* Hover State: Screenshot */}
                             <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
-                                <img src={expeditedHoverImg} alt="Expedited Transport Dashboard" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                                <img src="/images/cmjl/operations.svg" alt="CMJL operations illustration" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                             </div>
                         </div>
                         
@@ -366,16 +364,16 @@ export const PortfolioPage = () => {
                                         <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                                     </h3>
                                     <p className="text-slate-500 mt-2 text-sm text-left pr-14">
-                                        Fast and reliable freight transportation.
+                                        Connected logistics, dispatch and contractor operations.
                                     </p>
                                 </div>
                                 
                             </div>
                         </div>
-                    </a>
+                    </Link>
 
                     {/* ClockIt Card */}
-                    <a href="https://clockit.expeditedtransportservices.net/" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                    <Link to="/portfolio/clockit/" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
                         
                         {/* Image Container */}
                         <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#0c1825]">
@@ -386,7 +384,7 @@ export const PortfolioPage = () => {
 
                             {/* Hover State: Screenshot */}
                             <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
-                                <img src={clockitHoverImg} alt="ClockIt Dashboard" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                                <img src="/images/clockit/workspace-showcase-v2.png" alt="ClockIt workforce dashboard and shift timer concepts" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                             </div>
                         </div>
                         
@@ -400,27 +398,27 @@ export const PortfolioPage = () => {
                                         <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                                     </h3>
                                     <p className="text-slate-500 mt-2 text-sm text-left pr-14">
-                                        Time tracking and employee management.
+                                        Workforce time tracking, labor insights and package routes.
                                     </p>
                                 </div>
                                 
                             </div>
                         </div>
-                    </a>
+                    </Link>
 
-                    {/* Frigo Labs Card */}
-                    <a href="https://frigolabs.vercel.app/login" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                    {/* Frigo Flow Case Study */}
+                    <Link to="/portfolio/frigo-flow/" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
                         
                         {/* Image Container */}
                         <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f8f9fa]">
                             {/* Default State: Logo */}
                             <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#f8f9fa]">
-                                <img src={frigoLogoImg} alt="Frigo Labs Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                                <div className="flex items-center gap-3 text-[#137b75] transition-transform duration-500 group-hover:scale-110" style={{ fontFamily:'Georgia, serif' }}><span className="w-12 h-12 rounded-xl bg-[#137b75] text-white text-3xl italic flex items-center justify-center">F</span><span className="text-3xl">Frigo Flow</span></div>
                             </div>
 
                             {/* Hover State: Screenshot */}
                             <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
-                                <img src={frigoHoverImg} alt="Frigo Labs Dashboard" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                                <img src="/images/frigo-flow/workspace-showcase-v2.png" alt="Frigo Flow clinic and patient interface concepts with fictional demo records" loading="lazy" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                             </div>
                         </div>
                         
@@ -429,32 +427,32 @@ export const PortfolioPage = () => {
                             <div className="relative w-full">
                                 <div>
                                     <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black text-left pr-14 flex items-center gap-2">
-                                        Frigo Labs
+                                        Frigo Flow
                                     
                                         <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                                     </h3>
                                     <p className="text-slate-500 mt-2 text-sm text-left pr-14">
-                                        Innovative cold chain technology solutions.
+                                        Clinic workflows, diagnostic orders and patient experiences.
                                     </p>
                                 </div>
                                 
                             </div>
                         </div>
-                    </a>
+                    </Link>
 
                     {/* CMJL Mobile App Card */}
-                    <a href="https://play.google.com/store/apps/details?id=net.expeditedtransport.driverapp" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                    <Link to="/portfolio/cmjl/" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
                         
                         {/* Image Container */}
                         <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f8f9fa]">
                             {/* Default State: Logo */}
                             <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-[#f8f9fa]">
-                                <img src="https://expeditedtransport.net/assets/bg-logo-dyMm7NFV.png" alt="CMJL Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                                <img src={cmjlLogo} alt="CMJL Logo" className="w-32 md:w-40 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
                             </div>
 
                             {/* Hover State: Screenshot */}
                             <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
-                                <img src={cmjlHoverImg} alt="CMJL Mobile App" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                                <img src="/images/cmjl/driver-app-v2.png" alt="CMJL Mobile App" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                             </div>
                         </div>
                         
@@ -474,21 +472,21 @@ export const PortfolioPage = () => {
                                 
                             </div>
                         </div>
-                    </a>
+                    </Link>
 
-                    {/* Labour Tracker App Card */}
-                    <a href="https://labour-tracker-app-alpha.vercel.app/worker-portal" target="_blank" rel="noopener noreferrer" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                    {/* Labour Tracking Card */}
+                    <Link to="/portfolio/labour-tracking/" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
                         
                         {/* Image Container */}
                         <div className="relative aspect-[4/3] w-full overflow-hidden bg-white">
                             {/* Default State: Logo */}
                             <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-700 group-hover:opacity-0 bg-white">
-                                <img src="https://babylon-os.vercel.app/assets/Babylon-CPVhAjWe.webp" alt="Labour Tracker Logo" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain" />
+                                <img src="/images/babylon-labour/labour-tracking-wordmark.svg" alt="Labour Tracking" className="w-48 md:w-56 h-auto transition-transform duration-500 group-hover:scale-110 object-contain rounded-lg" />
                             </div>
 
                             {/* Hover State: Screenshot */}
                             <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
-                                <img src={labourHoverImg} alt="Labour Tracker Dashboard" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                                <img src="/images/babylon-labour/workspace-showcase-labour-tracking.png" alt="Labour Tracking production matrix and worker portal concepts" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                             </div>
                         </div>
                         
@@ -497,18 +495,33 @@ export const PortfolioPage = () => {
                             <div className="relative w-full">
                                 <div>
                                     <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black text-left pr-14 flex items-center gap-2">
-                                        Labour Tracker App
+                                        Labour Tracking
                                     
                                         <img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                                     </h3>
                                     <p className="text-slate-500 mt-2 text-sm text-left pr-14">
-                                        Real-time workforce monitoring and portal.
+                                        Manufacturing labour, workforce and production tracking.
                                     </p>
                                 </div>
                                 
                             </div>
                         </div>
-                    </a>
+                    </Link>
+
+                    {/* International Trade Odoo ERP Case Study */}
+                    <Link to="/portfolio/odoo-erp/" className="block group cursor-pointer rounded-[1.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col bg-white border border-slate-100">
+                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#102c3b]">
+                            <img src="/images/odoo-erp/workspace-showcase-v2.png" alt="Multi-company Odoo ERP workspace and mandate concepts" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div className="absolute inset-0 flex flex-col justify-end p-8" style={{ background: 'linear-gradient(transparent 35%, rgba(12,35,48,.9))' }}>
+                                <span className="text-xs tracking-[.18em] text-white/80">UNITED STATES + CHILE</span>
+                                <span className="text-4xl font-medium text-white mt-3">Odoo ERP</span>
+                            </div>
+                        </div>
+                        <div className="flex flex-col justify-center flex-grow min-h-[140px]" style={{ padding: '32px 32px' }}>
+                            <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black text-left flex items-center gap-2">Multi-Company Odoo ERP<img src={arr} alt="arrow" className="w-5 h-5 md:w-6 md:h-6 transition-transform group-hover:translate-x-1" /></h3>
+                            <p className="text-slate-500 mt-2 text-sm text-left">International trade, finance and distribution in one ERP architecture.</p>
+                        </div>
+                    </Link>
 
                     {/* Future cards will go here */}
                 </div>

@@ -6,7 +6,7 @@ import et from "../../../assets/images/ideat.png";
 import lw from "../../../assets/images/lwork.png";
 import sp from "../../../assets/images/simplicity.png";
 import ma from "../../../assets/images/mobapps.png";
-import cp from "../../../assets/images/odoonew.png";
+import cp from "../../../assets/images/odoo-business-workspace.png";
 import { useRef, useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -148,18 +148,21 @@ const CustomSoftwareDev = () => {
             </a>
           </div>
         </div>
-        <div className="dg-hero-right odoo-right" style={{ overflow: "visible" }}>
+        <div className="dg-hero-right odoo-right">
           <img
             src={cp}
-            alt="Odoo 3D"
+            alt="Connected Odoo workspace for finance, sales, and inventory"
+            width={1122}
+            height={1402}
             style={{
-              position: "absolute",
-              width: "470px",
-              height: "560px",
-              top: "0px",
-              left: "0px",
-              maxWidth: "none",
-              zIndex: 10
+              position: "relative",
+              display: "block",
+              width: "100%",
+              maxWidth: "470px",
+              height: "auto",
+              maxHeight: "520px",
+              objectFit: "contain",
+              zIndex: 2
             }}
           />
         </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../../App.css";
+import "../../../assets/components-css/OdooMigrationVisuals.css";
 import { motion, AnimatePresence } from "framer-motion";
 import uiuxn1 from "../../../assets/images/uiuxn1.png";
 import webn1 from "../../../assets/images/webn1.png";
@@ -29,12 +30,32 @@ import sy from "../../../assets/images/ecommerce-2.png";
 import wo from "../../../assets/images/ecommerce-3.png";
 import py from "../../../assets/images/ecommerce-4.png";
 import mk from "../../../assets/images/ecommerce-5.png";
-import mi from "../../../assets/images/inventoryn.png";
-import tc from "../../../assets/images/consultancyn.png";
-import md from "../../../assets/images/modulen.png";
+import legacyMigrationImage from "../../../assets/images/odoo-services/legacy-migration.png";
+import versionUpgradesImage from "../../../assets/images/odoo-services/version-upgrades.png";
+import customModulesImage from "../../../assets/images/odoo-services/custom-modules.png";
+import workflowCustomizationImage from "../../../assets/images/odoo-services/workflow-customization.png";
+import dataSecurityImage from "../../../assets/images/odoo-services/data-security.png";
+import businessProcessAnalysisImage from "../../../assets/images/odoo-services/business-process-analysis.png";
+import technicalArchitectureImage from "../../../assets/images/odoo-services/technical-architecture.png";
+import functionalMappingImage from "../../../assets/images/odoo-services/functional-mapping.png";
+import userTrainingImage from "../../../assets/images/odoo-services/user-training.png";
+import continuousImprovementImage from "../../../assets/images/odoo-services/continuous-improvement.png";
+import customModuleDesignImage from "../../../assets/images/odoo-services/custom-module-design-realistic.png";
+import industrySpecificSolutionsImage from "../../../assets/images/odoo-services/industry-specific-solutions-realistic.png";
+import moduleIntegrationImage from "../../../assets/images/odoo-services/module-integration-realistic.png";
+import scalabilityFlexibilityImage from "../../../assets/images/odoo-services/scalability-flexibility-realistic.png";
+import qualityAssuranceTestingImage from "../../../assets/images/odoo-services/quality-assurance-testing-realistic.png";
 import ig from "../../../assets/images/custom-web-4.png";
-import odooIntegrationImg from "../../../assets/images/odoo-integrationn.png";
-import ms from "../../../assets/images/maintenancen.png";
+import thirdPartyAppIntegrationImage from "../../../assets/images/odoo-services/third-party-app-integration-realistic.png";
+import paymentGatewayIntegrationImage from "../../../assets/images/odoo-services/payment-gateway-integration-realistic.png";
+import apiDevelopmentIntegrationImage from "../../../assets/images/odoo-services/api-development-integration-realistic.png";
+import ecommerceMarketplaceIntegrationImage from "../../../assets/images/odoo-services/ecommerce-marketplace-integration-realistic.png";
+import cloudIotIntegrationImage from "../../../assets/images/odoo-services/cloud-iot-integration-realistic.png";
+import bugFixingErrorResolutionImage from "../../../assets/images/odoo-services/bug-fixing-error-resolution-realistic.png";
+import performanceMonitoringOptimizationImage from "../../../assets/images/odoo-services/performance-monitoring-optimization-realistic.png";
+import versionUpgradesPatchesImage from "../../../assets/images/odoo-services/version-upgrades-patches-realistic.png";
+import dataBackupRecoveryImage from "../../../assets/images/odoo-services/data-backup-recovery-realistic.png";
+import technicalSupportImage from "../../../assets/images/odoo-services/technical-support-realistic.png";
 import cm from "../../../assets/images/custom-web-1.png";
 import cw from "../../../assets/images/custom-web-2.png";
 import pl from "../../../assets/images/custom-web-5.png";
@@ -3936,7 +3957,7 @@ const customization = [
     title: "Odoo Migration & Customization",
     description:
       "We provide seamless Odoo migration services to ensure a smooth transition from legacy systems or older versions. Customization: Odoo can be modeled to support your specific workflows, which increases usability, improves performance, and makes the platform the best fit as per business objectives.",
-    image: mi,
+    image: legacyMigrationImage,
   },
   {
     id: 1,
@@ -3945,7 +3966,7 @@ const customization = [
       "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We import data from old systems to Odoo accurately and safely. Minimal downtime, easy transition, and full data integrity are guaranteed by our process to ensure that your business operations are not interrupted in the process of the shift.",
-    image: mi,
+    image: legacyMigrationImage,
   },
   {
     id: 2,
@@ -3953,7 +3974,7 @@ const customization = [
     subtitle: "Enterprise Messaging & Communication",
     description:
       "Our specialists upgrade Odoo to the new version, saving your data and settings. We promise compatibility, improved performance, and availability of new features without interfering with business processes.",
-    image: mi,
+    image: versionUpgradesImage,
   },
   {
     id: 3,
@@ -3961,7 +3982,7 @@ const customization = [
     subtitle: "Retail Digital Experience",
     description:
       "We create custom Odoo modules to add functionality to your specific business processes. HR to inventory, we have customization that makes Odoo fit well with your needs.",
-    image: mi,
+    image: customModulesImage,
   },
   {
     id: 4,
@@ -3969,7 +3990,7 @@ const customization = [
     subtitle: "Consumer Goods Automation",
     description:
       "Odoo workflows are optimized through customized automation, approvals, and processes. This will be to make sure that the platform fits your operations, increases efficiency, and improves user experience across departments.",
-    image: mi,
+    image: workflowCustomizationImage,
   },
   {
     id: 5,
@@ -3977,7 +3998,7 @@ const customization = [
     subtitle: "Insurance Tech",
     description:
       "Migration and customization are the services that observe data protection. We adhere to strong compliance standards and best practices in every aspect of your sensitive data, and it is safe during the processes of migration and system tweaking.",
-    image: mi,
+    image: dataSecurityImage,
   },
 ];
 
@@ -3987,14 +4008,14 @@ const consultancy = [
     title: "Odoo Techno-Functional Consultancy",
     description:
       "We are a techno-functional consultancy that fills the gap between the requirements of the business and the technical application. We also offer complete solutions, integrating Odoo capabilities with your operations, and will achieve a smooth integration, customization, and usability in order to make your business as efficient as possible.",
-    image: tc,
+    image: businessProcessAnalysisImage,
   },
   {
     id: 1,
     title: " Business Process Analysis",
     description:
       "We review your current workflows to see the gaps and opportunities. Our specialists align Odoo capabilities to your business objectives,  resulting in a system that eases operations and brings growth.",
-    image: tc,
+    image: businessProcessAnalysisImage,
   },
   {
     id: 2,
@@ -4003,7 +4024,7 @@ const consultancy = [
       "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We create scalable and secure Odoo architectures to match your needs. Whether through performing optimization on the database, our consultancy guarantees you a system that is future-ready and capable of expanding with your business.",
-    image: tc,
+    image: technicalArchitectureImage,
   },
   {
     id: 3,
@@ -4011,7 +4032,7 @@ const consultancy = [
     subtitle: "Enterprise Messaging & Communication",
     description:
       "Our consultants draw Odoo modules to your own processes, and suggest customizations where appropriate. This ensures that your system is like a glove, and it adds productivity without unneeded complexity.",
-    image: tc,
+    image: functionalMappingImage,
   },
   {
     id: 4,
@@ -4019,7 +4040,7 @@ const consultancy = [
     subtitle: "Retail Digital Experience",
     description:
       "We also offer practical training programs so that your team will know the technical and functional side of Odoo. This increases the adoption rates and puts users in a position to leverage the full capacity of the system.",
-    image: tc,
+    image: userTrainingImage,
   },
   {
     id: 5,
@@ -4027,7 +4048,7 @@ const consultancy = [
     subtitle: "Consumer Goods Automation",
     description:
       "Our consultancy doesn't stop at implementation. We offer continued support and optimization plans to ensure that your Odoo system is up-to-date with changing business demands and best practices in the industry.",
-    image: tc,
+    image: continuousImprovementImage,
   },
 ];
 
@@ -4037,7 +4058,7 @@ const odoomod = [
     title: "Odoo Module Development",
     description:
       "We create custom Odoo modules depending on your specific business requirements. Our solutions are an addition to the functionality of Odoo, which has given you the power of scalability, efficiency, and the ability to perfectly meet your operational processes.",
-    image: md,
+    image: customModuleDesignImage,
   },
   {
     id: 1,
@@ -4046,7 +4067,7 @@ const odoomod = [
       "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "Odoo modules are designed manually by us to suit your needs. Every module is designed to maximize performance, simplify processes, and provide a smooth user experience.",
-    image: md,
+    image: customModuleDesignImage,
   },
   {
     id: 2,
@@ -4055,7 +4076,7 @@ const odoomod = [
       "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "We create modules specific to various industries such as manufacturing, retail, healthcare, or services, so that your Odoo system can be applied in your sector to your specific problems and processes.",
-    image: md,
+    image: industrySpecificSolutionsImage,
   },
   {
     id: 3,
@@ -4064,7 +4085,7 @@ const odoomod = [
       "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "We make sure that any new modules we have developed perfectly fit into your existing Odoo system. This forms a cohesive ecosystem in which all processes are interrelated to improve efficiency and data transfer among the departments.",
-    image: md,
+    image: moduleIntegrationImage,
   },
   {
     id: 4,
@@ -4072,7 +4093,7 @@ const odoomod = [
     subtitle: "Consumer Goods Automation",
     description:
       "Our modules are designed with scalability in mind. These modules may be extended or tailored to your specific needs as your business expands, and long-term usability and flexibility.",
-    image: md,
+    image: scalabilityFlexibilityImage,
   },
   {
     id: 5,
@@ -4080,7 +4101,7 @@ const odoomod = [
     subtitle: "Insurance Tech",
     description:
       "Each module is highly tested before deployment. From functionality tests to performance tests and security tests, we ensure that your custom modules work well and dependably in actual field settings.",
-    image: md,
+    image: qualityAssuranceTestingImage,
   },
 ];
 
@@ -4090,7 +4111,7 @@ const odooserv = [
     title: "Odoo Integration Services",
     description:
       "We also offer a smooth Odoo integration service that interconnects your ERP with third-party applications, tools, and platforms. Our solutions are designed to provide the efficient flow of data, enhance efficiency, and centralized control- welcoming your business to operate smarter, faster, and more efficiently.",
-    image: odooIntegrationImg,
+    image: thirdPartyAppIntegrationImage,
   },
   {
     id: 1,
@@ -4099,7 +4120,7 @@ const odooserv = [
       "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We combine Odoo with key business solutions such as CRM, HR, e-commerce, nd project management solutions to create a single platform that helps improve collaboration and streamline operations across your organization.",
-    image: odooIntegrationImg,
+    image: thirdPartyAppIntegrationImage,
   },
   {
     id: 2,
@@ -4108,7 +4129,7 @@ const odooserv = [
       "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Odoo is linked to online payment gateways by our team, which allows making transactions online without certain difficulties. The integration improves customer experience and provides safety and compliance in financial operations.",
-    image: odooIntegrationImg,
+    image: paymentGatewayIntegrationImage,
   },
   {
     id: 3,
@@ -4117,7 +4138,7 @@ const odooserv = [
       "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       " We create and integrate bespoke APIs to interface with Odoo and third-party applications. This guarantees real-time synchronization, efficient data interchange, and the ability to be adaptive when your business processes change.",
-    image: odooIntegrationImg,
+    image: apiDevelopmentIntegrationImage,
   },
   {
     id: 4,
@@ -4125,7 +4146,7 @@ const odooserv = [
     subtitle: "Consumer Goods Automation",
     description:
       "With Shopify and Magento, and Amazon or eBay, we integrate Odoo with major e-commerce platforms and marketplaces, so as to coordinate sales, inventory, and customer data efficiently.",
-    image: odooIntegrationImg,
+    image: ecommerceMarketplaceIntegrationImage,
   },
   {
     id: 5,
@@ -4133,7 +4154,7 @@ const odooserv = [
     subtitle: "Insurance Tech",
     description:
       "Our integration solutions enhance the capabilities of Odoo with cloud solutions and IoT technologies to provide real-time monitoring, automation, and analytics to improve decision-making and operational efficiency.",
-    image: odooIntegrationImg,
+    image: cloudIotIntegrationImage,
   },
 ];
 
@@ -4143,7 +4164,7 @@ const mainsupport = [
     title: "Odoo Maintenance & Support",
     description:
       "All of our Odoo support and maintenance services assure that your ERP system is operating properly, safely, and without failure. We will offer continuous support, be it in terms of bug fixes, performance monitoring, to ensure that your business activity remains efficient, scalable, and future-ready.",
-    image: ms,
+    image: bugFixingErrorResolutionImage,
   },
   {
     id: 1,
@@ -4152,7 +4173,7 @@ const mainsupport = [
       "Process Automation & Digital Transformation within SLB's Ecosyst",
     description:
       "We offer timely bug fixing and error-solving services to remove interference in your Odoo system. Our anticipatory measures will guarantee a seamless flow of work and continuous business running.",
-    image: ms,
+    image: bugFixingErrorResolutionImage,
   },
   {
     id: 2,
@@ -4161,7 +4182,7 @@ const mainsupport = [
       "Each landing page design is responsive and will ensure a prospective visitor can browse on any device—be it desktop, tablet, or mobile, as you will never lose a lead because of poor mobile compatibility.",
     description:
       "Our specialists constantly observe the functioning of the systems and optimize settings. This will make sure it is faster, there is less downtime, and it has better efficiency in your Odoo environment.",
-    image: ms,
+    image: performanceMonitoringOptimizationImage,
   },
   {
     id: 3,
@@ -4170,7 +4191,7 @@ const mainsupport = [
       "Be it lightning-speed layouts or on-page SEO, we make sure that your landing page is extremely searchable and simple to use, which will assist you in attracting and maintaining quality traffic.",
     description:
       "Stay updated with the latest Odoo features. We update to the new versions and security patches to improve the performance, functionality addition and security of your system against vulnerabilities.",
-    image: ms,
+    image: versionUpgradesPatchesImage,
   },
   {
     id: 4,
@@ -4178,7 +4199,7 @@ const mainsupport = [
     subtitle: "Consumer Goods Automation",
     description:
       "We use safe backup and disaster recovery measures to safeguard your business's important data. We have fast recovery and the least amount of downtime in case of a sudden breakdown.",
-    image: ms,
+    image: dataBackupRecoveryImage,
   },
   {
     id: 5,
@@ -4186,7 +4207,7 @@ const mainsupport = [
     subtitle: "Insurance Tech",
     description:
       "Our dedicated support staff is on call 24/7 to help solve technical problems, respond to inquiries, and make sure your Odoo system operates smoothly- so your business does not slow.",
-    image: ms,
+    image: technicalSupportImage,
   },
 ];
 

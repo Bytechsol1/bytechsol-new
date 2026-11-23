@@ -1,0 +1,194 @@
+{
+  "summary": [
+    "ClockIt gives a small parcel and logistics operation one system for shifts, labor cost, time off and package routes. Since early July 2026, a team of 9 has used it to record about 400 regular shifts."
+  ],
+  "overview": [
+    [
+      "Client",
+      "Name withheld (a small US parcel and logistics operation)"
+    ],
+    [
+      "Industry",
+      "Warehousing, logistics and route delivery"
+    ],
+    [
+      "Team using the system",
+      "9 people: 7 workers, 1 manager and 1 admin"
+    ],
+    [
+      "Delivered",
+      "Web portal for admins, managers and workers"
+    ],
+    [
+      "Core modules",
+      "Time tracking, payroll export, reports, time off, employee records and route scanning"
+    ],
+    [
+      "Live since",
+      "Early July 2026"
+    ]
+  ],
+  "challenge": [
+    "A small logistics team needed to see who was working, what each shift cost and where a package belonged. Staff worked morning shifts seven days a week, while route details arrived in Excel files.",
+    "The operation needed a system that could:",
+    "Let warehouse staff clock in quickly without a complicated login",
+    "Show managers who is on shift, on break or off shift in real time",
+    "Turn recorded hours into earnings and labor cost without manual calculation",
+    "Keep employee, pay and leave information in one place",
+    "Find a package's driver, route, stop and order details from a barcode",
+    "Before ClockIt, hours were added up by hand and route details stayed in separate spreadsheets. Staff had to search files to find a package’s driver or stop."
+  ],
+  "solution": [
+    "Three role-based portals give workers, managers and admins the tools they need. Workers handle their own shift; managers oversee activity; admins manage payroll and records.",
+    "ClockIt workflow: workforce and route operations",
+    "Worker actions become the shared record behind the Admin views. Route workbooks follow a separate path, turning uploaded files into package lookup."
+  ],
+  "portals": [
+    [
+      "Worker",
+      "Warehouse staff",
+      "Clock in and out, take breaks, view daily hours and estimated pay, request time off and manage a personal profile"
+    ],
+    [
+      "Manager",
+      "Operations leads",
+      "Oversee staff, activity, reports, routes and time off, without access to payroll"
+    ],
+    [
+      "Admin",
+      "Business owners and administrators",
+      "Manage payroll, employee records, time history, routes, reports and scheduling"
+    ]
+  ],
+  "capabilities": [
+    [
+      "Shift tracking",
+      "Clock in and out, with shift and break timers",
+      "Creates a time record from one simple action"
+    ],
+    [
+      "Break reasons",
+      "Quick options or a custom reason",
+      "Gives supervisors context for time away from work"
+    ],
+    [
+      "Live dashboard",
+      "Staff count, on-duty count, activity feed and actual vs scheduled hours",
+      "Shows the state of the shift at a glance"
+    ],
+    [
+      "Employee activity",
+      "Live status and a daily log for each worker",
+      "Lets admins review or manage attendance in one place"
+    ],
+    [
+      "Control table",
+      "Searchable time history, manual entries and audit labels",
+      "Shows when a record was created or edited, and by whom"
+    ],
+    [
+      "Route Scanner",
+      "Order lookup by USB or Bluetooth scanner, phone camera or typed Order ID",
+      "Connects a package to its driver, route, stop and order details"
+    ],
+    [
+      "Route import",
+      "Excel and ZIP upload, up to 25 workbooks per batch",
+      "Moves route files into a searchable system"
+    ],
+    [
+      "Payroll view",
+      "Hours, rates and earnings, with CSV export",
+      "Prepares time data for payroll processing"
+    ],
+    [
+      "Reports",
+      "Filters by worker, operation and date, with charts and CSV export",
+      "Turns time records into labor cost analysis"
+    ],
+    [
+      "Time off and scheduling",
+      "Leave requests, approvals, calendar view and weekly availability",
+      "Keeps leave decisions and availability in one place"
+    ],
+    [
+      "Employee records",
+      "Work, pay and personal profiles, with masked SSNs",
+      "Centralizes worker information"
+    ]
+  ],
+  "technology": [
+    [
+      "Frontend",
+      "Next.js App Router, built with Turbopack"
+    ],
+    [
+      "Data",
+      "Supabase-backed route file storage"
+    ],
+    [
+      "Sign-in",
+      "Portal-based PIN entry, with separate Admin, Manager and Worker experiences"
+    ],
+    [
+      "Worker onboarding",
+      "Admin-created profiles, with an email setup invitation"
+    ],
+    [
+      "Scanning",
+      "USB and Bluetooth HID scanners, plus camera scanning for Code128 and QR codes"
+    ],
+    [
+      "Data import",
+      "Excel and ZIP batch upload"
+    ],
+    [
+      "Time zone",
+      "Time-control records are shown in Eastern Time"
+    ],
+    [
+      "Interface",
+      "Light and dark themes, with a collapsible sidebar and mobile navigation"
+    ]
+  ],
+  "results": [
+    [
+      "Live use",
+      "About 4 months, from early July to November 2, 2026"
+    ],
+    [
+      "People on the system",
+      "9"
+    ],
+    [
+      "Regular shift records",
+      "About 400"
+    ],
+    [
+      "Hours in regular shift records",
+      "About 1,977"
+    ],
+    [
+      "Typical shift",
+      "About 5 hours, usually starting around 6:00 AM"
+    ],
+    [
+      "Recent route imports reviewed",
+      "9 workbooks from October 8 to 20, 2026, each covering 2 routes"
+    ]
+  ],
+  "resultsNotes": [
+    "ClockIt moved beyond a prototype and became part of the team's daily routine. By November 2, 2026, it had about four months of live shift history.",
+    "Regular shift records exclude entries under 1 minute or over 12 hours. They include a small number of test records, so these figures are approximate.",
+    "Shifts and breaks now feed one shared time record. Hours support estimated earnings and labour-cost reports, with CSV exports for payroll preparation. Manual corrections show who changed a record, and package scans return the driver, route and stop."
+  ],
+  "lessons": [
+    "The review found 32 shifts longer than 12 hours. Several appear to have stayed open until the worker’s next clock-in, showing the need for stronger clock-out checks.",
+    "That gap shapes the next stage of the product:",
+    "Automatic shift protection: add clock-out reminders, an automatic clock-out and alerts for unusually long shifts.",
+    "Cleaner payroll review: flag exceptions before hours reach payroll or labor reports.",
+    "Better route coverage: keep route imports current so the scanner stays useful every day.",
+    "Fuller leave tracking: show each worker's time-off balance.",
+    "Deeper labor insight: record work by operation to compare labor cost across tasks."
+  ]
+}

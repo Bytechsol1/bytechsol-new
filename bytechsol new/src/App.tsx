@@ -27,6 +27,15 @@ import NotFound from "./components/404";
 import Blogdetail from "./components/About/BlogDetail";
 import { ThemeProvider } from "./components/Portfolio/ThemeContext";
 import { PortfolioPage } from "./components/Portfolio/PortfolioPage";
+import LoopCaseStudy from "./components/Portfolio/LoopCaseStudy";
+import VoxiqCaseStudy from "./components/Portfolio/VoxiqCaseStudy";
+import CmjlCaseStudy from "./components/Portfolio/CmjlCaseStudy";
+import ClockItCaseStudy from "./components/Portfolio/ClockItCaseStudy";
+import BabylonLabourCaseStudy from "./components/Portfolio/BabylonLabourCaseStudy";
+import OdooErpCaseStudy from "./components/Portfolio/OdooErpCaseStudy";
+import FrigoFlowCaseStudy from "./components/Portfolio/FrigoFlowCaseStudy";
+import SkynodeCaseStudy from "./components/Portfolio/SkynodeCaseStudy";
+import "./components/Portfolio/CaseStudyReadability.css";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsAndCondition from "./components/TermsAndCondition";
 
@@ -90,6 +99,15 @@ export default function App() {
             </ThemeProvider>
           } />
           <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
+          <Route path="/portfolio/loop/" element={<LoopCaseStudy />} />
+          <Route path="/portfolio/voxiq/" element={<VoxiqCaseStudy />} />
+          <Route path="/portfolio/cmjl/" element={<CmjlCaseStudy />} />
+          <Route path="/portfolio/clockit/" element={<ClockItCaseStudy />} />
+          <Route path="/portfolio/labour-tracking/" element={<BabylonLabourCaseStudy />} />
+          <Route path="/portfolio/babylon-labour-tracker/" element={<BabylonLabourCaseStudy />} />
+          <Route path="/portfolio/odoo-erp/" element={<OdooErpCaseStudy />} />
+          <Route path="/portfolio/frigo-flow/" element={<FrigoFlowCaseStudy />} />
+          <Route path="/portfolio/skynode-partners/" element={<SkynodeCaseStudy />} />
           <Route path="/terms-and-condition/" element={<TermsAndCondition />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

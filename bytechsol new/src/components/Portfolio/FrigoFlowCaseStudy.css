@@ -1,0 +1,349 @@
+.frigo-case-study{--ff-ink:#234d43;--ff-muted:#647e74;--ff-line:#dce8e0;background:#fff;color:var(--ff-ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+.frigo-case-study *{box-sizing:border-box}
+.frigo-case-study :is(h1,h2,h3,p,figure,dl,dd,ol){margin:0}
+.frigo-case-study a{text-decoration:none}
+.frigo-case-study button{font:inherit;cursor:pointer}
+.frigo-case-study :is(a,button,summary,[tabindex]):focus-visible{outline:3px solid #398e79;outline-offset:5px}
+.frigo-case-study section[id]{scroll-margin-top:105px}
+.frigo-wrap{width:calc(100% - 100px);max-width:1240px;margin-inline:auto}
+.frigo-section{padding-block:100px}
+.frigo-case-study h2{font-size:clamp(34px,3.4vw,47px);line-height:1.16;letter-spacing:-1.8px;font-weight:500}
+.frigo-case-study h3{font-weight:500}
+.frigo-case-study p{font-size:15px;line-height:1.85;color:var(--ff-muted)}
+.frigo-case-study p+p{margin-top:18px}
+.frigo-case-study p.frigo-lead{font-size:18px;line-height:1.75}
+.frigo-eyebrow{display:block;font-size:10px;letter-spacing:1.7px;line-height:1.7;color:#508572;margin-bottom:22px;font-weight:600}
+.frigo-heading{display:grid;grid-template-columns:1.1fr 1fr;gap:65px;align-items:end;margin-bottom:42px}
+.frigo-heading>*{min-width:0}
+.frigo-brand{display:inline-flex;align-items:center;gap:13px;color:#147c73;font-family:Georgia,serif;font-size:30px;letter-spacing:-.5px;line-height:1.2}
+.frigo-brand b{display:grid;place-items:center;width:43px;height:43px;background:#147c73;color:white;border-radius:11px;font-size:31px;font-weight:400;font-style:italic}
+.frigo-hero{background:#f1f7f3;padding-top:28px}
+.frigo-back{display:inline-flex;align-items:center;gap:9px;font-size:12px;color:#6c897b;margin-bottom:32px}
+.frigo-back:hover{color:#187f6b}
+.frigo-hero-grid{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:65px}
+.frigo-hero-copy{min-width:0;padding-block:15px}
+.frigo-hero .frigo-eyebrow{font-size:9px;letter-spacing:1.7px;margin-bottom:25px}
+.frigo-hero .frigo-brand{margin-bottom:32px}
+.frigo-hero h1{font-size:clamp(55px,6vw,85px);line-height:1.04;letter-spacing:-3.9px;font-weight:500;margin-bottom:27px;color:#234f42}
+.frigo-case-study em{font-style:normal;color:#399783}
+.frigo-hero p{font-size:17px;line-height:1.85;color:#6c887a;margin-bottom:29px}
+.frigo-primary{display:inline-flex;align-items:center;justify-content:center;gap:26px;padding:17px 23px;background:#197b68;color:white;border:1px solid transparent;border-radius:5px;font-size:13px;transition:background .2s,transform .2s}
+.frigo-primary:hover{background:#126755;transform:translateY(-2px)}
+.frigo-hero-tags{display:flex;align-items:center;flex-wrap:wrap;gap:23px;margin-top:28px}
+.frigo-hero-tags span{display:flex;align-items:center;gap:7px;font-size:10px;color:#658973}
+.frigo-hero-image{position:relative;min-width:0}
+.frigo-hero-image>img{width:100%;height:585px;display:block;object-fit:cover;object-position:center 35%;border-radius:10px}
+.frigo-photo-note{position:absolute;bottom:53px;left:24px;right:24px;padding:20px;background:#fcfffaed;border:1px solid #fff;border-radius:6px;display:flex;align-items:center;gap:14px;backdrop-filter:blur(12px)}
+.frigo-photo-note svg{color:#499c7b;flex-shrink:0}
+.frigo-photo-note strong{font-size:13px;font-weight:500;color:#497456;display:block;margin-bottom:6px}
+.frigo-photo-note span{display:block;font-size:8px;letter-spacing:1.2px;color:#729c79}
+.frigo-hero-image figcaption{font-size:9px;line-height:1.7;color:#73927d;text-align:right;padding-top:10px}
+.frigo-meta{display:grid;grid-template-columns:1.2fr 1fr 1.2fr 1.3fr;gap:30px;padding-block:30px 35px;margin-top:37px;border-top:1px solid #d3e2d6}
+.frigo-meta>div{border-right:1px solid #d3e2d6}
+.frigo-meta>div:last-child{border:0}
+.frigo-meta span{display:block;font-size:8px;letter-spacing:1.4px;text-transform:uppercase;color:#658870;margin-bottom:10px}
+.frigo-meta strong{display:block;font-size:12px;line-height:1.7;color:#50765a;font-weight:400}
+.frigo-nav{border-bottom:1px solid var(--ff-line);background:#fff}
+.frigo-nav>div{display:flex;gap:40px;overflow-x:auto}
+.frigo-nav a{flex-shrink:0;font-size:11px;padding-block:20px;color:#5f806c}
+.frigo-nav a:hover{color:#1c8064}
+.frigo-summary{display:grid;grid-template-columns:1fr 1fr;gap:65px}
+.frigo-summary p{font-size:14px}
+.frigo-summary p+p{margin:0}
+.frigo-position{display:flex;align-items:center;gap:20px;padding:24px 28px;background:#f2f8f3;border:1px solid #dceade;border-radius:6px;margin-top:32px}
+.frigo-position svg{color:#4a9672;flex-shrink:0}
+.frigo-position p{font-size:13px;color:#5f8066}
+.frigo-challenge{background:#f7f8f3}
+.frigo-challenge-grid{display:grid;grid-template-columns:1fr 1fr;gap:85px;align-items:center}
+.frigo-challenge-grid h2{margin-bottom:27px}
+.frigo-needs article{display:flex;align-items:center;gap:21px;padding:22px 0;border-top:1px solid #dce3d5}
+.frigo-needs article:last-child{border-bottom:1px solid #dce3d5}
+.frigo-needs article>span{font-size:10px;color:#7c9774}
+.frigo-needs article>p{font-size:14px;flex:1;color:#6a8060}
+.frigo-needs article>svg{color:#7c9670;flex-shrink:0}
+.frigo-tabs{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #d9e7dd;border-radius:7px;overflow:hidden;margin-bottom:30px}
+.frigo-tabs button{display:flex;align-items:center;gap:10px;padding:21px 16px;border:0;border-right:1px solid #d9e7dd;border-bottom:3px solid transparent;background:#f9fcf9;color:#658c6e;font-size:12px;text-align:left}
+.frigo-tabs button:last-child{border-right:0}
+.frigo-tabs button>span{font-size:9px;color:#7ca186}
+.frigo-tabs button>svg{margin-left:auto;flex-shrink:0}
+.frigo-tabs button[aria-selected='true']{background:#e9f5eb;border-bottom-color:#5e9f75;color:#3a794e}
+.frigo-screen-copy{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start;margin-bottom:28px}
+.frigo-screen-copy h3{font-size:26px;line-height:1.4;letter-spacing:-.7px}
+.frigo-screen-copy p{font-size:14px}
+.frigo-screen-frame{padding:23px;background:#edf5ee;border:1px solid #d8e7da;border-radius:10px}
+.frigo-screen-bar{display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:8px;letter-spacing:1.4px;color:#689776;margin-bottom:18px}
+.frigo-screen-bar>span:first-child{display:flex;align-items:center;gap:8px}
+.frigo-screen-bar i{height:5px;width:5px;border-radius:50%;background:#6d9b71}
+.frigo-visual{min-width:0}
+.frigo-visual>button{position:relative;display:block;width:100%;padding:0;border:1px solid #d8e5da;background:#f2f7f0;border-radius:8px;overflow:hidden}
+.frigo-visual img{display:block;width:100%;height:auto}
+.frigo-visual>button>span{position:absolute;bottom:15px;right:15px;display:grid;place-items:center;width:35px;height:35px;border:1px solid #d4e5d7;border-radius:6px;background:#fff;color:#5b9369;box-shadow:0 3px 15px #143c281a;transition:transform .2s}
+.frigo-visual>button:hover>span{transform:scale(1.1)}
+.frigo-visual figcaption{color:#66866c;font-size:10px;line-height:1.7;padding-top:12px}
+.frigo-screen-tags{display:flex;justify-content:center;flex-wrap:wrap;gap:40px;padding-top:23px}
+.frigo-screen-tags span{display:flex;align-items:center;gap:8px;font-size:11px;color:#5c885f}
+.frigo-case-study p.frigo-demo-note{margin-top:25px;font-size:11px;line-height:1.9;color:#6d8a6e;border-top:1px solid var(--ff-line);padding-top:20px}
+.frigo-journey{background:#edf6ef}
+.frigo-journey-steps{padding:0;list-style:none;display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.frigo-journey-steps button{display:flex;flex-direction:column;align-items:center;gap:16px;width:100%;padding:23px 8px;border:1px solid #cfe1d3;border-radius:6px;background:#f7fbf7;color:#658c6b;transition:background .2s}
+.frigo-journey-steps button>span{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;border:1px solid #c4dac9;background:#e9f3e9;font-size:10px}
+.frigo-journey-steps strong{font-size:12px;font-weight:500}
+.frigo-journey-steps button[aria-pressed='true']{background:#2b7656;color:#fff;border-color:#2b7656}
+.frigo-journey-steps button[aria-pressed='true']>span{background:#4c916e;border-color:#79b38c;color:white}
+.frigo-journey-detail{display:flex;gap:32px;align-items:center;border:1px solid #cfe2d3;background:#fff;border-radius:7px;padding:30px;margin-top:22px;min-height:155px}
+.frigo-journey-detail>span{font-size:9px;letter-spacing:1.3px;color:#709674;white-space:nowrap}
+.frigo-journey-detail>div{flex:1}
+.frigo-journey-detail h3{font-size:24px;letter-spacing:-.5px;margin-bottom:10px}
+.frigo-journey-detail p{font-size:14px;color:#68806b}
+.frigo-journey-detail>svg{color:#69986e;flex-shrink:0}
+.frigo-collection-paths{display:flex;justify-content:center;gap:80px;margin-top:30px}
+.frigo-collection-paths>div{display:flex;align-items:center;gap:13px;color:#548561;font-size:13px}
+.frigo-collection-paths small{display:block;font-size:10px;color:#6e8e70;margin-top:7px}
+.frigo-providers{display:grid;gap:25px}
+.frigo-providers article{display:grid;grid-template-columns:.75fr 1.65fr;gap:45px;padding:30px;border:1px solid var(--ff-line);border-radius:7px}
+.frigo-providers article>div>span{font-size:8px;letter-spacing:1.4px;color:#648972}
+.frigo-providers h3{font-size:26px;letter-spacing:-.7px;margin:17px 0 15px}
+.frigo-provider-status{display:inline-block;padding:7px 10px;font-size:9px;line-height:1.7;font-weight:500;border:1px solid #e5dabc;background:#fff7e7;color:#8c7745;border-radius:4px}
+.frigo-provider-status.status-1{background:#edf6ed;border-color:#cbe0ce;color:#52835b}
+.frigo-provider-status.status-2{background:#eff4f8;border-color:#d3e0e9;color:#5f7d93}
+.frigo-providers p{font-size:14px}
+.frigo-integration-evidence{display:grid;grid-template-columns:.9fr .6fr .6fr 1.7fr;gap:30px;align-items:center;padding:27px;margin-top:27px;background:#f5f8f3;border:1px solid #dfe8da;border-radius:6px}
+.frigo-integration-evidence>span{font-size:9px;letter-spacing:1.3px;color:#6e9165;line-height:1.8}
+.frigo-integration-evidence strong{display:block;font-size:29px;font-weight:500;color:#638c56;letter-spacing:-1px}
+.frigo-integration-evidence small{display:block;font-size:10px;color:#739368;margin-top:8px}
+.frigo-integration-evidence p{font-size:11px;color:#6d8463;line-height:1.9}
+.frigo-context{padding-block:65px;background:#f4f7f4}
+.frigo-context-grid{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:65px}
+.frigo-context h2{font-size:38px;margin-bottom:25px}
+.frigo-context p{font-size:14px}
+.frigo-context-tags{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.frigo-context-tags span{font-size:9px;line-height:1.7;color:#628c69;border-bottom:1px solid #bfd5c3;padding-bottom:5px}
+.frigo-architecture{display:grid;grid-template-columns:1fr 25px 1fr 25px 1fr;align-items:center;gap:20px;padding:30px;background:#eff6f2;border:1px solid #d7e5dc;border-radius:8px}
+.frigo-architecture>div>span{font-size:8px;letter-spacing:1.5px;color:#57866b}
+.frigo-architecture h3{font-size:20px;letter-spacing:-.4px;margin:17px 0 12px}
+.frigo-architecture p{font-size:12px;color:#648571}
+.frigo-architecture>svg{color:#669a7c}
+.frigo-tech-list{display:grid;grid-template-columns:1fr 1fr;column-gap:50px;margin-top:30px}
+.frigo-tech-list>div{display:grid;grid-template-columns:115px 1fr;gap:20px;border-bottom:1px solid var(--ff-line);padding:20px 0;font-size:12px;line-height:1.8}
+.frigo-tech-list dt{color:#4b795e;font-weight:500}
+.frigo-tech-list dd{color:#6d8775}
+.frigo-migration{display:grid;grid-template-columns:1.2fr 1fr;gap:70px;align-items:center;padding-top:45px;margin-top:45px;border-top:1px solid var(--ff-line)}
+.frigo-migration .frigo-eyebrow{font-size:9px}
+.frigo-migration h3{display:flex;align-items:center;flex-wrap:wrap;gap:13px;font-size:24px;letter-spacing:-.6px;line-height:1.5;margin-bottom:21px}
+.frigo-migration h3 svg{color:#79a183;flex-shrink:0}
+.frigo-migration p{font-size:14px}
+.frigo-schema-counts{display:grid;grid-template-columns:1fr 1fr;border:1px solid #d7e6dc;border-radius:8px;overflow:hidden;background:#f6faf6}
+.frigo-schema-counts>div{padding:25px 30px;border-right:1px solid #d7e6dc;border-bottom:1px solid #d7e6dc}
+.frigo-schema-counts>div:nth-child(2n){border-right:0}
+.frigo-schema-counts>div:nth-child(n+3){border-bottom:0}
+.frigo-schema-counts strong{display:block;font-size:50px;letter-spacing:-2px;font-weight:400;color:#568460;margin-bottom:9px}
+.frigo-schema-counts span{font-size:11px;color:#638b6b}
+.frigo-deployment{display:flex;gap:20px;align-items:flex-start;border:1px solid #e3dfcc;border-radius:6px;background:#fbfaf2;padding:25px;margin-top:30px}
+.frigo-deployment svg{flex-shrink:0;color:#928c5b;margin-top:3px}
+.frigo-deployment p{font-size:12px;line-height:1.9;color:#817c54}
+.frigo-readiness{background:#183f32;color:#f1f8ed}
+.frigo-readiness .frigo-eyebrow{color:#a9c6a1}
+.frigo-readiness p{color:#bacdb1;font-size:14px}
+.frigo-controls{display:grid;grid-template-columns:repeat(4,1fr);gap:20px 25px;padding:30px 0;border-top:1px solid #537056;border-bottom:1px solid #537056}
+.frigo-controls>span{display:flex;align-items:flex-start;gap:10px;font-size:12px;line-height:1.8;color:#c6d9bd}
+.frigo-controls svg{color:#a2c69a;flex-shrink:0;margin-top:3px}
+.frigo-compliance-note{display:flex;gap:20px;align-items:flex-start;background:#284b37;border:1px solid #66845d;border-radius:6px;padding:25px;margin-top:30px}
+.frigo-compliance-note>svg{flex-shrink:0;color:#c3d3a1;margin-top:3px}
+.frigo-compliance-note p{font-size:13px;color:#d2ddbf;line-height:1.85}
+.frigo-timeline{list-style:none;padding:0}
+.frigo-timeline li{display:grid;grid-template-columns:35px 220px 1fr;gap:30px;align-items:baseline;padding:27px 0;border-top:1px solid var(--ff-line)}
+.frigo-timeline li:last-child{border-bottom:1px solid var(--ff-line)}
+.frigo-timeline li>span{font-size:10px;color:#6d9673}
+.frigo-timeline h3{font-size:20px;letter-spacing:-.4px}
+.frigo-timeline p{font-size:14px}
+.frigo-case-study p.frigo-pilot-note{font-size:12px;line-height:1.9;color:#6c856c;margin-top:25px}
+.frigo-engineering-heading{display:flex;justify-content:space-between;align-items:center;gap:25px;margin:48px 0 20px}
+.frigo-engineering-heading h3{font-size:25px;letter-spacing:-.6px;line-height:1.4}
+.frigo-engineering-heading>span{font-size:8px;letter-spacing:1.3px;color:#658a6c}
+.frigo-responses details{border-bottom:1px solid var(--ff-line)}
+.frigo-case-study summary{list-style:none;cursor:pointer}
+.frigo-case-study summary::-webkit-details-marker{display:none}
+.frigo-responses summary{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:16px;color:#4c7659}
+.frigo-responses summary>span:last-child{font-size:23px;color:#759c77;transition:transform .2s}
+.frigo-responses details[open]>summary>span:last-child{transform:rotate(45deg)}
+.frigo-responses details>p{padding:0 30px 25px 0;font-size:14px}
+.frigo-results{background:#f0f7ed}
+.frigo-snapshot{display:block;font-size:9px;letter-spacing:1.4px;color:#6b8b59;line-height:1.9;padding-bottom:5px}
+.frigo-result-list{border-top:1px solid #d0e0c6}
+.frigo-result-list article{display:flex;align-items:center;gap:25px;border-bottom:1px solid #d0e0c6;padding:23px 0}
+.frigo-result-list article>span{font-size:10px;color:#789b61}
+.frigo-result-list article>p{font-size:15px;color:#506f42;flex:1}
+.frigo-result-list article>svg{flex-shrink:0;color:#749f58}
+.frigo-outcome-note{display:grid;grid-template-columns:.7fr 2fr;gap:45px;margin-top:30px}
+.frigo-outcome-note strong{font-size:15px;font-weight:500;line-height:1.8;color:#5b7a47}
+.frigo-outcome-note p{font-size:12px;line-height:1.9;color:#6b805b}
+.frigo-gallery{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.frigo-gallery .frigo-visual>button{aspect-ratio:14/9}
+.frigo-gallery img{height:100%;object-fit:contain}
+.frigo-cta{background:#183f32;padding-block:70px 80px;color:#f7fcf3}
+.frigo-cta .frigo-brand{color:#d0e6c8;font-size:27px;margin-bottom:40px}
+.frigo-cta .frigo-brand b{background:#8bbb9c;color:#204d36}
+.frigo-cta .frigo-eyebrow{color:#abc9a4}
+.frigo-cta h2{font-size:clamp(43px,5vw,67px);letter-spacing:-2.5px;margin-bottom:26px}
+.frigo-cta em{color:#adce9e}
+.frigo-cta p{color:#bdd0b4;max-width:560px}
+.frigo-cta .frigo-wrap>div{display:flex;align-items:center;gap:35px;flex-wrap:wrap;margin-top:32px}
+.frigo-cta .frigo-primary{background:#b9d8a9;color:#2d5832}
+.frigo-cta .frigo-primary:hover{background:#cde8be}
+.frigo-cta-back{display:flex;align-items:center;gap:18px;color:#d1dfc9;font-size:12px}
+.frigo-lightbox{position:fixed;inset:0;z-index:100000;display:flex;flex-direction:column;background:#0e2a1ff7}
+.frigo-lightbox-toolbar{display:flex;align-items:center;gap:12px;padding:15px 25px;border-bottom:1px solid #506c4e;flex-shrink:0}
+.frigo-lightbox-toolbar>span{flex:1;color:#c7d9bf;font-size:12px;line-height:1.7}
+.frigo-lightbox-toolbar button{display:grid;place-items:center;width:42px;height:42px;flex-shrink:0;background:#2c4c32;border:1px solid #6d8761;color:#daebcc;border-radius:5px}
+.frigo-lightbox-toolbar button:hover{background:#45663e}
+.frigo-lightbox-canvas{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:25px;overflow:auto;overscroll-behavior:contain}
+.frigo-lightbox-canvas img{max-width:100%;max-height:100%;object-fit:contain}
+.frigo-lightbox-canvas.is-zoomed{display:block}
+.frigo-lightbox-canvas.is-zoomed img{width:auto;height:auto;max-width:none;max-height:none;margin:auto}
+@media(max-width:1050px){
+  .frigo-wrap{width:calc(100% - 64px)}
+  .frigo-hero-grid{gap:35px}
+  .frigo-hero h1{font-size:64px;letter-spacing:-2.6px}
+  .frigo-hero-image>img{height:540px}
+  .frigo-photo-note{left:18px;right:18px;padding:17px;gap:12px}
+  .frigo-photo-note strong{font-size:11px}
+  .frigo-photo-note span{font-size:6px;letter-spacing:.8px}
+  .frigo-heading,.frigo-summary,.frigo-challenge-grid,.frigo-context-grid,.frigo-migration{gap:38px}
+  .frigo-tabs button{font-size:11px;padding:19px 11px;gap:8px}
+  .frigo-tabs button>svg{display:none}
+  .frigo-journey-steps{gap:6px}
+  .frigo-journey-steps strong{font-size:10px}
+  .frigo-providers article{gap:30px}
+  .frigo-integration-evidence{gap:20px;padding:23px}
+  .frigo-context h2{font-size:34px}
+  .frigo-architecture{gap:12px;padding:24px}
+  .frigo-architecture h3{font-size:18px}
+  .frigo-tech-list{column-gap:30px}
+  .frigo-tech-list>div{grid-template-columns:95px 1fr;gap:15px;font-size:11px}
+  .frigo-controls{grid-template-columns:1fr 1fr}
+  .frigo-timeline li{grid-template-columns:25px 180px 1fr;gap:23px}
+  .frigo-meta{gap:20px}
+  .frigo-nav>div{gap:28px}
+}
+@media(max-width:760px){
+  .frigo-wrap{width:calc(100% - 40px)}
+  .frigo-section{padding-block:65px}
+  .frigo-case-study h2{font-size:34px;letter-spacing:-1.3px}
+  .frigo-case-study p{font-size:14px}
+  .frigo-case-study p.frigo-lead{font-size:17px}
+  .frigo-eyebrow{font-size:9px;letter-spacing:1.4px;margin-bottom:18px}
+  .frigo-heading{grid-template-columns:1fr;gap:25px;margin-bottom:30px}
+  .frigo-hero{padding-top:23px}
+  .frigo-back{margin-bottom:28px;font-size:11px}
+  .frigo-hero-grid{grid-template-columns:1fr;gap:30px}
+  .frigo-hero-copy{padding:0}
+  .frigo-hero .frigo-eyebrow{font-size:8px;letter-spacing:1.4px;margin-bottom:24px}
+  .frigo-brand{font-size:27px;gap:11px}
+  .frigo-brand b{width:37px;height:37px;font-size:28px;border-radius:9px}
+  .frigo-hero .frigo-brand{margin-bottom:27px}
+  .frigo-hero h1{font-size:clamp(60px,14vw,80px);letter-spacing:-3px;margin-bottom:24px}
+  .frigo-hero p{font-size:15px;margin-bottom:24px}
+  .frigo-hero-tags{gap:18px;margin-top:23px}
+  .frigo-hero-tags span{font-size:9px}
+  .frigo-hero-image>img{height:auto;aspect-ratio:1.05;object-position:center 32%}
+  .frigo-photo-note{left:13px;right:13px;bottom:44px;padding:16px 13px;gap:10px}
+  .frigo-photo-note strong{font-size:11px}
+  .frigo-photo-note span{font-size:6px;letter-spacing:.8px}
+  .frigo-photo-note svg{width:21px}
+  .frigo-meta{grid-template-columns:1fr 1fr;gap:24px 18px;margin-top:27px;padding-block:26px}
+  .frigo-meta>div:nth-child(2){border:0}
+  .frigo-meta strong{font-size:11px}
+  .frigo-meta span{font-size:7px;letter-spacing:1.1px;margin-bottom:8px}
+  .frigo-nav>div{gap:24px}
+  .frigo-nav a{font-size:10px;padding-block:17px}
+  .frigo-summary{grid-template-columns:1fr;gap:20px}
+  .frigo-position{padding:22px 18px;gap:15px;align-items:flex-start}
+  .frigo-position p{font-size:12px}
+  .frigo-position svg{margin-top:3px}
+  .frigo-challenge-grid{grid-template-columns:1fr;gap:32px}
+  .frigo-needs article{gap:15px;padding-block:20px}
+  .frigo-needs article>p{font-size:14px}
+  .frigo-tabs{grid-template-columns:1fr 1fr;margin-bottom:24px}
+  .frigo-tabs button{font-size:10px;gap:8px;padding:17px 10px}
+  .frigo-tabs button:nth-child(2){border-right:0}
+  .frigo-tabs button>span{font-size:8px}
+  .frigo-screen-copy{grid-template-columns:1fr;gap:16px;margin-bottom:24px}
+  .frigo-screen-copy h3{font-size:25px;letter-spacing:-.6px}
+  .frigo-screen-copy p{font-size:14px}
+  .frigo-screen-frame{padding:11px;border-radius:7px}
+  .frigo-screen-bar{font-size:6px;letter-spacing:.8px;gap:8px;margin-bottom:12px}
+  .frigo-screen-bar>span:first-child{gap:5px}
+  .frigo-visual figcaption{font-size:9px;padding-top:10px}
+  .frigo-visual>button>span{width:29px;height:29px;bottom:8px;right:8px}
+  .frigo-visual>button>span svg{width:15px;height:15px}
+  .frigo-screen-tags{justify-content:flex-start;gap:12px 20px;padding-top:20px}
+  .frigo-screen-tags span{font-size:10px}
+  .frigo-case-study p.frigo-demo-note{font-size:10px}
+  .frigo-journey-steps{display:flex;overflow-x:auto;padding-bottom:12px;gap:10px;scroll-snap-type:x proximity}
+  .frigo-journey-steps li{flex:0 0 110px;scroll-snap-align:start}
+  .frigo-journey-steps button{padding:20px 8px;gap:12px}
+  .frigo-journey-steps strong{font-size:11px}
+  .frigo-journey-detail{flex-wrap:wrap;gap:16px;padding:23px;margin-top:15px;min-height:0}
+  .frigo-journey-detail>span{width:100%;font-size:8px}
+  .frigo-journey-detail>svg{display:none}
+  .frigo-journey-detail h3{font-size:25px}
+  .frigo-journey-detail p{font-size:14px}
+  .frigo-collection-paths{flex-direction:column;gap:24px;margin-top:27px}
+  .frigo-collection-paths>div{gap:13px;font-size:13px}
+  .frigo-providers{gap:20px}
+  .frigo-providers article{grid-template-columns:1fr;gap:23px;padding:24px}
+  .frigo-providers h3{font-size:27px;margin-top:15px}
+  .frigo-providers p{font-size:14px}
+  .frigo-provider-status{font-size:9px}
+  .frigo-integration-evidence{grid-template-columns:1fr 1fr;gap:22px;padding:23px}
+  .frigo-integration-evidence>span{grid-column:1/-1}
+  .frigo-integration-evidence strong{font-size:33px}
+  .frigo-integration-evidence p{grid-column:1/-1;font-size:12px}
+  .frigo-context{padding-block:45px}
+  .frigo-context-grid{grid-template-columns:1fr;gap:30px}
+  .frigo-context-tags{gap:10px 15px}
+  .frigo-architecture{grid-template-columns:1fr;gap:22px;padding:25px}
+  .frigo-architecture>svg{transform:rotate(90deg)}
+  .frigo-architecture h3{font-size:23px;margin:14px 0 10px}
+  .frigo-architecture p{font-size:13px}
+  .frigo-tech-list{grid-template-columns:1fr;margin-top:22px}
+  .frigo-tech-list>div{grid-template-columns:95px 1fr;gap:15px;font-size:12px;padding-block:17px}
+  .frigo-migration{grid-template-columns:1fr;gap:30px;margin-top:33px;padding-top:35px}
+  .frigo-migration h3{font-size:23px;gap:10px}
+  .frigo-migration .frigo-eyebrow{font-size:8px;letter-spacing:1.1px}
+  .frigo-schema-counts>div{padding:23px}
+  .frigo-schema-counts strong{font-size:48px}
+  .frigo-deployment{padding:22px 18px;gap:15px}
+  .frigo-deployment p{font-size:12px}
+  .frigo-controls{grid-template-columns:1fr 1fr;gap:20px 17px;padding-block:26px}
+  .frigo-controls>span{font-size:10px;gap:8px}
+  .frigo-controls svg{width:15px}
+  .frigo-compliance-note{padding:22px 18px;gap:15px}
+  .frigo-compliance-note p{font-size:12px}
+  .frigo-timeline li{grid-template-columns:22px 1fr;gap:12px 18px;padding-block:24px}
+  .frigo-timeline h3{font-size:22px}
+  .frigo-timeline p{grid-column:2;font-size:14px}
+  .frigo-case-study p.frigo-pilot-note{font-size:12px}
+  .frigo-engineering-heading{flex-direction:column;align-items:flex-start;gap:14px;margin-top:35px}
+  .frigo-engineering-heading h3{font-size:25px}
+  .frigo-responses summary{font-size:15px;padding-block:20px}
+  .frigo-responses details>p{font-size:14px;padding-right:10px}
+  .frigo-snapshot{font-size:8px;letter-spacing:1.2px}
+  .frigo-result-list article{gap:16px;align-items:flex-start;padding-block:22px}
+  .frigo-result-list article>span{padding-top:5px}
+  .frigo-result-list article>p{font-size:14px}
+  .frigo-result-list article>svg{width:18px;margin-top:4px}
+  .frigo-outcome-note{grid-template-columns:1fr;gap:13px;margin-top:25px}
+  .frigo-outcome-note p{font-size:12px}
+  .frigo-gallery{grid-template-columns:1fr;gap:26px}
+  .frigo-cta{padding-block:55px 60px}
+  .frigo-cta .frigo-brand{margin-bottom:32px;font-size:25px}
+  .frigo-cta .frigo-eyebrow{font-size:8px}
+  .frigo-cta h2{font-size:40px;letter-spacing:-1.7px}
+  .frigo-cta .frigo-wrap>div{gap:25px}
+  .frigo-lightbox-toolbar{padding:12px;gap:8px}
+  .frigo-lightbox-toolbar>span{font-size:10px}
+  .frigo-lightbox-toolbar button{width:36px;height:36px}
+  .frigo-lightbox-canvas{padding:12px}
+}
+@media(prefers-reduced-motion:reduce){.frigo-case-study *{scroll-behavior:auto;transition:none}}

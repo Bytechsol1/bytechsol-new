@@ -1,0 +1,132 @@
+@font-face{font-family:FrigoEditorial;src:url('/Fonts/Guminert Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:FrigoEditorial;src:url('/Fonts/Guminert Semi Bold.ttf') format('truetype');font-weight:600;font-display:swap}
+.frigo-case-study{font-family:FrigoEditorial,Arial,sans-serif;--ff-ink:#163e38;--ff-muted:#5e7770;--ff-line:#dce7e1}
+.frigo-case-study h2{font-size:clamp(40px,4.3vw,61px);line-height:1.08;letter-spacing:-2.4px}
+.frigo-section{padding-block:115px}
+.frigo-heading{grid-template-columns:1.25fr 1fr;gap:85px;margin-bottom:48px}
+.frigo-heading>p{max-width:470px}
+.frigo-case-study p{line-height:1.85}
+.frigo-v2-hero{background:#fff;padding-top:25px}
+.frigo-v2-hero .frigo-back{margin-bottom:38px}
+.frigo-v2-hero-top{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.frigo-v2-hero-top .frigo-brand,.frigo-v2-hero-top .frigo-eyebrow{margin:0}
+.frigo-v2-hero-top .frigo-eyebrow{font-size:9px;letter-spacing:1.8px}
+.frigo-v2-hero-copy{display:grid;grid-template-columns:1.65fr 1fr;gap:80px;align-items:end;padding:45px 0 54px}
+.frigo-v2-hero h1{font-size:clamp(54px,5.7vw,82px);letter-spacing:-3.8px;line-height:1.05;color:#163e38;margin:0}
+.frigo-v2-hero h1 em{color:#147c73}
+.frigo-v2-hero-copy p{font-size:16px;line-height:1.8;margin-bottom:22px;max-width:390px}
+.frigo-primary{border-radius:100px;background:#147c73;padding:15px 22px;gap:20px}
+.frigo-v2-hero .frigo-hero-tags{gap:20px;margin-top:23px}
+.frigo-v2-hero .frigo-hero-tags span{font-size:9px}
+.frigo-v2-hero>.frigo-wrap>.frigo-visual>button{border-radius:22px;border:0}
+.frigo-v2-hero>.frigo-wrap>.frigo-visual img{aspect-ratio:16/11}
+.frigo-meta{margin-top:28px;padding-block:30px 38px}
+.frigo-meta strong{font-size:12px;color:#335d50;padding-right:16px}
+.frigo-nav{background:#fff}
+.frigo-nav a{font-size:12px}
+.frigo-v2-pair{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;padding-bottom:110px;align-items:start}
+.frigo-v2-pair>.frigo-visual>button,.frigo-v2-art>.frigo-visual>button{border:0;border-radius:18px}
+.frigo-v2-pair>.frigo-visual img{aspect-ratio:1/1.08;object-fit:cover;object-position:45% center}
+.frigo-v2-art{position:relative;min-width:0}
+.frigo-v2-art .frigo-visual img{aspect-ratio:1/1.24;object-fit:cover;object-position:center bottom}
+.frigo-v2-art-copy{position:absolute;left:35px;right:30px;top:30px;pointer-events:none}
+.frigo-v2-art-copy .frigo-eyebrow{font-size:8px;margin-bottom:12px}
+.frigo-v2-art-copy h2{font-size:40px;letter-spacing:-1.4px}
+.frigo-challenge{background:#f4f8f4}
+.frigo-challenge-grid{align-items:start;gap:80px}
+.frigo-challenge h2{font-size:52px}
+.frigo-needs article{padding-block:24px}
+.frigo-tabs{border-radius:12px;background:#f4f8f4;gap:6px;padding:7px;border:1px solid #dce8e2}
+.frigo-tabs button{padding:17px 12px;border:0;border-radius:8px;background:transparent;color:#466b5f;font-size:12px}
+.frigo-tabs button[aria-selected=true]{background:#147c73;color:white;box-shadow:0 3px 10px #143e381a}
+.frigo-tabs button[aria-selected=true]>span{color:#a3cfc0}
+#frigo-screen-panel{display:flex;flex-direction:column}
+.frigo-screen-frame{order:-1;padding:25px 25px 18px;border-radius:18px;background:#edf5f0;margin-bottom:32px}
+.frigo-screen-copy{margin-bottom:0;grid-template-columns:1fr 1fr;gap:90px}
+.frigo-screen-copy h3{font-size:32px;line-height:1.16;max-width:450px}
+.frigo-screen-tags{justify-content:flex-start;gap:25px}
+.frigo-visual>button{border-radius:13px}
+.frigo-visual figcaption{font-size:10px;color:#5c796b}
+.frigo-journey{background:#eaf4ed}
+.frigo-journey-steps button{border-radius:12px;padding-block:27px}
+.frigo-journey-steps button[aria-pressed=true]{background:#147c73;border-color:#147c73}
+.frigo-journey-detail{border-radius:14px;padding:35px}
+.frigo-v2-mobile{padding-bottom:0}
+.frigo-v2-mobile>.frigo-visual>button{border:0;border-radius:20px}
+.frigo-providers article{padding:34px;border-radius:14px}
+.frigo-providers h3{font-size:30px}
+.frigo-integration-evidence{border-radius:14px}
+.frigo-v2-detail-section{padding-top:0}
+.frigo-v2-details{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.frigo-v2-details>.frigo-visual{min-width:0}
+.frigo-v2-details .frigo-visual>button{padding:26px;background:#eaf3ed;border-radius:15px}
+.frigo-v2-details .frigo-visual:nth-child(2)>button{background:#dcece6}
+.frigo-v2-details img{border-radius:7px;box-shadow:0 12px 25px #153d3520}
+.frigo-context{background:#f4f8f4}
+.frigo-context h2{font-size:42px}
+.frigo-architecture{border-radius:14px;padding:35px}
+.frigo-readiness{background:#153f37}
+.frigo-readiness .frigo-heading>p{color:#c2d8ce}
+.frigo-readiness .frigo-eyebrow{color:#a3cfc0}
+.frigo-compliance-note{background:#244d40;border-color:#5b8070;border-radius:12px}
+.frigo-results{background:#edf5ed}
+.frigo-gallery{gap:35px}
+.frigo-gallery .frigo-visual>button{aspect-ratio:1.4;padding:20px;background:#f0f6f2}
+.frigo-gallery img{border-radius:7px;box-shadow:0 8px 20px #183f3214}
+.frigo-v2-brand-section{display:grid;grid-template-columns:1.15fr 1fr;gap:25px;padding-bottom:110px}
+.frigo-v2-brand-card,.frigo-v2-type-card{min-width:0;border-radius:18px;padding:40px}
+.frigo-v2-brand-card{background:#147c73;color:white;display:flex;flex-direction:column;align-items:flex-start;min-height:350px}
+.frigo-v2-brand-card .frigo-eyebrow{color:#c4e3d9;font-size:9px}
+.frigo-v2-brand-card .frigo-brand{color:white;font-size:43px;margin-top:22px}
+.frigo-v2-brand-card .frigo-brand b{background:#a3cfc0;color:#145e55;width:55px;height:55px;font-size:39px}
+.frigo-v2-brand-card p{color:#deeee7;font-size:22px;line-height:1.35;margin-top:25px}
+.frigo-v2-brand-foot{margin-top:auto;padding-top:40px;font-size:8px;letter-spacing:1.5px;color:#c4dfd4}
+.frigo-v2-type-card{background:#f4f8f4;display:flex;flex-direction:column}
+.frigo-v2-type-card strong{font-size:130px;font-weight:400;line-height:1;letter-spacing:-8px;color:#147c73}
+.frigo-v2-type-card p{font-size:24px;margin-top:20px;color:#335d50}
+.frigo-v2-type-card>span:last-child{font-size:11px;line-height:1.8;margin-top:12px;color:#657c70}
+.frigo-v2-palette{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;border-radius:12px;border:1px solid #dae6df}
+.frigo-v2-palette>div{min-height:105px;padding:25px;display:flex;justify-content:space-between;align-items:flex-end;gap:15px;color:#234d43}
+.frigo-v2-palette>div:first-child{color:white}
+.frigo-v2-palette span{font-size:15px}.frigo-v2-palette small{font-size:10px;letter-spacing:1px}
+.frigo-cta{background:#153f37;padding-block:85px 95px}
+.frigo-cta h2{font-size:72px;line-height:1.05}
+.frigo-cta .frigo-primary{background:#a3cfc0;color:#173f35}
+.frigo-cta em{color:#a3cfc0}
+@media(max-width:1100px){.frigo-v2-hero-copy{gap:35px;grid-template-columns:1.4fr 1fr}.frigo-v2-hero h1{font-size:63px;letter-spacing:-2.9px}.frigo-v2-hero-copy p{font-size:15px}.frigo-heading{gap:40px}.frigo-challenge-grid{gap:40px}.frigo-challenge h2{font-size:43px}.frigo-v2-art-copy{left:25px;top:25px}.frigo-v2-art-copy h2{font-size:32px}.frigo-v2-brand-card,.frigo-v2-type-card{padding:30px}.frigo-v2-brand-card .frigo-brand{font-size:35px}.frigo-v2-palette>div{padding:20px;flex-direction:column;align-items:flex-start;gap:15px}.frigo-screen-copy{gap:40px}}
+@media(max-width:760px){.frigo-section{padding-block:70px}.frigo-case-study h2{font-size:37px;letter-spacing:-1.5px;line-height:1.12}.frigo-heading{grid-template-columns:1fr;gap:24px;margin-bottom:32px}.frigo-v2-hero{padding-top:22px}.frigo-v2-hero .frigo-back{margin-bottom:30px}.frigo-v2-hero-top{align-items:flex-start;gap:20px;flex-direction:column}.frigo-v2-hero-top .frigo-eyebrow{font-size:8px;letter-spacing:1.3px}.frigo-v2-hero-copy{grid-template-columns:1fr;gap:23px;padding:28px 0 32px}.frigo-v2-hero h1{font-size:clamp(40px,10.8vw,70px);letter-spacing:-1.8px;line-height:1.08}.frigo-v2-hero-copy p{font-size:15px;margin-bottom:22px}.frigo-v2-hero .frigo-hero-tags{margin-top:22px;gap:20px}.frigo-v2-hero>.frigo-wrap>.frigo-visual>button{border-radius:12px}.frigo-meta{margin-top:23px;gap:24px 18px}.frigo-meta strong{font-size:11px}.frigo-nav a{font-size:11px}.frigo-v2-pair{grid-template-columns:1fr;gap:24px;padding-bottom:65px}.frigo-v2-pair>.frigo-visual img{aspect-ratio:1.1}.frigo-v2-art .frigo-visual img{aspect-ratio:1}.frigo-v2-art-copy{left:25px;top:22px}.frigo-v2-art-copy h2{font-size:30px}.frigo-challenge-grid{gap:30px}.frigo-tabs{gap:4px;padding:5px;margin-bottom:22px}.frigo-tabs button{font-size:10px;padding:15px 10px;gap:8px}.frigo-screen-frame{padding:12px 10px;margin-bottom:25px;border-radius:12px}.frigo-screen-copy{grid-template-columns:1fr;gap:16px}.frigo-screen-copy h3{font-size:27px}.frigo-screen-tags{gap:13px 18px}.frigo-journey-detail{padding:24px}.frigo-v2-mobile{padding-bottom:0}.frigo-v2-mobile>.frigo-visual>button{border-radius:12px}.frigo-v2-detail-section{padding-top:0}.frigo-v2-details{grid-template-columns:1fr;gap:26px}.frigo-v2-details .frigo-visual>button{padding:15px}.frigo-providers article{padding:24px}.frigo-providers h3{font-size:27px}.frigo-architecture{padding:26px}.frigo-gallery{gap:27px}.frigo-gallery .frigo-visual>button{padding:12px}.frigo-v2-brand-section{grid-template-columns:1fr;gap:20px;padding-bottom:65px}.frigo-v2-brand-card,.frigo-v2-type-card{padding:30px;min-height:315px}.frigo-v2-brand-card .frigo-brand{font-size:34px;margin-top:13px}.frigo-v2-type-card strong{font-size:110px}.frigo-v2-type-card p{font-size:22px}.frigo-v2-palette>div{padding:18px 10px;min-height:100px}.frigo-v2-palette span{font-size:11px}.frigo-v2-palette small{font-size:8px;letter-spacing:.4px}.frigo-cta{padding-block:60px 70px}.frigo-cta h2{font-size:41px;letter-spacing:-1.7px}}
+.frigo-case-study .frigo-tabs{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;overflow:visible}
+.frigo-case-study .frigo-tabs button{white-space:normal;min-width:0;min-height:68px;line-height:1.4;justify-content:center;text-align:center}
+.frigo-case-study .frigo-tabs button>span,.frigo-case-study .frigo-tabs button>svg{display:none}
+.frigo-case-study .frigo-journey-hint{margin-bottom:22px;max-width:65ch}
+.frigo-case-study .frigo-journey-steps{grid-template-columns:repeat(7,minmax(0,1fr))}
+.frigo-case-study .frigo-journey-steps li{min-width:0}
+.frigo-case-study .frigo-journey-steps button{min-height:118px;line-height:1.4}
+.frigo-case-study .frigo-journey-steps strong{overflow-wrap:anywhere}
+.frigo-case-study .frigo-provider-status{display:inline-block;max-width:100%;white-space:normal;line-height:1.5}
+.frigo-case-study .frigo-tech-list>div{grid-template-columns:135px minmax(0,1fr)}
+.frigo-case-study .frigo-controls-caption{color:#d5e8df;margin-bottom:26px;max-width:68ch}
+.frigo-case-study .frigo-controls{grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.frigo-case-study .frigo-architecture{grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr) 22px minmax(0,1fr)}
+.frigo-case-study .frigo-architecture>div{min-width:0}
+.frigo-case-study .frigo-architecture h3{overflow-wrap:anywhere;line-height:1.35}
+@media(max-width:1050px){
+  .frigo-case-study .frigo-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .frigo-case-study .frigo-journey-steps{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+  .frigo-case-study .frigo-journey-steps button{min-height:110px}
+  .frigo-case-study .frigo-tech-list{grid-template-columns:1fr}
+  .frigo-case-study .frigo-architecture{grid-template-columns:1fr;gap:20px}
+  .frigo-case-study .frigo-architecture>svg{transform:rotate(90deg)}
+}
+@media(max-width:760px){
+  .frigo-case-study .frigo-journey-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;padding-bottom:0}
+  .frigo-case-study .frigo-journey-steps li{scroll-snap-align:none}
+  .frigo-case-study .frigo-journey-steps button{min-height:104px;padding:18px 12px;gap:12px}
+  .frigo-case-study .frigo-meta{grid-template-columns:1fr;gap:20px}
+  .frigo-case-study .frigo-meta>div{border:0;padding-bottom:18px;border-bottom:1px solid var(--ff-line)}
+  .frigo-case-study .frigo-integration-evidence{grid-template-columns:1fr 1fr}
+  .frigo-case-study .frigo-tech-list>div{grid-template-columns:1fr;gap:7px}
+  .frigo-case-study .frigo-controls{grid-template-columns:1fr;gap:20px}
+  .frigo-case-study .frigo-v2-palette{grid-template-columns:1fr}
+  .frigo-case-study .frigo-v2-palette>div{min-height:80px;flex-direction:row;align-items:center;padding:20px 24px}
+}

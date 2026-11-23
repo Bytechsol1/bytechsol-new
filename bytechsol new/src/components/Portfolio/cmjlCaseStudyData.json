@@ -1,0 +1,111 @@
+{
+  "features": [
+    {
+      "title": "Operations dashboard",
+      "description": "Monitor delivery operations, follow progress and review day-to-day activity in one dashboard.",
+      "value": "Improved operational visibility and management coordination."
+    },
+    {
+      "title": "Contractor onboarding",
+      "description": "Review applications and documents, track approval decisions and manage onboarding actions.",
+      "value": "More structured contractor administration and clearer application tracking."
+    },
+    {
+      "title": "Routes and dispatch",
+      "description": "Import driver-specific route data, organise stops and packages, and coordinate delivery assignments.",
+      "value": "More consistent route administration and coordination."
+    },
+    {
+      "title": "Special delivery orders",
+      "description": "Manage delivery opportunities by schedule, mileage, stop count, vehicle needs and compensation.",
+      "value": "Greater flexibility in handling variable delivery demand."
+    },
+    {
+      "title": "Driver notifications",
+      "description": "Send operational alerts and messages to contractors about available delivery work.",
+      "value": "More responsive communication workflows."
+    },
+    {
+      "title": "Calling and chat",
+      "description": "Contact drivers from the management portal to clarify assignments and resolve questions.",
+      "value": "Reduced need to switch between separate communication channels."
+    },
+    {
+      "title": "Rule-based payroll",
+      "description": "Calculate driver pay using delivery activity and the company’s compensation rules.",
+      "value": "Less reliance on repetitive manual calculations."
+    },
+    {
+      "title": "Weekly settlements",
+      "description": "Bring route pay, bonuses, deductions, net payable amounts and payment disputes into one process.",
+      "value": "More organized contractor compensation management."
+    },
+    {
+      "title": "Early Payout",
+      "description": "Give contractors an option to access payment for completed work sooner, as described in project updates.",
+      "value": "An additional payment convenience for contractors."
+    },
+    {
+      "title": "Driver mobile apps",
+      "description": "Connect contractors to the delivery ecosystem through dedicated iOS and Android apps.",
+      "value": "A connected field and office operational experience."
+    }
+  ],
+  "challenges": [
+    {
+      "title": "Manual route management",
+      "description": "Routes originated in OnTrac. Operations staff selected driver routes, exported CSV or Excel files, then uploaded them into Expedited’s platform, creating a repeated administrative handoff."
+    },
+    {
+      "title": "Complex contractor management",
+      "description": "Driver applications, document reviews, approvals, and onboarding actions needed a structured, centralized process."
+    },
+    {
+      "title": "Time-sensitive communication",
+      "description": "Special delivery opportunities required fast notifications and direct communication with available drivers."
+    },
+    {
+      "title": "Complicated payroll and settlements",
+      "description": "Driver compensation depended on route activity, bonuses, deductions, settlement calculations, and disputes."
+    },
+    {
+      "title": "Operational visibility",
+      "description": "Management needed a clearer view of progress, assignments, contractor activities, and operational issues."
+    }
+  ],
+  "overview": [
+    "Expedited Transport Services needed one place to coordinate contractors, assign routes, handle special deliveries and manage driver payments.",
+    "BytechSol brought these workflows into CMJL: a web platform for operations staff, supported by iOS and Android driver apps. Contractor records, dispatch, communication, payroll and settlements share one operational foundation."
+  ],
+  "solution": [
+    "CMJL connects a web operations platform with dedicated driver apps. Staff can review contractors, assign delivery work, communicate with drivers and manage compensation. The mobile apps connect contractors to the same delivery ecosystem."
+  ],
+  "integration": [
+    "The project also included detailed analysis of a direct OnTrac integration. At the time of the documented review, route intake depended on selecting and exporting carrier data into files, then importing those files into Expedited’s system.",
+    "A phased technical proposal investigated read-only route, manifest, assignment, reference-code, and change data access. A separately approved future phase would return delivery events and proof of delivery to OnTrac with validation, retry, audit, and reconciliation controls.",
+    "OptimoRoute-based route analysis was also being implemented to explore planned-versus-actual activity, distance, time, and service outcomes. Direct OnTrac API connectivity remained proposed, while OptimoRoute analysis was in implementation in September 2026; neither should be represented as a verified completed production integration."
+  ],
+  "approach": [
+    "Centralization: Bring operational tasks into one management environment.",
+    "Operational efficiency: Structure route intake, assignments, communication, and compensation workflows.",
+    "Driver experience: Support contractors through mobile applications, communications, and payment features.",
+    "Scalability: Design for additional contractors, delivery work, integrations, and reporting."
+  ],
+  "impact": [
+    "Centralized management of contractor applications, dispatch, special orders, communications, and financial workflows.",
+    "More structured driver coordination through Driver Pool, alerts, calling, and chat.",
+    "More connected compensation administration through payroll, settlements, and Early Payout.",
+    "A management dashboard for operational monitoring and oversight.",
+    "A web and mobile ecosystem connecting dispatch staff with contractor-facing applications.",
+    "These are documented capabilities and intended operational benefits. Quantified cost savings, delivery-time improvements, or revenue increases have not been independently verified."
+  ],
+  "result": [
+    "CMJL brings contractor management, dispatch, communication and compensation into one web and mobile platform. It gives the operations team a connected view of daily work and a foundation for further automation."
+  ],
+  "technology": [
+    "Applications  Custom web management platform; iOS and Android driver apps",
+    "Capabilities  Driver Pool; dispatch; special orders; notifications; calls and chat; payroll; settlements; Early Payout; dashboard",
+    "Architecture  Custom application development; API design; operational data processing; workflow automation",
+    "Integration context  OnTrac route-data workflow and proposed API connectivity; OptimoRoute analysis in implementation"
+  ]
+}

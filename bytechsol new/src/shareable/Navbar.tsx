@@ -1,6 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { ChevronDown, BarChart, BrainCircuit, Monitor, PenTool, AppWindow, Search, Layers, ShoppingCart, Code } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import type { FC } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { ArrowUpRight, BarChart, BrainCircuit, Monitor, PenTool, AppWindow, Search, Layers, ShoppingCart, Code, ChevronDown, Menu, X } from "lucide-react";
 import "../assets/components-css/Navbar.css";
 import "../App.css";
 
@@ -17,208 +18,126 @@ export type NavbarProps = {
   sticky?: boolean;
 };
 
-const Navbar: React.FC<NavbarProps> = ({
-  logoIconSrc,
-  logoTextSrc,
-  backgroundColor,
-  backgroundImage,
-  variant = "light",
-  navClassName = "",
-  linkClassName = "text-dark",
-  buttonClassName = "",
-  buttonSchemeClass = "",
-  sticky = true,
+const services = [
+  { to: "/services/website-design-and-development/", label: "Web Design & Development", Icon: Monitor },
+  { to: "/services/web-app/", label: "Web Applications", Icon: AppWindow },
+  { to: "/services/custom-web/", label: "Custom Web Solutions", Icon: Code },
+  { to: "/services/odoo-services/", label: "Odoo Services", Icon: BarChart },
+  { to: "/services/erp-service/", label: "ERP Services", Icon: Layers },
+  { to: "/services/e-commerce-solutions/", label: "E-Commerce Solutions", Icon: ShoppingCart },
+  { to: "/services/ai-ml/", label: "AI & ML Solutions", Icon: BrainCircuit },
+  { to: "/services/seo-service/", label: "SEO Services", Icon: Search },
+  { to: "/services/brand-building/", label: "Brand Building", Icon: PenTool },
+];
+const links = [["/about/", "About"], ["/blog/", "Blog"], ["/portfolio/", "Portfolio"], ["/careers/", "Careers"]];
+
+const Navbar: FC<NavbarProps> = ({
+  logoIconSrc, logoTextSrc, backgroundColor, backgroundImage, variant = "light",
+  navClassName = "", linkClassName = "text-dark", buttonClassName = "", buttonSchemeClass = "", sticky = true,
 }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const header = useRef<HTMLElement>(null);
+  const menuButton = useRef<HTMLButtonElement>(null);
+  const servicesButton = useRef<HTMLButtonElement>(null);
+  const hoverCloseTimer = useRef<number | null>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    setMenuOpen(false);
+    setServicesOpen(false);
+  }, [location.pathname, location.search, location.hash]);
+
+  useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 992px)");
+    const close = () => { setMenuOpen(false); setServicesOpen(false); };
+    desktop.addEventListener("change", close);
+    return () => {
+      desktop.removeEventListener("change", close);
+      if (hoverCloseTimer.current !== null) window.clearTimeout(hoverCloseTimer.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!menuOpen && !servicesOpen) return;
+    const onPointerDown = (event: PointerEvent) => {
+      if (!header.current?.contains(event.target as Node)) {
+        setMenuOpen(false);
+        setServicesOpen(false);
+      }
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      event.preventDefault();
+      if (servicesOpen) {
+        setServicesOpen(false);
+        servicesButton.current?.focus();
+      } else {
+        setMenuOpen(false);
+        menuButton.current?.focus();
+      }
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [menuOpen, servicesOpen]);
+
+  const closeMenus = () => {
+    if (hoverCloseTimer.current !== null) window.clearTimeout(hoverCloseTimer.current);
+    setMenuOpen(false);
+    setServicesOpen(false);
+  };
   const backgroundStyle = backgroundImage
-    ? {
-      backgroundImage: `url(${backgroundImage})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-    }
-    : backgroundColor
-      ? { backgroundColor }
-      : {};
+    ? { backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }
+    : backgroundColor ? { backgroundColor } : {};
 
   return (
-    <header>
-      <nav
-        className={[
-          "navbar",
-          "navbar-expand-lg",
-          variant === "light" ? "navbar-light" : "navbar-dark",
-          "navbar-custom",
-          sticky ? "sticky-top" : "",
-          navClassName,
-        ].join(" ")}
-        style={backgroundStyle}
-      >
-        <div className="container-fluid px-md-5">
-          <Link className="navbar-brand d-flex align-items-center" to="/">
-            <img
-              src={logoIconSrc}
-              alt="logo-icon"
-              className="logo-icon"
-              data-aos="fade-right"
-            />
-            {logoTextSrc ? (
-              <img
-                src={logoTextSrc}
-                alt="logo-text"
-                className="logo-text ms-2"
-                data-aos="fade-right"
-              />
-            ) : null}
+    <header ref={header} className={`site-header${sticky ? " site-header--sticky" : ""}`}>
+      <nav className={`site-navbar ${navClassName}`} style={backgroundStyle} aria-label="Main navigation" data-variant={variant}
+        data-menu-theme={/text-(white|light)/.test(linkClassName) ? "dark" : "light"}>
+        <div className="site-navbar__inner">
+          <Link className="site-navbar__brand" to="/" aria-label="BytechSol home" onClick={closeMenus}>
+            <img src={logoIconSrc} alt="" className="site-navbar__logo-icon" />
+            {logoTextSrc && <img src={logoTextSrc} alt="BytechSol" className="site-navbar__logo-text" />}
           </Link>
-
-          <nav className="navbar navbar-expand-lg navbar-light ">
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-          </nav>
-
-          <div
-            className="collapse navbar-collapse"
-            id="navbarNav"
-            data-aos="fade-down"
-          >
-            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-
-
-              <li className="nav-item dropdown-parent">
-                <div className={`nav-link-content ${linkClassName}`}>
-                  <Link to="/services/" className={`text-decoration-none ${linkClassName}`}>Services</Link>
-                  <ChevronDown className="dropdown-arrow" size={16} />
+          <button ref={menuButton} className="site-navbar__toggle" type="button" aria-controls="site-navigation"
+            aria-expanded={menuOpen} aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+            onClick={() => { setMenuOpen(!menuOpen); setServicesOpen(false); }}>
+            {menuOpen ? <X size={25} aria-hidden="true" /> : <Menu size={25} aria-hidden="true" />}
+          </button>
+          <div id="site-navigation" className="site-navbar__menu" data-open={menuOpen}>
+            <ul className="site-navbar__links">
+              <li className="site-navbar__services"
+                onMouseEnter={() => {
+                  if (hoverCloseTimer.current !== null) window.clearTimeout(hoverCloseTimer.current);
+                  if (window.matchMedia("(min-width: 992px) and (hover: hover)").matches) setServicesOpen(true);
+                }}
+                onMouseLeave={() => {
+                  if (window.matchMedia("(min-width: 992px) and (hover: hover)").matches) {
+                    hoverCloseTimer.current = window.setTimeout(() => setServicesOpen(false), 200);
+                  }
+                }}
+                onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setServicesOpen(false); }}>
+                <div className="site-navbar__services-row">
+                  <Link to="/services/" className={`site-navbar__link ${linkClassName}`} onClick={closeMenus}>Services</Link>
+                  <button ref={servicesButton} className="site-navbar__services-toggle" type="button" aria-label="Browse services"
+                    aria-controls="site-services" aria-expanded={servicesOpen} onClick={() => setServicesOpen(!servicesOpen)}>
+                    <ChevronDown size={17} aria-hidden="true" />
+                  </button>
                 </div>
-
-                <div className="mega-menu">
-                  {/* Column 1 */}
-                  <div className="menu-column">
-                    <div className="service-list">
-                      <Link to="/services/website-design-and-development/" className="service-item">
-                        <div className="service-icon-box">
-                          <Monitor size={20} />
-                        </div>
-                        <div className="service-info">
-                          <h4>Web Design & Dev</h4>
-                        </div>
-                      </Link>
-                      <Link to="/services/web-app/" className="service-item">
-                        <div className="service-icon-box">
-                          <AppWindow size={20} />
-                        </div>
-                        <div className="service-info">
-                          <h4>Web App Handeling</h4>
-                        </div>
-                      </Link>
-                      <Link to="/services/custom-web/" className="service-item">
-                        <div className="service-icon-box">
-                          <Code size={20} />
-                        </div>
-                        <div className="service-info">
-                          <h4>Custom Web Solutions</h4>
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Column 2 */}
-                  <div className="menu-column">
-                    <div className="service-list">
-                      <Link to="/services/odoo-services/" className="service-item">
-                        <div className="service-icon-box">
-                          <BarChart size={20} />
-                        </div>
-                        <div className="service-info">
-                          <h4>Odoo Services</h4>
-                        </div>
-                      </Link>
-                      <Link to="/services/erp-service/" className="service-item">
-                        <div className="service-icon-box">
-                          <Layers size={20} />
-                        </div>
-                        <div className="service-info">
-                          <h4>ERP Services</h4>
-                        </div>
-                      </Link>
-                      <Link to="/services/e-commerce-solutions/" className="service-item">
-                        <div className="service-icon-box">
-                          <ShoppingCart size={20} />
-                        </div>
-                        <div className="service-info">
-                          <h4>E-Commerce Solutions</h4>
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Column 3 */}
-                  <div className="menu-column">
-                    <div className="service-list">
-                      <Link to="/services/ai-ml/" className="service-item">
-                        <div className="service-icon-box">
-                          <BrainCircuit size={20} />
-                        </div>
-                        <div className="service-info">
-                          <h4>AI & ML Solutions</h4>
-                        </div>
-                      </Link>
-                      <Link to="/services/seo-service/" className="service-item">
-                        <div className="service-icon-box">
-                          <Search size={20} />
-                        </div>
-                        <div className="service-info">
-                          <h4>SEO Services</h4>
-                        </div>
-                      </Link>
-                      <Link to="/services/brand-building/" className="service-item">
-                        <div className="service-icon-box">
-                          <PenTool size={20} />
-                        </div>
-                        <div className="service-info">
-                          <h4>Brand Building</h4>
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
+                <div id="site-services" className="site-navbar__services-menu" data-open={servicesOpen}>
+                  {services.map(({ to, label, Icon }) => <Link key={to} to={to} className="site-navbar__service" onClick={closeMenus}>
+                    <span className="site-navbar__service-icon"><Icon size={20} aria-hidden="true" /></span><span>{label}</span>
+                  </Link>)}
                 </div>
               </li>
-              <li className="nav-item">
-                <Link className={`nav-link ${linkClassName}`} to="/about/">
-                  About
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className={`nav-link ${linkClassName}`} to="/blog/">
-                  Blog
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className={`nav-link ${linkClassName}`} to="/portfolio/">
-                  Portfolio
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className={`nav-link ${linkClassName}`} to="/careers/">
-                  Careers
-                </Link>
-              </li>
+              {links.map(([to, label]) => <li key={to}><Link to={to} className={`site-navbar__link ${linkClassName}`} onClick={closeMenus}>{label}</Link></li>)}
             </ul>
-
-            <Link
-              className={`btn contact-btn ${buttonClassName} ${buttonSchemeClass}`}
-              to="/contact/"
-              data-aos="fade-left"
-            >
-              <span className="btn-label">
-                Contact us <i className="bi bi-arrow-up-right"></i>
-              </span>
+            <Link to="/contact/" className={`contact-btn site-navbar__contact ${buttonClassName} ${buttonSchemeClass}`} onClick={closeMenus}>
+              <span className="btn-label">Contact us <ArrowUpRight size={19} aria-hidden="true" /></span>
             </Link>
           </div>
         </div>
@@ -226,5 +145,4 @@ const Navbar: React.FC<NavbarProps> = ({
     </header>
   );
 };
-
 export default Navbar;

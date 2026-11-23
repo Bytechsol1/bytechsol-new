@@ -1,0 +1,235 @@
+{
+  "overview": [
+    "Babylon Labour Tracker is a custom web app that ties every hour of shop-floor labour to a manufacturing order and an operation, so a contract manufacturer knows what each batch really costs in labour.",
+    "Client: Babylon, a US private-label manufacturer of cosmetics, personal care and pet grooming products (cleansers, serums, moisturisers, shampoos, conditioners, shower gels, body butters, dog shampoo), working under FDA cGMP.",
+    "Sites and departments: Manufacturing, Warehouse and \"Our Babylon\"; all workers on-site; timestamps in Pacific time.",
+    "Scale at review: 10 active workers, 125+ manufacturing orders, 342 time entries, 3,958.8 tracked hours, about $84.4k of labour cost.",
+    "What it replaces: paper timesheets, a separate HR system and manual SOP sign-off sheets, in one bilingual (English / Spanish) app."
+  ],
+  "areas": [
+    [
+      "Time and attendance",
+      "PIN or NFC clock-in, breaks, overtime warnings, admin edits with an audit trail"
+    ],
+    [
+      "Production labour",
+      "Assign workers to an MO × operation, start/pause/complete timers, labour cost per task"
+    ],
+    [
+      "HR",
+      "Employee records, compensation, bonus/commission/equity, EEO, benefits, emergency contacts"
+    ],
+    [
+      "Leave",
+      "PTO and sick accrual, requests, approvals, balance ledger and projections"
+    ],
+    [
+      "Compliance",
+      "GMP/SOP training with read-time gating, disciplinary incidents with policy acknowledgement"
+    ],
+    [
+      "ERP link",
+      "Manufacturing orders synced from Odoo"
+    ]
+  ],
+  "challenges": [
+    "Order-level labour costs were missing. Odoo held the orders, but hours were logged for a whole shift. The team could not reliably connect labour cost to a batch or production step.",
+    "Attendance relied on manual records. Supervisors handled clock times, breaks and corrections without a clear history of changes.",
+    "Training records were hard to review. Paper SOP sign-offs made it difficult to check which workers had completed the required training.",
+    "Everyday tools needed two languages. Workers needed screens, SOPs and policies in both English and Spanish."
+  ],
+  "brief": "The team needed a simple shared-device app for workers, with clear records that managers could use for payroll, batch costing and audits.",
+  "roles": [
+    [
+      "Admin",
+      "Email + password, or Google",
+      "Manage production, attendance, employee records, planning, leave, reports, training and NFC setup."
+    ],
+    [
+      "Manager",
+      "Email + password, or Google",
+      "Oversee daily production, worker activity and reporting. This portal was outside the source review."
+    ],
+    [
+      "Worker",
+      "Pick name from a kiosk list, enter a 4-digit PIN, or tap an NFC tag",
+      "Clock in and out, manage breaks and tasks, view personal records, complete training and request time off."
+    ]
+  ],
+  "roleNotes": [
+    "Kiosk-first worker flow: the worker list is searchable by name or employee ID, so a shared tablet at the door works without personal logins.",
+    "Role checks in code: the front end gates screens on three roles: admin, manager, employee.",
+    "Org chart: each worker record shows a manager and a \"view in org chart\" link."
+  ],
+  "adminIntro": "Twelve admin tools bring production, attendance, people and reporting into one workspace. A shared top bar includes notifications, language and theme controls.",
+  "admin": [
+    {
+      "title": "Dashboard",
+      "paragraphs": [
+        "See active workers, breaks, today’s recorded hours and total labour cost in one view. Charts break down hours and labour cost by worker."
+      ]
+    },
+    {
+      "title": "Production Control Matrix",
+      "paragraphs": [
+        "Each row is a manufacturing order; each column is an operation such as weighing, batching or filling.",
+        "Review the product, order reference, scheduled date, quantity and status. Open a cell to assign workers or review an active task.",
+        "Each assignment shows the worker’s rate, task status and running timer, with controls to start, pause or remove the assignment."
+      ]
+    },
+    {
+      "title": "Control Table",
+      "paragraphs": [
+        "Review attendance and production-task entries in Pacific time. Search by worker, date and status, or add a missed punch manually.",
+        "Attendance records show clock-in, clock-out, duration and change history. Task records also show the order, operation, cost and current status.",
+        "Admins can correct shifts and individual breaks with a reason recorded in the audit trail."
+      ]
+    },
+    {
+      "title": "Manufacturing Orders",
+      "paragraphs": [
+        "Search orders by reference, product, SKU, quantity, purchase order, scheduled date and production status.",
+        "Pin or reorder rows to organise the production matrix. Sync the latest orders from Odoo, or create an order manually."
+      ]
+    },
+    {
+      "title": "Employee Activity",
+      "paragraphs": [
+        "See who is working, on break or off shift for a selected day. Admins can record clock-ins, clock-outs and breaks on a worker’s behalf, with a daily activity log."
+      ]
+    },
+    {
+      "title": "Workers (people and HR)",
+      "paragraphs": [
+        "Find active or archived workers by name, employee ID, job and work mode. Create a new employee profile or archive an existing one.",
+        "Personal and Job tabs hold contact details, reporting lines and dated employment and compensation records. PIN reset and onboarding controls support access setup.",
+        "Training, Emergency, Time Off and Benefits tabs keep related records together. Pay changes retain their history for accurate task costing."
+      ]
+    },
+    {
+      "title": "Operations",
+      "paragraphs": [
+        "Maintain the ten shared production operations. Adding an operation creates a new column in every manufacturing order’s matrix."
+      ]
+    },
+    {
+      "title": "Future Planning",
+      "paragraphs": [
+        "Assign a worker, order, operation and date before a shift begins. Planned tasks appear in the worker’s assignments and can be cancelled when plans change."
+      ]
+    },
+    {
+      "title": "Time Off (Leave Management)",
+      "paragraphs": [
+        "Review PTO and sick-time requests by employee, dates and hours. Filter pending or completed decisions, then approve or reject a request."
+      ]
+    },
+    {
+      "title": "Reports",
+      "paragraphs": [
+        "Filter by worker, order, operation and date. Review recorded hours, labour cost, average hourly cost and training completion.",
+        "Charts and entry-level tables provide the detail behind each total. Export the filtered records to CSV."
+      ]
+    },
+    {
+      "title": "Discipline",
+      "paragraphs": [
+        "Record an incident under SOP 3.7 with its date, category, severity, description and supporting attachments. Keep related policies, action steps and worker acknowledgements together."
+      ]
+    },
+    {
+      "title": "NFC Setup",
+      "paragraphs": [
+        "Assign a physical NFC tag to a worker and review existing assignments. On supported devices, the worker can then tap the tag to clock in or out."
+      ]
+    }
+  ],
+  "worker": [
+    [
+      "Dashboard",
+      "Clock in, manage breaks and review today’s hours. Start, pause, resume or complete assigned tasks, then check recent activity. NFC works on supported devices; a manual fallback is available."
+    ],
+    [
+      "Personal Info",
+      "Their own HR record (identity, address, contacts, social links, education), editable"
+    ],
+    [
+      "Conduct",
+      "Their disciplinary incidents, and any policy they must read and sign by typing their full legal name"
+    ],
+    [
+      "Training",
+      "Read required SOPs in English or Spanish, complete the reading period and record an acknowledgement. Core training and role-specific SOPs are grouped separately."
+    ],
+    [
+      "Time Off",
+      "PTO and sick balances in hours, request form (type, dates, hours, reason), request history and a ledger of hours used, earned and running balance"
+    ],
+    [
+      "Settings",
+      "Light or dark theme, English or Spanish"
+    ]
+  ],
+  "workerNotes": [
+    "SOPs open in a timed reader. After the required reading period, the worker can confirm completion. That acknowledgement updates the training record and reporting view.",
+    "Clock-out guards work in progress. If tasks are still running, the worker must choose to pause or complete them all before clocking out."
+  ],
+  "workflows": [
+    "Corrections: an admin adds a manual entry for a missed punch, or edits breaks with a reason; each change stays in the audit record.",
+    "Leave: a worker requests PTO or sick time, an admin approves or rejects it, and the balance ledger updates. Sick time accrues from hours worked up to a 40-hour cap, and admins can project future balances to a chosen date.",
+    "Compliance: a worker reads each SOP for the minimum time and confirms it; incidents are logged with a severity, linked to a policy, and acknowledged by the worker with a typed signature."
+  ],
+  "integration": "Odoo stays the system of record for what to make; the app adds the labour layer on top and keeps its own data in Supabase.",
+  "technology": [
+    "Odoo sync: \"Sync Orders\" calls a server route, /api/sync-odoo, which fetches the latest MOs and updates existing rows (\"Fetch latest orders? This will update existing records.\"). Orders deleted in the app are kept in a deleted_manufacturing_orders table so a sync does not bring them back. Each MO carries number, product, SKU, quantity, PO number, scheduled date, status and an event ID that looks like a calendar event reference.",
+    "Front end: React built with Vite, hosted on Vercel; Font Awesome icons; charts for the dashboard and reports; full English/Spanish i18n.",
+    "Back end: Supabase (Postgres, auth with password and Google, realtime subscriptions so the matrix, control table and notifications update live). Tables seen in the code: users, activity_logs, tasks, operations, manufacturing_orders, worker_rate_history, leave_requests, leave_history, training_materials, disciplinary_incidents, disciplinary_policies, disciplinary_actions, policy_acknowledgments, attachments.",
+    "Events logged: clock_in, clock_out, break_start, break_end, task_start, task_pause, task_resume, task_edit, manual_entry, overtime_warning.",
+    "Costing: each task's duration × the worker's hourly rate at that time (rate history is kept), so a raise does not rewrite past costs.",
+    "Hardware: Web NFC lets a phone or tablet read a tag to clock a worker in or out; browsers without it get a typed simulator."
+  ],
+  "finding": "Attendance was used daily, but most recent hours were recorded as General Shift. Without an assigned order and operation, batch-level labour costs remained incomplete.",
+  "observations": [
+    [
+      "Most recent entries are \"Unassigned / General Shift\"",
+      "Labour cost per MO and SKU is incomplete",
+      "Pre-assign tasks via Future Planning; prompt the worker to pick a task at clock-in"
+    ],
+    [
+      "Recorded training completion is 12%",
+      "Incomplete records make training readiness harder to demonstrate",
+      "Block task start until Level 1 SOPs are done; weekly reminders"
+    ],
+    [
+      "Leave requests from mid and late September still pending",
+      "Workers lose trust in the process",
+      "Notify approvers and escalate overdue requests"
+    ],
+    [
+      "A monthly salary was stored as an hourly rate",
+      "Labour cost and the blended rate can be overstated",
+      "Convert salaried staff properly; validate rates over a ceiling"
+    ],
+    [
+      "Dashboard and Reports show different labour totals",
+      "Two numbers for the same thing erode trust",
+      "Compute both from one query"
+    ],
+    [
+      "MO numbers repeat (several \"1\", \"2\", \"3\" in filters)",
+      "Pickers are ambiguous",
+      "Show the Odoo reference (WH/MO/…) or product name with the number"
+    ],
+    [
+      "Raw translation keys in the worker Personal Info (\"COMMON.SOCIALLINKS\") and \"Obsolate\" in SOP titles",
+      "Looks unfinished to workers",
+      "Fill missing i18n keys; fix document titles"
+    ],
+    [
+      "The review found Web NFC limited to Chrome on Android",
+      "Other reviewed devices used the simulator fallback",
+      "Use Android kiosks, or USB NFC readers acting as keyboards"
+    ]
+  ],
+  "extensions": "Other natural extensions: push actual labour hours and cost back into Odoo work orders, payroll export, and an offline mode for the kiosk."
+}

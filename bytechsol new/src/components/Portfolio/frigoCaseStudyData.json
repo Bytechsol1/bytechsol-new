@@ -1,0 +1,159 @@
+{
+  "title": "Frigo Flow",
+  "subtitle": "Engineering a Scalable Healthcare Diagnostics Platform",
+  "metadata": [
+    [
+      "Client",
+      "Frigo Flow / Frigo Orthodontics"
+    ],
+    [
+      "Development partner",
+      "Bytechsol"
+    ],
+    [
+      "Engagement",
+      "Started June 12, 2026"
+    ],
+    [
+      "Platform",
+      "Multi-tenant healthcare SaaS"
+    ]
+  ],
+  "summary": [
+    "Frigo Flow asked BytechSol to connect clinics, patients and diagnostic providers in one platform. The goal was to make the handoffs between consultation, test ordering, sample collection, results and follow-up easier to manage.",
+    "We built a client-approved MVP, established clinic and patient workflows, tested diagnostic APIs in a sandbox, and set up the application on AWS with Amazon RDS PostgreSQL. The integration architecture was designed to adapt as provider requirements changed."
+  ],
+  "challengeIntro": "Clinics were coordinating test orders, kit deliveries, patient messages and laboratory reports across separate systems. The platform needed to make each handoff and order status easier to follow.",
+  "challenges": [
+    "Bring diagnostic orders and progress tracking into one place.",
+    "Reduce manual handoffs between clinics, patients and laboratories.",
+    "Keep the patient experience connected to the clinic brand.",
+    "Support the same workflows across independently operated clinics.",
+    "Control access to sensitive patient information by role and clinic."
+  ],
+  "solution": "The platform brings clinic operations, patient self-service and administration together. Its clinic-branded direction lets each organization offer its own patient experience on shared infrastructure.",
+  "areas": [
+    [
+      "Platform administration",
+      "Clinic organization management, service configuration, permissions, and operational oversight."
+    ],
+    [
+      "Clinic workspace",
+      "Patient registration, diagnostic package selection, test order initiation, order tracking, and report review."
+    ],
+    [
+      "Patient portal",
+      "Clinic-branded access to diagnostic progress, kit tracking, results, and relevant follow-up actions."
+    ],
+    [
+      "Provider integration",
+      "External order creation, reference mapping, status synchronization, callbacks, and result handling."
+    ]
+  ],
+  "workflow": [
+    "The intended end-to-end lifecycle is: clinic registers patient -> selects test package -> external order is created -> collection or testing is arranged -> shipment and specimen status are synchronized -> results become available -> clinic coordinates the next patient step.",
+    "A test can involve an at-home kit or a laboratory visit. The provider determines the collection path; Frigo Flow maps provider updates into a shared order lifecycle."
+  ],
+  "technology": [
+    [
+      "Frontend",
+      "Next.js, React: web dashboards, onboarding forms, clinic and patient interfaces."
+    ],
+    [
+      "Backend",
+      "NestJS, Node.js, TypeScript: business logic, authentication, order workflows, APIs, and integrations."
+    ],
+    [
+      "Data",
+      "PostgreSQL and Prisma: relational tenant, patient, order, and workflow records."
+    ],
+    [
+      "Cloud",
+      "AWS Lightsail, AWS RDS, Nginx: application hosting, routing, managed PostgreSQL."
+    ],
+    [
+      "Security foundations",
+      "Passport/JWT, email OTP design, access control, tenant checks, webhook validation."
+    ],
+    [
+      "Integration",
+      "REST APIs, vendor authentication, provider IDs, idempotency, event and result processing."
+    ]
+  ],
+  "providers": [
+    {
+      "name": "Tasso",
+      "status": "Latest requested direction",
+      "description": "Tasso was considered early in the project and became the requested direction again in November 2026. Scope includes kit ordering, patient details, delivery and return tracking, and links to laboratory results. Completion of this latest integration is not confirmed."
+    },
+    {
+      "name": "Terra / Vantage",
+      "status": "Sandbox operations validated",
+      "description": "Sandbox authentication (HTTP 200), product catalog retrieval, order creation (HTTP 201) and order verification were demonstrated. Webhook processing and duplicate-event handling were tested locally. A callback test failed with HTTP 401 because of an invalid signing secret; production webhook security remains unconfirmed."
+    },
+    {
+      "name": "FutureWell / Remora",
+      "status": "Explored alternatives",
+      "description": "Alternative diagnostic services and API requirements were explored as the product scope evolved. Provider connections were kept separate from the internal order workflow."
+    }
+  ],
+  "migration": "In October 2026, we recreated the Supabase PostgreSQL schema on Amazon RDS: 16 tables, 3 ENUM types, 2 functions and 5 triggers. Relationships, constraints and database objects were preserved. This was a schema-only migration; no application records were moved.",
+  "deployment": "By 2 November 2026, the frontend, backend, Nginx routing and private connection to RDS were verified. Domain and HTTPS setup, hardening, backup validation and full production checks were still unconfirmed.",
+  "security": "The design covers authenticated access, clinic-specific data, role permissions, protected reports, expiring OTP codes, API signatures and duplicate-event handling. Audit trails, tenant isolation, backups and monitoring still need production validation before use with live patient data.",
+  "compliance": "No formal HIPAA assessment, certification or independent audit is documented. Healthcare readiness and stronger controls remain part of the work ahead.",
+  "timeline": [
+    [
+      "June 2026",
+      "Initial MVP development and client approval, including clinic/admin workflows and patient onboarding."
+    ],
+    [
+      "June to August",
+      "Tasso integration planning and evaluation of alternative diagnostic providers including FutureWell."
+    ],
+    [
+      "September 2026",
+      "Terra sandbox integration and test-order operations."
+    ],
+    [
+      "October 2026",
+      "White-label/multi-tenant scope development and AWS database/infrastructure work."
+    ],
+    [
+      "November 2026",
+      "Latest requirements redirected the diagnostic integration toward Tasso and refined role and portal scope."
+    ]
+  ],
+  "pilot": "NexGen was identified as a possible pilot clinic. Live rollout and patient adoption figures are unconfirmed. The initial MVP was approved by the client.",
+  "engineering": [
+    [
+      "Provider changes",
+      "Maintain internal workflow concepts while adapting external API integrations."
+    ],
+    [
+      "Multi-stage diagnostic orders",
+      "Model order states and coordinate callbacks, patient data, and external references."
+    ],
+    [
+      "Infrastructure migration",
+      "Rebuild and verify structured PostgreSQL database objects on Amazon RDS."
+    ],
+    [
+      "Multiple clinic environments",
+      "Design tenant-aware organizational boundaries and clinic-specific experiences."
+    ],
+    [
+      "Sensitive information",
+      "Prioritize access control and identify remaining security-readiness work."
+    ]
+  ],
+  "results": [
+    "Functional MVP accepted by the client in June 2026.",
+    "Terra sandbox authentication, product retrieval, order creation, and order verification successfully demonstrated.",
+    "AWS-hosted application services, Nginx routing, and private database connectivity verified.",
+    "PostgreSQL schema recreated on RDS, including 16 tables, 3 ENUMs, 2 functions, and 5 triggers.",
+    "Foundation established for expanding clinic-specific, branded diagnostic workflows."
+  ],
+  "outcomeNote": "Business outcomes such as reduced administrative time, improved conversion, patient retention, active clinic count, and revenue impact have not been measured in the available records. These remain intended benefits rather than validated KPIs.",
+  "publicationSummary": "Frigo Flow partnered with Bytechsol to develop a healthcare SaaS platform that brings clinic workflows, patient onboarding, diagnostic orders, and laboratory status coordination into one application. Bytechsol engineered the full-stack foundation using Next.js, NestJS, and PostgreSQL, validated external diagnostic API processes, and deployed the application infrastructure on AWS. As the diagnostic-provider strategy evolved, the engineering work emphasized flexible integration design and a scalable foundation for clinic-specific patient experiences.",
+  "asOf": "4 November 2026"
+}

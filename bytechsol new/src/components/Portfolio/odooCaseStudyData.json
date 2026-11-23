@@ -1,0 +1,313 @@
+{
+  "title": "Engineering a Multi-Company Odoo ERP for International Trade and Distribution",
+  "subtitle": "A shared Odoo system for a US commercial agency and a Chilean distributor. Separate accounts and local workflows, connected in one place.",
+  "metadata": [
+    [
+      "Industry",
+      "International Trade & B2B Distribution"
+    ],
+    [
+      "Services",
+      "ERP architecture, Odoo setup, custom modules and integrations"
+    ],
+    [
+      "Technology",
+      "Odoo Enterprise v19, Python, PostgreSQL, AWS, REST APIs"
+    ],
+    [
+      "Regions",
+      "United States & Chile"
+    ],
+    [
+      "Project Status",
+      "Implementation & Staged Validation"
+    ]
+  ],
+  "client": [
+    "An international business group needed one ERP to connect its US commercial agency and its Chilean distribution business.",
+    "The US team manages business development, commercial agreements and commissions. The Chilean team handles suppliers, purchases, imports, stock and B2B distribution.",
+    "Both teams needed connected information while keeping their own accounts, currencies and local requirements. The ERP also had to link finance with sales, purchasing and logistics.",
+    "The architecture allows for future companies in Argentina and Peru without rebuilding the system."
+  ],
+  "challengeIntro": "The two businesses work differently. The ERP needed to connect them while keeping each company's accounting, processes and local requirements separate.",
+  "challenges": [
+    {
+      "title": "Separate accounts. A shared group view.",
+      "description": "The US company works in USD and the Chilean company in CLP. Each needs its own books, while management needs to review both companies together. Shared costs, funding and transfers need clear records."
+    },
+    {
+      "title": "Commercial agreements beyond CRM",
+      "description": "A sales pipeline could track opportunities, but it could not manage the client's full agreement workflow. The team needed separate commitment states, supporting documents and approval rules before work could move forward."
+    },
+    {
+      "title": "Purchasing, imports and stock",
+      "description": "The Chilean team needed a connected record from supplier order to delivery. Purchases, import costs, warehouse movements and stock valuation had to stay linked, including information from logistics providers."
+    },
+    {
+      "title": "Different local requirements",
+      "description": "The implementation needed to account for Chilean electronic invoicing and local reporting, alongside separate US accounting operations."
+    },
+    {
+      "title": "Approvals that support growth",
+      "description": "Customer checks, credit reviews, collections and approvals needed consistent workflows. The system also had to support new integrations and future companies without becoming difficult to maintain."
+    }
+  ],
+  "solutionIntro": "We designed a shared Odoo Enterprise environment with separate accounting and workflows for each company. Access permissions, shared data standards and intercompany records connect the group.",
+  "solutions": [
+    {
+      "title": "Multi-company setup",
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "text": "Each company has its own accounts and workflows within a shared Odoo environment. The setup covers:",
+          "items": []
+        },
+        {
+          "kind": "list",
+          "text": "",
+          "items": [
+            "Independent company accounting and financial operations",
+            "Role-based access and organizational permissions",
+            "Multi-currency transactions and reporting",
+            "Controlled intercompany financial flows",
+            "Shared governance and master-data standards",
+            "Future onboarding of additional international entities"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "Each business can work independently while management keeps a group-wide view.",
+          "items": []
+        }
+      ]
+    },
+    {
+      "title": "Custom mandate management",
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "text": "We built a custom Odoo module for the client's commercial mandates.",
+          "items": []
+        },
+        {
+          "kind": "paragraph",
+          "text": "A standard sales pipeline could not capture the agreement types, commitment states and approvals the client needed. The custom workflow covers:",
+          "items": []
+        },
+        {
+          "kind": "list",
+          "text": "",
+          "items": [
+            "Explicit and implicit mandate classifications",
+            "Confirmed and provisional commitment states",
+            "Evidence-based validation requirements",
+            "Country-specific commercial controls",
+            "Four defined execution tracks",
+            "Structured operational handoffs",
+            "Approval and progression restrictions",
+            "Functional validation and rollback scenarios"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "The module tracks how a mandate is established separately from its commitment status. An implicit mandate can still have a confirmed commitment. A provisional commitment can restrict later actions until the required conditions are met.",
+          "items": []
+        },
+        {
+          "kind": "paragraph",
+          "text": "These rules give the team a repeatable process with a record of decisions and approvals.",
+          "items": []
+        }
+      ]
+    },
+    {
+      "title": "Accounting and financial controls",
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "text": "Each company has a financial setup that reflects its own accounting requirements. The scope includes:",
+          "items": []
+        },
+        {
+          "kind": "list",
+          "text": "",
+          "items": [
+            "Company-specific charts of accounts",
+            "Accounts payable and receivable",
+            "Multi-currency accounting",
+            "Intercompany transactions",
+            "Bank and credit-card reconciliation",
+            "Analytic accounting and financial reporting",
+            "Treasury and cash-position monitoring",
+            "Financial consolidation design",
+            "Expense and reimbursement workflows"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "The reporting design supports Chilean accounting requirements and a USD-based group view. It also covers currency treatment, approvals and intercompany records.",
+          "items": []
+        }
+      ]
+    },
+    {
+      "title": "Purchasing, inventory and imports",
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "text": "The Chilean workflows connect suppliers, purchase orders, imports, warehouse movements, landed costs and stock valuation.",
+          "items": []
+        },
+        {
+          "kind": "paragraph",
+          "text": "The architecture also defines integration needs for logistics and customs providers, so operational records can stay connected from purchase through distribution.",
+          "items": []
+        }
+      ]
+    },
+    {
+      "title": "Local requirements and automation",
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "text": "The project includes or defines workflows for these local requirements and internal controls:",
+          "items": []
+        },
+        {
+          "kind": "list",
+          "text": "",
+          "items": [
+            "Chilean fiscal localization and electronic invoicing",
+            "Customer onboarding and due diligence",
+            "Sanctions and politically exposed person screening",
+            "Customer credit controls",
+            "Administrative and financial approvals",
+            "Accounts receivable collection reminders",
+            "Commercial commission calculation",
+            "Online invoice payment workflows"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "Payroll, banking, logistics and compliance integrations are being implemented and validated in stages, based on business priorities and external dependencies.",
+          "items": []
+        }
+      ]
+    },
+    {
+      "title": "Cloud infrastructure and releases",
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "text": "AWS hosts the Odoo Enterprise and PostgreSQL environment. Development, staging and production are separate. Custom features are tested before client acceptance and production approval.",
+          "items": []
+        },
+        {
+          "kind": "list",
+          "text": "",
+          "items": [
+            "Modular custom development",
+            "Upgrade-aware implementation practices",
+            "Controlled source code and configuration management",
+            "Role-based infrastructure access",
+            "Backup and recovery planning",
+            "Regression testing",
+            "Documented production release procedures"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": "The approach keeps the system maintainable as new features and companies are added.",
+          "items": []
+        }
+      ]
+    }
+  ],
+  "spotlightIntro": [
+    "The US agency needed more than a sales pipeline. Its commercial agreements, called mandates, have two separate questions: how the agreement is established, and whether the commitment is confirmed.",
+    "The custom module keeps those questions separate, then checks the evidence and approvals needed for the next step."
+  ],
+  "spotlight": [
+    {
+      "title": "Two separate classifications",
+      "description": "Record how the mandate is established independently from whether its commercial commitment is confirmed or provisional."
+    },
+    {
+      "title": "Evidence before approval",
+      "description": "Check the required documents, business rules and approvals before allowing the next step."
+    },
+    {
+      "title": "Clear handoffs",
+      "description": "Four execution tracks guide the work. Required conditions must be met before restricted actions become available."
+    }
+  ],
+  "spotlightConclusion": "The custom module has completed staged technical tests, including workflow checks and rollback scenarios. Business acceptance and production release are separate steps.",
+  "phases": [
+    {
+      "number": 1,
+      "title": "Understand the business",
+      "description": "Map how both companies work, identify local requirements and agree on the ERP scope."
+    },
+    {
+      "number": 2,
+      "title": "Design the system",
+      "description": "Define company accounts, user access, integrations and the custom features each team needs."
+    },
+    {
+      "number": 3,
+      "title": "Configure and build",
+      "description": "Set up the core Odoo modules. Build custom features where the standard workflows do not fit."
+    },
+    {
+      "number": 4,
+      "title": "Connect and test",
+      "description": "Prepare external integrations, test financial and operational workflows, and resolve issues."
+    },
+    {
+      "number": 5,
+      "title": "Review with the client",
+      "description": "Test real business scenarios with stakeholders. Record acceptance and prepare approved features for release."
+    },
+    {
+      "number": 6,
+      "title": "Improve and expand",
+      "description": "Add automation, refine reports and support new companies as requirements grow."
+    }
+  ],
+  "progress": "ERP architecture, core configuration and custom development have progressed into staged testing and business review. The custom Mandate Management module has been deployed and validated offline, including its classifications, approval restrictions and rollback behavior.",
+  "benefits": [
+    {
+      "title": "A connected view of operations",
+      "description": "Bring finance, commercial work, purchasing and stock into a shared ERP foundation."
+    },
+    {
+      "title": "Clearer financial controls",
+      "description": "Keep company accounts separate and make intercompany transactions easier to review."
+    },
+    {
+      "title": "Consistent agreement workflows",
+      "description": "Give commercial commitments, approvals and supporting documents a clear process."
+    },
+    {
+      "title": "Less manual follow-up",
+      "description": "Create a foundation for automated approvals, collections and external data exchange."
+    },
+    {
+      "title": "Local requirements in view",
+      "description": "Plan country-specific accounting and business controls within the shared system."
+    },
+    {
+      "title": "Room for new companies",
+      "description": "Add entities and integrations without rebuilding the ERP architecture."
+    }
+  ],
+  "outcomeNote": "These are intended and emerging benefits. Final operational results will be assessed after the relevant workflows pass acceptance testing and enter production.",
+  "why": [
+    "The ERP needs to reflect how the two businesses work: who makes decisions, which company owns a transaction and what must happen before the next step.",
+    "We combined company accounting, custom commercial rules and a staged release process to give the group a maintainable system it can expand."
+  ],
+  "closing": [
+    "We design Odoo systems around the people, accounts and workflows that run your business.",
+    "Tell us where your current processes get stuck. We can help map a clearer path forward."
+  ]
+}

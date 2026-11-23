@@ -1,0 +1,317 @@
+{
+  "title": "Skynode Partners",
+  "subtitle": "Turning 99 urban rooftops into a searchable infrastructure platform",
+  "intro": "We designed and built a 17-route website for Skynode Partners. It brings 99 rooftop infrastructure sites into a searchable catalog, with separate journeys for network operators and building owners.",
+  "website": "https://skynodepartners.com",
+  "stats": [
+    [
+      "99",
+      "Nodes published"
+    ],
+    [
+      "4",
+      "Metro markets"
+    ],
+    [
+      "4",
+      "Solution verticals"
+    ],
+    [
+      "17",
+      "Routes built"
+    ]
+  ],
+  "metadata": [
+    [
+      "Client",
+      "Skynode Partners Inc."
+    ],
+    [
+      "Industry",
+      "Telecom and digital infrastructure (rooftop sites, edge colocation, broadcast, private networks)"
+    ],
+    [
+      "Markets served",
+      "New York, Connecticut, Florida, Illinois"
+    ],
+    [
+      "Audiences",
+      "Network operators (broadcast, private comms, edge/AI compute, emerging tech) and property owners"
+    ],
+    [
+      "Scope",
+      "Positioning support, information architecture, UX/UI design, front-end development, interactive data views, lead-capture flow"
+    ],
+    [
+      "Platform",
+      "Single-page web application, React + Vite"
+    ],
+    [
+      "Size",
+      "17 routes: home, 4 solution verticals, solutions hub, node catalog, Metro Fabric, 4 market pages, property owners, how it works, about, careers, contact"
+    ]
+  ],
+  "client": "Skynode Partners turns urban rooftops and service space into managed infrastructure sites. Network operators can evaluate locations for their equipment; building owners can explore a partnership that generates recurring revenue from unused space.",
+  "verticalIntro": "The operator side spans four verticals, each with its own technical buyer:",
+  "verticals": [
+    {
+      "title": "Broadcasting",
+      "description": "FM, TV, LPFM, translators, backup and auxiliary (STL) sites"
+    },
+    {
+      "title": "Private communications",
+      "description": "P25 and simulcast radio, private 5G, point-to-point microwave"
+    },
+    {
+      "title": "Edge colocation",
+      "description": "AI/GPU inference, CDN and caching, network interconnection, up to 120 kW per rack"
+    },
+    {
+      "title": "Experimental systems",
+      "description": "drones, spatial AI sensing, field AR, smart city, metering"
+    }
+  ],
+  "fabric": "On top of the sites sits Metro Fabric, a private wireless and fiber interconnect that links nodes into one network, with sub-5 ms intra-fabric latency (representative) and a 99.9% target uptime SLA.",
+  "challengeIntro": "The website needed to explain a technical infrastructure business to engineers, operations teams and property owners. Each audience needed useful detail and a clear path to the right inquiry.",
+  "challenges": [
+    {
+      "title": "Two audiences with different questions",
+      "description": "Operators need elevation, line of sight and network connections. Property owners need to understand access, approvals and the partnership process."
+    },
+    {
+      "title": "Four technical service areas",
+      "description": "Broadcasting, private communications, edge colocation and experimental systems each need relevant specifications and examples."
+    },
+    {
+      "title": "Real sites visitors can inspect",
+      "description": "The catalog needed to show documented locations, services and status so visitors could evaluate a specific rooftop."
+    },
+    {
+      "title": "Several people involved in a decision",
+      "description": "Engineering, operations, finance and leadership all need enough detail to assess the same site."
+    },
+    {
+      "title": "A network that keeps growing",
+      "description": "Sites under evaluation need clear status labels. Unconfirmed specifications must stay visible as per-site details or to-be-confirmed values."
+    }
+  ],
+  "goals": [
+    "Explain Skynode as a connected infrastructure network.",
+    "Help operators find and evaluate a specific site.",
+    "Give each service area a relevant landing page.",
+    "Explain the owner partnership and make submitting a property straightforward.",
+    "Route inquiries by audience, use case and market.",
+    "Make it easy to add sites, markets and services."
+  ],
+  "strategyIntro": "The strategy was simple: show real sites and the details buyers need. Every operator page leads toward a rooftop that visitors can inspect and ask about.",
+  "strategy": [
+    {
+      "title": "Separate journeys from the first click",
+      "description": "Solutions and the node catalog serve operators. The property-owner section serves building owners. Both paths reach a shared form that starts by asking which audience the visitor belongs to."
+    },
+    {
+      "title": "Explain deployment, expansion and operation",
+      "description": "The home page shows how an operator can start at one node, expand to more sites and connect through Metro Fabric."
+    },
+    {
+      "title": "Put technical and commercial detail together",
+      "description": "Solution pages pair site criteria such as power, elevation and structural loading with information about access, permitting and pricing."
+    },
+    {
+      "title": "Label what is still being confirmed",
+      "description": "Per-site and to-be-confirmed labels keep uncertain specifications visible. The inquiry process sets an expectation of a human response within one business day."
+    }
+  ],
+  "architecture": "Operators browse solutions, markets or Metro Fabric before opening the site catalog. Property owners check fit and share building details. Both journeys reach one form that routes the inquiry by audience and need.",
+  "features": [
+    {
+      "title": "A searchable catalog of 99 nodes",
+      "description": "Each site card shows its ID, market, neighborhood, elevation, status and supported services. Visitors can filter the catalog and inquire about a specific node.",
+      "bullets": [
+        "Market tabs: All, New York, Connecticut, Florida, Illinois",
+        "Service filters: Broadcasting, Private Comms, Edge Colocation, AI / Inference, Point-to-Point",
+        "Live result count (\"Showing 99 of 99 nodes\"), sorted by elevation so the strongest sites surface first",
+        "A \"Recent node activity\" panel with network totals (90 active, 9 evaluating, 4 markets)",
+        "A fallback path for gaps: \"Don’t see the right node? Tell us what you need\""
+      ]
+    },
+    {
+      "title": "Interactive network map",
+      "description": "A Leaflet map shows node locations, market filters and power tiers. The same map is reused across solution and market pages so visitors can compare the network in context.",
+      "bullets": []
+    },
+    {
+      "title": "Relevant sites on every solution page",
+      "description": "Each solution page shows sites that support that service. Broadcast visitors can inspect elevation; edge-computing visitors can compare power density and service tiers.",
+      "bullets": []
+    },
+    {
+      "title": "Metro Fabric visualizations",
+      "description": "Canvas and SVG network diagrams explain how cloud connections, Metro Fabric and private links work together. A comparison covers capacity, pricing, redundancy and routing.",
+      "bullets": []
+    },
+    {
+      "title": "A skyline hero that introduces the network",
+      "description": "A city-skyline animation sits beside a Metro Fabric network panel. Market and service labels introduce the network before visitors explore individual sites.",
+      "bullets": []
+    },
+    {
+      "title": "Segmented, multi-step inquiry form",
+      "description": "The form begins with two choices: infrastructure or property ownership. Follow-up steps collect the segment, use case and market so the team has useful context before replying.",
+      "bullets": []
+    },
+    {
+      "title": "Market pages",
+      "description": "New York, Connecticut, Florida and Illinois each have a page with local services, representative sites and market details.",
+      "bullets": []
+    },
+    {
+      "title": "Property-owner qualification",
+      "description": "A property-fit summary and checklist help owners review elevation, utilities, space and market before sending their building details.",
+      "bullets": []
+    },
+    {
+      "title": "Light and dark themes",
+      "description": "A persistent header toggle lets visitors choose a light or dark reading mode for the website.",
+      "bullets": []
+    }
+  ],
+  "designIntro": "An open layout, navy headings and blue accents give technical information a clear hierarchy. Site data, filters and status labels stay easy to scan.",
+  "design": [
+    {
+      "title": "Palette",
+      "description": "Pale sky-blue backgrounds, deep navy headlines and a single teal-blue accent for key words and primary buttons. Soft greens signal \"Active\" and \"Network Operational\"; amber marks \"Evaluating\"."
+    },
+    {
+      "title": "Typography",
+      "description": "Satoshi throughout, with heavy, tightly set headlines that split into a navy line and a teal line (\"Infrastructure for the / Metropolitan Edge.\")."
+    },
+    {
+      "title": "Signature motifs",
+      "description": "Translucent 3D skyline columns, hexagonal grids and node-and-link network lines — the rooftop-to-network idea drawn directly into the backgrounds."
+    },
+    {
+      "title": "Service tag system",
+      "description": "Each service has a consistent color-coded pill (Broadcasting, Private Comms, Edge Colocation, AI / Inference, P2P, IoT / Sensors) used on cards, maps and filters, so a visitor learns the code once and reads every node at a glance."
+    },
+    {
+      "title": "Glass panels",
+      "description": "Status and data panels use frosted, rounded cards with live indicators, echoing a network operations dashboard."
+    },
+    {
+      "title": "Reusable section rhythm",
+      "description": "Eyebrow label → two-tone headline → short lead → proof grid → node strip → CTA band. The same rhythm across 17 routes makes the site feel like one product."
+    }
+  ],
+  "technology": [
+    [
+      "Framework",
+      "React single-page app",
+      "Component reuse across 17 routes; instant client-side navigation between catalog, verticals and markets"
+    ],
+    [
+      "Build",
+      "Vite, hashed asset bundles",
+      "Fast builds, cache-busted production assets"
+    ],
+    [
+      "Routing",
+      "Client-side routes per vertical and per market (/markets/new-york)",
+      "Clean, shareable URLs for each audience and campaign"
+    ],
+    [
+      "Mapping",
+      "Leaflet with a custom hex node layer and power-tier legend",
+      "Lightweight, open-source, no heavy GIS dependency"
+    ],
+    [
+      "Motion and visuals",
+      "HTML canvas (3D skyline, network animations) plus 100+ inline SVGs",
+      "Rich visuals with no video weight; crisp at any resolution"
+    ],
+    [
+      "Data",
+      "Structured node records (ID, market, neighborhood, elevation, status, services, power tier)",
+      "One dataset drives the catalog, map, vertical strips, market pages and counts"
+    ],
+    [
+      "Theming",
+      "Light / dark toggle on design tokens",
+      "One component set, two themes"
+    ],
+    [
+      "Lead capture",
+      "Multi-step form with segment, use case and market steps",
+      "Pre-qualified, routable leads"
+    ],
+    [
+      "SEO",
+      "Per-route titles, meta description, Open Graph tags",
+      "Correct titles and link previews for every page"
+    ]
+  ],
+  "engineering": [
+    {
+      "title": "Data-driven by design",
+      "description": "One set of node records feeds the catalog, map, solution pages, market pages and headline counts. A new site can be added once and appear wherever it meets the filters."
+    },
+    {
+      "title": "Reusable building blocks",
+      "description": "Shared maps, filters, site cards, service labels and inquiry sections keep behavior consistent across the four solution pages and four market pages."
+    }
+  ],
+  "copyIntro": "The content uses direct language, practical site details and clear explanations of the next step.",
+  "messaging": [
+    {
+      "title": "A sharp core line",
+      "description": "\"Infrastructure for the Metropolitan Edge\", backed by the idea that the best edge sites are inside the city, not near it."
+    },
+    {
+      "title": "Physics as the argument",
+      "description": "The edge page sells latency with plain math — compute three states away costs about 40 ms round trip; a metro node gets under 5 ms."
+    },
+    {
+      "title": "Pain first, then relief",
+      "description": "The broadcast page opens on the old way (blank maps, cold landlord calls, dead-end RF surveys) before showing that viable candidates already exist."
+    },
+    {
+      "title": "Risk language for owners",
+      "description": "The property-owner page leads with what landlords fear — paperwork, liability, approvals — and answers with managed permitting across local, state and federal levels."
+    },
+    {
+      "title": "Plain FAQs",
+      "description": "Eight questions on How It Works cover timelines, minimum deployment (none), pricing model and what happens when a node goes offline."
+    },
+    {
+      "title": "Consistent promises",
+      "description": "\"A real person reviews every inquiry within one business day\" repeats on every vertical and conversion page."
+    }
+  ],
+  "resultIntro": "The delivered website gives Skynode a working catalog and clear inquiry paths for both audiences:",
+  "results": [
+    "99 nodes published and filterable across 4 markets, each with its own inquiry path",
+    "4 vertical landing pages plus a solutions hub, each speaking to its own technical buyer",
+    "2 complete funnels (operators and property owners) on one domain",
+    "4 market pages ready for regional campaigns and outreach",
+    "A pre-qualified lead flow that captures segment, use case and market before the first call",
+    "A reusable component and data model that lets the team add nodes and markets without new design work"
+  ],
+  "measurementNote": "These are delivery outcomes. Inquiry growth, qualification rates, property submissions, performance scores and client feedback were not supplied, so no measured uplift is claimed.",
+  "roadmapIntro": "The shared components and site data provide a foundation for these next steps:",
+  "roadmap": [
+    "Node detail pages with photos, line-of-sight views and downloadable spec sheets",
+    "A CMS or admin panel so the Skynode team can add and update nodes themselves",
+    "CRM integration so routed inquiries land directly in the sales pipeline",
+    "Gated operator portal for availability, documents and deployment status",
+    "New markets (Miami and Chicago Metro Fabric are already flagged as ready for rapid deployment)"
+  ],
+  "services": [
+    "UX strategy",
+    "Information architecture",
+    "UI design",
+    "Front-end engineering",
+    "Interactive mapping",
+    "Data modeling",
+    "Lead-capture design"
+  ]
+}

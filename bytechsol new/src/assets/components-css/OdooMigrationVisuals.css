@@ -1,0 +1,34 @@
+/* Keep each service illustration complete inside its existing image column. */
+:is(#odoo-migration-customization, #odoo-techno-functional-consultancy, #odoo-module-development, #odoo-integration-services, #odoo-maintenance-support) .timeline-center {
+  flex: 0 1 478px;
+  width: min(100%, 478px);
+  height: auto;
+  max-height: none;
+  aspect-ratio: 1;
+  overflow: visible;
+}
+
+:is(#odoo-migration-customization, #odoo-techno-functional-consultancy, #odoo-module-development, #odoo-integration-services, #odoo-maintenance-support) .timeline-center > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+:is(#odoo-migration-customization, #odoo-techno-functional-consultancy, #odoo-module-development, #odoo-integration-services, #odoo-maintenance-support) .timeline-center img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 12px;
+}
+
+@media (max-width: 992px) {
+  :is(#odoo-migration-customization, #odoo-techno-functional-consultancy, #odoo-module-development, #odoo-integration-services, #odoo-maintenance-support) .timeline-center {
+    flex: none;
+  }
+}

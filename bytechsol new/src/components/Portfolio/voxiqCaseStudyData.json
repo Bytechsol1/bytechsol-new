@@ -1,0 +1,364 @@
+{
+  "sourceDate": "29 October 2026",
+  "modules": [
+    {
+      "name": "Power dialer",
+      "description": "Automatically dial the next contact when a call ends. Reps can skip, pause, reschedule or switch to manual dialing.",
+      "problem": "Dead time"
+    },
+    {
+      "name": "Auto dialer",
+      "description": "Set the dialing speed, line ratio and campaign in one screen. Answering-machine detection helps reps focus on live conversations.",
+      "problem": "Dead time, voicemail drag"
+    },
+    {
+      "name": "Manual (preview) dialer",
+      "description": "Review the contact before calling, then log the outcome in one click. Keyboard shortcuts cover dialing and voicemail.",
+      "problem": "Rushed high-value calls"
+    },
+    {
+      "name": "Local presence",
+      "description": "Choose caller IDs from number pools that match the contact’s area code.",
+      "problem": "Low answer rates"
+    },
+    {
+      "name": "Voicemail drop",
+      "description": "Use a saved voicemail message instead of repeating the same recording. Campaigns can have several templates.",
+      "problem": "Voicemail drag"
+    },
+    {
+      "name": "Inbound and IVR",
+      "description": "Build an IVR menu and route calls by rep, team, skill or opening hours. Queues show wait times, with overflow to voicemail or a backup team.",
+      "problem": "Missed inbound calls"
+    },
+    {
+      "name": "AI Agent Caller (early access)",
+      "description": "An early-access voice agent is designed to qualify new leads, book through Calendly or GHL, and hand off a summary and lead score. The reported response target is 60 seconds, 24/7.",
+      "problem": "Slow lead response"
+    },
+    {
+      "name": "SMS",
+      "description": "Manage two-way texts in a shared inbox. Use templates, send a text after a missed call and call directly from a thread.",
+      "problem": "Unreturned contacts"
+    },
+    {
+      "name": "WhatsApp",
+      "description": "Use the WhatsApp Business API with a business number. Share files and images, and trigger follow-ups from call outcomes.",
+      "problem": "Unreachable prospects"
+    },
+    {
+      "name": "Call recording",
+      "description": "Find useful moments in recordings and transcripts with keyword search. Build coaching playlists and use recording-consent controls.",
+      "problem": "No visibility for coaching"
+    },
+    {
+      "name": "Live coaching",
+      "description": "Support reps on live calls with listen, whisper and barge modes, alongside a view of the call floor.",
+      "problem": "No visibility for coaching"
+    },
+    {
+      "name": "Analytics",
+      "description": "Follow team activity, connect rates and talk time. Compare scripts, review the leaderboard and export weekly reports.",
+      "problem": "No visibility for managers"
+    },
+    {
+      "name": "Compliance",
+      "description": "Bring DNC checks, regional calling windows, consent records and exportable reports into the calling workflow.",
+      "problem": "Regulatory risk"
+    },
+    {
+      "name": "Enterprise controls",
+      "description": "Manage access with SSO/SAML, Okta, role permissions and audit logs. Separate teams through regional or departmental sub-accounts.",
+      "problem": "Governance at scale"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Create an account",
+      "description": "Everything runs in Chrome over WebRTC, so there is no softphone or hardware to install."
+    },
+    {
+      "title": "Connect the CRM",
+      "description": "About 2 minutes for GoHighLevel or Pipedrive."
+    },
+    {
+      "title": "Map fields",
+      "description": "Match CRM fields to Voxiq contact fields so outcomes and notes sync back."
+    },
+    {
+      "title": "Invite reps",
+      "description": "Assign seats, roles and phone numbers."
+    },
+    {
+      "title": "Launch the dialer",
+      "description": "Load a list from a CSV file or a CRM view, set the dial ratio, local presence pool and voicemail, and start."
+    }
+  ],
+  "outcomes": [
+    [
+      "Daily dials",
+      "50 to 200 calls per rep per day; up to 300 with the power dialer"
+    ],
+    [
+      "Voicemail",
+      "About 4 hours saved per rep per day with voicemail drop"
+    ],
+    [
+      "Answering machine detection",
+      "About 147 voicemails bypassed per rep per day"
+    ],
+    [
+      "Keyboard shortcuts",
+      "30 minutes saved per rep per day"
+    ],
+    [
+      "Lead response",
+      "AI agent calls new leads within 60 seconds, 24/7"
+    ],
+    [
+      "Inbound pickup",
+      "Under 3 seconds, unlimited concurrent calls"
+    ],
+    [
+      "WhatsApp",
+      "98% open rate; 99% deliverability vs 84% for SMS"
+    ]
+  ],
+  "plans": [
+    {
+      "name": "Calls – Starter",
+      "price": "$20",
+      "description": "Unlimited inbound and outbound calls, browser dialer, caller ID, click-to-call, redial, call history, leads, notes, follow-ups, calendar, basic analytics, team chat"
+    },
+    {
+      "name": "Calls – Growth (most popular)",
+      "price": "$40",
+      "description": "Starter plus call recordings with playback and advanced analytics"
+    },
+    {
+      "name": "Calls – Scale",
+      "price": "$70",
+      "description": "Growth plus AI call insights and summaries, company-wide reporting, priority support"
+    },
+    {
+      "name": "SMS add-on",
+      "price": "$70",
+      "description": "Two-way inbox, delivery status, click-to-call from a thread, SMS analytics; daily allowance per seat, international and overage billed separately"
+    }
+  ],
+  "industries": [
+    {
+      "id": "industry-1",
+      "name": "Sales teams",
+      "scenario": "An inside sales team of 10 account executives works inbound leads and an outbound list from GoHighLevel. Reps dial by hand, and the manager learns about a bad call only when a deal is lost.",
+      "steps": [
+        "The manager builds an outbound campaign from a GHL pipeline stage, with local presence and two voicemail templates.",
+        "Reps run the power dialer; answering machine detection skips voicemails and drops the template automatically.",
+        "Each call outcome is logged with one click, updating the GHL deal stage and firing follow-up workflows.",
+        "Inbound calls route round-robin to available reps, with the caller's deal history on screen before they answer.",
+        "The manager watches the live call floor, whispers to reps on key calls, and builds coaching playlists from recordings."
+      ],
+      "features": "power dialer, local presence, voicemail drop, GHL two-way sync, live coaching, rep leaderboard.",
+      "measures": "dials per rep per day, connect rate, meetings booked, pipeline created per rep.",
+      "plan": "Calls – Growth ($40) for recordings and advanced analytics.",
+      "economics": ""
+    },
+    {
+      "id": "industry-2",
+      "name": "SDR / BDR teams",
+      "scenario": "An SDR team prospects cold lists all day to book meetings for account executives. Volume is the job, but most dials hit voicemail and answer rates on out-of-area numbers are low.",
+      "steps": [
+        "Lists are loaded from CSV or a CRM view into an auto-dialer campaign with a 2:1 dial ratio.",
+        "Answering machine detection screens out voicemails in under a second, so SDRs only hear live people.",
+        "Local presence shows a caller ID matching each prospect's area code.",
+        "When a call goes unanswered, a WhatsApp or SMS intro follows automatically (Voxiq's example: wait 10 minutes, then send the intro template).",
+        "Booked meetings land in Calendly or the GHL calendar; recordings are searched by objection or competitor name to sharpen the script.",
+        "Script A/B tests show which opener converts better."
+      ],
+      "features": "auto dialer with AMD, dial ratio, local presence, multichannel follow-up, transcript search, script A/B testing.",
+      "measures": "live conversations per hour, connect rate by hour and area code, meetings booked per SDR.",
+      "plan": "Calls – Growth ($40) plus the SMS add-on ($70) for sequenced follow-ups.",
+      "economics": ""
+    },
+    {
+      "id": "industry-3",
+      "name": "Small business",
+      "scenario": "A local service business with an owner and two staff answers calls between jobs. Missed calls go to a personal voicemail and many are never returned, so leads call the next business on the list.",
+      "steps": [
+        "The business gets a Voxiq number and a simple IVR (\"Press 1 for bookings, 2 for billing\").",
+        "During business hours calls ring the team; after hours they go to voicemail.",
+        "Every missed call triggers an automatic text-back, so the caller hears from the business within moments.",
+        "Voicemails are transcribed and emailed to the owner.",
+        "The owner returns calls and texts from one inbox in the browser, with no desk phone."
+      ],
+      "features": "missed-call text-back, voicemail transcripts by email, business-hours routing, shared SMS inbox, browser calling.",
+      "measures": "missed calls returned within the hour, inbound leads converted to bookings.",
+      "plan": "Calls – Starter ($20) plus the SMS add-on ($70), since Starter alone excludes text-back.",
+      "economics": ""
+    },
+    {
+      "id": "industry-4",
+      "name": "Enterprise",
+      "scenario": "A multi-region sales organization runs hundreds of reps across several departments. IT needs single sign-on and audit trails, legal needs consistent calling rules, and leadership wants one view across regions.",
+      "steps": [
+        "IT connects SSO/SAML through Okta and sets custom permission tiers by role.",
+        "Each region or department gets a sub-account; phone numbers and compliance rules are managed centrally.",
+        "DNC checks, state calling hours and consent logging run before every dial, and compliance reports are exported for audit.",
+        "Leadership uses company-wide reporting and weekly PDF reports; audit logs record admin changes.",
+        "The REST API connects Voxiq to internal systems such as a data warehouse or a non-GHL CRM.",
+        "A dedicated customer success manager and an enterprise SLA cover rollout and support."
+      ],
+      "features": "SSO and Okta, role-based access, audit logs, sub-accounts, central compliance, REST API, AI call insights.",
+      "measures": "adoption per region, compliance exceptions, pipeline created per seat, cost per seat vs the legacy dialer.",
+      "plan": "Calls – Scale ($70) with an enterprise agreement.",
+      "economics": ""
+    },
+    {
+      "id": "industry-5",
+      "name": "Real estate",
+      "scenario": "A brokerage's agents work a geographic farm list, expired and FSBO listings, and portal leads from sources such as Zillow. Portal leads go to whichever agent calls first, so a slow callback loses the deal.",
+      "steps": [
+        "The whole farm list is loaded into a power-dialer campaign with local presence for the farm's area code.",
+        "New portal leads trigger the AI agent, which calls within 60 seconds, asks about timeline, budget and pre-approval, and books a showing on the agent's GHL calendar.",
+        "Warm leads hand off to the agent with a call summary and lead score; cold leads enter a nurture sequence.",
+        "Brochures, listing photos and comparables go out by WhatsApp from the business number.",
+        "Past clients are called on anniversaries for referrals, with outcomes logged in GHL."
+      ],
+      "features": "power dialer for farm lists, AI agent speed-to-lead, local presence, WhatsApp media, GHL calendar booking.",
+      "measures": "time to first call on portal leads, appointments set per agent, listings won from the farm.",
+      "plan": "Calls – Growth ($40) plus SMS ($70); add the AI agent when it leaves early access.",
+      "economics": ""
+    },
+    {
+      "id": "industry-6",
+      "name": "Insurance",
+      "scenario": "An insurance agency sells new policies from purchased leads and must retain existing customers at renewal. Calling across states brings TCPA, calling-hour and recording-consent rules that vary by state.",
+      "steps": [
+        "Renewal campaigns are segmented by policy expiry date (for example, 60, 30 and 7 days out) and dialed in turn.",
+        "Every number is checked against DNC lists, and calls are blocked outside each state's permitted hours.",
+        "Consent is logged with a timestamp, and recordings follow each state's consent rules.",
+        "Agents see the policy holder's history before dialing in preview mode, which suits higher-value renewals.",
+        "Unanswered renewal calls get an SMS or WhatsApp reminder; quotes and policy documents go out as attachments.",
+        "Compliance reports are exported for carrier or regulator audits."
+      ],
+      "features": "expiry-date segmentation, TCPA and DNC checks, state calling hours, consent logging, recording, preview dialer.",
+      "measures": "renewal retention rate, contacts reached before expiry, compliance exceptions.",
+      "plan": "Calls – Growth ($40) for recordings, plus SMS ($70).",
+      "economics": ""
+    },
+    {
+      "id": "industry-7",
+      "name": "SaaS",
+      "scenario": "A SaaS company gets free-trial sign-ups and demo requests around the clock. Trials that nobody contacts in the first days rarely convert, and the sales team can't cover every time zone.",
+      "steps": [
+        "A new sign-up triggers the AI agent within 60 seconds. It asks which CRM the prospect uses and how big their team is, then books a demo through Calendly.",
+        "Qualified leads reach an account executive with a summary and lead score in Slack or the CRM.",
+        "SDRs call trial users who haven't activated, from a CRM view filtered by trial day.",
+        "Transcripts are searched for competitor names and pricing objections to feed product and marketing.",
+        "Call outcomes update Pipedrive or GHL deal stages; Zapier pushes call events to product analytics or a spreadsheet."
+      ],
+      "features": "AI agent for 24/7 speed-to-lead, Calendly booking, Slack summaries, transcript search, Pipedrive and Zapier.",
+      "measures": "time to first touch on sign-ups, trial-to-demo rate, trial-to-paid conversion.",
+      "plan": "Calls – Scale ($70) for AI call insights.",
+      "economics": ""
+    },
+    {
+      "id": "industry-8",
+      "name": "Collections",
+      "scenario": "A collections agency works large account queues where most calls go unanswered. Every contact must fall inside FDCPA call windows, and recordings are needed to defend disputes.",
+      "steps": [
+        "Accounts are loaded into an auto-dialer campaign; Voxiq cites 300–400 accounts worked per collector per day.",
+        "FDCPA call windows and state calling hours are enforced before every dial, with DNC checks.",
+        "Answering machine detection skips voicemail; a compliant voicemail template is dropped instead.",
+        "Debtors who call back are routed by IVR to the collector who owns the account, with the account history on screen.",
+        "Every call is recorded and transcribed, so disputes are resolved by searching the transcript.",
+        "Payment reminders follow by SMS after unanswered calls, and outcomes such as promise-to-pay are logged with one click."
+      ],
+      "features": "FDCPA windows, auto dialer with AMD, call recording and transcript search, skill-based inbound routing, compliance reports.",
+      "measures": "right-party contacts per hour, promises to pay, dollars collected per collector, compliance exceptions.",
+      "plan": "Calls – Growth ($40) for recordings, plus SMS ($70).",
+      "economics": ""
+    },
+    {
+      "id": "industry-9",
+      "name": "GoHighLevel agencies",
+      "scenario": "A marketing agency runs GoHighLevel for 10 local-business clients. Clients get leads from the agency's campaigns but don't call them fast enough, and the agency wants a new recurring revenue line.",
+      "steps": [
+        "The agency white-labels Voxiq with its own name, logo and domain (for example, dialer.myagency.com).",
+        "Each client gets a sub-account with its own workspace and billing, managed from one agency dashboard.",
+        "Inside each client's GHL, a workflow action starts an AI outbound call when a new lead arrives, and booked appointments land on the client's GHL calendar.",
+        "Call outcomes move GHL pipeline stages and trigger the client's existing follow-up workflows.",
+        "The agency resells seats with margin; Voxiq's example is $49 wholesale against $149 resale per seat."
+      ],
+      "features": "white-label branding, client sub-accounts, native GHL workflow actions, AI agent, agency dashboard.",
+      "measures": "client lead-to-appointment rate, seats per client, agency margin per seat, client retention.",
+      "plan": "Agency Growth tier (up to 25 clients), priced on request.",
+      "economics": "Suggested resale is $97–197 per seat, which Voxiq puts at $5,000–10,000 in monthly recurring revenue for 10 clients with 5 seats each."
+    }
+  ],
+  "industryFit": [
+    [
+      "Sales teams",
+      "More conversations per rep",
+      "Power dialer + live coaching",
+      "TCPA, DNC",
+      "Growth $40"
+    ],
+    [
+      "SDR / BDR",
+      "Meetings booked from cold lists",
+      "Auto dialer with AMD + local presence",
+      "TCPA, DNC",
+      "Growth $40 + SMS $70"
+    ],
+    [
+      "Small business",
+      "Never miss an inbound lead",
+      "Missed-call text-back",
+      "Basic consent",
+      "Starter $20 + SMS $70"
+    ],
+    [
+      "Enterprise",
+      "Governance across regions",
+      "SSO, sub-accounts, audit logs",
+      "Central rules and audit trails",
+      "Scale $70 + enterprise terms"
+    ],
+    [
+      "Real estate",
+      "First to call portal leads",
+      "AI agent speed-to-lead",
+      "TCPA, DNC",
+      "Growth $40 + SMS $70"
+    ],
+    [
+      "Insurance",
+      "Renewals before expiry",
+      "Expiry-date campaigns",
+      "TCPA, state hours, recording consent",
+      "Growth $40 + SMS $70"
+    ],
+    [
+      "SaaS",
+      "Convert trial sign-ups",
+      "AI agent + Calendly",
+      "GDPR for global users",
+      "Scale $70"
+    ],
+    [
+      "Collections",
+      "Right-party contacts at scale",
+      "Auto dialer + recordings",
+      "FDCPA windows",
+      "Growth $40 + SMS $70"
+    ],
+    [
+      "GHL agencies",
+      "New recurring revenue",
+      "White-label + GHL workflows",
+      "Per-client rules",
+      "Agency tier, on request"
+    ]
+  ]
+}
